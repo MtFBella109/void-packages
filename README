@@ -1,0 +1,142 @@
+xbps - xtraeme's build package system.
+
+It is a simple build package system that uses Xstow to allow packages
+to be available at a master directory.
+
+Multiple versions of a package can be installed, because they can be enabled
+or disabled at the master directory anytime, to e.g allow testing different
+versions of the same package by "stowning" or "unstowning" them.
+
+xbps uses proplib, a property container object library and it's almost the
+same one available for NetBSD. Be sure to have it installed before using
+xbps. You can get it at:
+
+http://code.google.com/p/portableproplib/
+
+------------------------------------------------------------------------------
+ HOW TO USE IT
+------------------------------------------------------------------------------
+
+Before using xbps, some required utilities need to be built and installed into
+the utils/ directory. You can do this by issuing a "make" command in the
+top level directory.
+
+Once you download it, you should edit the configuration file located at the
+xbps directory. By default it uses the xbps directory in your $HOME.
+
+If XBPS_CONFIG_FILE is not set or specified from the command line with the
+-c flag, it will first try to use the default location at
+/usr/local/etc/xbps.conf, and as last resort in current directory.
+
+Once that you read the "xbps.conf" file and configured it, you can start
+installing packages by using the command:
+
+	$ xbps.sh install glib
+
+While installing your first package, if xbps couldn't find the Xstow program
+specified at the configuration file with XBPS_XSTOW_CMD, the Xstow package
+will be installed and "stowned".
+
+If the package is properly installed, it will be "stowned" automatically.
+``stowned´´ means that this package is available in the master directory,
+on which ``Xstow´´ has created links from DESTDIR/<pkgname>.
+
+To remove a currently installed (and stowned) package, you can use:
+
+	$ xbps.sh remove glib
+
+Please note that when you remove it, the package will also be removed
+from XBPS_DESTDIR and previously "unstowned".
+
+xbps uses some db(1) btree files, to record what packages are currently
+"stowned". Once you install successfully or stown a package, the package
+will be registered in XBPS_DESTDIR/.xbps-registered-pkg.db.
+
+While "unstowning" a package, it won't be available anymore in the master
+directory and therefore it probably won't work if used from
+XBPS_DESTDIR/<pkgname>.
+
+Summary, to stow an already installed package (into XBPS_DESTDIR/<pkgname>):
+
+	$ xbps.sh stow glib
+
+and to unstow an already installed (stowned) package:
+
+	$ xbps.sh unstow glib
+
+You can also print some stuff about any template, e.g:
+
+	$ xbps.sh info glib
+
+To list installed (stowned) packages, use this:
+
+	$ xbps.sh list
+
+To only extract the distfiles, without configuring/building/installing:
+
+	$ xbps.sh extract foo
+
+To not remove the build directory after successful installation:
+
+	$ xbps.sh -C install blah
+
+To only fetch the distfile:
+
+	$ xbps.sh fetch blah
+
+To only install the package, _without_ stowning it into the master directory:
+
+	$ xbps.sh install-destdir blob
+
+To list files installed by a package, note that package must be installed
+into destination directory first and you must specify package name plus
+version, i.e: vim-7.2:
+
+	$ xbps.sh listfiles blob-2.4
+
+That's all for now folks. I hope you find it useful, as I do.
+
+------------------------------------------------------------------------------
+ PERFORMANCE
+------------------------------------------------------------------------------
+
+xbps is really fast, trust me. That was one of my reasons to make my own
+pkgsrc/ports alike system.
+
+If you want benchmarks, here is one: building libX11 and all its dependencies
+required (not included building xstow) with xbps:
+
+	251.20s real   121.36s user    53.94s system
+
+versus pkgsrc (make install clean clean-depends and digest previously
+installed):
+
+	450.41s real   167.58s user    97.31s system
+
+That's more or less 40% faster! that's the price you pay for having those
+wrappers in pkgsrc that aren't very useful on NetBSD :-)
+
+------------------------------------------------------------------------------
+ HOW TO MAKE TEMPLATES
+------------------------------------------------------------------------------
+
+A template in xbps is just a small text file with a few variables that are
+required to build the package. xbps should be easy to work on, and
+making templates shouldn't be too hard... if you have made any pkgsrc, it
+should be trivial.
+
+The required variables are: pkgname, build_type, extract_sufx, url
+and checksum. Also there are some optional, like make_cmd, wrksrc,
+configure_args, configure_env, make_build_args, make_install_args, etc.
+
+Please take a look at the example.tmpl file located in the templates/
+directory.
+
+Also to help you creating templates and dependencies, there's a script
+that will ask you some required information and will create the template
+file once the distfile is downloaded: mktmpl.sh.
+
+Try it and let me know if you have any problem or suggestion.
+
+------------------------------------------------------------------------------
+	Juan Romero Pardines <xtraeme@gmail.com>
