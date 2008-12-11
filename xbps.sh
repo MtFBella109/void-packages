@@ -1304,14 +1304,7 @@ list_pkg_files()
 		exit 1
 	fi
 
-	if [ ! -d "$XBPS_DESTDIR/$pkg" ]; then
-		echo "*** ERROR: cannot find $pkg in $XBPS_DESTDIR ***"
-		exit 1
-	fi
-
-	for f in $($find_cmd $XBPS_DESTDIR/$pkg -type f -print | sort -u); do
-		echo "${f##$XBPS_DESTDIR/$pkg/}"
-	done
+	cat $XBPS_DESTDIR/$pkg-$ver/xbps-metadata/flist
 }
 
 #
@@ -1360,10 +1353,14 @@ remove_pkg()
 stow_pkg()
 {
 	local pkg="$1"
+<<<<<<< HEAD
 	local infodir_pkg="share/info/dir"
 	local infodir_master="$XBPS_MASTERDIR/share/info/dir"
 	local real_xstowargs="$xstow_args"
 	local real_xstow_ignore="$xstow_ignore_files"
+=======
+	local i=
+>>>>>>> 3d2320e6b0b (First check in progress for binary packages.)
 
 	[ -z "$pkg" ] && return 2
 
@@ -1379,9 +1376,20 @@ stow_pkg()
 		[ "$build_style" = "meta-template" ] && return 0
 	fi
 
+<<<<<<< HEAD
 	if [ -r "$XBPS_DESTDIR/$pkg/$infodir_pkg" ]; then
 		merge_infodir_tmpl $pkg
 	fi
+=======
+	# Copy files into masterdir.
+	cd $XBPS_DESTDIR/$pkgname-$version || exit 1
+	cp -ar . $XBPS_MASTERDIR
+
+	# Build a binary package.
+	env XBPS_DESTDIR=$XBPS_DESTDIR			\
+	    XBPS_DISTRIBUTIONDIR=$XBPS_DISTRIBUTIONDIR	\
+	    $XBPS_DISTRIBUTIONDIR/binpkg/create.sh $pkgname
+>>>>>>> 3d2320e6b0b (First check in progress for binary packages.)
 
 	if [ -r "$XBPS_DESTDIR/$pkg/$infodir_pkg" \
 	     -a -r "$infodir_master" ]; then
@@ -1449,6 +1457,7 @@ unstow_pkg()
 	#
 	[ "$build_style" = "meta-template" ] && return 0
 
+<<<<<<< HEAD
 	if [ -n "$ignore_files" ]; then
 		xstow_ignore_files="$xstow_ignore_files $ignore_files"
 	fi
@@ -1464,6 +1473,32 @@ unstow_pkg()
 	fi
 
 	register_pkg_handler unregister $pkgname $version
+=======
+	cd $XBPS_DESTDIR/$pkgname-$ver/xbps-metadata || exit 1
+	if [ ! -f flist ]; then
+		msg_error "$pkg is incomplete, missing flist."
+	elif [ ! -O flist ]; then
+		msg_error "$pkg cannot be removed (permission denied)."
+	fi
+
+	for f in $(cat flist); do
+		if [ -f $XBPS_MASTERDIR/$f -o -h $XBPS_MASTERDIR/$f ]; then
+			rm $XBPS_MASTERDIR/$f  >/dev/null 2>&1
+			if [ $? -eq 0 ]; then
+				echo "Removing file: $f"
+			fi
+		fi
+	done
+
+	for f in $(cat flist); do
+		if [ -d $XBPS_MASTERDIR/$f ]; then
+			rmdir $XBPS_MASTERDIR/$f >/dev/null 2>&1
+			if [ $? -eq 0 ]; then
+				echo "Removing directory: $f"
+			fi
+		fi
+	done
+>>>>>>> 3d2320e6b0b (First check in progress for binary packages.)
 
 	xstow_ignore_files="$real_xstow_ignore"
 }
