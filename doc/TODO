@@ -1,0 +1,34 @@
+xbps-src:
+ * Personalized scripts per template to unpack distfiles.
+ * Multiple URLs to download source distribution files, aliases, etc.
+   Something like ${sourceforge} to pick up any specified mirror on the list.
+ * More robust and fast dependency checking.
+ * $version needs to have a dot to be found by xbps.sh.
+   Some packages do not have a dot on its version, like udev-130.
+ * Add support to run the prepost-* scripts, so that the same actions are
+   performed in source/bin packages. Use current postinstall_helpers to
+   automatically add triggers, shared by src/bin pkgs. [IN PROGRESS]
+
+xbps-cmpver:
+ * It fails in some cases: foo-2.0 vs foo-1.99 and foo-2a vs foo-2b.
+
+Packages:
+ * fix mpfr hardcoded rpath for gmp.
+ * Fix sudo permissions for /etc/sudoers. This must be 644 to be able to
+   build the binary package.
+
+xbps-bin:
+ * Add support to handle conf_files and keep_dirs from package metadata.
+ * Add support to remove recursively all deps of a package. [IN PROGRESS]
+ * Add support to detect orphaned packages.
+ * Add support to check sha256 hashes of all installed files, as well as
+   hashes for binary packages before installation happens.
+ * Add support to use the show target with no repositories.
+ * Add support to install binary packages without any repository.
+
+xbps-repo:
+ * Replace binpkg-genindex.sh with a target for xbps-repo to generate the
+   index. The goal is to be able to add/remove a package without having to
+   create the file from scratch, for performance.
+ * Some problems when installing binpkgs with repos:
+	- If first repo is valid but second is not, will fail.
