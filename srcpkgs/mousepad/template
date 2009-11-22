@@ -1,5 +1,6 @@
 # Template file for 'mousepad'
 pkgname=mousepad
+<<<<<<< HEAD
 version=0.6.5
 revision=1
 build_style=meson
@@ -13,3 +14,28 @@ homepage="https://xfce.org/"
 changelog="https://gitlab.xfce.org/apps/mousepad/-/raw/master/NEWS"
 distfiles="https://archive.xfce.org/src/apps/mousepad/${version%.*}/mousepad-${version}.tar.xz"
 checksum=21762bc8c3c4f120a4a509ce39f4a5a58dbc10e3f0da66cdc6d9a8c735fff2ac
+=======
+version=0.2.16
+distfiles="http://mocha.xfce.org/archive/xfce-4.6.1/src/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Simple text editor for Xfce based on Leafpad"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=86e593fd4b1b87d27cda9ebd8901078e795031b5880645850d6ef0b410f4e73e
+long_desc="
+ Mousepad is a simple text editor for Xfce based on Leafpad.
+ The initial reason for Mousepad was to provide printing support, which
+ would have been difficult for Leafpad for various reasons."
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+triggers="gtk-icon-cache"
+ 
+Add_dependency build pkg-config
+Add_dependency build intltool
+Add_dependency full glibc
+Add_dependency full gtk+
+Add_dependency full dbus-glib
+Add_dependency full libxfcegui4
+Add_dependency full hicolor-icon-theme
+Add_dependency full xfce4-panel
+Add_dependency full desktop-file-utils
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

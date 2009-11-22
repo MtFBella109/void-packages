@@ -1,0 +1,12 @@
+# Template build file for 'xproto'.
+pkgname=xproto
+version=7.0.16
+distfiles="${XORG_SITE}/proto/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="X protocol and ancillary headers from Xorg X11"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=8224da1ce19c0ded4e07a325f3ed62bb4453782db97fd175cb3ffd1acaeb9672
+long_desc="
+ X protocol and ancillary headers from modular Xorg X11."
+
+noarch=yes

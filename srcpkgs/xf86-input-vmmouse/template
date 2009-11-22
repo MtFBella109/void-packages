@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xf86-input-vmmouse'
 pkgname=xf86-input-vmmouse
 version=13.2.0
@@ -20,3 +21,18 @@ post_install() {
 	# Remove HAL stuff, it's obsolete.
 	rm -rf ${DESTDIR}/usr/{lib,share}/hal
 }
+=======
+# Template build file for 'xf86-input-vmmouse'.
+pkgname=xf86-input-vmmouse
+version=12.6.5
+distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Xorg VMware virtual mouse input driver"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=381ac3b9dc47f7bb425b4748fc9945e9c70054e40d71aedcd5327b5834d68c0d
+long_desc="
+ This is the VMware virtual mouse input driver for the Xorg X11 server."
+
+Add_dependency full glibc
+Add_dependency full xorg-server
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

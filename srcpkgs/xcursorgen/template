@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xcursorgen'
 pkgname=xcursorgen
 version=1.0.9
@@ -15,3 +16,21 @@ checksum=21082be975472e469dd79d46166cee3720fda80a54382dc8d03fa7a4cd39837a
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xcursorgen'.
+pkgname=xcursorgen
+version=1.0.3
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="X cursor generator"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=ed5f3ffe881c21ffca85406e5a5f553ed4985cc5e9acdb535f682c33bebac254
+long_desc="
+ $pkgname creates an X cursor file from a collection of PNG images."
+
+Add_dependency build pkg-config
+Add_dependency full glibc
+Add_dependency full libX11
+Add_dependency full libXcursor
+Add_dependency full libpng
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

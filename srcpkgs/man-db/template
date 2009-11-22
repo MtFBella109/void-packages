@@ -1,5 +1,6 @@
 # Template file for 'man-db'
 pkgname=man-db
+<<<<<<< HEAD
 version=2.13.0
 revision=1
 build_style=gnu-configure
@@ -51,4 +52,39 @@ post_install() {
 	done
 	# Install the cron daily job.
 	vinstall ${FILESDIR}/man-db.cron-daily 744 etc/cron.daily man-db
+=======
+version=2.5.6
+revision=1
+distfiles="${NONGNU_SITE}/$pkgname/$pkgname-$version.tar.gz"
+build_style=gnu_configure
+configure_args="--with-db=gdbm --with-pager=less --with-gzip=/usr/bin/gzip
+ --with-bzip2=/usr/bin/bzip2 --disable-rpath --enable-threads=posix
+ --with-lzma=/usr/bin/lzma --disable-setuid"
+short_desc="The on-line manual database"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=14e3daf8727f98035cb250d6e4caaf720225c14996377aa7bf8f00248b7f5633
+long_desc="
+ man-db is an implementation of the standard Unix documentation system
+ accessed using the man command. It uses a Berkeley DB database in place of
+ the traditional flat-text whatis databases. man-db is used by several popular
+ GNU/Linux distributions, including Debian, Ubuntu, and SuSE. It also compiles
+ and runs on a number of proprietary Unix systems."
+
+conf_files="/etc/man_db.conf"
+
+Add_dependency full glibc
+Add_dependency full bzip2
+Add_dependency full gzip
+Add_dependency full less
+Add_dependency full gdbm
+Add_dependency full groff
+Add_dependency full grep
+Add_dependency build gettext
+
+post_install()
+{
+	# Install the cron daily job.
+	install -D -m744 ${FILESDIR}/man-db.cron-daily \
+		${DESTDIR}/etc/cron.daily/man-db
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

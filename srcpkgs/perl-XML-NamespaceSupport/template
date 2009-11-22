@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'perl-XML-NamespaceSupport'
 pkgname=perl-XML-NamespaceSupport
 version=1.12
@@ -12,3 +13,23 @@ license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/XML-NamespaceSupport"
 distfiles="${CPAN_SITE}/XML/XML-NamespaceSupport-${version}.tar.gz"
 checksum=47e995859f8dd0413aa3f22d350c4a62da652e854267aa0586ae544ae2bae5ef
+=======
+# Template build file for 'perl-XML-NamespaceSupport'.
+pkgname=perl-XML-NamespaceSupport
+version=1.09
+revision=1
+wrksrc="XML-NamespaceSupport-$version"
+distfiles="${CPAN_SITE}/XML/XML-NamespaceSupport-$version.tar.gz"
+build_style=perl_module
+short_desc="Perl module to the SAX2 NamespaceSupport class"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=a12cee7ad43d9969fb4c3cf547958367a8547fa959801ea47b0f49e32e89c25b
+long_desc="
+ This module offers a simple to process namespaced XML names (unames)
+ from within any application that may need them. It also helps
+ maintain a prefix to namespace URI map, and provides a number of
+ basic checks."
+
+noarch=yes
+Add_dependency full perl
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

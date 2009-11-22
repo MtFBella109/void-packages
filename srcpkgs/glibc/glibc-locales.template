@@ -1,0 +1,15 @@
+# Template file for 'glibc-locales'.
+#
+short_desc="${short_desc} (locales)"
+long_desc="${long_desc}
+
+ This package contains the ${sourcepkg} locale files, for non US users."
+
+noarch=yes
+
+do_install()
+{
+	mkdir -p ${DESTDIR}/usr/share
+	mv ${SRCPKGDESTDIR}/usr/share/i18n ${DESTDIR}/usr/share
+	mv ${SRCPKGDESTDIR}/usr/share/locale ${DESTDIR}/usr/share
+}

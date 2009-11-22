@@ -1,5 +1,6 @@
 # Template file for 'shadow'
 pkgname=shadow
+<<<<<<< HEAD
 version=4.8.1
 revision=3
 build_style=gnu-configure
@@ -32,10 +33,40 @@ pre_configure() {
 
 do_build() {
 	# Don't install groups(1), we use the one from coreutils.
+=======
+version=4.1.4.2
+revision=1
+distfiles="ftp://pkg-shadow.alioth.debian.org/pub/pkg-shadow/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+configure_args="--libdir=/lib --enable-shared --disable-static
+ --with-libpam --without-selinux"
+short_desc="Shadow password file utilities"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=97987f6a7967a85e6aa0dba2a1d52db8bd69af5a717391de5693db768fb78990
+long_desc="
+ Shadow password file utilities for GNU/Linux."
+
+conf_files="/etc/pam.d/usermod /etc/pam.d/userdel /etc/pam.d/useradd
+ /etc/pam.d/su /etc/pam.d/passwd /etc/pam.d/newusers /etc/pam.d/login
+ /etc/pam.d/groupmod /etc/pam.d/groupmems /etc/pam.d/groupdel
+ /etc/pam.d/groupadd /etc/pam.d/chsh /etc/pam.d/chpasswd
+ /etc/pam.d/chgpasswd /etc/pam.d/chfn /etc/pam.d/chage /etc/defaults/useradd
+ /etc/pam.d/other /etc/login.defs"
+
+Add_dependency full glibc
+Add_dependency full pam
+Add_dependency build gettext
+
+pre_build()
+{
+	# Don't install the groups cmd, we use the one from coreutils.
+	cd $wrksrc || return 1
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 	sed -i 's/groups$(EXEEXT) //' src/Makefile
 	for f in $(find man -name Makefile); do
 		sed -i 's/groups\.1 / /' $f
 	done
+<<<<<<< HEAD
 	make ${makejobs}
 }
 
@@ -49,12 +80,26 @@ post_install() {
 	done
 	for f in chpasswd chgpasswd groupadd groupdel groupmems \
 		 groupmod newusers useradd userdel usermod; do
+=======
+}
+
+post_install()
+{
+	# Install our pam files not the ones supplied with shadow.
+	rm -f ${DESTDIR}/etc/pam.d/*
+	for f in chage login passwd su other; do
+		install -m644 ${FILESDIR}/${f}.pam ${DESTDIR}/etc/pam.d/${f}
+	done
+	for f in chpasswd chgpasswd groupadd groupdel groupmems \
+		 groupmod newusers useradd userdel usermod chsh chfn; do
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 		install -m644 $DESTDIR/etc/pam.d/chage $DESTDIR/etc/pam.d/${f}
 	done
 	install -m644 ${FILESDIR}/login.defs ${DESTDIR}/etc
 
 	# Disable creating mailbox files by default.
 	sed -i -e 's/yes/no/' $DESTDIR/etc/default/useradd
+<<<<<<< HEAD
 	# Change default group to the users gid (100).
 	sed -i -e 's/^\(GROUP\)=\(.*\)$/\1=100/' ${DESTDIR}/etc/default/useradd
 
@@ -88,4 +133,17 @@ post_install() {
 		-delete
 
 	vlicense $FILESDIR/LICENSE
+=======
+
+	# Install the cron daily job.
+	install -D -m744 ${FILESDIR}/shadow.cron-daily \
+		${DESTDIR}/etc/cron.daily/shadow
+
+	# Remove unused files due to PAM.
+	for f in login.access limits; do
+		[ -f ${DESTDIR}/etc/${f} ] && rm -f ${DESTDIR}/etc/${f}
+	done
+	# Remove groups.1 manpages that comes with coreutils.
+	rm -f ${DESTDIR}/usr/share/man/man1/groups.1
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

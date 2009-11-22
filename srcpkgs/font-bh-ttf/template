@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'font-bh-ttf'
 pkgname=font-bh-ttf
 version=1.0.4
@@ -17,5 +18,31 @@ font_dirs="/usr/share/fonts/X11/TTF"
 post_install() {
 	vlicense COPYING
 	vlicense COPYRIGHT.BH
+=======
+# Template build file for 'font-bh-ttf'.
+pkgname=font-bh-ttf
+version=1.0.1
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Standard Bigelow and Holmes TrueType fonts"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=1ce72f84a6c4df7f0e949f915346026ebfeaa5b2e47f7bbc29117ebbf3a7a7c8
+long_desc="
+ These are the TrueType versions of the following Bigelow and Holmes fonts:
+  - Luxi Mono
+  - Luxi Sans
+  - Luxi Serif
+
+ This is from the modular Xorg project."
+
+Add_dependency full font-util
+
+noarch=yes
+font_dirs="/usr/share/fonts/X11/TTF"
+triggers="x11-fonts"
+
+post_install()
+{
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 	rm -f ${DESTDIR}/${font_dirs}/fonts.*
 }

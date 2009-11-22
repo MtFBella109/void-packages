@@ -1,5 +1,6 @@
 # Template build file for 'sessreg'.
 pkgname=sessreg
+<<<<<<< HEAD
 version=1.1.4
 revision=1
 build_style=gnu-configure
@@ -24,3 +25,18 @@ esac
 post_install() {
 	vlicense COPYING
 }
+=======
+version=1.0.5
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Manage utmp/wtmp entries for xdm"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=3308fbd0018d53bb818fee9de1cde484965b740073d5d240efa4cfc881c9d1a9
+long_desc="
+ Sessreg is a simple program to manage utmp/wtmp entries for
+ xdm sessions and other clients not started from init."
+ 
+Add_dependency build pkg-config
+Add_dependency full glibc
+Add_dependency full libX11
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

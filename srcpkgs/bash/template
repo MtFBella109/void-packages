@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'bash'
 pkgname=bash
 version=5.3
@@ -40,4 +41,62 @@ bash-devel_package() {
 		vmove usr/lib/bash
 		vmove usr/lib/pkgconfig
 	}
+=======
+# Template build file for 'bash'.
+pkgname=bash
+bash_patchlevel=035
+bash_distver=4.0
+version=${bash_distver}.${bash_patchlevel}
+wrksrc=${pkgname}-${bash_distver}
+distfiles="http://ftp.gnu.org/gnu/bash/bash-${bash_distver}.tar.gz"
+build_style=gnu_configure
+configure_args="--without-bash-malloc --with-curses --bindir=/bin
+ --enable-array-variables --enable-brace-expansion --enable-casemod-attributes
+ --enable-casemod-expansions --enable-command-timing --enable-cond-command
+ --enable-cond-regexp --enable-coprocesses --enable-debugger
+ --enable-directory-stack --enable-dparen-arithmetic --enable-extended-glob
+ --enable-help-builtin --enable-history --enable-job-control --enable-multibyte
+ --enable-process-substitution --enable-progcomp --enable-prompt-string-decoding
+ --enable-select --enable-net-redirections --enable-restricted
+ ac_cv_func_working_mktime=yes"
+short_desc="The GNU Bourne Again Shell"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=9793d394f640a95030c77d5ac989724afe196921956db741bcaf141801c50518
+long_desc="
+ Bash is an sh-compatible shell that incorporates useful features from
+ the Korn shell (ksh) and C shell (csh). It is intended to conform to
+ the IEEE POSIX P1003.2/ISO 9945.2 Shell and Tools standard.
+
+ It offers functional improvements over sh for both programming and
+ interactive use; these include command line editing, unlimited size
+ command history, job control, shell functions and aliases, indexed
+ arrays of unlimited size, and integer arithmetic in any base from two
+ to sixty-four. In addition, most sh scripts can be run by Bash without
+ modification."
+
+base_chroot=yes
+essential=yes
+register_shell="/bin/bash"
+
+Add_dependency run	glibc
+Add_dependency build	ncurses
+Add_dependency run	ncurses-libs
+Add_dependency run	coreutils
+
+pre_configure()
+{
+	local url="http://ftp.gnu.org/gnu/bash/bash-4.0-patches"
+
+	if [ "${bash_patchlevel}" -gt 000 ]; then
+		for p in $(seq -w 001 ${bash_patchlevel}); do
+			[ -f ${XBPS_SRCDISTDIR}/bash40-${p} ] && continue
+			$XBPS_FETCH_CMD ${url}/bash40-$p
+		done
+	fi
+	cd ${wrksrc}
+	for p in $(seq -w 001 ${bash_patchlevel}); do
+		patch -s -Np0 -i ${XBPS_SRCDISTDIR}/bash40-${p} && \
+			msg_normal "Applying patch bash40-$p."
+	done
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

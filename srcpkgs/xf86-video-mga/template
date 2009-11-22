@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xf86-video-mga'
 pkgname=xf86-video-mga
 version=2.1.0
@@ -24,3 +25,18 @@ pre_configure() {
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xf86-video-mga'.
+pkgname=xf86-video-mga
+version=1.4.11
+distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Xorg Matrox video driver"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=c91922316f486f74d41ddbda92ff94a7917cea151ad802cf25603ab6b90f97e6
+long_desc="
+ This is the video driver for Matrox video cards for the Xorg X11 server."
+
+Add_dependency full glibc
+Add_dependency full xorg-server
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

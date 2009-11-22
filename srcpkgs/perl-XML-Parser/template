@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'perl-XML-Parser'
 pkgname=perl-XML-Parser
 version=2.46
@@ -16,3 +17,21 @@ checksum=d331332491c51cccfb4cb94ffc44f9cd73378e618498d4a37df9e043661c515d
 post_extract() {
 	vsed -e '/exit 0;/d' -i Makefile.PL   # broken cross check
 }
+=======
+# Template build file for 'perl-XML-Parser'.
+pkgname=perl-XML-Parser
+version=2.36
+wrksrc="XML-Parser-$version"
+distfiles="${CPAN_SITE}/XML/XML-Parser-$version.tar.gz"
+build_style=perl_module
+short_desc="Perl extension interface to James Clark's XML parser, expat"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=9fd529867402456bd826fe0e5588d35b3a2e27e586a2fd838d1352b71c2ed73f
+long_desc="
+ This module provides ways to parse XML documents. It is built on top of
+ XML::Parser::Expat, which is a lower level interface to James Clark's
+ expat library."
+
+Add_dependency full perl
+Add_dependency full expat
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

@@ -1,5 +1,6 @@
 # Template file for 'xfdesktop'
 pkgname=xfdesktop
+<<<<<<< HEAD
 version=4.20.1
 revision=1
 build_style=meson
@@ -15,3 +16,22 @@ license="GPL-2.0-or-later"
 homepage="https://xfce.org/"
 distfiles="https://archive.xfce.org/src/xfce/xfdesktop/${version%.*}/$pkgname-$version.tar.bz2"
 checksum=acccde849265bbf4093925ba847977b7abf70bb2977e4f78216570e887c157b8
+=======
+version=4.6.1
+distfiles="http://mocha.xfce.org/archive/xfce-$version/src/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Desktop manager for the XFce Desktop Environment"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=22aa4a654798dcfa728a9c0056486f73ae87a51239950c8f85aedef488cd571a
+long_desc="
+ This package includes a desktop manager for the XFce Desktop Environment."
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+triggers="gtk-icon-cache"
+
+Add_dependency build pkg-config
+Add_dependency build intltool
+Add_dependency full glibc
+Add_dependency full libxfce4menu
+Add_dependency full Thunar
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'ruby'
 _ruby_abiver=3.4.0
 
@@ -116,3 +117,31 @@ ruby-ri_package() {
 		vmove "usr/share/man/man1/ri*"
 	}
 }
+=======
+# Template build file for 'ruby'.
+pkgname=ruby
+ruby_ver="1.9.1"
+ruby_distpatchver="p129"
+ruby_distver="${ruby_ver}-${ruby_distpatchver}"
+version=${ruby_ver}${ruby_distpatchver}
+wrksrc="${pkgname}-${ruby_distver}"
+distfiles="ftp://ftp.ruby-lang.org/pub/ruby/1.9/$pkgname-${ruby_distver}.tar.gz"
+build_style=gnu_configure
+configure_args="--enable-pthread --enable-shared --disable-rpath"
+short_desc="Ruby programming language"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=27b7a8ace1d17cec237020ae9355230b53f8c3875f8d942de903e7d58d14253b
+long_desc="
+ Ruby is the interpreted scripting language for quick and easy object
+ oriented programming. It has many features to process text files and to
+ do system management tasks (as in Perl). It is simple, straight-forward
+ and extensible."
+
+Add_dependency full glibc
+Add_dependency full gdbm
+Add_dependency full openssl
+Add_dependency full zlib
+Add_dependency full readline
+Add_dependency build ncurses
+Add_dependency run ncurses-libs
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

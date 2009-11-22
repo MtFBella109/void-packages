@@ -1,5 +1,6 @@
 # Template file for 'e2fsprogs'
 pkgname=e2fsprogs
+<<<<<<< HEAD
 version=1.47.2
 revision=1
 build_style=gnu-configure
@@ -26,6 +27,30 @@ do_check() {
 }
 
 post_install() {
+=======
+version=1.41.9
+distfiles="$SOURCEFORGE_SITE/e2fsprogs/$pkgname-$version.tar.gz"
+build_style=gnu_configure
+configure_args="--enable-htree --enable-elf-shlibs --enable-fsck
+ --enable-e2initrd-helper --disable-rpath --with-root-prefix=
+ --disable-uuidd --disable-libuuid --disable-libblkid"
+make_install_target="DESTDIR=$XBPS_DESTDIR/$pkgname-$version install-libs install"
+short_desc="Ext2/3/4 Filesystem Utilities"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=cbf1e34261a16b3d7911b60b91290b19f2010036d6ba628d45b5f0b2af2b66e8
+long_desc="
+ It provides the filesystem utilities for use with the ext2 filesystem.
+ It also supports the ext3 filesystem with journaling support."
+
+subpackages="$pkgname-devel $pkgname-libs"
+conf_files="/etc/mke2fs.conf"
+Add_dependency run glibc
+Add_dependency run e2fsprogs-libs
+Add_dependency build gettext
+
+post_install()
+{
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 	# Remove stuff belonging to libblkid or libuuid pkgs.
 	find ${DESTDIR} -name \*blkid\* -o -name \*findfs\* \
 		-name \*uuidd\* -o -name \*uuidgen\* | \
@@ -36,6 +61,7 @@ post_install() {
 	rm -rf ${DESTDIR}/usr/include/uuid
 	rm -f ${DESTDIR}/usr/lib/pkgconfig/uuid*
 }
+<<<<<<< HEAD
 
 e2fsprogs-devel_package() {
 	depends="${makedepends} e2fsprogs-libs>=${version}_${revision}"
@@ -70,3 +96,5 @@ fuse2fs_package() {
 		vmove usr/share/man/man1/fuse2fs.1
 	}
 }
+=======
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

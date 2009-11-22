@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xf86-video-fbdev'
 pkgname=xf86-video-fbdev
 version=0.5.1
@@ -20,3 +21,18 @@ LDFLAGS="-Wl,-z,lazy"
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xf86-video-fbdev'.
+pkgname=xf86-video-fbdev
+version=0.4.1
+distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Xorg framebuffer video driver"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=2bf857179523433a9cc6c6eea059298db4c865e649aa58dfc67c828f28b7288f
+long_desc="
+ This is the video driver for framebuffer devices for the Xorg X11 server."
+
+Add_dependency full glibc
+Add_dependency full xorg-server
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

@@ -1,5 +1,6 @@
 # Template file for 'gdbm'
 pkgname=gdbm
+<<<<<<< HEAD
 version=1.26
 revision=1
 build_style=gnu-configure
@@ -36,4 +37,24 @@ gdbm-devel_package() {
 		vmove usr/share/info
 		vmove usr/share/man/man3
 	}
+=======
+version=1.8.3
+distfiles="http://ftp.gnu.org/gnu/$pkgname/$pkgname-$version.tar.gz"
+build_style=gnu_configure
+make_install_args="INSTALL_ROOT=$XBPS_DESTDIR/$pkgname-$version"
+short_desc="GNU database routines"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=cc340338a2e28b40058ab9eb5354a21d53f88a1582ea21ba0bb185c37a281dc9
+long_desc="
+ GNU dbm is a set of database routines that use extensible hashing.
+ It works similar to the standard Unix dbm routines."
+
+subpackages="gdbm-devel"
+Add_dependency full glibc
+
+post_build()
+{
+	mkdir -p ${DESTDIR}/usr/share/info
+	touch -f ${DESTDIR}/usr/share/info/dir
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

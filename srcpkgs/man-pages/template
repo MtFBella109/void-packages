@@ -1,5 +1,6 @@
 # Template file for 'man-pages'
 pkgname=man-pages
+<<<<<<< HEAD
 version=6.15
 revision=1
 short_desc="Linux Documentation Project (LDP) manual pages"
@@ -25,10 +26,37 @@ do_install() {
 	# diffutils
 	rm -f man1/diff.1
 	# tzdata
+=======
+version=3.23
+distfiles="${KERNEL_SITE}/docs/manpages/Archive/$pkgname-$version.tar.bz2"
+build_style=only-install
+make_install_target="all prefix=$XBPS_DESTDIR/$pkgname-$version/usr"
+short_desc="Linux Documentation Project manual pages"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=74db52ca786330996e8454e4020402bc5b981801855181e19062a57bf3190a37
+long_desc="
+ The Linux Documentation Project (LDP) manual pages."
+
+noarch=yes
+
+post_install()
+{
+	# Remove dup manpages.
+	cd ${DESTDIR}/usr/share/man
+	# From coreutils
+	rm -f man1/groups.1
+	# From shadow.
+	rm -f man5/passwd.5
+	rm -f man3/getspnam.3
+	# From xf86-input-mouse.
+	rm -f man4/mouse.4
+	# From tzdata.
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 	rm -f man5/tzfile.5
 	rm -f man8/zdump.8
 	rm -f man8/tzselect.8
 	rm -f man8/zic.8
+<<<<<<< HEAD
 	# mdocml
 	rm -f man7/man.7
 	rm -f man7/mdoc.7
@@ -54,4 +82,8 @@ man-pages-devel_package() {
 	pkg_install() {
 		vmove usr/share/man/man[2-3]
 	}
+=======
+	# From attr-devel.
+	rm -f man2/*xattr.2
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

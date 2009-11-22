@@ -1,5 +1,6 @@
 # Template file for 'xfce4-appfinder'
 pkgname=xfce4-appfinder
+<<<<<<< HEAD
 version=4.20.0
 revision=1
 build_style=gnu-configure
@@ -13,3 +14,24 @@ homepage="https://xfce.org/"
 changelog="https://gitlab.xfce.org/xfce/xfce4-appfinder/-/raw/master/NEWS"
 distfiles="https://archive.xfce.org/src/xfce/${pkgname}/${version%.*}/${pkgname}-${version}.tar.bz2"
 checksum=82ca82f77dc83e285db45438c2fe31df445148aa986ffebf2faabee4af9e7304
+=======
+version=4.6.1
+distfiles="http://mocha.xfce.org/archive/xfce-$version/src/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Appfinder for the Xfce Desktop Environment"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=5eab9a3ba822a1163c07efd917c3425eaf149c01c09df375ac38a0cb7ddf20a4
+long_desc="
+ xfce-appfinder shows system wide installed applications."
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+triggers="gtk-icon-cache"
+
+Add_dependency build pkg-config
+Add_dependency build intltool
+Add_dependency full glibc
+Add_dependency full desktop-file-utils
+Add_dependency full hicolor-icon-theme
+Add_dependency full libxfce4menu
+Add_dependency full Thunar
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

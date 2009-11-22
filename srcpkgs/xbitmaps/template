@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xbitmaps'
 pkgname=xbitmaps
 version=1.1.3
@@ -13,3 +14,19 @@ checksum=ad6cad54887832a17d86c2ccfc5e52a1dfab090f8307b152c78b0e1529cd0f7a
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xbitmaps'.
+pkgname=xbitmaps
+version=1.0.1
+distfiles="${XORG_SITE}/data/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Common X11 bitmaps"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=5aa5be594e77f772b85d39f0c25f61a61c7f6fa02ba940e614c5ee386deeb867
+long_desc="
+ This package contains the common X11 bitmaps for direct inclusion in C.
+
+ This is from the modular X.org project."
+
+noarch=yes
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

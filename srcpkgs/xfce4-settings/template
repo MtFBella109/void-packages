@@ -1,5 +1,6 @@
 # Template file for 'xfce4-settings'
 pkgname=xfce4-settings
+<<<<<<< HEAD
 version=4.20.2
 revision=1
 build_style=gnu-configure
@@ -18,3 +19,32 @@ homepage="https://xfce.org/"
 changelog="https://raw.githubusercontent.com/xfce-mirror/xfce4-settings/xfce-${version%.*}/NEWS"
 distfiles="https://archive.xfce.org/src/xfce/${pkgname}/${version%.*}/${pkgname}-${version}.tar.bz2"
 checksum=6e11776e640798a1ac4168d53877f105bb3e8cf93b443c160841e3acdab63939
+=======
+version=4.6.3
+distfiles="http://archive.xfce.org/src/xfce/$pkgname/4.6/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+configure_args="--localstatedir=/var --enable-libxklavier
+ --enable-sound-settings --enable-pluggable-dialogs"
+short_desc="Xfce settings manager"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=f34b896960f7c30c3601b9946b145076a215778da6ab8399d268cd1f2b2b9d34
+long_desc="
+ xfce4-settings is the settings manager for the Xfce desktop environment."
+
+conf_files="/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml"
+
+Add_dependency build pkg-config
+Add_dependency build intltool
+Add_dependency full glibc
+Add_dependency full gtk+
+Add_dependency full dbus-glib
+Add_dependency full hicolor-icon-theme
+Add_dependency full desktop-file-utils
+Add_dependency full exo
+Add_dependency full libnotify
+Add_dependency full libxklavier
+Add_dependency full libwnck
+Add_dependency full libxfcegui4
+Add_dependency full libXrandr
+Add_dependency full libXcursor
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xf86-video-cirrus'
 pkgname=xf86-video-cirrus
 version=1.6.0
@@ -20,3 +21,19 @@ CFLAGS="-fcommon -Wno-pointer-arith -Wno-discarded-qualifiers -Wno-unused-label"
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xf86-video-cirrus'.
+pkgname=xf86-video-cirrus
+version=1.3.2
+distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Xorg Cirrus Logic video driver"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=529a98a42c94ba5e1b9269e6f7b32a9e76cfd2d4728df08aeba615df8b28ca1a
+long_desc="
+ This is the video driver for Cirrus Logic video cards for
+ the Xorg X11 server."
+
+Add_dependency full glibc
+Add_dependency full xorg-server
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

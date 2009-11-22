@@ -1,5 +1,6 @@
 # Template file for 'texinfo'
 pkgname=texinfo
+<<<<<<< HEAD
 version=7.1
 revision=1
 build_style=gnu-configure
@@ -24,4 +25,30 @@ post_install() {
 	rm -f ${DESTDIR}/usr/share/info/dir
 	# Compress manually info files.
 	gzip -9 ${DESTDIR}/usr/share/info/*
+=======
+version=4.13a
+revision=3
+wrksrc="$pkgname-4.13"
+distfiles="http://ftp.gnu.org/gnu/$pkgname/$pkgname-$version.tar.gz"
+build_style=gnu_configure
+short_desc="The GNU Documentation System"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=1303e91a1c752b69a32666a407e9fbdd6e936def4b09bc7de30f416301530d68
+long_desc="
+ Texinfo is the official documentation format of the GNU project. It was
+ invented by Richard Stallman and Bob Chassell many years ago, loosely based
+ on Brian Reid's Scribe and other formatting languages of the time. It is
+ used by many non-GNU projects as well."
+
+Add_dependency build gettext
+Add_dependency run glibc
+Add_dependency run ncurses-libs
+Add_dependency run findutils
+Add_dependency run gzip
+Add_dependency run coreutils
+
+post_install()
+{
+	rm -f ${DESTDIR}/usr/share/info/dir
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

@@ -1,5 +1,6 @@
 # Template file for 'cpio'
 pkgname=cpio
+<<<<<<< HEAD
 version=2.15
 revision=1
 build_style=gnu-configure
@@ -11,3 +12,26 @@ license="GPL-3.0-or-later"
 homepage="http://www.gnu.org/software/cpio/"
 distfiles="${GNU_SITE}/cpio/cpio-${version}.tar.bz2"
 checksum=937610b97c329a1ec9268553fb780037bcfff0dcffe9725ebc4fd9c1aa9075db
+=======
+version=2.10
+revision=1
+distfiles="http://ftp.gnu.org/gnu/$pkgname/$pkgname-$version.tar.gz"
+build_style=gnu_configure
+short_desc="GNU copy-in/out (cpio) with remote magnetic tape (rmt) support"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=2a2da2dbb741a75b9a374ceca46036ac3f3c3698e3756b9e3cd44edac8536ba5
+long_desc="
+ GNU cpio is a full-featured cpio command that can access remote and
+ local magnetic tapes, and both tar and cpio format archives in files or
+ on tapes."
+
+Add_dependency run glibc
+Add_dependency build gettext
+Add_dependency build texinfo
+
+post_install()
+{
+	# Remove rmt that conflicts with the one from tar.
+	rm -rf ${DESTDIR}/usr/libexec
+}
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

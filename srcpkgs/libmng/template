@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'libmng'
 pkgname=libmng
 version=2.0.3
@@ -25,4 +26,35 @@ libmng-devel_package() {
 		vmove usr/lib/*.so
 		vmove usr/lib/pkgconfig
 	}
+=======
+# Template build file for 'libmng'.
+pkgname=libmng
+version=1.0.10
+revision=1
+distfiles="http://www.libmng.com/download/libmng-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Multiple-image Network Graphics (MNG) reference library"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=7b1477816c54b4d8ee0690c583982637910a1801ece0b0831e03fd07882e8118
+long_desc="
+ The libmng library supports decoding, displaying, encoding, and various other
+ manipulations of Multiple-image Network Graphics (MNG) format image files.  It
+ uses the zlib(3) compression library, and optionally the JPEG library by the
+ Independent JPEG Group (IJG) and/or lcms (little CMS), a color-management
+ library by Marti Maria Saguar."
+
+subpackages="devel"
+Add_dependency build automake
+Add_dependency full glibc
+Add_dependency full jpeg
+Add_dependency full zlib
+Add_dependency full lcms
+
+pre_configure()
+{
+	cd $wrksrc
+	ln -s makefiles/configure.in .
+	ln -s makefiles/Makefile.am .
+	autoreconf -f -i
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

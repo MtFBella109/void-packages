@@ -1,5 +1,6 @@
 # Template file for 'run-parts'
 pkgname=run-parts
+<<<<<<< HEAD
 version=5.23.2
 revision=1
 bootstrap=yes
@@ -28,4 +29,26 @@ ischroot_package() {
 		vbin ischroot
 		vman ischroot.1
 	}
+=======
+version=3.2.1
+wrksrc="debianutils-${version}"
+distfiles="${DEBIAN_SITE}/main/d/debianutils/debianutils_${version}.tar.gz"
+build_style=custom-install
+short_desc="Run scripts or programs in a directory"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=0c9e2619060053b6721e74ab34d5ed81c0f9bb462c6b16b616898f5ac8e0124b
+long_desc="
+ $pkgname runs all the executable files found in a directory.
+ This package comes from the GNU/Linux Debian system."
+
+Add_dependency full glibc
+
+do_install()
+{
+	cd ${wrksrc}
+	./configure --prefix=/usr
+	make
+	install -D -m755 run-parts ${DESTDIR}/usr/bin/run-parts
+	install -D -m644 run-parts.8 ${DESTDIR}/usr/share/man/man8/run-parts.8
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xf86-video-ati'
 pkgname=xf86-video-ati
 version=22.0.0
@@ -25,3 +26,18 @@ esac
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xf86-video-ati'.
+pkgname=xf86-video-ati
+version=6.12.4
+distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Xorg ATI Radeon video driver"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=cfde066a7087a19b624f79e95cb9a6c97a847b8802cf38d4ae6022758bf338f6
+long_desc="
+ This is the video driver for ATI Radeon cards for the Xorg X11 server."
+
+Add_dependency full glibc
+Add_dependency full xorg-server
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

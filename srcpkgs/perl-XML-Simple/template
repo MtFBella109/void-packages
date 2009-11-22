@@ -1,5 +1,6 @@
 # Template build file for 'perl-XML-Simple'.
 pkgname=perl-XML-Simple
+<<<<<<< HEAD
 version=2.25
 revision=2
 build_style=perl-module
@@ -12,3 +13,25 @@ license="Artistic-1.0-Perl, GPL-1.0-or-later"
 maintainer="Orphaned <orphan@voidlinux.org>"
 distfiles="${CPAN_SITE}/XML/XML-Simple-$version.tar.gz"
 checksum=531fddaebea2416743eb5c4fdfab028f502123d9a220405a4100e68fc480dbf8
+=======
+version=2.18
+revision=1
+wrksrc="XML-Simple-$version"
+distfiles="${CPAN_SITE}/XML/XML-Simple-$version.tar.gz"
+build_style=perl_module
+short_desc="Easy Perl API to read/write XML"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=a54967c188cda3e20f496c83be4de3f1740eeaa83c0380712ecd969ad8766826
+long_desc="
+ This Perl module provides an easy API to read and write XML
+ (especially configuration files)."
+
+noarch=yes
+Add_dependency full perl
+Add_dependency full expat
+Add_dependency full perl-XML-Parser
+Add_dependency full perl-XML-SAX
+Add_dependency full perl-XML-NamespaceSupport
+Add_dependency full perl-Storable
+Add_dependency full perl-Test-Simple
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

@@ -1,5 +1,6 @@
 # Template file for 'iana-etc'
 pkgname=iana-etc
+<<<<<<< HEAD
 reverts="202001016_1"
 version=20251030
 revision=1
@@ -13,3 +14,18 @@ do_install() {
 	vconf ${FILESDIR}/protocols
 	vconf ${FILESDIR}/services
 }
+=======
+version=2.30
+revision=1
+distfiles="http://sethwklein.net/$pkgname-$version.tar.bz2"
+build_style=gnu_makefile
+make_build_args="STRIP=yes"
+short_desc="Unix /etc/services and /etc/protocols files"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=b9a6874fb20012836efef75452ef2acae624022d680feeb1994d73facba3f20d
+long_desc="
+ The iana-etc package provides the Unix/Linux /etc/services and
+ /etc/protocols files."
+
+noarch=yes
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

@@ -1,0 +1,13 @@
+# Template build file for 'xineramaproto'.
+pkgname=xineramaproto
+version=1.2
+distfiles="${XORG_SITE}/proto/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Xinerama extension headers from X.org"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=58e88087ceec7201d918f94d6b1247325adca2a9903fed11291b412427a7ba64
+long_desc="
+ This provides the Xinerama extension headers from modular X.org X11
+ project."
+
+noarch=yes

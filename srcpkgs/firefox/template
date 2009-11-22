@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'firefox'
 #
 # THIS PKG MUST BE SYNCHRONIZED WITH "srcpkgs/firefox-i18n".
@@ -277,3 +278,34 @@ do_install() {
 
 	vbin ${FILESDIR}/firefox-wayland
 }
+=======
+# Template build file for 'firefox'.
+pkgname=firefox
+version=3.5.5
+wrksrc=mozilla-1.9.1
+distfiles="ftp://ftp.mozilla.org/pub/${pkgname}/releases/${version}/source/${pkgname}-${version}.source.tar.bz2"
+build_style=gnu_configure
+configure_args="--enable-default-toolkit=cairo-gtk2 --disable-dbus
+ --disable-crashreporter --enable-xft --with-pthreads --enable-xinerama
+ --enable-svg --enable-svg-renderer=cairo --enable-system-cairo
+ --enable-crypto --enable-application=browser --disable-gnomevfs
+ --disable-gnomeui"
+short_desc="Lightweight gecko-based web browser"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=2abe7b5561267c230df27951d1d8c6c5853d06ca2426997fdf0a63c5db689feb
+long_desc="
+ Mozilla Firefox is a free, open-source and cross-platform web browser
+ for Windows, Linux, MacOS X and many other operating systems. It is
+ small, fast and easy to use, and offers many advantages over other web
+ browsers, such as tabbed browsing and the ability to block pop-up
+ windows.
+
+ Firefox also offers excellent bookmark and history management, and it
+ can be extended by developers using industry standards such as XML,
+ CSS, JavaScript, C++, etc. Many extensions are available."
+
+Add_dependency full zip
+Add_dependency full gtk+
+Add_dependency full alsa-lib
+Add_dependency full libIDL
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

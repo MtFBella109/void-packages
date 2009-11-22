@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'font-alias'
 pkgname=font-alias
 version=1.0.5
@@ -13,3 +14,20 @@ checksum=f8e0ca6537003f11fcaf36c598f7de9c0428f8ed587388a8a37ff18ccc597730
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'font-alias'.
+pkgname=font-alias
+version=1.0.2
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Standard aliases for X11 PCF fonts"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=438bd6f3f9305edb6ea9905dc92c135d6067bbd7e01df913cb3ef27162b38270
+long_desc="
+ The font-alias package contains a font.alias tables for the various PCF
+ packages of modular Xorg. It maps common legacy names to full font
+ descriptors. The most important alias is fixed, which is needed for
+ the X server to run."
+
+noarch=yes
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

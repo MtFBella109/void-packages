@@ -1,0 +1,25 @@
+#!/bin/sh
+
+PREREQ=""
+DESCRIPTION="Setting up automatic login"
+
+. /scripts/casper-functions
+
+prereqs()
+{
+       echo "$PREREQ"
+}
+
+case $1 in
+# get pre-requisites
+prereqs)
+       prereqs
+       exit 0
+       ;;
+esac
+
+log_begin_msg "$DESCRIPTION"
+if [ -f "${rootmnt}/etc/inittab" ]; then
+	sed -i -e "s|agetty|casper-getty|g" "${rootmnt}/etc/inittab"
+fi
+log_end_msg

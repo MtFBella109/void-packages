@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'automake'
 # NOTE: also update common/environment/configure/automake when updating!
 pkgname=automake
@@ -20,3 +21,25 @@ pre_check() {
 	# taken from http://www.linuxfromscratch.org/lfs/view/development/chapter06/automake.html
 	vsed -i "s:./configure:LEXLIB=/usr/lib/libfl.a &:" t/lex-{clean,depend}-cxx.sh
 }
+=======
+# Template build file for 'automake'.
+pkgname=automake
+version=1.10.2
+distfiles="http://ftp.gnu.org/gnu/automake/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="GNU Standards-compliant Makefile generator"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=c38ac9fe53d9492b0a0a02a8e691cd2c96d7f4cc13aedeedc6d08613b77e640f
+long_desc="
+ Automake is an experimental Makefile generator. It was inspired by
+ the 4.4BSD make and include files, but aims to be portable and to
+ conform to the GNU standards for Makefile variables and targets.
+
+ Automake assumes the project uses autoconf. If you want automatic
+ dependency tracking support, the use of GNU make is also required."
+
+noarch=yes
+Add_dependency full autoconf	">=2.60"
+Add_dependency full libtool
+Add_dependency build texinfo
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

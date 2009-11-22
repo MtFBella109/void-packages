@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'perl-Test-Simple'
 pkgname=perl-Test-Simple
 version=1.302198
@@ -12,3 +13,23 @@ license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/Test-Simple"
 distfiles="${CPAN_SITE}/Test/${pkgname/perl-/}-${version}.tar.gz"
 checksum=1dc07bcffd23e49983433c948de3e3f377e6e849ad7fe3432c717fa782024faa
+=======
+# Template build file for 'perl-Test-Simple'.
+pkgname=perl-Test-Simple
+version=0.86
+revision=1
+wrksrc="Test-Simple-$version"
+distfiles="${CPAN_SITE}/Test/Test-Simple-$version.tar.gz"
+build_style=perl_module
+short_desc="Perl module with a simple framework for writing tests"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=4c65024a2b5cf9eea44bafaab9735e08000088865a35c9d5f554f3921ff660b8
+long_desc="
+ This is an extremely simple, extremely basic module for writing
+ tests suitable for CPAN modules and other pursuits. If you wish
+ to do more complicated testing, use the Test::More module (a drop-in
+ replacement for this one)."
+
+noarch=yes
+Add_dependency full perl
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

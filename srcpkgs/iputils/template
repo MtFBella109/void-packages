@@ -1,5 +1,6 @@
 # Template file for 'iputils'
 pkgname=iputils
+<<<<<<< HEAD
 version=20250605
 revision=1
 build_style=meson
@@ -26,3 +27,18 @@ post_install() {
 	mv ${DESTDIR}/usr/bin/{ping,${pkgname}-ping}
 	vlicense Documentation/LICENSE.BSD3
 }
+=======
+version=20071127
+distver=s${version}
+wrksrc="$pkgname-$distver"
+distfiles="http://www.linuxgrill.com/anonymous/iproute2/$pkgname-$distver.tar.bz2"
+build_style=gnu_makefile
+short_desc="IP Configuration Utilities (and Ping)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=dbbd87554d66e438245487ac31aa4a542a1c6c1ec8273cfacbbfeda09eb44a93
+long_desc="
+ The iputils package is set of small useful utilities for Linux networking.
+ It was originally maintained by Alexey Kuznetsov."
+
+Add_dependency run glibc
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

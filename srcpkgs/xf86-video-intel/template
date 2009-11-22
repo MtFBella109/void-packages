@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xf86-video-intel'
 pkgname=xf86-video-intel
 version=2.99.917.20210115
@@ -28,3 +29,19 @@ pre_configure() {
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xf86-video-intel'.
+pkgname=xf86-video-intel
+version=2.9.1
+distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Xorg Intel video driver"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=95347c88854c2b41c07ab3bcdfadd1b8d27fb181a20520f185892877eb8d9d76
+long_desc="
+ This is the video driver for Intel video chips for the
+ Xorg X11 server."
+
+Add_dependency full glibc
+Add_dependency full xorg-server	">=1.6.4_1"
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

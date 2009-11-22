@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xrefresh'
 pkgname=xrefresh
 version=1.1.0
@@ -15,3 +16,22 @@ checksum=cbf0d3ed80f03188841a96ceb20e615b40a006e3928be2e179d9d5a0ded639b2
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xrefresh'.
+pkgname=xrefresh
+version=1.0.3
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="X refresher"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=3ee0a5f7aeb14bbffbcafcff8e7806c9a59f08e1a58322a50f5fca023a7d7ed9
+long_desc="
+ This package contains xrefresh, a program to repaint all or part
+ off a screen.
+
+ This is from the modular X.org X11 project."
+ 
+Add_dependency build pkg-config
+Add_dependency full glibc
+Add_dependency full libX11
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

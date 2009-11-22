@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Update the "locate" database
+if [ -x /usr/bin/updatedb ]; then
+    /usr/bin/updatedb
+fi

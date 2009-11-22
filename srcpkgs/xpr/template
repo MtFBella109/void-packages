@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xpr'
 pkgname=xpr
 version=1.2.0
@@ -15,3 +16,23 @@ checksum=8b9402f8331309f0a9d8143d4d6129c4a7479ff9449616849b9f1e2a5835cec3
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xpr'.
+pkgname=xpr
+version=1.0.3
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Print an X window dump"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=2878d6b04ef81ec415fa81313565bee521bf94132127615b9d717d5a489b937d
+long_desc="
+ xpr takes as input a window dump file produced by xwd(1) and formats
+ it for output on PostScript printers, the Digital LN03 or LA100, the IBM
+ PP3812 page printer, the HP LaserJet (or other PCL printers), or the HP
+ PaintJet."
+ 
+Add_dependency build pkg-config
+Add_dependency full glibc
+Add_dependency full libX11
+Add_dependency full libXmu
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

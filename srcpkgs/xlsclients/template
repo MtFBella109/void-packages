@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xlsclients'
 pkgname=xlsclients
 version=1.1.5
@@ -15,3 +16,22 @@ checksum=68baee57e70250ac4a7759fb78221831f97d88bc8e51dcc2e64eb3f8ca56bae3
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xlsclients'.
+pkgname=xlsclients
+version=1.0.2
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="X client listing utility"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=8527cdd29d4fcc67df014bc8b371be98901c9082b8de81ea2302bf705c887698
+long_desc="
+ This package provides xlsclients, a program to list client applications
+ running on a display.
+
+ This is from the modular X.org X11 project."
+
+Add_dependency full glibc
+Add_dependency full libX11
+Add_dependency full libXmu
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

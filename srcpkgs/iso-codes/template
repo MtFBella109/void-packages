@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'iso-codes'
 pkgname=iso-codes
 version=4.18.0
@@ -11,3 +12,24 @@ homepage="https://salsa.debian.org/iso-codes-team/iso-codes"
 changelog="https://salsa.debian.org/iso-codes-team/iso-codes/-/raw/main/CHANGELOG.md"
 distfiles="${DEBIAN_SITE}/main/i/iso-codes/iso-codes_${version}.orig.tar.xz"
 checksum=066bc4df7bf299561856a07119cde01d563c8c4c39906537a39363bb833d466c
+=======
+# Template build file for 'iso-codes'.
+pkgname=iso-codes
+version=3.10.2
+distfiles="ftp://pkg-isocodes.alioth.debian.org/pub/pkg-isocodes/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+make_install_args="pkgconfigdir=/usr/lib/pkgconfig"
+short_desc="List of country, language and currency names"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=6ec67b145f714de4c6e85520401dfc50f9be88bcad331d2fa316e54b04da34cb
+long_desc="
+ iso-codes provides the list of the country, language and currency names in
+ one place, rather than repeated in many third-party programs. This was
+ originally done to centralize this data in Debian systems.
+
+ The aim of iso-codes is to create a single \"gettext\" domain \"iso-639\" which
+ contains the translations of language names, and one \"iso-3166\" listing the
+ translations of country names."
+
+noarch=yes
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

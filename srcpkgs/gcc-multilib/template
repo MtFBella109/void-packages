@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'gcc-multilib'
 archs="x86_64"
 _triplet="x86_64-unknown-linux-gnu"
@@ -102,4 +103,44 @@ gcc-objc-multilib_package() {
 	depends="gcc-multilib>=${_minorver} gcc-objc>=${_minorver} libobjc-devel-32bit>=${_minorver}"
 	short_desc="GNU Objective-C compiler (multilib files)"
 	metapackage=yes
+=======
+# Template build file for 'gcc-multilib'
+pkgname=gcc-multilib
+version=4.3.2
+wrksrc="gcc-$version"
+distfiles="http://ftp.gnu.org/pub/gnu/gcc/gcc-$version/gcc-$version.tar.bz2"
+build_style=gnu_configure
+configure_args="--enable-clocale=gnu --disable-bootstrap
+ --enable-threads=posix --enable-__cxa_atexit --enable-multilib
+ --enable-languages=c,c++ --enable-tls --enable-shared --with-system-zlib
+ --with-local-prefix=$XBPS_DESTDIR/$pkgname-$version"
+short_desc="The GNU C Compiler suite (multilib libraries)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=bfbf487731ad5dca37efe480a837417de071bd67e685d5c1df6a290707575165
+long_desc="
+ The GNU C Compiler suite, with support for C, C++, Fortran, ObjC.
+
+ This package installs the 32 bit libraries required to compile 32 bit
+ code on x86_64 systems."
+
+only_for_archs="x86_64"
+
+Add_dependency full glibc32
+
+post_install()
+{
+	local DESTDIR=$XBPS_DESTDIR/$pkgname-$version
+
+	# We are only interested in 32bit libs, remove anything else.
+	rm -r $DESTDIR/usr/lib64
+	rm -r $DESTDIR/usr/libexec
+	rm -r $DESTDIR/usr/include
+	rm -r $DESTDIR/usr/bin
+	rm -r $DESTDIR/usr/share
+	rm $DESTDIR/usr/lib/libiberty*
+	rm -r $DESTDIR/usr/lib/gcc/x86_64-unknown-linux-gnu/$version/*include*
+	rm -r $DESTDIR/usr/lib/gcc/x86_64-unknown-linux-gnu/$version/install-tools
+	rm $DESTDIR/usr/lib/gcc/x86_64-unknown-linux-gnu/$version/crt*
+	rm $DESTDIR/usr/lib/gcc/x86_64-unknown-linux-gnu/$version/libgcov*
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

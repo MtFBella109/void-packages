@@ -1,5 +1,6 @@
 # Template file for 'metalog'
 pkgname=metalog
+<<<<<<< HEAD
 version=20230719
 revision=2
 build_style=gnu-configure
@@ -24,4 +25,31 @@ post_install() {
 	# Disable logging for metaloga to avoid any issues
 	# https://github.com/void-linux/void-packages/pull/44912#issuecomment-1625625388
 	rm -rf "${DESTDIR}/etc/sv/metalog/log"
+=======
+version=1
+revision=3
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.lzma"
+build_style=gnu_configure
+configure_args="--with-unicode"
+short_desc="Modern replacement for syslogd and klogd"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=4f27a64e7abb1a1ecb078147db8db4e1edf2bcb72723ec5d9456af09255ff167
+long_desc="
+ Metalog is a modern replacement for syslogd and klogd. The logged messages
+ can be dispatched according to their facility, urgency, program name
+ and/or Perl-compatible regular expressions."
+
+conf_files="/etc/metalog.conf"
+openrc_services="metalog default"
+
+Add_dependency full glibc
+Add_dependency full pcre
+Add_dependency full bzip2
+
+post_install()
+{
+	install -d ${DESTDIR}/etc/init.d
+	install -m755 ${FILESDIR}/metalog.rc ${DESTDIR}/etc/init.d/metalog
+	install -m644 ${FILESDIR}/metalog.conf ${DESTDIR}/etc
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

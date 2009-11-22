@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xgamma'
 pkgname=xgamma
 version=1.0.8
@@ -15,3 +16,23 @@ checksum=98f9f69e53a11c354a6637ea5c3d7699ceb5c5b1f8ad6f0a14d9931e5a10d079
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xgamma'.
+pkgname=xgamma
+version=1.0.3
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Alter gamma correction"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=e5eb2588fbbdc5c2db5571b304204487a9c22eed15ac6cb816f605ec403e6e1a
+long_desc="
+ This package provides xgamma, a program to alter the gamma correction of
+ the monitor.
+
+ This is from the modular X.org X11 project."
+ 
+Add_dependency build pkg-config
+Add_dependency full glibc
+Add_dependency full libX11
+Add_dependency full libXxf86vm
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

@@ -1,5 +1,6 @@
 # Template file for 'syslinux'
 pkgname=syslinux
+<<<<<<< HEAD
 version=6.03
 revision=8
 archs="i686* x86_64*"
@@ -43,4 +44,28 @@ do_install() {
 	# Remove keytab-lilo to prevent conflict with LILO
 	rm ${DESTDIR}/usr/bin/keytab-lilo
 	vdoc "${FILESDIR}/README.voidlinux"
+=======
+version=3.83
+distfiles="${KERNEL_SITE}/utils/boot/$pkgname/$pkgname-$version.tar.bz2"
+build_style=gnu_makefile
+make_install_args="INSTALLROOT=$XBPS_DESTDIR/$pkgname-$version"
+short_desc="A boot loader for the Linux operating system"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=9ec84d6dcc188f082a875b69796b196f98ea8c0102b55b03123616a285c2d9f9
+long_desc="
+ The SYSLINUX Project covers lightweight bootloaders for floppy media (SYSLINUX),
+ network booting (PXELINUX), and bootable \"El Torito\" CD-ROMs (ISOLINUX).
+ The project also includes MEMDISK, a tool to boot legacy operating systems
+ (such as DOS) from nontraditional media; it is usually used in conjunction with
+ PXELINUX and ISOLINUX."
+
+Add_dependency build perl
+Add_dependency build nasm
+Add_dependency full glibc
+
+pre_build()
+{
+	# Disable this file which causes an error.
+	sed -i -e 's|win32/syslinux.exe||g' $wrksrc/Makefile
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

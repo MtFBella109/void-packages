@@ -1,5 +1,6 @@
 # Template file for 'nfs-utils'
 pkgname=nfs-utils
+<<<<<<< HEAD
 version=2.8.4
 revision=1
 build_style=gnu-configure
@@ -83,4 +84,35 @@ libnfsidmap-devel_package() {
 		vmove usr/lib/pkgconfig
 		vmove usr/share/man/man3
 	}
+=======
+version=1.2.0
+distfiles="http://downloads.sf.net/nfs/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+configure_args="--with-statduser=nobody --disable-gss --disable-nfsv4
+ --enable-nfsv3 --with-statedir=/var/lib/nfs --enable-mount"
+short_desc="Network File System utilities"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=cb39468b3acd0bf3870cde4bbb06fe01a88e7cf0c81cff87fa7794cab871a1d1
+long_desc="
+ The $pkgname package provides a daemon for the kernel NFS server and
+ related tools, which provides a much higher level of performance than the
+ traditional Linux NFS server used by most users."
+
+openrc_services="mountd default nfsd default nfslock default"
+conf_files="/etc/exports"
+
+Add_dependency full	glibc
+Add_dependency full	portmap
+Add_dependency full	libblkid
+Add_dependency build	tcp_wrappers
+Add_dependency run	tcp_wrappers-libs
+
+post_install()
+{
+	# Install the OpenRC services.
+	for f in mountd nfsd nfslock; do
+		install -D -m755 ${FILESDIR}/${f}.rc ${DESTDIR}/etc/init.d/${f}
+	done
+	install -D -m644 ${FILESDIR}/exports ${DESTDIR}/etc/exports
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

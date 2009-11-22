@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'iceauth'
 pkgname=iceauth
 version=1.0.9
@@ -15,3 +16,23 @@ checksum=2cb9dfcb545683af77fb1029bea3fc52dcc8a0666f7b8b2d7373b6ed4c408c05
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'iceauth'.
+pkgname=iceauth
+version=1.0.3
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="ICE protocol utility"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=abca3ff6c9f2da2600a474f0e92ae5e62c43914f7bd3d948b91b0a7f9117d81e
+long_desc="
+ This package provides iceauth, a program to display and manipulate the
+ authentication data used by the Inter Client Exchange protocol.
+
+ This is from the modular X.org X11 project."
+ 
+Add_dependency build pkg-config
+Add_dependency build xproto
+Add_dependency full glibc
+Add_dependency full libICE
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

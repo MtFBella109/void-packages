@@ -1,5 +1,6 @@
 # Template build file for 'xdriinfo'.
 pkgname=xdriinfo
+<<<<<<< HEAD
 version=1.0.7
 revision=1
 build_style=gnu-configure
@@ -15,3 +16,20 @@ checksum=dd838bae9d2b19ddd71fe6d30ed33abc7c85e19d223e79d35600db3fa44bf734
 post_install() {
 	vlicense COPYING
 }
+=======
+version=1.0.3
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="X.org DRI information utility"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=2b762afd08c798d79fd6dacfd6280da39105927fa2bd91e3b1ba75b8cddc259c
+long_desc="
+ The xdriinfo utility prints an XML description of a DRI driver. The driver
+ can be specified directly by driver name or indirectly by screen number.
+ No X connection is needed if the driver name is explicitly specified."
+
+Add_dependency build pkg-config
+Add_dependency full glibc
+Add_dependency full libX11
+Add_dependency full MesaLib
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xwud'
 pkgname=xwud
 version=1.0.7
@@ -15,3 +16,21 @@ checksum=371df65cea6b0ca281f9944337b82bb3bcee624618548e7b7077c2e32574c3e0
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xwud'.
+pkgname=xwud
+version=1.0.2
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Image displayer for X"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=84345dfbff0dc411689639aada2407758640af71eb61a1be332bfa24d8b90ac1
+long_desc="
+ Xwud is an X Window System image undumping utility. Xwud allows X users
+ to display in a window an image saved in a specially formatted dump file,
+ such as produced by xwd(1)."
+ 
+Add_dependency build pkg-config
+Add_dependency full glibc
+Add_dependency full libX11
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xf86-video-vmware'
 pkgname=xf86-video-vmware
 version=13.4.0
@@ -22,3 +23,19 @@ LDFLAGS="-Wl,-z,lazy"
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xf86-video-vmware'.
+pkgname=xf86-video-vmware
+version=10.16.8
+revision=2
+distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Modular Xorg VMware virtual video driver"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=956443948d94f7459b0056d8cb8ff2cd9fba4621d8b61f0257cb84469ea7da07
+long_desc="
+ This is the VMware virtual video driver for the modular Xorg server."
+
+Add_dependency full glibc
+Add_dependency full xorg-server	">=1.7.1"
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xbacklight'
 pkgname=xbacklight
 version=1.2.4
@@ -15,3 +16,25 @@ checksum=d4c30b0e6f18c82f387585a737ee3b72d468c927892b08a898c41bc12248e8ee
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xbacklight'.
+pkgname=xbacklight
+version=1.1.1
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Adjust backlight brightness using RandR extension"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=5d32d891c83b9c0089231f4f1c424ab02301b627ce26e5c2e6e397b8ea606fb2
+long_desc="
+ Xbacklight is used to adjust the backlight brightness where supported.
+ It finds all outputs on the X server supporting backlight brightness
+ control and changes them all in the same way.
+
+ This is from the modular X.org X11 project."
+
+Add_dependency build pkg-config
+Add_dependency full glibc
+Add_dependency full libX11
+Add_dependency full libXrandr
+Add_dependency full libXrender
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

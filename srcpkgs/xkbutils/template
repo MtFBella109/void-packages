@@ -1,5 +1,6 @@
 # Template build file for 'xkbutils'.
 pkgname=xkbutils
+<<<<<<< HEAD
 version=1.0.6
 revision=1
 build_style=gnu-configure
@@ -15,3 +16,23 @@ checksum=31a2bbee1e09ccba01de92897b8f540b545de812f318d31de07bd3a5a75ee25e
 post_install() {
 	vlicense COPYING
 }
+=======
+version=1.0.2
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="XKBD Utilities"
+checksum=12a37d4594a4deb2642b1659f3827068c24bb8791a20b927c5f3b7fdb0c70bee
+long_desc="
+ The xkbutils package provides some XKB related utilities for
+ XKB-capable X servers."
+
+Add_dependency full glibc
+Add_dependency full libX11
+Add_dependency full libxkbfile
+Add_dependency full libXaw
+Add_dependency full libXmu
+Add_dependency full libXt
+Add_dependency full libSM
+Add_dependency full libICE
+Add_dependency build pkg-config
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

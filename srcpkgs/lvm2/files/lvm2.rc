@@ -1,0 +1,15 @@
+#!/sbin/runscript
+#
+# OpenRC service for LVM.
+
+depend()
+{
+	after *
+}
+
+start()
+{
+	ebegin "Deactivating LVM volumes"
+	lvm vgchange --ignorelockingfailure -an 2>&1 >/dev/null
+	eend $?
+}

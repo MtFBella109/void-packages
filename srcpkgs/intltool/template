@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'intltool'
 pkgname=intltool
 version=0.51.0
@@ -12,3 +13,35 @@ license="GPL-2.0-or-later"
 homepage="https://edge.launchpad.net/intltool"
 distfiles="http://launchpad.net/intltool/trunk/$version/+download/$pkgname-$version.tar.gz"
 checksum=67c74d94196b153b774ab9f89b2fa6c6ba79352407037c8c14d5aeb334e959cd
+=======
+# Template build file for 'intltool'.
+pkgname=intltool
+version=0.40.6
+revision=1
+distfiles="${GNOME_SITE}/$pkgname/0.40/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Toolbox for internationalisation"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=4d1e5f8561f09c958e303d4faa885079a5e173a61d28437d0013ff5efc9e3b64
+long_desc="
+ The intltool collection can be used to do these things:
+
+  o Extract translatable strings from various source files (.xml.in,
+    .glade, .desktop.in, .server.in, .oaf.in).
+
+  o Collect the extracted strings together with messages from traditional
+    source files (.c, .h) in po/\$(PACKAGE).pot.
+
+  o Merge back the translations from .po files into .xml, .desktop and
+    .oaf files.  This merge step will happen at build resp. installation
+    time.
+
+ The intltool package has a script, intltoolize, which copies the various
+ scripts and does the other magic to your module. So users building
+ from tarballs don't need intltool, only folks building from cvs.
+ (This is modeled on gettextize.)"
+
+noarch=yes
+Add_dependency full perl-XML-Parser
+Add_dependency full dash
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

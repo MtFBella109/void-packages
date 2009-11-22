@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xev'
 pkgname=xev
 version=1.2.6
@@ -15,3 +16,24 @@ checksum=61e1c5e008ac9973aca7cdddf36e9df7410e77083b030eb04f4dc737c51807d7
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xev'.
+pkgname=xev
+version=1.0.4
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Display X events"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=7fad9c9755a624e677f44633dee218e9c22b4ba9a83e6709a6cbf8c1a501fde8
+long_desc="
+ Xev is an X11 debugging tool. Xev creates a window (or can attach
+ to an existing window) and then asks the X server to send it events
+ whenever anything happens to the window (such as it being moved,
+ resized, typed in, clicked in, etc cetera).
+
+ This is the version of xev maintained by Xorg."
+
+Add_dependency build pkg-config
+Add_dependency full glibc
+Add_dependency full libX11
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

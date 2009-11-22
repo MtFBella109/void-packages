@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'font-bitstream-100dpi'
 pkgname=font-bitstream-100dpi
 version=1.0.4
@@ -16,5 +17,31 @@ font_dirs="/usr/share/fonts/X11/100dpi"
 
 post_install() {
 	vlicense COPYING
+=======
+# Template build file for 'font-bitstream-100dpi'.
+pkgname=font-bitstream-100dpi
+version=1.0.1
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Standard 100dpi Bitstream PCF fonts"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=3e05c9b74d0dc00e6e46ec758888e66514ab24fc75930877d4ba6db7d49f0347
+long_desc="
+ This are the PCF versions of the following Bitstream fonts for
+ 100dpi displays:
+  - Charter
+  - Terminal
+
+ This is from the modular Xorg project."
+
+Add_dependency full font-util
+
+noarch=yes
+font_dirs="/usr/share/fonts/X11/100dpi"
+triggers="x11-fonts"
+
+post_install()
+{
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 	rm -f ${DESTDIR}/${font_dirs}/fonts.*
 }

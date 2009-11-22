@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'font-bh-lucidatypewriter-75dpi'
 pkgname=font-bh-lucidatypewriter-75dpi
 version=1.0.4
@@ -16,5 +17,30 @@ font_dirs="/usr/share/fonts/X11/75dpi"
 
 post_install() {
 	vlicense COPYING
+=======
+# Template build file for 'font-bh-lucidatypewriter-75dpi'.
+pkgname=font-bh-lucidatypewriter-75dpi
+version=1.0.1
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="75dpi Bigelow and Holmes Lucida Typewriter PCF fonts"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=20ff9c5914c6916c96647eeb3ba700468952fdf01925e62516219a7dd6eb3841
+long_desc="
+ This are the PCF versions of the following Bigelow and Holmes fonts
+ for 75dpi displays:
+  - Lucida Typewriter
+
+ This is from the modular Xorg project."
+
+Add_dependency full font-util
+
+noarch=yes
+font_dirs="/usr/share/fonts/X11/75dpi"
+triggers="x11-fonts"
+
+post_install()
+{
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 	rm -f ${DESTDIR}/${font_dirs}/fonts.*
 }

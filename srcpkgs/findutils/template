@@ -1,5 +1,6 @@
 # Template file for 'findutils'
 pkgname=findutils
+<<<<<<< HEAD
 version=4.10.0
 revision=1
 bootstrap=yes
@@ -43,4 +44,28 @@ pre_check() {
 }
 post_configure() {
 	make -C locate dblocation.texi
+=======
+version=4.4.2
+distfiles="http://ftp.gnu.org/gnu/$pkgname/$pkgname-$version.tar.gz"
+build_style=gnu_configure
+configure_args="--localstatedir=/var/lib/locate"
+short_desc="The GNU Find Utilities"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=434f32d171cbc0a5e72cfc5372c6fc4cb0e681f8dce566a0de5b6fccd702b62a
+long_desc="
+ The GNU Find Utilities are the basic directory searching utilitiesof the
+ GNU operating system. These programs are typically used in conjunction with
+ other programs to provide modular and powerful directory search and file
+ locating capabilities to other commands."
+
+base_chroot=yes
+Add_dependency run glibc
+
+post_install()
+{
+	sed -i -e "s|$XBPS_MASTERDIR||g" ${DESTDIR}/usr/bin/updatedb
+	# Insdtall the cron daily job.
+	install -D -m744 ${FILESDIR}/updatedb.cron-daily \
+		${DESTDIR}/etc/cron.daily/updatedb
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

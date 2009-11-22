@@ -1,0 +1,72 @@
+#
+# Configuration file for xbps-src.
+#
+
+#
+# Directory where xbps-src has been installed. By default /usr/local.
+#
+XBPS_INSTALLDIR=@@XBPS_INSTALL_PREFIX@@
+
+#
+# Directory where the xbps-src GIT repository is available. This is
+# required to be mounted in the chroot.
+#
+XBPS_DISTRIBUTIONDIR=$HOME/xbps-templates
+
+#
+# Master directory: this is where all packages files are copied from
+# XBPS_DESTDIR, to resolve dependencies.
+#
+XBPS_MASTERDIR=$XBPS_DISTRIBUTIONDIR/masterdir
+
+#
+# Destination directory: this is where all package files will be
+# installed.
+#
+XBPS_DESTDIR=$XBPS_DISTRIBUTIONDIR/destdir
+
+#
+# Binary packages directory: this is where the binary packages will
+# be created to.
+#
+XBPS_PACKAGESDIR=$XBPS_DISTRIBUTIONDIR/packages
+
+#
+# Directory where source files will be extracted to.
+#
+XBPS_BUILDDIR=$XBPS_DISTRIBUTIONDIR/builddir
+
+#
+# Directory where source distribution files are stored.
+#
+XBPS_SRCDISTDIR=$XBPS_DISTRIBUTIONDIR/srcdistdir
+
+#
+# Compilation flags for cc and c++.
+#
+XBPS_CFLAGS="-O2 -pipe"
+XBPS_CXXFLAGS="$XBPS_CFLAGS"
+
+#
+# Number of jobs when running GNU or BSD make style packages.
+#
+#XBPS_MAKEJOBS=4
+
+#
+# Compression program used to build the binary packages.
+# Possible values: gzip, bzip2 or xz. Default xz.
+#
+XBPS_COMPRESS_CMD=xz
+
+#
+# Compression level used in XBPS_COMPRESS_CMD to build the
+# binary packages. Possible values: 1-9. If unset, default value
+# by the command will be used.
+#
+#XBPS_COMPRESS_LEVEL=9
+
+#
+# Cross compilation stuff.
+#
+#XBPS_CROSS_TARGET=i686-pc-linux-gnu
+#XBPS_CROSS_DIR=/storage/mktoolchain/$XBPS_CROSS_TARGET

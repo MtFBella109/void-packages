@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xauth'
 pkgname=xauth
 version=1.1.4
@@ -15,3 +16,26 @@ checksum=e9318141464ad7b4dc0f8564a580f0d20f977c85a388cc40d5a766206151c690
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xauth'.
+pkgname=xauth
+version=1.0.4
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="X authentication utility"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=f91190c8b8bb18270b86b00f30da5684bb5e5bd1ed0ccf352322f8145e076a59
+long_desc="
+ This package provides xauth, a program to display and manipulate the
+ authentication data used by the X11 clients.
+
+ This is from the modular X.org X11 project."
+
+Add_dependency full glibc
+Add_dependency full libX11
+Add_dependency full libXext
+Add_dependency full libXau
+Add_dependency full libXmu
+Add_dependency build pkg-config
+Add_dependency build xtrans
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

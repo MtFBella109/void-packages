@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xf86-video-mach64'
 pkgname=xf86-video-mach64
 version=6.10.0
@@ -22,3 +23,19 @@ pre_configure() {
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xf86-video-mach64'.
+pkgname=xf86-video-mach64
+version=6.8.2
+distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Xorg ATI Mach64 video driver"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=b91194033023a41793a525a631789df1d229b228af0d44dcbe20b06ed66c671d
+long_desc="
+ This is the video driver for ATI Mach64 video cards for
+ the Xorg X11 server."
+
+Add_dependency full glibc
+Add_dependency full xorg-server
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

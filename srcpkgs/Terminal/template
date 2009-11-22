@@ -1,5 +1,6 @@
 # Template file for 'Terminal'
 pkgname=Terminal
+<<<<<<< HEAD
 version=0.9.9
 revision=5
 build_style=gnu-makefile
@@ -15,3 +16,29 @@ homepage="http://gap.nongnu.org/terminal/"
 distfiles="${NONGNU_SITE}/gap/${pkgname}-${version}.tar.gz"
 checksum=27f81bbecdbd10cde8c080012cde4973bec20e551c58c29f353733cf03c220e9
 nocross="objc doesn't get cross build at present within gcc (see gnustep-base)"
+=======
+version=0.4.2
+distfiles="http://archive.xfce.org/src/apps/terminal/0.4/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="X Terminal Emulator"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=4d5a07f3a1b68c9825cc3b82fc2672785ba91247a34e4ac462841f0b1ea21079
+long_desc="
+ Terminal is a lightweight and easy to use terminal emulator application
+ for the X windowing system, with some new ideas and features that make
+ it unique among X terminal emulators."
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+triggers="gtk-icon-cache"
+
+Add_dependency build pkg-config
+Add_dependency build intltool
+Add_dependency full glibc
+Add_dependency full dbus-glib
+Add_dependency full gtk+
+Add_dependency full startup-notification
+Add_dependency full exo
+Add_dependency full hicolor-icon-theme
+Add_dependency full vte
+Add_dependency full desktop-file-utils
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

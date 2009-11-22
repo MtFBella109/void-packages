@@ -1,0 +1,13 @@
+# Template build file 'damageproto'.
+pkgname=damageproto
+version=1.2.0
+distfiles="${XORG_SITE}/proto/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Damage extension headers from modular X.org"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=a50250770a2eead9d6fd56577e3328d0a6a1c4d425b58faa0f5ca7683169ee8f
+long_desc="
+ This package contains header files and documentation for the X Damage
+ extension of X RandR. This is from the modular X.org X11 project."
+
+noarch=yes

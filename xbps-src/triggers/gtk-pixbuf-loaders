@@ -1,0 +1,36 @@
+#!/bin/sh
+#
+# Updates GTK+ gdk pixbuf modules file with gdk-pixbuf-query-loaders(1).
+#
+# Arguments:	$1 = action [run/targets]
+#		$2 = target [post-install/post-remove]
+#		$3 = pkgname
+#		$4 = version
+#
+pixbuf_bin=usr/bin/gdk-pixbuf-query-loaders
+pixbuf_loaders=etc/gtk-2.0/gdk-pixbuf.loaders
+
+case "$1" in
+targets)
+	echo "post-install post-remove"
+	;;
+run)
+	if [ "$2" = "post-remove" -a "${PKGNAME}" = "gtk+" ]; then
+		[ -f ${pixbuf_loaders} ] && rm -f ${pixbuf_loaders}
+		break
+	fi
+	case "$2" in
+	post-*)
+		if [ -x ${pixbuf_bin} ]; then
+			echo "Updating GTK's pixbuf modules file..."
+			${pixbuf_bin} > ${pixbuf_loaders}
+		fi
+		;;
+	esac
+	;;
+*)
+	exit 1
+	;;
+esac
+
+exit 0

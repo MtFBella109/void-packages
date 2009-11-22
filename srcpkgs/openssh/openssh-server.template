@@ -1,0 +1,38 @@
+# Template file for 'openssh-server'.
+#
+short_desc="The OpenSSH server"
+long_desc="${long_desc}
+
+ This package contains the ${pkgname} server files."
+
+keep_empty_dirs=yes
+conf_files="/etc/ssh/sshd_config /etc/pam.d/sshd"
+openrc_services="sshd default"
+
+Add_dependency run glibc
+Add_dependency run zlib
+Add_dependency run openssl
+Add_dependency run pam
+Add_dependency run tcp_wrappers-libs
+Add_dependency run openssh
+
+do_install()
+{
+	mkdir -p ${DESTDIR}/etc/ssh
+	mkdir -p ${DESTDIR}/usr/libexec/openssh
+	mkdir -p ${DESTDIR}/usr/share/man/man5
+	mkdir -p ${DESTDIR}/usr/share/man/man8
+	mv ${SRCPKGDESTDIR}/usr/libexec/openssh/sftp-server \
+		${DESTDIR}/usr/libexec/openssh
+	mv ${SRCPKGDESTDIR}/etc/ssh/sshd_config ${DESTDIR}/etc/ssh
+	mv ${SRCPKGDESTDIR}/usr/sbin ${DESTDIR}/usr
+	mv ${SRCPKGDESTDIR}/usr/share/man/man5/sshd_config.5 \
+		${DESTDIR}/usr/share/man/man5
+	for f in sftp-server sshd; do
+		mv ${SRCPKGDESTDIR}/usr/share/man/man8/${f}.8 \
+			${DESTDIR}/usr/share/man/man8
+	done
+	mv ${SRCPKGDESTDIR}/etc/pam.d ${DESTDIR}/etc
+	mv ${SRCPKGDESTDIR}/etc/init.d ${DESTDIR}/etc
+	mkdir -p ${DESTDIR}/var/chroot/ssh
+}

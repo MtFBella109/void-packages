@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xhost'
 pkgname=xhost
 version=1.0.10
@@ -15,3 +16,23 @@ checksum=10a157a9c818e6ec17764ba22117e006089107a22aacf58be6de089a76a112f4
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xhost'.
+pkgname=xhost
+version=1.0.3
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Server access control program for X"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=2d63007c65e89fe273a43f3e45b3c0133acbc3ceeda6bfc9671388409134ad17
+long_desc="
+ This package provides xhost, the server access control program for X.
+
+ This is from the modular X.org X11 project."
+ 
+Add_dependency build pkg-config
+Add_dependency full glibc
+Add_dependency full libX11
+Add_dependency full libXau
+Add_dependency full libXmu
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

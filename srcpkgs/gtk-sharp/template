@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'gtk-sharp'
 pkgname=gtk-sharp
 version=2.99.3
@@ -34,3 +35,20 @@ pre_configure() {
 
 	autoreconf -if
 }
+=======
+# Template build file for 'gtk-sharp'.
+pkgname=gtk-sharp
+version=2.12.4
+distfiles="
+http://ftp.gnome.org/pub/gnome/sources/gtk-sharp/2.12/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+make_cmd="$XBPS_MASTERDIR/bin/gmake"
+pkgconfig_override="gtk-sharp-2.0.pc gtk-dotnet-2.0.pc glib-sharp-2.0.pc
+gapi-2.0.pc glade-sharp-2.0.pc"
+short_desc="C# bindings for GTK"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=9f4fe94c80c2d9e3ba87e19df8b6e1031bd51d66
+long_desc="
+ Gtk# is a .NET language binding for the GTK+ toolkit and assorted GNOME
+ libraries."
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

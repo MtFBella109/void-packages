@@ -1,0 +1,33 @@
+#!/bin/sh
+
+PREREQ=""
+
+prereqs()
+{
+	echo "$PREREQ"
+}
+
+case $1 in
+prereqs)
+	prereqs
+	exit 0
+	;;
+esac
+
+if [ ! -x /sbin/lvm.static -o ! -x /sbin/dmsetup.static ]; then
+	exit 0
+fi
+
+. /usr/share/initramfs-tools/hook-functions
+
+if [ -e /etc/lvm/lvm.conf ]; then
+	mkdir -p ${DESTDIR}/etc/lvm
+	cp /etc/lvm/lvm.conf ${DESTDIR}/etc/lvm/
+fi
+
+copy_exec /sbin/dmsetup.static /sbin/dmsetup
+copy_exec /sbin/lvm.static /sbin/lvm
+
+for x in dm_mod dm_snapshot dm_mirror; do
+	manual_add_modules ${x}
+done

@@ -1,0 +1,44 @@
+#!/bin/sh
+#
+# Updates GTK+ icon cache file with gtk-update-icon-cache(1).
+#
+# Arguments:	$1 = action [run/targets]
+#		$2 = target [post-install/post-remove]
+#		$3 = pkgname
+#		$4 = version
+#
+iconcache_bin=usr/bin/gtk-update-icon-cache
+
+case "$1" in
+targets)
+	echo "post-install post-remove"
+	;;
+run)
+	if [ "$2" = "post-remove" -a "${PKGNAME}" = "gtk+" ]; then
+		for dir in ${gtk_iconcache_dirs}; do
+			if [ -f ${dir}/icon-theme.cache ]; then
+				rm -f ${dir}/icon-theme.cache
+				echo -n "Removed GTK+ icon theme "
+				echo "cache for ${dir}."
+			fi
+		done
+		break
+	fi
+	case "$2" in
+	post-*)
+		for dir in ${gtk_iconcache_dirs}; do
+			if [ -x ${iconcache_bin} ]; then
+				echo -n "Updating GTK+ icon cache for "
+				echo "${dir}..."
+				${iconcache_bin} -q -f -t ${dir}
+			fi
+		done
+		;;
+	esac
+	;;
+*)
+	exit 1
+	;;
+esac
+
+exit 0

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'm4'
 pkgname=m4
 version=1.4.19
@@ -31,3 +32,24 @@ pre_check() {
 		*-musl) sed -i '/test-getcwd.sh/d' tests/Makefile ;;
 	esac
 }
+=======
+# Template build file for 'm4'.
+pkgname=m4
+version=1.4.13
+distfiles="http://ftp.gnu.org/gnu/m4/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+configure_args="--enable-changeword --enable-threads"
+short_desc="GNU version of UNIX m4 macro language processor"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=fcc6fe95e31476dae0fe17a941603c9876cffd0172c8985787388b99a5caec06
+long_desc="
+    GNU m4 is an implementation of the traditional UNIX macro
+ processor. It is mostly SVR4 compatible, although it has some
+ extensions (for example, handling more than 9 positional parameters to
+ macros). m4 also has builtin functions for including files, running
+ shell commands, doing arithmetic, etc. Autoconf needs GNU m4 for
+ generating configure scripts, but not for running them."
+
+base_chroot=yes
+Add_dependency run glibc
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

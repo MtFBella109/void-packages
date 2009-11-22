@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xkbcomp'
 pkgname=xkbcomp
 version=1.4.7
@@ -15,3 +16,20 @@ checksum=0a288114e5f44e31987042c79aecff1ffad53a8154b8ec971c24a69a80f81f77
 post_install() {
 	vlicense COPYING LICENSE
 }
+=======
+# Template build file for 'xkbcomp'.
+pkgname=xkbcomp
+version=1.1.1
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="XKBD keymap compiler"
+checksum=9775bcfd43d9ffa41e2865e5b2c933f419bf983d7a529b3103656c76fd82e663
+long_desc="
+ The xkbcomp tool converts descriptions of an XKB keymap into other formats,
+ most importantly the compiled keymaps used by XKB-capable X servers."
+
+Add_dependency full glibc
+Add_dependency full libX11
+Add_dependency full libxkbfile
+Add_dependency build pkg-config
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

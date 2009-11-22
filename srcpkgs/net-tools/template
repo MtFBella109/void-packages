@@ -1,5 +1,6 @@
 # Template file for 'net-tools'
 pkgname=net-tools
+<<<<<<< HEAD
 version=2.10
 revision=1
 build_style="gnu-makefile"
@@ -49,4 +50,27 @@ post_install() {
 	# Remove dnsdomainname(1), conflicts with busybox/inetutils.
 	rm ${DESTDIR}/usr/bin/*domainname
 	rm ${DESTDIR}/usr/share/man/man1/*domainname*
+=======
+version=1.60
+distfiles="http://www.tazenda.demon.co.uk/phil/$pkgname/$pkgname-$version.tar.bz2"
+build_style=custom-install
+short_desc="Basic networking tools"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=7ae4dd6d44d6715f18e10559ffd270511b6e55a8900ca54fbebafe0ae6cf7d7b
+long_desc="
+ The ${pkgname} package contains basic networking tools, including
+ ifconfig, netstat, route, and others."
+
+Add_dependency run glibc
+
+do_install()
+{
+	cd $wrksrc
+	. $XBPS_HELPERSDIR/replace-interpreter.sh
+	replace_interpreter bash configure.sh
+
+	yes "" | make || exit 1
+	make BASEDIR=${DESTDIR} update
+	rm -rf ${DESTDIR}/usr/share/man/man1
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

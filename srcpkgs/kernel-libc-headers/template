@@ -1,5 +1,6 @@
 # Template file for 'kernel-libc-headers'
 pkgname=kernel-libc-headers
+<<<<<<< HEAD
 version=6.14
 revision=1
 bootstrap=yes
@@ -32,4 +33,27 @@ do_install() {
 	# the make header_install depends on rsync so just do the same thing manuall.
 	vcopy usr/include usr
 	find "${DESTDIR}/usr/include" -type f ! -name '*.h' -delete
+=======
+_kernel_ver=2.6.31
+_kernel_patch_ver=6
+version=${_kernel_ver}.${_kernel_patch_ver}
+wrksrc="linux-$version"
+distfiles="${KERNEL_SITE}/kernel/v2.6/linux-$version.tar.bz2"
+build_style=only-install
+make_install_target="
+ INSTALL_HDR_PATH=$XBPS_DESTDIR/$pkgname-$version/usr
+ headers_install"
+short_desc="The Linux kernel headers for development"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=7751de380eab755a647c7137949bc6207fd14379e5e8e5c15c421fdc8390c45e
+long_desc="
+ This package provides the linux kernel headers for use in userspace."
+
+base_chroot=yes
+
+post_install()
+{
+	# Remove /usr/include/drm bundled with libdrm.
+	rm -rf ${DESTDIR}/usr/include/drm
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

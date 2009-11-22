@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'shared-mime-info'
 pkgname=shared-mime-info
 version=2.4
@@ -13,3 +14,34 @@ homepage="https://freedesktop.org/Software/shared-mime-info"
 changelog="https://gitlab.freedesktop.org/xdg/shared-mime-info/-/raw/master/NEWS"
 distfiles="https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/${version}/shared-mime-info-${version}.tar.gz"
 checksum=531291d0387eb94e16e775d7e73788d06d2b2fdd8cd2ac6b6b15287593b6a2de
+=======
+# Template build file for 'shared-mime-info'.
+pkgname=shared-mime-info
+version=0.60
+distfiles="http://people.freedesktop.org/~hadess/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+configure_args="--disable-update-mimedb"
+short_desc="Core database of common types"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=a0d0a948fbb8d0de576876791d53efd1c5e8dd782eb9e5369cafc06c3969de22
+long_desc="
+ Many programs and desktops use the MIME system to represent the types of
+ files. Frequently, it is necessary to work out the correct MIME type for
+ a file. This is generally done by examining the file's name or contents,
+ and looking up the correct MIME type in a database.
+
+ For interoperability, it is useful for different programs to use the same
+ database so that different programs agree on the type of a file, and new
+ rules for determining the type apply to all programs.
+
+ This package contains the core database of common types and the
+ update-mime-database command used to extend it."
+
+triggers="mimedb"
+
+Add_dependency build pkg-config
+Add_dependency build intltool
+Add_dependency full glibc
+Add_dependency full glib
+Add_dependency full libxml2
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

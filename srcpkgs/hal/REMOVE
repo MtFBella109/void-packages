@@ -1,0 +1,11 @@
+#
+# This script removes the HAL user/group.
+#
+case "${ACTION}" in
+pre)
+	userdel hal &>/dev/null
+	[ $? -eq 0 ] && echo "Removed ${PKGNAME} system user/group."
+	;;
+post)
+	;;
+esac

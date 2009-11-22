@@ -1,0 +1,34 @@
+# Template file for 'sysvinit'
+pkgname=sysvinit
+version=2.86
+distfiles="
+ftp://ftp.cistron.nl/pub/people/miquels/$pkgname/$pkgname-$version.tar.gz"
+build_style=custom-install
+short_desc="Linux System V Init"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=035f98fae17d9cff002993c564ccc83dc4ed136127172caeff872b6abdb679d8
+long_desc="
+ System V style init programs for booting a GNU/Linux system."
+
+Add_dependency full glibc
+Add_dependency full shadow
+Add_dependency full util-linux-ng
+Add_dependency full coreutils
+Add_dependency full gawk
+
+do_install()
+{
+	mkdir -p ${DESTDIR}/bin ${DESTDIR}/sbin
+	mkdir -p ${DESTDIR}/usr/bin ${DESTDIR}/usr/include
+	mkdir -p ${DESTDIR}/usr/share/man/man1
+	mkdir -p ${DESTDIR}/usr/share/man/man5
+	mkdir -p ${DESTDIR}/usr/share/man/man8
+
+	sed -i -e 's/utmpdump wall/utmpdump/' \
+		-e 's/mountpoint.1 wall.1/mountpoint.1/' src/Makefile
+	sed -i 's/\(.*\)\(Sending processes\)\(.*\)/\1\2 started by init\3/' \
+		$wrksrc/src/init.c
+
+	cd $wrksrc && make -C src && \
+		make -C src MANDIR=/usr/share/man ROOT=${DESTDIR} install
+}

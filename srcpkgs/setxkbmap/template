@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'setxkbmap'
 pkgname=setxkbmap
 version=1.3.4
@@ -15,3 +16,20 @@ checksum=be8d8554d40e981d1b93b5ff82497c9ad2259f59f675b38f1b5e84624c07fade
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'setxkbmap'.
+pkgname=setxkbmap
+version=1.1.0
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Set the keyboard map using the X Keyboard Extension"
+checksum=932f2b314a4bf6dfccd16d63c633073abf650d8e136f481904e972ef3d4faf64
+long_desc="
+ The setxkbmap command maps the keyboard to use the layout determined
+ by the options specified on the command line."
+ 
+Add_dependency full glibc
+Add_dependency full libX11
+Add_dependency full libxkbfile
+Add_dependency build pkg-config
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

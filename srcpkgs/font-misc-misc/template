@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'font-misc-misc'
 pkgname=font-misc-misc
 version=1.1.3
@@ -16,5 +17,27 @@ font_dirs="/usr/share/fonts/X11/misc"
 
 post_install() {
 	vlicense COPYING
+=======
+# Template build file for 'font-misc-misc'.
+pkgname=font-misc-misc
+version=1.1.0
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Standard X11 \"fixed\" PCF fonts"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=50f7528ab94f319a11efcd555dd5a7120191a42cf892c87cd6bdea8b908d497b
+long_desc="
+ The standard X11 public domain \"fixed\" font that you can
+ share and enjoy. It is in PCF format."
+
+Add_dependency full font-util
+
+noarch=yes
+font_dirs="/usr/share/fonts/X11/misc"
+triggers="x11-fonts"
+
+post_install()
+{
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 	rm -f ${DESTDIR}/${font_dirs}/fonts.*
 }

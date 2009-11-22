@@ -1,9 +1,20 @@
 #
+<<<<<<< HEAD
 # This script removes dirs for chroot initialization.
 #
 case "${ACTION}" in
 purge)
 	[ -d var/chroot/ntpd ] && rm -rf var/chroot/ntpd
 	[ -f var/db/ntpd.drift ] && rm -f var/db/ntpd.drift
+=======
+# This script removes the ntpd user/group.
+#
+case "${ACTION}" in
+pre)
+	userdel ntpd 2>&1 >/dev/null
+	[ $? -eq 0 ] && echo "Removed ntpd system user/group."
+	;;
+post)
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 	;;
 esac

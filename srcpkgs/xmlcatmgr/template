@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xmlcatmgr'
 pkgname=xmlcatmgr
 version=2.2
@@ -45,4 +46,54 @@ post_install() {
 	install -Dm644 catalog.xml ${DESTDIR}/usr/share/xml/catalog
 	install -Dm644 catalog.etc.xml ${DESTDIR}/etc/xml/catalog
 	vlicense COPYING
+=======
+# Template build file for 'xmlcatmgr'.
+pkgname=xmlcatmgr
+version=2.2
+distfiles="$SOURCEFORGE_SITE/xmlcatmgr/$pkgname-$version.tar.gz"
+build_style=gnu_configure
+short_desc="XML and SGML catalog manager"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=ea1142b6aef40fbd624fc3e2130cf10cf081b5fa88e5229c92b8f515779d6fdc
+long_desc="
+ XML Catalog Manager (xmlcatmgr in its short form) is a small utility used
+ to manipulate SGML and XML catalogs.  It is extremely small and lightweight,
+ specially designed to be run from packaging systems.  Basically, it allows
+ adding and removing entries from catalogs in a completely automated way.
+
+ A catalog is a lookup mechanism used to translate entities into other
+ different entities. They can, for example, map public identifiers to
+ local files or URIs. This allows you to tell the parser where to look
+ for entities without having to modify the original document source."
+
+conf_files="/etc/sgml/catalog /etc/xml/catalog
+ /usr/share/sgml/catalog /usr/share/xml/catalog"
+
+Add_dependency full glibc
+
+pre_install()
+{
+	# Create XML and SGML catalogs once built.
+	echo "=> Creating SGML catalogs..."
+	$wrksrc/xmlcatmgr -sc $wrksrc/catalog.etc.sgml create
+	$wrksrc/xmlcatmgr -sc $wrksrc/catalog.sgml create
+	$wrksrc/xmlcatmgr -sc $wrksrc/catalog.etc.sgml add CATALOG      \
+		/usr/share/sgml/catalog
+	echo "=> Creating XML catalogs..."
+	$wrksrc/xmlcatmgr -c $wrksrc/catalog.etc.xml create
+	$wrksrc/xmlcatmgr -c $wrksrc/catalog.xml create
+	$wrksrc/xmlcatmgr -c $wrksrc/catalog.etc.xml add nextCatalog    \
+		/usr/share/xml/catalog
+}
+
+post_install()
+{
+	# Install the XML/SGML catalog files.
+	echo "=> Installing XML/SGML catalogs."
+	chmod 644 $wrksrc/catalog.*
+	install -D -m644 $wrksrc/catalog.sgml ${DESTDIR}/usr/share/sgml/catalog
+	install -D -m644 $wrksrc/catalog.etc.sgml ${DESTDIR}/etc/sgml/catalog
+	install -D -m644 $wrksrc/catalog.xml ${DESTDIR}/usr/share/xml/catalog
+	install -D -m644 $wrksrc/catalog.etc.xml ${DESTDIR}/etc/xml/catalog
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

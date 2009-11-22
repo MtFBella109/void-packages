@@ -1,5 +1,6 @@
 # Template file for 'usbutils'
 pkgname=usbutils
+<<<<<<< HEAD
 version=018
 revision=1
 build_style=meson
@@ -22,4 +23,34 @@ post_install() {
 	# add usbreset, upstream doesn't install it by default
 	vbin build/usbreset
 	vman man/usbreset.1
+=======
+version=0.86
+revision=2
+distfiles="${SOURCEFORGE_SITE}/linux-usb/$pkgname-$version.tar.gz"
+build_style=gnu_configure
+configure_args="--datadir=/usr/share/hwdata --disable-zlib"
+short_desc="Linux USB utilities"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=b3b2bea6d2cd87660c8201a47071bf2a9889d8ed90c7203cc768b597799c12f4
+long_desc="
+ This package contains utilities for inspecting devices connected to a
+ USB bus."
+
+Add_dependency full glibc
+Add_dependency full libusb
+Add_dependency full libusb-compat
+Add_dependency build which
+
+pre_configure()
+{
+	cd $wrksrc
+	rm usb.ids
+	$XBPS_FETCH_CMD http://www.linux-usb.org/usb.ids
+}
+
+post_install()
+{
+	mkdir -p ${DESTDIR}/usr/lib
+	mv ${DESTDIR}/usr/share/hwdata/pkgconfig ${DESTDIR}/usr/lib
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

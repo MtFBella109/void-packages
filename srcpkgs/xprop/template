@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xprop'
 pkgname=xprop
 version=1.2.8
@@ -15,3 +16,21 @@ checksum=d689e2adb7ef7b439f6469b51cda8a7daefc83243854c2a3b8f84d0f029d67ee
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xprop'.
+pkgname=xprop
+version=1.1.0
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Property displayer for X"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=cc8e07901574895f113baffda19272c54545879e02012314527ebbf2dcc66226
+long_desc="
+ This package provides xprop, a property displayer for X.
+ This is from the modular X.org X11 project."
+
+Add_dependency build pkg-config
+Add_dependency full glibc
+Add_dependency full libX11
+Add_dependency full libXmu
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

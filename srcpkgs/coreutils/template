@@ -1,5 +1,6 @@
 # Template file for 'coreutils'
 pkgname=coreutils
+<<<<<<< HEAD
 version=9.4
 revision=3
 bootstrap=yes
@@ -122,4 +123,30 @@ do_install() {
 	mv ${DESTDIR}/usr/share/man/man1/hostname.1 ${DESTDIR}/usr/share/man/man1/hostname-coreutils.1
 
 	ln -s test.1 "${DESTDIR}/usr/share/man/man1/[.1"
+=======
+version=7.6
+distfiles="http://ftp.gnu.org/gnu/coreutils/$pkgname-$version.tar.gz"
+build_style=gnu_configure
+configure_args="--enable-install-program=hostname --bindir=/bin"
+short_desc="The GNU core utilities"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=1d9bfe8b427ca5f8cffa0b462f861e4157c946fbeaf0884d273bbd6cab1c25d4
+long_desc="
+ The GNU Core Utilities are the basic file, shell and text manipulation
+ utilities of the GNU operating system. These are the core utilities
+ which are expected to exist on every operating system."
+
+essential=yes
+Add_dependency run glibc
+Add_dependency full gmp
+Add_dependency full attr
+Add_dependency full acl
+Add_dependency build perl
+
+post_install()
+{
+	# Most programs expect /usr/bin/env.
+	install -d ${DESTDIR}/usr/bin
+	cd ${DESTDIR}/usr/bin && ln -s ../../bin/env .
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }

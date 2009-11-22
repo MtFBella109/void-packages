@@ -1,5 +1,6 @@
 # Template file for 'fakeroot'
 pkgname=fakeroot
+<<<<<<< HEAD
 version=1.37.1.1
 revision=1
 build_style=gnu-configure
@@ -52,3 +53,22 @@ pre_configure() {
 pre_check() {
 	export VERBOSE=x
 }
+=======
+version=1.14.3
+distfiles="${DEBIAN_SITE}/main/f/fakeroot/${pkgname}_${version}.tar.gz"
+build_style=gnu_configure
+short_desc="Gives a fake root environment"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=8aab001d327dc32f311763b65f275587a1456b64da3245998e527c7008ff7dab
+long_desc="
+ This package is intended to enable something like:
+
+  dpkg-buildpackage -rfakeroot
+
+ i.e. to remove the need to become root for a package build. This is done by
+ setting LD_PRELOAD to libfakeroot.so, which provides wrappers around getuid,
+ chown, chmod, mknod, stat, and so on, thereby creating a fake root
+ environment."
+
+Add_dependency full glibc
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

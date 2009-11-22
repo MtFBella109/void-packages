@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xfontsel'
 pkgname=xfontsel
 version=1.1.1
@@ -16,3 +17,22 @@ checksum=5a3c037ef28e8d22ccf7ca05894e0fcd86256a48dd56fb6e2838308cef623b7e
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xfontsel'.
+pkgname=xfontsel
+version=1.0.2
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="X font selector"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=7a66ba3910bd7e39d58f9d4a4a588f191a874b8607369fe2cc9203a7115006a9
+long_desc="
+ This package provides xfontsel, a program to query and display
+ X11 fonts.
+
+ This is from the modular X.org X11 project."
+ 
+Add_dependency build pkg-config
+Add_dependency full glibc
+Add_dependency full libXaw
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

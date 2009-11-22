@@ -1,13 +1,34 @@
+<<<<<<< HEAD
 # Template file for 'font-util'
 pkgname=font-util
 version=1.4.1
 revision=1
 build_style=gnu-configure
 hostmakedepends="pkg-config bdftopcf"
+=======
+# Template build file for 'font-util'.
+pkgname=font-util
+version=1.1.1
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Tools for truncating and subseting of ISO10646-1 BDF fonts"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=a33f1e3b0d7c3fd7c3505ce68888fec3cf897353084187d96e1e821fe3c02f88
+long_desc="
+ The font-util package provides ucs2any and bdftruncate tools, for
+ generating  BDF fonts containing subsets of ISO 10646-1 code-points
+ and generating truncated BDF font from ISO 10646-1-encoded BDF
+ font. It also provides mapping-files (character set tables)
+ and the fontutil pkg-config and autoconf macro files."
+
+Add_dependency full glibc
+Add_dependency build pkg-config
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 #
 # These aren't really required, but this is to centralize the
 # requirement of dependent packages.
 #
+<<<<<<< HEAD
 depends="font-alias expat freetype fontconfig mkfontscale"
 short_desc="Tools for truncating and subseting of ISO10646-1 BDF fonts"
 maintainer="Duncaen <duncaen@voidlinux.org>"
@@ -20,3 +41,12 @@ lib32disabled=yes
 post_install() {
 	vlicense COPYING
 }
+=======
+Add_dependency full font-alias
+Add_dependency full expat
+Add_dependency full freetype
+Add_dependency full fontconfig
+Add_dependency build bdftopcf
+Add_dependency full mkfontdir
+Add_dependency full mkfontscale
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

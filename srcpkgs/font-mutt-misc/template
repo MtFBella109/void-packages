@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'font-mutt-misc'
 pkgname=font-mutt-misc
 version=1.0.4
@@ -16,5 +17,27 @@ font_dirs="/usr/share/fonts/X11/misc"
 
 post_install() {
 	vlicense COPYING
+=======
+# Template build file for 'font-mutt-misc'.
+pkgname=font-mutt-misc
+version=1.0.1
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="100dpi PCF versions of the ClearlyU fonts"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=77bf33cbf5d1849bef4e516698eb45b7d16263a84dcc2299fd61383501906e25
+long_desc="
+ These are the PCF versions of the ClearlyU fonts for 100dpi displays.
+ This is from the modular Xorg project."
+
+Add_dependency full font-util
+
+noarch=yes
+font_dirs="/usr/share/fonts/X11/misc"
+triggers="x11-fonts"
+
+post_install()
+{
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 	rm -f ${DESTDIR}/${font_dirs}/fonts.*
 }

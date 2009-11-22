@@ -1,5 +1,6 @@
 # Template build file for 'bdftopcf'.
 pkgname=bdftopcf
+<<<<<<< HEAD
 version=1.1
 revision=2
 build_style=gnu-configure
@@ -15,3 +16,24 @@ checksum=4b4df05fc53f1e98993638d6f7e178d95b31745c4568cee407e167491fd311a2
 post_install() {
 	vlicense COPYING
 }
+=======
+version=1.0.2
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="BDF to PCF font converter for X11"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=11017f0dd637fd3228bd56fdbbd72193fd747c10d893a711c25bf6734c4da06b
+long_desc="
+ The bdftopcf tool converts X fonts from Bitmap Distribution Format
+ to Portable Compiled Format.
+
+ Fonts in the Portable Compiled Format can be read by any architecture,
+ although the file is structured to allow one particular
+ architecture to read them directly without reformatting. This
+ allows fast reading on the appropriate machine, but the files
+ are still portable (but read more slowly) on other machines."
+
+Add_dependency full glibc
+Add_dependency full libXfont
+Add_dependency build pkg-config
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

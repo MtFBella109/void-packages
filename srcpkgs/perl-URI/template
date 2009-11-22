@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'perl-URI'
 pkgname=perl-URI
 version=5.21
@@ -14,3 +15,31 @@ homepage="https://metacpan.org/release/URI"
 changelog="https://metacpan.org/dist/URI/changes"
 distfiles="${CPAN_SITE}/URI/URI-${version}.tar.gz"
 checksum=96265860cd61bde16e8415dcfbf108056de162caa0ac37f81eb695c9d2e0ab77
+=======
+# Template build file for 'perl-URI'.
+pkgname=perl-URI
+version=1.40
+wrksrc="URI-$version"
+distfiles="${CPAN_SITE}/URI/GAAS/URI-$version.tar.gz"
+build_style=perl_module
+short_desc="Perl Uniform Resource Identifiers class (URI, RFC 2396)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=7104e9c602083066967c6fbfd06c2648f839fedb866e9bc77ae6c263d3f42fbf
+long_desc="
+  This package contains the URI.pm module with friends. The module
+ implements the URI class. Objects of this class represent Uniform
+ Resource Identifier (URI) references as specified in RFC 2396.
+
+  URI objects can be used to access and manipulate the various
+ components that make up these strings. There are also methods to
+ combine URIs in various ways.
+
+  The URI class replaces the URI::URL class that used to be distributed
+ with libwww-perl. This package contains an emulation of the old
+ URI::URL interface. The emulated URI::URL implements both the old and
+ the new interface."
+
+noarch=yes
+Add_dependency build perl-MIME-Base64
+Add_dependency full perl
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

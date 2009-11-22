@@ -1,0 +1,17 @@
+# Template file for 'ntp-perl'.
+#
+short_desc="${short_desc} (perl scripts)"
+long_desc="${long_desc}
+
+ This package contains perl scripts ntp-wait and ntptrace."
+
+Add_dependency run ntp
+Add_dependency run perl
+
+do_install()
+{
+	mkdir -p ${DESTDIR}/usr/bin
+	for f in ntp-wait ntptrace; do
+		mv ${SRCPKGDESTDIR}/usr/bin/${f} ${DESTDIR}/usr/bin
+	done
+}

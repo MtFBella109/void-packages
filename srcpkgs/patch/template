@@ -1,5 +1,6 @@
 # Template file for 'patch'
 pkgname=patch
+<<<<<<< HEAD
 version=2.7.6
 revision=4
 bootstrap=yes
@@ -16,3 +17,23 @@ if [ "$XBPS_TARGET_LIBC" = musl ]; then
 	export ac_cv_lib_error_at_line=no
 	export ac_cv_header_sys_cdefs_h=no
 fi
+=======
+version=2.5.9
+distfiles="ftp://alpha.gnu.org/gnu/diffutils/patch-$version.tar.gz"
+build_style=gnu_configure
+make_install_args="prefix=$XBPS_DESTDIR/$pkgname-$version/usr
+ mandir=$XBPS_DESTDIR/$pkgname-$version/usr/share/man"
+short_desc="Patch files using diff output"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=ecb5c6469d732bcf01d6ec1afe9e64f1668caba5bfdb103c28d7f537ba3cdb8a
+long_desc="
+ 'patch' takes a patch file containing a difference listing
+ produced by diff and applies those differences to one or
+ more original files, producing patched versions.
+
+ This is the GPL version from the Free Software Foundation."
+
+base_chroot=yes
+
+Add_dependency run glibc
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'xtrans'
 pkgname=xtrans
 version=1.6.0
@@ -14,3 +15,19 @@ checksum=936b74c60b19c317c3f3cb1b114575032528dbdaf428740483200ea874c2ca0a
 post_install() {
 	vlicense COPYING
 }
+=======
+# Template build file for 'xtrans'.
+pkgname=xtrans
+version=1.2.5
+distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+build_style=gnu_configure
+short_desc="Network API translation layer to insulate X"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=cc71a391f4da8176e5daeeac1ddf5137ba5e8d2263cb93a49f9e2a9976b90899
+long_desc="
+ Network API translation layer to insulate X applications and
+ libraries from OS network vageries. This is from the modular
+ X.org X11 project."
+
+noarch=yes
+>>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
