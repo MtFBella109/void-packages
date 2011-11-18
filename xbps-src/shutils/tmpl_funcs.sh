@@ -30,7 +30,11 @@ info_tmpl()
 {
 	local i=
 
+<<<<<<< HEAD
 	for f in $(echo $XBPS_COMMONVARSDIR/*.sh); do
+=======
+	for f in $XBPS_COMMONDIR/*.sh; do
+>>>>>>> b362b71a46a (Reorganize stuff in repo to make xbps-src an independent package.)
 		[ -r ${f} ] && . ${f}
 	done
 
@@ -97,7 +101,15 @@ setup_tmpl()
 	[ -z "$pkg" ] && return 1
 	[ "$pkgname" = "$pkg" ] && return 0
 
+<<<<<<< HEAD
 	for f in $(echo $XBPS_COMMONVARSDIR/*.sh); do
+=======
+	if [ "$pkgname" = "$pkg" ]; then
+		[ -n "$DESTDIR" ] && return 0
+	fi
+
+	for f in $XBPS_COMMONDIR/*.sh; do
+>>>>>>> b362b71a46a (Reorganize stuff in repo to make xbps-src an independent package.)
 		[ -r ${f} ] && . ${f}
 	done
 

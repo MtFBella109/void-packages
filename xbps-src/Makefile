@@ -1,7 +1,12 @@
 include vars.mk
 
+<<<<<<< HEAD
 BIN	= xbps-src
 SUBDIRS	= etc common helpers triggers shutils
+=======
+BINS	= xbps-src
+SUBDIRS	= etc libexec helpers shutils
+>>>>>>> b362b71a46a (Reorganize stuff in repo to make xbps-src an independent package.)
 
 .PHONY: all
 all:
