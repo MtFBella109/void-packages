@@ -1,5 +1,6 @@
 # Template file for 'evolution'
 pkgname=evolution
+<<<<<<< HEAD
 version=3.56.2
 revision=1
 build_style=cmake
@@ -33,4 +34,82 @@ evolution-devel_package() {
 		vmove usr/include
 		vmove usr/lib/pkgconfig
 	}
+=======
+version=3.3.92
+homepage="http://www.gnome.org"
+distfiles="${GNOME_SITE}/$pkgname/3.3/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-pst-import --with-clutter --with-openldap
+--with-krb5=/usr --disable-schemas-install --disable-scrollkeeper
+--disable-static --with-gconf-schema-file-dir=/usr/share/gconf/schemas"
+short_desc="Integrated mail, addressbook and calendaring"
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="GPL-2"
+checksum=5932bd6d9c37657dde1ef3350341760c07a7c3022a4c24e7f533dbcd587bc33d
+long_desc="
+ Evolution provides integrated mail, addressbook and calendaring functionality
+ to users of the GNOME desktop."
+
+gconf_schemas="
+apps-evolution-attachment-reminder.schemas
+apps-evolution-mail-notification.schemas
+apps-evolution-mail-prompts-checkdefault.schemas
+apps-evolution-template-placeholders.schemas
+apps_evolution_addressbook.schemas
+apps_evolution_calendar.schemas
+apps_evolution_email_custom_header.schemas
+apps_evolution_eplugin_face.schemas
+apps_evolution_shell.schemas
+evolution-bogofilter.schemas
+evolution-mail.schemas
+evolution-spamassassin.schemas"
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+Add_dependency build which
+Add_dependency build pkg-config
+Add_dependency build intltool
+Add_dependency build gnome-doc-utils
+Add_dependency build evolution-data-server-devel
+Add_dependency build gtk+3-devel
+Add_dependency build libical-devel
+Add_dependency build GConf-devel
+Add_dependency build mx-devel
+Add_dependency build clutter-gtk-devel
+Add_dependency build libcanberra-devel
+Add_dependency build gtkhtml-devel
+Add_dependency build nss-devel
+Add_dependency build clutter-devel
+Add_dependency build json-glib-devel
+Add_dependency build libXfixes-devel
+Add_dependency build enchant-devel
+Add_dependency build sqlite-devel
+Add_dependency build libsoup-devel
+Add_dependency build libxml2-devel
+Add_dependency build gnome-desktop-devel
+Add_dependency build libldap-devel
+Add_dependency build libsoup-gnome-devel
+Add_dependency build libnotify-devel
+Add_dependency build gnome-online-accounts-devel
+Add_dependency build libgdata-devel
+Add_dependency build gstreamer-devel
+Add_dependency build libgweather-devel
+Add_dependency build mit-krb5-devel
+Add_dependency build NetworkManager-devel
+
+Add_dependency full hicolor-icon-theme
+Add_dependency full desktop-file-utils
+Add_dependency full gsettings-desktop-schemas
+Add_dependency full iso-codes
+
+post_install() {
+	mv ${DESTDIR}/usr/share/gconf/schemas/*.schemas ${wrksrc}
+	for f in ${gconf_schemas}; do
+		gconf-merge-schema ${DESTDIR}/usr/share/gconf/schemas/${f} \
+			--domain ${pkgname}-3.2 ${wrksrc}/${f}
+	done
+	# Remove devel stuff, not interested.
+	rm -rf ${DESTDIR}/usr/include ${DESTDIR}/usr/lib/pkgconfig \
+		${DESTDIR}/usr/share/gtk-doc
+>>>>>>> feeaa3f97bd (evolution: update to 3.3.92, removed subpkgs.)
 }
