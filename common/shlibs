@@ -5559,6 +5559,7 @@ libmtdev.so.1			mtdev			mtdev-devel
 libcryptsetup.so.4		libcryptsetup		cryptsetup-devel
 libgusb.so.2			libgusb			libgusb-devel
 libmash-0.1.so.0		mash			mash-devel
+<<<<<<< HEAD
 libudisks2.so.0			udisks2			udisks2-devel
 libgcr-3.so.1			gcr			gcr-devel
 libgck-1.so.0			gcr			gcr-devel
@@ -5566,3 +5567,4 @@ libgcr-base-3.so.1 		gcr			gcr-devel
 libwacom.so.2			libwacom		libwacom-devel
 libfarstream-0.1.so.0		farstream		farstream-devel
 libtelepathy-farstream.so.2	telepathy-farstream	telepathy-farstream-devel
+libass.so.4			libass			libass-devel
