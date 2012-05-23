@@ -1,0 +1,34 @@
+# Build template file for 'gvim'.
+#
+# Source vim template and overwrite some vars, it's stupid
+# to duplicate all this stuff again!
+#
+. ${XBPS_SRCPKGDIR}/vim/template
+unset subpackages revision
+
+pkgname=gvim
+configure_args="${configure_args} --enable-gui=gtk2 --with-x
+--with-vim-name=gvim"
+make_install_target="-C src
+DESTDIR=${XBPS_DESTDIR}/${pkgname}-${version} installvimbin install-icons"
+makedepends="pkg-config gtk+-devel"
+fulldepends="desktop-file-utils hicolor-icon-theme"
+short_desc="${short_desc} (GTK+ GUI)"
+long_desc="${long_desc}
+
+ This packages contains gvim, the GTK+ GUI version of vim."
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+
+pre_install() {
+	sed -i "s|/locolor|/hicolor|g" src/Makefile
+	for d in 16 32 48; do
+		vmkdir usr/share/icons/hicolor/${d}x${d}/apps
+	done
+}
+
+post_install() {
+	vinstall ${FILESDIR}/gvim.desktop 644 usr/share/applications
+}

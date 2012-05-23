@@ -11,8 +11,26 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2"
 homepage="http://people.redhat.com/jakub/prelink/"
 distfiles="http://people.redhat.com/jakub/${pkgname}/${pkgname}-${version}.tar.bz2"
+<<<<<<< HEAD
 checksum=6339c7605e9b6f414d1be32530c9c8011f38820d36431c8a62e8674ca37140f0
 configure_args="--sbindir=/usr/bin"
+=======
+revision=1
+makedepends="libelf-devel"
+short_desc="ELF prelinking utility to speed up dynamic linking."
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="GPL-2"
+checksum=b86df2e6c051176da711a85982b80d87c8ce8e053e04bd0ffb2f9ba817f62aaf
+long_desc="
+ prelink is a free program written by Jakub Jelínek of Red Hat for 
+ POSIX-compliant operating systems, principally Linux (because it modifies ELF
+ executables). It is intended to speed up a system by reducing the time a
+ program needs to begin."
+
+wrksrc=prelink
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vconf doc/prelink.conf

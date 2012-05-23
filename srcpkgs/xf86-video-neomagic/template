@@ -2,12 +2,21 @@
 pkgname=xf86-video-neomagic
 version=1.2.4
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="glibc xorg-server"
+makedepends="xorg-server-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg Neomagic video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=434da2986d007243f4590a86d16a1632a9611b71de44d6e46f28bd3cdb898353
 long_desc="
  This is the video driver for Neomagic video cards for the Xorg X11 server."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

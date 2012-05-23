@@ -23,7 +23,13 @@ pkgname=perl-XML-Parser
 version=2.36
 wrksrc="XML-Parser-$version"
 distfiles="${CPAN_SITE}/XML/XML-Parser-$version.tar.gz"
+<<<<<<< HEAD
 build_style=perl_module
+=======
+build_style=perl-module
+makedepends="expat-devel"
+fulldepends="perl>=5.14.0"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Perl extension interface to James Clark's XML parser, expat"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=9fd529867402456bd826fe0e5588d35b3a2e27e586a2fd838d1352b71c2ed73f
@@ -32,6 +38,9 @@ long_desc="
  XML::Parser::Expat, which is a lower level interface to James Clark's
  expat library."
 
+<<<<<<< HEAD
 Add_dependency full perl
 Add_dependency full expat
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,0 +1,18 @@
+# Template file for 'upower-devel'.
+#
+depends="pkg-config intltool libxslt docbook-xsl libusb-compat-devel glib-devel libgudev-devel dbus-devel dbus-glib-devel polkit-devel upower"
+short_desc="${short_desc} - development files"
+long_desc="${long_desc}
+
+ This package contains the files needed for developing applications
+ that use UPower."
+
+
+do_install()
+{
+	mkdir -p ${DESTDIR}/usr/{lib,share}
+	mv ${SRCPKGDESTDIR}/usr/include ${DESTDIR}/usr
+	mv ${SRCPKGDESTDIR}/usr/lib/*.a ${DESTDIR}/usr/lib
+	mv ${SRCPKGDESTDIR}/usr/lib/pkgconfig ${DESTDIR}/usr/lib
+	mv ${SRCPKGDESTDIR}/usr/share/gir-1.0 ${DESTDIR}/usr/share
+}

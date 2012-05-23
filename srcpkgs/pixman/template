@@ -38,7 +38,13 @@ pixman-devel_package() {
 pkgname=pixman
 version=0.16.2
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+configure_args="--disable-gtk" # do not require gtk+!
+makedepends="pkg-config perl"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library of low-level pixel manipulation routines"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=80b2fa3392e97c257ea251f99f827cc0f3dda06b876c27a0fcb54b971c296760
@@ -46,7 +52,14 @@ long_desc="
  Pixel manipulation library for modular X.org."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build perl
 Add_dependency full glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+post_install() {
+	vinstall COPYING 644 usr/share/licenses/$pkgname
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

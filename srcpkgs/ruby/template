@@ -120,6 +120,7 @@ ruby-ri_package() {
 =======
 # Template build file for 'ruby'.
 pkgname=ruby
+<<<<<<< HEAD
 ruby_ver="1.9.1"
 ruby_distpatchver="p129"
 ruby_distver="${ruby_ver}-${ruby_distpatchver}"
@@ -128,6 +129,18 @@ wrksrc="${pkgname}-${ruby_distver}"
 distfiles="ftp://ftp.ruby-lang.org/pub/ruby/1.9/$pkgname-${ruby_distver}.tar.gz"
 build_style=gnu_configure
 configure_args="--enable-pthread --enable-shared --disable-rpath"
+=======
+_ruby_ver="1.9.3"
+_ruby_distpatchver="p194"
+_ruby_distver="${_ruby_ver}-${_ruby_distpatchver}"
+version=${_ruby_ver}${_ruby_distpatchver}
+wrksrc="${pkgname}-${_ruby_distver}"
+distfiles="ftp://ftp.ruby-lang.org/pub/ruby/1.9/$pkgname-${_ruby_distver}.tar.bz2"
+build_style=gnu-configure
+configure_args="--enable-shared --disable-rpath
+DOXYGEN=/usr/bin/doxygen DOT=/usr/bin/dot PKG_CONFIG=/usr/bin/pkg-config"
+makedepends="pkg-config bison groff doxygen graphviz zlib-devel ncurses-devel readline-devel libffi-devel openssl-devel gdbm-devel libyaml-devel pango-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Ruby programming language"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=27b7a8ace1d17cec237020ae9355230b53f8c3875f8d942de903e7d58d14253b
@@ -137,6 +150,7 @@ long_desc="
  do system management tasks (as in Perl). It is simple, straight-forward
  and extensible."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full gdbm
 Add_dependency full openssl
@@ -145,3 +159,7 @@ Add_dependency full readline
 Add_dependency build ncurses
 Add_dependency run ncurses-libs
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+subpackages="ruby-devel ruby-gems ruby-irb ruby-rdoc ruby-ri"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

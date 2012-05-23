@@ -1,5 +1,6 @@
 # Template file for 'shotwell'
 pkgname=shotwell
+<<<<<<< HEAD
 version=0.32.13
 revision=1
 build_style=meson
@@ -11,6 +12,16 @@ makedepends="gst-plugins-base1-devel
  rest-devel vala-devel libwebkit2gtk41-devel libsoup3-devel
  libportal-gtk3-devel"
 depends="desktop-file-utils hicolor-icon-theme"
+=======
+version=0.12.3
+homepage="http://yorba.org/shotwell"
+distfiles="http://yorba.org/download/shotwell/stable/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+configure_args="--disable-schemas-compile --disable-desktop-update
+--disable-icon-update --release"
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config vala-devel libgomp-devel glib-devel libgee-devel libgphoto2-devel libgexiv2-devel libunique-devel libraw-devel rest-devel webkit-gtk3-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Open source photo manager for GNOME"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later, CC-BY-SA-3.0"
@@ -20,8 +31,14 @@ distfiles="${GNOME_SITE}/shotwell/${version%.*}/shotwell-${version}.tar.xz"
 checksum=bdd3e84f602e2fc7eb42843c90a25eb3aa49fb2ffb75edb51db01bd2905dbd1e
 lib32disabled=yes
 
+<<<<<<< HEAD
 post_extract() {
 	# because shotwell intelligently forces fatal warnings even for
 	# harmless stuff coming from the outside that we can do nothing about
 	vsed -i "/'--fatal-warnings'/d" meson.build
 }
+=======
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -8,7 +8,15 @@ distfiles="${KERNEL_SITE}/kernel/v2.6/linux-$version.tar.bz2"
 build_style=custom-install
 short_desc="The Linux kernel and associated stuff (2.6 branch)"
 maintainer="Juan RP <xtraeme@gmail.com>"
+<<<<<<< HEAD
 checksum=7751de380eab755a647c7137949bc6207fd14379e5e8e5c15c421fdc8390c45e
+=======
+homepage="http://www.kernel.org"
+license="GPL-2"
+depends="initramfs-tools linux-firmware module-init-tools"
+makedepends="perl kmod"
+short_desc="The Linux kernel and modules"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 long_desc="
  This package provides the linux kernel image and associated modules."
 
@@ -17,6 +25,7 @@ triggers="initramfs-tools"
 essential=yes
 nostrip=yes
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full dash
 Add_dependency full coreutils
@@ -24,6 +33,8 @@ Add_dependency full module-init-tools
 Add_dependency run initramfs-tools
 Add_dependency run kernel-firmware ">=${_kernel_ver}"
 Add_dependency build perl
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

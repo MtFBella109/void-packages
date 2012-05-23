@@ -5,9 +5,13 @@ revision=8
 _distver="${version%rc*}"
 _distrcver="rc${version#*rc}"
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static FT2_CONFIG=${XBPS_CROSS_BASE}/usr/bin/freetype-config"
 hostmakedepends="pkg-config"
 makedepends="freetype-devel zlib-devel glu-devel"
+=======
+makedepends="pkg-config freetype-devel zlib-devel MesaLib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="OpenGL library to use arbitrary fonts"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT-advertising"
@@ -19,6 +23,7 @@ post_install() {
 	vlicense COPYING
 }
 
+<<<<<<< HEAD
 ftgl-devel_package() {
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -29,3 +34,5 @@ ftgl-devel_package() {
 		vmove usr/share/doc
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

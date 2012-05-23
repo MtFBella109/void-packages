@@ -1,0 +1,14 @@
+# Template file for 'libgo-devel'.
+#
+depends="libgo>=4.7"
+short_desc="GCC Go library ${version} shared library support - development files"
+long_desc="${long_desc}
+
+ This package contains the GCC Go headers and static libraries."
+
+
+
+do_install() {
+	vmove usr/lib/libgo.a usr/lib
+	vmove usr/lib/libgobegin.a usr/lib
+}

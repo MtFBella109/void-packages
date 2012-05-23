@@ -1,5 +1,6 @@
 # Template file for 'sound-juicer'
 pkgname=sound-juicer
+<<<<<<< HEAD
 version=3.38.0
 revision=1
 build_style=meson
@@ -14,6 +15,29 @@ license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Apps/SoundJuicer"
 distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
 checksum=ae375f357a1b8b81e4aff737c9d6c98bc2dadfe20e71754b1d52a79f036aa521
+=======
+version=3.4.0
+distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-schemas-install --disable-scrollkeeper
+--with-gconf-schema-file-dir=/usr/share/gconf/schemas" 
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="which pkg-config intltool gnome-doc-utils glib-devel GConf-devel brasero-devel libmusicbrainz-devel"
+fulldepends="gst-plugins-good"
+short_desc="CD ripping tool using GTK+ and GStreamer"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.gnome.org/projects/seahorse/"
+checksum=49805cc73617e745ee09b62fec46979387e5713d39e5f75320b91ee8f0c44f12
+long_desc="
+ This is Sound Juicer, a CD ripping tool using GTK+ and GStreamer for the
+ GNOME desktop."
+
+gconf_schemas="sound-juicer.schemas"
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	rm -rf $DESTDIR/usr/doc

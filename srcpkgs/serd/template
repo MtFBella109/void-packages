@@ -1,10 +1,21 @@
 # Template file for 'serd'
 pkgname=serd
+<<<<<<< HEAD
 version=0.32.2
 revision=1
 build_style=meson
 short_desc="Lightweight C library for RDF syntax"
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+version=0.5.0
+build_style=waf
+homepage="http://drobilla.net/software/serd/"
+distfiles="http://download.drobilla.net/${pkgname}-${version}.tar.bz2"
+revision=2
+makedepends="python"
+short_desc="Lightweight C library for RDF syntax."
+maintainer="davehome <davehome@redthumb.info.tm>"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 license="ISC"
 homepage="http://drobilla.net/software/serd.html"
 changelog="https://gitlab.com/drobilla/serd/-/raw/master/NEWS"
@@ -21,6 +32,7 @@ post_install() {
 	vlicense COPYING
 }
 
+<<<<<<< HEAD
 serd-devel_package() {
 	depends="libserd>=${version}_${revision}"
 	short_desc+=" - Development files"
@@ -37,3 +49,5 @@ libserd_package() {
 		vmove "usr/lib/*.so.*"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

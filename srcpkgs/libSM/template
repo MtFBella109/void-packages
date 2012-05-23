@@ -33,7 +33,12 @@ libSM-devel_package() {
 pkgname=libSM
 version=1.1.1
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config xtrans libuuid-devel libICE-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X Session Management Library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=f50d184d8c6a031b3ff4f0d52efcfd4ffa811b0362b166a9ff9ba4c2e9aa7ce0
@@ -42,9 +47,12 @@ long_desc="
  Management Library. This is from the modular X.org project."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build xtrans
 Add_dependency full glibc
 Add_dependency full libICE
 Add_dependency full libuuid
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

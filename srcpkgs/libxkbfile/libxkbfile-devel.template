@@ -1,11 +1,19 @@
 # Template file for 'libxkbfile-devel'.
 #
+<<<<<<< HEAD
 short_desc="${short_desc} (development files)"
+=======
+depends="kbproto libX11-devel libxkbfile"
+short_desc="${short_desc} -- development files"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD
 Add_dependency run libxkbfile
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

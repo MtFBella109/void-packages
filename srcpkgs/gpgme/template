@@ -3,6 +3,7 @@ pkgname=gpgme
 version=2.0.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper="python3"
 configure_args="--enable-fd-passing
  --with-libgpg-error-prefix=$XBPS_CROSS_BASE/usr
@@ -10,6 +11,13 @@ configure_args="--enable-fd-passing
 hostmakedepends="gnupg pkg-config"
 makedepends="libassuan-devel libgpg-error-devel"
 checkdepends="which"
+=======
+configure_args="--enable-fd-passing --disable-gpgsm-test --disable-gpgconf-test --disable-g13-test"
+subpackages="gpgme-devel"
+depends="libassuan>=2.0.3"
+makedepends="libgpg-error-devel libassuan-devel"
+fulldepends="gnupg"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GnuPG Made Easy"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
@@ -19,6 +27,7 @@ distfiles="https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-${version}.tar.bz2"
 checksum=ddf161d3c41ff6a3fcbaf4be6c6e305ca4ef1cc3f1ecdfce0c8c2a167c0cc36d
 CFLAGS="-D_LARGEFILE64_SOURCE"
 
+<<<<<<< HEAD
 if [ "$XBPS_TARGET_LIBC" = "musl" ]; then
 	configure_args+=" ac_cv_sys_file_offset_bits=no"
 fi
@@ -46,3 +55,9 @@ gpgme-devel_package() {
 		vmove usr/lib/libgpgme.la
 	}
 }
+=======
+ Because the direct use of GnuPG from an application can be a complicated
+ programming task, it is suggested that all software should try to use GPGME
+ instead. This way bug fixes or improvements can be done at a central place
+ and every application benefits from this."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

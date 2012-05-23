@@ -102,10 +102,19 @@ libltdl_package() {
 =======
 # Template build file for 'libtool'
 pkgname=libtool
+<<<<<<< HEAD
 version=2.2.6a
 wrksrc="$pkgname-2.2.6"
 distfiles="http://ftp.gnu.org/pub/gnu/libtool/$pkgname-$version.tar.gz"
 build_style=gnu_configure
+=======
+version=2.4.2
+revision=4
+homepage="http://www.gnu.org/software/libtool"
+distfiles="http://ftp.gnu.org/pub/gnu/libtool/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+depends="tar sed"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Generic library support"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=eb6b8f8272c5a5cad0c7c6b949aa75632f45c295f09b2e1e90b6bce15b32b796
@@ -114,6 +123,12 @@ long_desc="
  the complexity of generating special library types (such as shared
  libraries) befind a consistent interface."
 
+<<<<<<< HEAD
 subpackages="libltdl"
 Add_dependency run glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+build_requires=21
+noarch=yes
+subpackages="libltdl libltdl-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

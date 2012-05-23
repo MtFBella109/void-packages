@@ -3,8 +3,12 @@ pkgname=libdvdnav
 version=6.1.1
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="libdvdcss-devel libdvdread-devel"
+=======
+makedepends="automake libdvdread-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library to navigate DVDs"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -13,6 +17,7 @@ changelog="https://code.videolan.org/videolan/libdvdnav/blob/master/ChangeLog"
 distfiles="${VIDEOLAN_SITE}/libdvdnav/${version}/libdvdnav-${version}.tar.bz2"
 checksum=c191a7475947d323ff7680cf92c0fb1be8237701885f37656c64d04e98d18d48
 
+<<<<<<< HEAD
 libdvdnav-devel_package() {
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -23,4 +28,10 @@ libdvdnav-devel_package() {
 		vmove "usr/lib/*.so"
 		vmove "usr/lib/*.a"
 	}
+=======
+subpackages="$pkgname-devel"
+
+pre_configure() {
+	./autogen.sh
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

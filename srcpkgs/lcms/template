@@ -4,6 +4,7 @@ pkgname=lcms
 version=1.19
 revision=11
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static"
 hostmakedepends="pkg-config"
 makedepends="libjpeg-turbo-devel tiff-devel"
@@ -37,6 +38,9 @@ revision=1
 wrksrc=${pkgname}-${version%[a-z]*}
 distfiles="http://www.littlecms.com/$pkgname-$version.tar.gz"
 build_style=gnu_configure
+=======
+makedepends="glibc-devel jpeg-devel tiff-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Light Color Management System -- a color management library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=fe679a33e7074b62e38c458ac2bbf06d688ae47171886a5a611cbf8ec4d88ddf
@@ -50,8 +54,12 @@ long_desc="
  printers."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full zlib
 Add_dependency full jpeg
 Add_dependency full tiff
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,5 +1,6 @@
 # Template file for 'pcre-devel'.
 #
+depends="zlib-devel bzip2-devel libpcre libpcrecpp"
 short_desc="${short_desc} (development files)"
 long_desc="${long_desc}
 
@@ -7,11 +8,14 @@ long_desc="${long_desc}
 
 Add_dependency run pcre
 
+<<<<<<< HEAD
 do_install()
 {
 	mkdir -p ${DESTDIR}/usr/bin
 	mkdir -p ${DESTDIR}/usr/lib
 	mkdir -p ${DESTDIR}/usr/share/man
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 	mv ${SRCPKGDESTDIR}/usr/bin/pcre-config ${DESTDIR}/usr/bin
 	mv ${SRCPKGDESTDIR}/usr/include ${DESTDIR}/usr

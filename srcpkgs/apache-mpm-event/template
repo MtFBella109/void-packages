@@ -1,0 +1,42 @@
+# Template file for 'apache-mpm-event'
+#
+# We inherit all stuff from the apache build template.
+. ${XBPS_SRCPKGDIR}/apache/template
+
+# Unset unused stuff.
+unset subpackages conf_files system_accounts systemd_services
+unset post_install pre_configure run_depends
+
+# Override some vars.
+pkgname=apache-mpm-event
+configure_args="${configure_args} --enable-modules= --prefix=/usr --with-mpm=event"
+depends="libdb gdbm expat libuuid expat libdb gdbm apache>=2.2.22"
+makedepends="pkg-config perl>=0 zlib-devel libuuid-devel pcre-devel openssl-devel db-devel gdbm-devel expat-devel libldap-devel apr-devel apr-util-devel"
+short_desc="Apache HTTP Server - event driven model"
+long_desc="
+ Each Apache Multi-Processing Module provides a different flavor of web
+ server binary, compiled with a different processing model.
+
+ The event MPM is designed to allow more requests to be served simultaneously
+ by passing off some processing work to supporting threads, freeing up the
+ main threads to work on new requests. It is especially suitable for sites
+ that see extensive KeepAlive traffic.
+
+ This MPM is experimental and less tested than the worker and prefork MPMs."
+
+systemd_services="apache-mpm-event.service on"
+
+# dlopen(3) run-time dependencies.
+
+
+pre_configure() {
+	cat ${XBPS_SRCPKGDIR}/apache/files/xbps.layout >> config.layout
+}
+
+post_install() {
+	# We are only interested in the httpd binary.
+	cp -f ${DESTDIR}/usr/sbin/httpd ${wrksrc}
+	rm -rf ${DESTDIR}/*
+	vinstall httpd 755 usr/sbin httpd.event
+	vinstall ${FILESDIR}/${pkgname}.service 644 lib/systemd/system
+}

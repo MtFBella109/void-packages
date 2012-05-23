@@ -1,5 +1,6 @@
 # Template file for 'evince'
 pkgname=evince
+<<<<<<< HEAD
 version=48.1
 revision=1
 build_helper="gir"
@@ -13,6 +14,18 @@ makedepends="adwaita-icon-theme djvulibre-devel gnome-desktop-devel libSM-devel
  libgxps-devel libsecret-devel libspectre-devel
  poppler-glib-devel gspell-devel gst-plugins-base1-devel libhandy1-devel"
 depends="desktop-file-utils hicolor-icon-theme"
+=======
+version=3.4.0
+revision=3
+distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--enable-introspection --disable-schemas-compile
+--enable-comics --disable-scrollkeeper --enable-xps --disable-t1lib
+--disable-tests --disable-static"
+depends="desktop-file-utils hicolor-icon-theme"
+makedepends="which pkg-config intltool gnome-doc-utils gobject-introspection tiff-devel libarchive-devel nautilus-devel poppler-glib-devel libgnome-keyring-devel libxml2-devel djvulibre-devel libgxps-devel libSM-devel libICE-devel gtk+3-devel libspectre-devel"
+fulldepends="gnome-icon-theme gsettings-desktop-schemas"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNOME Document viewer for multiple document formats"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -24,6 +37,7 @@ checksum=7d8b9a6fa3a05d3f5b9048859027688c73a788ff6e923bc3945126884943fa10
 build_options="gir gtk_doc"
 build_options_default="gir gtk_doc"
 
+<<<<<<< HEAD
 pre_build() {
 	# help gi-docgen find gi files on cross
 	if [ -n "$CROSS_BUILD" ]; then
@@ -56,3 +70,6 @@ evince-devel_package() {
 		fi
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

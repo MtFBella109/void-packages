@@ -58,10 +58,19 @@ gnutls-tools_package() {
 =======
 # Template build file for 'gnutls'.
 pkgname=gnutls
+<<<<<<< HEAD
 version=2.6.6
 distfiles="ftp://ftp.gnutls.org/pub/gnutls/gnutls-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--with-lzo --with-zlib --disable-guile"
+=======
+version=2.12.18
+#distfiles="ftp://ftp.gnutls.org/pub/gnutls/gnutls-$version.tar.bz2"
+distfiles="http://mirror.symnds.com/software/GNU/$pkgname/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+configure_args="--with-lzo --with-zlib --disable-guile --with-libgcrypt"
+makedepends="pkg-config zlib-devel lzo-devel readline-devel libgpg-error-devel libtasn1-devel libgcrypt-devel p11-kit-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNU Transport Layer Security library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=03d85b8b51ca7885740c69b87663963c58fe7c9672da0a43e45732078fabdc9e
@@ -83,6 +92,7 @@ long_desc="
  library, to ease integration with existing applications."
 
 subpackages="$pkgname-devel $pkgname-tools"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full zlib
 Add_dependency full readline
@@ -92,3 +102,6 @@ Add_dependency full lzo
 Add_dependency build gettext
 Add_dependency build texinfo
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

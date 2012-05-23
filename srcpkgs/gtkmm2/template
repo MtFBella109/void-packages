@@ -3,9 +3,15 @@ pkgname=gtkmm2
 version=2.24.5
 revision=4
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static --disable-documentation"
 hostmakedepends="automake mm-common libtool pkg-config"
 makedepends="gtk+-devel libsigc++-devel atkmm-devel pangomm-devel libXcursor-devel"
+=======
+configure_args="--disable-documentation"
+revision=3
+makedepends="pkg-config glib-devel atk-devel pango-devel cairo-devel freetype-devel fontconfig-devel gtk+-devel libsigc++-devel glibmm-devel atkmm-devel pangomm-devel cairomm-devel libXcursor-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="C++ bindings for The GTK+ toolkit (v2)"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-only"
@@ -13,7 +19,15 @@ homepage="http://www.gtkmm.org/"
 distfiles="${GNOME_SITE}/gtkmm/${version%.*}/gtkmm-${version}.tar.xz"
 checksum=0680a53b7bf90b4e4bf444d1d89e6df41c777e0bacc96e9c09fc4dd2f5fe6b72
 
+<<<<<<< HEAD
 CXXFLAGS="-std=c++11"
+=======
+ Aside from the C++ interface to Gtk 2.x, this package also provides
+ bindings for the ATK library."
+
+subpackages="gtkmm2-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure() {
 	NOCONFIGURE=1 ./autogen.sh

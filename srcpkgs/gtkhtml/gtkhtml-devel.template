@@ -1,10 +1,12 @@
 # Template file for 'gtkhtml-devel'.
 #
+depends="cairo-devel gtk+3-devel enchant-devel gsettings-desktop-schemas iso-codes libgtkhtml>=4.4.2"
 short_desc="${sourcepkg} (development files)"
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD
 Add_dependency run pkg-config
 Add_dependency run gtk+3-devel
 Add_dependency run glib-devel
@@ -16,6 +18,8 @@ Add_dependency run cairo-devel
 Add_dependency run freetype-devel
 Add_dependency run fontconfig-devel
 Add_dependency run libgtkhtml
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

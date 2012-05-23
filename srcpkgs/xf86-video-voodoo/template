@@ -2,7 +2,13 @@
 pkgname=xf86-video-voodoo
 version=1.2.3
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="glibc xorg-server"
+makedepends="xorg-server-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg Voodoo 1/2 series video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=025d4d99ab19325b72417fadbb099c757412988f800c9511be3e2c3993ae29e9
@@ -10,5 +16,8 @@ long_desc="
  This is the video driver for Voodoo 1 and Voodoo 2 series video cards
  for the Xorg X11 server."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

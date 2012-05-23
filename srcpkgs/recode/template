@@ -3,6 +3,7 @@ pkgname=recode
 version=3.7.15
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-shared --disable-static"
 hostmakedepends="automake gettext-devel libtool libltdl-devel texinfo python3
  libiconv-utils"
@@ -16,6 +17,23 @@ distfiles="https://github.com/rrthomas/recode/releases/download/v${version}/reco
 checksum=f590407fc51badb351973fc1333ee33111f05ec83a8f954fd8cf0c5e30439806
 CFLAGS="-I${XBPS_CROSS_BASE}/usr/include/libiconv"
 LDFLAGS="-liconv"
+=======
+configure_args="--without-included-gettext"
+revision=2
+makedepends="automake"
+short_desc="Character set conversion utility"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=e3e6a4f3f8e5c6052ab70155990c074d87aa0b614fc1be31d194750d1d962fcf
+long_desc="
+ Free recode converts files between character sets and usages. When exact
+ transliterations are not possible, it may get rid of the offending
+ characters or fall back on approximations. This program recognizes or
+ produces nearly 300 different character sets and is able to transliterate
+ files between almost any pair. Most RFC 1345 character sets, and all
+ libiconv character sets, are supported."
+
+subpackages="librecode $pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure() {
 	autoreconf -fi

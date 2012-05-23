@@ -3,8 +3,15 @@ pkgname=freealut
 version=1.1.0
 revision=6
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config libtool"
 makedepends="libopenal-devel"
+=======
+homepage="http://www.openal.org"
+distfiles="http://connect.creativelabs.com/openal/Downloads/ALUT/$pkgname-$version.tar.gz"
+revision=2
+makedepends="pkg-config libopenal-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="OpenAL Utility Toolkit (ALUT)"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.0-or-later"
@@ -12,6 +19,7 @@ homepage="http://www.openal.org"
 distfiles="${DEBIAN_SITE}/main/f/freealut/freealut_${version}.orig.tar.gz>freealut-${version}.tar.gz"
 checksum=60d1ea8779471bb851b89b49ce44eecb78e46265be1a6e9320a28b100c8df44f
 
+<<<<<<< HEAD
 freealut-devel_package() {
 	depends="libopenal-devel freealut>=${version}"
 	short_desc+=" - Development files"
@@ -22,3 +30,8 @@ freealut-devel_package() {
 		vmove "usr/lib/*.a"
 	}
 }
+=======
+subpackages="$pkgname-devel"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

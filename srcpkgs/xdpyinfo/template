@@ -23,7 +23,13 @@ post_install() {
 pkgname=xdpyinfo
 version=1.1.0
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+makedepends="pkg-config libXext-devel libX11-devel libXtst-devel libXxf86vm-devel libXxf86misc-devel libXi-devel libXrender-devel libXcomposite-devel libXinerama-devel libdmx-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Display information utility for X"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=780d8dfe65653f42ee26d35928ab7f72f5f27ab08eda692fe4baad05126a0631
@@ -32,6 +38,7 @@ long_desc="
 
  This is from the modular X.org X11 project."
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libX11
@@ -48,3 +55,5 @@ Add_dependency full libXfixes
 Add_dependency full libdmx
 Add_dependency full libXcomposite
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -47,6 +47,7 @@ revision=1
 distfiles="ftp://ftp.remotesensing.org/pub/libtiff/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 configure_args="--enable-cxx --without-x"
+makedepends="zlib-devel jpeg-devel liblzma-devel"
 short_desc="Library and tools for reading and writing TIFF data files"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=3436d7331b1696c3ec776b0130a272f6593389d4f7d413bc80b11fb295d61e99
@@ -63,8 +64,11 @@ long_desc="
  esoteric portions of the 6.0 TIFF spec."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full zlib
 Add_dependency full jpeg
 Add_dependency run  libstdc++
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

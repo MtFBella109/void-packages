@@ -3,7 +3,10 @@ pkgname=libspectre
 version=0.2.12
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static"
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 makedepends="ghostscript-devel"
 short_desc="Small library for rendering Postscript documents"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -13,6 +16,7 @@ changelog="https://gitlab.freedesktop.org/libspectre/libspectre/-/raw/master/NEW
 distfiles="http://libspectre.freedesktop.org/releases/libspectre-${version}.tar.gz"
 checksum=55a7517cd3572bd2565df0cf450944a04d5273b279ebb369a895391957f0f960
 
+<<<<<<< HEAD
 libspectre-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -22,3 +26,7 @@ libspectre-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+subpackages="$pkgname-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

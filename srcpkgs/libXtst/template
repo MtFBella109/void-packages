@@ -4,6 +4,7 @@ pkgname=libXtst
 version=1.2.5
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="xorgproto libXext-devel libXi-devel"
 short_desc="X Tst Library"
@@ -32,6 +33,9 @@ libXtst-devel_package() {
 version=1.1.0
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+makedepends="pkg-config recordproto inputproto libX11-devel libXext-devel libXi-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X Tst Library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=bd440f4779e06957211ba83782a5a1cfbf1d42b14fd3510a6dce440489a4eb26
@@ -39,6 +43,7 @@ long_desc="
  This package provides the X Tst Library from the modular X.org X11 project."
  
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build xproto
 Add_dependency build xextproto
@@ -48,3 +53,5 @@ Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libXext
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -3,9 +3,25 @@ pkgname=nilfs-utils
 version=2.2.9
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--without-selinux"
 make_install_args="sbindir=/usr/bin"
 makedepends="libblkid-devel libmount-devel libuuid-devel"
+=======
+configure_args="--enable-libmount"
+makedepends="libuuid-devel libmount-devel"
+short_desc="A log-structured file system for Linux - userspace utils"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2, LGPL-2.1"
+checksum=4b697515993577a91f33476e8e052a4066e3d26f5748588f48c2737291cd54fa
+long_desc="
+ NILFS is a log-structured file system supporting versioning of the entire
+ file system and continuous snapshotting which allows users to even restore
+ files mistakenly overwritten or destroyed just a few seconds ago.
+
+ This package contains the required userspace utilities."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 conf_files="/etc/nilfs_cleanerd.conf"
 short_desc="Log-structured file system for Linux - userspace utils"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -14,6 +30,7 @@ homepage="https://nilfs.sourceforge.io/"
 distfiles="https://nilfs.sourceforge.io/download/${pkgname}-${version}.tar.bz2"
 checksum=5df63998c2084182c8c608a29b47b1771b825b4b5fa7916c12cca2fcb7577a97
 
+<<<<<<< HEAD
 post_install() {
 	mv ${DESTDIR}/sbin/* ${DESTDIR}/usr/bin/
 }
@@ -34,3 +51,5 @@ nilfs-utils-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

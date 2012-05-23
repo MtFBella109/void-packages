@@ -3,6 +3,7 @@ pkgname=xf86-video-nouveau
 version=1.0.18
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="eudev-libudev-devel libdrm-devel xorg-server-devel"
 depends="virtual?xserver-abi-video-25_1 mesa-dri"
@@ -13,9 +14,35 @@ homepage="http://nouveau.freedesktop.org"
 distfiles="${XORG_SITE}/driver/${pkgname}-${version}.tar.gz"
 checksum=b916f3174bed1df6e3ab8998053172ffabc563f86279bb7abb27b6b699ac556f
 lib32disabled=yes
+=======
+depends="xorg-server"
+makedepends="git automake pkg-config libdrm-devel libudev-devel xorg-server-devel xorg-util-macros"
+short_desc="Xorg OpenSource NVIDIA video driver"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://nouveau.freedesktop.org/wiki/"
+license="GPL-2, MIT"
+checksum=017974b622eea3b4483405368492b0c6f178854a9b9753d50e13c578b8a328dc
+long_desc="
+ This is the video driver for NVIDIA cards for the Xorg by using the
+ free software stack, nouveau."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 LDFLAGS="-Wl,-z,lazy"
 
+<<<<<<< HEAD
 post_install() {
 	vlicense COPYING
+=======
+
+
+do_fetch() {
+	local gitrepo="git://anongit.freedesktop.org/nouveau/xf86-video-nouveau"
+#	local gitrepo="git://github.com/skeggsb/xf86-video-nouveau.git"
+	msg_normal "Fetching source from git repo at: $gitrepo\n"
+	git clone --depth 1 -b master ${gitrepo} ${pkgname}-${version}
+}
+
+pre_configure() {
+	./autogen.sh
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

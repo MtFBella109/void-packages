@@ -5,6 +5,7 @@ version=1.1.1
 revision=8
 build_style=gnu-configure
 configure_args="--disable-examples --disable-vorbistest --disable-sdltest"
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="libogg-devel"
 short_desc="Theora Video Compression Codec"
@@ -36,6 +37,9 @@ version=1.0
 distfiles="http://downloads.xiph.org/releases/theora/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--disable-examples --disable-vorbistest --disable-sdltest"
+=======
+makedepends="pkg-config libogg-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Theora Video Compression Codec"
 maintainer="pancake <pancake@nopcode.org>"
 checksum=3ae9df56e8fc75ffe26e63a13cae2ce79d079416175fb0baffe0e2de8dc91a6d
@@ -48,7 +52,10 @@ long_desc="
  in the future to improve over what is possible with VP3."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libogg
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

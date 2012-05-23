@@ -1,11 +1,20 @@
 # Template file for 'libplist'
 pkgname=libplist
+<<<<<<< HEAD
 version=2.2.0
 revision=6
 build_style=gnu-configure
 configure_args="--disable-static"
 hostmakedepends="automake libtool pkgconf python3 python3-Cython"
 makedepends="python3-devel libglib-devel libxml2-devel"
+=======
+version=1.4
+homepage="http://libimobiledevice.org/"
+distfiles="http://www.libimobiledevice.org/downloads/$pkgname-$version.tar.bz2"
+build_style=cmake
+configure_args="-DCMAKE_SKIP_RPATH=ON"
+makedepends="cmake swig python-devel glib-devel libxml2-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Apple Property List library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-only"
@@ -22,6 +31,7 @@ pre_configure() {
 	sed -i "s#\$PYTHON-config#__DOES_NOT_EXIST__#" configure
 }
 
+<<<<<<< HEAD
 libplist++_package() {
 	short_desc+=" - C++ runtime library"
 	pkg_install() {
@@ -46,3 +56,5 @@ libplist-devel_package() {
 		vmove usr/lib/*.so
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -33,7 +33,12 @@ libXpm-devel_package() {
 pkgname=libXpm
 version=3.5.8
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config xproto libICE-devel libSM-devel libX11-devel libXext-devel libXt-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X PixMap Library from modular Xorg X11"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=02a77aaa32e6e335e1ee04aeb9ad1008045d98274d64ed33bc5fc6c3a3542c4c
@@ -44,9 +49,13 @@ long_desc="
  This libXpm is from the modular Xorg X11."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build gettext
 Add_dependency build xproto
 Add_dependency full glibc
 Add_dependency full libX11
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

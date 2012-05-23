@@ -1,11 +1,15 @@
 # Template file for 'libwnck-devel'.
 #
+depends="gtk+3-devel startup-notification-devel libXres-devel libwnck>=3.4.2"
 short_desc="${sourcepkg} development files"
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD
 Add_dependency run libwnck
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

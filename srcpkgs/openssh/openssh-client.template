@@ -1,5 +1,6 @@
 # Template file for 'openssh-client'.
 #
+depends="openssh>=6.0p1"
 short_desc="The OpenSSH client"
 long_desc="${long_desc}
 
@@ -7,10 +8,13 @@ long_desc="${long_desc}
 
 conf_files="/etc/ssh/ssh_config"
 
+<<<<<<< HEAD
 Add_dependency run glibc
 Add_dependency run zlib
 Add_dependency run openssl
 Add_dependency run openssh
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

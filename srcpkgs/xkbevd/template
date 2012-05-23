@@ -21,15 +21,24 @@ post_install() {
 pkgname=xkbevd
 version=1.1.0
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+makedepends="pkg-config libX11-devel libxkbfile-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="XKBD Event Daemon"
 checksum=46037add20321ff13954ad91aa5f5f5ec52d78006f9d7c52aa6167622b34a2df
 long_desc="
  the $pkgname event daemon listens for specified XKB events and executes
  requested commands if they occur."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libxkbfile
 Add_dependency build pkg-config
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

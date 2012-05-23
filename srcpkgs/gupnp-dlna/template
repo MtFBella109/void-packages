@@ -1,5 +1,6 @@
 # Template file for 'gupnp-dlna'
 pkgname=gupnp-dlna
+<<<<<<< HEAD
 version=0.12.0
 revision=1
 build_style=meson
@@ -7,6 +8,14 @@ build_helper="gir"
 configure_args="$(vopt_bool gir introspection)"
 hostmakedepends="pkg-config $(vopt_if vala vala)"
 makedepends="gst-plugins-base1-devel libxml2-devel $(vopt_if vala vala)"
+=======
+version=0.6.6
+homepage="http://gupnp.org/"
+distfiles="${GNOME_SITE}/$pkgname/0.6/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-static"
+makedepends="pkg-config gobject-introspection gst-plugins-base-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GUPnP DLNA"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -19,6 +28,7 @@ checksum=3d53b96f85bc5628d33e367ec9bf2adb38ef2b34d7ad0434a6ba0cf4ad9048e6
 build_options="gir vala"
 build_options_default="gir vala"
 
+<<<<<<< HEAD
 gupnp-dlna-devel_package() {
 	depends="gst-plugins-base1-devel ${sourcepkg}>=${version}"
 	short_desc+=" - development files"
@@ -34,3 +44,5 @@ gupnp-dlna-devel_package() {
 		vmove usr/lib/pkgconfig
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

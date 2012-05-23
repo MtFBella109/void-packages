@@ -2,9 +2,15 @@
 pkgname=neverball
 version=1.6.0
 revision=5
+<<<<<<< HEAD
 hostmakedepends="gettext"
 makedepends="libpng-devel libjpeg-turbo-devel libvorbis-devel SDL2_ttf-devel physfs-devel"
 depends="desktop-file-utils"
+=======
+distfiles="http://www.neverball.org/$pkgname-$version.tar.gz"
+makedepends="libpng-devel jpeg-devel libvorbis-devel SDL_ttf-devel physfs-devel MesaLib-devel"
+fulldepends="desktop-file-utils"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Puzzle/action game similar to Super Monkey Ball"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -15,9 +21,18 @@ nocross="./mapc: ./mapc: cannot execute binary file"
 
 CFLAGS="-fcommon"
 
+<<<<<<< HEAD
 do_build() {
 	make ${makejobs} CFLAGS="$CFLAGS" LDFLAGS="$LDFLAGS" \
 		ENABLE_NLS=1 DATADIR=/usr/share/neverball LOCALEDIR=/usr/share/locale
+=======
+
+do_build()
+{
+	HOME=/ LANG=C LC_ALL=C LDFLAGS="-lm -lX11" make ${makejobs} \
+		ENABLE_NLS=1 DATADIR=/usr/share/neverball \
+		LOCALEDIR=/usr/share/locale
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }
 
 do_install() {

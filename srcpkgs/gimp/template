@@ -60,6 +60,7 @@ gimp-devel_package() {
 =======
 # Template build file for 'gimp'.
 pkgname=gimp
+<<<<<<< HEAD
 version=2.6.7
 revision=1
 distfiles="http://sunsite.rediris.es/mirror/gimp/v2.6/$pkgname-$version.tar.bz2"
@@ -67,6 +68,17 @@ build_style=gnu_configure
 configure_args="--without-aa --without-webkit --without-gvfs
  --without-gnomevfs --without-alsa --disable-python --disable-alsatest
  --enable-gimp-remote"
+=======
+version=2.8.0
+homepage="http://www.gimp.org"
+distfiles="ftp://ftp.gimp.org/pub/gimp/v${version%.*}/gimp-$version.tar.bz2"
+build_style=gnu-configure
+configure_args="--without-aa"
+license="GPL-3"
+depends="desktop-file-utils hicolor-icon-theme"
+makedepends="pkg-config intltool gtk+-devel lcms-devel alsa-lib-devel dbus-glib-devel libXmu-devel libXext-devel libXcursor-devel libexif-devel webkit-gtk-devel libwmf-devel librsvg-devel poppler-glib-devel libmng-devel libXpm-devel libcurl-devel babl-devel gegl-devel pygtk-devel libgudev-devel jasper-devel"
+fulldepends="iso-codes"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The GNU image manipulation program"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a401c5fbe59e812413cb4d0b37607680089bf254056d8b5853aa79e03a6fe115
@@ -87,6 +99,7 @@ conf_files="/etc/gimp/2.0/unitrc
  /etc/gimp/2.0/gimprc
  /etc/gimp/2.0/controllerrc"
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 Add_dependency build intltool
 Add_dependency build pkg-config
@@ -119,3 +132,19 @@ pre_configure()
 	cd / && ${XBPS_TRIGGERSDIR}/gtk-pixbuf-loaders run post-install
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }
+=======
+conf_files="
+/etc/gimp/2.0/unitrc
+/etc/gimp/2.0/gtkrc
+/etc/gimp/2.0/menurc
+/etc/gimp/2.0/ps-menurc
+/etc/gimp/2.0/sessionrc
+/etc/gimp/2.0/templaterc
+/etc/gimp/2.0/gimprc
+/etc/gimp/2.0/controllerrc"
+
+subpackages="gimp-devel gimp-python"
+
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

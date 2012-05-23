@@ -3,6 +3,7 @@ pkgname=rpcbind
 version=1.2.8
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-warmstarts --with-statedir=/run --with-rpcuser=rpc
  --with-systemdsystemunitdir=no"
 hostmakedepends="pkg-config"
@@ -14,6 +15,20 @@ homepage="https://rpcbind.sourceforge.net"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.bz2"
 checksum=964132c389918e8964d7334936b6dd10ef025b300c6b29e693ba0f29550e3de5
 system_accounts="rpc"
+=======
+configure_args="--enable-warmstarts --with-statedir=/run"
+makedepends="libtirpc-devel"
+short_desc="Converts RPC program numbers into universal addresses"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=c92f263e0353887f16379d7708ef1fb4c7eedcf20448bc1e4838f59497a00de3
+long_desc="
+ The rpcbind utility is a server that converts RPC program numbers into
+ universal address. It must be running on the host to be able to make
+ RPC calls on a server on that machine."
+
+systemd_services="${pkgname}.service on"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vlicense COPYING

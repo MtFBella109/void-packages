@@ -3,10 +3,15 @@ pkgname=pcmanfm
 version=1.4.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--with-gtk=3"
 hostmakedepends="pkg-config intltool automake gettext-devel glib-devel"
 makedepends="gtk+3-devel libfm-gtk+3-devel"
 depends="desktop-file-utils lxmenu-data"
+=======
+makedepends="automake pkg-config intltool gtk+-devel libfm-devel"
+fulldepends="desktop-file-utils"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="LXDE file manager"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -15,6 +20,11 @@ distfiles="https://github.com/lxde/pcmanfm/archive/refs/tags/${version}.tar.gz"
 checksum=cda4f5ad7e049dcdf3b051b9de4c779adcd55bd720e9c96c45275389aa84264e
 conf_files="/etc/xdg/pcmanfm/default/pcmanfm.conf"
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 pre_configure() {
 	autoreconf -fi
 }

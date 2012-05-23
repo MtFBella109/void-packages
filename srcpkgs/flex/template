@@ -36,6 +36,11 @@ version=2.5.35
 distfiles="$SOURCEFORGE_SITE/flex/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--disable-rpath"
+<<<<<<< HEAD
+=======
+revision=2
+fulldepends="bison"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The Fast Lexical Analyzer"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=0becbd4b2b36b99c67f8c22ab98f7f80c9860aec70f0350a0018f29a88704e7b
@@ -53,8 +58,11 @@ long_desc="
  its input for occurrences of text matching the regular expressions for each
  rule. Whenever it finds a match, it executes the corresponding C code."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full bison
 Add_dependency full m4
 Add_dependency build gettext
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

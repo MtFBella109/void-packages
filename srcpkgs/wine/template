@@ -11,10 +11,19 @@ short_desc="Run Microsoft Windows applications"
 maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="LGPL-2.1-or-later"
 homepage="http://www.winehq.org/"
-distfiles="https://dl.winehq.org/wine/source/${version%.*}.x/wine-${_pkgver}.tar.xz
- https://github.com/wine-staging/wine-staging/archive/v${_pkgver}.tar.gz"
-checksum="7cec58323c6f2aaee7aca93517379cbbfef96e2c2c580c68ff85dd000cbbdd46
- 502448197e4f7a69a67f243eb8437d1b8b346f46a5fad41403068b67f6fab892"
+checksum="bbf8e7de32cea9fe305361d4af85e30492254c4bf02039ee26dac7a66701b4e6
+ 1f6e9dd47f3ccdc6ecc77d5e769d937123440faa6fea34617bbd065f11acbcd6"
+distfiles="http://ibiblio.org/pub/linux/system/emulators/${pkgname}/${pkgname}-${version}.tar.bz2"
+makedepends="flex gettext-devel lcms-devel zlib-devel ncurses-devel MesaLib-devel libSM-devel libXext-devel libX11-devel libXpm-devel libXinerama-devel libXcomposite-devel libXmu-devel libXxf86vm-devel libXcursor-devel libXrandr-devel libXdamage-devel libXi-devel libldap-devel alsa-lib-devel libgphoto2-devel libxml2-devel libxslt-devel glib-devel gst-plugins-base-devel freetype-devel mpg123-devel libgsm-devel libopenal-devel giflib-devel libpng-devel v4l-utils-devel fontconfig-devel gnutls-devel dbus-devel prelink"
+fulldepends="desktop-file-utils hicolor-icon-theme liberation-fonts-ttf fontconfig"
+short_desc="Run Windows applications on Linux, BSD, Solaris and Mac OS X."
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="LGPL-2.1"
+checksum=99a437bb8bd350bb1499d59183635e58217e73d631379c43cfd0d6020428ee65
+long_desc="
+ Wine lets you run Windows software on other operating systems. With Wine,
+ you can install and run these applications just like you would in
+ Windows."
 
 # NOTE: wine depends on specific versions of wine-mono and wine-gecko,
 # check for updates to these packages when updating wine
@@ -27,22 +36,12 @@ desc_option_xshm="Enable support for the X Shared Memory Extension"
 desc_option_wow64="Run 32-bit Windows apps on a purely 64-bit Unix installation"
 
 
-if [ "$XBPS_TARGET_LIBC" = "musl" ]; then
-	build_options_default+=" wow64"
-fi
 
 lib32mode=full
 archs="i686* x86_64*"
 
-patch_args="-Np1 --directory=${build_wrksrc}"
+				# Otherwise, throws a nasty warning.
 
-_nopie=no
-if [ "$XBPS_TARGET_MACHINE" = i686-musl ]; then
-	# build system adds -fno-PIC for 32bit builds, which,
-	# coupled with our default pie toolchain, leads to textrels
-	# in the final binary; musl doesn't support those
-	_nopie=yes
-fi
 
 hostmakedepends="pkg-config flex gettext
  $(vopt_if mingw "cross-${XBPS_TARGET_MACHINE%-musl}-w64-mingw32")

@@ -22,7 +22,13 @@ post_install() {
 pkgname=font-bh-lucidatypewriter-75dpi
 version=1.0.1
 distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config bdftopcf"
+fulldepends="font-util"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="75dpi Bigelow and Holmes Lucida Typewriter PCF fonts"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=20ff9c5914c6916c96647eeb3ba700468952fdf01925e62516219a7dd6eb3841
@@ -33,7 +39,10 @@ long_desc="
 
  This is from the modular Xorg project."
 
+<<<<<<< HEAD
 Add_dependency full font-util
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 noarch=yes
 font_dirs="/usr/share/fonts/X11/75dpi"

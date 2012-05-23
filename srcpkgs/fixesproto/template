@@ -2,7 +2,12 @@
 pkgname=fixesproto
 version=4.1.1
 distfiles="${XORG_SITE}/proto/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+fulldepends="xextproto"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Fixes extension headers from X.org"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=e72a32916ad4bbd03847f8945c55582bdbafc039d286ded7365d402a7ff164ef

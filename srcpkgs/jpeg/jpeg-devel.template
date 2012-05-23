@@ -1,5 +1,6 @@
 # Template file for 'jpeg-devel'.
 #
+depends="glibc-devel jpeg>=8d"
 short_desc="${sourcepkg} development files"
 long_desc="${long_desc}
 
@@ -7,9 +8,12 @@ long_desc="${long_desc}
 
 Add_dependency run jpeg
 
+<<<<<<< HEAD
 do_install()
 {
 	mkdir -p ${DESTDIR}/usr/lib
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 	mv ${SRCPKGDESTDIR}/usr/include ${DESTDIR}/usr
 	mv ${SRCPKGDESTDIR}/usr/lib/*.*a ${DESTDIR}/usr/lib

@@ -3,7 +3,12 @@ pkgname=libdaemon
 version=0.14
 revision=9
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static --disable-lynx"
+=======
+configure_args="--disable-lynx"
+makedepends="glibc-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Lightweight C library that eases the writing of UNIX daemons"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -11,6 +16,7 @@ homepage="http://0pointer.de/lennart/projects/$pkgname"
 distfiles="http://pkgs.fedoraproject.org/repo/pkgs/libdaemon/libdaemon-${version}.tar.gz/509dc27107c21bcd9fbf2f95f5669563/libdaemon-${version}.tar.gz"
 checksum=fd23eb5f6f986dcc7e708307355ba3289abe03cc381fc47a80bca4a50aa6b834
 
+<<<<<<< HEAD
 libdaemon-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -21,3 +27,18 @@ libdaemon-devel_package() {
 		vmove usr/lib/*.so
 	}
 }
+=======
+ * A wrapper around fork() which does the correct daemonization procedure
+   of a process.
+ * A wrapper around syslog() for simpler and compatible log output to Syslog
+   or STDERR.
+ * An API for writing PID files.
+ * An API for serializing UNIX signals into a pipe for usage with select()
+   or poll().
+ * An API for running subprocesses with STDOUT and STDERR redirected to syslog.
+
+ APIs like these are used in most daemon software available. It is not that
+ simple to get it done right and code duplication is not a goal."
+
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

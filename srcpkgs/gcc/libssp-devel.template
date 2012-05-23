@@ -1,0 +1,16 @@
+# Template file for 'libssp'.
+#
+depends="glibc-devel libssp>=4.7"
+short_desc="GCC SSP library support"
+long_desc="${long_desc}
+
+ This package contains the Stack Smashing Protection development
+ files provided by GCC."
+
+
+
+do_install() {
+	vmove "usr/lib/libssp*.a" usr/lib
+	vmove usr/lib/gcc/${_triplet}/${_majorver}/include/ssp \
+		usr/lib/gcc/${_triplet}/${_majorver}/include
+}

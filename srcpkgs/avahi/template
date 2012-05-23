@@ -2,6 +2,7 @@
 pkgname=avahi
 version=0.8
 revision=2
+<<<<<<< HEAD
 build_style=gnu-configure
 configure_args="--disable-qt3 --disable-qt4 --disable-qt5
  --disable-libevent --disable-mono --disable-monodoc
@@ -14,6 +15,10 @@ configure_args="--disable-qt3 --disable-qt4 --disable-qt5
  --disable-gtk3 --disable-dbm --disable-introspection --sbindir=/usr/bin
  --with-dbus-system-address=unix:path=/run/dbus/system_bus_socket
  --without-systemdsystemunitdir"
+=======
+depends="dbus"
+makedepends="pkg-config intltool libssp-devel dbus-devel libcap-devel libdaemon-devel gdbm-devel expat-devel pygtk-devel dbus-python gtk+3-devel gobject-introspection"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Multicast DNS Service Discovery"
 maintainer="Andrew J. Hesford <ajh@sideband.org>"
 license="LGPL-2.1-or-later"
@@ -45,6 +50,7 @@ if [ "$CROSS_BUILD" ]; then
 	}
 fi
 
+<<<<<<< HEAD
 post_extract() {
 	# Avahi 0.8 release accidentally left this out of the tarball
 	cp ${XBPS_SRCDISTDIR}/${pkgname}-${version}/build-db.txt "${_build_db}"
@@ -123,3 +129,6 @@ avahi-utils_package() {
 		vmove usr/share/man/man1
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

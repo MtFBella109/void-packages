@@ -3,6 +3,7 @@ pkgname=gtksourceview
 version=3.24.11
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper="gir"
 configure_args="--disable-static --enable-introspection"
 hostmakedepends="automake pkg-config intltool gtk+3-devel glib-devel vala"
@@ -13,12 +14,26 @@ license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Projects/GtkSourceView"
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=691b074a37b2a307f7f48edc5b8c7afa7301709be56378ccf9cc9735909077fd
+=======
+configure_args="--disable-static"
+makedepends="pkg-config intltool gobject-introspection gtk+3-devel libxml2-devel"
+short_desc="Text widget that extends GTK+ GtkTextView widget"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+checksum=5a5712591b2b6487818ac4aadd965fc8397af23d8fd7c5bdd1460c6326a8f4ce
+long_desc="
+ GtkSourceView is a text widget that extends the standard gtk+ 2.x text
+ widget GtkTextView. It improves GtkTextView by implementing syntax
+ highlighting and other features typical of a source editor."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_check() {
 	# Needs X
 	:
 }
 
+<<<<<<< HEAD
 gtksourceview-devel_package() {
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -31,3 +46,5 @@ gtksourceview-devel_package() {
 		vmove usr/share/gtk-doc
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

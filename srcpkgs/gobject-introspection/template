@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 # keep in sync with gobject-introspection-bootstrap
 pkgname=gobject-introspection
+<<<<<<< HEAD
 version=1.86.0
 revision=1
 build_style=meson
@@ -104,6 +105,15 @@ pkgname=gobject-introspection
 version=0.6.5
 distfiles="${GNOME_SITE}/$pkgname/0.6/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+version=1.32.1
+distfiles="${GNOME_SITE}/$pkgname/1.32/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-tests"
+depends="python libgirepository-devel"
+makedepends="pkg-config flex libffi-devel glib-devel python-devel libxml2-devel cairo-devel"
+fulldepends="libtool"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Introspection system for GObject-based libraries"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=fe1702200d45958cdfe3707952d64c3a541628b1203a9b2644db0ee2c6d5df79
@@ -111,6 +121,7 @@ long_desc="
  The goal of the project is to describe the APIs and collect them in
  a uniform, machine readable format."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 Add_dependency build pkg-config
 Add_dependency build flex
@@ -119,3 +130,10 @@ Add_dependency full libffi
 Add_dependency full glib
 Add_dependency full python
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+subpackages="gir-freedesktop libgirepository libgirepository-devel"
+pycompile_dirs="usr/lib/$pkgname/giscanner"
+
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,8 +1,23 @@
 # Template file for 'docbook'
 pkgname=docbook
 version=4.5
+<<<<<<< HEAD
 revision=7
 depends="xmlcatmgr sgml-common"
+=======
+distfiles="
+http://www.docbook.org/sgml/$version/$pkgname-$version.zip
+http://www.docbook.org/sgml/4.4/$pkgname-4.4.zip
+http://www.docbook.org/sgml/4.3/$pkgname-4.3.zip
+http://www.docbook.org/sgml/4.2/$pkgname-4.2.zip
+http://www.oasis-open.org/docbook/sgml/4.1/docbk41.zip
+http://www.oasis-open.org/docbook/sgml/4.0/docbk40.zip
+http://www.oasis-open.org/docbook/sgml/3.1/docbk31.zip
+http://www.oasis-open.org/docbook/sgml/3.0/docbk30.zip
+http://www.oasis-open.org/docbook/sgml/2.4.1/docbk241.zip"
+makedepends="bsdtar"
+fulldepends="xmlcatmgr ISOEnts"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="SGML DTD designed for computer documentation"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="DocBook-DTD"
@@ -37,9 +52,30 @@ sgml_entries="
  CATALOG /usr/share/sgml/docbook/4.4/catalog --
  CATALOG /usr/share/sgml/docbook/4.5/catalog --"
 
+<<<<<<< HEAD
 do_extract() {
 	vsrcextract --no-strip-components docbook-${version}.zip
 }
+=======
+ In short, DocBook is an easy-to-understand and widely used DTD.
+ Dozens of organizations use DocBook for millions of pages of
+ documentation, in various print and online formats, worldwide."
+
+noarch=yes
+noextract=yes
+
+
+export sgml_entries="
+CATALOG /usr/share/sgml/docbook/2.4.1/catalog --
+CATALOG /usr/share/sgml/docbook/3.0/catalog --
+CATALOG /usr/share/sgml/docbook/3.1/catalog --
+CATALOG /usr/share/sgml/docbook/4.0/catalog --
+CATALOG /usr/share/sgml/docbook/4.1/catalog --
+CATALOG /usr/share/sgml/docbook/4.2/catalog --
+CATALOG /usr/share/sgml/docbook/4.3/catalog --
+CATALOG /usr/share/sgml/docbook/4.4/catalog --
+CATALOG /usr/share/sgml/docbook/4.5/catalog --"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install() {
 	local ver dir

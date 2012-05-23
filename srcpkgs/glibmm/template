@@ -1,5 +1,6 @@
 # Template file for 'glibmm'
 pkgname=glibmm
+<<<<<<< HEAD
 version=2.66.6
 revision=1
 build_style=meson
@@ -7,6 +8,12 @@ configure_args="-Dbuild-examples=false"
 hostmakedepends="glib-devel perl pkg-config"
 makedepends="libglib-devel libsigc++-devel"
 checkdepends="glib-networking"
+=======
+version=2.32.0
+distfiles="${GNOME_SITE}/glibmm/2.32/glibmm-$version.tar.xz"
+build_style=gnu-configure
+makedepends="pkg-config intltool glib-devel libsigc++-devel>=2.2.10"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="C++ bindings for GLib"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -15,6 +22,7 @@ changelog="https://gitlab.gnome.org/GNOME/glibmm/-/raw/master/NEWS"
 distfiles="${GNOME_SITE}/glibmm/${version%.*}/glibmm-${version}.tar.xz"
 checksum=5358742598181e5351d7bf8da072bf93e6dd5f178d27640d4e462bc8f14e152f
 
+<<<<<<< HEAD
 glibmm-devel_package() {
 	depends="${makedepends} glibmm>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -26,3 +34,7 @@ glibmm-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+subpackages="glibmm-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

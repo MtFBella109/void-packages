@@ -1,5 +1,6 @@
 # Template file for 'gd-progs'.
 #
+depends="perl>=0"
 short_desc="Utility programs that use libgd"
 long_desc="${long_desc}
 
@@ -9,8 +10,14 @@ long_desc="${long_desc}
 Add_dependency run gd
 Add_dependency run perl
 
+<<<<<<< HEAD
 do_install()
 {
 	mkdir -p ${DESTDIR}/usr/bin
 	mv ${SRCPKGDESTDIR}/usr/bin ${DESTDIR}/usr
+=======
+
+do_install() {
+	vmove usr/bin usr
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

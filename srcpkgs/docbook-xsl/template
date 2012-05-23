@@ -34,7 +34,11 @@ do_install() {
 pkgname=docbook-xsl
 version=1.75.2
 distfiles="${SOURCEFORGE_SITE}/docbook/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=custom-install
+=======
+fulldepends="xmlcatmgr docbook-xml>=4.2"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Docbook XSL modular stylesheet"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=0dcc3aebd2ada8719e47b77c62ab986c4f2747f9a7cab6f629b6472e6d058e09
@@ -52,8 +56,6 @@ long_desc="
 noarch=yes
 triggers="xml-catalog"
 
-Add_dependency full xmlcatmgr
-Add_dependency full docbook-xml ">=4.2"
 
 xml_catalogs="/usr/share/xsl/docbook/catalog.xml"
 

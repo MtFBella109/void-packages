@@ -4,6 +4,7 @@ pkgname=liboil
 version=0.3.17
 revision=6
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 short_desc="Library of Optimized Inner Loops, CPU optimized functions"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -33,6 +34,10 @@ pkgname=liboil
 version=0.3.16
 distfiles="http://liboil.freedesktop.org/download/$pkgname-$version.tar.gz"
 build_style=gnu_configure
+=======
+revision=2
+makedepends="pkg-config"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library of Optimized Inner Loops, CPU optimized functions"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=009115b0fc888dfe28903fecfe806707c544ccad6554ebabdeb3a1d88ec1e9d1
@@ -45,6 +50,9 @@ long_desc="
  extended instructions provided by modern CPUs (Altivec, MMX, SSE, etc.)."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

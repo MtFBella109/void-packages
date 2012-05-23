@@ -6,7 +6,12 @@ _distver="${version%.*}-${version##*.}"
 build_wrksrc="${_distver}/${pkgname}"
 build_style=gnu-configure
 configure_args="--enable-led --enable-intel_led --enable-shared_lib"
+<<<<<<< HEAD
 makedepends="device-mapper-devel"
+=======
+depends="device-mapper>=2.02.95_3"
+makedepends="device-mapper-devel>=2.02.95_1"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Device mapper RAID interface"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
@@ -17,6 +22,7 @@ disable_parallel_build=yes
 lib32disabled=yes
 patch_args=-Np0
 
+<<<<<<< HEAD
 dmraid-devel_package() {
 	short_desc+=" - development files"
 	depends="${sourcepkg}>=${version}_${revision}"
@@ -25,4 +31,35 @@ dmraid-devel_package() {
 		vmove usr/lib/*.a
 		vmove usr/lib/*.so
 	}
+=======
+ dmraid uses the Linux device-mapper to create devices with respective mappings
+ for the ATARAID sets discovered.
+
+ The following formats are supported:
+
+  Highpoint HPT37X/HPT45X
+  Intel Software RAID
+  LSI Logic MegaRAID
+  NVidia NForce RAID (nvraid)
+  Promise FastTrack
+  Silicon Image(tm) Medley(tm)
+  VIA Software RAID"
+
+systemd_services="dmraid.service off"
+triggers="initramfs-tools"
+
+post_install() {
+	rm -rf ${DESTDIR}/usr/include
+	rm -f ${DESTDIR}/usr/lib/*.a
+
+	# Install initramfs-tools stuff.	
+	vinstall ${FILESDIR}/dmraid.initramfs-hook 755 \
+		usr/share/initramfs-tools/hooks dmraid
+	vinstall ${FILESDIR}/dmraid.initramfs-local-top 755 \
+		usr/share/initramfs-tools/scripts/local-top dmraid
+	# Install dmraid-activate from Debian.
+	vinstall ${FILESDIR}/dmraid-activate 755 usr/sbin
+	# systemd service.
+	vinstall ${FILESDIR}/dmraid.service 644 lib/systemd/system
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

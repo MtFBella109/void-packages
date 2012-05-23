@@ -1,6 +1,7 @@
 # Template file for 'cyrus-sasl'
 # keep in sync with libsasl
 pkgname=cyrus-sasl
+<<<<<<< HEAD
 version=2.1.28
 revision=4
 build_style=gnu-configure
@@ -18,6 +19,13 @@ makedepends="libsasl-devel openssl-devel db-devel libldap-devel
  mit-krb5-devel pam-devel sqlite-devel postgresql-libs-devel
  libmariadbclient-devel"
 depends="libsasl>=${version}"
+=======
+configure_args="--with-saslauthd=/run/saslauthd
+--enable-login --enable-plain --enable-sql --disable-sqlite
+--enable-postgresql --enable-mysql --enable-ldapdb --with-ldap=/usr"
+depends="e2fsprogs-libs cyrus-sasl-modules"
+makedepends="libsasl-devel libldap-devel mit-krb5-devel e2fsprogs-devel pam-devel openssl-devel postgresql-libs-devel libmysqlclient-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Cyrus SASL - auth daemon and administration tools"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause-Attribution"
@@ -33,8 +41,17 @@ pre_configure() {
 	autoreconf -fi
 }
 
+<<<<<<< HEAD
 post_install() {
 	# Remove libsasl{,-devel} files.
+=======
+
+
+post_install()
+{
+	# Remove stuff in libsasl{,-devel} pkgs.
+	rm -rf ${DESTDIR}/usr/share/man/man3
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 	rm -rf ${DESTDIR}/usr/include
 	rm -f ${DESTDIR}/usr/lib/libsasl*
 	rm -rf ${DESTDIR}/usr/share/man/man3

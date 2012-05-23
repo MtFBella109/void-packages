@@ -36,7 +36,12 @@ libXvMC-devel_package() {
 pkgname=libXvMC
 version=1.0.5
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config videoproto libX11-devel libXext-devel libXv-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="XVideo Motion Compensation Library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=0644c768d28343af0efe0cb09fc9e0220b8ad755642bb498a3038cee328fde7f
@@ -46,6 +51,7 @@ long_desc="
  extension of the X video extension for the X Window System."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build xproto
 Add_dependency build xextproto
@@ -55,3 +61,5 @@ Add_dependency full libX11
 Add_dependency full libXext
 Add_dependency full libXv
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

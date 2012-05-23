@@ -3,6 +3,7 @@ pkgname=perl-HTTP-Message
 version=6.45
 revision=1
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl"
 makedepends="perl-LWP-MediaTypes perl-Encode-Locale perl-URI perl-HTTP-Date
  perl-Try-Tiny perl-IO-HTML perl-Clone"
@@ -14,3 +15,21 @@ license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/HTTP-Message"
 distfiles="${CPAN_SITE}/HTTP/HTTP-Message-$version.tar.gz"
 checksum=01cb8406612a3f738842d1e97313ae4d874870d1b8d6d66331f16000943d4cbe
+=======
+fulldepends="perl-LWP-MediaTypes perl-Encode-Locale perl-URI perl-HTTP-Date perl-HTML-Parser perl"
+short_desc="HTTP::Message - HTTP style message (base class)"
+maintainer="davehome <davehome@redthumb.info.tm>"
+homepage="http://search.cpan.org/~gaas/HTTP-Message-6.02/lib/HTTP/Message.pm"
+license="GPL-2"
+checksum=2331b3c82e8a9674e596e4583f13a655d24d2e3c7165f3bdc6def4b5d4165181
+long_desc='
+ An HTTP::Message object contains some headers and a content body. The
+ following methods are available:
+ 
+   $mess = HTTP::Message->new
+   $mess = HTTP::Message->new( $headers )
+   $mess = HTTP::Message->new( $headers, $content )'
+
+noarch=yes
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

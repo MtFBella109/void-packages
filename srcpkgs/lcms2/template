@@ -1,11 +1,19 @@
 # Template file for 'lcms2'
 pkgname=lcms2
+<<<<<<< HEAD
 version=2.17
 revision=1
 build_style=meson
 configure_args="-Dutils=true $(vopt_bool plugins fastfloat) $(vopt_bool plugins threaded)"
 hostmakedepends="pkg-config"
 makedepends="tiff-devel libjpeg-turbo-devel"
+=======
+version=2.2
+distfiles="${SOURCEFORGE_SITE}/lcms/lcms2-$version.tar.gz"
+build_style=gnu-configure
+revision=3
+makedepends="tiff-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Small-footprint color management engine, version 2"
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="MIT $(vopt_if plugins GPL-3.0-or-later)"
@@ -20,6 +28,7 @@ post_install() {
 	vlicense LICENSE
 }
 
+<<<<<<< HEAD
 lcms2-devel_package() {
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -37,3 +46,6 @@ lcms2-tools_package() {
 		vmove usr/share/man
 	}
 }
+=======
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

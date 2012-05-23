@@ -4,39 +4,25 @@ pkgname=mpg123
 version=1.33.3
 revision=1
 build_style=gnu-configure
-# --with-cpu not necessary, upstream detects features correctly
-# --with-optimization=0 makes the configure script respect xbps-src's defaults.
-configure_args="--with-optimization=0 --with-default-audio=alsa"
-hostmakedepends="pkg-config"
-makedepends="alsa-lib-devel"
-short_desc="Fast console MPEG audio decoder/player"
-maintainer="Orphaned <orphan@voidlinux.org>"
-license="LGPL-2.1-only"
-homepage="https://www.mpg123.org/"
-changelog="https://www.mpg123.de/trunk/NEWS"
-distfiles="${SOURCEFORGE_SITE}/mpg123/mpg123-${version}.tar.bz2"
-checksum=6a0c6472dd156e213c2068f40115ebbb73978c2d873e66bae2a250e2d2198d26
+configure_args="--with-module-suffix=.so --with-optimization=4
+--with-default-audio=alsa --with-audio=pulse,jack,alsa,sdl
+--enable-ipv6=yes --enable-network=yes"
+depends="mpg123-alsa>=1.14.1"
+makedepends="libltdl-devel pulseaudio-devel SDL-devel alsa-lib-devel jack-devel"
+short_desc="Fast console mpeg audio decoder/player"
+maintainer="davehome <davehome@redthumb.info.tm>"
+homepage="http://www.mpg123.de/"
+license="LGPL-2.1"
+checksum=b150db789f9c662c29a906eb0f2afadaf0ca418172a58cd60adbd2773d16eade
+long_desc="
+ This is the fast and Free (LGPL license) real time MPEG Audio Layer 1, 2 and
+ 3 decoding library and console player. It uses floating point or integer
+ math, along with several special optimizations (3DNow, SSE, ARM, ...) to make
+ it most efficient."
 
 if [ "$XBPS_TARGET_LIBC" = musl ]; then
 	# No LFS required with musl
 	configure_args+=" --disable-lfs-alias"
 fi
 
-libmpg123_package() {
-	short_desc+=" - Runtime library"
-	pkg_install() {
-		vmove "usr/lib/*.so.*"
-		vmove usr/lib/mpg123/output_dummy.so
-		vmove usr/lib/mpg123/output_oss.so
-		vmove usr/lib/mpg123/output_alsa.so
-	}
-}
-mpg123-devel_package() {
-	depends="libmpg123-${version}_${revision}"
-	short_desc+=" - Development files"
-	pkg_install() {
-		vmove usr/include
-		vmove usr/lib/pkgconfig
-		vmove "usr/lib/*.so"
-	}
-}
+

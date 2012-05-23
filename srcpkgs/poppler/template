@@ -117,12 +117,24 @@ poppler-utils_package() {
 =======
 # Template build file for 'poppler'.
 pkgname=poppler
+<<<<<<< HEAD
 version=0.12.0
 revision=1
 distfiles="http://poppler.freedesktop.org/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 configure_args="--enable-zlib --disable-poppler-qt --disable-poppler-qt4
  --enable-libjpeg --disable-libopenjpeg --disable-abiword-output"
+=======
+version=0.20.0
+homepage="http://poppler.freedesktop.org"
+distfiles="${homepage}/$pkgname-$version.tar.gz"
+build_style=gnu-configure
+configure_args="--enable-zlib --enable-libcurl --enable-libjpeg
+--enable-libtiff --disable-libopenjpeg --enable-cairo-output
+--enable-xpdf-headers --disable-poppler-qt4 --disable-gtk-test"
+makedepends="pkg-config gobject-introspection tiff-devel lcms2-devel libcurl-devel"
+fulldepends="poppler-data"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="PDF rendering library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a95d4a61b1220f60bc40a921766f02d6d18e8276b70291723d6cf77a9c7369ae
@@ -136,6 +148,7 @@ long_desc="
  forward in a number of areas that doesn't fit within the goals of
  xpdf."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel $pkgname-glib $pkgname-glib-devel $pkgname-utils"
 Add_dependency build pkg-config
 Add_dependency full glibc
@@ -149,3 +162,10 @@ Add_dependency build cairo
 Add_dependency build gtk+
 Add_dependency run  libstdc++
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+subpackages="$pkgname-glib $pkgname-glib-devel $pkgname-utils"
+subpackages="$subpackages $pkgname-cpp $pkgname-cpp-devel"
+subpackages="$subpackages $pkgname-devel"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

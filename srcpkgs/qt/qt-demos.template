@@ -1,0 +1,23 @@
+# Template file for 'qt-demos'.
+#
+depends="hicolor-icon-theme qt-docs"
+short_desc="Qt examples and demos"
+long_desc="${long_desc}
+
+ This package contains Qt 4 examples and demos."
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+do_install()
+{
+	mkdir -p ${DESTDIR}/usr/share/doc/qt ${DESTDIR}/usr/bin
+	mkdir -p ${DESTDIR}/usr/share/icons/hicolor/64x64/apps
+	mv ${SRCPKGDESTDIR}/usr/bin/qtdemo ${DESTDIR}/usr/bin
+	mv ${SRCPKGDESTDIR}/usr/share/doc/qt/demos ${DESTDIR}/usr/share/doc/qt
+	mv ${SRCPKGDESTDIR}/usr/share/doc/qt/examples \
+		${DESTDIR}/usr/share/doc/qt
+	mv ${SRCPKGDESTDIR}/usr/share/icons/hicolor/64x64/apps/qtlogo.png \
+		${DESTDIR}/usr/share/icons/hicolor/64x64/apps
+	
+}

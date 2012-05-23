@@ -79,10 +79,20 @@ gtk+-demo_package() {
 =======
 # Template build file for 'gtk+'.
 pkgname=gtk+
+<<<<<<< HEAD
 version=2.18.2
 distfiles="${GNOME_SITE}/gtk+/2.18/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--disable-cups --with-xinput"
+=======
+version=2.24.10
+revision=3
+distfiles="${GNOME_SITE}/gtk+/2.24/gtk+-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--enable-cups --with-xinput"
+depends="shared-mime-info gtk-update-icon-cache"
+makedepends="pkg-config perl>=0 glib-devel libXcursor-devel libXext-devel libXrender-devel libXinerama-devel libXi-devel libXrandr-devel libXcomposite-devel libXdamage-devel freetype-devel fontconfig-devel libpng-devel gdk-pixbuf-devel cairo-devel pango-devel>=1.28.0 atk-devel>=1.32.0 gobject-introspection cups-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The GTK+ toolkit (v2)"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=5e0832e154b4accab8286ae724ddbad5d701f4af6a9291582d1430b9f360f5f1
@@ -98,6 +108,7 @@ long_desc="
  an effective method of rapid application development."
 
 conf_files="/etc/gtk-2.0/im-multipress.conf"
+<<<<<<< HEAD
 triggers="gtk-pixbuf-loaders gtk-immodules"
 
 subpackages="$pkgname-devel"
@@ -128,3 +139,9 @@ Add_dependency full libXt
 Add_dependency full libXext
 Add_dependency full libXcomposite
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+triggers="gtk-immodules"
+subpackages="gtk+-devel gtk+-demo gtk-update-icon-cache"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

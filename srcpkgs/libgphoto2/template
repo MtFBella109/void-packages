@@ -3,11 +3,16 @@ pkgname=libgphoto2
 version=2.5.32
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static --disable-rpath udevscriptdir=/usr/lib/udev"
 hostmakedepends="automake gettext-devel libtool pkg-config"
 makedepends="gd-devel libexif-devel libltdl-devel libusb-compat-devel
  libxml2-devel"
 depends="libgphoto2-udev-rules"
+=======
+configure_args="--disable-rpath udevscriptdir=/lib/udev"
+makedepends="pkg-config libltdl-devel libusb-compat-devel jpeg-devel gd-devel libexif-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Digital camera access library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -20,9 +25,14 @@ if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" libgphoto2"
 fi
 
+<<<<<<< HEAD
 pre_configure() {
 	autoreconf -fi
 }
+=======
+subpackages="$pkgname-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	# Remove unused udev helper

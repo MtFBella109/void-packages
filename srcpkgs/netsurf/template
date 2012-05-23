@@ -1,5 +1,6 @@
 # Template file for 'netsurf'
 pkgname=netsurf
+<<<<<<< HEAD
 version=3.11
 revision=1
 build_style=gnu-makefile
@@ -19,6 +20,53 @@ license="GPL-2.0-only, MIT"
 homepage="https://www.netsurf-browser.org"
 distfiles="https://download.netsurf-browser.org/netsurf/releases/source/${pkgname}-${version}-src.tar.gz"
 checksum=c28a626aefee428d053b13f88b5c440922245976522d12eaf137cfd32d201cb2
+=======
+version=2.9
+homepage="http://www.netsurf-browser.org"
+distfiles="${homepage}/downloads/releases/${pkgname}-${version}-full-src.tar.gz"
+depends="desktop-file-utils shared-mime-info"
+makedepends="pkg-config perl jpeg-devel libmng-devel libpng-devel librsvg-devel libxml2-devel libcurl-devel lcms-devel libwebp-devel libparserutils-devel libwapcaplet-devel libhubbub-devel libcss-devel libnsbmp-devel libnsgif-devel gtk+-devel libglade-devel gstreamer-devel"
+short_desc="Free, open source web browser written in C."
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="GPL-2, MIT"
+checksum=ade6ade7f66ce2f0a80df724bafefd18c17165166111c490837737aa2e09ae9d
+long_desc="
+ Small as a mouse, fast as a cheetah and available for free. NetSurf is
+ a multi-platform web browser for RISC OS, UNIX-like platforms (including
+ Linux), Mac OS X, and more.
+
+ Written in C, this award winning open source project features its own
+ layout engine. It is licensed under GPL version 2.
+
+ * Web standards: HTML 4.01 and CSS 2.1
+ * Image formats: PNG, GIF, JPEG, SVG, JNG, MNG and BMP
+ * HTTPS for secure online transactions
+ * Unicode text
+ * Web page thumbnailing
+ * Local history trees
+ * Global history
+ * Hotlist manager (bookmarks)
+ * Cookie manager
+ * URL completion
+ * Text selection
+ * Scale view
+ * Search-as-you-type text search highlighting
+ * Save pages complete with images
+ * Fast, lightweight layout and rendering engine"
+
+
+
+do_build() {
+	make ${makejobs} --directory=${pkgname}-${version} \
+		PREFIX=/usr TARGET=gtk NETSURF_USE_WEBP=YES \
+		NETSURF_USE_VIDEO=YES
+}
+
+do_install() {
+	make ${makejobs} --directory=${pkgname}-${version} \
+		PREFIX=/usr DESTDIR=${DESTDIR} TARGET=gtk \
+		NETSURF_USE_WEBP=YES NETSURF_USE_VIDEO=YES install
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	# Install app icon (from Ubuntu)

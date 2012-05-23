@@ -21,12 +21,19 @@ post_install() {
 pkgname=smproxy
 version=1.0.3
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+makedepends="pkg-config libSM-devel libICE-devel libXt-devel libXmu-devel libX11-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X11R6 session management application"
 checksum=1b8dd25483280fc2a4a7d977b4a43dc4228b9c65e904c3d4ee68245705d4ae35
 long_desc="
  smproxy allows X applications that do not support X11R6 session
  management to participate in an X11R6 session."
+<<<<<<< HEAD
  
 Add_dependency full glibc
 Add_dependency full libX11
@@ -36,3 +43,6 @@ Add_dependency full libSM
 Add_dependency full libICE
 Add_dependency build pkg-config
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

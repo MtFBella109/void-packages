@@ -3,6 +3,7 @@ pkgname=fluxbox
 version=1.3.7
 revision=4
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-nls
  ac_cv_lib_X11_XOpenDisplay=yes ac_cv_lib_Xft_XftFontOpen=yes
  ac_cv_lib_Xrender_XRenderCreatePicture=yes ac_cv_lib_Xpm_XpmReadFileToPixmap=yes
@@ -13,14 +14,25 @@ makedepends="libSM-devel libXrender-devel libXft-devel libXpm-devel imlib2-devel
  libXext-devel libXinerama-devel libXrandr-devel fribidi-devel"
 short_desc="Highly configurable and low resource X11 Window manager"
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+configure_args="--enable-nls"
+revision=1
+makedepends="pkg-config libX11-devel libXft-devel libXrender-devel fontconfig-devel libXpm-devel imlib2-devel libXext-devel libXinerama-devel libXrandr-devel fribidi-devel"
+short_desc="Highly configurable and low resource X11 Window manager "
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.fluxbox.org"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 license="MIT"
 homepage="http://www.fluxbox.org"
 distfiles="https://github.com/fluxbox/fluxbox/archive/refs/tags/Release-${version//./_}.tar.gz"
 checksum=990414ae342a35c5703e5025a8bf019b0b4dada55d57071c51d3d498abb5cd36
 
+<<<<<<< HEAD
 case "$XBPS_TARGET_MACHINE" in
 	*-musl) configure_args="${configure_args/enable-nls/disable-nls}" ;;
 esac
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure() {
 	./autogen.sh

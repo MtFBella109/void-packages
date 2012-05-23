@@ -3,12 +3,19 @@ pkgname=blueman
 version=2.4.6
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static"
 hostmakedepends="intltool iproute2 pkg-config python3-Cython glib-devel
  python3-devel"
 makedepends="gtk+3-devel libbluetooth-devel python3-devel
  python3-gobject-devel startup-notification-devel"
 depends="bluez libnotify python3-gobject"
+=======
+configure_args="--enable-polkit=yes --enable-hal=no"
+depends="pygtk"
+makedepends="intltool Pyrex libbluetooth-devel startup-notification-devel gdk-pixbuf-devel libpng-devel gtk+-devel pango-devel cairo-devel glib-devel glibc-devel pygtk-devel"
+fulldepends="bluez notify-python dbus-python obexd desktop-file-utils hicolor-icon-theme"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GTK+ Bluetooth Manager"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
@@ -17,6 +24,21 @@ changelog="https://raw.githubusercontent.com/blueman-project/blueman/main/CHANGE
 distfiles="https://github.com/blueman-project/blueman/releases/download/${version}/blueman-${version}.tar.xz"
 checksum=c712a737f9855906684c074d166d4f10c7f165378af96612818bbffcfbf8e566
 
+<<<<<<< HEAD
 post_install() {
 	vdoc "${FILESDIR}/README.voidlinux"
 }
+=======
+  * Connecting to 3G/EDGE/GPRS via DUN profile.
+  * Connecting to/Creating bluetooth networks
+  * Connecting to input devices
+  * Connecting to audio devices
+  * Sending/Receiving/Browsing files via OBEX
+  * Pairing"
+
+pycompile_module="$pkgname"
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

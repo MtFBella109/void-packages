@@ -1,5 +1,6 @@
 # Template file for 'rubberband'
 pkgname=rubberband
+<<<<<<< HEAD
 version=3.3.0
 revision=1
 build_style=meson
@@ -8,6 +9,15 @@ hostmakedepends="pkg-config"
 makedepends="ladspa-sdk vamp-plugin-sdk-devel lv2"
 depends="libvamp-plugin-sdk"
 checkdepends="boost-devel-minimal"
+=======
+version=1.6.0
+homepage="http://www.breakfastquay.com/rubberband/"
+distfiles="http://code.breakfastquay.com/attachments/download/16/${pkgname}-${version}.tar.bz2"
+build_style=gnu-configure
+revision=2
+depends="libvamp-plugin-sdk"
+makedepends="pkg-config ladspa-sdk libsamplerate-devel vamp-plugin-sdk-devel fftw-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Time-stretching and pitch-shifting audio library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -18,6 +28,7 @@ checksum=d9ef89e2b8ef9f85b13ac3c2faec30e20acf2c9f3a9c8c45ce637f2bc95e576c
 
 _dev_depends="fftw-devel"
 
+<<<<<<< HEAD
 # On 32-bit targets, the built-in resampler is much slower than libsamplerate.
 # On 64-bit targets the performance difference is not as pronounced, and the
 # built-in resampler can, in some situations, sound slightly better, so keep
@@ -57,3 +68,6 @@ rubberband-devel_package() {
 		vmove usr/lib/pkgconfig
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

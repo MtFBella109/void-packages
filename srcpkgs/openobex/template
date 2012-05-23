@@ -1,5 +1,6 @@
 # Template file for 'openobex'
 pkgname=openobex
+<<<<<<< HEAD
 version=1.7.2
 revision=2
 build_style=cmake
@@ -11,9 +12,26 @@ license="LGPL-2"
 homepage="http://dev.zuckschwerdt.org/openobex/"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}-Source.tar.gz"
 checksum=158860aaea52f0fce0c8e4b64550daaae06df2689e05834697b7e8c7d73dd4fc
+=======
+version=1.5
+revision=5
+distfiles="http://ftp.osuosl.org/pub/linux/bluetooth/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+configure_args="--enable-apps --enable-irda --enable-bluetooth --enable-usb"
+makedepends="pkg-config libusb-compat-devel libbluetooth-devel"
+short_desc="OpenOBEX applications"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=13996a1e3c69d857f1c7b1d0d9f1c674ccd395355dcae1442a91386b4d75254c
+long_desc="
+ The Object Exchange protocol can best be described as binary HTTP. OBEX
+ is optimised for ad-hoc wireless links and can be used to exchange all kind
+ of objects like files, pictures, calendar entries (vCal) and business cards
+ (vCard).
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 replaces="libopenobex>=0"
 
+<<<<<<< HEAD
 pre_configure() {
 	sed -i 's|MODE="660", GROUP="plugdev"|TAG+="uaccess"|' udev/openobex.rules.in
 	sed -i 's|^project ( openobex \(C.*\) )|project ( openobex \1 CXX )|' CMakeLists.txt
@@ -30,3 +48,6 @@ openobex-devel_package() {
 		vmove usr/lib/cmake
 	}
 }
+=======
+subpackages="libopenobex libopenobex-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

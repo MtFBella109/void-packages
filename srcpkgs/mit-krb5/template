@@ -6,12 +6,20 @@ version=1.21.3
 revision=1
 _distver=$(echo $version | cut -d. -f-2)
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--sbindir=/usr/bin --disable-rpath --with-system-et
  --without-system-verto --with-system-ss --enable-shared --with-system-db
  $(vopt_with ldap) $(vopt_with lmdb)"
 hostmakedepends="e2fsprogs-devel flex perl pkg-config"
 makedepends="e2fsprogs-devel db-devel $(vopt_if ldap libldap-devel)
  $(vopt_if lmdb lmdb-devel)"
+=======
+configure_script="./src/configure"
+configure_args="--disable-rpath --with-system-et
+--with-system-ss --with-system-db --enable-shared CFLAGS=-I/usr/include/et"
+depends="mit-krb5-client"
+makedepends="perl>=0 flex db-devel e2fsprogs-devel openssl-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="MIT Kerberos 5 implementation"
 maintainer="Klara Modin <klarasmodin@gmail.com>"
 license="MIT"
@@ -22,7 +30,23 @@ build_options="ldap lmdb"
 build_options_default="ldap"
 desc_option_lmdb="Enable LMDB database backend"
 
+<<<<<<< HEAD
 post_patch() {
+=======
+noextract=yes
+subpackages="$pkgname-devel $pkgname-libs $pkgname-client"
+conflicts="heimdal>=0"
+
+
+
+pre_configure() {
+	# We have to do this dance because the real distfile is
+	# included in the .tar archive.
+	tar xf ${XBPS_SRCDISTDIR}/$(basename ${distfiles}) \
+		-C ${wrksrc}
+	tar xfz ${wrksrc}/krb5-${version}.tar.gz \
+		-C ${XBPS_BUILDDIR}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 	# Fix db plugin.
 	vsed -i -e "s|<db.h>|<db_185.h>|" \
 		src/plugins/kdb/db2/{adb_openclose.c,db2_exp.c,kdb_db2.c,policy_db.h}

@@ -4,6 +4,7 @@ version=1.0.3
 revision=3
 build_style=gnu-configure
 configure_args="--enable-nss"
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="libcurl-devel nss-devel"
 short_desc="C library implementing OAuth Core RFC 5849"
@@ -28,3 +29,20 @@ liboauth-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+homepage="http://liboauth.sourceforge.net"
+license="MIT"
+revision=2
+makedepends="pkg-config libcurl-devel nss-devel"
+short_desc="C library implementing OAuth Core RFC 5849"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=77e372359caca5375fbcc63ac638f349e6c93c98d291992d8ebb9bb8291ca549
+long_desc="
+ liboauth is a collection of POSIX-c functions implementing the OAuth Core
+ RFC 5849 standard. liboauth provides functions to escape and encode
+ parameters according to OAuth specification and offers high-level
+ functionality to sign requests or verify OAuth signatures as well as
+ perform HTTP requests."
+ 
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

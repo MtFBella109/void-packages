@@ -44,7 +44,12 @@ libpng-progs_package() {
 pkgname=libpng
 version=1.2.39
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="zlib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library for manipulating PNG images"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=198151de6923485f5407630a6380f71eed8692eda6a88ddf32742a4290a66c18
@@ -59,6 +64,13 @@ long_desc="
  only supports C. Support for other languages is being considered."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full zlib
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+post_install() {
+	vinstall LICENSE 644 usr/share/licenses/${pkgname}
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

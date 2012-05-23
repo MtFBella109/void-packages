@@ -4,8 +4,12 @@ version=2.0.16
 revision=1
 build_style=gnu-configure
 configure_args="--disable-static --with-yajl=no"
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="libcurl-devel libxml2-devel libxslt-devel"
+=======
+makedepends="pkg-config libcurl-devel libxslt-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Raptor RDF Syntax Library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later, GPL-2.0-or-later, Apache-2.0"
@@ -13,6 +17,7 @@ homepage="https://librdf.org/raptor"
 distfiles="https://librdf.org/dist/source/raptor2-${version}.tar.gz"
 checksum=089db78d7ac982354bdbf39d973baf09581e6904ac4c92a98c5caadb3de44680
 
+<<<<<<< HEAD
 libraptor_package() {
 	short_desc+=" - Runtime libraries"
 	pkg_install() {
@@ -29,3 +34,7 @@ raptor-devel_package() {
 		vmove usr/share/man/man3
 	}
 }
+=======
+subpackages="lib${pkgname} ${pkgname}-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

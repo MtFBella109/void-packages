@@ -21,7 +21,13 @@ post_install() {
 pkgname=xvinfo
 version=1.1.0
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+makedepends="pkg-config libX11-devel libXv-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Query X-Video capabilities"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=0a318f6ca0d92bd5cc2ab9d2690f6120b3e1537b7902ce110469864869e86efb
@@ -30,9 +36,13 @@ long_desc="
  video adaptor accessible through the X-Video extension.
 
  This is from the modular X.org X11 project."
+<<<<<<< HEAD
  
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libXv
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

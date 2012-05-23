@@ -1,0 +1,20 @@
+# Template file for 'libgfortran-devel'.
+#
+depends="libgfortran>=4.7"
+short_desc="GCC Fortran library ${version} - development files"
+long_desc="${long_desc}
+
+ This package contains the GCC Fortran headers and static libraries."
+
+
+
+do_install() {
+	# create version -> major symlink
+	vmkdir usr/lib/gcc/${_triplet}/${_majorver}
+	ln -sf /usr/lib/gcc/${_triplet}/${_majorver} \
+		${DESTDIR}/usr/lib/gcc/${_triplet}/${version}
+
+	vmove usr/lib/libgfortran.a usr/lib
+	vmove usr/lib/gcc/${_triplet}/${_majorver}/libgfortranbegin.a \
+		usr/lib/gcc/${_triplet}/${_majorver}
+}

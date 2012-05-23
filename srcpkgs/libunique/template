@@ -1,8 +1,17 @@
 # Template file for 'libunique'.
 pkgname=libunique
+<<<<<<< HEAD
 version=1.0.8
 distfiles="${GNOME_SITE}/$pkgname/1.0/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+version=3.0.2
+distfiles="${GNOME_SITE}/$pkgname/3.0/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+configure_args="--enable-bacon=yes --enable-dbus=yes"
+revision=3
+makedepends="pkg-config libX11-devel atk-devel glib-devel pango-devel cairo-devel freetype-devel fontconfig-devel dbus-devel dbus-glib-devel gtk+3-devel gobject-introspection"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library for writing single instance applications"
 maintainer="pancake <pancake@nopcode.org>"
 checksum=d627a10f523af14e9ead655ebab3a26e7faeea006bdfa7739bc4c04058ddf4c6
@@ -19,6 +28,10 @@ long_desc="
  by many projects and the code using Bonobo and D-Bus."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full gtk+
 Add_dependency full dbus-glib
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

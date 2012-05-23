@@ -11,5 +11,23 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="http://www.icecast.org/"
 distfiles="http://downloads.xiph.org/releases/${pkgname}/${pkgname}-${version}.tar.gz"
+<<<<<<< HEAD
 checksum=49b5979f9f614140b6a38046154203ee28218d8fc549888596a683ad604e4d44
 conf_files="/etc/icecast.xml"
+=======
+revision=1
+makedepends="pkg-config openssl-devel libcurl-devel speex-devel libtheora-devel libvorbis-devel libogg-devel libxslt-devel libxml2-devel"
+short_desc="Free server software for streaming multimedia"
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="GPL-2"
+checksum=4742b38fc55b6373895a7c0a35baed49a848fec99f5e8538e3f0157383d0b3f0
+long_desc="
+ Icecast is a streaming media server which currently supports Ogg Vorbis and
+ MP3 audio streams. It can be used to create an Internet radio station or a
+ privately running jukebox and many things in between. It is very versatile
+ in that new formats can be added relatively easily and supports open
+ standards for commuincation and interaction."
+
+conf_files="/etc/icecast.xml"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

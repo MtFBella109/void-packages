@@ -3,9 +3,14 @@ pkgname=rtkit
 version=0.13
 revision=3
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="dbus-devel libcap-devel"
 depends="dbus"
+=======
+configure_args="--with-systemdsystemunitdir=/lib/systemd/system"
+makedepends="pkg-config dbus-devel libcap-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Realtime Policy and Watchdog Daemon"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT, GPL-3.0-or-later"
@@ -16,8 +21,18 @@ checksum=a157144cd95cf6d25200e74b74a8f01e4fe51fd421bb63c1f00d471394b640ab
 system_accounts="rtkit"
 rtkit_homedir="/proc"
 
+<<<<<<< HEAD
 post_install() {
 	sed -n '7,28p' < rtkit.h > LICENSE
 	vlicense LICENSE
 	vsv rtkit
+=======
+
+post_install()
+{
+	# DBus configuration
+	install -d ${DESTDIR}/usr/share/dbus-1/interfaces
+	./rtkit-daemon --introspect > \
+		${DESTDIR}/usr/share/dbus-1/interfaces/org.freedesktop.RealtimeKit1.xml
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

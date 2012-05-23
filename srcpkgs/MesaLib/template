@@ -4,8 +4,19 @@ version=7.6
 revision=1
 wrksrc="Mesa-$version"
 distfiles="ftp://ftp.freedesktop.org/pub/mesa/$version/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
 configure_args="--enable-glx-tls --enable-xcb"
+=======
+build_style=gnu-configure
+configure_args="--enable-glx-tls --enable-shared-glapi --enable-gallium-g3dvl
+--enable-shared-dricore --enable-gles1 --enable-gles2 --enable-openvg
+--enable-egl --with-dri-driverdir=/usr/lib/xorg/modules/dri --enable-xa
+--enable-gallium-egl --disable-va --enable-vdpau --enable-xvmc --enable-xa
+--enable-texture-float --with-gallium-drivers=i915,r300,r600,svga,swrast
+--with-dri-drivers=i915,i965,r200,radeon,swrast"
+makedepends="perl>=0 flex pkg-config glproto dri2proto>=2.1 makedepend libXext-devel libXxf86vm-devel libXdamage-devel libXfixes-devel libxcb-devel libudev-devel libdrm-devel expat-devel libXt-devel talloc-devel libxml2-python llvm-devel libvdpau-devel libXvMC-devel>=1.0.6"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Graphics library similar to SGI's OpenGL"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=782a7b2810b1c466b3a994eba96485b59b47cc1120c0caa24de1aecf1e013830
@@ -16,6 +27,7 @@ long_desc="
  Inc. However, the author makes no claim that Mesa is in any way a
  compatible replacement for OpenGL or associated with Silicon Graphics, Inc."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 Add_dependency build pkg-config
 Add_dependency build glproto
@@ -33,3 +45,9 @@ Add_dependency full libXfixes
 Add_dependency full libXdamage
 Add_dependency full libXxf86vm
 Add_dependency run  libstdc++
+=======
+# XXX reenable nouveau driver when it's updated for libdrm>=2.4.34
+subpackages="libEGL libglapi libGLES libGL libGLU libOpenVG"
+subpackages="${subpackages} ${pkgname}-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

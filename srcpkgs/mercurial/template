@@ -1,5 +1,6 @@
 # Template file for 'mercurial'
 pkgname=mercurial
+<<<<<<< HEAD
 version=7.1.1
 revision=1
 build_style=python3-module
@@ -7,6 +8,13 @@ hostmakedepends="python3-devel python3-setuptools python3-setuptools_scm gettext
 makedepends="python3-devel"
 depends="python3 ca-certificates"
 checkdepends="diffutils gnupg iana-etc python3-docutils python3-pip subversion-python tar unzip which xz"
+=======
+version=2.1.2
+homepage="http://mercurial.selenic.com"
+distfiles="$homepage/release/$pkgname-$version.tar.gz"
+build_style=python-module
+makedepends="python-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Fast, lightweight source control management system"
 maintainer="Komeil Parseh <komeilparseh@disroot.org>"
 license="GPL-2.0-or-later"
@@ -29,9 +37,36 @@ do_check() {
 		_additional_test='test-s*'
 	fi
 
+<<<<<<< HEAD
 	cd tests
 	PATH=/tmp/bin:$PATH python3 run-tests.py --blacklist "${FILESDIR}/tests_blacklist" ${makejobs} ${_additional_test}
 }
+=======
+ Robust
+        * SHA1 integrity checking on repository data
+        * Append-only storage model with transaction journalling
+        * Fast full-repository verification
+        * Convenient backup
+
+ Easy to use
+        * Most commands are familiar to users of CVS and other systems
+        * Built-in command help
+        * Integrated stand-alone web interface
+        * Works with various GUI tools
+
+ Easy to adopt
+        * Runs on UNIX, MacOS X, and Windows
+        * Conversion tools available for many popular SCMs
+        * Allows a variety of usage models
+        * Supports user-defined hooks and extensions
+
+ Free
+        * Source code available under the GPL license
+        * Actively community supported and developed"
+
+pycompile_module="$pkgname hgext"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	for i in doc/*.1 doc/*.8 doc/*.5 ; do

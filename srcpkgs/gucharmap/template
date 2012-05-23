@@ -1,5 +1,6 @@
 # Template file for 'gucharmap'
 pkgname=gucharmap
+<<<<<<< HEAD
 version=16.0.1
 revision=1
 build_style=meson
@@ -12,6 +13,14 @@ hostmakedepends="pkg-config glib-devel gettext itstool perl unzip
 makedepends="desktop-file-utils cairo-devel pango-devel atk-devel
  freetype-devel libglib-devel pcre2-devel gtk+3-devel"
 depends="hicolor-icon-theme desktop-file-utils"
+=======
+version=3.4.1.1
+distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-schemas-compile --disable-scrollkeeper --enable-introspection"
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="which pkg-config intltool gnome-doc-utils gobject-introspection gtk+3-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNOME Unicode Charmap"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later, GFDL-1.3-only, Unicode-DFS-2015"
@@ -36,6 +45,7 @@ skip_extraction="Blocks.txt DerivedAge.txt NamesList.txt Scripts.txt UnicodeData
 build_options="gir gtk_doc"
 build_options_default="gir"
 
+<<<<<<< HEAD
 if [ -z "$CROSS_BUILD" ]; then
 	build_options_default+=" gtk_doc"
 fi
@@ -59,3 +69,6 @@ gucharmap-devel_package() {
 		fi
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

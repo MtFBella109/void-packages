@@ -3,6 +3,7 @@ pkgname=spice
 version=0.16.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-tunnel --disable-opengl --enable-smartcard
  --with-sasl --disable-static --enable-xinerama --disable-celt051"
 hostmakedepends="pkg-config python3"
@@ -11,6 +12,11 @@ makedepends="spice-protocol libjpeg-turbo-devel pixman-devel
  libXrandr-devel libsasl-devel libXinerama-devel libglib-devel libcacard-devel
  nss-devel"
 checkdepends="glib-networking"
+=======
+configure_args="--disable-tunnel --disable-opengl --disable-smartcard --with-sasl"
+revision=2
+makedepends="pkg-config spice-protocol>=0.10.1 jpeg-devel pixman-devel openssl-devel celt051-devel alsa-lib-devel libXfixes-devel libXrender-devel libXrandr-devel libXinerama-devel libsasl-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Implements the SPICE protocol"
 maintainer="Anachron <gith@cron.world>"
 license="LGPL-2.1-or-later"
@@ -23,6 +29,7 @@ if [ "$XBPS_TARGET_ENDIAN" != "le" ]; then
 	broken="SPICE server only works on little endian architectures"
 fi
 
+<<<<<<< HEAD
 if [ "$XBPS_TARGET_LIBC" = "musl" ]; then
 	# tests depend on odd behaviour of glibc
 	# in this case being that calling getnameinfo on an AF_LOCAL socket
@@ -40,3 +47,5 @@ spice-devel_package() {
 		vmove usr/lib/*.so
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

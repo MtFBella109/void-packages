@@ -5,6 +5,7 @@ version=4.20.0
 revision=1
 build_helper=gir
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-gsettings-backend"
 hostmakedepends="pkg-config gettext glib-devel vala-devel perl"
 makedepends="libxfce4util-devel vala-devel"
@@ -40,6 +41,9 @@ xfconf-devel_package() {
 version=4.6.1
 distfiles="http://mocha.xfce.org/archive/xfce-4.6.1/src/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+makedepends="pkg-config intltool perl-ExtUtils-Depends perl-ExtUtils-PkgConfig perl-Glib dbus-glib-devel libxfce4util-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xfce hierarchical (tree-like) configuration system"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=22a596f73795be398382e82e9c11062423daa374339ce6db808f73a6ba19380e
@@ -49,9 +53,13 @@ long_desc="
  beneath the channel nodes are called properties."
 
 subpackages="$pkgname-devel $pkgname-perl"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build perl-Glib
 Add_dependency full glibc
 Add_dependency full dbus-glib
 Add_dependency full libxfce4util
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

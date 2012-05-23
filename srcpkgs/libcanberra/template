@@ -3,12 +3,20 @@ pkgname=libcanberra
 version=0.30
 revision=15
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-alsa --enable-null --disable-lynx
  --enable-gstreamer --disable-oss --with-builtin=dso"
 hostmakedepends="gettext pkg-config gtk-doc"
 makedepends="gtk+3-devel libvorbis-devel libltdl-devel
  gstreamer1-devel alsa-lib-devel tdb-devel pulseaudio-devel
  eudev-libudev-devel vala-devel"
+=======
+configure_args="--enable-alsa --enable-null
+--enable-gstreamer --disable-oss --with-builtin=dso --disable-lynx
+--disable-schemas-install --with-gconf-schema-file-dir=/usr/share/gconf/schemas
+--with-systemdsystemunitdir=/lib/systemd/system"
+makedepends="pkg-config gtk+-devel gtk+3-devel libvorbis-devel libltdl-devel gstreamer-devel alsa-lib-devel tdb-devel pulseaudio-devel libudev-devel vala-devel GConf-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="XDG Sound Theme and Name Specification library implementation"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -17,6 +25,7 @@ distfiles="http://pkgs.fedoraproject.org/repo/pkgs/libcanberra/libcanberra-${ver
 checksum=c2b671e67e0c288a69fc33dc1b6f1b534d07882c2aceed37004bf48c601afa72
 replaces="libcanberra-gtk<=0.30_12"
 
+<<<<<<< HEAD
 libcanberra-utils_package() {
 	replaces="${sourcepkg}<0.30_6"
 	short_desc+=" - utilities"
@@ -45,3 +54,14 @@ libcanberra-devel_package() {
 		vmove usr/share/vala
 	}
 }
+=======
+   1. libcanberra: the main library
+   2. libcanberra-gtk: some glue code to make it easier to use libcanberra
+      from Gtk+ applications
+   3. libcanberra-gtk-module: a Gtk+ module that uses libcanberra-gtk to
+      trigger input feedback event sounds"
+
+gconf_schemas="libcanberra.schemas"
+subpackages="$pkgname-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

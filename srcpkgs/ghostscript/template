@@ -1,5 +1,6 @@
 # Template file for 'ghostscript'
 pkgname=ghostscript
+<<<<<<< HEAD
 version=10.05.1
 revision=1
 hostmakedepends="automake libtool pkg-config"
@@ -14,10 +15,23 @@ changelog="https://ghostscript.readthedocs.io/en/latest/News.html"
 changelog="https://ghostscript.readthedocs.io/en/gs10.02.0/News.html"
 distfiles="https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs${version//./}/ghostscript-${version}.tar.xz"
 checksum=22f2bdca15c28830c9715cddc5c296ea66898bfdab0b604a4e0bcfeb03af6cad
+=======
+version=9.05
+distfiles="http://downloads.ghostscript.com/public/$pkgname-$version.tar.bz2"
+makedepends="automake pkg-config libXext-devel libXt-devel cups-devel fontconfig-devel jasper-devel tiff-devel jpeg-devel libpng-devel lcms-devel lcms2-devel"
+short_desc="An interpreter for the PostScript language"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.ghostscript.com/"
+license="GPL-3, custom"
+checksum=0f41212af3a5a552ab2302cd90606dc8245be34490a699726dc95ed3cd89ceac
+long_desc="
+..."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 build_options="cups"
 build_options_default="cups"
 
+<<<<<<< HEAD
 if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" ${makedepends}"
 fi
@@ -25,6 +39,8 @@ fi
 case "$XBPS_TARGET_MACHINE" in
 	arm*) configure_args+=" --disable-neon";;
 esac
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure() {
 	# force it to use system libs.

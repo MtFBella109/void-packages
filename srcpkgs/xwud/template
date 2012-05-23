@@ -21,7 +21,14 @@ post_install() {
 pkgname=xwud
 version=1.0.2
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+depends="libX11"
+makedepends="pkg-config libX11-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Image displayer for X"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=84345dfbff0dc411689639aada2407758640af71eb61a1be332bfa24d8b90ac1
@@ -29,8 +36,12 @@ long_desc="
  Xwud is an X Window System image undumping utility. Xwud allows X users
  to display in a window an image saved in a specially formatted dump file,
  such as produced by xwd(1)."
+<<<<<<< HEAD
  
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libX11
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -21,7 +21,13 @@ post_install() {
 pkgname=xcmsdb
 version=1.0.2
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+makedepends="pkg-config libX11-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Device Color Characterization utility for X"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=bfcac66634ea4d4a1607f1c8a4170e6089db13355357fc143281a6fc0216face
@@ -29,8 +35,12 @@ long_desc="
  $pkgname is used to load, query, or remove Device Color Characterization
  data stored in properties on the root window of the screen as specified
  in section 7, Device Color Characterization, of the ICCCM."
+<<<<<<< HEAD
  
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libX11
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -3,6 +3,7 @@ pkgname=less
 <<<<<<< HEAD
 version=679
 revision=1
+<<<<<<< HEAD
 build_style=gnu-configure
 configure_args="--with-regex=pcre2"
 makedepends="ncurses-devel pcre2-devel"
@@ -18,6 +19,9 @@ checksum=9b68820c34fa8a0af6b0e01b74f0298bcdd40a0489c61649b47058908a153d78
 version=436
 distfiles="http://www.greenwoodsoftware.com/less/less-$version.tar.gz"
 build_style=gnu_configure
+=======
+makedepends="ncurses-devel pcre-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Pager program similar to more(1)"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=57a16ff07431a9af45cf1cd5b374e1066d019304219f0d156e22bb8c4d6734d2
@@ -29,6 +33,9 @@ long_desc="
  termcap (or terminfo on some systems), so it can run on a variety of
  terminals.  There is even limited support for hardcopy terminals."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full ncurses
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

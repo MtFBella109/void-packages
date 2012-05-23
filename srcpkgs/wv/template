@@ -3,11 +3,17 @@ pkgname=wv
 version=1.2.9
 revision=5
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="libpng-devel libglib-devel libxml2-devel libgsf-devel"
 short_desc="Library which allows access to Microsoft Word files"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+revision=3
+makedepends="libgsf-devel glib-devel libxml2-devel libpng-devel zlib-devel pkg-config"
+short_desc="wv is a library which allows access to Microsoft Word files."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 homepage="http://wvware.sourceforge.net/"
 distfiles="http://www.abisource.com/downloads/wv/${version}/wv-${version}.tar.gz"
 checksum=4c730d3b325c0785450dd3a043eeb53e1518598c4f41f155558385dd2635c19d
@@ -19,6 +25,7 @@ libwv_package() {
 	}
 }
 
+<<<<<<< HEAD
 wv-devel_package() {
 	depends="libgsf-devel libpng-devel zlib-devel libwv>=${version}_${revision}"
 	short_desc+=" - Development files"
@@ -29,3 +36,5 @@ wv-devel_package() {
 		vmove usr/lib/pkgconfig
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

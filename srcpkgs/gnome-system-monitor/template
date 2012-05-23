@@ -1,5 +1,6 @@
 # Template file for 'gnome-system-monitor'
 pkgname=gnome-system-monitor
+<<<<<<< HEAD
 version=48.1
 revision=1
 build_style=meson
@@ -15,3 +16,23 @@ homepage="https://wiki.gnome.org/Apps/SystemMonitor"
 changelog="https://gitlab.gnome.org/GNOME/gnome-system-monitor/-/raw/48.1/NEWS"
 distfiles="${GNOME_SITE}/${pkgname}/${version:0:2}/${pkgname}-${version}.tar.xz"
 checksum=133c3a6e286366e659fd2d80582409a7bd5edae456e63c4f69ccf66ed6fc6638
+=======
+version=3.4.1
+distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-schemas-compile --disable-scrollkeeper
+--localstatedir=/var --enable-systemd"
+makedepends="which pkg-config intltool gnome-doc-utils libgtop-devel libwnck-devel gtkmm-devel librsvg-devel systemd-devel"
+fulldepends="gnome-icon-theme"
+short_desc="Process viewer and system resource monitor for GNOME"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+checksum=60f53f1b37c717b2f12502bf6f3b4b43c8e8f3d2fb1198ba66bf933ec4c3130b
+long_desc="
+ This package allows you to graphically view and manipulate the running
+ processes on your system. It also provides an overview of available
+ resources such as CPU and memory."
+ 
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

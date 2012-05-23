@@ -20,7 +20,12 @@ version=0.96
 revision=1
 wrksrc="XML-SAX-$version"
 distfiles="${CPAN_SITE}/XML/XML-SAX-$version.tar.gz"
+<<<<<<< HEAD
 build_style=perl_module
+=======
+build_style=perl-module
+fulldepends="perl perl-XML-NamespaceSupport perl-XML-SAX-Base"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Perl interface to the SAX2 XML Parser"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=9bbef613afa42c46df008d537decc5a61df7e92d65463f3c900769f39e5c8e08
@@ -30,6 +35,9 @@ long_desc="
  expat library."
 
 noarch=yes
+<<<<<<< HEAD
 Add_dependency full perl
 Add_dependency full perl-XML-NamespaceSupport
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

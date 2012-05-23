@@ -1,9 +1,18 @@
 # Template file for 'GConf'
 pkgname=GConf
+<<<<<<< HEAD
 version=2.26.2
 distfiles="${GNOME_SITE}/GConf/2.26/GConf-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--without-openldap --enable-gtk"
+=======
+version=3.2.5
+distfiles="${GNOME_SITE}/GConf/3.2/GConf-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--without-openldap --enable-gtk --enable-defaults-service
+--disable-orbit --enable-gsettings-backend"
+makedepends="pkg-config intltool gobject-introspection gtk+3-devel dbus-glib-devel polkit-devel libxml2-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="A process-transparent configuration system"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=717af270db891088394d154e3e22acc01af382306624c83679a4f8d6ba8467ed
@@ -15,6 +24,7 @@ long_desc="
 conf_files="/etc/dbus-1/system.d/org.gnome.GConf.Defaults.conf
  /etc/gconf/2/path"
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 Add_dependency build pkg-config
 Add_dependency build intltool
@@ -24,3 +34,16 @@ Add_dependency full dbus-glib
 Add_dependency full ORBit2
 Add_dependency full PolicyKit
 Add_dependency full libxml2
+=======
+
+post_install() {
+	# Create GCONF_SCHEMAS_DIR
+	install -d ${DESTDIR}/usr/share/gconf/schemas
+	touch -f ${DESTDIR}/usr/share/gconf/schemas/.empty_on_purpose
+	# Create required sysconfdir dirs.
+	for d in defaults mandatory system; do
+		install -d ${DESTDIR}/etc/gconf/gconf.xml.${d}
+		touch -f ${DESTDIR}/etc/gconf/gconf.xml.${d}/.empty_on_purpose
+	done
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -4,6 +4,7 @@ pkgname=texinfo
 version=7.1
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-perl-xs"
 hostmakedepends="perl automake help2man ncurses-devel"
 makedepends="ncurses-devel"
@@ -31,6 +32,10 @@ revision=3
 wrksrc="$pkgname-4.13"
 distfiles="http://ftp.gnu.org/gnu/$pkgname/$pkgname-$version.tar.gz"
 build_style=gnu_configure
+=======
+makedepends="ncurses-devel"
+fulldepends="gzip"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The GNU Documentation System"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=1303e91a1c752b69a32666a407e9fbdd6e936def4b09bc7de30f416301530d68
@@ -40,12 +45,15 @@ long_desc="
  on Brian Reid's Scribe and other formatting languages of the time. It is
  used by many non-GNU projects as well."
 
+<<<<<<< HEAD
 Add_dependency build gettext
 Add_dependency run glibc
 Add_dependency run ncurses-libs
 Add_dependency run findutils
 Add_dependency run gzip
 Add_dependency run coreutils
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install()
 {

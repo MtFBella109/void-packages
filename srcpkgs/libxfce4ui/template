@@ -3,8 +3,21 @@ pkgname=libxfce4ui
 version=4.20.2
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper="gir"
 configure_args="--disable-static --enable-tests --enable-introspection --enable-vala"
+=======
+configure_args="--disable-static"
+makedepends="pkg-config intltool gtk+-devel libxfce4util-devel xfconf-devel dbus-glib-devel libxml2-devel startup-notification-devel"
+short_desc="Replacement of the old libxfcegui4 library"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2, LGPL-2.1"
+checksum=a2b9fa288ccb5f16fa13264e507ba3f7b8da0176da259a11239f21538c0ea3e2
+long_desc="
+ This is libxfce4ui, the replacement of the old libxfcegui4 library. It is used
+ to share commonly used Xfce widgets amoung the Xfce applications."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 conf_files="/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml"
 hostmakedepends="pkg-config glib-devel gettext vala"
 makedepends="gtk+3-devel glade3-devel libxfce4util-devel xfconf-devel
@@ -16,6 +29,7 @@ homepage="https://xfce.org/"
 distfiles="https://archive.xfce.org/src/xfce/${pkgname}/${version%.*}/${pkgname}-${version}.tar.bz2"
 checksum=5d3d67b1244a10cee0e89b045766c05fe1035f7938f0410ac6a3d8222b5df907
 
+<<<<<<< HEAD
 libxfce4ui-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}
 	 gtk+3-devel libxfce4util-devel xfconf-devel"
@@ -37,3 +51,5 @@ libxfce4ui-glade_package() {
 		vmove usr/share/glade
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

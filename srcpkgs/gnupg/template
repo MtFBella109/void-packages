@@ -7,6 +7,7 @@ revision=2
 # https://dev.gnupg.org/T6313#166339
 build_wrksrc=build
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="$(vopt_enable ldap)
  --with-libgcrypt-prefix=${XBPS_CROSS_BASE}/usr
  --with-libassuan-prefix=${XBPS_CROSS_BASE}/usr
@@ -63,3 +64,19 @@ gnupg2-scdaemon_package() {
 		vdoc ${FILESDIR}/gnupg2-scdaemon-README.voidlinux README.voidlinux
 	}
 }
+=======
+configure_args="--disable-rpath --enable-threads=posix --enable-noexecstack"
+makedepends="zlib-devel libldap-devel libcurl-devel readline-devel libusb-compat-devel"
+short_desc="The GNU Privacy Guard"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3"
+checksum=4f03ca6902aaee79d0eda00eea0fefde7db9eb005d8ffd54fac9806bc24050ec
+long_desc="
+ GnuPG is the GNU project's complete and free implementation of the OpenPGP
+ standard as defined by RFC4880 . GnuPG allows to encrypt and sign your data
+ and communication, features a versatile key managment system as well as
+ access modules for all kind of public key directories. GnuPG, also known as
+ GPG, is a command line tool with features for easy integration with other
+ applications. A wealth of frontend applications and libraries  are available."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

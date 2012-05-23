@@ -24,6 +24,14 @@ long_desc="
  the proc filesystem. We're not about changing the world, but providing
  the system administratror with some help in common tasks."
 
+<<<<<<< HEAD
 Add_dependency build gettext
 Add_dependency run glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+post_install() {
+	# provide pidof symlink.
+	cd ${DESTDIR}/usr/bin && ln -sf killall pidof
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

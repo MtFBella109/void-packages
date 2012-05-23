@@ -2,6 +2,7 @@
 pkgname=abGate
 version=1.2.0
 revision=1
+<<<<<<< HEAD
 build_style=gnu-makefile
 build_helper=qmake
 hostmakedepends="pkg-config qt5-qmake qt5-host-tools"
@@ -14,3 +15,15 @@ homepage="http://abgate.sourceforge.net/"
 distfiles="https://github.com/antanasbruzas/abGate/archive/v${version}.tar.gz"
 checksum=ebee1cc545b088bf6e5989c114e7e34fa9f21ac7fdb1eee3fd067bcf98703b86
 CXXFLAGS="-fPIC"
+=======
+makedepends="pkg-config gtkmm2-devel atkmm-devel glibmm-devel libsigc++-devel gtk+-devel glib-devel libstdc++-devel"
+fulldepends="lv2core"
+short_desc="LV2 Noise Gate plugin"
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="GPL-3"
+checksum=f1f65e4e05038c7cbff05463ebb423213ce99603db58f7802a10f4d8e735abf5
+long_desc="
+ abGate: LV2 Noise Gate plugin."
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

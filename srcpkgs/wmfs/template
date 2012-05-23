@@ -4,8 +4,25 @@ version=201104
 revision=7
 build_style=configure
 configure_args="--prefix /usr --man-prefix /usr/share/man --xdg-config-dir /etc/xdg"
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="libXft-devel libXrender-devel fontconfig-devel libXinerama-devel libXrandr-devel imlib2-devel"
+=======
+revision=2
+makedepends="pkg-config libXft-devel libXrender-devel fontconfig-devel libX11-devel freetype-devel libXinerama-devel libXrandr-devel imlib2-devel"
+short_desc="Window Manager From Scratch"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="BSD"
+checksum=c28b7cec28a6e3f2bc38a136fb1773bab8ec8f48c69ebe25c24192f96e782d64
+long_desc="
+ WMFS (Window Manager From Scratch) is a lightweight and highly configurable
+ tiling window manager for X. It can be configured with a configuration file,
+ supports Xft (Freetype) fonts and is compliant with the Extended Window
+ Manager Hints (EWMH) specifications, Xinerama and Xrandr. WMFS can be driven
+ with Vi based commands (ViWMFS). Optional Imlib2 support allow WMFS to draw
+ image instead text everywhere you want with a simple sequence."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 conf_files="/etc/xdg/wmfs/wmfsrc"
 short_desc="Window Manager From Scratch"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -14,6 +31,7 @@ homepage="https://github.com/xorg62/wmfs"
 distfiles="https://sources.voidlinux.org/wmfs-${version}/wmfs-${version}.tar.gz"
 checksum=c28b7cec28a6e3f2bc38a136fb1773bab8ec8f48c69ebe25c24192f96e782d64
 
+<<<<<<< HEAD
 CFLAGS="-I${XBPS_CROSS_BASE}/usr/include/freetype2 -fcommon"
 
 if [ "$XBPS_TARGET_LIBC" = "musl" ]; then
@@ -23,3 +41,5 @@ fi
 post_install() {
 	vlicense COPYING
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

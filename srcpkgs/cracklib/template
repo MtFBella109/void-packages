@@ -5,6 +5,7 @@ version=2.10.3
 revision=1
 create_wrksrc=yes
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static"
 hostmakedepends="libtool automake gettext-devel"
 short_desc="Password Checking Library"
@@ -49,6 +50,9 @@ version=2.8.13
 distfiles="${SOURCEFORGE_SITE}/cracklib/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 configure_args="--without-python"
+=======
+makedepends="python-devel zlib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Password Checking Library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=0a06caff3626c397d023f0c19efedfea295180c2c5ba2def57016a17e158041a
@@ -57,9 +61,13 @@ long_desc="
  against a dictionary file to find weak passwords (vulnerable to
  dictionary attacks)."
 
+<<<<<<< HEAD
 Add_dependency build gettext
 Add_dependency full glibc
 Add_dependency full zlib
+=======
+subpackages="$pkgname-devel $pkgname-python"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install()
 {

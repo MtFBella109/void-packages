@@ -3,16 +3,26 @@ pkgname=ncdu
 version=1.22
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 makedepends="ncurses-devel"
 hostmakedepends="pkg-config"
 short_desc="NCurses Disk Usage utility"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
+=======
+makedepends="ncurses-devel glibc-devel"
+short_desc="NCurses Disk Usage"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://dev.yorhel.nl/ncdu"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 license="MIT"
 homepage="https://dev.yorhel.nl/ncdu"
 changelog="https://dev.yorhel.nl/ncdu/changes"
 distfiles="https://dev.yorhel.nl/download/ncdu-${version}.tar.gz"
 checksum=0ad6c096dc04d5120581104760c01b8f4e97d4191d6c9ef79654fa3c691a176b
 
+<<<<<<< HEAD
 post_install() {
 	vlicense COPYING
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -12,6 +12,14 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="http://dssi.sourceforge.net"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
+<<<<<<< HEAD
+=======
+revision=2
+makedepends="pkg-config glibc-devel libstdc++-devel qt-devel libX11-devel liblo-devel libsndfile-devel libsamplerate-devel alsa-lib-devel jack-devel ladspa-sdk libSM-devel"
+short_desc="API for audio processing plugins"
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="LGPL-2.1"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 checksum=f2c82b073a947c8255284249097667f9b14e660bf86186f3fcd3b3b3e087814e
 
 dssi-devel_package() {
@@ -23,6 +31,7 @@ dssi-devel_package() {
 	}
 }
 
+<<<<<<< HEAD
 dssi-example-plugins_package() {
 	lib32disabled=yes
 	depends="dssi>=${version}"
@@ -31,3 +40,6 @@ dssi-example-plugins_package() {
 		vmove usr/lib/dssi
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

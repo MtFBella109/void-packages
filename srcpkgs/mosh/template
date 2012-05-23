@@ -3,6 +3,7 @@ pkgname=mosh
 version=1.4.0
 revision=7
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="perl pkg-config protobuf autoconf automake"
 makedepends="ncurses-devel protobuf-devel libutempter-devel openssl-devel"
 depends="perl-IO-Tty"
@@ -18,3 +19,19 @@ pre_configure() {
 	printf "%s\n" "#!/bin/sh" ":" > src/tests/local.test
 	autoreconf -fi
 }
+=======
+makedepends="pkg-config ncurses-devel protobuf-devel libutempter-devel"
+fulldepends="perl-IO-Tty"
+short_desc="MObile SHell"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3"
+checksum=8b2d346a2f0d560ceb2ca91ff396fa859f81bb321ebd8c26fc564db8b335433a
+long_desc="
+ Remote terminal application that allows roaming, supports intermittent
+ connectivity, and provides intelligent local echo and line editing of user keystrokes.
+
+ Mosh is a replacement for SSH. It's more robust and responsive, especially over
+ Wi-Fi, cellular, and long-distance links."
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

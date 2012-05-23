@@ -4,6 +4,7 @@ pkgname=startup-notification
 version=0.12
 revision=11
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static lf_cv_sane_realloc=yes lf_cv_sane_malloc=yes"
 hostmakedepends="pkg-config"
 makedepends="libX11-devel libSM-devel xcb-util-devel"
@@ -30,6 +31,10 @@ version=0.10
 revision=1
 distfiles="http://www.freedesktop.org/software/$pkgname/releases/$pkgname-$version.tar.gz"
 build_style=gnu_configure
+=======
+revision=2
+makedepends="pkg-config libX11-devel xcb-util-devel libxcb-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library for tracking application startup"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=64bbeb5c28619721fc19d6920ad2b8bf6c0dc3a0e96a1b0bc26f480fbc525459
@@ -40,6 +45,7 @@ long_desc="
  feedback such as a busy cursor, among other features."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libSM
@@ -47,3 +53,6 @@ Add_dependency full libICE
 Add_dependency full libX11
 Add_dependency full xcb-util
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

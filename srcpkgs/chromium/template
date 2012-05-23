@@ -1,5 +1,6 @@
 # Template file for 'chromium'
 pkgname=chromium
+<<<<<<< HEAD
 # See https://chromiumdash.appspot.com/releases?platform=Linux for the latest version
 version=142.0.7444.59
 revision=1
@@ -26,6 +27,19 @@ makedepends="
  $(vopt_if sndio sndio-devel)
  $(vopt_if qt6 qt6-base-devel)"
 depends="desktop-file-utils hicolor-icon-theme hwids xdg-utils"
+=======
+version=19.0.1084.46
+wrksrc=$pkgname
+create_wrksrc=yes
+create_srcdir=yes
+build_requires=27
+build_wrksrc=${pkgname}-${version}
+distfiles="
+http://commondatastorage.googleapis.com/chromium-browser-official/$pkgname-$version.tar.bz2
+http://commondatastorage.googleapis.com/nativeclient-mirror/nacl/nacl_sdk/$version/naclsdk_linux.bz2"
+depends="desktop-file-utils hicolor-icon-theme"
+makedepends="pkg-config which unzip yasm flex gperf perl>=0 python>=0 libgcrypt-devel libelf-devel mit-krb5-devel libXrender-devel libXScrnSaver-devel libXcomposite-devel libX11-devel libXi-devel gtk+-devel libevent-devel nss-devel alsa-lib-devel dbus-glib-devel libXdamage-devel libXtst-devel pam-devel libgnome-keyring-devel libvpx-devel speex-devel libwebp-devel pulseaudio-devel cups-devel hunspell-devel libflac-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Google's attempt at creating a safer, faster, and more stable browser"
 maintainer="Duncaen <duncaen@voidlinux.org>"
 license="BSD-3-Clause"
@@ -47,6 +61,7 @@ desc_option_lto="Enable Link Time Optimization"
 desc_option_pipewire="Enable support for screen sharing for WebRTC via PipeWire"
 desc_option_drumbrake="WebAssembly Interpreter"
 
+<<<<<<< HEAD
 if [ "$XBPS_LIBC" = musl ]; then
 	hostmakedepends+=" musl-legacy-compat"
 fi
@@ -54,6 +69,17 @@ fi
 if [ "$XBPS_TARGET_LIBC" = "musl" ]; then
 	makedepends+=" musl-legacy-compat"
 fi
+=======
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+if [ "$XBPS_MACHINE" = "x86_64" ]; then
+	Add_dependency build zlib32
+	Add_dependency build libstdc++32
+	Add_dependency build gcc-multilib
+fi
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" libX11-devel libxcb-devel pciutils-devel libXext-devel libglvnd-devel

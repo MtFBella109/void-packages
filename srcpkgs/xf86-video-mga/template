@@ -30,13 +30,22 @@ post_install() {
 pkgname=xf86-video-mga
 version=1.4.11
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="glibc xorg-server"
+makedepends="xorg-server-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg Matrox video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=c91922316f486f74d41ddbda92ff94a7917cea151ad802cf25603ab6b90f97e6
 long_desc="
  This is the video driver for Matrox video cards for the Xorg X11 server."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,0 +1,14 @@
+# Template file for 'mpg123-jack'.
+#
+depends="libmpg123"
+short_desc="${short_desc} - JACK output plugin"
+long_desc="${long_desc}
+
+ This package contains the JACK output plugin."
+
+
+replaces="libmpg123<1.13.4_1"
+
+do_install() {
+        vmove usr/lib/mpg123/output_jack.so usr/lib/mpg123
+}

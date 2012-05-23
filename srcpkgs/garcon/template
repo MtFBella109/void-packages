@@ -3,10 +3,26 @@ pkgname=garcon
 version=4.20.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper=gir
 configure_args="--disable-static --enable-introspection"
 hostmakedepends="pkg-config gettext glib-devel"
 makedepends="libglib-devel libxfce4ui-devel libxfce4util-devel gtk+3-devel"
+=======
+makedepends="pkg-config intltool glib-devel libxfce4util-devel"
+short_desc="Glib/GIO freedesktop.org compliant menu implementation"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://wiki.xfce.org/dev/garcon"
+license="LGPL-2.1"
+checksum=02dea3edb9c0039eca4748e964c61b0e1cc10f2d7f9ce0c837287ac5fa9ef76c
+long_desc="
+ This is garcon, a freedesktop.org compliant menu implementation based
+ on GLib and GIO. It was started as a complete rewrite of the former
+ Xfce menu library called libxfce4menu, which, in contrast to garcon,
+ was lacking menu merging features essential for loading menus modified
+ with menu editors."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 conf_files="/etc/xdg/menus/xfce-applications.menu"
 short_desc="Glib/GIO freedesktop.org compliant menu implementation"
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
@@ -16,6 +32,7 @@ changelog="https://gitlab.xfce.org/xfce/garcon/-/raw/master/NEWS"
 distfiles="https://archive.xfce.org/src/xfce/garcon/${version%.*}/${pkgname}-${version}.tar.bz2"
 checksum=7fb8517c12309ca4ddf8b42c34bc0c315e38ea077b5442bfcc4509415feada8f
 
+<<<<<<< HEAD
 pre_configure() {
 	mkdir -p garcon-gtk/.libs
 	ln -s ../../garcon/.libs/libgarcon-1.so.0 garcon-gtk/.libs/
@@ -34,3 +51,5 @@ garcon-devel_package() {
 		vmove usr/share/gir-1.0
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

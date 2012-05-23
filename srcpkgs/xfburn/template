@@ -3,6 +3,7 @@ pkgname=xfburn
 version=0.8.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--with-locales-dir=/usr/share/locale --enable-gstreamer"
 hostmakedepends="intltool pkg-config"
 makedepends="libburn-devel libisofs-devel exo-devel libxfce4ui-devel gst-plugins-base1-devel"
@@ -14,3 +15,19 @@ homepage="https://docs.xfce.org/apps/xfburn/start"
 changelog="https://gitlab.xfce.org/apps/xfburn/-/raw/master/NEWS"
 distfiles="https://archive.xfce.org/src/apps/xfburn/${version%.*}/xfburn-${version}.tar.bz2"
 checksum=13a301aebcef27de18f63f8ca10b43bc42f9c1b9865dff1bfb3e97cfd95dd989
+=======
+makedepends="intltool"
+fulldepends="libburn libisofs libxfcegui4 Thunar gst-plugins-base desktop-file-utils hicolor-icon-theme"
+short_desc="CD-burner application for Xfce Desktop Environment"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=b2b00665f8ed98c9df996ba2d0d73b3182c3b421f3927c9ab76c3424758f71b5
+long_desc="
+ Xfburn is a tool to help burning CDs and DVDs. It fits well in the Xfce
+ Desktop Environment but can be used anywhere.
+
+ It is currently in development so some features may be missing, but it is
+ already able to burn data."
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

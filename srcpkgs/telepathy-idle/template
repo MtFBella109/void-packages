@@ -3,6 +3,7 @@ pkgname=telepathy-idle
 version=0.2.2
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config python3 libxslt"
 makedepends="dbus-glib-devel telepathy-glib-devel"
 depends="telepathy-glib>=0.22"
@@ -13,3 +14,17 @@ license="LGPL-2.1-or-later"
 homepage="https://telepathy.freedesktop.org"
 distfiles="${homepage}/releases/$pkgname/$pkgname-$version.tar.gz"
 checksum=8387e25e5fb0b4cbe701e5dc092d666d6510b833fd3e7e462e9170d36ec3c15f
+=======
+revision=2
+makedepends="pkg-config python libxslt glib-devel openssl-devel dbus-glib-devel telepathy-glib-devel"
+short_desc="An IRC connection manager for Telepathy"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="LGPL-2.1"
+checksum=047ccbec0b91ac187467ede5a90966f9ec881df56fd8c80cb3bce3710f66fda0
+long_desc="
+ Telepathy is a D-Bus framework for unifying real time communication,
+ including instant messaging, voice calls and video calls. It abstracts
+ differences between protocols to provide a unified interface for
+ applications."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

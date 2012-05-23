@@ -5,6 +5,7 @@ version=0.22.5
 revision=1
 build_style=gnu-configure
 configure_args="--disable-java --disable-native-java --disable-csharp
+<<<<<<< HEAD
  --disable-libasprintf --enable-threads=posix --disable-rpath --without-emacs
  --disable-acl --with-included-glib --with-included-libcroco --without-git
  --with-included-libxml --with-included-libunistring --disable-openmp
@@ -115,6 +116,12 @@ distfiles="http://ftp.gnu.org/pub/gnu/$pkgname/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 configure_args="--disable-java --disable-native-java --disable-csharp
  --disable-libasprintf"
+=======
+--disable-libasprintf --enable-threads=posix --disable-rpath
+--disable-acl --with-included-glib --with-included-libcroco
+--with-included-libxml --without-included-regex --without-emacs"
+makedepends="ncurses-devel libgomp-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Internationalized Message Handling Library and tools"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=209638bb8e162f22c281145a34e220c66f1f6e9ff5e4c50c6f2ef2ded59537ba
@@ -124,8 +131,19 @@ long_desc="
  internationalisation (or i18n) of a utility."
 
 subpackages="$pkgname-devel $pkgname-libs"
+<<<<<<< HEAD
 Add_dependency run	glibc
 Add_dependency build	ncurses
 Add_dependency run	ncurses-libs
 Add_dependency run	gettext-libs
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+post_configure() {
+	# Disable ACL.
+	sed -i 's@#define.*_ACL.*@/*&*/@g' ${wrksrc}/gettext-tools/config.h
+	for f in $(find ${wrksrc} -name Makefile); do
+		sed -i 's@-lacl@@g' ${f}
+	done
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

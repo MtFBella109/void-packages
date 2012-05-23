@@ -27,7 +27,12 @@ post_install() {
 pkgname=encodings
 version=1.0.3
 distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+fulldepends="mkfontscale"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X11 Font Index Generator"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=07d9766d4aebe05ac572599f8f903a4fe06ab667a8182f2b6cc03e5fb3b80f53
@@ -36,6 +41,5 @@ long_desc="
  adobe-dingbats.enc.gz, ibm-cp866.enc, jisx0212.1990-0.enc.gz,
  and others. This is from the modular X.org project."
 
-Add_dependency full mkfontscale
 noarch=yes
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

@@ -4,6 +4,7 @@ pkgname=bdftopcf
 version=1.1
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="xorgproto"
 short_desc="BDF to PCF font converter for X11"
@@ -20,6 +21,10 @@ post_install() {
 version=1.0.2
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+revision=1
+makedepends="pkg-config libXfont-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="BDF to PCF font converter for X11"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=11017f0dd637fd3228bd56fdbbd72193fd747c10d893a711c25bf6734c4da06b
@@ -33,7 +38,10 @@ long_desc="
  allows fast reading on the appropriate machine, but the files
  are still portable (but read more slowly) on other machines."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full libXfont
 Add_dependency build pkg-config
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

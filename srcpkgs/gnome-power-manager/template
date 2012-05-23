@@ -2,13 +2,40 @@
 pkgname=gnome-power-manager
 version=43.0
 revision=1
+<<<<<<< HEAD
 build_style=meson
 hostmakedepends="glib-devel pkg-config gettext"
 makedepends="gtk+3-devel upower-devel"
 depends="desktop-file-utils hicolor-icon-theme upower"
+=======
+distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-schemas-compile"
+depends="polkit-gnome hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config intltool gnome-doc-utils gtk+3-devel upower-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNOME power management tool"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://www.gnome.org/projects/gnome-power-manager/"
+<<<<<<< HEAD
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=7daab48bbddb30e9df2aba650cb60d05e667c9f885ace6a0a1e7950e0cbdd32f
+=======
+license="GPL-2"
+checksum=2c47786a1ed85b6ba48ad5e74e2584ab7cbc0127fda46359ec4671b1c0286c71
+long_desc="
+ GNOME Power Manager is a session daemon for the GNOME desktop that takes care
+ of system or desktop events related to power, and triggers actions
+ accordingly. Its philosophy is to completely hide these complex tasks and only
+ show some settings important to the user.
+
+ The GNOME power manager displays and manages battery status, power plug events,
+ display brightness, CPU, graphics card and hard disk drive power saving, and can
+ trigger suspend-to-RAM, hibernate or shutdown events, all integrated to other
+ components of the GNOME desktop."
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -3,6 +3,7 @@ pkgname=perl-Fuse
 version=0.16
 revision=18
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="pkg-config perl"
 makedepends="fuse-devel perl"
 depends="perl>=5.20"
@@ -12,3 +13,17 @@ license="LGPL-2.1-only"
 homepage="https://metacpan.org/release/Fuse"
 distfiles="${CPAN_SITE}/Fuse/Fuse-$version.tar.gz"
 checksum=30a939fe5816b00ba9cabb6cd811f894e6a74361ce29d786ae1811b0021d7aa1
+=======
+revision=1
+makedepends="pkg-config fuse-devel"
+fulldepends="perl"
+short_desc="Write filesystems in Perl using FUSE"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://search.cpan.org/~dpavlin/Fuse-0.13/Fuse.pm"
+license="GPL-2"
+checksum=bbdd8e3933f87798736f85c2a21ad9857b2c6b2323537369cec139d6cd06da5b
+long_desc="
+ This lets you implement filesystems in perl, through the FUSE
+ (Filesystem in USErspace) kernel/lib interface."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

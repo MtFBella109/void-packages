@@ -3,6 +3,8 @@ pkgname=gtkhtml
 version=4.2.1
 distfiles="${GNOME_SITE}/${pkgname}/4.2/${pkgname}-${version}.tar.xz"
 build_style=gnu-configure
+makedepends="pkg-config intltool gtk+3-devel enchant-devel libsoup-gnome-devel"
+fulldepends="gnome-icon-theme gsettings-desktop-schemas iso-codes"
 short_desc="Layout engine written in C using the GTK+ widget toolkit"
 maintainer="davehome <davehome@redthumb.info.tm>"
 homepage="http://www.gnome.org"
@@ -15,6 +17,7 @@ long_desc="
 
 subpackages="lib${pkgname} ${pkgname}-devel"
 
+<<<<<<< HEAD
 Add_dependency run glibc
 Add_dependency run libgtkhtml
 Add_dependency run gtk+3
@@ -37,3 +40,6 @@ Add_dependency full hicolor-icon-theme
 Add_dependency full desktop-file-utils
 Add_dependency full gsettings-desktop-schemas
 Add_dependency full iso-codes
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -3,6 +3,7 @@ pkgname=rxvt-unicode
 version=9.31
 revision=5
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="
  --with-terminfo=/usr/share/terminfo --enable-256-color
  --enable-font-styles --enable-xim --enable-keepscrolling
@@ -22,11 +23,23 @@ depends="ncurses rxvt-unicode-terminfo-${version}_${revision}"
 short_desc="Terminal emulator supporting Xft fonts and Unicode"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="GPL-3.0-or-later"
+=======
+configure_args="--with-terminfo=/usr/share/terminfo --enable-256-color
+--enable-font-styles --enable-xim --enable-keepscrolling --enable-pixbuf
+--enable-selectionscrolling --enable-smart-resize --enable-transparency
+--enable-utmp --enable-wtmp --enable-lastlog --disable-frills
+--enable-startup-notification --enable-combining --with-term=rxvt-256color"
+makedepends="pkg-config renderproto freetype-devel fontconfig-devel libX11-devel libXrender-devel libXft-devel glib-devel gdk-pixbuf-devel startup-notification-devel"
+fulldepends="perl>=0"
+short_desc="rxvt clone supporting Xft fonts and Unicode"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 homepage="http://software.schmorp.de/pkg/rxvt-unicode.html"
 changelog="http://cvs.schmorp.de/rxvt-unicode/Changes"
 distfiles="http://dist.schmorp.de/${pkgname}/${pkgname}-${version}.tar.bz2"
 checksum=aaa13fcbc149fe0f3f391f933279580f74a96fd312d6ed06b8ff03c2d46672e8
 
+<<<<<<< HEAD
 # Package build options
 build_options="gdk_pixbuf perl startup_notification unicode3"
 desc_option_unicode3="Use 21 instead of 16 bits to represent unicode chars"
@@ -68,6 +81,9 @@ pre_install() {
 	export TERMINFO="${DESTDIR}/usr/share/terminfo"
 	mkdir -p $TERMINFO
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vinstall ${FILESDIR}/${pkgname}.desktop 644 usr/share/applications

@@ -1,5 +1,6 @@
 # Template file for 'libwacom'
 pkgname=libwacom
+<<<<<<< HEAD
 version=2.16.1
 revision=1
 build_style=meson
@@ -7,6 +8,13 @@ configure_args="-Ddocumentation=disabled"
 hostmakedepends="pkg-config"
 makedepends="libgudev-devel libxml2-devel libevdev-devel"
 checkdepends="python3-pytest python3-libevdev python3-pyudev"
+=======
+version=0.4
+homepage="http://sourceforge.net/apps/mediawiki/linuxwacom/index.php?title=Main_Page"
+distfiles="${GNOME_SITE}/$pkgname/0.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+makedepends="pkg-config libgudev-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library to identify wacom tablets"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
@@ -15,6 +23,7 @@ changelog="https://raw.githubusercontent.com/linuxwacom/libwacom/master/NEWS"
 distfiles="https://github.com/linuxwacom/libwacom/releases/download/libwacom-${version}/libwacom-${version}.tar.xz"
 checksum=0f9bc90babad92b2c4c6571b53af3aee065f437cce01c06c860599e1a10680aa
 
+<<<<<<< HEAD
 if [ -z "$CROSS_BUILD" ] && [ "${XBPS_CHECK_PKGS}" ]; then
 	configure_args+=" -Dtests=enabled"
 else
@@ -35,3 +44,6 @@ libwacom-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

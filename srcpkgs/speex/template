@@ -3,6 +3,7 @@ pkgname=speex
 version=1.2.1
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="fftw-devel libogg-devel speexdsp-devel"
 short_desc="Free codec for free speech"
@@ -11,11 +12,23 @@ license="BSD-3-Clause"
 homepage="https://www.speex.org"
 distfiles="http://downloads.xiph.org/releases/speex/speex-$version.tar.gz"
 checksum=4b44d4f2b38a370a2d98a78329fefc56a0cf93d1c1be70029217baae6628feea
+=======
+makedepends="pkg-config libogg-devel"
+short_desc="A free codec for free speech"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=342f30dc57bd4a6dad41398365baaa690429660b10d866b7d508e8f1179cb7a6
+long_desc="
+ Speex is an audio codec especially designed for compressing voice at low
+ bit-rates for applications such as voice over IP (VoIP). In some senses, it
+ is meant to be complementary to the Vorbis codec which places a greater
+ emphasis on high-quality music reproduction.
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vlicense COPYING
 }
 
+<<<<<<< HEAD
 libspeex_package() {
 	short_desc+=" - shared libraries"
 	pkg_install() {
@@ -36,3 +49,6 @@ speex-devel_package() {
 		vmove usr/share/aclocal
 	}
 }
+=======
+subpackages="libspeex $pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

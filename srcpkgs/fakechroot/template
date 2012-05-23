@@ -4,6 +4,7 @@ version=2.20.1
 revision=1
 archs="~*-musl"
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static --sbindir=/usr/bin"
 conf_files="/etc/$pkgname/*"
 short_desc="Gives a fake chroot environment"
@@ -13,3 +14,13 @@ homepage="https://github.com/dex4er/fakechroot"
 distfiles="$homepage/archive/$version.tar.gz"
 checksum=7f9d60d0d48611969e195fadf84d05f6c74f71bbf8f41950ad8f5bf061773e18
 lib32disabled=yes
+=======
+depends="glibc"
+short_desc="Gives a fake chroot environment"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=da5d61f1c752e2e43400fc6c70cb8ad2f7177a3295534f8e0c6e3c208432d9f5
+long_desc="
+ This package provides a library which overrides libc functions, so it is
+ possible to use root-specific tools without root privileges."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

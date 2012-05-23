@@ -28,9 +28,18 @@ libcroco-devel_package() {
 =======
 # Template build file for 'libcroco'.
 pkgname=libcroco
+<<<<<<< HEAD
 version=0.6.2
 distfiles="${GNOME_SITE}/$pkgname/0.6/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+version=0.6.5
+homepage="http://www.gnome.org"
+distfiles="${GNOME_SITE}/$pkgname/0.6/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-static"
+makedepends="pkg-config glib-devel libxml2-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Toolkit to parse and manipulate CSS (Cascading Style Sheets)"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=be24853f64c09b63d39e563fb0222e29bae1a33c3d9f6cbffc0bc27669371749
@@ -41,8 +50,11 @@ long_desc="
  engine, and an XML/CSS layout/rendering engine."
  
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full glib
 Add_dependency full libxml2
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

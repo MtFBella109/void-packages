@@ -37,6 +37,11 @@ homepage="https://xfce.org/"
 version=4.6.1
 revision=5
 build_style=meta-template
+<<<<<<< HEAD
+=======
+homepage="http://xfce.org"
+depends="xfce4-appfinder>=4.10.0 xfce4-mixer>=4.8.0_3 xfce4-panel>=4.10.0 xfce4-session>=4.10.0 xfce4-settings>=4.10.0 xfconf>=4.10.0 xfdesktop>=4.10.0 xfwm4>=4.10.0 xfwm4-themes>=4.10.0 xfce4-power-manager>=1.2.0 Terminal>=0.4.8_4 Thunar>=1.4.0 thunar-volman>=0.8.0 exo>=0.8.0 orage>=4.8.3_1 ristretto>=0.6.0 gtk-xfce-engine>=3.0.0 notification-daemon>=0.2.2_1 tumbler>=0.1.25 xdg-utils xdg-user-dirs"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The XFCE desktop environment"
 maintainer="Juan RP <xtraeme@gmail.com>"
 long_desc="
@@ -44,6 +49,7 @@ long_desc="
 
 noarch=yes
 
+<<<<<<< HEAD
 Add_dependency full Terminal
 Add_dependency full Thunar
 Add_dependency full thunar-volman
@@ -67,3 +73,6 @@ Add_dependency full xfwm4-themes
 Add_dependency full gnome-icon-theme
 Add_dependency full tango-icon-theme
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

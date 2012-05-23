@@ -2,6 +2,7 @@
 pkgname=tdb
 version=1.4.10
 revision=2
+<<<<<<< HEAD
 build_style=waf3
 build_helper="qemu"
 configure_script="buildtools/bin/waf"
@@ -16,11 +17,23 @@ license="GPL-3.0-or-later"
 homepage="https://tdb.samba.org/"
 distfiles="https://download.samba.org/pub/tdb/tdb-${version}.tar.gz"
 checksum=02338e33c16c21c9e29571cef523e76b2b708636254f6f30c6cf195d48c62daf
+=======
+makedepends="pkg-config python-devel libxslt docbook-xsl"
+short_desc="Hierarchical pool based memory allocator with destructors"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3"
+checksum=886fbca71710b9fcf168ffcae47f05a6c3ff3392cf951f4cb1f949851c04f9ed
+long_desc="
+ This is a simple database API. It is modelled after the structure of GDBM.
+ TDB features, unlike GDBM, multiple writers support with appropriate locking
+ and transactions."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 if [ "$XBPS_TARGET_LIBC" = glibc ]; then
 	makedepends+=" libxcrypt-devel"
 fi
 
+<<<<<<< HEAD
 export PYTHON_CONFIG="${XBPS_CROSS_BASE}/usr/bin/python3-config"
 export PYTHONHASHSEED=1
 
@@ -52,3 +65,5 @@ libtdb_package() {
 		vmove "usr/lib/*.so.*"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -4,10 +4,16 @@ version=1.9.22
 revision=1
 build_style=waf3
 configure_args="--alsa --classic --dbus"
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="eigen opus-devel libsamplerate-devel dbus-devel db-devel celt-devel
  $(vopt_if ffado libffado-devel)"
 depends="python3-dbus"
+=======
+homepage="http://jackaudio.org/"
+distfiles="http://www.grame.fr/~letz/${pkgname}-${version}.tgz"
+makedepends="python pkg-config libstdc++-devel glibc-devel libsamplerate-devel readline-devel ncurses-devel alsa-lib-devel dbus-devel expat-devel libsndfile-devel celt-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="JACK Audio Connection Kit low-latency sound server (pro audio)"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
@@ -21,7 +27,17 @@ python_version=3
 build_options="ffado"
 desc_option_ffado="Enable support for FireWire audio devices"
 
+<<<<<<< HEAD
 post_install() {
+=======
+subpackages="lib$pkgname $pkgname-devel"
+
+# XXX libffado (firewire)
+
+
+post_install()
+{
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 	# pam_limits(8) support
 	vinstall ${FILESDIR}/jack-limitsd.conf 644 etc/security/limits.d jack.conf
 	# audio group permissions for realtime

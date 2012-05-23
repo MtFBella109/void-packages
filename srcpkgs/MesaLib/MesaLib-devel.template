@@ -1,11 +1,19 @@
 # Template file for 'MesaLib-devel'.
 #
+<<<<<<< HEAD
 short_desc="${short_desc} (development files)"
+=======
+depends="glproto dri2proto>=2.1 libXext-devel libXxf86vm-devel libXdamage-devel libXfixes-devel libX11-devel libxcb-devel libdrm-devel>=2.4.23 expat-devel libXt-devel libGL>=8.0.3 libOpenVG>=8.0.3 libGLES>=8.0.3 libGLU>=8.0.3 libEGL>=8.0.3"
+short_desc="${short_desc} - development files"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD
 Add_dependency run MesaLib
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

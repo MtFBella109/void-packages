@@ -1,0 +1,15 @@
+# Template file for 'weechat-perl'.
+#
+depends="weechat>=0.3.7"
+short_desc="${sourcepkg} perl add-on"
+long_desc="${long_desc}
+
+ This package contains the perl plugin."
+
+
+do_install()
+{
+	mkdir -p ${DESTDIR}/usr/lib/weechat/plugins
+	mv ${SRCPKGDESTDIR}/usr/lib/weechat/plugins/perl.so \
+		${DESTDIR}/usr/lib/weechat/plugins
+}

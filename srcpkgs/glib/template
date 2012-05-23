@@ -113,10 +113,18 @@ glib-devel_package() {
 =======
 # Template build file for 'glib'
 pkgname=glib
+<<<<<<< HEAD
 version=2.22.2
 distfiles="${GNOME_SITE}/glib/2.22/glib-$version.tar.bz2"
 configure_args="--disable-fam --with-pcre=system"
 build_style=gnu_configure
+=======
+version=2.32.3
+distfiles="${GNOME_SITE}/glib/2.32/glib-$version.tar.xz"
+configure_args="--disable-fam --with-pcre=system --enable-static"
+build_style=gnu-configure
+makedepends="python>=0 pkg-config zlib-devel pcre-devel libffi-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The GNU library of C routines"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a4a41d02fc2d3f5effa1fc3466918e0b3ab60e9eb0a08139b997f2649cbacca3
@@ -126,8 +134,12 @@ long_desc="
  C library used by projects such as GTK+, GIMP and GNOME."
 
 subpackages="glib-devel"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full pcre
 Add_dependency build gettext
 Add_dependency build pkg-config
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

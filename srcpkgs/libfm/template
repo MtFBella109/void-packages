@@ -6,6 +6,7 @@ pkgname=libfm
 version=1.4.0
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-udisks --disable-static --with-gtk=3"
 hostmakedepends="automake gettext-devel glib-devel intltool libtool
  pkg-config vala-devel gtk-doc"
@@ -18,11 +19,25 @@ homepage="https://github.com/lxde/libfm"
 distfiles="https://github.com/lxde/libfm/archive/refs/tags/${version}.tar.gz"
 checksum=7d7b616411992389a4b7f35796109d605f30bc2ceab84d4081d1665254ebbf82
 conf_files="/etc/xdg/libfm/libfm.conf"
+=======
+configure_args="--enable-udisks"
+makedepends="pkg-config intltool dbus-glib-devel gtk+-devel menu-cache-devel"
+fulldepends="desktop-file-utils udisks"
+short_desc="LXDE GLib/GIO based library"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=1740681cff4cd4c5a2eaa9805d8898269cfb6a49a0bda0acb242def15bc7131b
+long_desc="
+ libfm is a glib/gio-based lib used to develop file managers providing some
+ file management utilities."
+ 
+subpackages="libfm-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure() {
 	autoreconf -fi
 }
 
+<<<<<<< HEAD
 post_install() {
 	# remove files that belong to libfm-extra
 	rm -f ${DESTDIR}/usr/lib/libfm-extra.so*
@@ -68,3 +83,6 @@ libfm-gtk+3-devel_package() {
 		vmove usr/lib/pkgconfig/libfm-gtk3.pc
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -3,6 +3,7 @@ pkgname=itstool
 version=2.0.7
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="PYTHON=/usr/bin/python3"
 hostmakedepends="python3 libxml2-python3"
 makedepends="$hostmakedepends"
@@ -13,3 +14,16 @@ license="GPL-3.0-or-later"
 homepage="http://itstool.org/"
 distfiles="http://files.itstool.org/itstool/${pkgname}-${version}.tar.bz2"
 checksum=6b9a7cd29a12bb95598f5750e8763cee78836a1a207f85b74d8b3275b27e87ca
+=======
+depends="python>=0 libxml2-python>=0"
+short_desc="ITS Tool"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3"
+checksum=49235f63b536f95927e26d093bfe4513e2be042d0dd8be9c84a0d58c70262514
+long_desc="
+ ITS Tool allows you to translate your XML documents with PO files, using
+ rules from the W3C Internationalization Tag Set (ITS) to determine what to
+ translate and how to separate it into PO file messages."
+
+noarch=yes
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,6 +1,7 @@
 # Template file for 'usbutils'
 pkgname=usbutils
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=018
 revision=1
 build_style=meson
@@ -29,6 +30,13 @@ revision=2
 distfiles="${SOURCEFORGE_SITE}/linux-usb/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 configure_args="--datadir=/usr/share/hwdata --disable-zlib"
+=======
+version=005
+homepage="http://linux-usb.sourceforge.net/"
+#distfiles="${KERNEL_SITE}/utils/usb/$pkgname/$pkgname-$version.tar.bz2"
+distfiles="ftp://ftp.archlinux.org/other/${pkgname}/${pkgname}-${version}.tar.bz2"
+makedepends="pkg-config which libusb-devel libusb-compat-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Linux USB utilities"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=b3b2bea6d2cd87660c8201a47071bf2a9889d8ed90c7203cc768b597799c12f4
@@ -36,10 +44,13 @@ long_desc="
  This package contains utilities for inspecting devices connected to a
  USB bus."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full libusb
 Add_dependency full libusb-compat
 Add_dependency build which
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure()
 {

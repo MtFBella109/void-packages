@@ -14,12 +14,34 @@ short_desc="Advanced drum machine"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://www.hydrogen-music.org/"
+<<<<<<< HEAD
 distfiles="https://github.com/hydrogen-music/hydrogen/archive/${version}.tar.gz"
 checksum=de1ce64da8ae7a84d7fbd789e84010d6a837378bc9811acb282c30b9ee8042f5
 
 post_patch() {
 	vsed -i '/INSTALL/s,"data,"/usr/share/hydrogen/data,' \
 		data/i18n/CMakeLists.txt
+=======
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
+revision=3
+makedepends="scons libsndfile-devel alsa-lib-devel zlib-devel libtar-devel libarchive-devel jack-devel qt-devel"
+fulldepends="desktop-file-utils"
+short_desc="Advanced drum machine for GNU/Linux"
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="GPL-2"
+checksum=963c73ef911ec9e7589e502d17df3b794dd027d7e99a36b5115a0bb51389d9c3
+long_desc="
+ Hydrogen is an advanced drum machine for GNU/Linux. It's main goal is to
+ bring professional yet simple and intuitive pattern-based drum
+ programming."
+
+# XXX LASH Support
+
+
+do_build() {
+	scons lrdf=0 jack=1 alsa=1 lash=0 portaudio=0 portmidi=0 \
+		oss=1 gui=1 libarchive=1 debug=0 prefix=/usr
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }
 
 do_check() {

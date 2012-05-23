@@ -24,9 +24,17 @@ pre_check() {
 =======
 # Template build file for 'automake'.
 pkgname=automake
+<<<<<<< HEAD
 version=1.10.2
 distfiles="http://ftp.gnu.org/gnu/automake/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+version=1.12
+homepage="http://www.gnu.org/software/automake"
+distfiles="http://ftp.gnu.org/gnu/automake/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+fulldepends="autoconf>=2.60 libtool>=2.4.2_3"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNU Standards-compliant Makefile generator"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=c38ac9fe53d9492b0a0a02a8e691cd2c96d7f4cc13aedeedc6d08613b77e640f
@@ -39,7 +47,10 @@ long_desc="
  dependency tracking support, the use of GNU make is also required."
 
 noarch=yes
+<<<<<<< HEAD
 Add_dependency full autoconf	">=2.60"
 Add_dependency full libtool
 Add_dependency build texinfo
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -4,12 +4,18 @@ reverts="0.16.0_1"
 version=0.13.8
 revision=6
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-static --disable-debug --without-kqueue
  --enable-aligned --with-posix-fallocate"
 hostmakedepends="automake libtool pkg-config"
 makedepends="openssl-devel zlib-devel"
 # XXX: if built with XBPS_CHECK_PKGS, final binary will be dyn linked against libcppunit
 checkdepends="libcppunit-devel"
+=======
+configure_args="--disable-debug"
+revision=2
+makedepends="pkg-config openssl-devel libsigc++-devel libstdc++-devel glibc-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="BitTorrent library written in C++"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -23,6 +29,7 @@ case "$XBPS_TARGET_MACHINE" in
 	ppc*|mips*) configure_args+=" --disable-instrumentation";;
 esac
 
+<<<<<<< HEAD
 pre_configure() {
 	autoreconf -fi
 	sed -e 's,test "$cross_compiling" = yes, false,' -i configure
@@ -45,3 +52,5 @@ libtorrent-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

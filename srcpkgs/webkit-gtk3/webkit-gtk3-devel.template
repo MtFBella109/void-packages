@@ -1,0 +1,14 @@
+# Template file for 'webkit-gtk-devel'.
+#
+depends="enchant-devel gdk-pixbuf-devel gtk+3-devel gst-plugins-base-devel gstreamer-devel glib-devel atk-devel pango-devel cairo-devel jpeg-devel libsoup-devel libxslt-devel zlib-devel libxml2-devel freetype-devel fontconfig-devel libpng-devel sqlite-devel icu-devel libXt-devel libX11-devel libSM-devel libICE-devel libXrender-devel webkit-gtk3>=1.8.1"
+short_desc="${sourcepkg} development files"
+long_desc="${long_desc}
+
+ This package contains files for development, headers, static libs, etc."
+
+
+do_install() {
+	vmove usr/include usr
+	vmove usr/lib/pkgconfig usr/lib
+	vmove "usr/share/gir*" usr/share
+}

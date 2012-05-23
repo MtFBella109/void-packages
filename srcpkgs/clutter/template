@@ -3,6 +3,7 @@ pkgname=clutter
 version=1.26.4
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper="gir"
 configure_args="$(vopt_enable gir introspection) --enable-evdev --enable-evdev-input
  --enable-wayland-backend --enable-egl-backend --enable-wayland-compositor
@@ -12,6 +13,10 @@ hostmakedepends="automake libtool pkg-config intltool glib-devel
 makedepends="atk-devel pango-devel libXi-devel libXcomposite-devel json-glib-devel
  libgudev-devel libxkbcommon-devel cogl-devel libinput-devel libevdev-devel
  eudev-libudev-devel gtk+3-devel"
+=======
+configure_args="--enable-introspection"
+makedepends="pkg-config intltool libXi-devel libXcomposite-devel libdrm-devel json-glib-devel gtk+-devel cogl-devel gobject-introspection"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="OpenGL based interactive canvas library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -22,6 +27,7 @@ checksum=8b48fac159843f556d0a6be3dbfc6b083fc6d9c58a20a49a6b4919ab4263c4e6
 build_options="gir"
 build_options_default="gir"
 
+<<<<<<< HEAD
 pre_configure() {
 	autoreconf -fi
 }
@@ -39,3 +45,5 @@ clutter-devel_package() {
 		fi
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -3,6 +3,7 @@ pkgname=perl-HTTP-Date
 version=6.05
 revision=2
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl"
 makedepends="${hostmakedepends}"
 depends="${makedepends}"
@@ -12,3 +13,18 @@ license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/HTTP-Date"
 distfiles="${CPAN_SITE}/HTTP/HTTP-Date-$version.tar.gz"
 checksum=365d6294dfbd37ebc51def8b65b81eb79b3934ecbc95a2ec2d4d827efe6a922b
+=======
+fulldepends="perl"
+short_desc="HTTP::Date - date conversion routines"
+maintainer="davehome <davehome@redthumb.info.tm>"
+homepage="http://search.cpan.org/~gaas/HTTP-Date-6.00/lib/HTTP/Date.pm"
+license="GPL-2"
+checksum=466f7328a1ff465e64c57d18ba2bf5a577fe137c126850e9680d7792a3b3d996
+long_desc="
+ This module provides functions that deal the date formats used by the HTTP
+ protocol (and then some more). Only the first two functions, time2str() and
+ str2time(), are exported by default."
+
+noarch=yes
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

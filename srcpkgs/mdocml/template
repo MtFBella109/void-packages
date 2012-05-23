@@ -1,5 +1,6 @@
 # Template file for 'mdocml'
 pkgname=mdocml
+<<<<<<< HEAD
 version=1.14.6
 revision=8
 build_style=configure
@@ -12,12 +13,26 @@ checkdepends="perl"
 conf_files="/etc/man.conf"
 short_desc="UNIX manpage compiler toolset (mandoc)"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
+=======
+version=1.12.0
+revision=2
+homepage="http://mdocml.bsd.lv"
+distfiles="${homepage}/snapshots/mdocml-$version.tar.gz"
+build_style=gnu-makefile
+make_build_args="DBLIB=-ldb"
+make_install_args="MANDIR=/usr/share/man BINDIR=/usr/bin
+EXAMPLEDIR=/usr/share/examples/mdocml PREFIX=/usr"
+makedepends="db-devel"
+short_desc="mdoc macro compiler"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 license="ISC"
 homepage="https://mandoc.bsd.lv"
 distfiles="https://mandoc.bsd.lv/snapshots/mandoc-${version}.tar.gz"
 checksum=8bf0d570f01e70a6e124884088870cbed7537f36328d512909eb10cd53179d9c
 provides="man-0_1"
 
+<<<<<<< HEAD
 alternatives="
  man:man:/usr/bin/mandoc
  man:whatis:/usr/bin/mandoc
@@ -25,6 +40,8 @@ alternatives="
  man:man.1:/usr/share/man/man1/mandoc-man.1
  man:whatis.1:/usr/share/man/man1/mandoc-whatis.1
  man:apropos.1:/usr/share/man/man1/mandoc-apropos.1"
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 CFLAGS="-fcommon"
 

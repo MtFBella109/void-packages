@@ -18,7 +18,12 @@ version=2.18
 revision=1
 wrksrc="XML-Simple-$version"
 distfiles="${CPAN_SITE}/XML/XML-Simple-$version.tar.gz"
+<<<<<<< HEAD
 build_style=perl_module
+=======
+build_style=perl-module
+fulldepends="perl expat perl-XML-Parser perl-XML-SAX perl-XML-NamespaceSupport perl-Test-Simple"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Easy Perl API to read/write XML"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a54967c188cda3e20f496c83be4de3f1740eeaa83c0380712ecd969ad8766826
@@ -27,6 +32,7 @@ long_desc="
  (especially configuration files)."
 
 noarch=yes
+<<<<<<< HEAD
 Add_dependency full perl
 Add_dependency full expat
 Add_dependency full perl-XML-Parser
@@ -35,3 +41,5 @@ Add_dependency full perl-XML-NamespaceSupport
 Add_dependency full perl-Storable
 Add_dependency full perl-Test-Simple
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

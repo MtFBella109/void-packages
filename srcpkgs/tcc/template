@@ -2,6 +2,7 @@
 pkgname=tcc
 version=0.9.27.20250903
 revision=1
+<<<<<<< HEAD
 _gitrev=8c3396a76f1a49eb2209206cf1274c9fc00a7506
 build_style=configure
 configure_args="--prefix=/usr --libdir=\${prefix}/lib$XBPS_TARGET_WORDSIZE"
@@ -26,3 +27,26 @@ do_build() {
 	# because TCC is bootstrapped with the same flags
 	make CFLAGS= LDFLAGS= ${makejobs}
 }
+=======
+makedepends="perl"
+short_desc="The Tiny C Compiler"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=1bed6cb0fb2ef4100df1b94435d22863679e84cf419ec48ef96d9c0e9063de35
+long_desc="
+ Features
+    * SMALL! You can compile and execute C code everywhere, for example on
+      rescue disks (about 100KB for x86 TCC executable, including C
+      preprocessor, C compiler, assembler and linker).
+    * FAST! tcc generates x86 code. No byte code overhead. Compile, assemble
+      and link several times faster than GCC.
+    * UNLIMITED! Any C dynamic library can be used directly. TCC is heading
+      torward full ISOC99 compliance. TCC can of course compile itself.
+    * SAFE! tcc includes an optional memory and bound checker. Bound checked
+      code can be mixed freely with standard code.
+    * Compile and execute C source directly. No linking or assembly necessary.
+      Full C preprocessor and GNU-like assembler included.
+    * C script supported : just add '#!/usr/local/bin/tcc -run' at the first
+      line of your C source, and execute it directly from the command line.
+    * With libtcc, you can use TCC as a backend for dynamic code generation."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

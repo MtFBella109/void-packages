@@ -1,11 +1,16 @@
 # Template file for 'libmng-devel'.
 #
+depends="jpeg-devel zlib-devel lcms-devel libmng"
 short_desc="${sourcepkg} development files"
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD:srcpkgs/libmng/devel.template
 Add_dependency run libmng
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!):srcpkgs/libmng/libmng-devel.template
 
 do_install()
 {

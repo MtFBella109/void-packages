@@ -33,7 +33,12 @@ libIDL-devel_package() {
 pkgname=libIDL
 version=0.8.13
 distfiles="${GNOME_SITE}/$pkgname/0.8/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config flex glib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="CORBA Interface Definition Language parser"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=bccc7e10dae979518ff012f8464e47ec4b3558a5456a94c8679653aa0b262b71
@@ -61,8 +66,11 @@ long_desc="
  generate meaningful errors and warnings for invalid or deprecated IDL."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build flex
 Add_dependency full glibc
 Add_dependency full glib
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

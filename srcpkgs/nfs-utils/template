@@ -5,6 +5,7 @@ version=2.8.4
 revision=1
 build_style=gnu-configure
 configure_args="--with-statduser=nobody --enable-gss --enable-nfsv4
+<<<<<<< HEAD
  --with-statedir=/var/lib/nfs --enable-libmount-mount --enable-svcgss
  --enable-uuid --enable-ipv6 --without-tcp-wrappers
  --with-tirpcinclude=$XBPS_CROSS_BASE/usr/include/tirpc
@@ -90,6 +91,12 @@ distfiles="http://downloads.sf.net/nfs/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--with-statduser=nobody --disable-gss --disable-nfsv4
  --enable-nfsv3 --with-statedir=/var/lib/nfs --enable-mount"
+=======
+--with-statedir=/var/lib/nfs --enable-libmount-mount
+--without-tcp-wrappers --enable-ipv6"
+depends="rpcbind"
+makedepends="pkg-config libblkid-devel libmount-devel libtirpc-devel librpcsecgss-devel libnfsidmap-devel libevent-devel device-mapper-devel libcap-devel mit-krb5-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Network File System utilities"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=cb39468b3acd0bf3870cde4bbb06fe01a88e7cf0c81cff87fa7794cab871a1d1
@@ -107,6 +114,7 @@ Add_dependency full	libblkid
 Add_dependency build	tcp_wrappers
 Add_dependency run	tcp_wrappers-libs
 
+<<<<<<< HEAD
 post_install()
 {
 	# Install the OpenRC services.
@@ -115,4 +123,18 @@ post_install()
 	done
 	install -D -m644 ${FILESDIR}/exports ${DESTDIR}/etc/exports
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+
+post_install() {
+	# conffiles
+	vinstall ${FILESDIR}/exports 644 etc
+	vinstall ${FILESDIR}/idmapd.conf 644 etc
+	# systemd glue
+	vinstall ${FILESDIR}/${pkgname}.tmpfiles.d 644 \
+		usr/lib/tmpfiles.d ${pkgname}.conf
+	vmkdir lib/systemd/system
+	install -m644 ${FILESDIR}/*.{service,mount} \
+		${DESTDIR}/lib/systemd/system
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

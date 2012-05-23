@@ -3,18 +3,34 @@ pkgname=docbook2x
 version=0.8.8
 revision=5
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--without-resolver-jars --without-saxon-jars --without-xalan-jars"
 hostmakedepends="libxslt docbook docbook-dsssl docbook-xsl perl-XML-SAX"
 depends="texinfo ${hostmakedepends}"
 xml_entries="
  nextCatalog /usr/share/docbook2X/dtd/catalog.xml --
  nextCatalog /usr/share/docbook2X/xslt/catalog.xml --"
+=======
+revision=1
+fulldepends="texinfo libxslt docbook docbook-dsssl docbook-xml docbook-xsl perl-XML-SAX xmlcatmgr"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="DocBook converter to UNIX manpage and GNU Texinfo format"
 maintainer="Orphaned <orphan@voidlinux.org>"
 homepage="http://docbook2x.sourceforge.net"
 license="MIT"
 distfiles="${SOURCEFORGE_SITE}/$pkgname/docbook2X-$version.tar.gz"
 checksum=4077757d367a9d1b1427e8d5dfc3c49d993e90deabc6df23d05cfe9cd2fcdc45
+<<<<<<< HEAD
+=======
+long_desc="
+ docbook2X is a software package that converts DocBook documents into the
+ traditional Unix man page format and the GNU Texinfo format."
+
+export xml_entries="
+nextCatalog /usr/share/docbook2X/dtd/catalog.xml --
+nextCatalog /usr/share/docbook2X/xslt/catalog.xml --"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	sed -i -e 's|${prefix}|/usr|g' ${DESTDIR}/usr/bin/*

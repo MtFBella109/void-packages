@@ -19,9 +19,18 @@ pre_check() {
 =======
 # Template build file for 'autoconf'.
 pkgname=autoconf
+<<<<<<< HEAD
 version=2.64
 distfiles="http://ftp.gnu.org/gnu/autoconf/$pkgname-$version.tar.gz"
 build_style=gnu_configure
+=======
+version=2.69
+homepage="http://www.gnu.org/software/autoconf"
+distfiles="http://ftp.gnu.org/gnu/autoconf/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+depends="gawk diffutils m4"
+fulldepends="perl>=0"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Generates automatic source code configuration scripts"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a84471733f86ac2c1240a6d28b705b05a6b79c3cca8835c3712efbdf813c5eb6
@@ -35,9 +44,12 @@ long_desc="
  macro calls."
 
 noarch=yes
+<<<<<<< HEAD
 Add_dependency full gawk
 Add_dependency full diffutils
 Add_dependency full m4
 Add_dependency full perl
 Add_dependency build texinfo
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

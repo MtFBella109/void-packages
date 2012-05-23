@@ -35,7 +35,12 @@ libXt-devel_package() {
 pkgname=libXt
 version=1.0.7
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config xproto kbproto libSM-devel libICE-devel libX11-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X Toolkit Intrinsics library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=706d5248b061c8455f74ce5269ecc5ef59c27d0f52d22b07138f781928dda9ec
@@ -48,6 +53,7 @@ long_desc="
  This is from the modular X.org project."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build xproto
 Add_dependency build kbproto
@@ -57,3 +63,6 @@ Add_dependency full libICE
 Add_dependency full libX11
 Add_dependency full libuuid
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,11 +1,16 @@
 # Template file for 'dbus-devel'.
 #
+depends="pkg-config expat-devel libSM-devel libICE-devel libX11-devel dbus-libs"
 short_desc="${short_desc} (development files)"
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD
 Add_dependency run dbus-libs
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

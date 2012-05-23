@@ -4,15 +4,33 @@ version=0.9.16.1
 revision=1
 build_style=gnu-configure
 configure_args="--enable-openal --disable-sdlmixer --disable-glpng"
+<<<<<<< HEAD
 hostmakedepends="gettext pkg-config"
 makedepends="libICE-devel libXmu-devel ftgl-devel fontconfig-devel SDL_image-devel libopenal-devel freealut-devel"
 depends="desktop-file-utils"
+=======
+makedepends="MesaLib-devel ftgl-devel fontconfig-devel SDL-devel SDL_image-devel libopenal-devel freealut-devel"
+fulldepends="desktop-file-utils"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Fast paced, arcade-style, top-scrolling space shooter"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="${pkgname}"
+<<<<<<< HEAD
 homepage="http://chromium-bsu.sourceforge.net"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/Chromium%20B.S.U.%20source%20code/${pkgname}-${version}.tar.gz"
 checksum=a1c141a34d19a59607ae81166a19864eb8c84cf86b155462fed31a6d56e1624a
+=======
+checksum=6d926cceea6158a74583b6e8927716b9f837fab5693cf4039c6500b50e5147b2
+long_desc="
+ Chromium is a top down fast paced high action scrolling space shooter.
+
+ In this game you are the captain of the cargo ship Chromium B.S.U. and are
+ responsible for delivering supplies to the troops on the front line. Your
+ ship has a small fleet of robotic fighters which you control from the relative
+ safety of the Chromium vessel."
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vlicense COPYING

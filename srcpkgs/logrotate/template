@@ -3,6 +3,7 @@ pkgname=logrotate
 <<<<<<< HEAD
 version=3.22.0
 revision=1
+<<<<<<< HEAD
 build_style=gnu-configure
 makedepends="acl-devel popt-devel"
 conf_files="/etc/logrotate.conf"
@@ -27,6 +28,10 @@ version=3.7.8
 distfiles="${DEBIAN_SITE}/main/l/${pkgname}/${pkgname}_${version}.orig.tar.gz"
 build_style=gnu_makefile
 make_install_args="PREFIX=$XBPS_DESTDIR/$pkgname-$version"
+=======
+makedepends="popt-devel"
+fulldepends="gzip"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Log file rotation and periodic maintenance"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=21aa3dc830e8cc895ee4199d9325aa1e37cd3b525d0eaef400f66f6c7fc536dd
@@ -40,9 +45,12 @@ long_desc="
 
 conf_files="/etc/logrotate.conf"
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full popt
 Add_dependency full gzip
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_build()
 {

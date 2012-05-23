@@ -3,6 +3,7 @@ pkgname=xarchiver
 version=0.5.4.26
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-doc --enable-gtk2=no"
 hostmakedepends="pkg-config intltool"
 makedepends="gtk+3-devel"
@@ -13,3 +14,21 @@ license="GPL-2.0-or-later"
 homepage="https://github.com/ib/xarchiver"
 distfiles="https://github.com/ib/xarchiver/archive/refs/tags/${version}.tar.gz"
 checksum=58e4fb2c1fb8421573a31cf3b4dfec301076d61f48ac5720df632986c87e9573
+=======
+makedepends="pkg-config intltool glib-devel pango-devel gdk-pixbuf-devel gtk+-devel"
+fulldepends="xdg-utils desktop-file-utils hicolor-icon-theme"
+short_desc="GTK+2 lightweight desktop independent archive manager"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=cea932ff9d505969201fd502470bbebbc5726ab3d6765e142fc8295aa677ad2a
+long_desc="
+ Xarchiver is a lightweight desktop independent archive manager built with
+ the GTK+2 toolkit. It was my intention to develop a simple GUI which could
+ be used with any desktop environment and would operate using the command
+ line rather than API calls. Xarchiver has been designed from the ground up
+ to be fast and easy-to-use. Its user interface is clean and intuitive, and
+ does not include any confusing or useless options."
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

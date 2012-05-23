@@ -1,19 +1,31 @@
 # Template file for 'dmenu'
 pkgname=dmenu
+<<<<<<< HEAD
 version=5.4
 revision=1
 makedepends="libXinerama-devel libXft-devel freetype-devel"
 short_desc="Generic menu for X"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
+=======
+version=4.4.1
+homepage="http://tools.suckless.org/dmenu/"
+distfiles="http://dl.suckless.org/tools/${pkgname}-${version}.tar.gz"
+makedepends="libXinerama-devel"
+short_desc="A generic menu for X"
+maintainer="davehome <davehome@redthumb.info.tm>"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 license="MIT"
 homepage="https://tools.suckless.org/dmenu/"
 distfiles="https://dl.suckless.org/tools/${pkgname}-${version}.tar.gz"
 checksum=8fbace2a0847aa80fe861066b118252dcc7b4ca0a0a8f3a93af02da8fb6cd453
 
+<<<<<<< HEAD
 post_patch() {
 	sed -i -e '/CFLAGS/{s/-Os//;s/=/+=/}' \
 		-e '/LDFLAGS/{s/-s//;s/=/+=/}' config.mk
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_build() {
 	[ -e ${FILESDIR}/config.h ] && cp ${FILESDIR}/config.h config.h

@@ -16,10 +16,18 @@ checksum=4401d4e231d842c2de8242395a74a395ca468cd96f5f610d822df33594898a70
 =======
 # Template build file for 'desktop-file-utils'.
 pkgname=desktop-file-utils
+<<<<<<< HEAD
 version=0.15
 revision=1
 distfiles="http://freedesktop.org/software/$pkgname/releases/$pkgname-$version.tar.gz"
 build_style=gnu_configure
+=======
+version=0.20
+homepage="http://www.freedesktop.org/wiki/Software/desktop-file-utils"
+distfiles="http://www.freedesktop.org/software/$pkgname/releases/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+makedepends="pkg-config glib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Utilities to manage desktop entries"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=c463d851fb057acd53800cfc4f8ae39dcbcad7f03b4bd547288e95b6de53b022
@@ -29,7 +37,10 @@ long_desc="
  it contains the update-desktop-database utility, used to rebuild the database
  that connects MIME types to applications."
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full glib
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

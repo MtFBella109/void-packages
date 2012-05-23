@@ -3,6 +3,7 @@ pkgname=xsetroot
 <<<<<<< HEAD
 version=1.1.3
 revision=1
+<<<<<<< HEAD
 build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="xbitmaps libXmu-devel libXrender-devel libXfixes-devel libXcursor-devel"
@@ -20,6 +21,9 @@ post_install() {
 version=1.0.3
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+makedepends="pkg-config xbitmaps libXmu-devel libX11-devel libXcursor-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X root window parameter setting program"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=d7e512cc686de3ab5fcd3c9f9e605d7cae68a4b50f2c0786f0f09ce08c728f48
@@ -29,9 +33,12 @@ long_desc="
 
  This is from the modular X.org X11 project."
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build xbitmaps
 Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libXmu
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

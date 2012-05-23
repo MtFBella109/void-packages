@@ -29,7 +29,12 @@ pkgname=libart
 version=2.3.20
 wrksrc="libart_lgpl-$version"
 distfiles="${GNOME_SITE}/libart_lgpl/2.3/libart_lgpl-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="High-performance 2D graphics library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=d5531ae3a206a9b5cc74e9a20d89d61b2ba3ba03d342d6a2ed48d2130ad3d847
@@ -48,6 +53,9 @@ long_desc="
  optimized for interactive display."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency run glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

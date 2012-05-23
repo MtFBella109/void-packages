@@ -2,12 +2,21 @@
 pkgname=xf86-video-tdfx
 version=1.4.3
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="glibc xorg-server"
+makedepends="xorg-server-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg 3Dfx video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=3ad935ca0aa306d10d1e6125a6bd485a3948c184dcfda01670961dc4740ebf33
 long_desc="
  This is the video driver for 3Dfx video cards for the Xorg X11 server."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -7,8 +7,24 @@ short_desc="Xonotic's data files"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://xonotic.org"
+<<<<<<< HEAD
 distfiles="https://dl.xonotic.org/xonotic-${version}.zip"
 checksum=50850f8d800e7499722f6ea61e478e96464a375494b5a24da93aa0598cbe964d
+=======
+license="GPL-2, GPL-3"
+distfiles="http://dl.xonotic.org/xonotic-${version}.zip"
+makedepends="unzip"
+short_desc="A free, fast-paced crossplatform first-person shooter (data files)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=e8a7dbfdea1ba6250ddf363f01899411f22e518526fae4f0b4f90d622fab3819
+long_desc="
+ Xonotic is $short_desc.
+
+ This package contains the data files."
+
+replaces="xonotic-data>=0"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install() {
 	vmkdir usr/share/xonotic

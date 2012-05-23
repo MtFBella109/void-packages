@@ -1,0 +1,37 @@
+# Template file for 'zlib32'
+pkgname=zlib32
+version=1.2.6
+distfiles="
+http://xbps.goodluckwith.us/binpkgs/i686/zlib-${version}.i686.xbps
+http://xbps.goodluckwith.us/binpkgs/i686/zlib-devel-${version}.i686.xbps"
+revision=2
+depends="glibc32"
+makedepends="bsdtar"
+short_desc="A compression/decompression Library (32 bits)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum="
+4a4c5aa98a7f47727ff4e4d10d19cf172976b0c65e41b7ac27fe7373f2c8bceb
+e14e90c90c1ee44d5eea13102607e6f4ce39b292f5f82463b75990e0f9ec368b"
+long_desc="
+ This is a general purpose data compression library. All the code
+ is thread safe. The data format used by the library is described
+ by RFCs (Request for Comments) 1950 to 1952.
+
+ This package installs the 32 bit libraries for x86_64 systems."
+
+subpackages="$pkgname-devel"
+nostrip=yes
+noextract=yes
+noverifyrdeps=yes
+only_for_archs=x86_64
+
+
+do_install() {
+	for f in ${distfiles}; do
+		local srcfile="${XBPS_SRCDISTDIR}/$(basename ${f})"
+		bsdtar xf ${srcfile} -C ${wrksrc}
+	done
+	vmkdir usr/lib32
+	vcopy "usr/lib/*.a" usr/lib32
+	vcopy "usr/lib/*.so*" usr/lib32
+}

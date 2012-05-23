@@ -1,11 +1,20 @@
 # Template file for 'grub2-devel'.
 #
+<<<<<<< HEAD:srcpkgs/grub2/grub2-devel.template
 short_desc="GRUB 2 development files"
+=======
+depends="libpcap-devel"
+short_desc="${sourcepkg} (development files)"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!):srcpkgs/ppp/ppp-devel.template
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD:srcpkgs/grub2/grub2-devel.template
 Add_dependency run grub2 ">=${version}"
+=======
+noarch=yes
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!):srcpkgs/ppp/ppp-devel.template
 
 do_install()
 {

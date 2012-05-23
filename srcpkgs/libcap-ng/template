@@ -3,16 +3,24 @@ pkgname=libcap-ng
 version=0.8.5
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--without-python --without-python3"
 short_desc="Alternate POSIX capabilities library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
+=======
+revision=3
+makedepends="python-devel swig"
+short_desc="An alternate POSIX capabilities library"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 homepage="http://people.redhat.com/sgrubb/libcap-ng/"
 distfiles="http://people.redhat.com/sgrubb/$pkgname/$pkgname-$version.tar.gz"
 checksum=3ba5294d1cbdfa98afaacfbc00b6af9ed2b83e8a21817185dfd844cc8c7ac6ff
 
 subpackages="libcap-ng-devel libcap-ng-progs"
 
+<<<<<<< HEAD
 if [ -z "$CROSS_BUILD" ]; then
 	subpackages+=" libcap-ng-python libcap-ng-python3"
 	hostmakedepends="python3-devel swig python3-setuptools"
@@ -51,3 +59,6 @@ libcap-ng-python_package() {
 	short_desc+=" - transitional dummy pkg"
 	depends="libcap-ng-python3-${version}_${revision}"
 }
+=======
+subpackages="$pkgname-devel $pkgname-progs $pkgname-python"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -11,6 +11,7 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="http://libusb.sourceforge.net/"
 distfiles="${SOURCEFORGE_SITE}/libusb/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 checksum=b692dcf674c070c8c0bee3c8230ce4ee5903f926d77dc8b968a4dd1b70f9b05c
 
 libusb-compat-devel_package() {
@@ -28,6 +29,10 @@ libusb-compat-devel_package() {
 version=0.1.0
 distfiles="${SOURCEFORGE_SITE}/libusb/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config libusb-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="A libusb-0.1 compatibility library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=69ad5d62946885a60368381a3354b8fd19597bc6fc9ee25b4598977771429b8d
@@ -37,6 +42,9 @@ long_desc="
  just converts libusb-0.1 calls into their libusb-1.0 equivalents."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full libusb
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

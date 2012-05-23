@@ -37,10 +37,19 @@ libxcb-devel_package() {
 =======
 # Template build file for 'libxcb'.
 pkgname=libxcb
+<<<<<<< HEAD
 version=1.4
 distfiles="http://xcb.freedesktop.org/dist/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--disable-build-docs --disable-doxygen"
+=======
+version=1.8.1
+homepage="http://xcb.freedesktop.org"
+distfiles="$homepage/dist/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+configure_args="--disable-build-docs"
+makedepends="pkg-config python libxslt docbook-xsl xcb-proto>=1.7 libXdmcp-devel libXau-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X protocol C-language Binding"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=07b6e2d3dde4beb06dc8310daec1c5c82d67022e3c9aec35f3783e63aad3209e
@@ -57,6 +66,7 @@ long_desc="
  requests and receive responses with both, which eases porting to XCB."
  
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build python
 Add_dependency build libxslt
@@ -65,3 +75,5 @@ Add_dependency full glibc
 Add_dependency full libXdmcp
 Add_dependency full libXau
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,5 +1,6 @@
 # Template file for 'busybox'
 pkgname=busybox
+<<<<<<< HEAD
 version=1.34.1
 revision=12
 hostmakedepends="perl"
@@ -84,6 +85,25 @@ do_configure() {
 		sed -i "s/\(#define AUTOCONF_TIMESTAMP\).*/\1 \"$d\"/" */include/autoconf.h
 	fi
 }
+=======
+version=1.19.4
+homepage="http://www.busybox.net"
+distfiles="${homepage}/downloads/busybox-$version.tar.bz2"
+makedepends="perl>=0"
+short_desc="The Swiss Army Knife of Embedded Linux"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+checksum=9b853406da61ffb59eb488495fe99cbb7fb3dd29a31307fcfa9cf070543710ee
+long_desc="
+ BusyBox combines tiny versions of many common UNIX utilities into a single
+ small executable. It provides replacements for most of the utilities you
+ usually find in GNU fileutils, shellutils, etc. The utilities in BusyBox
+ generally have fewer options than their full-featured GNU cousins; however,
+ the options that are included provide the expected functionality and behave
+ very much like their GNU counterparts. BusyBox provides a fairly complete
+ environment for any small or embedded system."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_build() {
 	for t in "${_variants[@]}"; do

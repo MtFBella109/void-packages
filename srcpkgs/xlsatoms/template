@@ -21,7 +21,13 @@ post_install() {
 pkgname=xlsatoms
 version=1.0.2
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+makedepends="pkg-config libxcb-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="List interned atoms defined on the X server"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=d66cd7682e5ea2a52e8da8a75ea6154f40a3a69938c6c2cf5d5c1e012f5c121b
@@ -30,8 +36,11 @@ long_desc="
  (the lowest atom value defined by the protocol) are listed until unknown
  atom is found."
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libXmu
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

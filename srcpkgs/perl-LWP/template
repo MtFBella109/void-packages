@@ -3,6 +3,7 @@ pkgname=perl-LWP
 version=6.80
 revision=1
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="
  perl perl-URI perl-LWP-MediaTypes perl-Encode-Locale perl-HTTP-Message
  perl-File-Listing perl-HTTP-Negotiate perl-HTTP-Daemon perl-Net-HTTP
@@ -17,3 +18,25 @@ license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/libwww-perl"
 distfiles="${CPAN_SITE}/LWP/libwww-perl-${version}.tar.gz"
 checksum=5ba3fc5a00836e61cb428bcd91bf69d8d74eaee6d78e44c3a414f78076af0a98
+=======
+fulldepends="perl-URI perl-LWP-MediaTypes perl-Encode-Locale perl-HTTP-Message perl-File-Listing perl-HTTP-Negotiate perl-HTTP-Daemon perl-Net-HTTP perl-HTTP-Cookies perl-WWW-RobotRules perl"
+short_desc="LWP - The World-Wide Web library for Perl (libwww-perl)"
+maintainer="davehome <davehome@redthumb.info.tm>"
+homepage="http://search.cpan.org/~gaas/libwww-perl-6.02/lib/LWP.pm"
+license="GPL-2"
+checksum=b5193e9e2eb2fa6ff8b7d4d22ec4e9010706f65b6042e86cc537d7f2f362c232
+long_desc="
+ The libwww-perl collection is a set of Perl modules which provides a simple
+ and consistent application programming interface (API) to the World-Wide Web.
+ The main focus of the library is to provide classes and functions that allow
+ you to write WWW clients. The library also contain modules that are of more
+ general use and even classes that help you implement simple HTTP servers.
+ 
+ Most modules in this library provide an object oriented API. The user agent,
+ requests sent and responses received from the WWW server are all represented
+ by objects. This makes a simple and powerful interface to these services. The
+ interface is easy to extend and customize for your own needs."
+
+noarch=yes
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

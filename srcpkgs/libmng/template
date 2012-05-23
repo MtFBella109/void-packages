@@ -32,7 +32,12 @@ pkgname=libmng
 version=1.0.10
 revision=1
 distfiles="http://www.libmng.com/download/libmng-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="automake jpeg-devel zlib-devel lcms-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Multiple-image Network Graphics (MNG) reference library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=7b1477816c54b4d8ee0690c583982637910a1801ece0b0831e03fd07882e8118
@@ -43,12 +48,16 @@ long_desc="
  Independent JPEG Group (IJG) and/or lcms (little CMS), a color-management
  library by Marti Maria Saguar."
 
+<<<<<<< HEAD
 subpackages="devel"
 Add_dependency build automake
 Add_dependency full glibc
 Add_dependency full jpeg
 Add_dependency full zlib
 Add_dependency full lcms
+=======
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure()
 {

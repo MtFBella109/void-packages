@@ -34,7 +34,12 @@ libXinerama-devel_package() {
 pkgname=libXinerama
 version=1.1
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config xineramaproto libX11-devel libXext-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X PanoramiX extension library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=e0d39e74c2e131b44cc98dd4910165c9b8d937df93be58e6afb7c2a56772bf34
@@ -42,6 +47,7 @@ long_desc="
  libXinerama provides X PanoramiX extension library."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build xproto
 Add_dependency build xextproto
@@ -50,3 +56,5 @@ Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libXext
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

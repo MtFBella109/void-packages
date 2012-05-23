@@ -178,10 +178,16 @@ git-netrc_package() {
 =======
 # Template build file for 'git".
 pkgname=git
+<<<<<<< HEAD
 version=1.6.5.2
 distfiles="http://www.kernel.org/pub/software/scm/git/git-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--with-shell=/bin/sh --with-curl --with-expat --without-tcltk"
+=======
+version=1.7.10.2
+distfiles="http://git-core.googlecode.com/files/git-$version.tar.gz"
+makedepends="asciidoc xmlto perl openssl-devel libcurl-devel expat-devel python-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GIT Tree History Storage Tool"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a7050b45a4c5a2b40db83dc67dc3ff4b422ef1864df72316b3221ead2eefb5c1
@@ -196,6 +202,7 @@ long_desc="
  GIT working directory is a full-fledged repository with full revision tracking
  capabilities, not dependent on network access to a central server."
 
+<<<<<<< HEAD
 subpackages="$pkgname-perl"
 Add_dependency full	glibc
 Add_dependency full	zlib
@@ -205,3 +212,22 @@ Add_dependency build	perl
 Add_dependency build	curl
 Add_dependency run	curl-libs
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+subpackages="git-docs git-perl git-python"
+
+
+do_configure() {
+	./configure ${CONFIGURE_SHARED_ARGS} --with-curl --with-expat \
+		--without-tcltk
+}
+
+do_build() {
+	make ${makejobs} && make ${makejobs} -C Documentation man
+}
+
+do_install() {
+	make DESTDIR=${DESTDIR} install install-doc
+	vinstall contrib/completion/git-completion.bash 644 \
+		etc/bash_completion.d git
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

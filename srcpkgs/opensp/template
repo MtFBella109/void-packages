@@ -4,12 +4,20 @@ version=1.5.2
 revision=9
 build_style=gnu-configure
 configure_args="--enable-http --enable-default-catalog=/usr/share/sgml/catalog"
+<<<<<<< HEAD
 hostmakedepends="automake gettext-devel xmlto libtool"
 makedepends="docbook-xsl xmlcatmgr"
 depends="xmlcatmgr"
 short_desc="SGML parser, successor to sp"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="X11"
+=======
+revision=2
+makedepends="xmlto"
+fulldepends="xmlcatmgr"
+short_desc="SGML parser, successor to "sp""
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 homepage="http://openjade.sourceforge.net/"
 distfiles="${SOURCEFORGE_SITE}/openjade/OpenSP-$version.tar.gz"
 checksum=57f4898498a368918b0d49c826aa434bb5b703d2c3b169beb348016ab25617ce
@@ -17,6 +25,7 @@ sgml_entries="CATALOG /usr/share/OpenSP/catalog --"
 
 keep_libtool_archives=yes
 
+<<<<<<< HEAD
 pre_configure() {
 	autoreconf -fi
 }
@@ -33,4 +42,10 @@ opensp-devel_package() {
 		vmove "usr/lib/*.a"
 		vmove "usr/lib/*.so"
 	}
+=======
+
+post_install() {
+	# Some programs expect 'nsgmls'... make it a symlink.
+	cd ${DESTDIR}/usr/bin && ln -s onsgmls nsgmls
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

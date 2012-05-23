@@ -1,0 +1,14 @@
+# Template file for 'systemd-analyze'.
+#
+depends="python dbus-python systemd"
+short_desc="${sourcepkg} - systemd analyze"
+long_desc="${long_desc}
+
+ This package contains systemd-analyze, a python application to analyze
+ systemd."
+
+
+do_install()
+{
+	vmove usr/bin/systemd-analyze usr/bin
+}

@@ -4,16 +4,25 @@ version=1.12.1
 revision=1
 build_style=gnu-configure
 make_install_args="docsdir=/usr/share/doc/scrot"
+<<<<<<< HEAD
 hostmakedepends="automake autoconf-archive pkg-config"
 makedepends="libXcomposite-devel libXcursor-devel imlib2-devel libXinerama-devel
  libmd-devel"
 short_desc="Simple command-line screenshot utility for X"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
+=======
+revision=1
+makedepends="libX11-devel giblib-devel imlib2-devel glibc-devel"
+short_desc="A simple command-line screenshot utility for X"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://scrot.sourcearchive.com/"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 license="MIT"
 homepage="https://github.com/resurrecting-open-source-projects/scrot"
 distfiles="https://github.com/resurrecting-open-source-projects/scrot/archive/${version}.tar.gz"
 checksum=d20bbf554892ae60be10f67b84b86b8677342b693177166994eb644b78f18f66
 
+<<<<<<< HEAD
 if [ "$XBPS_TARGET_LIBC" = musl ]; then
 	makedepends+=" musl-legacy-compat"
 else
@@ -29,3 +38,5 @@ post_install() {
 	vcompletion etc/zsh-completion/_scrot zsh
 	vlicense COPYING
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

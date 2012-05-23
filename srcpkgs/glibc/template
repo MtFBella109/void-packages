@@ -222,6 +222,7 @@ nscd_package() {
 version=2.11
 revision=1
 distfiles="http://ftp.gnu.org/gnu/glibc/glibc-${version}.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
 configure_script="../configure"
 configure_args="--with-tls -disable-profile --with-__thread
@@ -230,6 +231,10 @@ configure_args="--with-tls -disable-profile --with-__thread
  --libdir=/usr/lib --enable-stackguard-randomization
  --with-headers=$XBPS_MASTERDIR/usr/include"
 make_install_target="install_root=$XBPS_DESTDIR/$pkgname-$version install"
+=======
+depends="base-files libgcc glibc-locales"
+makedepends="bison perl"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The GNU C library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=9ef10e498fac4acc458029898fd8fa76c3cedee1f63d23fedf0c579c505ed62c
@@ -245,6 +250,7 @@ base_chroot=yes
 conf_files="/etc/rpc /etc/ld.so.conf /etc/nsswitch.conf"
 subpackages="glibc-devel glibc-locales"
 
+<<<<<<< HEAD
 Add_dependency build	gcc
 Add_dependency build	kernel-libc-headers
 Add_dependency run	xbps-base-files
@@ -261,6 +267,21 @@ pre_configure()
 	if [ "$xbps_machine" != "x86_64" ]; then
 		echo "CFLAGS+=-march=${xbps_machine%%-*} -mtune=generic" \
 			>> $wrksrc/configparms
+=======
+
+
+do_configure() {
+	local cflags
+
+	mkdir build && cd build
+	echo "slibdir=/lib" > configparms
+
+	# Build with -mno-tls-direct-seg-refs to avoid performance problems
+	# with Xen on x86 32bit.
+	if [ "${XBPS_MACHINE}" = "i686" ]; then
+		cflags="-mno-tls-direct-seg-refs -O2 -march=${XBPS_MACHINE%%-*}"
+		echo "CFLAGS=$cflags" >> configparms
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 	fi
 }
 

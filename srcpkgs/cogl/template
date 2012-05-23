@@ -3,6 +3,7 @@ pkgname=cogl
 version=1.22.8
 revision=3
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper="gir"
 configure_args="--enable-cairo=yes --enable-cogl-pango=yes
  --enable-gdk-pixbuf=yes --enable-kms-egl-platform
@@ -12,6 +13,10 @@ hostmakedepends="automake libtool gettext gettext-devel pkg-config intltool
  glib-devel gobject-introspection gtk-doc"
 makedepends="libXcomposite-devel libXrandr-devel MesaLib-devel pango-devel
  gdk-pixbuf-devel wayland-devel libXdamage-devel"
+=======
+configure_args="--enable-introspection"
+makedepends="pkg-config intltool gobject-introspection libXcomposite-devel libXdamage-devel pango-devel gdk-pixbuf-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library for using 3D graphics hardware for rendering"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -31,6 +36,7 @@ pre_build() {
 	export GIR_EXTRA_LIBS_PATH="${wrksrc}/cogl/.libs"
 }
 
+<<<<<<< HEAD
 # Needs a GL environment
 do_check() {
 	:
@@ -48,3 +54,5 @@ cogl-devel_package() {
 		fi
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

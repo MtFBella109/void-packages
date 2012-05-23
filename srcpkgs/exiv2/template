@@ -1,11 +1,20 @@
 # Template file for 'exiv2'
 pkgname=exiv2
+<<<<<<< HEAD
 version=0.28.5
 revision=1
 build_style=cmake
 configure_args="-DEXIV2_BUILD_SAMPLES=OFF -DEXIV2_ENABLE_BMFF=ON"
 makedepends="zlib-devel brotli-devel expat-devel inih-devel"
 checkdepends="gtest-devel python3"
+=======
+version=0.22
+homepage="http://www.exiv2.org"
+distfiles="${homepage}/exiv2-$version.tar.gz"
+build_style=gnu-configure
+revision=2
+makedepends="zlib-devel expat-devel libstdc++-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Image metadata manipulation"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -17,6 +26,7 @@ if [ -n "$XBPS_CHECK_PKGS" ]; then
 	configure_args+=" -DEXIV2_BUILD_UNIT_TESTS=ON"
 fi
 
+<<<<<<< HEAD
 if [ -n "$XBPS_CCACHE" ]; then
 	configure_args+=" -DBUILD_WITH_CCACHE=ON"
 fi
@@ -36,3 +46,5 @@ exiv2-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

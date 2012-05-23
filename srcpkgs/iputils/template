@@ -1,6 +1,7 @@
 # Template file for 'iputils'
 pkgname=iputils
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=20250605
 revision=1
 build_style=meson
@@ -34,11 +35,43 @@ wrksrc="$pkgname-$distver"
 distfiles="http://www.linuxgrill.com/anonymous/iproute2/$pkgname-$distver.tar.bz2"
 build_style=gnu_makefile
 short_desc="IP Configuration Utilities (and Ping)"
+=======
+version=20101006
+revision=3
+patch_args="-Np1"
+wrksrc="${pkgname}-s${version}"
+homepage="http://www.skbuff.net/iputils"
+distfiles="http://www.skbuff.net/iputils/${pkgname}-s${version}.tar.bz2"
+makedepends="openssl-devel libcap-devel libidn-devel"
+fulldepends="libcap-progs"
+short_desc="IP Configuration Utilities (and ping)"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=dbbd87554d66e438245487ac31aa4a542a1c6c1ec8273cfacbbfeda09eb44a93
 long_desc="
  The iputils package is set of small useful utilities for Linux networking.
  It was originally maintained by Alexey Kuznetsov."
 
+<<<<<<< HEAD
 Add_dependency run glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+do_build() {
+	make ${makejobs} \
+		arping clockdiff ping ping6 rdisc tracepath tracepath6
+}
+
+do_install() {
+	for f in clockdiff arping ping ping6 rdisc tracepath tracepath6; do
+		vinstall ${f} 755 sbin
+	done
+	for f in clockdiff arping ping rdisc tracepath; do
+		vinstall doc/${f}.8 644 usr/share/man/man8
+	done
+	cd ${DESTDIR}/usr/share/man/man8
+	ln -s ping.8 ping6.8
+	ln -s tracepath.8 tracepath6.8
+
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

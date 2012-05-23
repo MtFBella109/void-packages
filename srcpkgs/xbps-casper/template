@@ -1,7 +1,14 @@
 # Template file for 'xbps-casper'
 pkgname=xbps-casper
+<<<<<<< HEAD
 version=0.3
 build_style=custom-install
+=======
+_localver=0.25	# XBPS package version
+_distver=1.236	# This should match the upstream (Ubuntu) version
+version=${_localver}.${_distver}
+fulldepends="udev>=174 initramfs-tools"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Run a live preinstalled system from read-only media"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=b31983b27630b3ef99f68bd8382851a7963542c944b625bdbfd2f2ff301a02d3
@@ -14,7 +21,10 @@ noarch=yes
 keep_empty_dirs=yes
 conf_files="/etc/casper.conf"
 
+<<<<<<< HEAD
 Add_dependency full initramfs-tools
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

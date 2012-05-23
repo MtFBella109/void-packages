@@ -1,11 +1,15 @@
 # Template file for 'startup-notification-devel'.
 #
+depends="pkg-config libSM-devel libICE-devel libX11-devel xcb-util-devel libxcb-devel startup-notification"
 short_desc="${sourcepkg} development files"
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD
 Add_dependency run startup-notification
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

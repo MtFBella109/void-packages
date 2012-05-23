@@ -4,6 +4,7 @@ version=2022.10.3
 revision=1
 build_style=gnu-configure
 configure_args="--exec-prefix=/usr --disable-static --with-fuse=external
+<<<<<<< HEAD
  --enable-posix-acls --enable-xattr-mappings --sbin=/usr/bin
  $(vopt_if extras --enable-extras)
  $(vopt_if crypto --enable-crypto)
@@ -11,6 +12,10 @@ configure_args="--exec-prefix=/usr --disable-static --with-fuse=external
 hostmakedepends="pkg-config"
 makedepends="libuuid-devel fuse-devel
  $(vopt_if crypto 'libgcrypt-devel gnutls-devel')"
+=======
+--enable-posix-acls --enable-xattr-mappings"
+makedepends="pkg-config libuuid-devel fuse-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Stable Read/Write NTFS Driver in userspace"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.0-or-later"
@@ -19,11 +24,19 @@ changelog="https://raw.githubusercontent.com/wiki/tuxera/ntfs-3g/NTFS-3G-Release
 distfiles="https://tuxera.com/opensource/ntfs-3g_ntfsprogs-${version}.tgz"
 checksum=f20e36ee68074b845e3629e6bced4706ad053804cbaf062fbae60738f854170c
 
+<<<<<<< HEAD
 build_options="crypto extras quarantined"
 desc_option_crypto="Enable crypto related code and utilities"
 desc_option_extras="Enable extra ntfsprogs utilities"
 desc_option_quarantined="Enable quarantined ntfsprogs utilities"
 build_options_default="crypto extras"
+=======
+provides="ntfsprogs-${version}"
+replaces="ntfsprogs>=0"
+subpackages="$pkgname-devel"
+build_requires=16
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	mv ${DESTDIR}/sbin/* ${DESTDIR}/usr/bin

@@ -1,5 +1,6 @@
 # Template file for 'ccache'
 pkgname=ccache
+<<<<<<< HEAD
 version=4.10.2
 revision=1
 build_style=cmake
@@ -29,6 +30,23 @@ post_extract() {
 pre_check() {
 	export CC=/usr/bin/gcc
 }
+=======
+version=3.1.7
+distfiles="http://samba.org/ftp/$pkgname/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+makedepends="zlib-devel"
+short_desc="compiler cache"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://cache.samba.org"
+license="GPL-2"
+checksum=4931aab14fb1f824b7d349a4366861a82ac19090097e9960f15a0ac8762b4941
+long_desc="
+ ccache is a compiler cache. It speeds up recompilation by caching previous
+ compilations and detecting when the same compilation is being done again.
+ Supported languages are C, C++, Objective-C and Objective-C++."
+
+bootstrap=yes
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vmkdir usr/lib/ccache/bin

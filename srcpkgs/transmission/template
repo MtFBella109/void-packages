@@ -1,6 +1,7 @@
 # Template file for 'transmission'
 pkgname=transmission
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=4.0.6
 revision=1
 build_style=cmake
@@ -71,6 +72,14 @@ distfiles="http://mirrors.m0k.org/$pkgname/files/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--enable-gtk --enable-libnotify --enable-nls --enable-cli
  --enable-daemon"
+=======
+version=2.52
+distfiles="http://download.transmissionbt.com/files/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+configure_args="--enable-nls --enable-cli --enable-daemon --enable-utp"
+depends="desktop-file-utils hicolor-icon-theme"
+makedepends="pkg-config intltool zlib-devel openssl-devel dbus-glib-devel libcurl-devel libevent-devel gtk+3-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="A fast, easy, and free BitTorrent client"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a01bcf7718876d96eeb423a58247b89158bf0bc5d2bed414009e5fb83ff76c9e
@@ -82,6 +91,7 @@ long_desc="
 gtk_iconcache_dirs="/usr/share/icons/hicolor"
 triggers="update-desktopdb gtk-icon-cache"
 
+<<<<<<< HEAD
 Add_dependency build intltool
 Add_dependency build curl
 Add_dependency full glibc
@@ -93,3 +103,6 @@ Add_dependency full libnotify
 Add_dependency full libevent
 Add_dependency full desktop-file-utils
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

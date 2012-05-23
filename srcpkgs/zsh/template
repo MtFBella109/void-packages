@@ -3,6 +3,7 @@ pkgname=zsh
 version=5.9
 revision=5
 build_style=gnu-configure
+<<<<<<< HEAD
 make_build_target="all info"
 make_install_args="install.info"
 configure_args="--enable-etcdir=/etc/zsh --enable-zshenv=/etc/zsh/zshenv
@@ -17,6 +18,20 @@ configure_args="--enable-etcdir=/etc/zsh --enable-zshenv=/etc/zsh/zshenv
  zsh_cv_sys_dynamic_execsyms=yes"
 hostmakedepends="automake texinfo"
 makedepends="gdbm-devel pcre2-devel libcap-devel ncurses-devel"
+=======
+configure_args="--enable-etcdir=/etc/zsh
+--enable-zshenv=/etc/zsh/zshenv
+--enable-zlogin=/etc/zsh/zlogin
+--enable-zlogout=/etc/zsh/zlogout
+--enable-zprofile=/etc/profile
+--enable-zshrc=/etc/zsh/zshrc
+--enable-maildir-support --enable-function-subdirs
+--with-term-lib=ncursesw
+--enable-fndir=/usr/share/zsh/functions
+--enable-scriptdir=/usr/share/zsh/scripts
+--enable-pcre --enable-multibyte --enable-cap --with-tcsetpgrp"
+makedepends="gdbm-devel pcre-devel libcap-devel ncurses-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Z SHell"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="MIT, GPL-3.0-or-later"
@@ -31,6 +46,7 @@ if [ "$CROSS_BUILD" ]; then
 	configure_args+=" PCRE_CONFIG=$XBPS_CROSS_BASE/usr/bin/pcre2-config"
 fi
 
+<<<<<<< HEAD
 post_patch() {
 	# Set correct keymap path
 	sed -i 's#/usr/share/keymaps#/usr/share/kbd/keymaps#g' \
@@ -64,6 +80,8 @@ post_patch() {
 pre_configure() {
 	autoreconf -fi
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vlicense LICENCE

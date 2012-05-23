@@ -3,6 +3,7 @@ pkgname=tor
 version=0.4.8.17
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-gpl"
 hostmakedepends="pkg-config"
 makedepends="libcap-devel libevent-devel libscrypt-devel libseccomp-devel liblzma-devel zlib-devel libzstd-devel"
@@ -15,6 +16,21 @@ homepage="https://www.torproject.org/"
 changelog="https://gitlab.torproject.org/tpo/core/tor/-/raw/main/ChangeLog"
 distfiles="https://dist.torproject.org/tor-${version}.tar.gz"
 checksum=79b4725e1d4b887b9e68fd09b0d2243777d5ce3cd471e538583bcf6f9d8cdb56
+=======
+makedepends="zlib-devel openssl-devel libevent-devel"
+fulldepends="ca-certificates tsocks"
+short_desc="Anonymity Online"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="BSD"
+checksum=f141a41fffd31494a0f96ebbb6b999eab33ce62d5c31f81222a0acd034adbf3a
+long_desc="
+ Tor is a network of virtual tunnels that allows people and groups to improve
+ their privacy and security on the Internet. It also enables software developers
+ to create new communication tools with built-in privacy features. Tor provides
+ the foundation for a range of applications that allow organizations and
+ individuals to share information over public networks without compromising
+ their privacy."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 case "${XBPS_TARGET_MACHINE}" in
 	# Tests just don't work here
@@ -26,6 +42,7 @@ system_accounts="tor"
 tor_homedir="/var/lib/tor"
 make_dirs="/var/lib/tor 0700 tor tor"
 
+<<<<<<< HEAD
 pre_configure() {
 	# ensure convenient config
 	printf '%s\n' \
@@ -36,6 +53,8 @@ pre_configure() {
 		-e 's:#Log notice syslog:Log notice syslog:' \
 		-e "s:#DataDirectory :DataDirectory :"
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	mv ${DESTDIR}/etc/tor/torrc.sample ${DESTDIR}/etc/tor/torrc

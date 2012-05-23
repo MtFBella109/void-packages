@@ -3,6 +3,7 @@ pkgname=xfce4-weather-plugin
 version=0.11.3
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config gettext xfce4-dev-tools automake libtool"
 makedepends="libxfce4ui-devel xfce4-panel-devel libxml2-devel libsoup3-devel
  json-c-devel upower-devel"
@@ -18,3 +19,17 @@ lib32disabled=yes
 pre_configure() {
 	autoreconf -f
 }
+=======
+makedepends="pkg-config intltool xfce4-panel-devel libxfcegui4-devel libxfce4util-devel gtk+-devel atk-devel glib-devel pango-devel cairo-devel freetype-devel fontconfig-devel libxml2-devel glibc-devel"
+fulldepends="hicolor-icon-theme"
+short_desc="XFCE panel plagin to show temperature and weather"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=5b6cd44c7c04f32eaeeb725d4af75691f73575e02907e8e3b69bced8030151e6
+long_desc="
+ This panel plugin shows the current temperature and weather condition,
+ using weather data provided by xoap.weather.com."
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

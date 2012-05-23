@@ -2,6 +2,7 @@
 pkgname=qsynth
 version=1.0.3
 revision=1
+<<<<<<< HEAD
 build_style=cmake
 hostmakedepends="pkg-config qt6-tools qt6-base"
 makedepends="qt6-base-devel qt6-svg-devel fluidsynth-devel"
@@ -12,3 +13,24 @@ license="GPL-2.0-or-later"
 homepage="http://qsynth.sourceforge.io"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
 checksum=cf897e2aede811057736e9e4a20cb1cda48a84526e621231944c49b0009cba66
+=======
+depends="jack"
+makedepends="pkg-config qt-devel jack-devel fluidsynth-devel"
+fulldepends="desktop-file-utils hicolor-icon-theme"
+short_desc="Qt GUI Interface for FluidSynth"
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="GPL-2"
+checksum=b5968da98661bac5c9fcc93d3a15851594dfbf3bb7d01ace15fbe8779d53fb3c
+long_desc="
+ Qsynth is a fluidsynth GUI front-end application written in C++ around the
+ Qt4 toolkit using Qt Designer. Eventually it may evolve into a softsynth
+ management application allowing the user to control and manage a variety of
+ command line softsynth but for the moment it wraps the excellent FluidSynth.
+ FluidSynth is a command line software synthesiser based on the Soundfont
+ specification."
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

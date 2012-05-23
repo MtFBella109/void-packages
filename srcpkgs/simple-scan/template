@@ -2,6 +2,7 @@
 pkgname=simple-scan
 version=46.0
 revision=1
+<<<<<<< HEAD
 build_style=meson
 hostmakedepends="gettext glib-devel itstool pkg-config vala"
 makedepends="libadwaita-devel libwebp-devel sane-devel"
@@ -13,3 +14,25 @@ homepage="https://gitlab.gnome.org/GNOME/simple-scan"
 changelog="https://gitlab.gnome.org/GNOME/simple-scan/-/raw/master/NEWS"
 distfiles="${GNOME_SITE}/simple-scan/${version%.*}/simple-scan-${version}.tar.xz"
 checksum=c16e6590142fe563be5143122b3bbb53f6b00a7da9d952f61c47fa26f7b4f0a9
+=======
+homepage="http://launchpad.net/simple-scan"
+distfiles="https://launchpad.net/$pkgname/3.4/$version/+download/$pkgname-$version.tar.gz"
+build_style=gnu-configure
+configure_args="--disable-schemas-compile"
+depends="hicolor-icon-theme sane"
+makedepends="pkg-config itstool intltool colord-devel gtk+3-devel dconf-devel sane-devel libgudev-devel"
+short_desc="Simple scanning utility"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3"
+checksum=e1ed8f90f95300c7b75249d0e6abbc06185db2afd4d44be4b8d98822d25d4ece
+long_desc="
+ Simple Scan is an easy-to-use application, designed to let users connect their
+ scanner and quickly have the image/document in an appropriate format.
+ Simple Scan is basically a frontend for SANE - which is the same backend as
+ XSANE uses. This means that all existing scanners will work and the interface
+ is well tested."
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

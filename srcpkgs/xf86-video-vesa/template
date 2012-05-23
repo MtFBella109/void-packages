@@ -25,9 +25,20 @@ post_install() {
 =======
 # Template build file for 'xf86-video-vesa'.
 pkgname=xf86-video-vesa
+<<<<<<< HEAD
 version=2.2.1
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+version=2.3.99
+_gitrev="4ba7306fd0c9533750d389829e2cbf0522e149b3"
+wrksrc="${pkgname}-${_gitrev}"
+distfiles="http://xbps.nopcode.org/distfiles/${pkgname}-${_gitrev}.tar.gz"
+#distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+depends="xorg-server"
+makedepends="automake xorg-util-macros xorg-server-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg VESA video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a3657971232e9c7db3e7517a8aedd86d3ef4d159f7099ec974cdd03aafa41080
@@ -35,6 +46,13 @@ long_desc="
  This is the video driver for Generic VESA video cards for the 
  Xorg X11 server."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+pre_configure() {
+	./autogen.sh
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

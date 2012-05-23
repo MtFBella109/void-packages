@@ -3,12 +3,17 @@ pkgname=telepathy-glib
 version=0.24.2
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper="gir"
 configure_args="--disable-static $(vopt_enable gir introspection)
  $(vopt_enable vala vala-bindings)"
 hostmakedepends="pkg-config intltool libxslt python3 glib-devel
  $(vopt_if vala vala-devel)"
 makedepends="dbus-glib-devel $(vopt_if vala vala)"
+=======
+configure_args="--enable-vala-bindings --disable-static"
+makedepends="pkg-config intltool vala-devel libxslt gobject-introspection dbus-glib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library for GLib-based Telepathy components"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -20,6 +25,7 @@ checksum=b0a374d771cdd081125f38c3abd079657642301c71a543d555e2bf21919273f0
 build_options="gir vala"
 build_options_default="gir vala"
 
+<<<<<<< HEAD
 telepathy-glib-devel_package() {
 	depends="dbus-glib-devel ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -36,3 +42,5 @@ telepathy-glib-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

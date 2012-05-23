@@ -1,5 +1,6 @@
 # Template file for 'gst-plugins-base'.
 pkgname=gst-plugins-base
+<<<<<<< HEAD
 version=0.10.23
 distfiles="http://gstreamer.freedesktop.org/src/$pkgname/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
@@ -7,6 +8,19 @@ configure_args="--enable-experimental --disable-gnome_vfs"
 short_desc="Core GStreamer libraries and elements"
 maintainer="pancake <pancake@nopcode.org>"
 checksum=1c11d98eb9a1b1bc54becf465e74c2aa4019bb57a31dd70686269af6a9b9e93b
+=======
+version=0.10.36
+distfiles="http://gstreamer.freedesktop.org/src/$pkgname/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--enable-experimental --disable-gnome_vfs
+--with-gudev --disable-static"
+makedepends="pkg-config gobject-introspection libgudev-devel gstreamer-devel glib-devel libxml2-devel pango-devel cairo-devel freetype-devel fontconfig-devel liboil-devel alsa-lib-devel libXv-devel libXext-devel libvisual-devel cdparanoia-devel libtheora-devel libvorbis-devel orc-devel"
+short_desc="GStreamer Base Plug-ins"
+maintainer="Juan RP <xtraeme@gmail.org>"
+homepage="http://gstreamer.freedesktop.org/"
+license="GPL-2, LGPL-2.1"
+checksum=1fe45c3894903001d4d008b0713dab089f53726dcb5842d5b40c2595a984e64a
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 long_desc="
  GStreamer is a streaming media framework, based on graphs of filters which
  operate on media data. Applications using this library can do anything
@@ -18,6 +32,7 @@ long_desc="
  This package contains a set of well-maintained base plug-ins."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full fontconfig
@@ -34,3 +49,6 @@ Add_dependency full libvorbis
 Add_dependency full cdparanoia
 Add_dependency full alsa-lib
 Add_dependency full libXv
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

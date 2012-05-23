@@ -1,5 +1,6 @@
 # Template file for 'rygel'
 pkgname=rygel
+<<<<<<< HEAD
 version=0.44.2
 revision=2
 build_style=meson
@@ -10,6 +11,14 @@ makedepends="sqlite-devel gtk+3-devel libsoup3-devel libgee-devel
  gupnp-av-devel gupnp-dlna-devel tinysparql-devel
  libmediaart-devel gssdp-devel gst1-editing-services-devel python3-devel"
 depends="hicolor-icon-theme desktop-file-utils"
+=======
+version=0.14.1
+distfiles="${GNOME_SITE}/$pkgname/0.14/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--enable-gst-launch-plugin"
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config intltool sqlite-devel vala-devel gtk+3-devel libsoup-devel libgee-devel gssdp-devel>=0.12.0 gupnp-av-devel gupnp-dlna-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNOME home media solution"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -20,6 +29,7 @@ checksum=796eee494cdf60dc2bf82b00b8f99a14ba1c7cf40d2944817ff0c1aa6073d5a0
 
 conf_files="/etc/rygel.conf"
 
+<<<<<<< HEAD
 rygel-devel_package() {
 	depends="libgee-devel gupnp-devel gupnp-av-devel libuuid-devel
 	 libglib-devel librygel>=${version}_${revision}"
@@ -39,3 +49,6 @@ librygel_package() {
 		vmove "usr/lib/*.so.*"
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

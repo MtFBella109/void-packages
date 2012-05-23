@@ -1,9 +1,18 @@
 # Template file for 'xbps'
 pkgname=xbps-devel
+<<<<<<< HEAD
 version="$(date +%Y%m%d)"
 build_style=gnu_makefile
 make_build_args="DESTDIR=$XBPS_DESTDIR/$pkgname-$version PREFIX="
 make_install_args="DESTDIR=$XBPS_DESTDIR/$pkgname-$version PREFIX="
+=======
+version="$(date -u +%Y%m%d)"
+build_style=configure
+configure_args="--prefix=/ --exec-prefix=/usr --sbindir=/usr/sbin
+--with-pie --with-tests"
+depends="xbps-triggers"
+makedepends="git which pkg-config zlib-devel proplib-devel openssl-devel libarchive-devel libfetch-devel confuse-devel atf-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The XBPS package system (development branch)"
 maintainer="Juan RP <xtraeme@gmail.com>"
 long_desc="
@@ -15,6 +24,7 @@ replaces="xbps"
 nofetch=yes
 noextract=yes
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full libarchive
 Add_dependency full proplib
@@ -32,4 +42,12 @@ post_install()
 {
 	mkdir -p ${DESTDIR}/usr || return 1
 	mv ${DESTDIR}/share ${DESTDIR}/usr || return 1
+=======
+
+
+do_fetch() {
+	local url="git://github.com/xtraeme/xbps"
+	msg_normal " Fetching source from $url ...\n"
+	git clone ${url} ${pkgname}-${version}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

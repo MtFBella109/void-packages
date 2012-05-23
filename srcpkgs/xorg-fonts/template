@@ -20,6 +20,7 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 =======
 version=7.5
 build_style=meta-template
+fulldepends="encodings>=1.0.4 font-adobe-100dpi>=1.0.3 font-adobe-75dpi>=1.0.3 font-adobe-utopia-100dpi>=1.0.4 font-adobe-utopia-75dpi>=1.0.4 font-adobe-utopia-type1>=1.0.4 font-bh-100dpi>=1.0.3 font-bh-75dpi>=1.0.3 font-bh-lucidatypewriter-100dpi>=1.0.3 font-bh-lucidatypewriter-75dpi>=1.0.3 font-bh-ttf>=1.0.3 font-bh-type1>=1.0.3 font-bitstream-100dpi>=1.0.3 font-bitstream-75dpi>=1.0.3 font-bitstream-type1>=1.0.3 font-cursor-misc>=1.0.3 font-daewoo-misc>=1.0.3 font-dec-misc>=1.0.3 font-ibm-type1>=1.0.3 font-isas-misc>=1.0.3 font-jis-misc>=1.0.3 font-misc-misc>=1.1.2 font-mutt-misc>=1.0.3 dejavu-fonts-ttf"
 short_desc="Modular Xorg Fonts"
 maintainer="Juan RP <xtraeme@gmail.com>"
 long_desc="
@@ -27,6 +28,7 @@ long_desc="
  font packages from the modular Xorg project."
 
 noarch=yes
+<<<<<<< HEAD
 Add_dependency full encodings
 Add_dependency full font-adobe-100dpi			">=1.0.1"
 Add_dependency full font-adobe-75dpi			">=1.0.1"
@@ -52,3 +54,5 @@ Add_dependency full font-misc-misc			">=1.1.0"
 Add_dependency full font-mutt-misc			">=1.0.1"
 Add_dependency full dejavu-fonts-ttf
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

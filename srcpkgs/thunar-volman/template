@@ -17,9 +17,18 @@ checksum=b0dad852959b515b8fbfd1ed552e362340347d26d5246e7f1b973027131eb1da
 =======
 # Template file for 'thunar-volman'.
 pkgname=thunar-volman
+<<<<<<< HEAD
 version=0.3.80
 distfiles="http://goodies.xfce.org/releases/$pkgname/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+version=0.8.0
+homepage="http://xfce.org"
+distfiles="http://archive.xfce.org/src/xfce/thunar-volman/0.8/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config intltool gtk+-devel libgudev-devel libnotify-devel libxfce4util-devel libxfce4ui-devel xfconf-devel exo-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Thunar Volume Manager"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=e400682afb0f5fcca231fe8793b31769f3645a9b5b0604d251e05b17d48217ee
@@ -34,5 +43,9 @@ long_desc="
 gtk_iconcache_dirs="/usr/share/icons/hicolor"
 triggers="gtk-icon-cache"
 
+<<<<<<< HEAD
 Add_dependency full Thunar
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

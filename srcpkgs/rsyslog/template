@@ -4,6 +4,7 @@ pkgname=rsyslog
 version=8.2412.0
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--sbindir=/usr/bin --enable-gnutls --enable-mysql
  --enable-pgsql --enable-imdiag --enable-imfile --enable-mail --enable-imptcp
  --enable-gssapi-krb5 --enable-mmsnmptrapd --enable-impstats --enable-omprog
@@ -104,6 +105,18 @@ version=4.4.2
 distfiles="http://download.rsyslog.com/$pkgname/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 configure_args="--enable-gnutls"
+=======
+configure_args="--enable-gnutls --enable-mysql --enable-pgsql
+--enable-imdiag --enable-imfile --enable-mail --enable-gssapi-krb5
+-with-systemdsystemunitdir=/lib/systemd/system --enable-zlib
+--enable-imptcp --enable-imttcp --enable-mmsnmptrapd
+--enable-impstats --enable-omprog --enable-omstdout
+--enable-pmlastmsg --enable-pmcisconames --enable-pmaixforwardedfrom
+--enable-pmsnare --enable-pmrfc3164sd --enable-omuxsock
+--enable-smcustbindcdr --enable-imtemplate --enable-omtemplate
+LDFLAGS=-Wl,--allow-shlib-undefined"
+makedepends="automake pkg-config zlib-devel gnutls-devel postgresql-libs-devel libmysqlclient-devel mit-krb5-devel libee-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="An Enhanced multi-threaded syslog daemon"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=726b0894f29081c9ea9f2c0c9d86e77a8128b203b4d356c87180fa45a2d28942
@@ -116,10 +129,13 @@ subpackages="$pkgname-gnutls"
 conf_files="/etc/rsyslog.conf"
 openrc_services="rsyslogd default"
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build gnutls
 Add_dependency full glibc
 Add_dependency full zlib
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install()
 {

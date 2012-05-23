@@ -1,6 +1,7 @@
 # Template file for 'yelp-xsl'
 # keep up to date with yelp
 pkgname=yelp-xsl
+<<<<<<< HEAD
 version=42.4
 revision=1
 build_style=meson
@@ -14,3 +15,21 @@ homepage="https://wiki.gnome.org/Apps/Yelp/Xsl"
 changelog="https://gitlab.gnome.org/GNOME/yelp-xsl/-/raw/master/NEWS"
 distfiles="${GNOME_SITE}/yelp-xsl/${version%.*}/yelp-xsl-${version}.tar.xz"
 checksum=fdebb07eb2e66a7fb7a0dce6ad8248ad29a4bbb134ba829128ca104f58abd7d1
+=======
+version=3.4.2
+homepage="http://www.gnome.org"
+distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+makedepends="pkg-config intltool itstool libxslt-devel"
+short_desc="Help browser for GNOME desktop - XSL and misc files"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+checksum=421b622da421f310add15c9d0cf23f3d66c3e0847292f45341e2f6b2db326325
+long_desc="
+ Yelp is the help browser for GNOME2. It lets you navigate through all
+ installed documentation.
+
+ This package contains some XSL and misc files required by Yelp."
+
+noarch=yes
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

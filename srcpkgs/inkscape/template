@@ -1,5 +1,6 @@
 # Template file for 'inkscape'
 pkgname=inkscape
+<<<<<<< HEAD
 version=1.4.2
 revision=3
 build_style=cmake
@@ -25,6 +26,22 @@ checksum=2000530c7917e5260c9e8575a7154ff6926643d2006487d714e304a963f0c782
 python_version=3
 # some tests still fail on musl: https://gitlab.com/inkscape/inkscape/-/issues/2241
 make_check=no
+=======
+version=0.48.3.1
+distfiles="$SOURCEFORGE_SITE/$pkgname/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+configure_args="--enable-lcms"
+makedepends="pkg-config intltool gsl-devel gc-devel gtkmm2-devel libxml2-devel libxslt-devel boost-devel popt-devel lcms-devel libsigc++-devel libmagick-devel"
+fulldepends="desktop-file-utils hicolor-icon-theme"
+short_desc="vector-based drawing program"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://inkscape.org/"
+license="GPL-2"
+checksum=073bf585b6a708747485f2de1f5a1b77c3f45a79e6ee128bf946bae99476db88
+long_desc="
+ Inkscape loads and saves a subset of the SVG (Scalable Vector Graphics)
+ format, a standard maintained by the WWW consortium."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 if [ -n "$XBPS_CHECK_PKGS" ]; then
 	configure_args+=" -DBUILD_TESTING=ON"
@@ -36,6 +53,7 @@ if [ "$XBPS_TARGET_LIBC" != musl ]; then
 	makedepends+=" libbacktrace"
 fi
 
+<<<<<<< HEAD
 post_patch() {
 	if [ "$XBPS_TARGET_LIBC" = musl ]; then
 		# disable errors for missing sentinels in glib variadic functions,
@@ -43,3 +61,6 @@ post_patch() {
 		vsed -e "/-Werror=format/d" -i CMakeScripts/DefineDependsandFlags.cmake
 	fi
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

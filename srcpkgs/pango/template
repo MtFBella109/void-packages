@@ -61,10 +61,17 @@ pango-devel_package() {
 =======
 # Template build file for 'pango'.
 pkgname=pango
+<<<<<<< HEAD
 version=1.26.0
 distfiles="${GNOME_SITE}/pango/1.26/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--localstatedir=/var"
+=======
+version=1.30.0
+distfiles="${GNOME_SITE}/pango/1.30/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+makedepends="pkg-config glib-devel cairo-devel fontconfig-devel freetype-devel libXft-devel libXrender-devel gobject-introspection"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library for layout and rendering of text"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=e1bfaefd2614ff86d531152f31fbf4a61aea723eef19b132733ccd3eb8d9a6c3
@@ -93,6 +100,7 @@ long_desc="
 subpackages="$pkgname-devel"
 triggers="pango-modules"
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full glib
@@ -104,5 +112,7 @@ Add_dependency full libX11
 Add_dependency full libXt
 Add_dependency full libXft
 Add_dependency full libXrender
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 # XXX Add missing dependency libthai.
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

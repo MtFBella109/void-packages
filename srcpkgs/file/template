@@ -5,6 +5,7 @@ version=5.46
 revision=2
 bootstrap=yes
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-static $(vopt_enable libseccomp)"
 makedepends="zlib-devel $(vopt_if libseccomp libseccomp-devel)"
 short_desc="File type identification utility"
@@ -59,6 +60,9 @@ file-devel_package() {
 version=5.03
 distfiles="ftp://ftp.astron.com/pub/file/$pkgname-$version.tar.gz"
 build_style=gnu_configure
+=======
+makedepends="zlib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="File type identification utility"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=1edab47f9ef2ec5c021204f07566b11e5c2b3ae207af98137a021ac6e9bd95bb
@@ -68,7 +72,10 @@ long_desc="
 
 base_chroot=yes
 subpackages="file-devel"
+<<<<<<< HEAD
 
 Add_dependency run glibc
 Add_dependency full zlib
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

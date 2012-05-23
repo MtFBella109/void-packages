@@ -2,6 +2,7 @@
 pkgname=libopenal
 version=1.23.1
 revision=2
+<<<<<<< HEAD
 build_style=cmake
 configure_args="-DALSOFT_EXAMPLES=OFF"
 hostmakedepends="pkg-config"
@@ -14,6 +15,16 @@ homepage="http://openal-soft.org/"
 changelog="https://raw.githubusercontent.com/kcat/openal-soft/master/ChangeLog"
 distfiles="http://openal-soft.org/openal-releases/openal-soft-${version}.tar.bz2"
 checksum=796f4b89134c4e57270b7f0d755f0fa3435b90da437b745160a49bd41c845b21
+=======
+makedepends="pkg-config cmake alsa-lib-devel pulseaudio-devel SDL-devel"
+short_desc="A cross-platform 3D audio library"
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="LGPL-2.1"
+checksum=dc735b8b2ab21f6ec54b4262f150a7e0527ae42aa975a1965b9342df1520443c
+long_desc="
+ OpenAL is a cross-platform 3D audio API appropriate for use with gaming
+ applications and many other types of audio applications.
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 build_options="sndio"
 build_options_default="sndio"
@@ -31,6 +42,7 @@ post_install() {
 	vsconf alsoftrc.sample
 }
 
+<<<<<<< HEAD
 libopenal-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -41,3 +53,6 @@ libopenal-devel_package() {
 		vmove usr/lib/cmake
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

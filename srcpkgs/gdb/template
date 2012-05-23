@@ -4,6 +4,7 @@ pkgname=gdb
 version=16.3
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 pycompile_dirs="/usr/share/gdb/python"
 configure_args="--disable-werror --disable-nls --with-system-readline
  --with-system-gdbinit=/etc/gdb/gdbinit --with-system-zlib
@@ -89,6 +90,11 @@ version=7.0
 distfiles="http://ftp.gnu.org/gnu/$pkgname/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 configure_args="--disable-nls"
+=======
+configure_args="--disable-nls --with-system-readline
+--with-system-gdbinit=/etc/gdb/gdbinit"
+makedepends="ncurses-devel zlib-devel readline-devel python-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The GNU Debugger"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=ccff6cab0e847c486d30b70bdddac4e6646bafcecaa3b63134d6e3d4d5a4b91d
@@ -118,8 +124,13 @@ Add_dependency build gettext
 Add_dependency build ncurses
 Add_dependency run ncurses-libs
 
+<<<<<<< HEAD
 post_install()
 {
+=======
+
+post_install() {
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 	# resolve conflicts with binutils
 	rm -rf ${DESTDIR}/usr/include ${DESTDIR}/usr/lib
 	for f in bfd configure standards; do

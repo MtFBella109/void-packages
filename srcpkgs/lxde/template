@@ -1,6 +1,7 @@
 # Template file for 'lxde'
 pkgname=lxde
 version=0.5.0
+<<<<<<< HEAD
 revision=15
 metapackage=yes
 depends="
@@ -26,3 +27,15 @@ short_desc="The LXDE meta-package for Void Linux"
 homepage="http://lxde.org"
 license="GPL-2"
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+revision=3
+build_style=meta-template
+fulldepends="openbox pcmanfm lxde-icon-theme lxde-common lxappearance lxsession lxterminal lxlauncher lxinput lxrandr lxpanel lxtask gpicview xdg-utils xdg-user-dirs"
+short_desc="LXDE meta-package"
+maintainer="Juan RP <xtraeme@gmail.com>"
+long_desc="
+ This package installs all required packages for the LXDE desktop system."
+
+noarch=yes
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

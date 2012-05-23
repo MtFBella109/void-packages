@@ -2,7 +2,13 @@
 pkgname=xf86-video-glint
 version=1.2.4
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="glibc xorg-server"
+makedepends="xorg-server-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg GLINT/Permedia video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=5f8d6e3b02c261d235bae63d95510b940b6c9a775301146b3c229926ed99d76f
@@ -10,5 +16,8 @@ long_desc="
  This is the video driver for 3Dlabs and Texas Instruments GLINT/Permedia
  based video cards for the Xorg X11 server."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

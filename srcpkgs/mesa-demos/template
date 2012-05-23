@@ -1,5 +1,6 @@
 # Template file for 'mesa-demos'
 pkgname=mesa-demos
+<<<<<<< HEAD
 version=9.0.0
 revision=2
 build_style=meson
@@ -8,6 +9,13 @@ hostmakedepends="pkg-config glslang wayland-devel"
 makedepends="libXext-devel MesaLib-devel glu-devel freetype-devel
  libfreeglut-devel vulkan-loader Vulkan-Headers wayland-devel
  wayland-protocols libxkbcommon-devel libdecor-devel"
+=======
+version=8.0.1
+revision=3
+distfiles="ftp://ftp.freedesktop.org/pub/mesa/demos/$version/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+makedepends="pkg-config libX11-devel libXext-devel MesaLib-devel glew-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Mesa 3D demos and tools"
 maintainer="John <me@johnnynator.dev>"
 license="MIT"
@@ -15,6 +23,7 @@ homepage="https://gitlab.freedesktop.org/mesa/demos"
 distfiles="https://archive.mesa3d.org/demos/mesa-demos-${version}.tar.xz"
 checksum=3046a3d26a7b051af7ebdd257a5f23bfeb160cad6ed952329cdff1e9f1ed496b
 
+<<<<<<< HEAD
 post_install() {
 	sed -n '2,20p' src/vulkan/vkgears.c > LICENSE.MIT
 	mv ${DESTDIR}/usr/bin/identity ${DESTDIR}/usr/bin/mesa-identity
@@ -27,3 +36,5 @@ glxinfo_package() {
 		vmove usr/bin/glxinfo
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

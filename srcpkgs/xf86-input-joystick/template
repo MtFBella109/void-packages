@@ -33,7 +33,13 @@ xf86-input-joystick-devel_package() {
 pkgname=xf86-input-joystick
 version=1.4.99.2
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="glibc xorg-server"
+makedepends="xorg-server-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Joystick Input driver for Xorg"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=7224e93a8560362d454a104e8bb481213dcb559b41516c7b883c0881e25252bb
@@ -41,6 +47,9 @@ long_desc="
  This is the Joystick Input driver for the Xorg X11 server."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

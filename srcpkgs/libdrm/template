@@ -46,9 +46,15 @@ libdrm-test-progs_package() {
 pkgname=libdrm
 version=2.4.15
 distfiles="http://dri.freedesktop.org/libdrm/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
 configure_args="--enable-udev --enable-nouveau-experimental-api
  --enable-radeon-experimental-api"
+=======
+build_style=gnu-configure
+configure_args="--enable-udev --enable-vmwgfx-experimental-api"
+makedepends="automake pkg-config glibc-devel libudev-devel libpciaccess-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Userspace interface to kernel DRM services"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=bcff899a93adce47fabb787380bf636ed6554a4db2b6452bde5cfab15b8ba7de
@@ -58,6 +64,19 @@ long_desc="
  graphics hardware."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full udev
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+
+pre_configure() {
+	sed -i "/.*PTHREADSTUBS.*/d" configure.ac
+	sed -i -e "s/@PTHREADSTUBS_LIBS@//g" \
+		-e "s/\$(PTHREADSTUBS_CFLAGS)//g" \
+		nouveau/Makefile.am radeon/Makefile.am intel/Makefile.am
+	autoreconf -fi
+	sed -i 's/tests//g' Makefile.in
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

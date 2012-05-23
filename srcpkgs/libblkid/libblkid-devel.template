@@ -1,11 +1,16 @@
 # Template file for 'libblkid-devel'.
 #
+depends="libmp4v2-devel faac"
 short_desc="${short_desc} (development files)"
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD:srcpkgs/libblkid/libblkid-devel.template
 Add_dependency run libblkid
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!):srcpkgs/faac/faac-devel.template
 
 do_install()
 {

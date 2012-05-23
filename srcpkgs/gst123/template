@@ -2,6 +2,7 @@
 pkgname=gst123
 version=0.3.5
 revision=2
+<<<<<<< HEAD
 build_style=gnu-configure
 hostmakedepends="automake pkg-config"
 makedepends="ncurses-devel gtk+-devel libxml2-devel gst-plugins-base1-devel gst-plugins-good1"
@@ -16,3 +17,18 @@ checksum=c7b4729773f66cc679e94df76bcc6a95a2222192730f906e527e72624f084a7d
 pre_configure() {
 	autoreconf -fi
 }
+=======
+makedepends="pkg-config libstdc++-devel glib-devel libxml2-devel gstreamer-devel gst-plugins-base-devel"
+fulldepends="gst-plugins-good"
+short_desc="GStreamer based CLI player"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=0a70f2a411056bb90a75e97f8320fc190c0a5b16de88e26ec8300b9c4c121cc1
+long_desc="
+ The program gst123 is designed to be a more flexible command line player in
+ the spirit of ogg123 and mpg123, based on gstreamer. It plays all file
+ formats gstreamer understands, so if you have a music collection which
+ contains different file formats, like flac, ogg and mp3, you can use
+ gst123 to play all your music files."
+ 
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

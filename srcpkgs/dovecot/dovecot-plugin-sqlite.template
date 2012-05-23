@@ -1,0 +1,16 @@
+# Template file for 'dovecot-plugin-sqlite'.
+#
+depends="dovecot>=2.1.3"
+short_desc="${short_desc} - SQLite plugin"
+long_desc="${long_desc}
+
+ This package contains a plugin for SQLite authentication and dictionaries."
+
+
+do_install() {
+	vmove usr/lib/dovecot/modules/auth/libdriver_sqlite.so \
+		usr/lib/dovecot/modules/auth
+	vmove usr/lib/dovecot/modules/dict usr/lib/dovecot/modules
+	vmove usr/lib/dovecot/modules/libdriver_sqlite.so \
+		usr/lib/dovecot/modules
+}

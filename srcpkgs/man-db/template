@@ -58,8 +58,16 @@ revision=1
 distfiles="${NONGNU_SITE}/$pkgname/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 configure_args="--with-db=gdbm --with-pager=less --with-gzip=/usr/bin/gzip
+<<<<<<< HEAD
  --with-bzip2=/usr/bin/bzip2 --disable-rpath --enable-threads=posix
  --with-lzma=/usr/bin/lzma --disable-setuid"
+=======
+--with-bzip2=/usr/bin/bzip2 --disable-rpath --enable-threads=posix
+--with-lzma=/usr/bin/lzma --with-xz=/usr/bin/xz --disable-setuid
+--without-included-regex --enable-automatic-create" 
+makedepends="pkg-config gdbm-devel zlib-devel libpipeline-devel"
+fulldepends="bzip2 gzip less groff grep coreutils"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The on-line manual database"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=14e3daf8727f98035cb250d6e4caaf720225c14996377aa7bf8f00248b7f5633
@@ -72,6 +80,7 @@ long_desc="
 
 conf_files="/etc/man_db.conf"
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full bzip2
 Add_dependency full gzip
@@ -80,6 +89,9 @@ Add_dependency full gdbm
 Add_dependency full groff
 Add_dependency full grep
 Add_dependency build gettext
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install()
 {

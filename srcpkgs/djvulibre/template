@@ -10,11 +10,36 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://djvu.sourceforge.net/"
 distfiles="${SOURCEFORGE_SITE}/djvu/$pkgname-$version.tar.gz"
+<<<<<<< HEAD
 checksum=d3b4b03ae2bdca8516a36ef6eb27b777f0528c9eda26745d9962824a3fdfeccf
 
 pre_configure() {
 	NOCONFIGURE=1 ./autogen.sh
 }
+=======
+build_style=gnu-configure
+configure_args="--disable-desktopfiles"
+revision=3
+makedepends="pkg-config tiff-devel"
+short_desc="Utilities for the DjVu image format"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+checksum=c0734c81d22a0e458c3fb5efd4c3eab051bcb6ad8740f5a5784c1f5699482534
+long_desc="
+ DjVu is a set of compression technologies, a file format, and a software
+ platform for the delivery over the Web of digital documents, scanned
+ documents, and high resolution images.
+
+ DjVu documents download and display extremely quickly, and look exactly the
+ same on all platforms. DjVu can be seen as a superior alternative to PDF
+ and Postscript for digital documents, to TIFF (and PDF) for scanned documents,
+ to JPEG for photographs and pictures, and to GIF for large palettized images.
+ DjVu is the only Web format that is practical for distributing high-resolution
+ scanned documents in color."
+
+subpackages="lib${pkgname} ${pkgname}-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 libdjvulibre_package() {
 	short_desc+=" - runtime libraries"

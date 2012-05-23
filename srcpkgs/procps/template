@@ -2,7 +2,13 @@
 pkgname=procps
 version=3.2.8
 distfiles="http://procps.sf.net/$pkgname-$version.tar.gz"
+<<<<<<< HEAD
 build_style=gnu_makefile
+=======
+patch_args="-Np1"
+build_style=gnu-makefile
+makedepends="ncurses-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The /proc file system utilities"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=11ed68d8a4433b91cd833deb714a3aa849c02aea738c42e6b4557982419c1535
@@ -14,5 +20,8 @@ long_desc="
  Version 3 includes NPTL thread support, a rewritten top, many bug fixes,
  performance improvements, and new features."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full ncurses
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

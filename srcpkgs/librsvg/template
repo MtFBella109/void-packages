@@ -57,12 +57,21 @@ librsvg-utils_package() {
 =======
 # Template build file for 'librsvg'.
 pkgname=librsvg
+<<<<<<< HEAD
 version=2.26.0
 revision=1
 distfiles="${GNOME_SITE}/$pkgname/2.26/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--with-gimp=no --with-tags= --disable-mozilla-plugin"
 short_desc="SVG library for GNOME2"
+=======
+version=2.36.1
+distfiles="${GNOME_SITE}/$pkgname/2.36/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-static --enable-introspection"
+makedepends="pkg-config intltool python>=0 libcroco-devel gtk+-devel gtk+3-devel gobject-introspection"
+short_desc="SVG library for GNOME"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=fdcab5f0d86198d8cbd4ffe5b333076f75e707f6d7e4af5e87a8644ff7533bea
 long_desc="
@@ -75,6 +84,7 @@ long_desc="
 triggers="gtk-immodules gtk-pixbuf-loaders"
  
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build intltool
 Add_dependency build python
@@ -88,3 +98,6 @@ post_install()
 	rm -rf ${DESTDIR}/usr/lib/mozilla
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

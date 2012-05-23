@@ -1,5 +1,6 @@
 # Template file for 'cairomm'
 pkgname=cairomm
+<<<<<<< HEAD
 version=1.14.5
 revision=1
 build_style=meson
@@ -7,6 +8,13 @@ configure_args="-Dbuild-examples=false"
 hostmakedepends="pkg-config"
 makedepends="libsigc++-devel fontconfig-devel libpng-devel libXrender-devel cairo-devel"
 depends="cairo>=1.12.14_6"
+=======
+version=1.10.0
+distfiles="http://cairographics.org/releases/$pkgname-$version.tar.gz"
+build_style=gnu-configure
+revision=3
+makedepends="pkg-config libsigc++-devel freetype-devel fontconfig-devel libpng-devel zlib-devel libX11-devel libXrender-devel cairo-devel>=1.10.0"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="C++ bindings to Cairo vector graphics library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, MPL-1.1"
@@ -14,6 +22,7 @@ homepage="https://www.cairographics.org/cairomm/"
 distfiles="https://cairographics.org/releases/cairomm-${version}.tar.xz"
 checksum=70136203540c884e89ce1c9edfb6369b9953937f6cd596d97c78c9758a5d48db
 
+<<<<<<< HEAD
 cairomm-devel_package() {
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -23,3 +32,6 @@ cairomm-devel_package() {
 		vmove usr/lib/pkgconfig
 	}
 }
+=======
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

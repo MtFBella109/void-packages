@@ -1,5 +1,6 @@
 # Template file for 'at-spi2-core'
 pkgname=at-spi2-core
+<<<<<<< HEAD
 version=2.56.5
 revision=1
 build_style=meson
@@ -9,6 +10,15 @@ hostmakedepends="pkg-config dbus glib-devel gettext"
 makedepends="libglib-devel libXext-devel libSM-devel libXtst-devel dbus-devel
  libxml2-devel"
 checkdepends="${pkgname} dbus gsettings-desktop-schemas"
+=======
+version=2.4.2
+homepage="http://www.gnome.org"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/2.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+makedepends="pkg-config intltool gobject-introspection libXtst-devel libXevie-devel libXi-devel dbus-devel"
+fulldepends="dbus"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Assistive Technology Service Provider Interface"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -37,6 +47,7 @@ at-spi2-core-devel_package() {
 	}
 }
 
+<<<<<<< HEAD
 atk_package() {
 	short_desc="Set of interfaces for accessibility"
 	pkg_install() {
@@ -79,3 +90,6 @@ at-spi2-atk-devel_package() {
 		vmove usr/lib/libatk-bridge-2.0.so
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

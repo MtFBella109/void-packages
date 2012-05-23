@@ -3,6 +3,7 @@ pkgname=cups-filters
 version=2.0.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-avahi --disable-mutool"
 hostmakedepends="pkg-config ghostscript"
 makedepends="cups-devel libppd-devel libcupsfilters-devel"
@@ -15,6 +16,23 @@ changelog="https://github.com/OpenPrinting/cups-filters/releases"
 distfiles="https://github.com/OpenPrinting/cups-filters/releases/download/${version}/cups-filters-${version}.tar.xz"
 checksum=b5152e3dd148ed73835827ac2f219df7cf5808dbf9dbaec2aa0127b44de800d8
 lib32disabled=yes
+=======
+make_install_target="BUILDROOT=${XBPS_DESTDIR}/${pkgname}-${version} install"
+makedepends="pkg-config cups-devel lcms2-devel libpng-devel tiff-devel poppler-devel fontconfig-devel ghostscript-devel"
+fulldepends="ghostscript poppler-utils"
+short_desc="OpenPrinting CUPS Filters"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2, LGPL-2.1, MIT"
+checksum=6926980653e7cb5f94b91921517678cca7f0e6781364823a05f7b4b0ec919106
+long_desc="
+  This distribution contains backends, filters, and other software that was
+  once part of the core CUPS distribution but is no longer maintained by
+  Apple Inc. In addition it contains additional filters developed
+  independently of Apple, especially filters for the PDF-centric printing
+  workflow introduced by OpenPrinting."
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vlicense COPYING

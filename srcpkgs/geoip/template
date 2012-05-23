@@ -4,7 +4,10 @@ version=1.6.12
 revision=3
 build_style=gnu-configure
 configure_args="--mandir=/usr/share/man --sysconfdir=/etc/geoip"
+<<<<<<< HEAD
 hostmakedepends="automake libtool"
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 makedepends="zlib-devel"
 short_desc="Non-DNS IP-to-country resolver C library and utilities"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -24,6 +27,7 @@ libgeoip_package() {
 	}
 }
 
+<<<<<<< HEAD
 geoip-devel_package() {
 	short_desc+=" - development files"
 	depends="zlib-devel libgeoip>=${version}_${revision}"
@@ -34,3 +38,7 @@ geoip-devel_package() {
 		vmove "usr/lib/pkgconfig"
 	}
 }
+=======
+wrksrc="GeoIP-${version}"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

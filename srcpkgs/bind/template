@@ -4,6 +4,7 @@ version=9.16.22
 revision=4
 _fullver="${version}${_patchver:+-${_patchver}}"
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static --enable-largefile --with-libtool
  --sysconfdir=/etc/named --enable-epoll --with-openssl=${XBPS_CROSS_BASE}/usr
  --with-gssapi=/usr/bin --with-readline --with-tuning=default --without-python
@@ -12,6 +13,12 @@ hostmakedepends="automake libtool perl pkg-config"
 makedepends="openssl-devel libxml2-devel libcap-devel readline-devel mit-krb5-devel
  libidn2-devel libuv-devel $(vopt_if geoip geoip-devel)"
 checkdepends="python3-pytest"
+=======
+configure_args="--disable-static --with-openssl --with-libxml2
+--enable-threads --enable-largefile --enable-ipv6 --with-libtool
+--enable-atomic --sysconfdir=/etc/named"
+makedepends="perl>=0 openssl-devel mit-krb5-devel libxml2-devel libcap-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Berkeley Internet Name Domain server"
 maintainer="Randy McCaskill <randy@mccaskill.us>"
 license="MPL-2.0"
@@ -30,8 +37,11 @@ named_descr="BIND DNS server"
 named_homedir="/var/named"
 make_dirs="/var/named 0770 root named"
 
+<<<<<<< HEAD
 build_options="geoip"
 build_options_default="geoip"
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vsv named

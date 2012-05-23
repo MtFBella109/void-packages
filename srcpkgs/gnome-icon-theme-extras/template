@@ -3,6 +3,7 @@ pkgname=gnome-icon-theme-extras
 version=3.12.0
 revision=3
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config intltool icon-naming-utils gtk-update-icon-cache"
 makedepends="icon-naming-utils gnome-icon-theme"
 depends="gnome-icon-theme"
@@ -12,3 +13,20 @@ license="CC-BY-SA-3.0"
 homepage="http://gnome.org/"
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=4eec6cea8a7b09c4ed6ebab1a3b42539b9c61a53bec4b8872e774611cc619608
+=======
+makedepends="pkg-config intltool icon-naming-utils"
+fulldepends="gnome-icon-theme"
+short_desc="GNOME Desktop icon theme (additional icons)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=d54492c2fb685a983bce4dec24db5831a2828f6479c98fbcd93a1f8370b4c373
+long_desc="
+ This package contains the default icon theme used by the GNOME desktop.
+ The icons are used in the panel menu, and in nautilus and other applications,
+ to represent the different applications, files, directories, and devices.
+
+ This package contains additional icons for the default GNOME icon theme."
+
+noarch=yes
+gtk_iconcache_dirs="/usr/share/icons/gnome"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

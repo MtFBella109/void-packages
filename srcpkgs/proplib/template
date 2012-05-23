@@ -1,10 +1,18 @@
 # Template file for 'proplib'
 pkgname=proplib
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=0.6.10
 revision=1
 build_style=gnu-makefile
 make_use_env=yes
+=======
+version=0.6.1
+revision=2
+homepage="http://code.google.com/p/portableproplib"
+distfiles="http://portableproplib.googlecode.com/files/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 makedepends="zlib-devel"
 short_desc="Portable Property container object library"
 maintainer="Juan RP <xtraeme@gmail.com>"
@@ -52,5 +60,8 @@ long_desc="
  been converted to be built through the GNU autotools."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency run glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

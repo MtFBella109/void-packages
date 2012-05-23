@@ -1,6 +1,7 @@
 # Template file for 'xfdesktop'
 pkgname=xfdesktop
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=4.20.1
 revision=1
 build_style=meson
@@ -20,6 +21,14 @@ checksum=acccde849265bbf4093925ba847977b7abf70bb2977e4f78216570e887c157b8
 version=4.6.1
 distfiles="http://mocha.xfce.org/archive/xfce-$version/src/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+version=4.10.0
+homepage="http://xfce.org"
+distfiles="http://archive.xfce.org/src/xfce/xfdesktop/4.10/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config intltool xfconf-devel libxfce4ui-devel exo-devel gtk+-devel libxfce4util-devel libnotify-devel libwnck2-devel garcon-devel Thunar-devel dbus-glib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Desktop manager for the XFce Desktop Environment"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=22aa4a654798dcfa728a9c0056486f73ae87a51239950c8f85aedef488cd571a
@@ -29,9 +38,13 @@ long_desc="
 gtk_iconcache_dirs="/usr/share/icons/hicolor"
 triggers="gtk-icon-cache"
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build intltool
 Add_dependency full glibc
 Add_dependency full libxfce4menu
 Add_dependency full Thunar
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,5 +1,6 @@
 # Template file for 'mpc'
 pkgname=mpc
+<<<<<<< HEAD
 version=0.35
 revision=1
 build_style=meson
@@ -17,3 +18,20 @@ checksum=382959c3bfa2765b5346232438650491b822a16607ff5699178aa1386e3878d4
 post_install() {
 	vinstall contrib/mpc-completion.bash 644 usr/share/bash-completion/completions mpc
 }
+=======
+version=0.9
+distfiles="http://www.multiprecision.org/mpc/download/mpc-${version}.tar.gz"
+build_style=gnu-configure
+configure_args="EGREP=egrep"
+makedepends="gmp-devel mpfr-devel"
+short_desc="C library for the arithmetic of complex numbers"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=fd3efe422f0d454592059e80f2c00d1a2e381bf2beda424c5094abd4deb049ac
+long_desc="
+ Mpc is a C library for the arithmetic of complex numbers with arbitrarily
+ high precision and correct rounding of the result. It is built upon and
+ follows the same principles as Mpfr."
+
+bootstrap=yes
+subpackages="mpc-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -72,6 +72,8 @@ revision=1
 distfiles="http://linux.dell.com/$pkgname/download/$pkgname/$pkgname-$version/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--disable-static --disable-python"
+depends="glibc"
+makedepends="pkg-config libxml2-devel"
 short_desc="Library for SMBIOS access"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=90c87d0f246c2f224b93aa3980b7b186a78fb4ce64d56ceda61c2a23347baa1b
@@ -80,8 +82,11 @@ long_desc="
  to get information from standard BIOS tables, such as the SMBIOS table."
 
 subpackages="$pkgname-devel $pkgname-utils"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency run  libstdc++
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install()
 {

@@ -1,8 +1,15 @@
 # Template file for 'ladspa-sdk'
 pkgname=ladspa-sdk
+<<<<<<< HEAD
 version=1.15
 revision=3
 makedepends="libsndfile-progs"
+=======
+version=1.13
+revision=2
+distfiles="http://www.ladspa.org/download/ladspa_sdk.tgz"
+makedepends="libsndfile-progs libstdc++"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Linux Audio Developer's Simple Plugin API (LADSPA)"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -12,8 +19,24 @@ distfiles="${DEBIAN_SITE}/main/l/ladspa-sdk/ladspa-sdk_${version}.orig.tar.gz"
 #distfiles="http://www.ladspa.org/download/ladspa_sdk_${version}.tgz"
 checksum=4229959b09d20c88c8c86f4aa76427843011705df22d9c28b38359fd1829fded
 
+<<<<<<< HEAD
 do_build() {
 	make CC=$CC CPP=$CXX LD=$LD -C src
+=======
+ Definitive technical documentation on LADSPA plugins for both host and plugin
+ writers is contained within copious comments in the ladspa.h header file."
+
+subpackages="$pkgname-docs $pkgname-example-plugins $pkgname-progs"
+
+noarch=yes
+
+wrksrc=ladspa_sdk
+
+
+do_build()
+{
+	make -C src
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }
 
 do_install() {

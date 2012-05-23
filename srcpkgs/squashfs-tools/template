@@ -1,18 +1,29 @@
 # Template file for 'squashfs-tools'
 pkgname=squashfs-tools
-version=4.7.2
-revision=1
-build_wrksrc="squashfs-tools"
-build_style=gnu-makefile
-make_use_env=yes
-make_build_args="XZ_SUPPORT=1 LZO_SUPPORT=1 LZMA_XZ_SUPPORT=1 LZ4_SUPPORT=1 ZSTD_SUPPORT=1"
-make_install_args="INSTALL_PREFIX=\${DESTDIR}/usr INSTALL_MANPAGES_DIR=\${DESTDIR}/usr/share/man/man1"
-hostmakedepends="which"
-makedepends="zlib-devel lzo-devel liblzma-devel liblz4-devel libzstd-devel"
-short_desc="Tool to create and append to squashfs filesystems"
-maintainer="Duncaen <duncaen@voidlinux.org>"
-license="GPL-2.0-or-later"
-homepage="https://github.com/plougher/squashfs-tools"
-changelog="https://github.com/plougher/squashfs-tools/raw/master/CHANGES"
-distfiles="https://github.com/plougher/squashfs-tools/archive/refs/tags/${version}.tar.gz"
-checksum=4672b5c47d9418d3a5ae5b243defc6d9eae8275b9771022247c6a6082c815914
+version=4.0
+wrksrc="squashfs${version}/squashfs-tools"
+distfiles="${SOURCEFORGE_SITE}/squashfs/squashfs${version}.tar.gz"
+build_style=gnu_makefile
+make_install_args="INSTALL_DIR=$XBPS_DESTDIR/$pkgname-$version/usr/bin"
+short_desc="Highly compressed read-only filesystem (tools)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=18948edbe06bac2c4307eea99bfb962643e4b82e5b7edd541b4d743748e12e21
+long_desc="
+ Squashfs is a highly compressed read-only filesystem for Linux. It uses zlib
+ compression to compress both files, inodes and directories. Inodes in the
+ system are very small and all blocks are packed to minimise data overhead.
+ Block sizes greater than 4K are supported up to a maximum of 64K.
+
+ Squashfs is intended for general read-only filesystem use, for archival
+ use (i.e. in cases where a .tar.gz file may be used), and in constrained
+ block device/memory systems (e.g. embedded systems) where low overhead is
+ needed."
+
+Add_dependency full glibc
+Add_dependency full zlib
+
+
+do_build()
+{
+	wrksrc=$XBPS_BUILDDIR/squashfs${version}
+}

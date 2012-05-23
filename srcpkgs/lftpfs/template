@@ -3,12 +3,39 @@ pkgname=lftpfs
 version=0.4.3
 revision=3
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl"
 makedepends="perl-Fuse perl-IPC-Run lftp"
 depends="$makedepends"
+=======
+fulldepends="perl-Fuse perl-IPC-Run lftp"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Filesystem with caching based on FUSE and LFTP"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="http://lftpfs.sourceforge.net/"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
 checksum=5116e06dfc03c4000f3157916d4bf2b9bcd6f47667790217dbf3b9f04861bf39
+<<<<<<< HEAD
+=======
+long_desc="
+ LftpFS is a read-only network filesystem with caching for smart mirror of
+ sites. Useful for mirroring of Linux repositories. It's based on FUSE and
+ LFTP client, which supports FTP, HTTP, FISH, SFTP, HTTPS, FTPS protocols
+ and works over proxies. LftpFS is a fork from unmaintained FuseFTP.
+
+ Features
+    connection features of LFTP (http://lftp.yar.ru/)
+    caching of files with a structure of remote directory
+    include/exclude matching files/dirs
+    using as mirror tool with on-demand download of files
+"
+
+noarch=yes
+
+post_install()
+{
+	vmkdir usr
+	mv ${DESTDIR}/usr/lib/perl5/vendor_perl/bin ${DESTDIR}/usr
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

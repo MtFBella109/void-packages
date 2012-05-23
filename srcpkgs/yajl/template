@@ -3,7 +3,11 @@ pkgname=yajl
 version=2.1.0
 revision=4
 build_style=cmake
+<<<<<<< HEAD
 hostmakedepends="ruby doxygen"
+=======
+makedepends="ruby cmake doxygen"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Yet Another JSON Library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="ISC"
@@ -17,6 +21,7 @@ post_install() {
 	vlicense COPYING
 }
 
+<<<<<<< HEAD
 yajl-devel_package() {
 	depends="yajl>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -27,3 +32,5 @@ yajl-devel_package() {
 		vmove usr/include
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

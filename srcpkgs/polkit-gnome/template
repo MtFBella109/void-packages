@@ -3,8 +3,13 @@ pkgname=polkit-gnome
 version=0.105
 revision=8
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config intltool gobject-introspection"
 makedepends="polkit-devel gtk+3-devel"
+=======
+revision=2
+makedepends="pkg-config intltool gobject-introspection polkit-devel gtk+3-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="PolicyKit integration for the GNOME desktop"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -12,10 +17,26 @@ homepage="http://www.freedesktop.org/wiki/Software/PolicyKit"
 distfiles="${GNOME_SITE}/$pkgname/$version/$pkgname-$version.tar.xz"
 checksum=1784494963b8bf9a00eedc6cd3a2868fb123b8a5e516e66c5eda48df17ab9369
 
+<<<<<<< HEAD
 post_patch() {
 	vsed -i -e 's/DATADIRNAME=lib/DATADIRNAME=share/' configure
 }
 
 post_install() {
 	vinstall ${FILESDIR}/polkit-gnome-authentication-agent-1.desktop 644 usr/share/applications
+=======
+ It is a framework for centralizing the decision making process with respect
+ to granting access to privileged operations (like calling the HAL Mount()
+ method) for unprivileged (desktop) applications.
+
+ This package contains the glue to integrate with the GNOME desktop."
+
+
+post_install()
+{
+	# Start polkit-gnome-authentication-agent-1 via XDG autostart,
+	# otherwise it will run with the GDM user and won't work.
+	vinstall ${FILESDIR}/polkit-gnome-authentication-agent-1.desktop \
+		644 etc/xdg/autostart
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

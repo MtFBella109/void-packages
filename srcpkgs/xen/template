@@ -1,5 +1,6 @@
 # Template file for 'xen'
 pkgname=xen
+<<<<<<< HEAD
 version=4.19.1
 revision=2
 # grep -R IPXE_GIT_TAG src/xen-*/tools/firmware/etherboot
@@ -39,11 +40,27 @@ nostrip_files="
  palcode-clipper
  s390-ccw.img
  s390-netboot.img"
+=======
+version=4.1.2
+wrksrc=xen-${version}
+distfiles="http://bits.xensource.com/oss-xen/release/$version/xen-$version.tar.gz"
+depends="iproute2 bridge-utils"
+makedepends="openssl-devel e2fsprogs-devel zlib-devel gnutls-devel libbluetooth-devel pciutils-devel libX11-devel libXext-devel SDL-devel MesaLib-devel ncurses-devel liblzma-devel python-devel dev86 acpica-utils wget git"
+short_desc="Xen Hypervisor and Utilities"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://xen.org"
+license="GPL-2"
+checksum=7d9c93057cf480d3f1efa792b19285a84fa3c06060ea5c5c453be00887389b0d
+long_desc="
+ This package provides the official Xen Hypervisor and related utilities
+ for starting/stopping/accessing unprivileged domains (domUs)."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 build_options="stubdom"
 build_options_default="stubdom"
 desc_option_stubdom="Build xen with stubdom"
 
+<<<<<<< HEAD
 if [ "$build_option_stubdom" ]; then
 	# From "stubdom/configure"
 	_zlib_version=1.2.3
@@ -81,6 +98,34 @@ if [ "$build_option_stubdom" ]; then
 		newlib-${_newlib_version}.tar.gz
 		pciutils-${_libpci_version}.tar.bz2
 		tpm_emulator-${_tpmemu_version}.tar.gz"
+=======
+pycompile_module="xen grub"
+subpackages="xen-devel"
+
+make_dirs="
+/var/run/xenstored	755	root	root
+/var/run/xend/boot	755	root	root
+/var/lib/xenstored	755	root 	root
+/var/lib/xen/xenpaging	755	root	root
+/var/xen/dump		755	root	root
+/var/log/xen		755	root	root
+/var/lock/subsys	755	root	root
+/etc/xen/auto		755	root	root"
+
+conf_files="
+/etc/default/xendomains
+/etc/default/xencommons
+/etc/xen/xm-config.xml
+/etc/xen/xl.conf
+/etc/xen/xend-config.sxp
+/etc/xen/xend-pci-quirks.sxp
+/etc/xen/xend-pci-permissive.sxp"
+
+
+
+if [ "${XBPS_MACHINE}" = "x86_64" ]; then
+	Add_dependency build gcc-multilib
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 fi
 
 if [ "$XBPS_TARGET_LIBC" = musl ]; then

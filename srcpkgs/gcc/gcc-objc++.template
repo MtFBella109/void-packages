@@ -1,5 +1,6 @@
 # Template file for 'gcc-objc++'.
 #
+depends="libelf gcc-c++>=4.7 gcc-objc>=4.7"
 short_desc="GCC Objective-C++ support"
 long_desc="${long_desc}
 
@@ -10,9 +11,12 @@ Add_dependency run mpfr
 Add_dependency run gcc-c++
 Add_dependency run gcc-objc
 
+<<<<<<< HEAD
 do_install()
 {
 	local triplet=
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 	if [ "${xbps_machine}" = "x86_64" ]; then
 		triplet="${xbps_machine}-unknown-linux-gnu"

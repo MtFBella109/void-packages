@@ -3,9 +3,17 @@ pkgname=tzdata
 wrksrc=${pkgname}
 version=2009r
 distfiles="
+<<<<<<< HEAD
 ftp://elsie.nci.nih.gov/pub/${pkgname}${version}.tar.gz
 ftp://elsie.nci.nih.gov/pub/tzcode${version}.tar.gz"
 build_style=gnu_makefile
+=======
+ftp://munnari.oz.au/pub/tzcode${_tzcode_ver}.tar.gz
+ftp://munnari.oz.au/pub/tzdata${_tzdata_ver}.tar.gz"
+build_style=gnu-makefile
+homepage="http://www.iana.org/time-zones"
+depends="bash gawk"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Time zone and daylight-saving time data"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum="
@@ -17,6 +25,15 @@ long_desc="
  updated periodically to reflect changes made by political bodies to time
  zone boundaries, UTC offsets, and daylight-saving rules."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full bash
 Add_dependency full gawk
+=======
+
+post_install() {
+	# Remove useless stuff
+	rm -rf ${DESTDIR}/usr/lib
+	rm -f ${DESTDIR}/usr/share/zoneinfo/localtime
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

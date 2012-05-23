@@ -1,6 +1,7 @@
 # Template file for 'wpa_supplicant'
 pkgname=wpa_supplicant
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=2.11
 revision=3
 build_wrksrc="${pkgname}"
@@ -65,6 +66,14 @@ distfiles="http://hostap.epitest.fi/releases/$pkgname-$version.tar.gz"
 build_style=gnu_makefile
 make_install_target="PREFIX=/usr
  DESTDIR=${XBPS_DESTDIR}/${pkgname}-${version} install"
+=======
+version=0.7.3
+revision=8
+build_wrksrc=$pkgname
+homepage="http://hostap.epitest.fi"
+distfiles="$homepage/releases/$pkgname-$version.tar.gz"
+makedepends="libnl3-devel openssl-devel dbus-devel readline-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="WPA/WPA2/IEEE 802.1X Supplicant"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=6e5284fa3f7c56e001fae92486eaa31340db5dd925dcb38bd572d2e8ed70f570
@@ -84,6 +93,7 @@ long_desc="
 conf_files="/etc/${pkgname}.conf"
 openrc_services="$pkgname default"
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full openssl
 Add_dependency full libnl
@@ -92,6 +102,8 @@ Add_dependency build ncurses
 Add_dependency build dbus
 Add_dependency run ncurses-libs
 Add_dependency run dbus-libs
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure()
 {

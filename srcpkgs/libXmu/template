@@ -32,7 +32,12 @@ libXmu-devel_package() {
 pkgname=libXmu
 version=1.0.5
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config libX11-devel libXext-devel libXt-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X Miscellaneous Utilities library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=0692b6b0ec1019cfaa8418020b1127bfb0975f5a579a0b1f9eb7fd8f2f7126d7
@@ -47,6 +52,7 @@ long_desc="
  This is from the modular X.org project."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build xproto
 Add_dependency build xextproto
@@ -59,3 +65,5 @@ Add_dependency full libXext
 Add_dependency full libXt
 Add_dependency full libuuid
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

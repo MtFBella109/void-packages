@@ -42,7 +42,12 @@ http://www.oasis-open.org/docbook/xml/$version/$pkgname-$version.zip
 http://www.oasis-open.org/docbook/xml/4.4/$pkgname-4.4.zip
 http://www.oasis-open.org/docbook/xml/4.3/$pkgname-4.3.zip
 http://www.oasis-open.org/docbook/xml/4.2/$pkgname-4.2.zip"
+<<<<<<< HEAD
 build_style=custom-install
+=======
+makedepends="bsdtar"
+fulldepends="xmlcatmgr"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="XML DTD designed for computer documentation"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum="
@@ -64,8 +69,11 @@ noarch=yes
 noextract=yes
 triggers="xml-catalog"
 
+<<<<<<< HEAD
 Add_dependency full xmlcatmgr
 Add_dependency build unzip
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

@@ -4,6 +4,7 @@ version=1.08.2
 revision=1
 build_style=gnu-configure
 configure_args="--with-readline"
+<<<<<<< HEAD
 hostmakedepends="ed flex texinfo"
 makedepends="readline-devel"
 short_desc="Arbitrary precision numeric processing language"
@@ -28,6 +29,29 @@ if [ "$CROSS_BUILD" ]; then
 	}
 fi
 do_build() {
+=======
+makedepends="flex readline-devel"
+short_desc="An arbitrary precision numeric processing language."
+maintainer="davehome <davehome@redthumb.info.tm>"
+homepage="http://www.gnu.org/software/${pkgname}/"
+license="GPL-3"
+checksum=7ee4abbcfac03d8a6e1a8a3440558a3d239d6b858585063e745c760957725ecc
+long_desc="
+ bc is an arbitrary precision numeric processing language. Syntax is similar
+ to C, but differs in many substantial areas. It supports interactive
+ execution of statements. bc is a utility included in the POSIX P1003.2/D11
+ draft standard.
+ 
+ Since the POSIX document does not specify how bc must be implemented, this
+ version does not use the historical method of having bc be a compiler for the
+ dc calculator. This version has a single executable that both compiles the
+ language and runs the resulting byte code. The byte code is not the dc
+ language."
+
+
+do_build()
+{
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 	make ${makejobs} LEX="flex -I"
 }
 do_check() {

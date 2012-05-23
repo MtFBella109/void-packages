@@ -2,11 +2,20 @@
 pkgname=xextproto
 version=7.1.1
 distfiles="${XORG_SITE}/proto/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="xmlto"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="XExt extension headers from X.org"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=6d0abd31ddd57c2cb24cecf5fd90b4c29a276e20e3e03ca3c2c57d074f964d99
 long_desc="
  This provides the XExt extension headers from modular X.org project."
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 noarch=yes

@@ -1,5 +1,6 @@
 # Template file for 'liberation-fonts-ttf'
 pkgname=liberation-fonts-ttf
+<<<<<<< HEAD
 version=2.1.5
 revision=2
 depends="font-util"
@@ -13,6 +14,28 @@ checksum=7191c669bf38899f73a2094ed00f7b800553364f90e2637010a69c0e268f25d0
 font_dirs="/usr/share/fonts/TTF/liberation"
 provides="font-liberation-ttf-${version}_${revision}"
 replaces="font-liberation-ttf>=0"
+=======
+version=1.07.1
+homepage="http://www.redhat.com/promo/fonts/"
+distfiles="https://fedorahosted.org/releases/l/i/${pkgname%-ttf}/$pkgname-$version.tar.gz"
+fulldepends="font-util"
+short_desc="TrueType fonts from RedHat"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2, ${pkgname}"
+checksum=de646f7dc38ce0941247ba694a1a8372e0b7c2d79478e1ec83b67ac8d0e92d48
+long_desc="
+ On May 9, 2007, Red Hat announced the public release of these fonts
+ under the trademark LIBERATION at the Red Hat Summit. There are three
+ sets: Sans (a substitute for Arial, Albany, Helvetica, Nimbus Sans L,
+ and Bitstream Vera Sans), Serif (a substitute for Times New Roman,
+ Thorndale, Nimbus Roman, and Bitstream Vera Serif) and Mono (a
+ substitute for Courier New, Cumberland, Courier, Nimbus Mono L,
+ and Bitstream Vera Sans Mono)."
+
+
+noarch=yes
+font_dirs="/usr/share/fonts/TTF"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install() {
 	vmkdir usr/share/fonts/TTF/liberation

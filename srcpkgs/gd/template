@@ -50,9 +50,17 @@ gd-progs_package() {
 # Template build file for 'gd'.
 pkgname=gd
 version=2.0.35
+<<<<<<< HEAD
 revision=1
 distfiles="http://www.libgd.org/releases/gd-$version.tar.bz2"
 build_style=gnu_configure
+=======
+revision=7
+distfiles="http://jaist.dl.sourceforge.net/project/buluoos/0.1/src/gd-$version.tar.bz2"
+#distfiles="http://www.libgd.org/releases/gd-$version.tar.bz2"
+build_style=gnu-configure
+makedepends="pkg-config libXpm-devel libX11-devel jpeg-devel fontconfig-devel freetype-devel libpng-devel zlib-devel glibc-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Graphics library for the dynamic creation of images"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=bf222490749d2a9a9ac3593b01eb55aed98461ff81202414707f61b42aa300f9
@@ -74,6 +82,7 @@ long_desc="
  features for an 8-bit 2D package."
  
 subpackages="$pkgname-devel $pkgname-progs"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full zlib
@@ -83,3 +92,5 @@ Add_dependency full jpeg
 Add_dependency full libpng
 Add_dependency full libXpm
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

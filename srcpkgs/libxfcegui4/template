@@ -1,8 +1,19 @@
 # Template file for 'libxfce4gui4'
 pkgname=libxfcegui4
+<<<<<<< HEAD
 version=4.6.1
 distfiles="http://mocha.xfce.org/archive/xfce-$version/src/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+version=4.10.0
+homepage="http://www.xfce.org/"
+license="GPL-2"
+distfiles="http://archive.xfce.org/src/xfce/$pkgname/4.10/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+configure_args="--disable-static --disable-gladeui --enable-startup-notification --disable-debug"
+depends="hicolor-icon-theme"
+makedepends="pkg-config intltool gtk+-devel libxml2-devel libxfce4util-devel startup-notification-devel libglade-devel libxklavier-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GTK widgets for Xfce"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=3468a9cb348bf54f8a0afa386366683eff1987b722d2e81326f9e7ec7dfbe093
@@ -13,6 +24,7 @@ conf_files="/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.x
 gtk_iconcache_dirs="/usr/share/icons/hicolor"
 triggers="gtk-icon-cache"
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 Add_dependency build pkg-config
 Add_dependency build intltool
@@ -23,3 +35,6 @@ Add_dependency full startup-notification
 Add_dependency full xfconf
 Add_dependency full libglade
 Add_dependency full hicolor-icon-theme
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

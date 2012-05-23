@@ -1,6 +1,7 @@
 # Template file for 'xfce4-panel'
 pkgname=xfce4-panel
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=4.20.5
 revision=1
 build_style=meson
@@ -40,6 +41,14 @@ libxfce4panel_package() {
 version=4.6.2
 distfiles="http://archive.xfce.org/src/xfce/$pkgname/4.6/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+version=4.10.0
+distfiles="http://archive.xfce.org/src/xfce/$pkgname/4.10/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+configure_args="--disable-static"
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config intltool libxfce4util-devel libxfce4ui-devel gtk+-devel xfconf-devel dbus-glib-devel libwnck2-devel>=2.30.6_1 garcon-devel exo-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Next generation panel for Xfce"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=1d8ab1354c73935a5d12f0d7d226d26ae1b90fdd235460bdb57fd5651229bc8b
@@ -58,6 +67,7 @@ gtk_iconcache_dirs="/usr/share/icons/hicolor"
 triggers="gtk-icon-cache"
  
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build intltool
 Add_dependency full glibc
@@ -70,3 +80,7 @@ Add_dependency full libxfcegui4
 Add_dependency full hicolor-icon-theme
 Add_dependency full desktop-file-utils
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

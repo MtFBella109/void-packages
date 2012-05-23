@@ -1,15 +1,29 @@
 # Template file for 'proplib-devel'.
 #
+<<<<<<< HEAD
 short_desc="${short_desc} (development files)"
+=======
+depends="zlib-devel proplib>=0.6.1"
+short_desc="${short_desc} - development files"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
 Add_dependency run proplib
 
+<<<<<<< HEAD
 do_install()
 {
 	mkdir -p ${DESTDIR}/usr/lib
 	mv ${SRCPKGDESTDIR}/usr/include ${DESTDIR}/usr
 	mv ${SRCPKGDESTDIR}/usr/lib/libprop.*a ${DESTDIR}/usr/lib
+=======
+
+do_install() {
+	vmove usr/include usr
+	vmove usr/share usr
+	vmove "usr/lib/*.a" usr/lib
+	vmove usr/lib/pkgconfig usr/lib
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

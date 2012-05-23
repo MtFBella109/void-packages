@@ -20,6 +20,7 @@ short_desc="GNOME integrated music management application"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://www.rhythmbox.org"
+<<<<<<< HEAD
 distfiles="${GNOME_SITE}/rhythmbox/${version::3}/rhythmbox-${version}.tar.xz"
 checksum=2016a8a8d2a959c07a467ac9682c6ed605ba8883fb760410d68b68ab838df9f2
 
@@ -49,3 +50,37 @@ rhythmbox-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+distfiles="${GNOME_SITE}/$pkgname/2.96/$pkgname-$version.tar.xz"
+build_requires=15
+build_style=gnu-configure
+configure_args="--with-mdns=avahi --disable-scrollkeeper --disable-static
+--disable-schemas-install --enable-daap --with-webkit --without-hal
+--disable-schemas-compile --enable-vala --enable-musicbrainz"
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+subpackages="lib${pkgname} ${pkgname}-devel"
+depends="desktop-file-utils hicolor-icon-theme libtdb>=1.2.6 webkit-gtk3>=1.8.0"
+makedepends="which pkg-config intltool gnome-doc-utils gtk+3-devel totem-pl-parser-devel libsoup-devel libsoup-gnome-devel gst-plugins-base-devel json-glib-devel libgudev-devel GConf-devel libmusicbrainz-devel libdiscid-devel libmtp-devel avahi-glib-libs-devel webkit-gtk3-devel libpeas-devel brasero-devel libnotify-devel grilo-devel json-glib-devel clutter-gtk-devel clutter-gst-devel mx-devel libdmapsharing-devel tdb-devel>=1.2.6 libgnome-keyring-devel pygobject-devel vala-devel"
+short_desc="GNOME integrated music management application, inspired by Apple's iTunes"
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="GPL-2"
+checksum=3f93c74b2f7f8d7e1002e288db9abf8f182684277dec0a106d5e38415084b2b6
+long_desc="
+ Rhythmbox is an integrated music management application, originally inspired
+ by Apple's iTunes. It is free software, designed to work well under the
+ GNOME Desktop, and based on the powerful GStreamer media framework.
+ 
+ Among the many features of Rhythmbox, you will find:
+ 
+ * Easy to use music browser
+ * Searching and sorting
+ * Comprehensive audio format support through GStreamer
+ * Internet Radio support including last.fm streams
+ * Playlists
+ * Display audio visualizations
+ * Transfer music to and from iPod, MTP, and USB Mass Storage music players
+ * Display album art and song lyrics downloaded from the internet
+ * Play, rip, and burn audio CDs
+ * Automatically download audio podcasts
+ * Browse, preview, and download albums from Magnatune and Jamendo"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

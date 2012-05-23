@@ -4,6 +4,7 @@ pkgname=valgrind
 version=3.25.1
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-tls --without-mpicc --enable-lto=yes"
 hostmakedepends="automake perl pkg-config"
 makedepends="libgomp-devel"
@@ -59,6 +60,11 @@ valgrind-devel_package() {
 version=3.5.0
 distfiles="http://www.valgrind.org/downloads/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+configure_args="--enable-tls --with-mpicc=/dev/null"
+makedepends="pkg-config"
+fulldepends="perl>=0"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Tool for finding memory management bugs in programs"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=743a5132bbebc247169aefae6e17657677fdf0961aba1668dd4ee7028d27ba80
@@ -70,6 +76,9 @@ long_desc="
  detect a lot of problems that are otherwise very hard to find/diagnose."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full perl
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,5 +1,6 @@
 # Template file for 'libchamplain'
 pkgname=libchamplain
+<<<<<<< HEAD
 version=0.12.21
 revision=1
 build_style=meson
@@ -7,6 +8,14 @@ build_helper="gir"
 configure_args="$(vopt_bool gir introspection) $(vopt_bool gir vapi)"
 hostmakedepends="pkg-config glib-devel $(vopt_if gir vala)"
 makedepends="libsoup3-devel gtk+3-devel clutter-gtk-devel sqlite-devel"
+=======
+version=0.12.2
+revision=2
+distfiles="${GNOME_SITE}/$pkgname/0.12/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-debug --disable-static"
+makedepends="pkg-config intltool gobject-introspection libsoup-devel libsoup-gnome-devel gtk+3-devel clutter-gtk-devel json-glib-devel sqlite-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library aimed to provide a Clutter widget to display rasterized maps"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -18,6 +27,7 @@ checksum=a915cd172a0c52944c5579fcb4683f8a878c571bf5e928254b5dafefc727e5a7
 build_options="gir"
 build_options_default="gir"
 
+<<<<<<< HEAD
 libchamplain-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision} libglib-devel cairo-devel
 	 clutter-devel clutter-gtk-devel gtk+3-devel sqlite-devel libsoup3-devel"
@@ -32,3 +42,5 @@ libchamplain-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

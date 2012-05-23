@@ -128,6 +128,7 @@ version=7.6
 distfiles="http://ftp.gnu.org/gnu/coreutils/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 configure_args="--enable-install-program=hostname --bindir=/bin"
+makedepends="perl gmp-devel acl-devel libcap-devel"
 short_desc="The GNU core utilities"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=1d9bfe8b427ca5f8cffa0b462f861e4157c946fbeaf0884d273bbd6cab1c25d4
@@ -136,12 +137,15 @@ long_desc="
  utilities of the GNU operating system. These are the core utilities
  which are expected to exist on every operating system."
 
+<<<<<<< HEAD
 essential=yes
 Add_dependency run glibc
 Add_dependency full gmp
 Add_dependency full attr
 Add_dependency full acl
 Add_dependency build perl
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install()
 {

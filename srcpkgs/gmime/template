@@ -3,6 +3,7 @@ pkgname=gmime
 version=3.2.15
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper="gir"
 configure_args="--disable-static --enable-crypto $(vopt_enable vala)
  $(vopt_enable gir introspection)"
@@ -10,6 +11,10 @@ hostmakedepends="pkg-config $(vopt_if vala vala)"
 makedepends="glib-devel gpgme-devel libidn2-devel
  $(vopt_if vala vala)"
 checkdepends="gnupg"
+=======
+configure_args="--disable-mono --enable-smime"
+makedepends="pkg-config intltool glib-devel zlib-devel gpgme-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNOME Core mime parsing library"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -21,6 +26,7 @@ checksum=84cd2a481a27970ec39b5c95f72db026722904a2ccf3fdbd57b280cf2d02b5c4
 build_options="gir vala"
 build_options_default="gir vala"
 
+<<<<<<< HEAD
 pre_configure() {
 	[ -z "$CROSS_BUILD" ] && return 0
 
@@ -78,3 +84,5 @@ gmime3-devel_package() {
 	short_desc+=" - transitional dummy package"
 	metapackage=yes
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -21,7 +21,13 @@ post_install() {
 pkgname=xhost
 version=1.0.3
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+makedepends="pkg-config libX11-devel libXmu-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Server access control program for X"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=2d63007c65e89fe273a43f3e45b3c0133acbc3ceeda6bfc9671388409134ad17
@@ -29,6 +35,7 @@ long_desc="
  This package provides xhost, the server access control program for X.
 
  This is from the modular X.org X11 project."
+<<<<<<< HEAD
  
 Add_dependency build pkg-config
 Add_dependency full glibc
@@ -36,3 +43,6 @@ Add_dependency full libX11
 Add_dependency full libXau
 Add_dependency full libXmu
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

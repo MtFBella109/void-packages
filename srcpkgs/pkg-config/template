@@ -32,8 +32,15 @@ post_install() {
 pkgname=pkg-config
 version=0.23
 distfiles="http://pkgconfig.freedesktop.org/releases/$pkgname-$version.tar.gz"
+<<<<<<< HEAD
 build_style=gnu_configure
 configure_args="--disable-threads"
+=======
+build_style=gnu-configure
+configure_args="--with-installed-popt"
+revision=1
+makedepends="popt-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="System for managing library compile/link flags"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=08a0e072d6a05419a58124db864f0685e6ac96e71b2875bf15ac12714e983b53
@@ -42,5 +49,8 @@ long_desc="
  works with automake and autoconf.  It replaces the ubiquitous
  *-config scripts you may have seen with a single tool."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

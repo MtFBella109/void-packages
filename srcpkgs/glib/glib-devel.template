@@ -1,5 +1,6 @@
 # Template file for 'glib-devel'.
 #
+depends="zlib-devel pcre-devel libffi-devel coreutils perl>=0"
 short_desc="${short_desc} (development files)"
 long_desc="${long_desc}
 
@@ -7,10 +8,13 @@ long_desc="${long_desc}
 
 Add_dependency run glib
 
+<<<<<<< HEAD
 do_install()
 {
 	mkdir -p ${DESTDIR}/usr/lib
 	mkdir -p ${DESTDIR}/usr/share
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 	mv ${SRCPKGDESTDIR}/usr/bin ${DESTDIR}/usr
 	mv ${SRCPKGDESTDIR}/usr/include ${DESTDIR}/usr

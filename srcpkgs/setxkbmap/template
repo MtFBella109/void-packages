@@ -21,15 +21,24 @@ post_install() {
 pkgname=setxkbmap
 version=1.1.0
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+makedepends="pkg-config libX11-devel libxkbfile-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Set the keyboard map using the X Keyboard Extension"
 checksum=932f2b314a4bf6dfccd16d63c633073abf650d8e136f481904e972ef3d4faf64
 long_desc="
  The setxkbmap command maps the keyboard to use the layout determined
  by the options specified on the command line."
  
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libxkbfile
 Add_dependency build pkg-config
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

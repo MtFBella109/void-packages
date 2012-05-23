@@ -5,6 +5,7 @@ revision=1
 _distver=${version%.*}
 _date=${version##*.}
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--with-ncursesw --disable-nls"
 makedepends="ncurses-devel"
 short_desc="Tool to display dialog boxes from shell scripts"
@@ -18,3 +19,18 @@ checksum=bee47347a983312facc4dbcccd7fcc86608d684e1f119d9049c4692213db96c3
 post_install() {
 	rm -r ${DESTDIR}/usr/lib
 }
+=======
+configure_args="--with-ncursesw --enable-nls"
+makedepends="ncurses-devel"
+short_desc="A tool to display dialog boxes from shell scripts"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="LGPL-2.1"
+checksum=883c58498663d939b18f3aea56976b64268b736d1579ac850512e5d5a4a2eafc
+long_desc="
+ Dialog is a program that will let you to present a variety of questions
+ or display messages using dialog boxes from a shell script. Currently,
+ these types of dialog boxes are implemented:
+ yes/no box, menu box, input box, message box, text box, info box,
+ guage box, checklist box, and radiolist box."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

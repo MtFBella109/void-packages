@@ -3,6 +3,7 @@ pkgname=xorg-util-macros
 version=1.20.2
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 short_desc="X.org autotool macros"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
@@ -13,4 +14,20 @@ checksum=9ac269eba24f672d7d7b3574e4be5f333d13f04a7712303b1821b2a51ac82e8e
 
 post_install() {
 	vlicense COPYING
+=======
+makedepends="pkg-config"
+short_desc="Xorg autotool macros"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=b31c6d39014e537ff95609661a4f8258f7c4a4f3b8bdfdad3d69bdd5cb80f40e
+long_desc="
+ This package contains the autoconf/automake macros shared by the various
+ modular Xorg components."
+
+noarch=yes
+
+post_install()
+{
+	install -d ${DESTDIR}/usr/lib
+	mv ${DESTDIR}/usr/share/pkgconfig ${DESTDIR}/usr/lib/pkgconfig
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

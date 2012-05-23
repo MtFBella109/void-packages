@@ -53,6 +53,7 @@ version=2.7.3
 distfiles="http://www.fontconfig.org/release/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 configure_args="--enable-docs --with-cache-dir=/var/cache/$pkgname"
+makedepends="pkg-config expat-devel freetype-devel zlib-devel"
 short_desc="Library for configuring and customizing font access"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=ba8fbff15c6b0395ed2f263311250bc8d36eb8793d122014429becab5c94b050
@@ -84,8 +85,12 @@ long_desc="
 
 conf_files="/etc/fonts/fonts.conf"
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full expat
 Add_dependency full freetype
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,11 +1,19 @@
 # Template file for 'xorg-server-devel'.
 #
+<<<<<<< HEAD
 short_desc="${sourcepkg} development files"
+=======
+depends="libudev-devel dri2proto>=2.1 glproto xf86driproto randrproto videoproto compositeproto scrnsaverproto resourceproto xineramaproto libdmx-devel libXext-devel libX11-devel libpciaccess-devel libXfont-devel libXau-devel pixman-devel libXdmcp-devel libXmu-devel libXrender-devel libXfixes-devel libXi-devel libXaw-devel libXt-devel libXpm-devel libdrm-devel"
+short_desc="${sourcepkg} - development files"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD
 Add_dependency run xorg-server
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

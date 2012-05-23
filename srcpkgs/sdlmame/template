@@ -1,0 +1,91 @@
+# Template file for 'mame'
+pkgname=sdlmame
+_distver=0144
+ _patchver=5
+if [ -n "${_patchver}" ]; then
+	version=${_distver}u${_patchver}
+else
+	version=${_distver}s
+fi
+wrksrc=mame-${_distver}s
+homepage="http://mamedev.org"
+distfiles="${homepage}/downloader.php?file=releases/mame${_distver}s.zip"
+makedepends="perl>=0 pkg-config SDL-devel SDL_ttf-devel libXinerama-devel gtk+-devel GConf-devel"
+fulldepends="liberation-fonts-ttf"
+short_desc="Multiple Arcade Machine Emulator"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="mame"
+checksum=8f0191b40f80f8a3393d341f411c5f02aca6933d6a9f347bec0d2f7206c38e06
+long_desc="
+ A port of the popular Multiple Arcade Machine Emulator using SDL with
+ OpenGL support."
+
+noextract=yes
+
+
+
+do_extract() {
+	# mame source code is double-zipped to save space.
+	cd ${wrksrc}
+	unzip -q ${XBPS_SRCDISTDIR}/$(basename $distfiles)
+	unzip -q mame.zip
+	rm -f mame.zip
+	find . -type f -not -name \*.png | xargs perl -pi -e 's/\r\n?/\n/g'
+
+	# XXX disabled, patches can't be applied?
+	# Download and apply released patches.
+	for p in $(seq -w 1 ${_patchver}); do
+		_patch=${_distver}u${p}
+		msg_normal "Fetching patch: ${_patch} ...\n"
+		${XBPS_FETCH_CMD} ${homepage}/updates/${_patch}_diff.zip
+		msg_normal "Applying patch: ${_patch} ...\n"
+		unzip -q ${_patch}_diff.zip \
+			&& patch -p0 -E -i ${_patch}.diff
+		rm -f ${_patch}_diff
+	done
+}
+
+do_build() {
+	sed -i 's/-Werror//' makefile
+	sed -i 's/\(LDFLAGS = -Wl,--warn-common\)/\1 -Wl,-zmuldefs/' makefile
+
+	if [ "$XBPS_MACHINE" = "x86_64" ]; then
+		makeargs="AMD64=1 PTR64=1"
+	else
+		makeargs="I686=1"
+	fi
+
+	make ${makeargs} ${makejobs}
+	make ${makeargs} ${makejobs} tools
+}
+
+do_install() {
+	# Install the sdlmame script
+	vinstall ${FILESDIR}/${pkgname}.sh 755 usr/bin ${pkgname}
+
+	# Install the applications and the UI font in /usr/share
+	if [ -r mame64 ]; then
+		vinstall mame64 755 usr/share/${pkgname} ${pkgname}
+	else
+		vinstall mame 755 usr/share/${pkgname} ${pkgname}
+	fi
+
+	for f in chdman jedutil regrep romcmp testkeys src2html srcclean \
+		ldverify ldresample; do
+		vinstall ${f} 755 usr/share/${pkgname}
+	done
+
+	# Install the extra bits
+	install -d ${DESTDIR}/usr/share/${pkgname}/{artwork,ctrlr,keymaps,shader}
+	install -d ${DESTDIR}/usr/share/man/man1
+	install -m644 src/osd/sdl/shader/glsl*.*h \
+		${DESTDIR}/usr/share/${pkgname}/shader
+	install -m644 src/osd/sdl/man/* ${DESTDIR}/usr/share/man/man1
+
+	install -m644 artwork/* ${DESTDIR}/usr/share/${pkgname}/artwork
+	install -m644 src/osd/sdl/keymaps/* \
+		${DESTDIR}/usr/share/${pkgname}/keymaps
+
+	# Include the license
+	vinstall docs/license.txt 644 usr/share/licenses/${pkgname}
+}

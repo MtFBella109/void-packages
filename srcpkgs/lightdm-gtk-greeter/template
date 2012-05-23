@@ -3,11 +3,31 @@ pkgname=lightdm-gtk-greeter
 version=2.0.9
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static --disable-maintainer-mode"
 hostmakedepends="pkg-config gettext"
 makedepends="gtk+3-devel lightdm-devel libayatana-appindicator-devel
  ayatana-ido-devel"
 depends="hicolor-icon-theme"
+=======
+configure_args="--disable-static"
+depends="lightdm"
+makedepends="pkg-config intltool glib-devel gtk+3-devel lightdm-devel libxklavier-devel"
+short_desc="Light Display Manager GTK+ Greeter"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3, LGPL-3"
+checksum=e3e56997e200d6c3447d53b5e322ae5a478a99a71522e6b6babf421cbf6396ba
+long_desc="
+ An X display manager that:
+  * Has a lightweight codebase
+  * Is standards compliant (PAM, ConsoleKit, etc)
+  * Has a well defined interface between the server and user interface
+  * Fully themeable (easiest with the webkit interface)
+  * Cross-desktop (greeters can be written in any toolkit)
+
+ This package contains the GTK+ reference greeter for LightDM."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 conf_files="/etc/lightdm/lightdm-gtk-greeter.conf"
 short_desc="Light Display Manager GTK+ Greeter"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -17,8 +37,16 @@ distfiles="https://github.com/Xubuntu/lightdm-gtk-greeter/releases/download/ligh
 checksum=c8fdf198aa9a3f9d0dad0b48dfe23c2277b79107e8fcfc62965290f1081f645d
 provides="lightdm-greeter-1_0"
 
+<<<<<<< HEAD
 lightdm-gtk3-greeter_package() {
 	metapackage=yes
 	depends="lightdm-gtk-greeter>=2"
 	short_desc+=" - transition"
+=======
+
+
+post_install() {
+	cd ${DESTDIR}//usr/share/xgreeters && \
+		ln -sf ${pkgname}.desktop default.desktop
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

@@ -3,6 +3,7 @@ pkgname=wget
 <<<<<<< HEAD
 version=1.25.0
 revision=1
+<<<<<<< HEAD
 build_style=gnu-configure
 configure_args="$(vopt_if ssl '--with-ssl=openssl') $(vopt_if gnutls '--with-ssl=gnutls')"
 conf_files="/etc/wgetrc"
@@ -29,6 +30,10 @@ post_install() {
 version=1.12
 distfiles="http://ftp.gnu.org/gnu/$pkgname/$pkgname-$version.tar.gz"
 build_style=gnu_configure
+=======
+depends="ca-certificates"
+makedepends="perl>=0 openssl-devel libidn-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The GNU wget utility"
 maintainer="pancake <pancake@nopcode.org>"
 checksum=7578ed0974e12caa71120581fa3962ee5a69f7175ddc3d6a6db0ecdcba65b572
@@ -55,11 +60,14 @@ long_desc="
     * GNU Wget is distributed under the GNU General Public License."
 
 conf_files="/etc/wgetrc"
+<<<<<<< HEAD
 Add_dependency run glibc
 Add_dependency full openssl
 Add_dependency full libidn
 Add_dependency build gettext
 Add_dependency build texinfo
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_build()
 {

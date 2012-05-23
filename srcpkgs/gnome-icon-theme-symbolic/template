@@ -3,6 +3,7 @@ pkgname=gnome-icon-theme-symbolic
 version=3.12.0
 revision=3
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="GTK_UPDATE_ICON_CACHE=/bin/true"
 hostmakedepends="pkg-config intltool icon-naming-utils"
 makedepends="gnome-icon-theme icon-naming-utils"
@@ -13,3 +14,20 @@ license="CC-BY-SA-3.0"
 homepage="http://www.gnome.org"
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=851a4c9d8e8cb0000c9e5e78259ab8b8e67c5334e4250ebcc8dfdaa33520068b
+=======
+makedepends="pkg-config intltool icon-naming-utils"
+fulldepends="gnome-icon-theme"
+short_desc="GNOME Desktop icon theme (symbolic icons)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=8f2738b1e8992827427f007e0eafc8deed32039c2bcf8345b82243864292d021
+long_desc="
+ This package contains the default icon theme used by the GNOME desktop.
+ The icons are used in the panel menu, and in nautilus and other applications,
+ to represent the different applications, files, directories, and devices.
+
+ This package contains symbolic cons for the default GNOME icon theme."
+
+noarch=yes
+gtk_iconcache_dirs="/usr/share/icons/gnome"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

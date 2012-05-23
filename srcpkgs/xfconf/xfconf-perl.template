@@ -1,12 +1,20 @@
 # Template file for 'xfconf-perl'.
 #
+<<<<<<< HEAD
 short_desc="${sourcepkg} perl bindings"
+=======
+depends="perl-Glib"
+short_desc="${short_desc} - perl bindings"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 long_desc="${long_desc}
 
  This package contains the Perl bindings."
 
+<<<<<<< HEAD
 Add_dependency run xfconf
 Add_dependency run perl
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

@@ -3,12 +3,17 @@ pkgname=lxpanel
 version=0.11.1
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-gtk3"
 hostmakedepends="pkg-config intltool automake libtool gettext-devel glib-devel"
 makedepends="alsa-lib-devel gtk+3-devel menu-cache-devel libwnck-devel libcurl-devel
  wireless_tools-devel lxmenu-data libxml2-devel libfm-gtk+3-devel libfm-extra-devel
  libkeybinder3-devel"
 depends="lxmenu-data"
+=======
+makedepends="pkg-config intltool alsa-lib-devel gtk+-devel menu-cache-devel libwnck2-devel wireless_tools-devel"
+fulldepends="lxmenu-data>=0.1.2"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="LXDE Standard panel"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -18,6 +23,7 @@ checksum=24334dde6ed37d32bb021f902dbd54a1e6cdd01f35a778d80fcd3acd23a0e93b
 
 lib32disabled=yes
 
+<<<<<<< HEAD
 pre_configure() {
 	[ -d m4 ] || mkdir m4
 	autoreconf -fi
@@ -31,3 +37,6 @@ lxpanel-devel_package() {
 		vmove usr/lib/pkgconfig
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

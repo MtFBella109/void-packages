@@ -3,8 +3,12 @@ pkgname=libraw
 version=0.21.4
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config automake libtool"
 makedepends="jasper-devel lcms2-devel libgomp-devel"
+=======
+makedepends="pkg-config lcms2-devel jasper-devel libgomp-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Raw image decoder library"
 maintainer="Daniel Martinez <danielmartinez@cock.li>"
 license="LGPL-2.1-only, CDDL-1.0"
@@ -13,9 +17,14 @@ changelog="https://github.com/LibRaw/LibRaw/raw/${version%.*}-stable/Changelog.t
 distfiles="https://www.libraw.org/data/LibRaw-${version}.tar.gz"
 checksum=6be43f19397e43214ff56aab056bf3ff4925ca14012ce5a1538a172406a09e63
 
+<<<<<<< HEAD
 pre_configure() {
 	autoreconf -fi
 }
+=======
+subpackages="${pkgname}-devel ${pkgname}-progs"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vmkdir usr/share/licenses

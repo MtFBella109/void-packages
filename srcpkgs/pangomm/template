@@ -1,10 +1,20 @@
 # Template file for 'pangomm'
 pkgname=pangomm
+<<<<<<< HEAD
 version=2.46.2
 revision=1
 build_style=meson
 hostmakedepends="pkg-config"
 makedepends="libsigc++-devel glibmm-devel cairomm-devel pango-devel"
+=======
+version=2.28.4
+homepage="http://gtkmm.sourceforge.net"
+distfiles="${GNOME_SITE}/pangomm/2.28/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-documentation"
+revision=2
+makedepends="pkg-config libsigc++-devel glibmm-devel cairomm-devel pango-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="C++ bindings for the pango library"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -12,6 +22,7 @@ homepage="https://gtkmm.org"
 distfiles="${GNOME_SITE}/pangomm/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=57442ab4dc043877bfe3839915731ab2d693fc6634a71614422fb530c9eaa6f4
 
+<<<<<<< HEAD
 pangomm-devel_package() {
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -22,3 +33,5 @@ pangomm-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,12 +1,16 @@
 # Template file for 'ntp-perl'.
 #
+depends="ntp perl>=0"
 short_desc="${short_desc} (perl scripts)"
 long_desc="${long_desc}
 
  This package contains perl scripts ntp-wait and ntptrace."
 
+<<<<<<< HEAD
 Add_dependency run ntp
 Add_dependency run perl
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

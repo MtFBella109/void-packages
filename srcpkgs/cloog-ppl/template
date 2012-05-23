@@ -4,6 +4,7 @@ version=0.15.7
 distfiles="ftp://gcc.gnu.org/pub/gcc/infrastructure/${pkgname}-${version}.tar.gz"
 build_style=gnu_configure
 configure_args="--with-bits=gmp --with-ppl=${XBPS_MASTERDIR}/usr"
+makedepends="gmp-devel ppl-devel"
 short_desc="The Chunky Loop Generator"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a5e01388beac97fd13daa96c25b2afba6ddb06e680bf921f3a544c494431697d
@@ -15,6 +16,9 @@ long_desc="
 
 base_chroot=yes
 subpackages="$pkgname-devel" 
+<<<<<<< HEAD
 Add_dependency run	glibc
 Add_dependency full	gmp	">=4.3.1_1"
 Add_dependency full	ppl
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

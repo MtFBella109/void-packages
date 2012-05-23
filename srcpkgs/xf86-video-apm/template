@@ -2,7 +2,14 @@
 pkgname=xf86-video-apm
 version=1.2.2
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+depends="xorg-server"
+makedepends="xorg-server-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg Alliance ProMotion video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=678edd063e1d5e7c7f72ccdda2388c5857559847b3d313c94d659f9bd51c1752
@@ -10,5 +17,8 @@ long_desc="
  This is the video driver for Alliance ProMotion video cards for
  the Xorg X11 server."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

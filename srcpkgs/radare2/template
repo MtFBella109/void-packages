@@ -1,5 +1,6 @@
 # Template file for 'radare2'
 pkgname=radare2
+<<<<<<< HEAD
 version=5.9.8
 revision=1
 build_style=meson
@@ -10,6 +11,15 @@ configure_args="-Denable_tests=false -Duse_sys_capstone=true
 hostmakedepends="pkg-config"
 makedepends="capstone-devel file-devel xxHash-devel openssl-devel libuv-devel
  zlib-devel libzip-devel liblz4-devel"
+=======
+version=0.9
+homepage="http://radare.org"
+distfiles="$homepage/get/$pkgname-$version.tar.gz"
+build_style=gnu-configure
+configure_args="--without-ewf --with-sysmagic --without-ssl"
+revision=3
+makedepends="file-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Advanced command line debugger and hexadecimal editor"
 maintainer="yosh <yosh-git@riseup.net>"
 license="LGPL-3.0-only"
@@ -17,6 +27,7 @@ homepage="https://www.radare.org"
 distfiles="https://github.com/radareorg/radare2/archive/${version}.tar.gz"
 checksum=e45e4fd342f04b2e00363bc1b68cc375c1cf36041085d3d59caa7a3b7be43836
 
+<<<<<<< HEAD
 case "$XBPS_TARGET_MACHINE" in
 	mips*) CFLAGS="-Os";;
 esac
@@ -30,3 +41,7 @@ radare2-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+broken_as_needed=yes
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

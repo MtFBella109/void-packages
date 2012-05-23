@@ -29,6 +29,7 @@ cairo-devel_package() {
 =======
 # Template build file for 'cairo'.
 pkgname=cairo
+<<<<<<< HEAD
 version=1.8.8
 distfiles="http://cairographics.org/releases/$pkgname-$version.tar.gz"
 build_style=gnu_configure
@@ -36,6 +37,14 @@ configure_args="--enable-xlib=yes --enable-xlib-xrender=yes
  --enable-xcb=yes --enable-png=yes --enable-glitz=yes
  --enable-directfb=no --enable-ft=yes --enable-pdf=yes
  --enable-ps=yes --enable-svg=yes --disable-gcov"
+=======
+version=1.12.2
+homepage="http://cairographics.org"
+distfiles="${homepage}/releases/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--enable-tee --enable-gl"
+makedepends="pkg-config zlib-devel fontconfig-devel freetype-devel pixman-devel libpng-devel libxcb-devel libX11-devel libXrender-devel glib-devel MesaLib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Vector graphics library with cross-device output support"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=3c51d3de5dc4596e01a6675acd3c86c2c99c00f02e8fad5493758a29fe451c90
@@ -52,6 +61,7 @@ long_desc="
  antialiased text rendering."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full zlib
@@ -64,3 +74,6 @@ Add_dependency full xcb-util
 Add_dependency full libX11
 Add_dependency full libXrender
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

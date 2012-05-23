@@ -1,5 +1,6 @@
 # Template file for 'ristretto'
 pkgname=ristretto
+<<<<<<< HEAD
 version=0.13.4
 revision=1
 build_style=meson
@@ -13,3 +14,22 @@ homepage="https://docs.xfce.org/apps/ristretto/start"
 changelog="https://gitlab.xfce.org/apps/ristretto/-/raw/master/NEWS"
 distfiles="https://archive.xfce.org/src/apps/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=a84ef8cb80638681d9b9ef09cddff86a5d7a0e028603b4a601cf0ff6c2869ce8
+=======
+version=0.6.0
+homepage="http://goodies.xfce.org/projects/applications/ristretto"
+distfiles="http://archive.xfce.org/src/apps/$pkgname/${version%.*}/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config intltool gtk+-devel libexif-devel xfconf-devel dbus-glib-devel libxfce4util-devel libxfce4ui-devel exo-devel"
+short_desc="Picture-viewer for the Xfce desktop environment"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+checksum=fa810d0b0fc6e7f4c58e458fcd5c1ac983f5cfcb7cedbe08fad878b729990c29
+long_desc="
+ Ristretto is a fast and lightweight picture-viewer for the Xfce desktop
+ environment."
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

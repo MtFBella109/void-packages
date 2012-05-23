@@ -4,8 +4,12 @@ version=3.100
 revision=2
 build_style=gnu-configure
 configure_args="--enable-nasm --enable-shared"
+<<<<<<< HEAD
 hostmakedepends="nasm"
 makedepends="ncurses-devel"
+=======
+makedepends="nasm ncurses-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Fast, high quality MP3 encoder"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -19,6 +23,7 @@ pre_configure() {
 	fi
 }
 
+<<<<<<< HEAD
 lame-devel_package() {
 	depends="lame>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -28,3 +33,6 @@ lame-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

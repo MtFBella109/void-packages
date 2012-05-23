@@ -21,7 +21,13 @@ post_install() {
 pkgname=xprop
 version=1.1.0
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+makedepends="pkg-config libX11-devel libXmu-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Property displayer for X"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=cc8e07901574895f113baffda19272c54545879e02012314527ebbf2dcc66226
@@ -29,8 +35,11 @@ long_desc="
  This package provides xprop, a property displayer for X.
  This is from the modular X.org X11 project."
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libXmu
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

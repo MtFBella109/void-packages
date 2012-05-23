@@ -5,6 +5,7 @@ version=13.2.0
 revision=1
 archs="i686* x86_64*"
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="xorg-server-devel"
 depends="virtual?xserver-abi-input-24_1"
@@ -15,6 +16,16 @@ homepage="http://xorg.freedesktop.org"
 distfiles="${XORG_SITE}/driver/${pkgname}-${version}.tar.gz"
 checksum=5fa6cb6c0523737266684b216dacbe7f0b2c8dba962bd188369d4e854ed7bfa9
 lib32disabled=yes
+=======
+depends="xorg-server"
+makedepends="xorg-server-devel"
+short_desc="Xorg VMware virtual mouse input driver"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=a8a6ec0b567c48c130ccb830e15dfc2b201831841de0c2cc56bd87256d2d869a
+long_desc="
+ This is the VMware virtual mouse input driver for the Xorg X11 server."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vlicense COPYING

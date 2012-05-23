@@ -1,6 +1,7 @@
 # Template file for 'gedit'
 # keep major version in sync with gedit-plugins
 pkgname=gedit
+<<<<<<< HEAD
 version=48.2
 revision=1
 _libgd_gitrev=3cccf99234288a6121b3945a25cd4ec3b7445c74
@@ -23,6 +24,22 @@ checksum="a47f400d63222efdf9ad104c9dcc7c3939a6eb24fd882be5a5fa229e1ac19893
  bb1387edfd79a764241b60e1288fe1da7277137328d4b412333e2ca2cb817586"
 skip_extraction="libgd-${_libgd_gitrev}.tar.gz"
 shlib_provides="libgedit-48.2.so"
+=======
+version=3.4.1
+distfiles="${GNOME_SITE}/gedit/3.4/gedit-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-schemas-compile --disable-updater --enable-python"
+depends="pygobject hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config intltool itstool gnome-doc-utils gtksourceview-devel libpeas-devel enchant-devel pygobject-devel"
+fulldepends="gsettings-desktop-schemas iso-codes"
+short_desc="A text editor for GNOME"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+checksum=9b1f0164d6c6bc08e391efde7e6a2aa9290a65bda543fe3a7adc6ef73b722a64
+long_desc="
+ The GNOME Editor."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 # gedit tarballs are no longer being produced for download.gnome.org.
 # See: https://gitlab.gnome.org/World/gedit/gedit/-/issues/611
@@ -34,6 +51,7 @@ post_extract() {
 	vsrcextract -C subprojects/libgd "libgd-${_libgd_gitrev}.tar.gz"
 }
 
+<<<<<<< HEAD
 gedit-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision} gtk+3-devel libglib-devel
 	 libgedit-gtksourceview-devel libpeas-devel libgedit-amtk-devel libgedit-tepl-devel"
@@ -44,3 +62,7 @@ gedit-devel_package() {
 		vmove usr/share/gedit/gir-1.0
 	}
 }
+=======
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

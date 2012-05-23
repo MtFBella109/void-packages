@@ -95,9 +95,16 @@ wrksrc=${pkgname}-${_distver}-${_distverpatch}
 distfiles="ftp://ftp.imagemagick.org/pub/$pkgname/$pkgname-${_distver}-${_distverpatch}.tar.bz2"
 build_style=gnu_configure
 configure_args="--without-gslib --without-jp2 --without-autotrace
+<<<<<<< HEAD
  --without-djvu --without-dps --without-fpx --without-gvc --without-jbig
  --without-lqr --without-openexr --with-gs-font-dir=/usr/share/fonts/Type1
  --with-magick-plus-plus --enable-shared"
+=======
+--without-dps --without-fpx --without-gvc --without-jbig
+--without-lqr --without-openexr --with-gs-font-dir=/usr/share/fonts/Type1
+--with-magick-plus-plus --with-modules -with-perl --enable-shared"
+makedepends="pkg-config jpeg-devel libpng-devel tiff-devel lcms2-devel freetype-devel libwebp-devel fontconfig-devel libXext-devel libXt-devel libltdl-devel libxml2-devel glib-devel cairo-devel librsvg-devel gtk+-devel libwmf-devel fftw-devel djvulibre-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Package for display and interactive manipulation of images"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=e0bba405573ca18ca11ac37e089e13cb9cab6219e6783cfa45f9815017b0b6cb
@@ -117,6 +124,7 @@ long_desc="
 
 keep_libtool_archives=yes
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build libtool
 Add_dependency full glibc
@@ -138,3 +146,12 @@ Add_dependency run  libltdl
 Add_dependency run  libgomp
 Add_dependency run  libstdc++
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+post_install() {
+	vinstall LICENSE 644 usr/share/licenses/${pkgname}
+	vinstall NOTICE 644 usr/share/licenses/${pkgname}
+	# we don't need the libtool archives anymore
+	find ${DESTDIR} -type f -name *.la -delete
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

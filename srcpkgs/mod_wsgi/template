@@ -3,9 +3,13 @@ pkgname=mod_wsgi
 version=4.9.4
 revision=4
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--with-python=python3"
 hostmakedepends="python3 perl automake libtool"
 makedepends="apache-devel python3-devel apr-devel"
+=======
+makedepends="apache-devel python-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Python WSGI adapter module for Apache"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Apache-2.0"
@@ -15,6 +19,7 @@ distfiles="https://github.com/GrahamDumpleton/mod_wsgi/archive/${version}.tar.gz
 checksum=ee926a3fd5675890b908ebc23db1f8f7f03dc3459241abdcf35d46c68e1be29b
 lib32disabled=yes
 
+<<<<<<< HEAD
 pre_configure() {
 	if [ "$CROSS_BUILD" ]; then
 		cp -a ${XBPS_CROSS_BASE}/usr/bin/apxs ${wrksrc}
@@ -38,3 +43,5 @@ pre_configure() {
 	fi
 	autoreconf -fi
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

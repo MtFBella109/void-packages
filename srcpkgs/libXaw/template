@@ -5,6 +5,7 @@ version=1.0.16
 revision=1
 build_style=gnu-configure
 configure_args="--without-xmlto"
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="libXext-devel libXt-devel libXmu-devel libXpm-devel"
 short_desc="X Athena Widgets Library"
@@ -35,6 +36,10 @@ pkgname=libXaw
 version=1.0.7
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+revision=3
+makedepends="pkg-config xproto xextproto libICE-devel libSM-devel libX11-devel libXext-devel libXt-devel libXmu-devel libXpm-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X Athena Widgets Library from modular Xorg X11"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=740aaee9b09586b1c80f80890381c5ee70ea11efa4b6159f707c0f3684c6f328
@@ -45,6 +50,7 @@ long_desc="
  This libXaw is from the modular Xorg X11."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build xproto
 Add_dependency build xextproto
@@ -55,3 +61,5 @@ Add_dependency full libXt
 Add_dependency full libXmu
 Add_dependency full libXpm
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

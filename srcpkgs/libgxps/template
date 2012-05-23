@@ -1,5 +1,6 @@
 # Template file for 'libgxps'
 pkgname=libgxps
+<<<<<<< HEAD
 version=0.3.2
 revision=2
 build_style=meson
@@ -9,6 +10,14 @@ configure_args="-Denable-test=false
 hostmakedepends="pkg-config"
 makedepends="cairo-devel libglib-devel libjpeg-turbo-devel libpng-devel
  tiff-devel lcms2-devel libarchive-devel freetype-devel"
+=======
+version=0.2.2
+homepage="http://live.gnome.org/libgxps"
+distfiles="${GNOME_SITE}/$pkgname/0.2/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-static"
+makedepends="pkg-config glib-devel jpeg-devel tiff-devel lcms2-devel libarchive-devel freetype-devel gobject-introspection"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GObject base library for XPS documents"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -20,6 +29,7 @@ checksum=6d27867256a35ccf9b69253eb2a88a32baca3b97d5f4ef7f82e3667fa435251c
 build_options="gir"
 build_options_default="gir"
 
+<<<<<<< HEAD
 libgxps-devel_package() {
 	depends="cairo-devel libglib-devel libarchive-devel
 	 ${sourcepkg}-${version}_${revision}"
@@ -33,3 +43,5 @@ libgxps-devel_package() {
 		fi
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

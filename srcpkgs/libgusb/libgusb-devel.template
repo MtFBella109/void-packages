@@ -1,0 +1,15 @@
+# Template file for 'libgusb-devel'.
+#
+depends="libudev-devel libgusb"
+short_desc="${short_desc} - development files"
+long_desc="${long_desc}
+
+ This package contains the libgudev development files (static libs, headers,
+ etc), a library to interact with udev through the GLib bindings."
+
+
+do_install() {
+	vmove usr/include usr
+	vmove usr/share usr
+	vmove usr/lib/pkgconfig usr/lib
+}

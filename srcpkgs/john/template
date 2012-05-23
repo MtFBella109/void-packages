@@ -1,5 +1,6 @@
 # Template file for 'john'
 pkgname=john
+<<<<<<< HEAD
 version=1.9.0
 revision=7
 _jumbover=1
@@ -7,6 +8,14 @@ build_wrksrc="src"
 build_style=gnu-configure
 configure_args="--with-systemwide $(vopt_enable simd)"
 makedepends="openssl-devel gmp-devel libgomp-devel libpcap-devel bzip2-devel zlib-devel"
+=======
+version=1.7.9
+_jumbover=5
+wrksrc=${pkgname}-${version}-jumbo-${_jumbover}
+homepage="http://www.openwall.com/john/"
+distfiles="$homepage/g/$pkgname-${version}-jumbo-${_jumbover}.tar.bz2"
+makedepends="openssl-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="John the Ripper password cracker (jumbo-${_jumbover} patch included)"
 maintainer="Piraty <mail@piraty.dev>"
 license="custom:GPL-2.0-or-later with OpenSSL-exception"
@@ -21,9 +30,12 @@ fi
 
 build_options="simd"
 
+<<<<<<< HEAD
 pre_configure() {
 	unset CPP AS LD
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 # Tests cannot be run because include statements for rules in john.conf search
 # in /usr/share/john, even if $JOHN is replaced and points to

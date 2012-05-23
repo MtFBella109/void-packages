@@ -1,79 +1,65 @@
 # Template file for 'llvm'
 pkgname=llvm
-version=21
-revision=3
-metapackage=yes
-depends="llvm${version}"
-short_desc="LLVM meta package"
-maintainer="Enno Boland <gottox@voidlinux.org>"
-license="Public Domain"
-homepage="https://www.voidlinux.org"
-replaces="llvm17>=0 llvm15>=0 llvm12>=0 llvm11>=0 llvm10>=0 llvm9>=0 llvm8>=0 llvm7>=0 llvm6.0>=0 llvm3.9>=0"
+version=3.0
+wrksrc=${pkgname}-${version}.src
+distfiles="
+http://www.llvm.org/releases/${version}/llvm-${version}.tar.gz
+http://www.llvm.org/releases/${version}/clang-${version}.tar.gz"
+build_style=gnu-configure
+configure_args="--disable-expensive-checks --disable-debug-runtime
+--enable-targets=all --enable-bindings=none --enable-optimize
+--enable-shared --enable-libffi --enable-llvmc-dynamic"
+makedepends="groff perl python libffi-devel"
+short_desc="Low Level Virtual Machine"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.llvm.org"
+license="BSD"
+checksum="
+519eb11d3499ce99c6ffdb8718651fc91425ed7690eac91c8d6853474f7c0477
+b64e72da356d7c3428cfd7ac620d49ec042c84eaee13c26024879f555f4e126d"
 
-clang_package() {
-	metapackage=yes
-	depends="clang${version}>=0"
-	short_desc+=" - clang"
-}
+long_desc="
+ Low Level Virtual Machine (LLVM) is:
 
-clang-tools-extra_package() {
-	metapackage=yes
-	depends="clang-tools-extra${version}>=0"
-	short_desc+=" - clang-tools-extra"
-}
+ 1. A compilation strategy designed to enable effective program optimization
+    across the entire lifetime of a program. LLVM supports effective
+    optimization at compile time, link-time (particularly interprocedural),
+    run-time and offline (i.e., after software is installed), while remaining
+    transparent to developers and maintaining compatibility with existing
+    build scripts.
 
-clang-analyzer_package() {
-	metapackage=yes
-	depends="clang-analyzer${version}>=0"
-	short_desc+=" - clang-analyzer"
-}
+ 2. A virtual instruction set - LLVM is a low-level object code
+    representation that uses simple RISC-like instructions, but provides
+    rich, language-independent, type information and dataflow (SSA)
+    information about operands. This combination enables sophisticated
+    transformations on object code, while remaining light-weight enough to
+    be attached to the executable. This combination is key to allowing
+    link-time, run-time, and offline transformations.
 
-lld_package() {
-	metapackage=yes
-	depends="lld${version}>=0"
-	short_desc+=" - lld"
-}
+ 3. A compiler infrastructure - LLVM is also a collection of source code that
+    implements the language and compilation strategy. The primary components
+    of the LLVM infrastructure are a GCC-based C &amp; C++ front-end, a
+    link-time optimization framework with a growing set of global and
+    interprocedural analyses and transformations, static back-ends for many
+    popular (and some obscure) architectures, a back-end which emits portable
+    C code, and a Just-In-Time compilers for several architectures.
 
-lldb_package() {
-	metapackage=yes
-	depends="lldb${version}>=0"
-	short_desc+=" - lldb"
-}
+ 4. LLVM does not imply things that you would expect from a high-level
+    virtual machine. It does not require garbage collection or run-time code
+    generation (In fact, LLVM makes a great static compiler!). Note that
+    optional LLVM components can be used to build high-level virtual machines
+    and other systems that need these services."
 
-compiler-rt_package() {
-	metapackage=yes
-	depends="compiler-rt${version}>=0"
-	short_desc+=" - compiler-rt"
-}
+subpackages="libclang clang-analyzer clang clang-devel libllvm"
+subpackages="${subpackages} llvm-devel llvm-docs"
 
-libclang_package() {
-	metapackage=yes
-	depends="libclang${version}>=0"
-	short_desc+=" - transitional meta package"
-}
+# XXX: Investigate bindings support.
 
-libclang-cpp_package() {
-	metapackage=yes
-	depends="libclang-cpp${version}>=0"
-	short_desc+=" - transitional meta package"
-}
-
-libllvm_package() {
-	metapackage=yes
-	depends="libllvm${version}>=0"
-	short_desc+=" - transitional meta package"
-}
-
-libomp_package() {
-	metapackage=yes
-	depends="libomp${version}>=0"
-	short_desc+=" - transitional meta package"
-}
-
-libomp-devel_package() {
-	metapackage=yes
-	depends="libomp${version}-devel>=0"
-	short_desc+=" - transitional meta package"
+post_extract() {
+	# Move clang files into the llvm source.
+	if [ -d ${XBPS_BUILDDIR}/clang-${version}.src ]; then
+		mv ${XBPS_BUILDDIR}/clang-${version}.src ${wrksrc}/tools/clang
+	fi
 }
 
 libclc_package() {

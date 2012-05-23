@@ -1,5 +1,6 @@
 # Template file for 'gjs'
 pkgname=gjs
+<<<<<<< HEAD
 version=1.86.0
 revision=1
 build_style=meson
@@ -8,6 +9,13 @@ configure_args="-Dprofiler=disabled -Dinstalled_tests=false"
 hostmakedepends="glib-devel pkg-config icu"
 makedepends="dbus-glib-devel mozjs140-devel readline-devel sysprof-devel"
 checkdepends="xvfb-run cantarell-fonts gtk4-devel"
+=======
+version=1.32.0
+homepage="http://live.gnome.org/Gjs"
+distfiles="${GNOME_SITE}/$pkgname/1.32/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+makedepends="pkg-config intltool libffi-devel libgirepository-devel dbus-glib-devel cairo-devel readline-devel js-devel gobject-introspection"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Mozilla-based javascript bindings for the GNOME platform"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="MIT, LGPL-2.0-or-later"
@@ -24,6 +32,7 @@ else
 	configure_args+=" -Dskip_dbus_tests=true -Dskip_gtk_tests=true"
 fi
 
+<<<<<<< HEAD
 post_install() {
 	vlicense COPYING
 }
@@ -37,3 +46,5 @@ gjs-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

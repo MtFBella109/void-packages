@@ -1,6 +1,7 @@
 # Template file for 'libcap'
 pkgname=libcap
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=2.76
 revision=1
 bootstrap=yes
@@ -72,6 +73,13 @@ version=2.17
 distfiles="${KERNEL_SITE}/libs/security/linux-privs/libcap2/$pkgname-$version.tar.bz2"
 build_style=gnu_makefile
 make_install_args="prefix=/usr"
+=======
+version=2.22
+revision=4
+distfiles="ftp://ftp.archlinux.org/other/${pkgname}/${pkgname}-${version}.tar.gz"
+#distfiles="${KERNEL_SITE}/libs/security/linux-privs/libcap2/$pkgname-$version.tar.bz2"
+makedepends="perl pam-devel attr-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="POSIX.1e capabilities library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=2cab109eed9bd944408c13efed910091479d8770cf9aa1bec4f9b26d9302f5b0
@@ -80,9 +88,12 @@ long_desc="
  draft 15 capabilities."
 
 subpackages="$pkgname-devel $pkgname-pam $pkgname-progs"
+<<<<<<< HEAD
 Add_dependency build perl
 Add_dependency build pam
 Add_dependency full glibc
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_build()
 {

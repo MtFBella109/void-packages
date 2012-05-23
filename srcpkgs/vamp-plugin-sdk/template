@@ -3,6 +3,7 @@ pkgname=vamp-plugin-sdk
 version=2.10.0
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 make_check_target=test
 hostmakedepends="pkg-config"
 makedepends="libsndfile-devel"
@@ -18,6 +19,21 @@ post_extract() {
 	# don't run test target by default, fixes cross build.
 	sed -i 's/TARGETS="sdk plugins host rdfgen test"/TARGETS="sdk plugins host rdfgen"/' configure
 }
+=======
+revision=3
+makedepends="pkg-config libsndfile-devel"
+short_desc="The Vamp audio analysis plugin system"
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="BSD"
+checksum=601d9d9f859b3232afda63ca099e51d81202556bbb0ee275a9aab14bf3d6c766
+long_desc="
+ Vamp is an audio processing plugin system for plugins that extract descriptive
+ information from audio data — typically referred to as audio analysis plugins
+ or audio feature extraction plugins."
+
+subpackages="lib${pkgname} ${pkgname}-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vlicense COPYING LICENSE

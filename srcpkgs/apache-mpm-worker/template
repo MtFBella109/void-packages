@@ -1,0 +1,38 @@
+# Template file for 'apache-mpm-worker'
+#
+# We inherit all stuff from the apache build template.
+. ${XBPS_SRCPKGDIR}/apache/template
+
+# Unset unused stuff.
+unset subpackages conf_files system_accounts systemd_services
+unset post_install pre_configure run_depends
+
+# Override some vars.
+pkgname=apache-mpm-worker
+configure_args="${configure_args} --enable-modules= --prefix=/usr --with-mpm=worker"
+depends="libuuid expat libdb gdbm apache>=2.2.22"
+short_desc="Apache HTTP Server - high speed threaded mode"
+long_desc="
+ Each Apache Multi-Processing Module provides a different flavor of web
+ server binary, compiled with a different processing model.
+
+ The worker MPM provides the default threaded implementation. It is
+ recommended especially for high-traffic sites because it is faster and has
+ a smaller memory footprint than the traditional prefork MPM."
+
+systemd_services="${pkgname}.service on"
+
+# dlopen(3) run-time dependencies.
+
+
+pre_configure() {
+	cat ${XBPS_SRCPKGDIR}/apache/files/xbps.layout >> config.layout
+}
+
+post_install() {
+	# We are only interested in the httpd binary.
+	cp -f ${DESTDIR}/usr/sbin/httpd ${wrksrc}
+	rm -rf ${DESTDIR}/*
+	vinstall httpd 755 usr/sbin httpd.worker
+	vinstall ${FILESDIR}/${pkgname}.service 644 lib/systemd/system
+}

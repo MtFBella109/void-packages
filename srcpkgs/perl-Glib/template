@@ -25,7 +25,13 @@ pkgname=perl-Glib
 version=1.221
 wrksrc="Glib-$version"
 distfiles="${SOURCEFORGE_SITE}/gtk2-perl/Glib-$version.tar.gz"
+<<<<<<< HEAD
 build_style=perl_module
+=======
+build_style=perl-module
+makedepends="perl-ExtUtils-Depends>=0.300 perl-ExtUtils-PkgConfig>=1.00 glib-devel"
+fulldepends="perl"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Perl bindings for Glib 2"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=6dd382eb27c228104d9265e0c3962f854dde5004c05e2793a2da0ec16da8399a
@@ -37,8 +43,11 @@ long_desc="
  that make up the Gnome environment, and are used in many unrelated
  projects."
 
+<<<<<<< HEAD
 Add_dependency build perl-ExtUtils-Depends	">=0.300"
 Add_dependency build perl-ExtUtils-PkgConfig	">=1.00"
 Add_dependency full perl
 Add_dependency full glib
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

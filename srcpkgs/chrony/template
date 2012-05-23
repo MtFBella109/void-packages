@@ -4,11 +4,33 @@ pkgname=chrony
 version=4.7
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--without-nss --enable-scfilter
  --with-sendmail=/usr/bin/sendmail"
 hostmakedepends="pkg-config"
 makedepends="gnutls-devel libcap-devel libedit-devel libseccomp-devel
  nettle-devel pps-tools-devel"
+=======
+makedepends="libcap-devel readline-devel"
+short_desc="Sets your computer's clock from time servers on the Net"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+checksum=fb191ca4ba59e192c96d022618ca3eaee49f3c11f9af8dd7297020b27bf3e05b
+long_desc="
+ It consists of a pair of programs: chronyd. This is a daemon which runs in
+ background on the system. It obtains measurements (e.g. via the network) of
+ the system's offset relative to other systems, and adjusts the system time
+ accordingly. For isolated systems, the user can periodically enter the
+ correct time by hand (using chronyc). In either case, chronyd determines the
+ rate at which the computer gains or loses time, and compensates for this.
+ Chronyd implements the NTP protocol and can act as either a client or a
+ server. chronyc: this is a command-line driven control and monitoring program.
+ An administrator can use this to fine-tune various parameters within the
+ daemon, add or delete servers etc whilst the daemon is running."
+
+system_accounts="chrony"
+systemd_services="chrony.service on"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 conf_files="/etc/chrony.conf"
 short_desc="Versatile implementation of the Network Time Protocol (NTP)"
 maintainer="0x5c <dev@0x5c.io>"
@@ -24,11 +46,15 @@ make_dirs="
 	/var/log/chrony 0755 chrony chrony
 	/var/lib/chrony	0755 chrony chrony"
 
+<<<<<<< HEAD
 provides="ntp-daemon-0_1"
 alternatives="
  ntpd:ntpd:/usr/bin/chronyd
  ntpd:ntpd.8:/usr/share/man/man8/chronyd.8
  ntpd:ntpd:/etc/sv/chronyd"
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vconf examples/chrony.conf.example1 chrony.conf

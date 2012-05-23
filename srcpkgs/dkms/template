@@ -1,5 +1,6 @@
 # Template file for 'dkms'
 pkgname=dkms
+<<<<<<< HEAD
 version=3.2.1
 revision=1
 build_style=gnu-makefile
@@ -15,6 +16,19 @@ checksum=15941af7312af595ced516955aad33df82452c3ec9649ee48ababf8564682e03
 # dkms does not create this directory, but needs it
 # https://github.com/void-linux/void-packages/issues/39066
 make_dirs="/var/lib/dkms 0755 root root"
+=======
+version=2.2.0.3
+homepage="http://linux.dell.com/dkms"
+distfiles="${homepage}/permalink/dkms-$version.tar.gz"
+depends="bash module-init-tools gcc make coreutils kernel-headers"
+short_desc="Dynamic Kernel Modules System"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+checksum=352a080351410e29ae8cda7a794ba1e607b87ca913d0410d56209f08875378fc
+long_desc="
+ dkms is a framework which allows kernel modules to be dynamically built for
+ each kernel on your system in a simplified and organized fashion."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 case "$XBPS_TARGET_MACHINE" in
 	# Too many competing kernels for arm* to depend on linux-headers
@@ -22,9 +36,12 @@ case "$XBPS_TARGET_MACHINE" in
 	*) depends+=" linux-headers" ;;
 esac
 
+<<<<<<< HEAD
 if [ "$CROSS_BUILD" ]; then
 	depends+=" openssl-devel gmp-devel libada-devel libmpc-devel flex"
 fi
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install() {
 	# We are only interested in the bare minimum.

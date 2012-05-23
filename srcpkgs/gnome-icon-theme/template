@@ -5,6 +5,7 @@ version=3.12.0
 revision=3
 build_style=gnu-configure
 configure_args="--enable-icon-mapping"
+<<<<<<< HEAD
 hostmakedepends="pkg-config intltool librsvg icon-naming-utils gtk-update-icon-cache"
 makedepends="icon-naming-utils"
 short_desc="Theme consisting of a set of icons for GNOME"
@@ -23,6 +24,10 @@ pkgname=gnome-icon-theme
 version=2.26.0
 distfiles="${GNOME_SITE}/$pkgname/2.26/$pkgname-$version.tar.gz"
 build_style=gnu_configure
+=======
+makedepends="pkg-config intltool icon-naming-utils"
+fulldepends="librsvg>=0"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Theme consisting of a set of icons for GNOME"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=3404629afa659a61c539c7a9c3c5528ede7b23d2d9552ea7c5709285ab5ec74a
@@ -34,8 +39,15 @@ noarch=yes
 gtk_iconcache_dirs="/usr/share/icons/gnome"
 triggers="gtk-icon-cache"
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build intltool
 Add_dependency build icon-naming-utils
 Add_dependency full  librsvg
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+post_install() {
+	rm -f ${DESTDIR}/usr/share/icons/gnome/icon-theme.cache
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

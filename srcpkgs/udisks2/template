@@ -3,6 +3,7 @@ pkgname=udisks2
 version=2.10.1
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper="gir"
 # zram module is disabled, since it requires systemd units
 configure_args="--disable-static --with-udevdir=/usr/lib/udev
@@ -18,9 +19,31 @@ homepage="https://www.freedesktop.org/wiki/Software/udisks"
 changelog="https://raw.githubusercontent.com/storaged-project/udisks/master/NEWS"
 distfiles="https://github.com/storaged-project/udisks/releases/download/udisks-${version}/udisks-${version}.tar.bz2"
 checksum=b75734ccf602540dedb4068bec206adcb508a4c003725e117ae8f994d92d8ece
+=======
+configure_args="--disable-static --with-systemdsystemunitdir=/lib/systemd/system"
+depends="udev"
+makedepends="pkg-config intltool libxslt docbook-xsl acl-devel device-mapper-devel liblvm2app-devel libparted-devel libatasmart-devel polkit-devel libgudev-devel sg3_utils-devel"
+short_desc="Disk Management Service"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.freedesktop.org/wiki/Software/udisks"
+license="GPL-2"
+checksum=132e569d1b565a74c481d37ba27977c9aa9f5254baf79b2763898c9fa35a4ceb
+long_desc="
+ The udisks project provides:
+
+    * a storage daemon that implements well-defined D-Bus interfaces that
+      can be used to query and manipulate storage devices.
+    * a command-line tool, udisks, that can be used to query and use the daemon 
+
+ The actions that a user can perform using udisks are restricted using
+ PolicyKit."
+
+subpackages="udisks2-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 make_dirs="/var/lib/udisks2 0750 root root"
 conf_files="/etc/udisks2/udisks2.conf"
 
+<<<<<<< HEAD
 # Package build options
 build_options="gir"
 build_options_default="gir"
@@ -38,3 +61,6 @@ udisks2-devel_package() {
 		vmove usr/share/gtk-doc
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

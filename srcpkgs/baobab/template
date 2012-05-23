@@ -1,5 +1,6 @@
 # Template file for 'baobab'
 pkgname=baobab
+<<<<<<< HEAD
 version=48.0
 revision=1
 build_style=meson
@@ -13,3 +14,29 @@ homepage="https://wiki.gnome.org/action/show/Apps/DiskUsageAnalyzer"
 changelog="https://gitlab.gnome.org/GNOME/baobab/-/raw/main/NEWS"
 distfiles="${GNOME_SITE}/baobab/${version%.*}/baobab-${version}.tar.xz"
 checksum=54592504d49d807f23591be7e7eef10c6c9dfcb7ac527b81c3acd58787b26fda
+=======
+version=3.4.1
+distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-schemas-compile"
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config intltool itstool gnome-doc-utils gtk+3-devel libgtop-devel"
+fulldepends="gsettings-desktop-schemas"
+short_desc="A graphical directory tree analyzer"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+checksum=0c9743caf8cdc6dd69d694453cd57816c1ca0514cf51111022846088021949f7
+long_desc="
+ Baobab is able to scan either specific directories or the whole
+ filesystem, in order to give the user a graphical tree representation
+ including each directory size or percentage in the branch.
+ It also auto-detects in real-time any change made to your home
+  folder as far as any mounted/unmounted device."
+
+replaces="gnome-utils>=3.0"
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

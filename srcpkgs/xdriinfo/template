@@ -4,6 +4,7 @@ pkgname=xdriinfo
 version=1.0.7
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="libX11-devel MesaLib-devel"
 short_desc="X DRI information utility"
@@ -20,6 +21,9 @@ post_install() {
 version=1.0.3
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+makedepends="pkg-config libX11-devel MesaLib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X.org DRI information utility"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=2b762afd08c798d79fd6dacfd6280da39105927fa2bd91e3b1ba75b8cddc259c
@@ -28,8 +32,12 @@ long_desc="
  can be specified directly by driver name or indirectly by screen number.
  No X connection is needed if the driver name is explicitly specified."
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full MesaLib
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

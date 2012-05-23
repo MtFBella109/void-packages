@@ -1,5 +1,6 @@
 # Template file for 'xfsprogs'
 pkgname=xfsprogs
+<<<<<<< HEAD
 version=6.14.0
 revision=1
 build_style=gnu-configure
@@ -8,6 +9,12 @@ configure_args="--enable-editline=yes --enable-lib64=no --libdir=/usr/lib
 hostmakedepends="gettext pkg-config"
 makedepends="libblkid-devel libedit-devel inih-devel liburcu-devel
  libuuid-devel"
+=======
+version=3.1.8
+homepage="http://oss.sgi.com/projects/xfs/"
+distfiles="ftp://ftp.archlinux.org/other/xfsprogs/$pkgname-$version.tar.gz"
+makedepends="libuuid-devel libblkid-devel readline-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Utilities for managing the XFS filesystem"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -19,6 +26,7 @@ if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" liburcu-devel"
 fi
 
+<<<<<<< HEAD
 if [ "$XBPS_TARGET_LIBC" = "musl" ]; then
 	# glibc includes linux/statx.h, musl doesn't musls
 	# definition is not new enough so work around the broken
@@ -26,6 +34,20 @@ if [ "$XBPS_TARGET_LIBC" = "musl" ]; then
 	# struct definition.
 	configure_args+=" ac_cv_type_struct_statx=no"
 fi
+=======
+replaces="xfsprogs-libs>=0"
+
+disable_parallel_build=yes
+subpackages="$pkgname-devel"
+
+
+do_build() {
+	export DEBUG=-DNDEBUG
+	./configure ${CONFIGURE_SHARED_ARGS} \
+		--enable-readline=yes --enable-blkid=yes --enable-lib64=no
+	make ${makejobs}
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install() {
 	make install install-dev DIST_ROOT=${DESTDIR} \

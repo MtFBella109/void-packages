@@ -21,7 +21,13 @@ post_install() {
 pkgname=xev
 version=1.0.4
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+makedepends="pkg-config libX11-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Display X events"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=7fad9c9755a624e677f44633dee218e9c22b4ba9a83e6709a6cbf8c1a501fde8
@@ -33,7 +39,10 @@ long_desc="
 
  This is the version of xev maintained by Xorg."
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libX11
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

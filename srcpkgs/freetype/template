@@ -43,7 +43,12 @@ freetype-devel_package() {
 pkgname=freetype
 version=2.3.9
 distfiles="${NONGNU_SITE}/$pkgname/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config zlib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Font rendering engine and library API"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=51a033bce9904d73e0821e8e2bba24bd319619d7d1b2e9eeccac611580242ab6
@@ -59,7 +64,10 @@ long_desc="
   * An improved anti-aliasing algorithm"
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full zlib
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

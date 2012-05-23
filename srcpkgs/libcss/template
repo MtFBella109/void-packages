@@ -1,5 +1,6 @@
 # Template file for 'libcss'
 pkgname=libcss
+<<<<<<< HEAD
 version=0.9.2
 revision=1
 hostmakedepends="pkg-config perl netsurf-buildsystem"
@@ -11,6 +12,32 @@ homepage="https://www.netsurf-browser.org"
 distfiles="https://download.netsurf-browser.org/libs/releases/${pkgname}-${version}-src.tar.gz"
 checksum=2df215bbec34d51d60c1a04b01b2df4d5d18f510f1f3a7af4b80cddb5671154e
 CFLAGS="-Wno-error"
+=======
+version=0.1.2
+homepage="http://www.netsurf-browser.org"
+distfiles="${homepage}/projects/releases/${pkgname}-${version}-src.tar.gz"
+makedepends="pkg-config perl libparserutils-devel libwapcaplet-devel"
+short_desc="CSS parser and selection engine, written in C."
+maintainer="davehome <davehome@redthumb.info.tm>"
+checksum=92c112a059bc5ae490392439401005b47ca5c270f891f6317b64aac738ae1f5e
+license="MIT"
+long_desc="
+ LibCSS is a CSS (Cascading Style Sheet) parser and selection engine,
+ written in C. It was developed as part of the NetSurf project and is
+ available for use by other software under the MIT licence. For further
+ details, see the readme.
+
+ * Features
+ 	Parses CSS, good and bad
+ 	Simple C API
+ 	Low memory usage
+ 	Fast selection engine
+ 	Portable
+ 	Shared library"
+
+subpackages="${pkgname}-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_build() {
 	make ${makejobs} HOST_CC=cc COMPONENT_TYPE=lib-static PREFIX=/usr BUILDDIR=build-static-lib

@@ -3,7 +3,10 @@ pkgname=libassuan
 version=2.5.7
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--with-libgpg-error-prefix=${XBPS_CROSS_BASE}/usr"
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 makedepends="libgpg-error-devel"
 short_desc="IPC library used by some GnuPG related software"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -12,6 +15,7 @@ homepage="https://www.gnupg.org/related_software/libassuan"
 distfiles="https://www.gnupg.org/ftp/gcrypt/libassuan/libassuan-${version}.tar.bz2"
 checksum=0103081ffc27838a2e50479153ca105e873d3d65d8a9593282e9c94c7e6afb76
 
+<<<<<<< HEAD
 libassuan-devel_package() {
 	depends="libgpg-error-devel ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -23,3 +27,7 @@ libassuan-devel_package() {
 		vmove usr/lib/pkgconfig
 	}
 }
+=======
+subpackages="$pkgname-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

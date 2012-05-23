@@ -3,10 +3,14 @@ pkgname=libgee
 version=0.20.8
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper="gir"
 configure_args="--disable-static"
 hostmakedepends="pkg-config $(vopt_if vala 'vala')"
 makedepends="glib-devel"
+=======
+makedepends="pkg-config intltool glib-devel vala-devel gobject-introspection"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GObject collection library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -15,6 +19,7 @@ changelog="https://gitlab.gnome.org/GNOME/libgee/-/raw/master/NEWS"
 distfiles="${GNOME_SITE}/libgee/${version%.*}/libgee-${version}.tar.xz"
 checksum=189815ac143d89867193b0c52b7dc31f3aa108a15f04d6b5dca2b6adfad0b0ee
 
+<<<<<<< HEAD
 # Package build options
 build_options="gir vala"
 build_options_default="gir vala"
@@ -46,3 +51,6 @@ libgee08_package() {
 	short_desc+=" - transitional dummy package"
 	metapackage=yes
 }
+=======
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,12 +1,16 @@
 # Template file for 'rsyslog-gnutls'.
 #
+depends="rsyslog"
 short_desc="${sourcepkg} GnuTLS add-on"
 long_desc="${long_desc}
 
  This package contains the GnuTLS add-on to send encrypted messages."
 
+<<<<<<< HEAD
 Add_dependency run rsyslog
 Add_dependency run gnutls
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

@@ -1,0 +1,34 @@
+# Template file for 'libldap'
+pkgname=libldap
+version=2.4.31
+wrksrc="openldap-${version}"
+homepage="http://www.openldap.org"
+distfiles="ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/openldap-$version.tgz"
+build_style=gnu-configure
+configure_args="--enable-dynamic --enable-proctitle --with-tls
+--enable-ipv6 --enable-local --with-cyrus-sasl --with-threads
+--enable-syslog --disable-slapd"
+makedepends="pkg-config libsasl-devel openssl-devel groff"
+short_desc="OpenLDAP libraries"
+license="OpenLDAP License v2.8 -- BSD alike"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=bde845840df4794b869a6efd6a6b1086f80989038e4844b2e4d7d6b57b39c5b6
+long_desc="
+ These are the run-time libraries for the OpenLDAP (Lightweight Directory
+ Access Protocol) servers and clients."
+
+conf_files="/etc/openldap/ldap.conf" 
+subpackages="libldap-devel"
+
+
+post_install() {
+	# Remove unused stuff.
+	rm -rf ${DESTDIR}/usr/bin
+	rm -rf ${DESTDIR}/usr/share/man/man[18]
+	rm -f ${DESTDIR}/etc/openldap/*.default
+	mv ${DESTDIR}/usr/share/man/man5/ldap.conf.5 ${DESTDIR}/usr/share/man
+	rm -f ${DESTDIR}/usr/share/man/man5/*
+	mv ${DESTDIR}/usr/share/man/ldap.conf.5 ${DESTDIR}/usr/share/man/man5
+	# License	
+	vinstall LICENSE 644 usr/share/licenses/$pkgname
+}

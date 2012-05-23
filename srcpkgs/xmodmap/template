@@ -21,7 +21,12 @@ post_install() {
 pkgname=xmodmap
 version=1.0.4
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config libX11-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X modmap program"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=805a63525d99f59d60a11aa89121fb9cdb001c8d542237ac4deafbadc7bd0bed
@@ -29,8 +34,12 @@ long_desc="
  The xmodmap tool is used to modify keymaps and pointer button mappings in X.
 
  This is from modular Xorg X11."
+<<<<<<< HEAD
  
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libX11
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

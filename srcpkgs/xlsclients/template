@@ -21,7 +21,13 @@ post_install() {
 pkgname=xlsclients
 version=1.0.2
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+makedepends="pkg-config xcb-util-devel libxcb-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X client listing utility"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=8527cdd29d4fcc67df014bc8b371be98901c9082b8de81ea2302bf705c887698
@@ -31,7 +37,10 @@ long_desc="
 
  This is from the modular X.org X11 project."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libXmu
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

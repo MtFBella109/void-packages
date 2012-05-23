@@ -3,11 +3,16 @@ pkgname=libpcap
 version=1.10.5
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-ipv6 --with-libnl --with-pcap=linux
  $(vopt_enable bluetooth) $(vopt_enable dbus) $(vopt_enable usb)"
 hostmakedepends="pkg-config flex"
 makedepends="libnl3-devel $(vopt_if bluetooth libbluetooth-devel)
  $(vopt_if dbus dbus-devel) $(vopt_if usb libusb-devel)"
+=======
+configure_args="--enable-ipv6"
+makedepends="flex libnl-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="System-independent interface for user-level packet capture"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
@@ -16,6 +21,7 @@ changelog="https://www.tcpdump.org/libpcap-changes.txt"
 distfiles="https://www.tcpdump.org/release/libpcap-${version}.tar.gz"
 checksum=37ced90a19a302a7f32e458224a00c365c117905c2cd35ac544b6880a81488f0
 
+<<<<<<< HEAD
 build_options="bluetooth dbus usb"
 build_options_default="usb"
 
@@ -45,3 +51,6 @@ libpcap-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

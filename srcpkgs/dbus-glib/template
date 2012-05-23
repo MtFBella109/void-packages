@@ -5,6 +5,7 @@ version=0.112
 revision=1
 build_style=gnu-configure
 configure_args="--disable-static --disable-bash-completion"
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="libglib-devel dbus-devel"
 depends="dbus"
@@ -41,6 +42,11 @@ version=0.80
 distfiles="http://dbus.freedesktop.org/releases/$pkgname/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 configure_args="--enable-static=no --enable-bash-completion=no"
+=======
+revision=2
+depends="expat"
+makedepends="pkg-config glib-devel dbus-devel expat-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GLib bindings for D-Bus"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=b5330b91b3131757103da2b3147e211e71214475f5d77640022ea9bb587f645b
@@ -49,6 +55,7 @@ long_desc="
  the GLib thread abstraction and main loop."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full glib
 Add_dependency build dbus
@@ -59,3 +66,6 @@ post_install()
 	rm -rf ${DESTDIR}/etc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

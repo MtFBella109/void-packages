@@ -31,13 +31,25 @@ post_install() {
 pkgname=xf86-video-ati
 version=6.12.4
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="xorg-server"
+makedepends="pkg-config xf86driproto libudev-devel libpciaccess-devel libdrm-devel pixman-devel xorg-server-devel MesaLib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg ATI Radeon video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=cfde066a7087a19b624f79e95cb9a6c97a847b8802cf38d4ae6022758bf338f6
 long_desc="
  This is the video driver for ATI Radeon cards for the Xorg X11 server."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+replaces="${pkgname}>=0"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

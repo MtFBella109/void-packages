@@ -39,7 +39,12 @@ revision=1
 distfiles="ftp://pkg-shadow.alioth.debian.org/pub/pkg-shadow/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--libdir=/lib --enable-shared --disable-static
+<<<<<<< HEAD
  --with-libpam --without-selinux"
+=======
+--with-libpam --without-selinux --with-acl --with-attr"
+makedepends="acl-devel pam-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Shadow password file utilities"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=97987f6a7967a85e6aa0dba2a1d52db8bd69af5a717391de5693db768fb78990
@@ -57,8 +62,13 @@ Add_dependency full glibc
 Add_dependency full pam
 Add_dependency build gettext
 
+<<<<<<< HEAD
 pre_build()
 {
+=======
+
+pre_build() {
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 	# Don't install the groups cmd, we use the one from coreutils.
 	cd $wrksrc || return 1
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)

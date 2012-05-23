@@ -16,10 +16,18 @@ checksum=2649b27c0e90e632eadcd757be06c6e9a4f48d941de51e7c0f83ff76408a07b9
 =======
 # Template build file for 'grep'.
 pkgname=grep
+<<<<<<< HEAD
 version=2.5.4
 distfiles="http://ftp.gnu.org/gnu/grep/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--disable-perl-regexp"
+=======
+version=2.12
+homepage="http://www.gnu.org/software/grep/"
+distfiles="http://ftp.gnu.org/gnu/grep/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+makedepends="pcre-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The GNU grep utility"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=0abec64e01458fbd032e33351d8071602a959529ea796965e98338ee83a40020
@@ -30,7 +38,10 @@ long_desc="
  full regexp matcher without necessarily having to look at every character.
  The result is typically many times faster than Unix grep or egrep."
 
+<<<<<<< HEAD
 Add_dependency build texinfo
 Add_dependency build gettext
 Add_dependency run glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

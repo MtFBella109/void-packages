@@ -55,6 +55,8 @@ revision=1
 distfiles="ftp://ftp.gnu.org/gnu/${pkgname}/${pkgname}-${version}.tar.gz"
 build_style=gnu_configure
 configure_args="--enable-compile-in-filters"
+makedepends="ncurses-devel"
+fulldepends="perl>=0"
 short_desc="Spell checker with good multi-language support"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=4f5b1520e26cf6bbb1b5ca8a2f9f22948c3ca38ac4c2dd9e02df042fee7c0e36
@@ -70,8 +72,11 @@ long_desc="
 
 # XXX Add missing ncursesw dependency.
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full ncurses
 Add_dependency full perl
 Add_dependency run  libstdc++
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

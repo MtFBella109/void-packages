@@ -4,6 +4,7 @@ version=3.20.0
 revision=2
 build_style=gnu-configure
 configure_args="--disable-static"
+<<<<<<< HEAD
 hostmakedepends="pkg-config intltool glib-devel"
 makedepends="libglib-devel gtk+3-devel libcanberra-devel"
 depends="desktop-file-utils"
@@ -13,3 +14,19 @@ license="GPL-2.0-or-later"
 homepage="http://www.galago-project.org/specs/notification/"
 distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
 checksum=dd13768f35fd8bba9c4920b0f8269f39270e5a3cfed1a34c3b940a492286ece5
+=======
+depends="desktop-file-utils"
+makedepends="pkg-config intltool glib-devel gtk+3-devel libcanberra-devel"
+short_desc="Shows notification messages on the desktop"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=9591273ee2099215cfbe1ce7eb7c08e8cbc3743d0a119e331889ffe9004e6f2f
+long_desc="
+ notification-daemon is an application that shows notifications sent by
+ other applications on your desktop in the form of popups. It is based
+ on the libnotify library."
+
+replaces="notification-daemon>=0"
+conflicts="xfce4-notifyd>=0"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

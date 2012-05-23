@@ -1,7 +1,21 @@
 # Template file for 'base-files'
 pkgname=base-files
+<<<<<<< HEAD
 version=0.145
 revision=1
+=======
+version=0.62
+fulldepends="base-directories xbps-triggers"
+short_desc="Void GNU/Linux base system files"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://code.google.com/p/xbps"
+license="Public domain"
+long_desc="
+ This package installs the base system files that aren't installed by any
+ other package and are required on any GNU/Linux system."
+
+noarch=yes
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 bootstrap=yes
 depends="xbps-triggers"
 short_desc="Void Linux base system files"
@@ -27,9 +41,12 @@ conf_files="
 	/etc/crypttab
 	/etc/nsswitch.conf"
 
+<<<<<<< HEAD
 replaces="base-directories>=0"
 # New system groups
 system_groups="kvm:24 plugdev:26 usbmon:27 sgx:28"
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install() {
 	# Create bin and lib dirs and symlinks.

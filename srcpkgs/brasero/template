@@ -5,10 +5,15 @@ revision=2
 build_style=gnu-configure
 build_helper="gir"
 configure_args="--disable-schemas-compile --disable-caches"
+<<<<<<< HEAD
 hostmakedepends="pkg-config intltool cdrtools itstool"
 makedepends="gst-plugins-base1-devel totem-pl-parser-devel libnotify-devel
  libcanberra-devel libisofs-devel libburn-devel libSM-devel dconf-devel"
 depends="cdrdao cdrtools dconf shared-mime-info hicolor-icon-theme desktop-file-utils"
+=======
+depends="cdrtools dconf>=0 shared-mime-info hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config intltool which gnome-doc-utils gobject-introspection gst-plugins-base-devel totem-pl-parser-devel libnotify-devel libcanberra-devel nautilus-devel tracker-devel libisofs-devel libburn-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Application to burn CD/DVD for the Gnome Desktop"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -27,6 +32,7 @@ post_patch() {
 		configure
 }
 
+<<<<<<< HEAD
 brasero-devel_package() {
 	depends="gtk+3-devel brasero>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -40,3 +46,6 @@ brasero-devel_package() {
 		vmove usr/share/gtk-doc
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

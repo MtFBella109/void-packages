@@ -51,6 +51,7 @@ wrksrc=${pkgname}-${bash_distver}
 distfiles="http://ftp.gnu.org/gnu/bash/bash-${bash_distver}.tar.gz"
 build_style=gnu_configure
 configure_args="--without-bash-malloc --with-curses --bindir=/bin
+<<<<<<< HEAD
  --enable-array-variables --enable-brace-expansion --enable-casemod-attributes
  --enable-casemod-expansions --enable-command-timing --enable-cond-command
  --enable-cond-regexp --enable-coprocesses --enable-debugger
@@ -59,6 +60,17 @@ configure_args="--without-bash-malloc --with-curses --bindir=/bin
  --enable-process-substitution --enable-progcomp --enable-prompt-string-decoding
  --enable-select --enable-net-redirections --enable-restricted
  ac_cv_func_working_mktime=yes"
+=======
+--enable-array-variables --enable-brace-expansion --enable-casemod-attributes
+--enable-casemod-expansions --enable-command-timing --enable-cond-command
+--enable-cond-regexp --enable-coprocesses --enable-debugger
+--enable-directory-stack --enable-dparen-arithmetic --enable-extended-glob
+--enable-help-builtin --enable-history --enable-job-control --enable-multibyte
+--enable-process-substitution --enable-progcomp --enable-prompt-string-decoding
+--enable-select --enable-net-redirections --enable-restricted --enable-readline
+--with-installed-readline"
+makedepends="readline-devel ncurses-devel bison"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The GNU Bourne Again Shell"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=9793d394f640a95030c77d5ac989724afe196921956db741bcaf141801c50518
@@ -78,10 +90,13 @@ base_chroot=yes
 essential=yes
 register_shell="/bin/bash"
 
+<<<<<<< HEAD
 Add_dependency run	glibc
 Add_dependency build	ncurses
 Add_dependency run	ncurses-libs
 Add_dependency run	coreutils
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure()
 {

@@ -33,7 +33,12 @@ libXau-devel_package() {
 pkgname=libXau
 version=1.0.5
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config xproto"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Authorization Protocol for X from X.org"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a503b3e88d29fa9c45cce1b2d1af54106c2ce21491348c394e251a071d8108ee
@@ -42,7 +47,10 @@ long_desc="
  X.org X11 project."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency build pkg-config
 Add_dependency build xproto
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

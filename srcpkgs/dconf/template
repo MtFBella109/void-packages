@@ -1,5 +1,6 @@
 # Template file for 'dconf'
 pkgname=dconf
+<<<<<<< HEAD
 version=0.40.0
 revision=1
 build_style=meson
@@ -24,3 +25,22 @@ dconf-devel_package() {
 		vmove usr/share/vala
 	}
 }
+=======
+version=0.12.1
+distfiles="${GNOME_SITE}/$pkgname/0.12/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+depends="dbus"
+makedepends="pkg-config vala-devel dbus-devel gtk+3-devel libxml2-devel"
+short_desc="A low-level configuration system"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://live.gnome.org/dconf"
+licenses="LGPL-2.1"
+checksum=3cd32b78d88ed7be90dace5d45e2cf8a6abdb253d43dbfa5ef52103b329dc214
+long_desc="
+ dconf is a low-level configuration system. Its main purpose is to provide a
+ backend to GSettings on platforms that don't already have configuration
+ storage systems."
+
+subpackages="dconf-devel dconf-editor"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

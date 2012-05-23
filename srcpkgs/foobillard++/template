@@ -12,6 +12,7 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="http://foobillardplus.sourceforge.net/"
 distfiles="${SOURCEFORGE_SITE}/foobillardplus/foobillardplus-$version.tar.gz"
+<<<<<<< HEAD
 checksum=e276b70674a7d788c45eeff89f1f5db5d48d871a1ab92103813d424a3761e1d9
 CFLAGS="-fgnu89-inline"
 # flags from freetype-config and sdl-config
@@ -24,6 +25,31 @@ pre_configure() {
 	vsed -i 's|$prefix/data|$prefix/share/foobillardplus|' configure
 	vsed -i 's|/opt/foobillardplus/bin/||' foobillardplus.desktop
 	vsed -i 's|/opt/foobillardplus/||' foobillardplus.desktop
+=======
+makedepends="freetype-devel libpng-devel MesaLib-devel SDL_net-devel"
+fulldepends="desktop-file-utils"
+short_desc="An OpenGL billard game - fork of foobillard"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+checksum=e69218d4458c2c769396d7e8583e7309b719f8a15e9965940cf8aec2aaeca69a
+long_desc="
+ It is not a new game, but an enhanced version of the great foobillard
+ 3.0a by Florian Berger."
+ 
+
+
+do_configure() {
+	sed -i 's|$prefix/foobillardplus|$prefix|' configure
+	sed -i 's|$prefix/data|$prefix/share/foobillardplus|' configure
+	sed -i 's|"/data"|"/share/foobillardplus"|' src/language.c
+	sed -i 's|/opt/foobillardplus/bin/||' foobillardplus.desktop
+	sed -i 's|/opt/foobillardplus/||' foobillardplus.desktop
+	./configure ${CONFIGURE_SHARED_ARGS}
+}
+
+do_build() {
+	make ${makejobs}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }
 
 do_install() {

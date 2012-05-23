@@ -2,7 +2,13 @@
 pkgname=xf86-video-chips
 version=1.2.2
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="glibc xorg-server"
+makedepends="xorg-server-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg Chips and Technologies video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=ff6fef2cffc62feb3b23f3fee375e502ab7356d571517a89b4de67f0f6037f0e
@@ -10,5 +16,8 @@ long_desc="
  This is the video driver for Chips and Technologies video cards for
  the Xorg X11 server."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

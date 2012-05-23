@@ -37,10 +37,19 @@ libxklavier-devel_package() {
 =======
 # Template build file for 'libxklavier'.
 pkgname=libxklavier
+<<<<<<< HEAD
 version=3.9
 distfiles="${GNOME_SITE}/$pkgname/$version/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--localstatedir=/var"
+=======
+version=5.2.1
+revision=2
+distfiles="${GNOME_SITE}/$pkgname/5.2/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+makedepends="pkg-config glib-devel libxkbfile-devel libxml2-devel>=2.7.8 libXi-devel gobject-introspection"
+fulldepends="xkeyboard-config iso-codes"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library providing high-level API for X Keyboard Extension"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=462a4e427f201a23de194f824dce70c84867464956f2f6c8dd4a5e07f1f4a554
@@ -51,6 +60,7 @@ long_desc="
  (layout indicators etc)."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libxkbfile
@@ -60,3 +70,6 @@ Add_dependency full xkeyboard-config
 Add_dependency full libXi
 Add_dependency full iso-codes
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

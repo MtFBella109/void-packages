@@ -3,6 +3,7 @@ pkgname=mash
 version=0.2.0
 revision=9
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper="gir"
 configure_args="--disable-static $(vopt_enable gir introspection)
  --enable-gtk-doc"
@@ -17,10 +18,25 @@ homepage="https://clutter-project.github.io/mash/"
 distfiles="https://github.com/clutter-project/mash/archive/refs/tags/${version}.tar.gz"
 checksum=a5f91f0828c3c63a845800443ab347417cb34882db3b6672b42f6d68355ddab8
 nocross="Build system executes what it builds"
+=======
+configure_args="--enable-introspection --disable-static"
+makedepends="pkg-config intltool gobject-introspection clutter-devel"
+short_desc="A small library for using 3D models within a Clutter scene"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.clutter-project.org"
+license="LGPL-2.1"
+checksum=7a761e270ac15d2afdf4915a18f41d4855adde35c18ce3c75d294dae5056920a
+long_desc="
+ Mash is a small library for using real 3D models within a Clutter
+ scene. Models can be exported from Blender or other 3D modelling
+ software as PLY files and then used as actors. It also supports a
+ lighting model with animatable lights."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 build_options="gir"
 build_options_default="gir"
 
+<<<<<<< HEAD
 pre_configure() {
 	autoreconf -fi
 }
@@ -36,3 +52,5 @@ mash-devel_package() {
 		vmove usr/lib/*.so
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

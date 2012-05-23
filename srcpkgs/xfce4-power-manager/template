@@ -3,6 +3,7 @@ pkgname=xfce4-power-manager
 version=4.20.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static"
 hostmakedepends="pkg-config gettext glib-devel wayland-devel polkit"
 makedepends="libxfce4ui-devel libnotify-devel upower-devel xfce4-panel-devel
@@ -14,3 +15,19 @@ license="GPL-2.0-or-later"
 homepage="https://xfce.org/"
 distfiles="https://archive.xfce.org/src/xfce/$pkgname/${version%.*}/$pkgname-$version.tar.bz2"
 checksum=971391cef63352833bdd92df28957392e17e1f2b3d486c0f57294fd204d6ed29
+=======
+configure_args="--enable-polkit --enable-dpms
+--disable-debug --enable-network-manager --disable-static"
+depends="upower udisks hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config intltool libxfce4ui-devel libxfce4util-devel xfconf-devel libnotify-devel gtk+-devel libXrandr-devel dbus-glib-devel xfce4-panel-devel NetworkManager-devel"
+short_desc="Xfce power manager"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+checksum=d7fb98a540284b62f4201527de17d4b24123f9d26c9f49131dd497c8387184e9
+long_desc="
+ $pkgname is the power manager for the Xfce desktop environment."
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

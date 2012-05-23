@@ -4,6 +4,7 @@ pkgname=xfwm4
 version=4.20.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config gettext"
 makedepends="libxfce4ui-devel startup-notification-devel
  libXcomposite-devel libXdamage-devel libXfixes-devel libXrandr-devel
@@ -27,6 +28,10 @@ version=4.6.1
 distfiles="http://mocha.xfce.org/archive/xfce-$version/src/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--enable-compositor --enable-xsync"
+=======
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config intltool libxfce4ui-devel gtk+-devel libxfce4util-devel xfconf-devel startup-notification-devel libXcomposite-devel libXdamage-devel libXfixes-devel libXrandr-devel libXrender-devel dbus-glib-devel libwnck2-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Next generation window manager for Xfce"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=0a808d19a7ddf1f5271d0b7009a5d0dc919562a85afab4071df060f51e9ee9ed
@@ -35,6 +40,7 @@ long_desc="
  KDE3 and Xfce."
 
 gtk_iconcache_dirs="/usr/share/icons/hicolor"
+<<<<<<< HEAD
 triggers="gtk-icon-cache"
  
 Add_dependency build pkg-config
@@ -47,3 +53,7 @@ Add_dependency full libxfcegui4
 Add_dependency full hicolor-icon-theme
 Add_dependency full desktop-file-utils
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

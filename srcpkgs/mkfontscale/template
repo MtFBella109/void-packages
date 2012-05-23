@@ -29,6 +29,7 @@ version=1.0.7
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--with-bzip2"
+makedepends="xproto pkg-config zlib-devel freetype-devel libfontenc-devel"
 short_desc="X11 Scalable Font Index Generator"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=8306b229cca233216a6582cb1ff60af78e37c47d6412ac823d7d41c3d7de7127
@@ -36,6 +37,7 @@ long_desc="
  This package contains the mkfontscale, a program to generate legacy X11
  font indices for scalable fonts. This is from the modular X.org project."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full zlib
 Add_dependency full bzip2
@@ -43,3 +45,5 @@ Add_dependency full freetype
 Add_dependency full libfontenc
 Add_dependency build xproto
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

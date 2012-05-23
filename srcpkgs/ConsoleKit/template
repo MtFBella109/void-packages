@@ -2,8 +2,15 @@
 pkgname=ConsoleKit
 version=0.3.0
 distfiles="http://www.freedesktop.org/software/$pkgname/dist/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
 configure_args="--disable-docbook-docs --enable-pam-module --localstatedir=/var"
+=======
+build_style=gnu-configure
+configure_args="--enable-docbook-docs --enable-pam-module
+--with-systemdsystemunitdir=/lib/systemd/system"
+makedepends="pkg-config xmlto libX11-devel dbus-devel glib-devel dbus-glib-devel pam-devel polkit-devel zlib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Framework for defining and tracking users, login sessions and seats"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=cbcfbb3df2dc76855c99c1cdff04a257ec5270fa62e1d21b0d057b08d88c0fd4
@@ -17,6 +24,7 @@ conf_files="/etc/dbus-1/system.d/ConsoleKit.conf
  /etc/ConsoleKit/seats.d/00-primary.seat"
 
 subpackages="$pkgname-devel $pkgname-x11"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full dbus
 Add_dependency full dbus-glib
@@ -27,3 +35,21 @@ Add_dependency full PolicyKit
 Add_dependency full readline
 Add_dependency build libX11
 Add_dependency build pkg-config
+=======
+make_dirs="/var/log/${pkgname} 0755 root root"
+
+
+
+post_install()
+{
+	vinstall ${FILESDIR}/pam-foreground-compat.ck 755 \
+		usr/lib/${pkgname}/run-session.d
+	for f in seat session; do
+		vmkdir etc/${pkgname}/run-${f}.d
+		touch ${DESTDIR}/etc/${pkgname}/run-${f}.d/.owned
+	done
+	vmkdir usr/lib/${pkgname}/run-seat.d
+	touch ${DESTDIR}/usr/lib/${pkgname}/run-seat.d/.owned
+	vinstall ${FILESDIR}/ck.logrotate 644 etc/logrotate.d ConsoleKit
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

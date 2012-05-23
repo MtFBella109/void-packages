@@ -3,6 +3,7 @@ pkgname=htop
 version=3.4.1
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-unicode --enable-sensors"
 makedepends="ncurses-devel libsensors-devel"
 short_desc="Interactive process viewer"
@@ -12,3 +13,19 @@ homepage="https://htop.dev/"
 changelog="https://raw.githubusercontent.com/htop-dev/htop/main/ChangeLog"
 distfiles="https://github.com/htop-dev/htop/releases/download/${version}/htop-${version}.tar.xz"
 checksum=904f7d4580fc11cffc7e0f06895a4789e0c1c054435752c151e812fead9f6220
+=======
+configure_args="--enable-unicode --enable-cgroup --enable-taskstats"
+makedepends="bison python>=0"
+short_desc="An interactive process viewer"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+checksum=242879b86db4b97e1090e7cd391247268ccbe90834ff34b6e8242926c9664852
+long_desc="
+ htop is an interactive process viewer for Linux. It is a text-mode terminal
+ application (for console or X terminals) and requires ncurses."
+
+
+pre_configure() {
+	sed -i 's|ncursesw/curses.h|curses.h|' RichString.h RichString.c configure 
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

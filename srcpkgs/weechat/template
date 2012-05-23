@@ -3,6 +3,7 @@ pkgname=weechat
 version=4.7.1
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DENABLE_MAN=ON -DENABLE_PERL=ON
  -DENABLE_LUA=ON -DENABLE_RUBY=ON -DENABLE_SPELL=ON
  -DENABLE_GUILE=OFF -DENABLE_PHP=OFF -DENABLE_JAVASCRIPT=OFF"
@@ -20,9 +21,24 @@ changelog="https://raw.githubusercontent.com/weechat/weechat/master/CHANGELOG.md
 distfiles="https://www.weechat.org/files/src/weechat-${version}.tar.xz"
 checksum=e83fb71ca251c5dd74bd9c5a6bd3f85dc2eb8ecec0955f43c07f3e0911edb7d3
 lib32disabled=yes
+=======
+makedepends="cmake perl pkg-config tcl-devel aspell-devel libgcrypt-devel gnutls-devel python-devel ruby-devel lua-devel libcurl-devel"
+short_desc="Fast, light and extensible IRC client (curses UI)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3"
+checksum=8ef5e3daf49e75669e36093c1df852e65b51d512073c6e6b935a7fa90f6b7bca
+long_desc="
+ WeeChat is:
+  - modular: a lightweight core with plugins around
+  - multi-protocols: IRC and Jabber (other soon)
+  - extensible: C plugins and scripts (Perl, Python, Ruby, Lua and Tcl)
+  - free software: released under GPLv3 license
+  - fully documented: user's guide, API, FAQ,.. translated in many languages"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 subpackages="weechat-aspell weechat-devel weechat-ruby weechat-python weechat-tcl weechat-lua weechat-perl"
 
+<<<<<<< HEAD
 if [ "$CROSS_BUILD" ]; then
 	_perlpath="${XBPS_CROSS_BASE}/usr/lib/perl5/core_perl/CORE"
 	configure_args+=" -DPERL_FOUND=1
@@ -93,3 +109,5 @@ weechat-lua_package() {
 		vmove usr/lib/weechat/plugins/lua.so
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

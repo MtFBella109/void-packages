@@ -3,9 +3,13 @@ pkgname=xkbutils
 <<<<<<< HEAD
 version=1.0.6
 revision=1
+<<<<<<< HEAD
 build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="libX11-devel libXaw-devel xorgproto"
+=======
+makedepends="pkg-config libX11-devel libXaw-devel libXt-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="XKBD Utilities"
 homepage="http://xorg.freedesktop.org"
 license="MIT"
@@ -26,6 +30,7 @@ long_desc="
  The xkbutils package provides some XKB related utilities for
  XKB-capable X servers."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libxkbfile
@@ -36,3 +41,5 @@ Add_dependency full libSM
 Add_dependency full libICE
 Add_dependency build pkg-config
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

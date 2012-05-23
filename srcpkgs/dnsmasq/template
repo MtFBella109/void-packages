@@ -1,10 +1,19 @@
 # Template file for 'dnsmasq'
 pkgname=dnsmasq
+<<<<<<< HEAD
 version=2.91
 revision=1
 conf_files="/etc/dnsmasq.conf"
 hostmakedepends="pkg-config"
 makedepends="dbus-devel libcap-devel libidn2-devel $(vopt_if dnssec nettle-devel)"
+=======
+version=2.58
+revision=3
+homepage="http://www.thekelleys.org.uk/dnsmasq/doc.html"
+distfiles="http://www.thekelleys.org.uk/$pkgname/$pkgname-$version.tar.gz"
+depends="libcap libidn dbus"
+makedepends="dbus-devel libcap-devel libidn-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Lightweight, easy to configure DNS forwarder and DHCP server"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -15,11 +24,18 @@ checksum=2d26a048df452b3cfa7ba05efbbcdb19b12fe7a0388761eb5d00938624bd76c8
 system_accounts="dnsmasq"
 dnsmasq_homedir="/var/chroot"
 
+<<<<<<< HEAD
 build_options="dnssec"
 build_options_default="dnssec"
 desc_option_dnssec="Enable DNSSEC support via nettle"
 
 do_build() {
+=======
+
+
+do_build()
+{
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 	echo '#define HAVE_DBUS' >> src/config.h
 	echo '#define HAVE_LIBIDN2' >> src/config.h
 	if [ "$build_option_dnssec" ]; then

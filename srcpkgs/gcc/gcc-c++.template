@@ -1,5 +1,6 @@
 # Template file for 'gcc-c++'.
 #
+depends="libelf gcc>=4.7 libstdc++-devel>=4.7"
 short_desc="GCC C++ support"
 long_desc="${long_desc}
 
@@ -7,10 +8,13 @@ long_desc="${long_desc}
 
 revision=1
 
+<<<<<<< HEAD
 Add_dependency run gcc
 Add_dependency run libstdc++-devel
 
 revision=1
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

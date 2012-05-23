@@ -4,10 +4,16 @@ reverts="0.16.0_1"
 version=0.9.8
 revision=4
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--with-xmlrpc-c"
 hostmakedepends="automake libtool pkg-config"
 makedepends="libcppunit-devel libsigc++-devel libtorrent-devel ncurses-devel
  xmlrpc-c-devel"
+=======
+configure_args="--disable-debug"
+revision=1
+makedepends="glibc-devel libcurl-devel libsigc++-devel libstdc++-devel libtorrent-devel ncurses-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Ncurses BitTorrent client based on libTorrent"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -15,6 +21,7 @@ homepage="https://github.com/rakshasa/rtorrent"
 distfiles="https://github.com/rakshasa/${pkgname}/archive/v${version}.tar.gz"
 checksum=bc889ce1dde475ec56aa72ae996912ff58723226a4f4256fef4f1f8636d991d4
 
+<<<<<<< HEAD
 pre_configure() {
 	autoreconf -fi
 	sed -e 's,test "$cross_compiling" = yes, false,' -i configure
@@ -24,3 +31,5 @@ post_install() {
 	vman doc/old/rtorrent.1
 	vsconf doc/rtorrent.rc-example rtorrent.rc
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

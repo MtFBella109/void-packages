@@ -5,9 +5,12 @@ long_desc="${long_desc}
 
  This package contains binary utilities provided by the acl package."
 
+<<<<<<< HEAD
 Add_dependency run glibc
 Add_dependency run acl
 
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 do_install()
 {
 	mkdir -p ${DESTDIR}/usr/share/man

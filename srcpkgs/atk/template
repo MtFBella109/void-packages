@@ -1,8 +1,15 @@
 # Template build file for 'atk'.
 pkgname=atk
+<<<<<<< HEAD
 version=1.28.0
 distfiles="${GNOME_SITE}/atk/1.28/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+version=2.4.0
+distfiles="${GNOME_SITE}/atk/2.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+makedepends="pkg-config glib-devel gobject-introspection"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Set of interfaces for accessibility"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=e4da9fe580d2d55f4e77a138c553b4b32654dfb06bf0715592cc9dbd6355fe87
@@ -18,7 +25,11 @@ long_desc="
  It also provides interfaces which an application can use to provide
  additional accessibility information to assistive technology tools."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full glib
+=======
+subpackages="atk-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

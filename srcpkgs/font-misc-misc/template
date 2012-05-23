@@ -22,15 +22,25 @@ post_install() {
 pkgname=font-misc-misc
 version=1.1.0
 distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
 short_desc="Standard X11 \"fixed\" PCF fonts"
+=======
+build_style=gnu-configure
+makedepends="pkg-config bdftopcf"
+fulldepends="font-util"
+short_desc="Standard X11 fixed PCF fonts"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=50f7528ab94f319a11efcd555dd5a7120191a42cf892c87cd6bdea8b908d497b
 long_desc="
  The standard X11 public domain \"fixed\" font that you can
  share and enjoy. It is in PCF format."
 
+<<<<<<< HEAD
 Add_dependency full font-util
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 noarch=yes
 font_dirs="/usr/share/fonts/X11/misc"

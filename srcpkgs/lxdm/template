@@ -3,6 +3,7 @@ pkgname=lxdm
 version=0.5.3
 revision=5
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-consolekit --with-pam --enable-gtk3"
 hostmakedepends="automake gettext-devel libtool pkg-config intltool"
 makedepends="pam-devel gtk+3-devel iso-codes"
@@ -23,6 +24,36 @@ homepage="https://lxde.org"
 distfiles="${SOURCEFORGE_SITE}/lxdm/lxdm-${version}.tar.xz"
 checksum=4891efee81c72a400cc6703e40aa76f3f3853833d048b72ec805da0f93567f2f
 system_groups="lxdm"
+=======
+configure_args="-with-xconn=xcb"
+makedepends="pkg-config intltool gtk+-devel ConsoleKit-devel"
+fulldepends="iso-codes"
+short_desc="GUI login manager for LXDE"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3"
+checksum=9e0d0a5672fcf31a18de8178ce73eab1723d6ae7097dfe41e9fe2c46e180cf08
+long_desc="
+ A lightweight dropped-in replacement for GDM or KDM."
+
+provides="display-manager-0"
+replaces="display-manager>=0"
+
+system_groups="lxdm"
+systemd_services="lxdm.service off"
+
+conf_files="
+/etc/lxdm/LoginReady
+/etc/lxdm/PostLogin
+/etc/lxdm/PostLogout
+/etc/lxdm/PreLogin
+/etc/lxdm/PreReboot
+/etc/lxdm/PreShutdown
+/etc/lxdm/Xsession
+/etc/lxdm/lxdm.conf
+/etc/pam.d/lxdm"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure() {
 	autoreconf -fi

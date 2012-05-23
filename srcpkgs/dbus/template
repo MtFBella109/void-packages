@@ -59,8 +59,15 @@ revision=1
 distfiles="http://dbus.freedesktop.org/releases/dbus/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 configure_args="--disable-selinux --enable-userdb-cache --with-xml=expat
+<<<<<<< HEAD
  --localstatedir=/var --without-x --disable-dnotify --enable-inotify
  --with-dbus-user=dbus"
+=======
+--disable-dnotify --enable-inotify --with-dbus-user=dbus
+--disable-doxygen-docs --disable-xml-docs --disable-tests
+--with-systemdsystemunitdir=/lib/systemd/system"
+makedepends="pkg-config expat-devel libX11-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Message bus system"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=968a31c16a6c4bbbdb603cbaa3d60d6d19bc8ae30c0ed55d7f8c2e254413e4c8
@@ -80,6 +87,7 @@ conf_files="/etc/dbus-1/session.conf /etc/dbus-1/system.conf"
 subpackages="$pkgname-devel $pkgname-libs"
 openrc_services="dbus default"
 
+<<<<<<< HEAD
 Add_dependency full	glibc
 Add_dependency full	expat
 Add_dependency run	dbus-libs
@@ -92,3 +100,5 @@ post_install()
 	install -D -m755 ${FILESDIR}/dbus.rc ${DESTDIR}/etc/init.d/dbus
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

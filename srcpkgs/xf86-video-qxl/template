@@ -3,6 +3,7 @@ pkgname=xf86-video-qxl
 version=0.1.6
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="automake m4 xorg-util-macros libtool pkg-config"
 makedepends="xorg-server-devel spice-protocol xorgproto"
 depends="virtual?xserver-abi-video-25_1"
@@ -19,3 +20,14 @@ LDFLAGS="-Wl,-z,lazy"
 post_install() {
 	vlicense COPYING LICENSE
 }
+=======
+configure_args="--enable-xspice=yes"
+depends="xorg-server"
+makedepends="xf86dgaproto spice-protocol spice-devel xorg-server-devel"
+short_desc="Modular Xorg QXL virtual video driver"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=193c2bb4889de39f7b0071990adaae1753b45e542f68d76cc0d55a7299b49f82
+long_desc="
+ This is the QXL virtual video driver for the modular Xorg server."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

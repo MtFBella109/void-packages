@@ -4,6 +4,7 @@ pkgname=libXxf86vm
 version=1.1.6
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-malloc0returnsnull"
 hostmakedepends="pkg-config"
 makedepends="xorgproto libXext-devel"
@@ -33,6 +34,9 @@ libXxf86vm-devel_package() {
 version=1.1.0
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+makedepends="pkg-config xf86vidmodeproto libX11-devel libXext-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library for the XFree86-VidMode X extension"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=7cc5e577b337c5267f4e65741f27229111ada8cb833e24b47713a683e8838de8
@@ -44,6 +48,7 @@ long_desc="
  This library is from the modular X.org project."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build xproto
 Add_dependency build xextproto
@@ -52,3 +57,5 @@ Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libXext
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

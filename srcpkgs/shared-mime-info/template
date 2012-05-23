@@ -21,6 +21,7 @@ version=0.60
 distfiles="http://people.freedesktop.org/~hadess/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--disable-update-mimedb"
+makedepends="pkg-config intltool glib-devel libxml2-devel"
 short_desc="Core database of common types"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a0d0a948fbb8d0de576876791d53efd1c5e8dd782eb9e5369cafc06c3969de22
@@ -39,9 +40,12 @@ long_desc="
 
 triggers="mimedb"
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build intltool
 Add_dependency full glibc
 Add_dependency full glib
 Add_dependency full libxml2
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

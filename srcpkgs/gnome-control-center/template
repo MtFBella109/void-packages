@@ -1,5 +1,6 @@
 # Template file for 'gnome-control-center'
 pkgname=gnome-control-center
+<<<<<<< HEAD
 version=48.3
 revision=1
 build_style=meson
@@ -18,6 +19,17 @@ makedepends="ModemManager-devel accountsservice-devel alsa-plugins
 depends="desktop-file-utils upower colord cups-pk-helper cracklib iso-codes
  gsettings-desktop-schemas hicolor-icon-theme sound-theme-freedesktop
  tecla ibus-gtk4"
+=======
+version=3.4.2
+revision=2
+distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--enable-cups --with-libsocialweb --without-cheese
+--disable-update-mimedb --disable-static --enable-systemd"
+depends="gsettings-desktop-schemas pulseaudio desktop-file-utils hicolor-icon-theme sound-theme-freedesktop apg"
+makedepends="which pkg-config intltool gnome-doc-utils libXi-devel libnotify-devel gnome-desktop-devel libgnomekbd-devel gnome-menus-devel network-manager-applet-devel gnome-settings-daemon-devel gnome-online-accounts-devel libsocialweb-devel libcanberra-devel polkit-devel libgtop-devel upower-devel colord-devel pulseaudio-devel libwacom-devel gnome-bluetooth-devel tzdata systemd-devel cups-devel"
+fulldepends="iso-codes"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNOME control center"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -33,9 +45,14 @@ pre_build() {
 	ninja -C build panels/network/cc-network-resources.h
 }
 
+<<<<<<< HEAD
 gnome-control-center-devel_package() {
 	short_desc+=" - development files"
 	pkg_install() {
 		vmove usr/share/pkgconfig
 	}
 }
+=======
+#Add_dependency build cheese-devel
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

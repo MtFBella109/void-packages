@@ -19,7 +19,13 @@ nocross="objc doesn't get cross build at present within gcc (see gnustep-base)"
 =======
 version=0.4.2
 distfiles="http://archive.xfce.org/src/apps/terminal/0.4/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config intltool dbus-glib-devel exo-devel libxfce4util-devel vte-devel gtk+-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X Terminal Emulator"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=4d5a07f3a1b68c9825cc3b82fc2672785ba91247a34e4ac462841f0b1ea21079
@@ -31,6 +37,7 @@ long_desc="
 gtk_iconcache_dirs="/usr/share/icons/hicolor"
 triggers="gtk-icon-cache"
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build intltool
 Add_dependency full glibc
@@ -42,3 +49,6 @@ Add_dependency full hicolor-icon-theme
 Add_dependency full vte
 Add_dependency full desktop-file-utils
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

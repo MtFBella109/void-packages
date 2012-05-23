@@ -1,5 +1,6 @@
 # Template file for 'libvirt-glib'
 pkgname=libvirt-glib
+<<<<<<< HEAD
 version=5.0.0
 revision=1
 build_helper="gir"
@@ -16,10 +17,26 @@ homepage="https://libvirt.org"
 distfiles="http://libvirt.org/sources/glib/libvirt-glib-${version}.tar.xz"
 checksum=9bfec346382416a3575d87299bc641b2a464aa519fd9b1287e318aa43a2f3b8b
 replaces="libvirt-glib-python>=0"
+=======
+version=0.0.8
+distfiles="http://libvirt.org/sources/glib/$pkgname-$version.tar.gz"
+build_style=gnu-configure
+configure_args="--disable-static"
+makedepends="pkg-config glib-devel libvirt-devel libxml2-devel python-devel gobject-introspection vala-devel"
+short_desc="libvirt glib integration"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://libvirt.org"
+license="LGPL-2.1"
+checksum=d9bcf99f395ac78416601002bd1fd9122ae1dec2b5439348c6eac9d5c5fb8096
+long_desc="
+ libvirt-glib wraps libvirt to provide a high-level object-oriented API better
+ suited for glib-based applications, via three libraries:
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 build_options="doc gir vala"
 build_options_default="gir vala"
 
+<<<<<<< HEAD
 libvirt-glib-devel_package() {
 	depends="libglib-devel libxml2-devel libvirt-devel ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -36,3 +53,7 @@ libvirt-glib-devel_package() {
 		fi
 	}
 }
+=======
+subpackages="$pkgname-devel $pkgname-python"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -4,6 +4,7 @@ pkgname=hplip
 version=3.24.4
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 pycompile_dirs="usr/share/hplip"
 configure_args="
  --enable-gui-build
@@ -28,6 +29,14 @@ makedepends="openssl-devel python3-devel libxml2-python3 cups-devel sane-devel
  avahi-libs-devel zlib-devel"
 depends="python3-gobject python3-dbus desktop-file-utils
  foomatic-db foomatic-db-engine python3-distro"
+=======
+configure_args="--disable-gui-build --disable-hal"
+homepage="http://hplipopensource.com/"
+license="GPL-2"
+distfiles="$SOURCEFORGE_SITE/$pkgname/$pkgname-$version.tar.gz"
+makedepends="pkg-config automake libtool python-devel libxml2-python cups-devel sane-devel ghostscript-devel net-snmp-devel libusb-compat-devel jpeg-devel dbus-devel polkit-devel"
+fulldepends="python foomatic-db foomatic-db-engine desktop-file-utils"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="HP Linux Imaging and Printing"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only, BSD-3-Clause, MIT"
@@ -38,6 +47,7 @@ checksum=5d7643831893a5e2addf9d42d581a5dbfe5aaf023626886b8762c5645da0f1fb
 
 CFLAGS="-I${XBPS_CROSS_BASE}/usr/include/libusb-1.0 -I${XBPS_CROSS_BASE}/${py3_inc}"
 
+<<<<<<< HEAD
 pre_configure() {
 	export AUTOMAKE='automake --foreign'
 	libtoolize -f
@@ -104,4 +114,14 @@ hplip-gui_package() {
 
 		vmove etc/hp/hplip-gui.conf
 	}
+=======
+#XXX: pyqt pkgs for python gui
+
+
+post_install() {
+	rm -rf $DESTDIR/usr/share/hal
+	rm -f $DESTDIR/etc/sane.d/dll.conf
+	vmkdir lib
+	mv $DESTDIR/etc/udev $DESTDIR/lib
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

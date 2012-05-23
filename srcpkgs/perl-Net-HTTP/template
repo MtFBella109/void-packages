@@ -3,6 +3,7 @@ pkgname=perl-Net-HTTP
 version=6.21
 revision=1
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl"
 makedepends="${hostmakedepends} perl-URI"
 depends="${makedepends}"
@@ -12,3 +13,18 @@ license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/Net-HTTP"
 distfiles="${CPAN_SITE}/Net/Net-HTTP-${version}.tar.gz"
 checksum=375aa35b76be99f06464089174d66ac76f78ce83a5c92a907bbfab18b099eec4
+=======
+fulldepends="perl"
+short_desc="Net::HTTP - Low-level HTTP connection (client)"
+maintainer="davehome <davehome@redthumb.info.tm>"
+homepage="http://search.cpan.org/~gaas/Net-HTTP-6.01/lib/Net/HTTP.pm"
+license="GPL-2"
+checksum=76d883f9b249b16393dc183de04b4e4fed99bb0eb776ab9149d915607c69ea46
+long_desc="
+ The Net::HTTP class is a low-level HTTP client. An instance of the
+ Net::HTTP class represents a connection to an HTTP server. The HTTP protocol
+ is described in RFC 2616. The Net::HTTP class supports HTTP/1.0 and HTTP/1.1."
+
+noarch=yes
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,4 +1,5 @@
 # Template file for 'libva-intel-driver'
+<<<<<<< HEAD
 pkgname=libva-intel-driver
 version=2.4.1
 revision=1
@@ -7,13 +8,35 @@ build_style=meson
 configure_args="-Dwith_wayland=yes -Dwith_x11=yes"
 hostmakedepends="pkg-config"
 makedepends="libX11-devel libva-glx-devel libdrm-devel wayland-devel MesaLib-devel"
+=======
+_distname=intel-driver
+pkgname=libva-${_distname}
+version=1.0.17
+wrksrc=${_distname}-${version}
+distfiles="http://cgit.freedesktop.org/vaapi/${_distname}/snapshot/${_distname}-$version.tar.bz2"
+build_style=gnu-configure
+makedepends="automake pkg-config libva-devel libdrm-devel libX11-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Video Acceleration (VA) API - Intel Graphics backend"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="https://01.org/linuxmedia"
 changelog="https://raw.githubusercontent.com/intel/intel-vaapi-driver/master/NEWS"
 distfiles="https://github.com/intel/intel-vaapi-driver/archive/${version}.tar.gz"
 checksum=03cd7e16acc94f828b6e7f3087863d8ca06e99ffa3385588005b1984bdd56157
+=======
+checksum=83bee4de6e156b3a95af3ac41bcb2dbfecbb547444e8ff8ef005dc5ad92e0b3f
+long_desc="
+ The main motivation for VA-API (Video Acceleration API) is to enable hardware
+ accelerated video decode/encode at various entry-points (VLD, IDCT, Motion
+ Compensation etc.) for the prevailing coding standards today (MPEG-2,
+ MPEG-4 ASP/H.263, MPEG-4 AVC/H.264, and VC-1/VMW3).
+
+ This package includes the VA-API backend for Intel G45 chipsets and Intel
+ HD Graphics."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure() {
 	# Only relevant if intel-gpu-tools is installed,

@@ -1,5 +1,6 @@
 # Template file for 'NetworkManager'
 pkgname=NetworkManager
+<<<<<<< HEAD
 version=1.50.0
 revision=1
 build_style=meson
@@ -29,6 +30,19 @@ makedepends="libuuid-devel nss-devel dbus-glib-devel libgudev-devel
  $(vopt_if elogind elogind-devel)"
 depends="dbus iproute2 openresolv wpa_supplicant mobile-broadband-provider-info"
 checkdepends="python3-dbus"
+=======
+version=0.9.4.0
+revision=2
+distfiles="${GNOME_SITE}/$pkgname/0.9/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--with-distro=gentoo
+--with-dhcpcd=/usr/sbin/dhcpcd --with-dhclient=no --disable-wimax
+--with-system-ca-path=/etc/ssl/certs --enable-more-warnings=no
+--with-crypto=nss --disable-static --enable-ppp --enable-concheck
+--with-systemdsystemunitdir=/lib/systemd/system"
+makedepends="pkg-config intltool libuuid-devel nss-devel dbus-glib-devel libgudev-devel wireless_tools-devel libnl3-devel polkit-devel ppp-devel iptables-devel libsoup-devel"
+fulldepends="dbus>=0 iproute2 dhcpcd>=5.5.4_1 wpa_supplicant"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Network Management daemon"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -52,6 +66,7 @@ make_dirs="
 build_options="gir elogind"
 build_options_default="gir elogind"
 
+<<<<<<< HEAD
 post_patch() {
 	if [ "$CROSS_BUILD" ]; then
 		# Replace the values from our patch into the system itself
@@ -73,6 +88,9 @@ pre_check() {
 post_check() {
 	rm /etc/machine-id
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vinstall ${FILESDIR}/NetworkManager.conf 644 etc/NetworkManager

@@ -1,5 +1,6 @@
 # Template file for 'grilo'
 pkgname=grilo
+<<<<<<< HEAD
 version=0.3.19
 revision=1
 build_style=meson
@@ -10,6 +11,13 @@ hostmakedepends="gettext pkg-config glib-devel $(vopt_if gir vala)
  $(vopt_if gtk_doc gtk-doc)"
 makedepends="gtk+3-devel libxml2-devel libsoup3-devel liboauth-devel
  totem-pl-parser-devel"
+=======
+version=0.1.18
+homepage="http://live.gnome.org/Grilo"
+distfiles="${GNOME_SITE}/$pkgname/0.1/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+makedepends="pkg-config gobject-introspection vala-devel gtk+3-devel libxml2-devel libsoup-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Framework focused on making media discovery and browsing easy"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -25,6 +33,7 @@ if [ -z "$CROSS_BUILD" ]; then
 	build_options_default+=" gtk_doc"
 fi
 
+<<<<<<< HEAD
 grilo-devel_package() {
 	depends="${makedepends} grilo>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -40,4 +49,9 @@ grilo-devel_package() {
 			vmove usr/share/gtk-doc
 		fi
 	}
+=======
+
+post_install() {
+	mv ${DESTDIR}/usr/share/vala-0.14 ${DESTDIR}/usr/share/vala
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

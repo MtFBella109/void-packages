@@ -63,7 +63,12 @@ libxml2-python3_package() {
 pkgname=libxml2
 version=2.7.6
 distfiles="http://xmlsoft.org/sources/$pkgname-$version.tar.gz"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="zlib-devel python-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library providing XML and HTML support"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=238c4f0203c012e5776522640c0fb3ac532c4064981c1ce3e74c00b75501d761
@@ -79,7 +84,10 @@ long_desc="
  URI library."
 
 subpackages="$pkgname-devel $pkgname-python"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full zlib
 Add_dependency build python
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

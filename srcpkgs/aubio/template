@@ -1,5 +1,6 @@
 # Template file for 'aubio'
 pkgname=aubio
+<<<<<<< HEAD
 version=0.4.9
 revision=2
 build_style=waf3
@@ -29,3 +30,24 @@ aubio-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+version=0.3.2
+homepage="http://aubio.org"
+distfiles="${homepage}/pub/${pkgname}-${version}.tar.gz"
+build_style=gnu-configure
+revision=3
+makedepends="pkg-config libsamplerate-devel fftw-devel jack-devel"
+short_desc="A library for audio labelling"
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="GPL-2"
+checksum=dc1387b048610a6141f523c27314b7a60bd299c3d6789c372445ddc6511512cd
+long_desc="
+ aubio is a tool designed for the extraction of annotations from audio signals.
+ Its features include segmenting a sound file before each of its attacks,
+ performing pitch detection, tapping the beat and producing midi streams from
+ live audio."
+
+subpackages="lib${pkgname} ${pkgname}-devel"
+
+# XXX lash, pure and swig support.
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

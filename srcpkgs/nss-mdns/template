@@ -3,8 +3,14 @@ pkgname=nss-mdns
 version=0.15.1
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="autoconf automake libtool pkg-config"
 depends="avahi"
+=======
+configure_args="--enable-avahi --disable-lynx --libdir=/lib"
+makedepends="avahi-libs-devel"
+fulldepends="avahi"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="NSS module for Multicast DNS name resolution"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -12,6 +18,7 @@ homepage="https://github.com/lathiat/nss-mdns"
 distfiles="${homepage}/archive/v${version}.tar.gz"
 checksum=2d1b8de2e9ed5526f51c8bb627b719c07668465b5315787e7cfeed776ab90b9a
 
+<<<<<<< HEAD
 case "$XBPS_TARGET_MACHINE" in
 	*-musl)
 		makedepends+="musl-nscd-devel"
@@ -24,3 +31,5 @@ export AVAHI_SOCKET="/run/avahi-daemon/socket"
 pre_configure() {
 	autoreconf -fi
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

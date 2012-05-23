@@ -1,5 +1,6 @@
 # Template file for 'seahorse'
 pkgname=seahorse
+<<<<<<< HEAD
 version=47.0.1
 revision=2
 build_style=meson
@@ -16,3 +17,33 @@ license="GPL-2.0-or-later"
 homepage="https://gitlab.gnome.org/GNOME/seahorse"
 distfiles="${GNOME_SITE}/seahorse/${version%%.*}/seahorse-${version}.tar.xz"
 checksum=9c1917e4a61f7febb787849ce36ce717fce706c346880b991d056d54dadbcacc
+=======
+version=3.4.1
+distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-scrollkeeper --disable-schemas-compile
+--enable-ldap --enable-hkp --disable-debug"
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="which pkg-config intltool gnome-doc-utils gtk+3-devel gpgme-devel libldap-devel libsoup-devel libgnome-keyring-devel avahi-libs-devel avahi-glib-libs-devel gcr-devel"
+fulldepends="openssh-client"
+short_desc="Encryption Made Easy"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=841443ed6d7f865e1c9347867527591287bcc5b2e281c8da11b2cb355d678faa
+long_desc="
+ Seahorse is a GNOME application for managing encryption keys. It also
+ integrates with nautilus, gedit and other places for encryption operations.
+
+ With seahorse you can...
+
+    * Create and manage PGP keys
+    * Create and manage SSH keys
+    * Publish and retrieve keys from key servers
+    * Cache your passphrase so you don't have to keep typing it
+    * Backup your keys and keyring
+    * more..."
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

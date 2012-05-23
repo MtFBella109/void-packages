@@ -1,5 +1,6 @@
 # Template file for 'giflib'
 pkgname=giflib
+<<<<<<< HEAD
 version=5.2.2
 revision=1
 build_style=gnu-makefile
@@ -12,6 +13,21 @@ distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
 checksum=be7ffbd057cadebe2aa144542fd90c6838c6a083b5e8a9048b8ee3b66b29d5fb
 
 CFLAGS="-fPIC"
+=======
+version=4.1.6
+revision=4
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
+build_style=gnu-configure
+makedepends="libSM-devel libICE-devel libX11-devel"
+short_desc="library for GIF images"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=ceca77dcd29eb6f6d0336414dfecc9094413f71c3b589afcf96bb72fbfb08ce0
+long_desc="
+ GIFLIB is a package of portable tools and library routines for working
+ with GIF images."
+
+subpackages="$pkgname-devel $pkgname-tools"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_patch() {
 	# don't build images for html doc, requires ImageMackig

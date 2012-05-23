@@ -1,5 +1,6 @@
 # Template file for 'glew'
 pkgname=glew
+<<<<<<< HEAD
 version=2.2.0
 revision=1
 build_style=gnu-makefile
@@ -9,11 +10,28 @@ makedepends="libXext-devel libXmu-devel libXi-devel glu-devel"
 short_desc="OpenGL Extension Wrangler Library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause, MIT, GPL-2.0-or-later"
+=======
+version=1.6.0
+revision=3
+distfiles="${SOURCEFORGE_SITE}/glew/glew-${version}.tgz"
+makedepends="pkg-config libXmu-devel libXi-devel MesaLib-devel libXext-devel libX11-devel"
+short_desc="The OpenGL Extension Wrangler Library"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 homepage="http://glew.sourceforge.net"
 distfiles="${SOURCEFORGE_SITE}/glew/glew-${version}.tgz"
 checksum=d4fc82893cfb00109578d0a1a2337fb8ca335b3ceccf97b97e5cc7f08e4353e1
 
+<<<<<<< HEAD
 do_build() {
+=======
+subpackages="glew-devel"
+
+
+
+do_build()
+{
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 	sed -i -e "s|lib64|lib|" config/Makefile.linux
 	make CC=$CC AR=$AR AS=$AS LD=$CC RANLIB=$RANLIB \
 		CFLAGS.EXTRA="-fPIC $CFLAGS $CPPFLAGS" \

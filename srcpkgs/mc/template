@@ -3,6 +3,7 @@ pkgname=mc
 <<<<<<< HEAD
 version=4.8.33
 revision=1
+<<<<<<< HEAD
 build_style=gnu-configure
 configure_args="--with-screen=slang --without-x"
 hostmakedepends="perl pkg-config"
@@ -37,6 +38,9 @@ build_style=gnu_configure
 configure_args="--without-ext2undel --with-screen=mcslang
  --enable-charset --without-libiconv-prefix --without-libintl-prefix
  --datadir=$XBPS_DESTDIR/$pkgname-$version/share"
+=======
+makedepends="pkg-config glib-devel e2fsprogs-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="User-friendly file manager and visual shell"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=086ab03daaac28a28c0ddb9a709040b59e1322f6bfa68e39d004d9c66b119e7e
@@ -48,5 +52,8 @@ long_desc="
  preserving the full power of the command prompt. You will wonder how
  you could ever live without it."
 
+<<<<<<< HEAD
 build_depends="glib-2.18.0"
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

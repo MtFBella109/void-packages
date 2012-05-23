@@ -1,5 +1,6 @@
 # Template file for 'newlisp'
 pkgname=newlisp
+<<<<<<< HEAD
 version=10.7.5
 revision=3
 makedepends="readline-devel libffi-devel"
@@ -9,6 +10,24 @@ license="GPL-3.0-only, GFDL-1.2-only, Zlib, $pkgname, BSD-3-Clause"
 homepage="http://www.newlisp.org"
 distfiles="$homepage/downloads/$pkgname-$version.tgz"
 checksum=dc2d0ff651c2b275bc4af3af8ba59851a6fb6e1eaddc20ae75fb60b1e90126ec
+=======
+version=10.3.9
+homepage="http://www.newlisp.org"
+distfiles="$homepage/downloads/development/$pkgname-$version.tgz"
+makedepends="readline-devel libffi-devel"
+short_desc="Lisp-like, general-purpose scripting language"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3, zlib, $pkgname"
+checksum=86e8a54e578984fb11528fef135ca935566126f6a8c6eb26653c6ebd1abeec2e
+long_desc="
+ newLISP is a Lisp-like, general-purpose scripting language. It is especially
+ well-suited for applications in AI, web search, natural language processing,
+ and machine learning. Because of its small resource requirements, newLISP
+ is also excellent for embedded systems applications. Most of the functions
+ you will ever need are already built in. This includes networking functions,
+ support for distributed and parallel processing, and Bayesian statistics."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_build() {
 	case "$XBPS_TARGET_MACHINE" in

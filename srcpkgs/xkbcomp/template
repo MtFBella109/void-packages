@@ -21,15 +21,30 @@ post_install() {
 pkgname=xkbcomp
 version=1.1.1
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+makedepends="pkg-config bison libX11-devel libxkbfile-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="XKBD keymap compiler"
 checksum=9775bcfd43d9ffa41e2865e5b2c933f419bf983d7a529b3103656c76fd82e663
 long_desc="
  The xkbcomp tool converts descriptions of an XKB keymap into other formats,
  most importantly the compiled keymaps used by XKB-capable X servers."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libxkbfile
 Add_dependency build pkg-config
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+
+post_install()
+{
+	vinstall COPYING 644 usr/share/licenses/${pkgname}
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

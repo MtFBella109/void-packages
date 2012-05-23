@@ -1,5 +1,6 @@
 # Template file for 'gtk-vnc'
 pkgname=gtk-vnc
+<<<<<<< HEAD
 version=1.3.1
 revision=2
 build_helper="gir"
@@ -8,6 +9,13 @@ configure_args="$(vopt_feature gir with-vala) -Dpulseaudio=enabled"
 hostmakedepends="gettext perl glib-devel pkg-config $(vopt_if gir vala)"
 makedepends="gnutls-devel gtk+3-devel libsasl-devel libgcrypt-devel pulseaudio-devel
  $(vopt_if gir vala)"
+=======
+version=0.4.4
+distfiles="${GNOME_SITE}/$pkgname/0.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-python --disable-static --with-gtk=3.0"
+makedepends="perl>=0 pkg-config intltool gobject-introspection gtk+3-devel gnutls-devel libsasl-devel vala-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="VNC viewer widget for GTK"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -22,6 +30,7 @@ if [ "$XBPS_TARGET_LIBC" = "musl" ]; then
 	configure_args+=" -Dwith-coroutine=gthread"
 fi
 
+<<<<<<< HEAD
 gtk-vnc-devel_package() {
 	depends="glib-devel gtk+3-devel pulseaudio-devel gnutls-devel
 	 libgcrypt-devel libsasl-devel ${sourcepkg}>=${version}_${revision}"
@@ -36,3 +45,5 @@ gtk-vnc-devel_package() {
 		fi
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

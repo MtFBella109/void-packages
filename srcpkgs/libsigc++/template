@@ -1,10 +1,18 @@
 # Template file for 'libsigc++'
 pkgname=libsigc++
+<<<<<<< HEAD
 version=2.12.1
 revision=1
 build_style=meson
 configure_args="-Dbuild-examples=false -Dwarnings=max"
 meson_builddir="meson_build"
+=======
+version=2.2.10
+distfiles="${GNOME_SITE}/$pkgname/2.2/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+configure_args="--disable-documentation"
+makedepends="libstdc++-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Type-safe callback system for C++ programs"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -13,6 +21,7 @@ changelog="https://raw.githubusercontent.com/libsigcplusplus/libsigcplusplus/lib
 distfiles="${GNOME_SITE}/libsigc++/${version%.*}/libsigc++-${version}.tar.xz"
 checksum=a9dbee323351d109b7aee074a9cb89ca3e7bcf8ad8edef1851f4cf359bd50843
 
+<<<<<<< HEAD
 if [ -z "$XBPS_CHECK_PKGS" ]; then
 	configure_args+=" -Dbuild-tests=false"
 fi
@@ -33,3 +42,6 @@ libsigc++-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

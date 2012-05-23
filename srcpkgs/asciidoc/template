@@ -22,7 +22,12 @@ post_install() {
 =======
 version=8.5.1
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+fulldepends="python>=0 libxslt docbook-xsl"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Text based document generation"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=ccb02db04e6e6eff2149435516e88557ca30c85bc4467420f40c895e25f17a20
@@ -56,7 +61,10 @@ conf_files="/etc/asciidoc/lang-es.conf
 /etc/asciidoc/latex.conf
 /etc/asciidoc/xhtml11.conf"
 
+<<<<<<< HEAD
 Add_dependency full python
 Add_dependency full libxslt
 Add_dependency full docbook-xsl
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

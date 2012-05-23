@@ -1,11 +1,15 @@
 # Template file for 'webkit-gtk-devel'.
 #
+depends="pycairo"
 short_desc="${sourcepkg} development files"
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD:srcpkgs/webkit-gtk/webkit-gtk-devel.template
 Add_dependency run webkit-gtk
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!):srcpkgs/pycairo/pycairo-devel.template
 
 do_install()
 {

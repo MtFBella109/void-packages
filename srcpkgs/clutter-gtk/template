@@ -3,6 +3,7 @@ pkgname=clutter-gtk
 version=1.8.4
 revision=4
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper="gir"
 configure_args="$(vopt_enable gir introspection)"
 hostmakedepends="pkg-config intltool"
@@ -31,3 +32,13 @@ clutter-gtk-devel_package() {
 		fi
 	}
 }
+=======
+makedepends="pkg-config intltool gobject-introspection gtk+3-devel clutter-devel"
+short_desc="GTK+3 bindings for the Clutter Tolkit"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=8be5deb0fa2f318e5f5e888b8ace3371c516464472a48f25c8b42ccc298af59a
+long_desc="
+ This packages contains the GTK+3 bindings for the Clutter Toolkit."
+
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

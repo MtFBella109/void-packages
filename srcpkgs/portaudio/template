@@ -10,13 +10,32 @@ short_desc="Portable cross-platform audio I/O library"
 maintainer="Érico Nogueira <ericonr@disroot.org>"
 license="MIT"
 homepage="http://www.portaudio.com"
+<<<<<<< HEAD
 distfiles="http://www.${pkgname}.com/archives/pa_stable_v${version%.*}_${version#*.}.tgz"
 checksum=f5a21d7dcd6ee84397446fa1fa1a0675bb2e8a4a6dceb4305a8404698d8d1513
+=======
+license="PA, GPL"
+revision=5
+makedepends="glibc-devel libstdc++-devel alsa-lib-devel jack-devel"
+short_desc="Portable cross-platform audio i/o library"
+maintainer="davehome <davehome@redthumb.info.tm>"
+checksum=328a89adc42c66840641d2d557d01e8bd9e6be32e12d3802e3b638e0791de540
+long_desc="
+ PortAudio is a free, cross-platform, open-source, audio I/O library.  It lets
+ you write simple audio programs in C or C++ that will compile and run on many
+ platforms including Windows, Macintosh OS X, and Unix (OSS/ALSA). It is
+ intended to promote the exchange of audio software between developers on
+ different platforms."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 disable_parallel_build=yes
 
+<<<<<<< HEAD
 # sndio disabled by default: non-upstream patch
 build_options="sndio"
 build_options_default=""
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vlicense LICENSE.txt

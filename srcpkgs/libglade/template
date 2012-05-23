@@ -4,6 +4,8 @@ version=2.6.4
 distfiles="${GNOME_SITE}/$pkgname/2.6/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--without-xml-catalog"
+makedepends="pkg-config python libxml2-devel gtk+-devel atk-devel glib-devel pango-devel cairo-devel freetype-devel fontconfig-devel"
+fulldepends="xmlcatmgr"
 short_desc="Runtime interpreter for GLADE GUI files"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=64361e7647839d36ed8336d992fd210d3e8139882269bed47dc4674980165dec
@@ -19,11 +21,15 @@ long_desc="
  connection."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build python
 Add_dependency full glibc
 Add_dependency full xmlcatmgr
 Add_dependency full gtk+
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 # Register DTDs with xmlcatmgr.
 triggers="xml-catalog"

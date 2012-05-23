@@ -3,6 +3,7 @@ pkgname=gnome-system-log
 version=3.9.90
 revision=4
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-schemas-compile"
 hostmakedepends="pkg-config intltool itstool glib-devel"
 makedepends="gtk+3-devel"
@@ -10,10 +11,26 @@ depends="hicolor-icon-theme desktop-file-utils"
 short_desc="GNOME system log viewer"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+configure_args="--disable-schemas-compile --disable-scrollkeeper"
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="which pkg-config intltool itstool gnome-doc-utils gtk+3-devel"
+fulldepends="gsettings-desktop-schemas"
+short_desc="A system log viewer for GNOME"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 homepage="http://www.gnome.org"
 distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
 checksum=9eeb51982d347aa7b33703031e2c1d8084201374665425cd62199649b29a5411
 
+<<<<<<< HEAD
 post_patch() {
 	vsed -i -e 's/DATADIRNAME=lib/DATADIRNAME=share/' configure
 }
+=======
+replaces="gnome-utils>=3.0"
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,10 +1,16 @@
 # Template file for 'gptfdisk'
 pkgname=gptfdisk
+<<<<<<< HEAD
 version=1.0.10
 revision=1
 build_style=gnu-makefile
 make_check_target=test
 makedepends="ncurses-devel popt-devel libuuid-devel"
+=======
+version=0.8.2
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
+makedepends="popt-devel icu-devel libuuid-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GPT fdisk text-mode partitioning tool"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -12,8 +18,14 @@ homepage="https://www.rodsbooks.com/gdisk/"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
 checksum=2abed61bc6d2b9ec498973c0440b8b804b7a72d7144069b5a9209b2ad693a282
 
+<<<<<<< HEAD
 pre_build() {
 	vsed -i 's#<ncursesw/ncurses.h>#<ncurses.h>#' gptcurses.cc
+=======
+
+do_build() {
+	make ${makejobs}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }
 
 do_install() {

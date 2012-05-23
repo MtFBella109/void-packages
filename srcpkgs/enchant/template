@@ -4,6 +4,7 @@ version=1.4.2
 distfiles="http://www.abisource.com/downloads/enchant/$version/enchant-$version.tar.gz"
 build_style=gnu_configure
 configure_args="--disable-zemberek --disable-ispell"
+makedepends="pkg-config libstdc++-devel glib-devel aspell-devel hunspell-devel"
 short_desc="Generic spell checking library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=95c8dd998c8fb436329d204e0edde4400b889e4e26d3f8cb888c408c9a9acc6a
@@ -32,8 +33,11 @@ long_desc="
  this, all of Enchant's providers are DLLs."
  
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full aspell
 Add_dependency full hunspell
 Add_dependency full glib
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

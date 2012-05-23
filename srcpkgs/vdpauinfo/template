@@ -3,14 +3,26 @@ pkgname=vdpauinfo
 version=1.5
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config automake"
 makedepends="libvdpau-devel"
+=======
+makedepends="automake pkg-config libvdpau-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Command line utility for querying the capabilities of a VDPAU device"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="https://freedesktop.org/wiki/Software/VDPAU/"
 distfiles="https://gitlab.freedesktop.org/vdpau/vdpauinfo/-/archive/${version}/vdpauinfo-${version}.tar.gz"
 checksum=1878d54f6732d02cedef8eabe77e23fc2239b4ec202612403a383f4140a17bc3
+=======
+checksum=9a81a13780cbf668ac7d6d6449a4f12857891775cc945ffa9ff27f8ffd102b25
+long_desc="
+ vdpauinfo queries the capabilities of a VDPAU device and shows them via
+ a command line utility."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure() {
 	autoreconf -fi

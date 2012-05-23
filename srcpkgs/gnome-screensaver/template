@@ -3,6 +3,7 @@ pkgname=gnome-screensaver
 version=3.6.1
 revision=5
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-compile-warnings=minimum"
 hostmakedepends="pkg-config automake intltool glib-devel"
 makedepends="gnome-desktop-devel dbus-glib-devel pam-devel"
@@ -16,4 +17,32 @@ checksum=f39b78d4f7fed748c7f0a31d694112fb907c6d3c4e63db22eb858df07e962cd0
 
 post_patch() {
 	vsed -i -e 's/DATADIRNAME=lib/DATADIRNAME=share/' configure
+=======
+configure_args="--with-mit-ext --disable-maintainer-mode --with-systemd
+--without-console-kit"
+makedepends="pkg-config intltool gnome-doc-utils pam-devel dbus-glib-devel libXScrnSaver-devel libXxf86misc-devel libgnomekbd-devel gnome-desktop-devel systemd-devel"
+fulldepends="gsettings-desktop-schemas"
+short_desc="GNOME screen saver and locker"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://live.gnome.org/GnomeScreensaver"
+license="GPL-2"
+checksum=d54a253f826ff6cd48eba53724339896a6dea39029848b6a8d5972c8e162069b
+long_desc="
+ ${pkgname} is a screen saver and locker that aims to have simple, sane and
+ secure defaults, and be well integrated with the GNOME desktop.
+
+ It is designed to support, among other things:
+
+  * the ability to lock down configuration settings
+  * translation into other languages
+  * user switching"
+
+# XXX: add xscreensaver hacks support.
+conf_files="/etc/pam.d/${pkgname}"
+
+
+
+post_install() {
+	vinstall ${FILESDIR}/${pkgname}.pam 644 etc/pam.d ${pkgname}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

@@ -3,9 +3,14 @@ pkgname=t1lib
 version=5.1.2
 revision=4
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="ac_16bit_type=short
  ac_32bit_type=int ac_64bit_type=long"
 make_build_target=without_doc
+=======
+make_build_target="without_doc"
+revision=2
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 makedepends="libXaw-devel"
 short_desc="Rasterizer library for Adobe Type 1 fonts"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -21,6 +26,7 @@ libt1_package() {
 	}
 }
 
+<<<<<<< HEAD
 t1lib-devel_package() {
 	depends="libXaw-devel libt1>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -30,3 +36,6 @@ t1lib-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

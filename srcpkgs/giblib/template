@@ -5,8 +5,13 @@ revision=8
 build_style=gnu-configure
 configure_args="--disable-static --with-imlib2-prefix=${XBPS_CROSS_BASE}/usr"
 make_install_args="docsdir=/usr/share/doc/giblib"
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="imlib2-devel freetype-devel libX11-devel libXext-devel"
+=======
+revision=2
+makedepends="pkg-config imlib2-devel freetype-devel zlib-devel libX11-devel libXext-devel glibc-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Programming utility library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
@@ -19,6 +24,7 @@ pre_configure() {
 	sed -e 's,imlib2-config --cflags,pkg-config --cflags imlib2,g' -i configure
 }
 
+<<<<<<< HEAD
 post_install() {
 	vlicense COPYING
 }
@@ -34,3 +40,5 @@ giblib-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -22,7 +22,13 @@ post_install() {
 pkgname=xfontsel
 version=1.0.2
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config"
+fulldepends="glibc libXaw"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X font selector"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=7a66ba3910bd7e39d58f9d4a4a588f191a874b8607369fe2cc9203a7115006a9
@@ -32,7 +38,10 @@ long_desc="
 
  This is from the modular X.org X11 project."
  
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libXaw
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

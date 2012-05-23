@@ -1,11 +1,19 @@
 # Template file for 'atk-devel'.
 #
+<<<<<<< HEAD
 short_desc="${sourcepkg} (development files)"
+=======
+depends="glib-devel atk>=2.4.0"
+short_desc="${sourcepkg} - development files"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD
 Add_dependency run atk
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

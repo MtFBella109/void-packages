@@ -3,10 +3,16 @@ pkgname=tmux
 version=3.5a
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-utempter --enable-sixel"
 hostmakedepends="byacc automake pkg-config"
 makedepends="libevent-devel libutempter-devel ncurses-devel"
 depends="ncurses-base"
+=======
+make_build_args="PREFIX=/usr"
+make_install_args="PREFIX=/usr"
+makedepends="ncurses-devel libevent-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Terminal Multiplexer"
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
 license="ISC"
@@ -15,6 +21,7 @@ changelog="https://raw.githubusercontent.com/tmux/tmux/master/CHANGES"
 distfiles="https://github.com/tmux/tmux/releases/download/${version}/tmux-${version}.tar.gz"
 checksum=16216bd0877170dfcc64157085ba9013610b12b082548c7c9542cc0103198951
 
+<<<<<<< HEAD
 pre_configure() {
 	autoreconf -fi
 }
@@ -28,3 +35,5 @@ post_install() {
 	} >LICENSE
 	vlicense LICENSE
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

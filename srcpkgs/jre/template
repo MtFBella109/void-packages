@@ -1,0 +1,92 @@
+# Template file for 'oracle-jre'
+pkgname=jre
+nonfree=yes
+_extraversion=1.7.0_03
+version=7u3
+
+if [ "${XBPS_MACHINE}" = "x86_64" ]; then
+	distfiles="http://uni-smr.ac.ru/archive/dev/java/JRE/oracle/7/jre-${version}-linux-x64.tar.gz"
+#	distfiles="http://download.oracle.com/otn-pub/java/jdk/${version}/jre-${version}-linux-x64.tar.gz"
+	checksum=eb06eab781be0c1dfaae2e5ef3afff5267e24e77f62401b09777673508b8d68c
+else
+	distfiles="http://uni-smr.ac.ru/archive/dev/java/JRE/oracle/7/jre-${version}-linux-i586.tar.gz"
+#	distfiles="http://download.oracle.com/otn-pub/java/jdk/${version}/jre-${version}-linux-i586.tar.gz"
+	checksum=814bbbdb4c73b11c213de9543c821854b1ff18d2d8d45ae8d8cbeacab9b03c70
+fi
+
+makedepends="libXrender-devel libXtst-devel alsa-lib-devel"
+fulldepends="hicolor-icon-theme desktop-file-utils xdg-utils shared-mime-info"
+short_desc="Oracle's Java Runtime Environment (JRE) - Version 7, Update 3"
+maintainer="davehome <davehome@redthumb.info.tm>"
+homepage="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
+license="oracle"
+long_desc="
+ Oracle Java SE 7, Update 3 - Runtime Environment (JRE) only:
+ 
+ This release includes new features such as small language changes for
+ improved developer productivity, a new Filesystem API, support for
+ asynchronous I/O, a new fork/join framework for multicore performance,
+ improved support for dynamic and script languages, updates to security,
+ internationalization and web standards and much more."
+
+gtk_iconcache_dirs="
+/usr/share/icons/hicolor
+/usr/share/icons/HighContrast
+/usr/share/icons/LowContrast"
+
+
+
+wrksrc=jre${_extraversion}
+
+do_install()
+{
+	# Install desktop related items
+	vmkdir		usr/share
+	vcopy		lib/desktop/icons usr/share
+	vcopy		lib/desktop/applications usr/share
+	vcopy		lib/desktop/mime usr/share
+	vcopy		lib/locale usr/share
+	vcopy		man usr/share
+	rm -rf		${DESTDIR}/usr/share/man/ja
+
+	# Install license(s)
+	vmkdir		usr/share/licenses/jre
+	vcopy		COPYRIGHT usr/share/licenses/jre
+	vcopy		LICENSE usr/share/licenses/jre
+	vcopy		THIRDPARTYLICENSEREADME.txt usr/share/licenses/jre
+
+	# Fix system prefs folder FS#18872
+	vmkdir		etc/.java/.systemPrefs
+    
+	# For system environment vars and desktop extra shortcut
+	vinstall	${FILESDIR}/jre.sh 644 etc/profile.d
+	vinstall 	${FILESDIR}/java-policy-settings.desktop 644 usr/share/applications
+
+	# Install JRE
+	vmkdir		opt/java/jre
+	vcopy		bin opt/java/jre
+	vcopy		lib opt/java/jre
+	vcopy		release opt/java/jre
+	vcopy		Welcome.html opt/java/jre
+
+	rm -rf		${DESTDIR}/opt/java/jre/lib/desktop
+	rm -rf		${DESTDIR}/opt/java/jre/lib/locale
+
+	# Install mozilla compatible plugin.
+	vmkdir		usr/lib/mozilla/plugins
+
+
+	if [ "${XBPS_MACHINE}" = "x86_64" ]; then
+		_arch=amd64
+	else
+		_arch=i386
+	fi
+
+	cd ${DESTDIR}/usr/lib/mozilla/plugins && \
+		ln -sf	../../../../opt/java/jre/lib/${_arch}/libnpjp2.so .
+
+	# linker's config
+        vmkdir etc/ld.so.conf.d
+        echo "/opt/java/jre/lib/${_arch}" > \
+                ${DESTDIR}/etc/ld.so.conf.d/${pkgname}.conf
+}

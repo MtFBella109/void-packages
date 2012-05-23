@@ -1,0 +1,23 @@
+# Template file for 'dbus-python'
+pkgname=dbus-python
+version=0.84.0
+homepage="http://www.freedesktop.org/wiki/Software/DBusBindings"
+distfiles="http://dbus.freedesktop.org/releases/$pkgname/$pkgname-$version.tar.gz"
+build_style=gnu-configure
+revision=1
+depends="python"
+makedepends="dbus-glib-devel python-devel"
+short_desc="D-Bus Python bindings"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2, LGPL-2.1"
+checksum=b85bc7aaf1a976627ca461b1ca7b0c4ddddff709f52fe44c9b2d1d7d8fac5906
+long_desc="
+ This package provides Python bindings for D-BUS."
+
+pycompile_module="dbus"
+
+
+
+post_install() {
+	rm -rf ${DESTDIR}/usr/share/doc
+}

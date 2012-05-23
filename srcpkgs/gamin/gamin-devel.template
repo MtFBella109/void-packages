@@ -1,11 +1,15 @@
 # Template file for 'gamin-devel'.
 #
+depends="glib-devel menu-cache"
 short_desc="${sourcepkg} development files"
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD:srcpkgs/gamin/gamin-devel.template
 Add_dependency run gamin
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!):srcpkgs/menu-cache/menu-cache-devel.template
 
 do_install()
 {

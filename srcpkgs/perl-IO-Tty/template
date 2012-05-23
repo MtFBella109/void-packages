@@ -3,6 +3,7 @@ pkgname=perl-IO-Tty
 version=1.17
 revision=3
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl"
 makedepends="${hostmakedepends}"
 depends="${makedepends}"
@@ -12,3 +13,14 @@ license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/IO-Tty"
 distfiles="${CPAN_SITE}/IO/IO-Tty-$version.tar.gz"
 checksum=a5f1a83020bc5b5dd6c1b570f48c7546e0a8f7fac10a068740b03925ad9e14e8
+=======
+fulldepends="perl"
+short_desc="IO::Tty - Perl interface to Low-level allocate a pseudo-Tty"
+maintainer="davehome <davehome@redthumb.info.tm>"
+homepage="http://search.cpan.org/dist/IO-Tty/"
+license="GPL-2"
+checksum=31a6e21ad187ec5ea93c2b898d6b3519647c5fce9f394b6d3c05a1f7c3f6f8b1
+long_desc="
+ IO::Tty and IO::Pty provide an interface to pseudo tty's."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

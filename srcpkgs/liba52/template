@@ -4,7 +4,11 @@ version=0.8.0
 revision=1
 build_style=gnu-configure
 configure_args="--enable-shared"
+<<<<<<< HEAD
 hostmakedepends="automake libtool"
+=======
+makedepends="automake"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Free ATSC A/52 stream decoder"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -12,6 +16,7 @@ homepage="https://git.adelielinux.org/adelie/a52dec"
 distfiles="https://distfiles.adelielinux.org/source/a52dec/a52dec-${version}.tar.gz"
 checksum=03c181ce9c3fe0d2f5130de18dab9bd8bc63c354071515aa56983c74a9cffcc9
 
+<<<<<<< HEAD
 pre_configure() {
 	./bootstrap
 }
@@ -32,4 +37,11 @@ liba52-devel_package() {
 		vmove "usr/lib/*.a"
 		vmove "usr/lib/*.so"
 	}
+=======
+subpackages="$pkgname-devel a52dec"
+
+pre_configure()
+{
+	cd ${wrksrc} && ./bootstrap
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

@@ -3,12 +3,18 @@ pkgname=vinagre
 version=3.22.0
 revision=3
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-schemas-compile --enable-compile-warnings=no"
 hostmakedepends="pkg-config intltool itstool glib"
 makedepends="libxml2-devel libsecret-devel avahi-ui-libs-devel
  avahi-glib-libs-devel telepathy-glib-devel vte3-devel
  spice-gtk-devel gtk-vnc-devel openssh"
 depends="openssh desktop-file-utils hicolor-icon-theme"
+=======
+configure_args="--disable-schemas-compile --disable-spice --disable-rdp"
+makedepends="pkg-config intltool itstool gnome-doc-utils libxml2-devel dbus-glib-devel libgnome-keyring-devel avahi-ui-libs-devel avahi-glib-libs-devel telepathy-glib-devel vte3-devel gtk-vnc-devel"
+fulldepends="openssh-client gnome-icon-theme desktop-file-utils hicolor-icon-theme"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="VNC client for the GNOME desktop"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -16,4 +22,8 @@ homepage="http://projects.gnome.org/vinagre"
 distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
 checksum=cd1cdbacca25c8d1debf847455155ee798c3e67a20903df8b228d4ece5505e82
 
+<<<<<<< HEAD
 CFLAGS="-fcommon"
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

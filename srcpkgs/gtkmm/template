@@ -1,5 +1,6 @@
 # Template file for 'gtkmm'
 pkgname=gtkmm
+<<<<<<< HEAD
 version=3.24.8
 revision=1
 build_style=meson
@@ -16,6 +17,24 @@ changelog="https://gitlab.gnome.org/GNOME/gtkmm/-/raw/gtkmm-3-24/NEWS"
 distfiles="${GNOME_SITE}/gtkmm/${version%.*}/gtkmm-${version}.tar.xz"
 checksum=d2940c64922e5b958554b23d4c41d1839ea9e43e0d2e5b3819cfb46824a098c4
 make_check_pre="xvfb-run"
+=======
+version=3.4.0
+distfiles="${GNOME_SITE}/gtkmm/3.4/gtkmm-$version.tar.xz"
+build_style=gnu-configure
+makedepends="pkg-config gtk+3-devel glibmm-devel>=2.32.0 atkmm-devel pangomm-devel cairomm-devel"
+short_desc="C++ bindings for The GTK+ toolkit (v2)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://gtkmm.sourceforge.net/"
+license="LGPL-2.1"
+checksum=42ea4e9acdd37fc3fe7026f8249a5427927b51048adff827bc1312900d6b12e9
+long_desc="
+ gtkmm (previously known as Gtk--) is the official C++ interface for the
+ popular GUI library GTK+. Highlights include typesafe callbacks, widgets
+ extensible via inheritance and a comprehensive set of widget classes that
+ can be freely combined to quickly create complex user interfaces. Here's
+ an overview, with documentation and status. gtkmm is free software
+ distributed under the GNU Library General Public License (LGPL).
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 if [ "$XBPS_CHECK_PKGS" ]; then
 	configure_args+=" -Dbuild-tests=true"
@@ -23,6 +42,7 @@ else
 	configure_args+=" -Dbuild-tests=false"
 fi
 
+<<<<<<< HEAD
 gtkmm-devel_package() {
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -33,3 +53,7 @@ gtkmm-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+subpackages="gtkmm-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -28,12 +28,22 @@ post_install() {
 =======
 # Template build file for 'sylpheed'.
 pkgname=sylpheed
+<<<<<<< HEAD
 version=2.6.0
 distfiles="http://sylpheed.sraoss.jp/sylpheed/v2.6/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--disable-compface --disable-gtkspell
  --disable-gpgme"
 short_desc="Lightweight and user-friendly e-mail client"
+=======
+version=3.1.3
+homepage="http://sylpheed.sraoss.jp"
+distfiles="http://sylpheed.sraoss.jp/sylpheed/v3.1/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+configure_args="--disable-compface --disable-gtkspell"
+makedepends="pkg-config flex zlib-devel openssl-devel atk-devel glib-devel pango-devel cairo-devel freetype-devel fontconfig-devel gtk+-devel gpgme-devel"
+short_desc="GTK+ Lightweight and user-friendly e-mail client"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=121b9f69d5501be2caa8419d5cf1351436db4b43af9f2083b07e59f1def31f51
 long_desc="
@@ -55,9 +65,16 @@ long_desc="
     * Junk mail control
     * Flexible cooperation with external commands"
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build flex
 Add_dependency full glibc
 Add_dependency full gtk+
 Add_dependency full openssl
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+post_install() {
+	rm -rf ${DESTDIR}/usr/include
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

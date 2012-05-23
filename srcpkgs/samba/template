@@ -1,5 +1,6 @@
 # Template file for 'samba'
 pkgname=samba
+<<<<<<< HEAD
 version=4.20.1
 revision=3
 build_style=waf3
@@ -25,6 +26,24 @@ makedepends="python3-devel libtirpc-devel popt-devel e2fsprogs-devel
  mit-krb5-devel pam-devel acl-devel cups-devel avahi-libs-devel tdb-devel
  talloc-devel tevent-devel ldb-devel cmocka-devel gnutls-devel zlib-devel
  ncurses-devel libldap-devel libarchive-devel jansson-devel liburing-devel"
+=======
+version=3.6.5
+revision=2
+build_wrksrc=source3
+homepage="http://www.samba.org"
+distfiles="http://us1.samba.org/samba/ftp/stable/$pkgname-$version.tar.gz"
+build_style=gnu-configure
+configure_args="--with-fhs --with-pam --with-pam_smbpass --with-ldap
+--with-configdir=/etc/samba --with-lockdir=/var/samba
+--with-cachedir=/var/samba --with-nmbdsocketdir=/run/samba/socket
+--with-statedir=/var/samba --with-piddir=/run/samba --with-dnsupdate
+--with-pammodulesdir=/lib/security --with-automount --disable-swat
+--with-syslog --enable-external-libtalloc --with-quotas --enable-cups
+--enable-external-libtdb --disable-fam --with-ads --with-acl-support
+--with-shared-modules=idmap_ad,idmap_adex,idmap_rid,idmap_hash,idmap_tdb2"
+depends="smbclient libsmbclient>=$version"
+makedepends="perl readline-devel python-devel libcap-devel popt-devel e2fsprogs-devel mit-krb5-devel>=1.10.1 libldap-devel pam-devel acl-devel avahi-libs-devel tdb-devel talloc-devel cups-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="SMB/CIFS file, print, and login server for Unix"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
@@ -37,11 +56,15 @@ make_dirs="/etc/samba/private 0750 root root"
 subpackages="smbclient samba-ctdb samba-cups samba-devel samba-libs
  samba-python3 samba-dc"
 
+<<<<<<< HEAD
 if [ "$XBPS_TARGET_LIBC" = "musl" ]; then
 	makedepends+=" musl-legacy-compat musl-nscd-devel libexecinfo-devel"
 else
 	makedepends+=" glusterfs-devel"
 	subpackages+=" samba-glusterfs"
+=======
+subpackages="smbclient libsmbclient samba-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 	if [ "$XBPS_CHECK_PKGS" ]; then
 		configure_args+=" --enable-selftest"
@@ -55,6 +78,7 @@ fi
 export PYTHON_CONFIG="${XBPS_CROSS_BASE}/usr/bin/python3-config"
 export PYTHONHASHSEED=1
 
+<<<<<<< HEAD
 post_patch() {
 	# Look for properly named python support libraries
 	vsed -i third_party/waf/waflib/Tools/python.py \
@@ -75,6 +99,8 @@ _EOF
 		-e 's|log file = .*$|log file = /var/log/samba/%m.log|g'
 }
 
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 post_install() {
 	# install conf file
 	vinstall examples/smb.conf.default 644 etc/samba smb.conf

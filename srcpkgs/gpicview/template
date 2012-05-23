@@ -3,6 +3,7 @@ pkgname=gpicview
 version=0.3.1
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-gtk3"
 hostmakedepends="pkg-config intltool automake libtool gettext-devel glib-devel"
 makedepends="libjpeg-turbo-devel gtk+3-devel desktop-file-utils"
@@ -17,3 +18,22 @@ checksum=b65dd991368ed2b08645a50cb6d4831e21e3c0d0f7d72394d40105ddba754533
 pre_configure() {
 	autoreconf -fi
 }
+=======
+LDFLAGS="-lm"
+revision=2
+makedepends="pkg-config intltool jpeg-devel gtk+-devel"
+fulldepends="desktop-file-utils"
+short_desc="A Simple and Fast Image Viewer for X"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=7c62e396804c2e97e3d6eea071dc1865eb207f2f499ca5ab35b2e768749d036c
+long_desc="
+ Features
+    * Extremely lightweight and fast with low memory usage
+    * Very suitable for default image viewer of desktop system
+    * Simple and intuitive interface
+    * Minimal lib dependency: Only pure GTK+ is used
+    * Desktop independent: Doesn't require any specific desktop environment
+    * Open source, licensed under GNU GPL"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

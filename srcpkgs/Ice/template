@@ -1,5 +1,6 @@
 # Template file for 'Ice'
 pkgname=Ice
+<<<<<<< HEAD
 version=3.7.10
 revision=1
 build_style=gnu-makefile
@@ -15,15 +16,40 @@ homepage="https://www.zeroc.com"
 changelog="https://doc.zeroc.com/ice/latest/release-notes"
 distfiles="https://github.com/zeroc-ice/ice/archive/v${version}.tar.gz"
 checksum=b90e9015ca9124a9eadfdfc49c5fba24d3550c547f166f3c9b2b5914c00fb1df
+=======
+version=3.4.2
+revision=5
+build_wrksrc=cpp
+homepage="http://www.zeroc.com"
+distfiles="${homepage}/download/Ice/3.4/${pkgname}-${version}.tar.gz"
+makedepends="mcpp-devel db-devel expat-devel openssl-devel"
+short_desc="The Internet Communications Engine (Ice)"
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="GPL-2, ICE"
+checksum=dcf0484495b6df0849ec90a00e8204fe5fe1c0d3882bb438bf2c1d062f15c979
+long_desc="
+ The Internet Communications Engine (Ice) is a modern object-oriented toolkit
+ that enables you to build distributed applications with minimal effort. Ice
+ allows you to focus your efforts on your application logic, and it takes care
+ of all interactions with low-level network programming interfaces. With Ice,
+ there is no need to worry about details such as opening network connections,
+ serializing and deserializing data for network transmission, or retrying
+ failed connection attempts (to name but a few of dozens of such low-level
+ details)."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 if [ "$XBPS_TARGET_LIBC" = "glibc" ]; then
 	makedepends+=" libxcrypt-devel"
 fi
 
+<<<<<<< HEAD
 if [ "$CROSS_BUILD" ]; then
 	# Cross build requires the host's slice2cpp
 	hostmakedepends+=" Ice"
 fi
+=======
+# XXX: other language bindings
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_configure() {
 	# Disable building tests

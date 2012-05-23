@@ -12,6 +12,7 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://edge.launchpad.net/intltool"
 distfiles="http://launchpad.net/intltool/trunk/$version/+download/$pkgname-$version.tar.gz"
+<<<<<<< HEAD
 checksum=67c74d94196b153b774ab9f89b2fa6c6ba79352407037c8c14d5aeb334e959cd
 =======
 # Template build file for 'intltool'.
@@ -20,6 +21,10 @@ version=0.40.6
 revision=1
 distfiles="${GNOME_SITE}/$pkgname/0.40/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+fulldepends="perl-XML-Parser gettext"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Toolbox for internationalisation"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=4d1e5f8561f09c958e303d4faa885079a5e173a61d28437d0013ff5efc9e3b64
@@ -42,6 +47,9 @@ long_desc="
  (This is modeled on gettextize.)"
 
 noarch=yes
+<<<<<<< HEAD
 Add_dependency full perl-XML-Parser
 Add_dependency full dash
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

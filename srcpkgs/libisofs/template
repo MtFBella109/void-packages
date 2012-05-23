@@ -13,6 +13,7 @@ changelog="https://dev.lovelyhq.com/libburnia/libisofs/raw/branch/master/ChangeL
 distfiles="https://files.libburnia-project.org/releases/${pkgname}-${version}.tar.gz"
 checksum=ac1fd338d641744ca1fb1567917188b79bc8c2506832dd56885fec98656b9f25
 
+<<<<<<< HEAD
 libisofs-devel_package() {
 	depends="${makedepends} libisofs>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -23,3 +24,6 @@ libisofs-devel_package() {
 		vmove usr/lib/*.a
 	}
 }
+=======
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

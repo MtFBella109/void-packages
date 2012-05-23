@@ -28,7 +28,13 @@ post_install() {
 pkgname=bison
 version=2.4.1
 distfiles="http://ftp.gnu.org/pub/gnu/bison/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=2
+depends="m4"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNU yacc(1) replacement"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=2354469782149e36c644ae7c3e5105895424ed21cda5c05b591cb3dc17068e6b
@@ -36,7 +42,14 @@ long_desc="
  Bison is the GNU replacement for yacc(1). Some programs depend on
  extensions present in Bison."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full m4
 Add_dependency build gettext
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+pre_configure() {
+	echo '#define YYENABLE_NLS 1' >> lib/config.h
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -30,6 +30,7 @@ distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 make_build_args="XINITDIR=/etc/X11/xinit"
 make_install_args="XINITDIR=/etc/X11/xinit"
+makedepends="pkg-config libX11-devel"
 short_desc="X init program"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=b103d2cf9e1cd8b049e28bb1109f3da3a14287bbce3ab8b2f427d55a6e5f4785
@@ -39,7 +40,10 @@ long_desc="
 
 conf_files="/etc/X11/xinit/xinitrc"
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency build pkg-config
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

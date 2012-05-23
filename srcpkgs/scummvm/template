@@ -1,5 +1,6 @@
 # Template file for 'scummvm'
 pkgname=scummvm
+<<<<<<< HEAD
 version=2.9.0
 revision=2
 build_style=configure
@@ -9,6 +10,13 @@ makedepends="zlib-devel libpng-devel SDL2-devel libmad-devel faad2-devel
  fluidsynth-devel libvorbis-devel libtheora-devel libflac-devel
  freetype-devel libjpeg-turbo-devel libcurl-devel SDL2_net-devel
  libmpeg2-devel liba52-devel gtk+3-devel giflib-devel glew-devel"
+=======
+version=1.4.1
+revision=1
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.bz2"
+checksum=fa0a7f0d59524611be0c5b9be9ac7f8e7a72bab1826732e056f88332aa3139da
+makedepends="pkg-config nasm zlib-devel libpng-devel SDL-devel libmad-devel fluidsynth-devel libvorbis-devel libtheora-devel libflac-devel faad2-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Free implementation of LucasArts' SCUMM interpreter"
 maintainer="John <me@johnnynator.dev>"
 license="GPL-2.0-or-later"
@@ -16,8 +24,11 @@ homepage="https://www.scummvm.org/"
 distfiles="https://downloads.scummvm.org/frs/${pkgname}/${version}/${pkgname}-${version}.tar.xz"
 checksum=d5b33532bd70d247f09127719c670b4b935810f53ebb6b7b6eafacaa5da99452
 
+<<<<<<< HEAD
 CFLAGS="-fexcess-precision=fast"
 CXXFLAGS="-fexcess-precision=fast"
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 case "$XBPS_TARGET_MACHINE" in
 	i686*|x86_64*);;

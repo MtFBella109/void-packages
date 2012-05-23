@@ -1,12 +1,16 @@
 # Template file for 'gtk+-devel'.
 #
+depends="glib-devel atk-devel cairo-devel gdk-pixbuf-devel pango-devel gtk+>=2.24.10"
 short_desc="${sourcepkg} (development files)"
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD
 Add_dependency run gtk+
 Add_dependency run python
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

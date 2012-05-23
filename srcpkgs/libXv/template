@@ -4,6 +4,7 @@ pkgname=libXv
 version=1.0.13
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-malloc0returnsnull"
 hostmakedepends="pkg-config"
 makedepends="xorgproto libX11-devel libXext-devel"
@@ -33,6 +34,9 @@ libXv-devel_package() {
 version=1.0.5
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+makedepends="pkg-config videoproto libX11-devel libXext-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xv Extension library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=d549afdf22feefb97cca85dee12242af9f08c4d2435255dc7c30bd17d1d96010
@@ -41,6 +45,7 @@ long_desc="
  the modular X.org project"
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build xproto
 Add_dependency build xextproto
@@ -49,3 +54,5 @@ Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libXext
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

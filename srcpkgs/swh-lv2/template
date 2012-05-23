@@ -4,8 +4,14 @@ version=1.0.16
 revision=2
 build_style=gnu-makefile
 make_install_target="install-system"
+<<<<<<< HEAD
 hostmakedepends="pkg-config libxslt"
 makedepends="fftw-devel"
+=======
+homepage="http://plugin.org.uk/"
+distfiles="http://plugin.org.uk/lv2/${pkgname}-${version}.tar.gz"
+makedepends="pkg-config fftw-devel libxslt"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Collection of GPL (free software) LV2 audio plugins"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
@@ -13,6 +19,12 @@ homepage="http://plugin.org.uk/"
 distfiles="https://github.com/swh/lv2/archive/v${version}.tar.gz"
 checksum=bc24512de6e2fb7a493226e2e01a80ba8462a318b15c3b0fd0cd914b018c3548
 
+<<<<<<< HEAD
 post_extract() {
 	vsed -i -e 's|$(INSTALL_DIR_REALLY)|$(DESTDIR)/$(INSTALL_DIR)|' Makefile
+=======
+
+pre_build() {
+	sed -i -e "s|/usr/local|$DESTDIR/usr|" Makefile
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

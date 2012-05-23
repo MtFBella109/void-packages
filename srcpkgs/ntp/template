@@ -4,6 +4,7 @@ pkgname=ntp
 version=4.2.8p18
 revision=7
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--with-crypto --enable-linuxcap --enable-ipv6 --enable-ntp-signd
  --enable-all-clocks ol_cv_pthread_select_yields=yes"
 hostmakedepends="pkg-config autoconf automake libtool bison perl"
@@ -61,6 +62,11 @@ build_style=gnu_configure
 configure_args="--enable-linuxcaps --enable-getifaddrs=glibc
  --enable-all-clocks --enable-parse-clocks --with-crypto=openssl
  --enable-accurate-adjtime --without-rpath --enable-ipv6"
+=======
+configure_args="--enable-linuxcap"
+depends="readline"
+makedepends="readline-devel openssl-devel libcap-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The Network Time Protocol"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=5681883ce5cd0666d73c1b907e284653964a25ad4c02a308ab11b54aca8f01c3
@@ -74,10 +80,14 @@ subpackages="$pkgname-perl"
 conf_files="/etc/ntp.conf"
 openrc_services="ntpd default"
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full readline
 Add_dependency full openssl
 Add_dependency full libcap
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install()
 {

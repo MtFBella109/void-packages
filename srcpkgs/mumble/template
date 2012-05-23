@@ -1,5 +1,6 @@
 # Template file for 'mumble'
 pkgname=mumble
+<<<<<<< HEAD
 version=1.5.857
 revision=1
 build_style=cmake
@@ -21,11 +22,31 @@ license="BSD-3-Clause"
 homepage="https://mumble.info"
 distfiles="https://github.com/mumble-voip/${pkgname}/releases/download/v${version}/${pkgname}-${version}.tar.gz"
 checksum=e062ee0cb22f99283d21e9266b44587b92995f29141c6381c533a1803e9c3b47
+=======
+version=1.2.3
+revision=6
+homepage="http://mumble.sourceforge.net/"
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
+depends="qt-plugin-sqlite"
+makedepends="libcap-devel Ice-devel protobuf-devel libXi-devel qt-devel openssl-devel speex-devel libsndfile-devel libX11-devel alsa-lib-devel pulseaudio-devel avahi-compat-libs-devel MesaLib-devel libstdc++-devel libogg-devel boost-devel"
+fulldepends="desktop-file-utils hicolor-icon-theme"
+short_desc="Open source, low-latency, high quality voice chat for gaming"
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="BSD"
+checksum=05895122ae4abec3fb62ef24ed9d167ffd768e7080ed179c8bf3afca96d18a5c
+long_desc="
+ Mumble is a voice chat application for groups. While it can be used for any
+ kind of activity, it is primarily intended for gaming. It can be compared to
+ programs like Ventrilo or TeamSpeak. People tend to simplify things, so when
+ they talk about Mumble they either talk about Mumble the client application
+ or about Mumble and Murmur the whole voice chat application suite."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 build_options="jack portaudio"
 build_options_default="jack portaudio"
 
 
+<<<<<<< HEAD
 export CMAKE_GENERATOR="Unix Makefiles"
 LDFLAGS="-Wl,--copy-dt-needed-entries"
 
@@ -34,6 +55,17 @@ post_install() {
 	vsv mumble-server
 	ln -sf murmurd.1 ${DESTDIR}/usr/share/man/man1/mumble-server.1
 	vlicense LICENSE
+=======
+
+
+do_configure()
+{
+	# Needs bundled celt for some reason
+	qmake -recursive main.pro \
+		CONFIG+="no-speechd bundled-celt no-bundled-speex no-g15 \
+			pulseaudio no-embed-qt-translations no-update" \
+		DEFINES+="PLUGIN_PATH=/usr/lib/mumble"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }
 
 murmur_package() {

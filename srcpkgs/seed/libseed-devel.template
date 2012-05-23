@@ -1,0 +1,16 @@
+# Template file for 'libseed-devel'.
+#
+depends="coreutils pkg-config intltool mpfr-devel readline-devel gobject-introspection webkit-gtk3-devel libsoup-devel gir-freedesktop gnome-js-common libseed"
+short_desc="GObject JavaScript bindings for the webkit engine - Development"
+long_desc="${long_desc}
+
+ This package contains the static libraries and development headers, needed
+ to build programs using the Seed interpreter."
+
+
+do_install()
+{
+	vmove usr/include usr
+	vmove usr/lib usr
+	vmove usr/share/gtk-doc usr/share
+}

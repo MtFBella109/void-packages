@@ -3,10 +3,15 @@ pkgname=telepathy-farstream
 version=0.6.2
 revision=4
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper="gir"
 configure_args="--disable-static $(vopt_enable gir introspection)"
 hostmakedepends="pkg-config intltool libxslt $(vopt_if gir gobject-introspection)"
 makedepends="dbus-glib-devel telepathy-glib-devel farstream-devel vala-devel"
+=======
+configure_args="--disable-static"
+makedepends="pkg-config intltool vala-devel libxslt gobject-introspection dbus-glib-devel telepathy-glib-devel farstream-devel python-devel pygobject2-devel gst-python-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Telepathy library that uses Farstream to handle Call channels"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -15,6 +20,7 @@ distfiles="https://telepathy.freedesktop.org/releases/telepathy-farstream/telepa
 checksum=6fa099f22d13a2a49240445a13e918928aef097675d76e5cc9f98ab496087e0a
 replaces="telepathy-farsight>=0"
 
+<<<<<<< HEAD
 # Package build options
 build_options="gir"
 build_options_default="gir"
@@ -33,3 +39,5 @@ telepathy-farstream-devel_package() {
 		fi
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

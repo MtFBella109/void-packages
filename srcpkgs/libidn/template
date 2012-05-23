@@ -27,10 +27,18 @@ libidn-devel_package() {
 =======
 # Template build file for 'libidn'.
 pkgname=libidn
+<<<<<<< HEAD
 version=1.15
 distfiles="http://ftp.gnu.org/gnu/libidn/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 configure_args="--disable-csharp --disable-java"
+=======
+version=1.24
+distfiles="http://ftp.gnu.org/gnu/libidn/libidn-$version.tar.gz"
+build_style=gnu-configure
+configure_args="--disable-csharp --disable-java --enable-threads=posix"
+makedepends="perl pkg-config"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Internationalized Domain Names command line tool"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=db75022eff366bd5646ab1e6d7bcd1c2048473a7dbdf0cd0421de92c88bbdc18
@@ -49,9 +57,12 @@ long_desc="
  IDNA are supported."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency build perl
 Add_dependency build pkg-config
 Add_dependency build gettext
 Add_dependency build texinfo
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

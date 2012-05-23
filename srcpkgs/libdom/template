@@ -1,18 +1,39 @@
 # Template file for 'libdom'
 pkgname=libdom
+<<<<<<< HEAD
 version=0.4.2
 revision=1
 hostmakedepends="pkg-config perl netsurf-buildsystem"
 makedepends="expat-devel libparserutils-devel libwapcaplet-devel libhubbub-devel"
 short_desc="Implementation of the W3C DOM, written in C"
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+version="$(date -u +%Y%m%d)"
+homepage="http://www.netsurf-browser.org"
+makedepends="pkg-config perl subversion libxml2-devel libparserutils-devel libwapcaplet-devel libhubbub-devel"
+short_desc="Implementation of the W3C DOM, written in C."
+maintainer="davehome <davehome@redthumb.info.tm>"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 license="MIT"
 homepage="https://www.netsurf-browser.org"
 distfiles="https://download.netsurf-browser.org/libs/releases/libdom-${version}-src.tar.gz"
 checksum=d05e45af16547014c2b0a3aecf3670fa13d419f505b3f5fc7ac8a1491fc30f3c
 
+<<<<<<< HEAD
 post_extract() {
 	vsed -i Makefile -e 's/_BSD_SOURCE/_DEFAULT_SOURCE/g'
+=======
+subpackages="${pkgname}-devel"
+
+nofetch=yes
+noextract=yes
+
+
+do_fetch() {
+	local url="svn://svn.netsurf-browser.org/trunk/libdom"
+	msg_normal " Fetching source from $url ...\n"
+	svn co ${url} ${pkgname}-${version}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }
 
 do_build() {

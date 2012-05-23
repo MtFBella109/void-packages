@@ -32,7 +32,12 @@ libvisual-devel_package() {
 pkgname=libvisual
 version=0.4.0
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Abstraction library for audio visualisation plugins"
 maintainer="pancake <pancake@nopcode.org>"
 checksum=0b4dfdb87125e129567752089e3c8b54cefed601eef169d2533d8659da8dc1d7
@@ -50,6 +55,9 @@ long_desc="
  anywhere he wants."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,5 +1,6 @@
 # Template file for 'clucene'
 pkgname=clucene
+<<<<<<< HEAD
 version=2.3.3.4
 revision=10
 build_style=cmake
@@ -8,6 +9,14 @@ configure_args="-DENABLE_ASCII_MODE=OFF -DENABLE_PACKAGING=OFF
  -DLUCENE_SYS_INCLUDES:PATH=/usr/include"
 hostmakedepends="pkg-config"
 makedepends="zlib-devel boost-devel-minimal"
+=======
+version=0.9.21b
+revision=3
+wrksrc=${pkgname}-core-${version}
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-core-${version}.tar.bz2"
+build_style=gnu-configure
+makedepends="libstdc++-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Text search engine written in C++"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2+/ASL-2.0"
@@ -22,6 +31,7 @@ else
 	configure_args+=" -DDISABLE_MULTITHREADING=OFF"
 fi
 
+<<<<<<< HEAD
 if [ "$CROSS_BUILD" ]; then
 	configure_args+=" -D_CL_HAVE_PTHREAD_MUTEX_RECURSIVE_EXITCODE=0"
 	configure_args+=" -D_CL_HAVE_PTHREAD_MUTEX_RECURSIVE_EXITCODE__TRYRUN_OUTPUT=0"
@@ -56,3 +66,5 @@ clucene-devel_package() {
 		vmove usr/lib/pkgconfig
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

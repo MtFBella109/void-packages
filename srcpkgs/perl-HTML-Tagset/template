@@ -3,12 +3,25 @@ pkgname=perl-HTML-Tagset
 version=3.20
 revision=8
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl"
 makedepends="${hostmakedepends}"
 depends="${makedepends}"
+=======
+fulldepends="perl"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="HTML::Tagset - data tables useful in parsing HTML"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/HTML-Tagset"
 distfiles="${CPAN_SITE}/HTML/HTML-Tagset-$version.tar.gz"
 checksum=adb17dac9e36cd011f5243881c9739417fd102fce760f8de4e9be4c7131108e2
+<<<<<<< HEAD
+=======
+long_desc="
+ This module contains several data tables useful in various kinds of HTML
+ parsing operations."
+
+noarch=yes
+ 
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

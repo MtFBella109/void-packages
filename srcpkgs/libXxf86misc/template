@@ -2,7 +2,12 @@
 pkgname=libXxf86misc
 version=1.0.1
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config xproto xextproto xf86miscproto libX11-devel libXext-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library for the XFree86-Misc X extension"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=2122d67d49aaa06eeaeb3db173ea8a7048f3b52665e5135874bc5cadada91289
@@ -12,6 +17,7 @@ long_desc="
  to be queried and changed dynamically."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build xproto
 Add_dependency build xextproto
@@ -19,3 +25,5 @@ Add_dependency build xf86miscproto
 Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libXext
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,5 +1,6 @@
 # Template file for 'libparserutils'
 pkgname=libparserutils
+<<<<<<< HEAD
 version=0.2.5
 revision=1
 hostmakedepends="perl netsurf-buildsystem"
@@ -10,6 +11,36 @@ homepage="https://www.netsurf-browser.org"
 distfiles="https://download.netsurf-browser.org/libs/releases/${pkgname}-${version}-src.tar.gz"
 checksum=317ed5c718f17927b5721974bae5de32c3fd6d055db131ad31b4312a032ed139
 CFLAGS="-Wno-error"
+=======
+version=0.1.1
+revision=3
+homepage="http://www.netsurf-browser.org"
+distfiles="${homepage}/projects/releases/${pkgname}-${version}-src.tar.gz"
+makedepends="perl"
+short_desc="Library for building efficient parsers, written in C."
+maintainer="davehome <davehome@redthumb.info.tm>"
+checksum=2d3f1887d3027b7df1fcacd5f74aba16d3c22a86c169816cd712857a1be0aaf3
+license="MIT"
+long_desc="
+ LibParserUtils is a library for building efficient parsers, written
+ in C. It was developed as part of the NetSurf project and is available
+ for use by other software under the MIT licence.
+
+ * Features
+ 	No mandatory dependencies (iconv() implementation optional for
+ 		enhanced charset support)
+ 	A number of built-in character set converters
+ 	Mapping of character set names to/from MIB enum values
+ 	UTF-8 and UTF-16 (host endian) support functions
+ 	Various simple data structures (resizeable buffer, stack, vector)
+ 	A UTF-8 input stream
+ 	Simple C API
+ 	Portable
+ 	Shared library"
+
+subpackages="${pkgname}-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_build() {
 	make ${makejobs} COMPONENT_TYPE=lib-shared PREFIX=/usr

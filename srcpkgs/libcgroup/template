@@ -3,9 +3,14 @@ pkgname=libcgroup
 version=3.0.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--sbindir=/usr/bin --enable-pam-module-dir=/usr/lib/security --enable-tests=no"
 hostmakedepends="flex"
 makedepends="pam-devel"
+=======
+revision=2
+makedepends="flex pam-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library that abstracts the control group file system in Linux"
 maintainer="Orphaned <orphan@voidlinux.org>"
 make_dirs="/etc/cgconfig.d 0755 root root"
@@ -21,6 +26,7 @@ case "$XBPS_TARGET_MACHINE" in
 		;;
 esac
 
+<<<<<<< HEAD
 libcgroup-utils_package() {
 	short_desc+=" - utilities"
 	conf_files="/etc/cgrules.conf /etc/cgconfig.conf"
@@ -42,3 +48,5 @@ libcgroup-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

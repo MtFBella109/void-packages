@@ -1,5 +1,6 @@
 # Template file for 'gsettings-desktop-schemas'
 pkgname=gsettings-desktop-schemas
+<<<<<<< HEAD
 version=48.0
 revision=1
 build_helper="gir"
@@ -7,6 +8,13 @@ build_style=meson
 configure_args="-Dintrospection=$(vopt_if gir true false)"
 hostmakedepends="gettext pkg-config glib-devel"
 makedepends="libglib-devel"
+=======
+version=3.4.2
+homepage="http://www.gnome.org"
+distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+makedepends="pkg-config intltool glib-devel gobject-introspection"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Collection of GSettings schemas"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -15,6 +23,7 @@ changelog="https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas/-/raw/master
 distfiles="${GNOME_SITE}/gsettings-desktop-schemas/${version%.*}/gsettings-desktop-schemas-${version}.tar.xz"
 checksum=e68f155813bf18f865a8b2c8e9d473588b6ccadcafbb666ab788857c6c2d1bd3
 
+<<<<<<< HEAD
 # Package build options
 build_options="gir"
 build_options_default="gir"
@@ -30,3 +39,5 @@ gsettings-desktop-schemas-devel_package() {
 		fi
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

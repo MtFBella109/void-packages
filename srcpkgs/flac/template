@@ -3,10 +3,15 @@ pkgname=flac
 version=1.5.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-rpath --disable-doxygen-docs --disable-examples
  --with-ogg=${XBPS_CROSS_BASE}/usr --disable-thorough-tests"
 hostmakedepends="pkg-config"
 makedepends="libogg-devel"
+=======
+configure_args="--disable-rpath --disable-doxygen-docs --disable-xmms-plugin"
+makedepends="nasm libogg-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Free Lossless Audio Codec"
 maintainer="Rutpiv <roger_freitas@live.com>"
 license="BSD-3-Clause, GPL-2.0-or-later"
@@ -19,6 +24,7 @@ post_install() {
 	vlicense COPYING.Xiph
 }
 
+<<<<<<< HEAD
 libflac_package() {
 	short_desc+=" - shared libraries"
 	pkg_install() {
@@ -37,3 +43,5 @@ libflac-devel_package() {
 		vmove usr/share/doc
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,5 +1,6 @@
 # Template file for 'libnice'
 pkgname=libnice
+<<<<<<< HEAD
 version=0.1.22
 revision=1
 build_style=meson
@@ -15,10 +16,26 @@ homepage="https://libnice.freedesktop.org/"
 changelog="https://gitlab.freedesktop.org/libnice/libnice/-/raw/master/NEWS"
 distfiles="https://libnice.freedesktop.org/releases/libnice-${version}.tar.gz"
 checksum=a5f724cf09eae50c41a7517141d89da4a61ec9eaca32da4a0073faed5417ad7e
+=======
+version=0.1.2
+homepage="http://nice.freedesktop.org"
+distfiles="$homepage/releases/$pkgname-$version.tar.gz"
+build_style=gnu-configure
+configure_args="--disable-static"
+makedepends="pkg-config intltool gstreamer-devel libsoup-devel gupnp-igd-devel"
+short_desc="An implementation of the IETF's draft ICE (for P2P UDP data streams)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="LGPL-2.1"
+checksum=f2472b6392a27287ded21a6ba535b19c6204614fb191e1c4ff98295202c247f6
+long_desc="
+ It provides a GLib-based library, libnice and a Glib-free library, libstun
+ as well as GStreamer elements.
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 build_options="gir"
 build_options_default="gir"
 
+<<<<<<< HEAD
 libnice-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision} ${makedepends}"
 	short_desc+=" - development files"
@@ -31,3 +48,10 @@ libnice-devel_package() {
 		fi
 	}
 }
+=======
+ Existing standards that use ICE include Session Initiation Protocol (SIP)
+ and XMPP Jingle."
+
+subpackages="$pkgname-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

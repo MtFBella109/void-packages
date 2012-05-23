@@ -9,6 +9,7 @@ short_desc="Library implementing the SSH2 protocol"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
 homepage="http://www.libssh2.org/"
+<<<<<<< HEAD
 distfiles="http://www.libssh2.org/download/${pkgname}-${version}.tar.gz"
 checksum=d9ec76cbe34db98eec3539fe2c899d26b0c837cb3eb466a56b0f109cabf658f7
 
@@ -29,3 +30,18 @@ libssh2-devel_package() {
 		vmove usr/share/man
 	}
 }
+=======
+distfiles="http://www.libssh2.org/download/$pkgname-$version.tar.gz"
+build_style=gnu-configure
+makedepends="openssl-devel"
+short_desc="library implementing the SSH2 protocol"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="BSD"
+checksum=418c09061fb9c3c26fec391a35a062780b21b3199885e3b27054619582469bd3
+long_desc="
+ libssh2 is a client-side C library implementing the SSH2 protocol. It supports
+ regular terminal, SCP and SFTP sessions; port forwarding; password, key-based
+ and keyboard-interactive authentication."
+
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

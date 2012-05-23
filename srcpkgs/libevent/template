@@ -5,6 +5,7 @@ version=2.1.12
 revision=3
 build_style=gnu-configure
 makedepends="openssl-devel"
+<<<<<<< HEAD
 short_desc="Abstract asynchronous event notification library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
@@ -33,6 +34,8 @@ version=1.4.12
 wrksrc="$pkgname-$version-stable"
 distfiles="http://www.monkey.org/~provos/$pkgname-$version-stable.tar.gz"
 build_style=gnu_configure
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Abstract asynchronous event notification library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=1174f513253bcecf820de246bb64f71ccf13c033ce1a25fca015f9caa92ae0f6
@@ -45,5 +48,8 @@ long_desc="
  without having to change the event loop."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency full glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

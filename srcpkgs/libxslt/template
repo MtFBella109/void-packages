@@ -78,7 +78,12 @@ libxslt-python3_package() {
 pkgname=libxslt
 version=1.1.26
 distfiles="ftp://xmlsoft.org/libxslt/$pkgname-$version.tar.gz"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="python-devel libxml2-devel libgcrypt-devel libgpg-error-devel zlib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="XSLT parser library from the GNOME project"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=55dd52b42861f8a02989d701ef716d6280bfa02971e967c285016f99c66e3db1
@@ -90,8 +95,11 @@ long_desc="
  expressions extensions."
 
 subpackages="$pkgname-devel $pkgname-python"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full libxml2
 Add_dependency full libgcrypt
 Add_dependency build python
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -2,11 +2,16 @@
 pkgname=giggle
 version=0.7
 revision=2
+<<<<<<< HEAD
 build_style=gnu-configure
 hostmakedepends="pkg-config itstool intltool glib-devel git
  automake gettext-devel libtool tar yelp-tools"
 makedepends="gtksourceview-devel"
 depends="desktop-file-utils hicolor-icon-theme"
+=======
+makedepends="pkg-config itstool intltool gtksourceview-devel vte3-devel evolution-data-server-devel"
+fulldepends="git desktop-file-utils hicolor-icon-theme"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Git repository viewer"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -17,6 +22,7 @@ lib32disabled=yes
 
 CFLAGS="-fcommon"
 
+<<<<<<< HEAD
 pre_configure() {
 	autoreconf -fi
 	intltoolize --force
@@ -38,3 +44,6 @@ giggle-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

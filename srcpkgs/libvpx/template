@@ -2,12 +2,26 @@
 # updates generally break abi, so if you update this,
 # have fun rebuilding everything
 pkgname=libvpx
+<<<<<<< HEAD
 version=1.13.1
 revision=1
 hostmakedepends="perl"
 short_desc="VP8 and VP9 video codec"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause-Clear"
+=======
+version=1.0.0
+wrksrc="libvpx-v${version}"
+distfiles="http://webm.googlecode.com/files/${pkgname}-v${version}.tar.bz2"
+build_style=configure
+configure_args="--enable-vp8 --enable-runtime-cpu-detect --enable-shared
+--enable-postproc --enable-pic --disable-install-docs --disable-install-srcs"
+make_install_target="DIST_DIR=${XBPS_DESTDIR}/${pkgname}-${version}/usr install"
+revision=2
+makedepends="which perl>=0 yasm"
+short_desc="The VP8 Codec SDK"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 homepage="http://www.webmproject.org"
 distfiles="https://github.com/webmproject/libvpx/archive/v${version}.tar.gz"
 checksum=00dae80465567272abd077f59355f95ac91d7809a2d3006f9ace2637dd429d14
@@ -16,9 +30,13 @@ case "$XBPS_TARGET_MACHINE" in
 	x86_64* | i686*) hostmakedepends+=" yasm" ;;
 esac
 
+<<<<<<< HEAD
 do_configure() {
 	export LD="$CC"
 	local target args
+=======
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 	case "$XBPS_TARGET_MACHINE" in
 		x86_64*) target="x86_64-linux-gcc" ;;

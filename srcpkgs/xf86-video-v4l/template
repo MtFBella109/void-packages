@@ -2,7 +2,13 @@
 pkgname=xf86-video-v4l
 version=0.2.0
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="xorg-server"
+makedepends="xorg-server-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg Video4Linux video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=cbff9120fbad900cbdc7ac535d04984e7b491d69a8eb0b371e30ae07cb61925d
@@ -10,5 +16,8 @@ long_desc="
  This is the video driver for Video4Linux video cards for the
  Xorg X11 server."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

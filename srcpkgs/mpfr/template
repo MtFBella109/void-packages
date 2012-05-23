@@ -6,6 +6,7 @@ revision=1
 bootstrap=yes
 build_style=gnu-configure
 configure_args="--enable-thread-safe"
+<<<<<<< HEAD
 makedepends="gmp-devel"
 short_desc="Library for multiple-precision floating-point computations"
 maintainer="Gonzalo Tornaría <tornaria@cmat.edu.uy>"
@@ -33,6 +34,10 @@ version=2.4.1
 distfiles="http://www.mpfr.org/mpfr-current/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--enable-thread-safe"
+=======
+revision=3
+makedepends="gmp-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library for multiple-precision floating-point computations"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=642890e85c6ee684b5c257612df15b034b2a06a5c277fb6647332ebe763a485e
@@ -44,7 +49,12 @@ long_desc="
  see more on the credit page. MPFR is based on the GMP multiple-precision
  library."
 
+<<<<<<< HEAD
 base_chroot=yes
 subpackages="mpfr-devel"
 Add_dependency full gmp
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+bootstrap=yes
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

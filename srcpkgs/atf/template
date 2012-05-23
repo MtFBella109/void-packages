@@ -3,12 +3,16 @@ pkgname=atf
 version=0.23
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="
  kyua_cv_getopt_plus=yes
  kyua_cv_attribute_noreturn=yes
  kyua_cv_getcwd_works=yes"
 depends="gdb xmlcatmgr"
 checkdepends="kyua"
+=======
+fulldepends="gdb xmlcatmgr"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Automated Testing Framework"
 maintainer="Duncaen <duncaen@voidlinux.org>"
 license="BSD-2-Clause"
@@ -19,6 +23,7 @@ checksum=a64e2427d021297f25b3f2e1798f8ec4dc3061ffb01a1cd3f66cc4cee486b10f
 
 xml_entries="system http://www.NetBSD.org/XML/atf/tests-results.dtd /usr/share/xml/atf/tests-results.dtd"
 
+<<<<<<< HEAD
 post_check() {
 	kyua test
 }
@@ -45,3 +50,5 @@ atf-libs_package() {
 		vmove "usr/lib/*.so.*"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

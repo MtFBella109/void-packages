@@ -1,11 +1,25 @@
 # Template file for 'udev'
 pkgname=udev
+<<<<<<< HEAD
 version=147
 distfiles="${KERNEL_SITE}/utils/kernel/hotplug/udev-${version}.tar.bz2"
 build_style=gnu_configure
 configure_args="--exec-prefix= --without-selinux --libexecdir=/lib/udev
  --with-rootlibdir=/lib"
 short_desc="A userspace implementation of devfs"
+=======
+version=182
+distfiles="${KERNEL_SITE}/utils/kernel/hotplug/udev-${version}.tar.xz"
+build_style=gnu-configure
+configure_args="--sbindir=/sbin --without-selinux --libexecdir=/lib
+--with-rootlibdir=/lib --disable-introspection --enable-floppy
+--with-systemdsystemunitdir=/lib/systemd/system --disable-gudev
+--disable-static --disable-rule-generator
+--with-firmware-path=/lib/firmware/updates:/lib/firmware"
+makedepends="pkg-config gperf libxslt libblkid-devel libkmod-devel"
+fulldepends="usbutils>=0.82 pciutils"
+short_desc="/dev/ and hotplug management daemon"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=6517acde28bf319fc52c2b65fef7ef9f35a62bd669bbda6ad65de354d74d8d6b
 long_desc="
@@ -14,6 +28,7 @@ long_desc="
 
 openrc_services="udev sysinit"
 conf_files="/etc/udev/udev.conf"
+<<<<<<< HEAD
 subpackages="udev-devel libgudev libgudev-devel"
 
 Add_dependency full glibc
@@ -38,6 +53,11 @@ post_install()
 
 	# Install the OpenRC service
 	install -D -m755 ${FILESDIR}/udev.rc ${DESTDIR}/etc/init.d/udev
+=======
+subpackages="libudev libudev-devel"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
         # Install the initramfs-tools hook/scripts.
 	install -d $DESTDIR/usr/share/initramfs-tools/hooks

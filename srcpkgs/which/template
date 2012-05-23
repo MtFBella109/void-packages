@@ -15,7 +15,13 @@ CFLAGS="-D_LARGE_FILE_SOURCE=1 -D_FILE_OFFSET_BITS=64"
 =======
 version=2.20
 distfiles="http://www.xs4all.nl/~carlo17/which/which-$version.tar.gz"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+fulldepends="glibc bash"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Displays where a particular program in your path is located"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=d417b65c650d88ad26a208293c1c6e3eb60d4b6d847f01ff8f66aca63e2857f8
@@ -23,7 +29,10 @@ long_desc="
  The which command shows the full pathname of a specified program, if
  the specified program is in your PATH."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full bash
 Add_dependency build texinfo
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

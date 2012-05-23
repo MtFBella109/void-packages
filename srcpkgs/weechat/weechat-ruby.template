@@ -1,0 +1,15 @@
+# Template file for 'weechat-ruby'.
+#
+depends="weechat>=0.3.7"
+short_desc="${sourcepkg} ruby add-on"
+long_desc="${long_desc}
+
+ This package contains the ruby plugin."
+
+
+do_install()
+{
+	mkdir -p ${DESTDIR}/usr/lib/weechat/plugins
+	mv ${SRCPKGDESTDIR}/usr/lib/weechat/plugins/ruby.so \
+		${DESTDIR}/usr/lib/weechat/plugins
+}

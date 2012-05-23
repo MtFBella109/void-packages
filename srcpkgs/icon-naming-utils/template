@@ -18,7 +18,12 @@ checksum=b1378679df4485b4459f609a3304238b3e92d91e43744c47b70abbe690d883d5
 pkgname=icon-naming-utils
 version=0.8.90
 distfiles="http://tango.freedesktop.org/releases/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+fulldepends="perl-XML-Simple"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Adapts GNOME and KDE icon names to the Icon Naming Specification"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=b1378679df4485b4459f609a3304238b3e92d91e43744c47b70abbe690d883d5
@@ -29,7 +34,6 @@ long_desc="
  in the Icon Naming Specification."
 
 noarch=yes
-Add_dependency full perl-XML-Simple
 
 post_install()
 {

@@ -1,5 +1,6 @@
 # Template file for 'nodejs'
 pkgname=nodejs
+<<<<<<< HEAD
 version=22.15.0
 revision=2
 build_style=configure
@@ -27,6 +28,13 @@ _make_depends="
  $(vopt_if brotli brotli-devel)"
 makedepends="${_make_depends}"
 checkdepends="procps-ng iana-etc"
+=======
+version=0.6.11
+homepage="http://nodejs.org/"
+distfiles="${homepage}/dist/v${version}/node-v${version}.tar.gz"
+makedepends="pkg-config openssl-devel v8-devel zlib-devel"
+fulldepends="python"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Evented I/O for V8 javascript"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
@@ -49,6 +57,7 @@ replaces="iojs>=0"
 conflicts="nodejs-lts-10"
 provides="nodejs-runtime-0_1"
 
+<<<<<<< HEAD
 if [ "$CROSS_BUILD" ]; then
 	# Need these for host v8 for torque, see https://github.com/nodejs/node/pull/21079
 	hostmakedepends+=" ${_make_depends}"
@@ -58,6 +67,9 @@ fi
 if [ "$XBPS_WORDSIZE" = 32 ]; then
 	LDFLAGS="-Wl,--no-keep-memory"
 fi
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 if [ "$XBPS_WORDSIZE" -ne "$XBPS_TARGET_WORDSIZE" ]; then
 	nocross="host and target must have the same pointer size"

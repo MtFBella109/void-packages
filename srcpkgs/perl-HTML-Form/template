@@ -3,6 +3,7 @@ pkgname=perl-HTML-Form
 version=6.11
 revision=1
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl"
 makedepends="perl-HTML-Parser perl-URI perl-HTTP-Message"
 depends="$makedepends"
@@ -13,3 +14,20 @@ license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/HTML-Form"
 distfiles="${CPAN_SITE}/HTML/HTML-Form-${version}.tar.gz"
 checksum=43bfaa7087393487d2d51261a1aa7f6f81a97b1d8fef7a48fcf6ef32b16d6454
+=======
+fulldepends="perl-HTML-Parser perl-URI perl-HTTP-Message perl"
+short_desc="HTML::Form - Class that represents an HTML form element"
+maintainer="davehome <davehome@redthumb.info.tm>"
+homepage="http://search.cpan.org/~gaas/HTML-Form-6.00/lib/HTML/Form.pm"
+license="GPL-2"
+checksum=b41b6f5480493d427a56974c0fb6f51e807d93938ef1518dd22454b93cad4987
+long_desc="
+ Objects of the HTML::Form class represents a single HTML FORM tag instance.
+ A form consists of a sequence of inputs that usually have names, and which
+ can take on various values. The state of a form can be tweaked and it can
+ then be asked to provide HTTP::Request objects that can be passed to the
+ request() method of LWP::UserAgent."
+
+noarch=yes
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

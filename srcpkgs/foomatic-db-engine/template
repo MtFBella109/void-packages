@@ -12,9 +12,32 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://www.openprinting.org/"
 distfiles="https://www.openprinting.org/download/foomatic/$pkgname-$version.tar.gz"
+<<<<<<< HEAD
 checksum=b5c89027aa26967d2e6db62e2af7db0c4039d2480d4fbf2476a6ddcf609a5faf
 
 post_configure() {
 	# Compiling and linking in one step requires $(LDFLAGS)
 	sed -i Makefile -e's;$(CC) $(CFLAGS);& $(LDFLAGS);'
 }
+=======
+build_style=gnu-configure
+makedepends="libxml2-devel cups-devel"
+fulldepends="wget perl foomatic-db foomatic-filters ghostscript>=0 cups>=0"
+short_desc="OpenPrinting printer support - programs"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2, MIT"
+checksum=f0c4892ae5566ea2efaae8bd58352fd32001d112f2f9dfff63f7de03b46733e1
+long_desc="
+ Foomatic is a printing system designed to make it easier to set up common
+ printers for use with Linux (and other operating systems). It provides the
+ "glue" between a print spooler (like CUPS or lpr) and your actual printer,
+ by telling your computer how to process files sent to the printer.
+
+ This package contains the architecture-dependent programs needed to set up
+ and maintain the foomatic system. You will also need one or more database
+ packages. The foomatic-db package includes drivers for most common printers
+ using Ghostscript as the print processor, as well as some common glue code
+ used in other filter systems."
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

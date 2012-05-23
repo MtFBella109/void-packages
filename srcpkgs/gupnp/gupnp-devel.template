@@ -1,0 +1,17 @@
+# Template file for 'gupnp-devel'.
+#
+depends="python gssdp-devel glib-devel libxml2-devel libuuid-devel gupnp>=0.18.2"
+short_desc="${short_desc} - development files"
+long_desc="${long_desc}
+
+ This package contains files for development, headers, static libs, etc."
+
+
+noarch=yes
+
+do_install() {
+	vmove usr/bin usr
+	vmove usr/include usr
+	vmove usr/share usr
+	vmove usr/lib/pkgconfig usr/lib
+}

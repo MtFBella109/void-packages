@@ -1,5 +1,6 @@
 # Template file for 'gcc-libstdc++-devel'.
 #
+depends="libstdc++>=4.7"
 short_desc="GCC Standard C++ Library (development files)"
 long_desc="${long_desc}
 
@@ -8,8 +9,11 @@ long_desc="${long_desc}
 
 Add_dependency run libstdc++
 
+<<<<<<< HEAD
 replaces="gcc-libstdc++-devel"
 revision=1
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

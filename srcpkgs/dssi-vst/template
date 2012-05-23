@@ -2,12 +2,19 @@
 pkgname=dssi-vst
 version=0.9.2.20140805
 revision=3
+<<<<<<< HEAD
 _commit=b061c4360a89d3b69bfc44f63bc1bd33e2807f6c
 archs=i686
 hostmakedepends="pkg-config git wine-tools"
 makedepends="zlib-devel jack-devel alsa-lib-devel liblo-devel
  dssi-devel ladspa-sdk wine wine-devel"
 depends="dssi ladspa-sdk ladspa-sdk-progs wine"
+=======
+homepage="http://breakfastquay.com/dssi-vst/"
+distfiles="http://code.breakfastquay.com/attachments/download/10/${pkgname}-${version}.tar.bz2"
+depends="dssi ladspa-sdk ladspa-sdk-progs"
+makedepends="jack-devel alsa-lib-devel libstdc++-devel liblo-devel dssi-devel ladspa-sdk wine-unstable wine-unstable-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Run Windows VST plugins on Linux"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
@@ -15,9 +22,19 @@ homepage="http://breakfastquay.com/dssi-vst/"
 distfiles="https://github.com/falkTX/dssi-vst/archive/$_commit.tar.gz"
 checksum=f93da35b11a09d51263dcd76be79721151ba629dec946f80bf3e5f1201643a91
 
+<<<<<<< HEAD
 do_configure() {
 	sed -i -e "s|/usr/local|/usr|" Makefile
 	sed -i -e 's/LINK_FLAGS   =/& -pthread -lrt/' Makefile
+=======
+only_for_archs=i686
+
+
+
+do_configure()
+{
+	sed -i -e "s|/usr/local|${DESTDIR}/usr|" Makefile
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }
 
 do_build() {

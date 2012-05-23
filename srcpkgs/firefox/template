@@ -281,6 +281,7 @@ do_install() {
 =======
 # Template build file for 'firefox'.
 pkgname=firefox
+<<<<<<< HEAD
 version=3.5.5
 wrksrc=mozilla-1.9.1
 distfiles="ftp://ftp.mozilla.org/pub/${pkgname}/releases/${version}/source/${pkgname}-${version}.source.tar.bz2"
@@ -290,6 +291,13 @@ configure_args="--enable-default-toolkit=cairo-gtk2 --disable-dbus
  --enable-svg --enable-svg-renderer=cairo --enable-system-cairo
  --enable-crypto --enable-application=browser --disable-gnomevfs
  --disable-gnomeui"
+=======
+version=12.0
+wrksrc=mozilla-release
+distfiles="${MOZILLA_SITE}/${pkgname}/releases/${version}/source/${pkgname}-${version}.source.tar.bz2"
+depends="desktop-file-utils hicolor-icon-theme"
+makedepends="unzip zip perl>=0 python>=2.7.2_3 yasm jpeg-devel libpng-devel pixman-devel libIDL-devel nss-devel>=3.13.3 sqlite-devel libXrender-devel libXScrnSaver-devel gtk+-devel libevent-devel libnotify-devel libvpx-devel GConf-devel startup-notification-devel dbus-glib-devel alsa-lib-devel hunspell-devel wireless_tools-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Lightweight gecko-based web browser"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=2abe7b5561267c230df27951d1d8c6c5853d06ca2426997fdf0a63c5db689feb
@@ -304,8 +312,43 @@ long_desc="
  can be extended by developers using industry standards such as XML,
  CSS, JavaScript, C++, etc. Many extensions are available."
 
+<<<<<<< HEAD
 Add_dependency full zip
 Add_dependency full gtk+
 Add_dependency full alsa-lib
 Add_dependency full libIDL
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+
+do_build() {
+	# Fix PRE_RELEASE_SUFFIX
+	sed -i '/^PRE_RELEASE_SUFFIX := ""/s/ ""//' browser/base/Makefile.in
+	cp -f ${FILESDIR}/mozconfig .mozconfig
+	export LDFLAGS="-Wl,-R/usr/lib/firefox"
+	# Fix for libvpx-1.0.0 detection.
+	sed -i -e "s|VPX_CODEC_USE_INPUT_PARTITION|VPX_CODEC_USE_INPUT_FRAGMENTS|g" configure
+
+	make ${makejobs} -f client.mk MOZ_MAKE_FLAGS="${makejobs}"
+}
+
+do_install() {
+	make -f client.mk DESTDIR=${DESTDIR} install
+
+	vinstall ${FILESDIR}/vendor.js 644 usr/lib/firefox/defaults/pref
+
+	vinstall ${FILESDIR}/firefox.desktop 644 usr/share/applications
+	for i in 16x16 22x22 24x24 32x32 48x48 256x256; do
+		vinstall browser/branding/official/default${i%x*}.png 644 \
+			usr/share/icons/hicolor/${i}/apps firefox.png
+	done
+
+	# We don't want the development stuff
+	rm -rf ${DESTDIR}/usr/{include,lib/firefox-devel,share/idl}
+
+	# https://bugzilla.mozilla.org/show_bug.cgi?id=658850
+	ln -sf firefox ${DESTDIR}/usr/lib/firefox/firefox-bin
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

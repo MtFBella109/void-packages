@@ -1,6 +1,7 @@
 # Template file for 'openssl'
 pkgname=openssl
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=3.5.4
 revision=1
 bootstrap=yes
@@ -117,6 +118,15 @@ configure_args="--prefix=/usr
  zlib-dynamic shared threads"
 make_build_target="all"
 short_desc="Secure Socket Layer and cryptographic library"
+=======
+_openssl_version=1.0.0
+version=${_openssl_version}i
+homepage="http://www.openssl.org/"
+distfiles="${homepage}/source/$pkgname-$version.tar.gz"
+makedepends="zlib-devel"
+fulldepends="perl>=0"
+short_desc="Secure Socket Layer and cryptographic library - runtime utilities"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=ecd054e9eed2e9c1620ba15257e6fc4d882c9a4aea663d23b769e2138de8c91a
 long_desc="
@@ -130,9 +140,12 @@ disable_parallel_build=yes
 conf_files="/etc/ssl/openssl.cnf"
 subpackages="openssl-devel"
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full zlib
 Add_dependency build perl
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install()
 {

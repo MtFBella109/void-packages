@@ -33,9 +33,13 @@ libproxy-devel_package() {
 =======
 version=0.2.3
 distfiles="http://libproxy.googlecode.com/files/$pkgname-$version.tar.gz"
+<<<<<<< HEAD
 build_style=gnu_configure
 configure_args="--without-gnome --without-kde --without-webkit
  --without-mozjs --without-networkmanager --with-python"
+=======
+makedepends="pkg-config python cmake"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="A library handling all the details of proxy configuration"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=59ded160b3547d29e37cc9d06359f7f37d94112214e4532430cd65e704c1339a
@@ -53,7 +57,11 @@ long_desc="
     * a sublime sense of joy and accomplishment"
 
 subpackages="$pkgname-devel $pkgname-python"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build python
 Add_dependency run glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

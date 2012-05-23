@@ -3,9 +3,13 @@ pkgname=bash-completion
 version=2.16.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 make_install_args="profiledir=/etc/bash/bashrc.d compatdir=/usr/share/bash-completion"
 depends="bash"
 checkdepends="python3-pytest python3-pexpect"
+=======
+fulldepends="bash"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Programmable completion for the GNU Bash shell"
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="GPL-2.0-or-later"
@@ -14,6 +18,7 @@ changelog="https://raw.githubusercontent.com/scop/bash-completion/refs/heads/mai
 distfiles="https://github.com/scop/bash-completion/releases/download/${version}/bash-completion-${version}.tar.xz"
 checksum=3369bd5e418a75fb990863925aed5b420398acebb320ec4c0306b3eae23f107a
 
+<<<<<<< HEAD
 # Summary of tests:
 # = 26 failed, 1106 passed, 457 skipped, 14 xfailed, 4 xpassed in 1126.01s (0:18:46) =
 
@@ -58,3 +63,6 @@ post_install() {
 	# for slackware's that we don't have, conflicts with pacman's
 	rm ${DESTDIR}/usr/share/bash-completion/completions/makepkg
 }
+=======
+noarch=yes
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -2,12 +2,21 @@
 pkgname=xf86-video-s3
 version=0.6.3
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="xorg-server"
+makedepends="xorg-server-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg S3 video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=ed9f65aa6eb1811d8c16cddfce00c5fc5880d6d46b907a83ef77700610085144
 long_desc="
  This is the video driver for S3 video cards for the Xorg X11 server."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

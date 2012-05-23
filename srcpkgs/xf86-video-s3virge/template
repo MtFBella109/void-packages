@@ -2,7 +2,13 @@
 pkgname=xf86-video-s3virge
 version=1.10.4
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="xorg-server"
+makedepends="xorg-server-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg S3 Virge video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=1cd00d6e71fdbd70dafe3beb8911d22cbdc5ef7b32d2d81c454ac8a18c967fb8
@@ -10,5 +16,8 @@ long_desc="
  This is the video driver for S3 Virge video cards for the Xorg
  X11 server."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

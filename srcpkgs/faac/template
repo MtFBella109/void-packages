@@ -3,6 +3,7 @@ pkgname=faac
 version=1.30
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static"
 hostmakedepends="automake libtool"
 short_desc="AAC audio encoder library"
@@ -23,4 +24,21 @@ faac-devel_package() {
 		vmove usr/include
 		vmove "usr/lib/*.so"
 	}
+=======
+configure_args="--with-mp4v2"
+makedepends="automake libmp4v2-devel"
+short_desc="AAC audio encoder"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=c5141199f4cfb17d749c36ba8cfe4b25f838da67c22f0fec40228b6b9c3d19df
+long_desc="
+ FAAC is an AAC audio encoder. FAAC currently supports MPEG-4 LTP, MAIN
+ and LOW COMPLEXITY object types and MAIN and LOW MPEG-2 object types. It
+ also supports multichannel and gapless encoding."
+
+subpackages="$pkgname-devel"
+
+pre_configure()
+{
+	./bootstrap
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

@@ -1,0 +1,54 @@
+# Template file for 'webkit-gtk3'
+pkgname=webkit-gtk3
+version=1.8.1
+wrksrc=webkit-${version}
+homepage="http://webkitgtk.org/"
+license="LGPL-2.1, Simplified BSD (2 clause)"
+distfiles="${homepage}/releases/webkit-${version}.tar.xz"
+makedepends="perl>=0 pkg-config intltool which gperf flex jpeg-devel sqlite-devel gtk+-devel gtk+3-devel gst-plugins-base-devel libsoup-devel libxslt-devel icu-devel enchant-devel geoclue-devel gobject-introspection"
+short_desc="GTK+3 port of the WebKit browser engine"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=9a126a76b40ca61adb1f1626e1567f976740af2332948cc5189489dbd01e3b28
+long_desc="
+ WebKit is an open source web browser engine. WebKit is also the name of
+ the Mac OS X system framework version of the engine that's used by
+ Safari, Dashboard, Mail, and many other OS X applications. WebKit's HTML
+ and JavaScript code began as a branch of the KHTML and KJS libraries
+ from KDE.
+
+ This is the GTK3+ port of the engine."
+
+disable_parallel_build=yes
+subpackages="webkit-gtk webkit-gtk-devel $pkgname-devel"
+
+
+do_configure() {
+	local args="--enable-video --enable-jit \
+		--with-font-backend=freetype --enable-introspection \
+		--with-unicode-backend=icu --disable-schemas-compile \
+		--with-accelerated-compositing=opengl \
+		${CONFIGURE_SHARED_ARGS}"
+
+	for ver in 2 3; do
+		[ ! -d ${wrksrc}/build-gtk${ver} ] && \
+			mkdir ${wrksrc}/build-gtk${ver}
+		cd ${wrksrc}/build-gtk${ver}
+		../configure ${args} --with-gtk=${ver}.0
+	done
+}
+
+do_build() {
+	for ver in 2 3; do
+		msg_normal "Building GTK+${ver} version...\n"
+		cd ${wrksrc}/build-gtk${ver}
+		make ${makejobs} || return 1
+	done
+}
+
+do_install() {
+	for ver in 2 3; do
+		msg_normal "Installing GTK+${ver} version...\n"
+		cd ${wrksrc}/build-gtk${ver}
+		make DESTDIR=${DESTDIR} install
+	done
+}

@@ -1,5 +1,6 @@
 # Template file for 'kmod'
 pkgname=kmod
+<<<<<<< HEAD
 version=34.2
 revision=1
 build_style=meson
@@ -17,6 +18,34 @@ license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://git.kernel.org/pub/scm/utils/kernel/kmod/kmod.git"
 distfiles="${KERNEL_SITE}/utils/kernel/kmod/kmod-${version}.tar.xz"
 checksum=5a5d5073070cc7e0c7a7a3c6ec2a0e1780850c8b47b3e3892226b93ffcb9cb54
+=======
+version=8
+homepage="http://git.profusion.mobi/cgit.cgi/kmod.git"
+distfiles="${KERNEL_SITE}/utils/kernel/kmod/kmod-${version}.tar.xz"
+build_style=gnu-configure
+configure_args="--with-rootprefix= --with-zlib --with-xz"
+makedepends="pkg-config zlib-devel liblzma-devel"
+short_desc="Linux kernel module handling"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+checksum=35f7d1dfcf62ea3d6da1ed0ee41a7997333680033609c5e9658f4fe8d997734d
+long_desc="
+ kmod is a set of tools to handle common tasks with Linux kernel modules like
+ insert, remove, list, check properties, resolve dependencies and aliases.
+
+ These tools are designed on top of libkmod, a library that is shipped with kmod."
+
+provides="module-init-tools-3.17"
+replaces="module-init-tools>=0"
+subpackages="libkmod libkmod-devel"
+
+make_dirs="
+/etc/depmod.d 0755 root root
+/etc/modprobe.d 0755 root root
+/lib/depmod.d 0755 root root
+/lib/modprobe.d 0755 root root"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vinstall ${FILESDIR}/depmod-search.conf 644 usr/lib/depmod.d search.conf

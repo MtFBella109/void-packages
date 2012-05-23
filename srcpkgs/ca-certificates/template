@@ -1,9 +1,25 @@
 # Template file for 'ca-certificates'
 pkgname=ca-certificates
+<<<<<<< HEAD
 version=20250419+3.117
 revision=1
 _nss_version=${version#*+}
 bootstrap=yes
+=======
+version=20120212
+distfiles="${DEBIAN_SITE}/main/c/${pkgname}/${pkgname}_${version}.tar.gz"
+makedepends="python"
+fulldepends="findutils sed openssl run-parts"
+short_desc="Common CA certificates"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://packages.qa.debian.org/c/ca-certificates.html"
+license="GPL-2"
+checksum=95f3eac93dad4433b5731bc9e106a26e2ccf210acace1927e597477b24187dce
+long_desc="
+ This package includes PEM files of CA certificates to allow SSL-based
+ applications to check for the authenticity of SSL connections."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 conf_files="/etc/ca-certificates.conf"
 build_wrksrc="ca-certificates"
 hostmakedepends="openssl"
@@ -20,11 +36,14 @@ post_extract() {
 	cp ${FILESDIR}/* $build_wrksrc/mozilla
 }
 
+<<<<<<< HEAD
 do_configure() {
 	cp ../nss-${_nss_version}/nss/lib/ckfw/builtins/certdata.txt \
 		../nss-${_nss_version}/nss/lib/ckfw/builtins/nssckbi.h \
 		mozilla
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_build() {
 	make ${makejobs}

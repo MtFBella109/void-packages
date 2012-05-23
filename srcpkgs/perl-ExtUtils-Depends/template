@@ -20,7 +20,12 @@ version=0.301
 revision=1
 wrksrc="ExtUtils-Depends-$version"
 distfiles="${SOURCEFORGE_SITE}/gtk2-perl/ExtUtils-Depends-$version.tar.gz"
+<<<<<<< HEAD
 build_style=perl_module
+=======
+build_style=perl-module
+fulldepends="perl"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Easily build XS extensions that depend on XS extensions"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=c913136c2b6a19f7f9be2defb2ed86f01c84cd1685a0f76c9d50ee56fc2a42fc
@@ -31,5 +36,8 @@ long_desc="
  also a C and an XS interface besides the perl one."
 
 noarch=yes
+<<<<<<< HEAD
 Add_dependency full perl
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

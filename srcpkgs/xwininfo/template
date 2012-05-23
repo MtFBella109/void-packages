@@ -21,7 +21,13 @@ post_install() {
 pkgname=xwininfo
 version=1.0.5
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+makedepends="pkg-config libX11-devel libxcb-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Query information about X windows"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=8db6b81a7b0bc4e7acce6c6d41df9747b0b19e12c21c5a70b51bbc63a42cdcd9
@@ -30,9 +36,13 @@ long_desc="
  information about windows.
 
  This is from the modular X.org X11 project."
+<<<<<<< HEAD
  
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libXext
 Add_dependency full libXmu
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

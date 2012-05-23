@@ -3,6 +3,7 @@ pkgname=nano
 version=8.6
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-utf8"
 hostmakedepends="pkg-config groff"
 makedepends="file-devel ncurses-devel"
@@ -17,3 +18,17 @@ checksum=f7abfbf0eed5f573ab51bd77a458f32d82f9859c55e9689f819d96fe1437a619
 post_install() {
 	vsconf doc/sample.nanorc
 }
+=======
+makedepends="file-devel glibc-devel ncurses-devel groff"
+short_desc="The GNU nano editor"
+maintainer="davehome <davehome@redthumb.info.tm>"
+homepage="http://www.nano-editor.org/"
+license="GPL-3"
+checksum=b7bace9a8e543b84736d6ef5ce5430305746efea3aacb24391f692efc6f3c8d3
+long_desc="
+ GNU nano is designed to be a free replacement for the Pico text editor, part
+ of the Pine email suite from The University of Washington. It aims to
+ 'emulate Pico as closely as possible and perhaps include extra
+ functionality'."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

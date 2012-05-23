@@ -1,0 +1,18 @@
+# Template file for 'libblkid-devel'.
+#
+depends="zlib-devel libuuid-devel libblkid"
+short_desc="libblkid development files"
+long_desc="
+ libblkid contains a library to handle device identification
+ and token extraction.
+
+ This package contains files for development, headers, static libs, etc."
+
+
+do_install()
+{
+	vmove usr/include/blkid usr/include
+	vmove usr/lib/libblkid.a usr/lib
+	vmove usr/lib/pkgconfig/blkid.pc usr/lib/pkgconfig
+	vmove usr/share/man/man3/libblkid.3 usr/share/man/man3
+}

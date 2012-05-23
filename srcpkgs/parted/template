@@ -3,6 +3,7 @@ pkgname=parted
 version=3.6
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 # parted wants off_t as 64bit type
 configure_args="ac_cv_sizeof_off_t=8"
 hostmakedepends="pkg-config"
@@ -11,6 +12,11 @@ checkdepends="e2fsprogs perl python3"
 short_desc="GNU Parted disk partition resizing program"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
+=======
+configure_args="--without-included-regex --disable-rpath --disable-debug"
+makedepends="pkg-config libuuid-devel libblkid-devel ncurses-devel readline-devel device-mapper-devel"
+short_desc="The GNU Parted disk partition resizing program"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 homepage="http://www.gnu.org/software/parted/"
 distfiles="${GNU_SITE}/${pkgname}/${pkgname}-${version}.tar.xz"
 checksum=3b43dbe33cca0f9a18601ebab56b7852b128ec1a3df3a9b30ccde5e73359e612
@@ -22,6 +28,7 @@ libparted_package() {
 	}
 }
 
+<<<<<<< HEAD
 libparted-devel_package() {
 	depends="libparted>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -32,3 +39,5 @@ libparted-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

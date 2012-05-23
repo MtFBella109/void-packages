@@ -1,5 +1,6 @@
 # Template file for 'glade3'
 pkgname=glade3
+<<<<<<< HEAD
 version=3.40.0
 revision=2
 build_style=meson
@@ -19,6 +20,21 @@ checksum=31c9adaea849972ab9517b564e19ac19977ca97758b109edc3167008f53e3d9c
 lib32disabled=yes
 # Requires running an xserver
 make_check=no
+=======
+version=3.12.1
+wrksrc=glade-${version}
+distfiles="${GNOME_SITE}/glade/3.12/glade-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-scrollkeeper --disable-static"
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="which pkg-config intltool gnome-doc-utils gtk+3-devel libxml2-devel gobject-introspection python-devel pygobject-devel"
+short_desc="An User Interface Designer for GTK+"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=27e89fb743adb9996c418aa70cde8ce3c0769103f3691cc8011e6c6846600e76
+long_desc="
+ Glade is a RAD tool to enable quick &amp; easy development of user interfaces
+ for the GTK+ toolkit and the GNOME desktop environment.
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 libgladeui3_package() {
 	depends="python3-gobject"
@@ -32,6 +48,7 @@ libgladeui3_package() {
 	}
 }
 
+<<<<<<< HEAD
 glade3-devel_package() {
 	depends="gtk+3-devel libxml2-devel libgladeui3>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -43,3 +60,12 @@ glade3-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+ By using GtkBuilder, Glade XML files can be used in numerous programming
+ languages including C, C++, C#, Vala, Java, Perl, Python and others."
+
+subpackages="libgladeui3 $pkgname-devel"
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -4,8 +4,12 @@ version=0.5.1
 revision=12
 build_style=gnu-configure
 configure_args="--enable-shared"
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="libXext-devel libXv-devel sdl12-compat-devel"
+=======
+makedepends="pkg-config libX11-devel libXext-devel libXv-devel SDL-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library for decoding MPEG-2 and MPEG-1 video streams"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -13,6 +17,7 @@ homepage="http://libmpeg2.sourceforge.net/"
 distfiles="http://deb.debian.org/debian/pool/main/m/mpeg2dec/mpeg2dec_${version}.orig.tar.gz"
 checksum=dee22e893cb5fc2b2b6ebd60b88478ab8556cb3b93f9a0d7ce8f3b61851871d4
 
+<<<<<<< HEAD
 case "$XBPS_TARGET_MACHINE" in
 	ppc64*) ;;
 	ppc*) CFLAGS="-mno-altivec" ;;
@@ -35,3 +40,6 @@ mpeg2dec_package() {
 		vmove usr/share
 	}
 }
+=======
+subpackages="$pkgname-devel mpeg2dec"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

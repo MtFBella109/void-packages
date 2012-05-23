@@ -23,7 +23,13 @@ post_install() {
 pkgname=font-adobe-utopia-75dpi
 version=1.0.2
 distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config bdftopcf"
+fulldepends="font-util"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="100dpi Adobe Utopia PCF fonts"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=3b3ca4ba5b5b73e13b3662b5be16ea92a244adb3303a3625437ff7d385ba6557
@@ -33,7 +39,10 @@ long_desc="
 
  This is from the modular Xorg project."
 
+<<<<<<< HEAD
 Add_dependency full font-util
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 noarch=yes
 font_dirs="/usr/share/fonts/X11/75dpi"

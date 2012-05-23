@@ -1,5 +1,6 @@
 # Template file for 'cheese'
 pkgname=cheese
+<<<<<<< HEAD
 version=44.1
 revision=4
 build_style=meson
@@ -12,6 +13,15 @@ makedepends="clutter-gst3-devel clutter-gtk-devel gnome-desktop-devel
  gst-plugins-good1 libXtst-devel libcanberra-devel libgee08-devel librsvg-devel"
 depends="clutter-gst3 clutter-gtk desktop-file-utils gnome-video-effects
  gst-plugins-good1 hicolor-icon-theme"
+=======
+version=3.4.2
+distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-static --disable-schemas-compile"
+depends="desktop-file-utils hicolor-icon-theme nautilus-sendto"
+makedepends="which pkg-config intltool gnome-doc-utils itstool gobject-introspection gst-plugins-base-devel clutter-gtk-devel clutter-gst-devel mx-devel libgee-devel libcanberra-devel librsvg-devel gnome-desktop-devel"
+fulldepends="gst-plugins-good gst-plugins-bad gnome-video-effects gsettings-desktop-schemas"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNOME tool to take pictures and videos from your webcam"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -23,6 +33,7 @@ checksum=5f2185c4c99e54ddf2b8baf60c82819950e54952e132e8639875f3edcbf8f68e
 build_options="gir gtk_doc"
 build_options_default="gir"
 
+<<<<<<< HEAD
 if [ -z "$CROSS_BUILD" ]; then
 	build_options_default+=" gtk_doc"
 fi
@@ -58,3 +69,7 @@ cheese-devel_package() {
 		fi
 	}
 }
+=======
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

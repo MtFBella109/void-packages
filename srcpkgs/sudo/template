@@ -39,10 +39,18 @@ post_install() {
 pkgname=sudo
 version=1.7.2
 distfiles="http://www.courtesan.com/sudo/dist/$pkgname-$version.tar.gz"
+<<<<<<< HEAD
 build_style=gnu_configure
 configure_args="--with-ignore-dot -with-all-insults --enable-shell-sets-home
  --disable-root-sudo --with-logfac=auth -without-sendmail
  --enable-noargs-shell"
+=======
+build_style=gnu-configure
+configure_args="--with-ignore-dot -with-all-insults --with-env-editor
+--enable-shell-sets-home --enable-noargs-shell --without-sendmail
+--disable-root-sudo --with-logfac=auth --disable-root-mailer"
+makedepends="zlib-devel pam-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Allow others to run commands as root"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=c173c6d6145f774bcce25bca70999b57b62e9e48054a3670dddabe233bdf100a
@@ -57,6 +65,7 @@ conf_files="/etc/pam.d/sudo /etc/sudoers"
 Add_dependency full glibc
 Add_dependency full pam
 
+<<<<<<< HEAD
 post_install()
 {
 	install -d $DESTDIR/etc/pam.d
@@ -70,4 +79,13 @@ session	required	pam_unix.so
 _EOF
 	chmod 644 $DESTDIR/etc/pam.d/sudo
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+post_install() {
+	vinstall ${FILESDIR}/sudo.pam 644 etc/pam.d sudo
+	vmove usr/share/doc/sudo/LICENSE usr/share/licenses/sudo
+	# remove unused stuff.
+	rm -rf ${DESTDIR}/usr/share/doc
+	rm -rf ${DESTDIR}/usr/include
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

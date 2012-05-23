@@ -1,8 +1,14 @@
 # Template file for 'deheader'
 pkgname=deheader
+<<<<<<< HEAD
 version=1.11
 revision=1
 depends="python3"
+=======
+version=0.6
+distfiles="http://www.catb.org/~esr/deheader/$pkgname-$version.tar.gz"
+fulldepends="python"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="C and C++ header analyzer"
 maintainer="Duncaen <duncaen@voidlinux.org>"
 license="BSD-2-Clause"
@@ -12,8 +18,19 @@ distfiles="http://www.catb.org/~esr/deheader/deheader-${version}.tar.gz"
 checksum=553fd064a0e46ff5a88efd121e68d7613c5ffa405d1e7f775ce03111eae30882
 python_version=3
 
+<<<<<<< HEAD
 do_install() {
 	vbin deheader
 	vman deheader.1
 	vlicense COPYING
+=======
+noarch=yes
+
+do_install()
+{
+	install -d ${DESTDIR}/usr/bin
+	install -d ${DESTDIR}/usr/share/man/man1
+	install -m755 deheader ${DESTDIR}/usr/bin
+	install -m644 deheader.1 ${DESTDIR}/usr/share/man/man1
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

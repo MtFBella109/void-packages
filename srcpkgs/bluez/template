@@ -3,6 +3,7 @@ pkgname=bluez
 version=5.78
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--with-udevdir=/usr/lib/udev --disable-systemd
  --enable-sixaxis --enable-threads --enable-library --enable-deprecated
  --enable-external-ell --enable-mesh --enable-nfc --enable-experimental
@@ -10,6 +11,14 @@ configure_args="--with-udevdir=/usr/lib/udev --disable-systemd
 hostmakedepends="automake flex libtool pkg-config python3-docutils"
 makedepends="cups-devel eudev-libudev-devel libglib-devel libical-devel
  readline-devel ell-devel json-c-devel"
+=======
+configure_args="--libexecdir=/lib --enable-gstreamer --enable-dund
+--enable-alsa --enable-usb --enable-tools --enable-bccmd
+--enable-hid2hci --enable-dfutool --enable-hidd --enable-pand
+--enable-cups --enable-capng --enable-pnat --enable-wiimote
+--with-systemdsystemunitdir=/lib/systemd/system --disable-test"
+makedepends="automake>=1.11.3_1 pkg-config flex libudev-devel readline-devel gst-plugins-base-devel alsa-lib-devel dbus-devel glib-devel libusb-compat-devel libcap-ng-devel libsndfile-devel cups-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Bluetooth tools and daemons"
 maintainer="Érico Nogueira <ericonr@disroot.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
@@ -24,10 +33,25 @@ if [ "$XBPS_TARGET_LIBC" = musl ]; then
 	makedepends+=" musl-legacy-compat"
 fi
 
+<<<<<<< HEAD
 post_patch() {
 	# Use system ell
 	rm -r ell/*
 }
+=======
+make_dirs="/var/lib/bluetooth 0755 root root"
+conf_files="
+/etc/bluetooth/main.conf
+/etc/bluetooth/rfcomm.conf
+/etc/bluetooth/network.conf
+/etc/bluetooth/input.conf
+/etc/bluetooth/audio.conf
+/etc/bluetooth/serial.conf"
+
+subpackages="$pkgname-alsa $pkgname-compat $pkgname-gstreamer libbluetooth"
+subpackages="$subpackages libbluetooth-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure() {
 	autoreconf -fi

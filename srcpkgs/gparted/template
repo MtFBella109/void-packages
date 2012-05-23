@@ -3,11 +3,17 @@ pkgname=gparted
 version=1.7.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-libparted-dmraid"
 hostmakedepends="gettext itstool pkg-config"
 makedepends="libglib-devel gtkmm-devel libparted-devel yelp-tools"
 depends="desktop-file-utils hicolor-icon-theme"
 checkdepends="xvfb-run"
+=======
+configure_args="--disable-scrollkeeper --enable-libparted-dmraid"
+depends="hicolor-icon-theme desktop-file-utils polkit"
+makedepends="pkg-config intltool libuuid-devel libparted-devel libsigc++-devel gnome-doc-utils glib-devel glibmm-devel atkmm-devel pangomm-devel gtk+-devel gtkmm2-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Gnome Partition Editor"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -20,9 +26,19 @@ disable_parallel_check=true
 # This disables these:
 export GTEST_FILTER='-BlockSpecialTest.NamedBlockSpecialObjectBlockDevice:BlockSpecialTest.TwoNamedBlockSpecialObjectBlockDevices:BlockSpecialTest.NamedBlockSpecialObjectBySymlinkMatches'
 
+<<<<<<< HEAD
 pre_configure() {
 	sed -i "s:@bindir@/gparted %f:@bindir@/gparted-pkexec %f:g" gparted.desktop.in.in
 }
+=======
+ Your hard disk drive or USB flash drive can be subdivided into one or more
+ partitions. GParted enables you to reorganize your disk partitions while
+ preserving the contents of these partitions."
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vinstall ${FILESDIR}/org.void.pkexec.gparted.policy 644 /usr/share/polkit-1/actions

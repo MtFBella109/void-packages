@@ -17,8 +17,16 @@ else
 fi
 distfiles="${_eula} ${_disttarball}"
 checksum="${_eulacksum} ${_distcksum}"
+<<<<<<< HEAD
 noextract=yes
 build_style=custom-install
+=======
+skip_extraction="$(basename ${_eula})"
+create_srcdir=yes
+create_wrksrc=yes
+depends="curl>=0 hicolor-icon-theme desktop-file-utils"
+makedepends="libXext-devel libXt-devel gtk+-devel nss-devel libcurl-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Adobe Flash Player plugin"
 maintainer="Juan RP <xtraeme@gmail.com>"
 long_desc="
@@ -39,6 +47,7 @@ Add_dependency full glib
 Add_dependency full nspr
 Add_dependency full nss
 
+<<<<<<< HEAD
 do_install()
 {
 	cd ${wrksrc} || retuyrn 1
@@ -49,4 +58,22 @@ do_install()
 		${DESTDIR}/usr/lib/mozilla/plugins || return 1
 	install -m644 "${XBPS_SRCDISTDIR}/$(basename ${_eula})" \
 		${DESTDIR}/usr/share/doc/${pkgname} || return 1
+=======
+
+
+do_install() {
+	vinstall libflashplayer.so 755 usr/lib/mozilla/plugins
+	#vinstall usr/lib/kde4/kcm_adobe_flash_player.so 755 usr/lib/kde4
+	vinstall usr/bin/flash-player-properties 755 usr/bin
+	for i in 16x16 22x22 24x24 32x32 48x48; do
+		vinstall usr/share/icons/hicolor/${i}/apps/flash-player-properties.png \
+		644 usr/share/icons/hicolor/${i}/apps
+	done
+	vinstall usr/share/applications/flash-player-properties.desktop 644 \
+		usr/share/applications
+	vinstall usr/share/kde4/services/kcm_adobe_flash_player.desktop 644 \
+		usr/share/kde4/services
+	vinstall "${XBPS_SRCDISTDIR}/$(basename ${_eula})" 644 \
+		usr/share/licenses/${pkgname} LICENSE.pdf
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

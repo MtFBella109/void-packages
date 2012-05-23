@@ -1,11 +1,15 @@
 # Template file for 'libXevie-devel'.
 #
+depends="pkg-config xproto xextproto evieext libX11-devel libXext-devel libXevie"
 short_desc="${sourcepkg} development files"
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD:srcpkgs/libXevie/devel.template
 Add_dependency run libXevie
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!):srcpkgs/libXevie/libXevie-devel.template
 
 do_install()
 {

@@ -4,8 +4,13 @@ version=2.7.2
 revision=1
 patch_args="-Np1"
 wrksrc="Python-$version"
+<<<<<<< HEAD
 distfiles="http://www.python.org/ftp/python/$version/Python-$version.tar.bz2"
 build_style=custom-install
+=======
+distfiles="http://www.python.org/ftp/python/$version/Python-$version.tar.xz"
+makedepends="libffi-devel zlib-devel readline-devel gdbm-devel openssl-devel expat-devel db-devel ncurses-devel sqlite-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Interpreted, interactive, object-oriented programming language"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=935d3316edfec5eb98c2f6930756b47b00dc27192541e62d6fd0077ffa008af8
@@ -22,6 +27,7 @@ long_desc="
  adaptable as an extension language for existing applications."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency run glibc
 Add_dependency run libffi
 Add_dependency run zlib
@@ -43,6 +49,9 @@ Add_dependency build expat-devel
 Add_dependency build db-devel
 Add_dependency build ncurses-devel
 Add_dependency build sqlite-devel
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_configure()
 {

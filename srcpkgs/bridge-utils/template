@@ -2,9 +2,13 @@
 pkgname=bridge-utils
 version=1.7.1
 revision=1
+<<<<<<< HEAD
 build_style=gnu-configure
 configure_args="--sbindir=/usr/bin"
 hostmakedepends="automake"
+=======
+makedepends="automake"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Layer2 ethernet bridging for Linux"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -12,6 +16,14 @@ homepage="https://wiki.linuxfoundation.org/networking/bridge"
 distfiles="${KERNEL_SITE}/utils/net/bridge-utils/bridge-utils-${version}.tar.xz"
 checksum=a61d8be4f1a1405c60c8ef38d544f0c18c05b33b9b07e5b4b31033536165e60e
 
+<<<<<<< HEAD
 pre_configure() {
+=======
+ The Linux bridge code implements a subset of the ANSI/IEEE 802.1d standard."
+
+
+pre_configure()
+{
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 	autoreconf -fi
 }

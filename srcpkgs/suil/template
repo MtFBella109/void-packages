@@ -2,9 +2,13 @@
 pkgname=suil
 version=0.10.22
 revision=2
+<<<<<<< HEAD
 build_style=meson
 hostmakedepends="pkg-config lv2 qt5-host-tools qt5-devel qt6-base qt6-tools"
 makedepends="gtk+-devel qt5-devel qt6-base-devel gtk+3-devel lv2"
+=======
+makedepends="python lv2-ui gtk+-devel qt-devel libstdc++-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Lightweight C library for loading and wrapping LV2 plugin UIs"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
@@ -13,9 +17,26 @@ changelog="https://gitlab.com/lv2/suil/-/raw/master/NEWS"
 distfiles="https://download.drobilla.net/suil-${version}.tar.xz"
 checksum=d720969e0f44a99d5fba35c733a43ed63a16b0dab867970777efca4b25387eb7
 
+<<<<<<< HEAD
 post_install() {
 	vlicense COPYING
 }
+=======
+ Suil makes it possible to load a UI of any toolkit in a host using any other
+ toolkit (assuming the toolkits are both supported by Suil). Hosts do not need
+ to build against or link to foreign toolkit libraries to use UIs written with
+ that toolkit (Suil performs its magic at runtime using dynamically loaded
+ modules). The API is designed such that hosts do not need to explicitly
+ support particular toolkits whatsoever - if Suil supports a particular
+ toolkit, then all hosts that use Suil will support that toolkit - for free.
+
+ Suil currently supports Gtk 2 and Qt 4, i.e. with Suil a Gtk program can
+ embed a Qt plugin UI without depending on Qt, and a Qt program can embed a
+ Gtk plugin UI without depending on Gtk."
+
+subpackages="$pkgname-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 suil-devel_package() {
 	depends="suil>=${version}_${revision}"

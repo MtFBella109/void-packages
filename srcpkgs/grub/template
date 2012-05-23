@@ -1,5 +1,6 @@
 # Template file for 'grub'
 pkgname=grub
+<<<<<<< HEAD
 version=2.12
 revision=2
 hostmakedepends="python3 pkg-config flex freetype-devel font-unifont-bdf help2man
@@ -8,6 +9,16 @@ makedepends="libusb-compat-devel ncurses-devel freetype-devel liblzma-devel
  device-mapper-devel fuse-devel"
 depends="os-prober"
 conf_files="/etc/default/grub /etc/grub.d/*"
+=======
+version="2.00~beta4"
+revision=1
+homepage="http://www.gnu.org/software/grub/"
+distfiles="http://alpha.gnu.org/gnu/grub/grub-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-werror"
+makedepends="xz flex zlib-devel libusb-compat-devel ncurses-devel freetype-devel liblzma-devel device-mapper-devel font-unifont-bdf fuse-devel"
+fulldepends="os-prober"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GRand Unified Bootloader 2"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
@@ -19,6 +30,7 @@ checksum=f3c97391f7c4eaa677a78e090c7e97e6dc47b16f655f04683ebd37bef7fe0faa
 archs="i686* x86_64* aarch64* ppc ppc-musl ppc64*"
 nopie=yes
 
+<<<<<<< HEAD
 subpackages="grub-utils"
 # _SUPPLEMENTARY_BUILDS is a list of <TARGET>-<PLATFORN> version of grub to build
 case "$XBPS_TARGET_MACHINE" in
@@ -44,6 +56,8 @@ case "$XBPS_TARGET_MACHINE" in
 		subpackages+=" grub-powerpc-ieee1275"
 		;;
 esac
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure() {
 	autoreconf -fi

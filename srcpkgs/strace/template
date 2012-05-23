@@ -4,6 +4,7 @@ pkgname=strace
 version=6.17
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-silent-rules $(vopt_with libunwind)"
 makedepends="$(vopt_if libunwind libunwind-devel)"
 short_desc="System Call Tracer"
@@ -54,6 +55,10 @@ do_check() {
 version=4.5.19
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+makedepends="xz"
+fulldepends="perl>=0"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="System Call Tracer"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=8997ce919e971b0ec45cd7006c6e1f9c7c0bce68ab59e3a629e1ddeda5013d08
@@ -63,5 +68,8 @@ long_desc="
 
 Add_dependency full glibc
 # Required by strace-graph
+<<<<<<< HEAD
 Add_dependency full perl
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -3,6 +3,7 @@ pkgname=farstream
 version=0.2.9
 revision=4
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper="gir"
 configure_args="--disable-valgrind --disable-static $(vopt_enable gir introspection)"
 hostmakedepends="automake libtool gettext pkg-config intltool
@@ -10,6 +11,11 @@ hostmakedepends="automake libtool gettext pkg-config intltool
 makedepends="gupnp-igd-devel libnice-devel gst-plugins-base1-devel"
 depends="gst-plugins-good1 gst-plugins-bad1"
 checkdepends="$depends"
+=======
+configure_args="--disable-valgrind --disable-debug --disable-static"
+depends="gst-python pygobject2 pygtk gst-plugins-good gst-plugins-bad"
+makedepends="pkg-config intltool libnice-devel gst-plugins-base-devel python-devel gst-python-devel pygobject2-devel gupnp-devel gobject-introspection"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GStreamer modules and libraries for videoconferencing"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -24,6 +30,7 @@ make_check=extended
 build_options="gir"
 build_options_default="gir"
 
+<<<<<<< HEAD
 pre_configure() {
 	NOCONFIGURE=1 autoreconf -fi
 }
@@ -41,3 +48,6 @@ farstream-devel_package() {
 		fi
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

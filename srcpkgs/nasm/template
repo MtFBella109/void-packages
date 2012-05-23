@@ -62,6 +62,12 @@ distfiles="
 http://www.nasm.us/pub/nasm/releasebuilds/$version/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 make_install_args="INSTALLROOT=$XBPS_DESTDIR/$pkgname-$version"
+<<<<<<< HEAD
+=======
+revision=1
+makedepends="groff perl"
+fulldepends="glibc"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The Netwide Assembler"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=2fd98d6feb2f3ce25ca5f12a593c625b767104619de4ccd59778793cc055c2d2
@@ -72,7 +78,10 @@ long_desc="
  also output plain binary files.  Its syntax is designed to be simple and easy
  to understand, similar to Intel's but less complex."
 
+<<<<<<< HEAD
 Add_dependency build groff
 Add_dependency build perl
 Add_dependency full glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

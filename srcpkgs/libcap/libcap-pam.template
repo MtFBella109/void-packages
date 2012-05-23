@@ -1,5 +1,6 @@
 # Template file for 'libcap-pam'.
 #
+depends="attr pam"
 short_desc="${short_desc} (PAM module)"
 long_desc="${long_desc}
 
@@ -7,9 +8,12 @@ long_desc="${long_desc}
 
 conf_files="/etc/security/capability.conf"
 
+<<<<<<< HEAD
 Add_dependency run glibc
 Add_dependency run libcap
 Add_dependency run pam
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

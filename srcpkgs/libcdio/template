@@ -2,9 +2,13 @@
 pkgname=libcdio
 version=2.2.0
 revision=2
+<<<<<<< HEAD
 build_style=gnu-configure
 hostmakedepends="automake libtool pkg-config"
 makedepends="ncurses-devel libcddb-devel"
+=======
+makedepends="pkg-config ncurses-devel libcddb-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="CD-ROM access library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
@@ -16,6 +20,7 @@ pre_configure() {
 	autoreconf -fi
 }
 
+<<<<<<< HEAD
 libcdio-devel_package() {
 	depends="libcddb-devel libcdio>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -27,3 +32,6 @@ libcdio-devel_package() {
 		vmove usr/share
 	}
 }
+=======
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -33,7 +33,12 @@ libXcursor-devel_package() {
 pkgname=libXcursor
 version=1.1.10
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config fixesproto>=5.0_1 libXfixes-devel libX11-devel libXrender-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Client-side cursor loading library for X"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=b9446df62203f2c3204b6bcc0057dc909d0dc792f0dd97bc491581b08be36cbd
@@ -45,6 +50,7 @@ long_desc="
  This is from the modular X.org project."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build xproto
 Add_dependency full glibc
@@ -52,3 +58,5 @@ Add_dependency full libX11
 Add_dependency full libXrender
 Add_dependency full libXfixes
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

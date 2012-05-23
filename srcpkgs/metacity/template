@@ -3,6 +3,7 @@ pkgname=metacity
 version=3.52.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="gettext gettext-devel glib-devel itstool pkg-config yelp-tools zenity"
 makedepends="gsettings-desktop-schemas-devel gtk+3-devel libcanberra-devel
  libglib-devel libgtop-devel libSM-devel libXcomposite-devel libXdamage-devel
@@ -16,3 +17,19 @@ homepage="https://gitlab.gnome.org/GNOME/metacity"
 changelog="https://gitlab.gnome.org/GNOME/metacity/-/raw/master/NEWS"
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=a72438ace6d5903ae79338c6098b1b35ab91c8a97c4323701d3bef1f3eeb191c
+=======
+configure_args="--disable-static --disable-schemas-compile --disable-scrollkeeper"
+makedepends="pkg-config intltool which gnome-doc-utils libXcomposite-devel libXrandr-devel libXcursor-devel libXinerama-devel libcanberra-devel startup-notification-devel libgtop-devel"
+fulldepends="zenity gnome-icon-theme"
+short_desc="GNOME-compliant window manager"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=aeac2548b62a98375fb5c832ee26ab4cb6d59f0dd96edcefb5f7bef2416576e7
+long_desc="
+ Metacity is not a meta-City as in an urban center, but rather Meta-ness as in
+ the state of being meta. i.e. metacity : meta as opacity : opaque. Also
+ it may have something to do with the Meta key on UNIX keyboards."
+
+subpackages="$pkgname-devel"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

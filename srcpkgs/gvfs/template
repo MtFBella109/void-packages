@@ -1,5 +1,6 @@
 # Template file for 'gvfs'
 pkgname=gvfs
+<<<<<<< HEAD
 version=1.56.1
 revision=2
 build_style=meson
@@ -14,6 +15,15 @@ makedepends="avahi-glib-libs-devel dbus-glib-devel fuse3-devel gcr4-devel
  libnfs-devel libsecret-devel libsoup3-devel libxml2-devel polkit-devel
  samba-devel udisks2-devel gsettings-desktop-schemas-devel
  gnome-online-accounts-devel msgraph-devel"
+=======
+version=1.12.3
+distfiles="${GNOME_SITE}/$pkgname/1.12/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-hal --disable-afc
+--with-bash-completion-dir=/etc/bash_completion.d"
+makedepends="pkg-config intltool libbluetooth-devel dbus-glib-devel libopenobex-devel libgudev-devel libexif-devel libusb-compat-devel fuse-devel libarchive-devel libcdio-devel libsoup-gnome-devel libgphoto2-devel libgnome-keyring-devel samba-devel avahi-glib-libs-devel udisks2-devel libgcrypt-devel"
+fulldepends="obex-data-server"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Userspace virtual filesystem"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -26,6 +36,7 @@ checksum=86731ccec679648f8734e237b1de190ebdee6e4c8c0f56f454c31588e509aa10
 shlib_provides="libgvfscommon.so libgvfsdaemon.so"
 subpackages="gvfs-afc gvfs-afp gvfs-cdda gvfs-gphoto2 gvfs-mtp gvfs-smb gvfs-goa gvfs-devel"
 
+<<<<<<< HEAD
 gvfs-devel_package() {
 	short_desc+=" - development files (transitional dummy package)"
 	metapackage=yes
@@ -107,3 +118,6 @@ gvfs-smb_package() {
 		vmove usr/share/gvfs/mounts/smb.mount
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -16,8 +16,17 @@ distfiles="https://archive.xfce.org/src/apps/mousepad/${version%.*}/mousepad-${v
 checksum=21762bc8c3c4f120a4a509ce39f4a5a58dbc10e3f0da66cdc6d9a8c735fff2ac
 =======
 version=0.2.16
+<<<<<<< HEAD
 distfiles="http://mocha.xfce.org/archive/xfce-4.6.1/src/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+revision=5
+homepage="http://xfce.org"
+distfiles="http://archive.xfce.org/src/apps/$pkgname/0.2/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config intltool gtk+-devel libxfce4util-devel libxfcegui4-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Simple text editor for Xfce based on Leafpad"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=86e593fd4b1b87d27cda9ebd8901078e795031b5880645850d6ef0b410f4e73e
@@ -27,6 +36,7 @@ long_desc="
  would have been difficult for Leafpad for various reasons."
 
 gtk_iconcache_dirs="/usr/share/icons/hicolor"
+<<<<<<< HEAD
 triggers="gtk-icon-cache"
  
 Add_dependency build pkg-config
@@ -39,3 +49,7 @@ Add_dependency full hicolor-icon-theme
 Add_dependency full xfce4-panel
 Add_dependency full desktop-file-utils
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

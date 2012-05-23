@@ -5,6 +5,7 @@ version=3.8.2
 revision=1
 bootstrap=yes
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="$(vopt_enable acl) $(vopt_enable acl xattr)
  $(vopt_with expat) $(vopt_with lzo lzo2) $(vopt_with lz4)
  $(vopt_with ssl openssl) $(vopt_with zstd) --without-xml2
@@ -13,6 +14,10 @@ hostmakedepends="pkgconf"
 makedepends="zlib-devel bzip2-devel liblzma-devel
  $(vopt_if acl acl-devel) $(vopt_if expat expat-devel) $(vopt_if zstd libzstd-devel)
  $(vopt_if lzo lzo-devel) $(vopt_if lz4 liblz4-devel) $(vopt_if ssl openssl-devel)"
+=======
+configure_args="--without-xml2 --without-nettle"
+makedepends="zlib-devel acl-devel openssl-devel liblzma-devel expat-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library to read/write several different streaming archive formats"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
@@ -88,6 +93,7 @@ long_desc="
  several cpio formats, and both BSD and GNU ar variants. It can also write
  shar archives and read ISO9660 CDROM images and ZIP archives."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 Add_dependency full bzip2
 Add_dependency full zlib
@@ -96,3 +102,7 @@ Add_dependency full acl
 Add_dependency full openssl
 Add_dependency full xz
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+subpackages="bsdtar bsdcpio $pkgname-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

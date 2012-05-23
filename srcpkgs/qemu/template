@@ -4,6 +4,7 @@ pkgname=qemu
 version=10.1.2
 revision=1
 build_style=configure
+<<<<<<< HEAD
 metapackage=yes
 configure_args="--prefix=/usr --sysconfdir=/etc --libexecdir=/usr/libexec
  --localstatedir=/var --enable-pie --disable-user
@@ -29,6 +30,18 @@ homepage="https://www.qemu.org"
 distfiles="https://wiki.qemu.org/download/qemu-${version}.tar.bz2"
 checksum=519bcfd2a538ebfaedd2e43889144d511f79f7e582a915709686d9dd3a6914a0
 ignore_elf_dirs="/usr/share/qemu"
+=======
+configure_args="--prefix=/usr --sysconfdir=/etc --enable-spice
+--enable-kvm --audio-drv-list=alsa,sdl,pa --disable-xen"
+makedepends="perl>=0 python>=0 attr-devel libpng-devel jpeg-devel zlib-devel ncurses-devel libuuid-devel libX11-devel alsa-lib-devel gnutls-devel SDL-devel libbluetooth-devel libsasl-devel spice-devel glib-devel MesaLib-devel pulseaudio-devel nss-devel libcurl-devel"
+short_desc="Open Source Processor Emulator"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://qemu.org"
+license="GPL-2, LGPL-2.1"
+checksum=198902e10782517f607c9ed9e629b5e7708ea39eb373ed3ec3f1c8a169d98378
+long_desc="
+ QEMU is a generic and open source machine emulator and virtualizer.
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 build_options="gtk3 iscsi jack numa opengl pulseaudio sdl2 smartcard spice virgl"
 build_options_default="gtk3 iscsi jack numa opengl pulseaudio sdl2 smartcard spice virgl"
@@ -44,9 +57,12 @@ depends="qemu-img>=${version}_${revision} qemu-tools>=${version}_${revision}
  qemu-firmware>=${version}_${revision} qemu-doc>=${version}_${revision}
  qemu-user>=${version}"
 
+<<<<<<< HEAD
 if [ "$CROSS_BUILD" ]; then
 	configure_args+=" --cross-prefix=${XBPS_CROSS_TRIPLET}-"
 fi
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 _archs=(
  arm

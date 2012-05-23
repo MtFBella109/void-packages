@@ -3,8 +3,12 @@ pkgname=latencytop
 version=0.5
 revision=4
 build_style=gnu-makefile
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="gtk+-devel ncurses-devel"
+=======
+makedepends="pkg-config gtk+-devel ncurses-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Measuring and fixing Linux latency"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2"
@@ -12,6 +16,7 @@ homepage="http://www.latencytop.org"
 distfiles="${DEBIAN_SITE}/main/l/$pkgname/${pkgname}_${version}.orig.tar.gz"
 checksum=9e7f72fbea7bd918e71212a1eabaad8488d2c602205d2e3c95d62cd57e9203ef
 
+<<<<<<< HEAD
 pre_build() {
 	export CFLAGS="$CFLAGS $LDFLAGS"
 }
@@ -19,4 +24,14 @@ pre_build() {
 do_install() {
 	vmkdir usr/bin
 	make DESTDIR=$PKGDESTDIR SBINDIR=/usr/bin install
+=======
+ LatencyTOP is a Linux tool for software developers (both kernel and userspace),
+ aimed at identifying where in the system latency is happening, and what kind of
+ operation/action is causing the latency to happen so that the code can be changed
+ to avoid the worst latency hiccups."
+
+
+pre_install() {
+	vmkdir usr/sbin
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

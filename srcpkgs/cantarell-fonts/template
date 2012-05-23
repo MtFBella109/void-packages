@@ -1,5 +1,6 @@
 # Template file for 'cantarell-fonts'
 pkgname=cantarell-fonts
+<<<<<<< HEAD
 version=0.303.1
 revision=1
 build_style=meson
@@ -13,3 +14,27 @@ homepage="https://wiki.gnome.org/Projects/CantarellFonts"
 changelog="https://gitlab.gnome.org/GNOME/cantarell-fonts/-/raw/master/NEWS"
 distfiles="${GNOME_SITE}/${pkgname}/${version:0:5}/${pkgname}-${version}.tar.xz"
 checksum=f9463a0659c63e57e381fdd753cf1929225395c5b49135989424761830530411
+=======
+version=0.0.8
+distfiles="${GNOME_SITE}/$pkgname/0.0/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+makedepends="pkg-config"
+fulldepends="fontconfig"
+short_desc="Cantarell family of TrueType fonts"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=e5468861cee84c034dfc53ed9836a360bea45767873dd7840fe403a06bcc61fb
+long_desc="
+ The Cantarell typeface family is a contemporary Humanist
+ sans serif, and is used by the GNOME project for its user
+ interface and the Fedora project."
+
+noarch=yes
+
+post_install() {
+	vmkdir etc/fonts/conf.d
+	mv ${DESTDIR}/usr/share/fontconfig/conf.avail \
+		${DESTDIR}/etc/fonts/conf.avail
+	rmdir ${DESTDIR}/usr/share/fontconfig
+	ln -s ../conf.avail/31-cantarell.conf ${DESTDIR}/etc/fonts/conf.d
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

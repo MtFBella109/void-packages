@@ -4,6 +4,7 @@ pkgname=Thunar
 version=4.20.6
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper="gir"
 configure_args="--enable-gio-unix --enable-gudev
  --enable-exif --disable-static --enable-notifications"
@@ -38,6 +39,12 @@ revision=1
 distfiles="http://mocha.xfce.org/archive/xfce-4.6.1/src/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--disable-gnome-thumbnailers --enable-exif --enable-pcre"
+=======
+configure_args="--enable-gio-unix --enable-dbus --enable-gudev --enable-exif
+--enable-pcre --enable-notifications"
+depends="gvfs hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config intltool libgudev-devel libnotify-devel libxfce4util-devel libxfce4ui-devel gtk+-devel dbus-glib-devel libexif-devel pcre-devel exo-devel xfce4-panel-devel startup-notification-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Thunar File Manager"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=7a2b6b493463756bbc9c54144fab2f2163bc84f0896b4c06fd225d11025a210d
@@ -51,6 +58,7 @@ long_desc="
 gtk_iconcache_dirs="/usr/share/icons/hicolor"
 triggers="gtk-icon-cache"
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 Add_dependency build pkg-config
 Add_dependency build intltool
@@ -68,3 +76,13 @@ Add_dependency full exo
 Add_dependency full startup-notification
 Add_dependency full xfce4-panel
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+
+post_install() {
+	# install udisks permission file
+	install -dm755 ${DESTDIR}/etc/polkit-1/localauthority/50-local.d
+	install -m644 ${FILESDIR}/org.freedesktop.udisks.pkla \
+		${DESTDIR}/etc/polkit-1/localauthority/50-local.d/
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

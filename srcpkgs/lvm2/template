@@ -5,6 +5,7 @@ version=2.03.29
 revision=1
 build_style=gnu-configure
 configure_args="--disable-selinux --enable-readline --enable-pkgconfig
+<<<<<<< HEAD
  --enable-fsadm --enable-dmeventd --enable-cmdlib
  --enable-udev_sync --enable-udev_rules --without-systemd-run
  --with-udevdir=/usr/lib/udev/rules.d --with-default-pid-dir=/run
@@ -90,6 +91,13 @@ make_install_target="DESTDIR=$XBPS_DESTDIR/$pkgname-$version
  sbindir=$XBPS_DESTDIR/$pkgname-$version/sbin
  libdir=$XBPS_DESTDIR/$pkgname-$version/lib
  install_device-mapper install_lvm2"
+=======
+--enable-fsadm --enable-applib --sbindir=/usr/sbin --libdir=/usr/lib
+--enable-dmeventd --enable-cmdlib --enable-udev_sync --enable-udev_rules
+--with-udevdir=/lib/udev/rules.d"
+depends="bash"
+makedepends="pkg-config readline-devel libudev-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Logical Volume Manager 2 utilities"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=c5ff6df631349dc262df42345bf3358006c14c0afe910f0d582a533e529357c8
@@ -107,10 +115,13 @@ conf_files="/etc/lvm/lvm.conf"
 triggers="initramfs-tools"
 openrc_services="lvm2 shutdown"
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full bash
 Add_dependency full readline
 Add_dependency run  device-mapper ">=${version}"
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install()
 {

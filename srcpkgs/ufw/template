@@ -1,5 +1,6 @@
 # Template file for 'ufw'
 pkgname=ufw
+<<<<<<< HEAD
 version=0.36.2
 revision=4
 _major_minor="${version%.*}"
@@ -11,6 +12,14 @@ conf_files="
  /etc/default/ufw"
 hostmakedepends="python3-wheel iptables"
 depends="iptables python3"
+=======
+version=0.30.1
+revision=5
+distfiles="http://launchpad.net/ufw/0.30/$version/+download/$pkgname-$version.tar.gz"
+build_style=python-module
+depends="iptables python"
+makedepends="python iptables"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Uncomplicated Firewall"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-only"
@@ -21,7 +30,14 @@ checksum=2a57a99eecef6b44db3537ed2520b30bae3759f8465456e22e404cd643838bf5
 # tests fail with void build paths as well as vague errors on finding profiles
 make_check=no
 
+<<<<<<< HEAD
 post_install() {
 	vsv ufw
 	vcompletion ./shell-completion/bash bash
+=======
+
+post_install()
+{
+	vinstall ${FILESDIR}/ufw.service 644 lib/systemd/system
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

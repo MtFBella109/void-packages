@@ -1,7 +1,15 @@
 # Template file for 'dev86'
 pkgname=dev86
+<<<<<<< HEAD
 version=0.16.21
 revision=5
+=======
+version=0.16.18
+patch_args="-Np1"
+distfiles="http://www.debath.co.uk/dev86/Dev86src-$version.tar.gz"
+revision=1
+fulldepends="bin86"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="8086 cross development compiler, assembler and linker"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-1.0-or-later, GPL-2.0-or-later, LGPL-2.0-or-later"
@@ -10,7 +18,10 @@ distfiles="https://github.com/lkundrak/dev86/archive/v${version}.tar.gz"
 checksum=49c7ee9102d45c2eef072bfb8a49ba3821c9fe3ef31ccd3290f658b667b579a8
 nocross=yes
 nostrip=yes
+<<<<<<< HEAD
 nopie=yes
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_build() {
 	for f in libc/bcc libc/misc libc/msdos libc/string libc/syscall \

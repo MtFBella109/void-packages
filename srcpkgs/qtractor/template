@@ -1,5 +1,6 @@
 # Template file for 'qtractor'
 pkgname=qtractor
+<<<<<<< HEAD
 version=1.5.7
 revision=1
 _clap_tag=1.2.6
@@ -30,6 +31,27 @@ checksum="6c2f2790efcb788bee8f6293200e15d122f1d4dc246abe0c0393abb9aa5aa787
  84e5b334421c478a2cef3b4bd4484cbfe1c881b200a3fe409ddd2a2a1efeac02
  0146aeaf9630827ea89a9487e03bbcad7178f324fd90f9160dbc4cd3559e88bc
  499900711f2e910b1635a748034d543d4333231fdfa99071edaef7e75f1dabe9"
+=======
+version=0.5.4
+homepage="http://qtractor.sourceforge.net"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
+build_style=gnu-configure
+configure_args=" --enable-lilv"
+depends="jack dssi lilv"
+makedepends="pkg-config zlib-devel jack-devel alsa-lib-devel libsndfile-devel libvorbis-devel libmad-devel libsamplerate-devel libX11-devel qt-devel liblo-devel rubberband-devel vamp-plugin-sdk-devel ladspa-sdk dssi-devel lv2core lilv-devel suil-devel"
+fulldepends="desktop-file-utils hicolor-icon-theme"
+short_desc="Audio/MIDI multi-track sequencer application written in C++/Qt4"
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="GPL-2"
+checksum=b400e59018511838bf5a38f3c47be40facc82906375aa88b4ee41b4ea8dc7623
+long_desc="
+ Qtractor is an Audio/MIDI multi-track sequencer application written in C++
+ with the Qt4 framework. Target platform is Linux, where the Jack Audio
+ Connection Kit (JACK) for audio, and the Advanced Linux Sound Architecture
+ (ALSA) for MIDI, are the main infrastructures to evolve as a fairly-featured
+ Linux desktop audio workstation GUI, specially dedicated to the personal
+ home-studio."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_extract() {
 	cd $wrksrc
@@ -48,6 +70,7 @@ post_extract() {
 	done
 }
 
+<<<<<<< HEAD
 pre_configure() {
 	configure_args+="-DCONFIG_VST3SDK=$wrksrc/vst3sdk"
 }
@@ -55,3 +78,7 @@ pre_configure() {
 post_install() {
 	vlicense ../vst3sdk/base/LICENSE.txt VST3SDK-LICENSE.txt
 }
+=======
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

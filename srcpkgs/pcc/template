@@ -1,5 +1,6 @@
 # Template file for 'pcc'
 pkgname=pcc
+<<<<<<< HEAD
 version=1.1.0.20190420
 revision=4
 _distver="${version%.*}"
@@ -9,6 +10,15 @@ create_wrksrc=yes
 configure_args="--enable-tls --enable-native"
 hostmakedepends="flex bison"
 depends="binutils pcc-libs>=${version}"
+=======
+version=1.0.0
+distfiles="http://pcc.ludd.ltu.se/ftp/pub/pcc-releases/pcc-$version.tgz"
+build_style=gnu-configure
+configure_args="--enable-tls"
+revision=1
+makedepends="flex"
+fulldepends="pcc-libs"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Portable C Compiler"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause, BSD-3-Clause, MIT, BSD-4-Clause"
@@ -26,6 +36,7 @@ case "$XBPS_TARGET_LIBC" in
 	*) 	 depends+=" glibc-devel";;
 esac
 
+<<<<<<< HEAD
 post_extract() {
 	mv pcc-${_distver}.BETA pcc
 	mv pcc-libs-${_distver}.BETA pcc-libs
@@ -78,4 +89,12 @@ pcc-libs_package() {
 		vlicense pcc/LICENSE.MIT
 		vlicense pcc/LICENSE.Caldera
 	}
+=======
+
+post_install()
+{
+	# Rename conflicting cpp.1 manpage.
+	mv ${DESTDIR}/usr/share/man/man1/cpp.1 \
+		${DESTDIR}/usr/share/man/man1/pcc-cpp.1
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

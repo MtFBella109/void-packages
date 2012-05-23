@@ -21,16 +21,25 @@ post_install() {
 pkgname=xcursorgen
 version=1.0.3
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+makedepends="pkg-config libX11-devel libXcursor-devel libpng-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X cursor generator"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=ed5f3ffe881c21ffca85406e5a5f553ed4985cc5e9acdb535f682c33bebac254
 long_desc="
  $pkgname creates an X cursor file from a collection of PNG images."
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libXcursor
 Add_dependency full libpng
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

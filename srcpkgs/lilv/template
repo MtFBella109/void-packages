@@ -2,12 +2,18 @@
 pkgname=lilv
 version=0.24.26
 revision=2
+<<<<<<< HEAD
 build_style=meson
 hostmakedepends="pkg-config"
 makedepends="python3-devel serd-devel sord-devel sratom-devel libsndfile-devel
  zix-devel lv2"
 short_desc="Simple yet powerful C API for using LV2 plugins"
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+makedepends="pkg-config python sord-devel lv2core"
+short_desc="Lilv is a simple yet powerful C API for using LV2 plugins."
+maintainer="davehome <davehome@redthumb.info.tm>"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 license="ISC"
 homepage="https://gitlab.com/lv2/lilv"
 changelog="https://gitlab.com/lv2/lilv/-/raw/main/NEWS"
@@ -19,6 +25,7 @@ post_install() {
 	rm -r ${DESTDIR}/etc/bash_completion.d
 }
 
+<<<<<<< HEAD
 liblilv_package() {
 	short_desc+=" - Runtime library"
 	pkg_install() {
@@ -44,3 +51,5 @@ lilv-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

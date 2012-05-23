@@ -4,6 +4,7 @@ pkgname=groff
 version=1.23.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--without-x --disable-rpath"
 hostmakedepends="perl bison ghostscript"
 makedepends="zlib-devel"
@@ -19,6 +20,26 @@ if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" groff"
 	make_build_args+=" GROFFBIN=/usr/bin/groff GROFF_BIN_PATH=/usr/bin"
 fi
+=======
+configure_args="--without-x"
+revision=3
+makedepends="bison zlib-devel"
+short_desc="The GNU troff text-formatting system"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+checksum=344e6af5480e7ab4ec51e2a2ed10acd69ba3e062d285b6d5f6d49fb5ed2f9f7a
+long_desc="
+ The Groff package contains the traditional UN*X text formatting tools troff,
+ nroff, tbl, eqn, and pic. These utilities, together with the man package,
+ are essential for displaying the online manual pages. Output can be produced
+ in a number of formats including plain ASCII and PostScript.
+
+ All the standard macro packages are supported. A number of other utilities
+ are also included together with several fonts."
+
+subpackages="groff-doc"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	# From Arch:

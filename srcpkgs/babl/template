@@ -34,9 +34,16 @@ babl-devel_package() {
 =======
 # Template build file for 'babl'.
 pkgname=babl
+<<<<<<< HEAD
 version=0.1.0
 distfiles="ftp://ftp.gtk.org/pub/babl/0.1/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+version=0.1.10
+distfiles="ftp://ftp.gimp.org/pub/babl/0.1/babl-$version.tar.bz2"
+build_style=gnu-configure
+makedepends="pkg-config vala-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Dynamic pixel format translation library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=0cf017e31b73a898a1711103596a4d1593fa2b6c66d7368fcc6d7103d9bb8591
@@ -50,6 +57,11 @@ long_desc="
  A vocabulary to formulate new pixel formats from existing primitives is
  provided as well as the framework to add new color models and data types."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 Add_dependency run glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+subpackages="babl-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,6 +1,7 @@
 # Template file for 'libva'
 # NOTE: keep this pkg synchronized with libva-glx and the minor version with libva-utils
 pkgname=libva
+<<<<<<< HEAD
 version=2.22.0
 revision=1
 build_style=meson
@@ -8,6 +9,13 @@ configure_args="-Dwith_glx=no"
 hostmakedepends="pkg-config $(vopt_if wayland wayland-devel)"
 makedepends="libXfixes-devel libXext-devel libdrm-devel
  $(vopt_if wayland 'libffi-devel wayland-devel')"
+=======
+version=1.0.15
+revision=4
+distfiles="http://cgit.freedesktop.org/libva/snapshot/libva-$version.tar.bz2"
+build_style=gnu-configure
+makedepends="pkg-config automake libXfixes-devel MesaLib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Video Acceleration (VA) API"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
@@ -16,8 +24,17 @@ changelog="https://raw.githubusercontent.com/intel/libva/master/NEWS"
 distfiles="https://github.com/intel/libva/archive/refs/tags/${version}.tar.gz"
 checksum=467c418c2640a178c6baad5be2e00d569842123763b80507721ab87eb7af8735
 
+<<<<<<< HEAD
 build_options="wayland"
 build_options_default="wayland"
+=======
+subpackages="$pkgname-devel"
+
+
+pre_configure() {
+	autoreconf -fiv
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vlicense COPYING

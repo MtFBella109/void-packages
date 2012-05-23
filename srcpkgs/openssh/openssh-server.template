@@ -1,5 +1,6 @@
 # Template file for 'openssh-server'.
 #
+depends="openssh>=6.0p1"
 short_desc="The OpenSSH server"
 long_desc="${long_desc}
 
@@ -9,12 +10,15 @@ keep_empty_dirs=yes
 conf_files="/etc/ssh/sshd_config /etc/pam.d/sshd"
 openrc_services="sshd default"
 
+<<<<<<< HEAD
 Add_dependency run glibc
 Add_dependency run zlib
 Add_dependency run openssl
 Add_dependency run pam
 Add_dependency run tcp_wrappers-libs
 Add_dependency run openssh
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

@@ -3,11 +3,16 @@ pkgname=fluidsynth
 version=2.4.8
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 make_check_target=check
 configure_args="-Denable-sdl3=ON -Denable-ladspa=ON -Denable-portaudio=ON"
 hostmakedepends="pkg-config"
 makedepends="SDL3-devel glib-devel jack-devel libsndfile-devel pipewire-devel pulseaudio-devel
  libinstpatch-devel readline-devel portaudio-devel ladspa-sdk"
+=======
+configure_args="-DLIB_SUFFIX="
+makedepends="cmake glib-devel jack-devel pulseaudio-devel dbus-devel readline-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Real-time software synthesizer based on the SoundFont 2 specifications"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -23,6 +28,7 @@ libfluidsynth_package() {
 	}
 }
 
+<<<<<<< HEAD
 fluidsynth-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision} $makedepends"
 	short_desc+=" - development files"
@@ -33,3 +39,5 @@ fluidsynth-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

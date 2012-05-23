@@ -3,7 +3,13 @@ pkgname=font-unifont-bdf
 version=16.0.04
 revision=1
 create_wrksrc=yes
+<<<<<<< HEAD
 depends="font-util"
+=======
+homepage="http://unifoundry.com/unifont.html"
+distfiles="http://unifoundry.com/unifont-${version}.bdf.gz"
+fulldepends="font-util"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNU Unifont Glyphs"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -12,6 +18,20 @@ distfiles="http://unifoundry.com/pub/unifont/unifont-${version}/font-builds/unif
 checksum=4a1689c0065666ac70e1310420ce67d7fa3dcf83c1a2e1e6b2c115aa22deb3cf
 font_dirs=/usr/share/fonts/misc
 
+<<<<<<< HEAD
 do_install() {
 	vinstall unifont-${version}.bdf 644 usr/share/fonts/misc unifont.bdf
+=======
+
+noextract=yes
+noarch=yes
+font_dirs="/usr/share/fonts/misc"
+
+do_install()
+{
+	gunzip -c ${XBPS_SRCDISTDIR}/unifont-${version}.bdf.gz \
+		> unifont-${version}.bdf
+	vinstall unifont-${version}.bdf \
+		644 usr/share/fonts/misc unifont.bdf
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

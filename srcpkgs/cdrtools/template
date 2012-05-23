@@ -7,7 +7,13 @@ wrksrc=${pkgname}-${_dist_ver}
 distfiles="ftp://ftp.berlios.de/pub/cdrecord/alpha/$pkgname-$version.tar.bz2"
 build_style=gnu_makefile
 make_build_args="CCOM=gcc RUNPATH= LDPATH= NOWARN=true"
+<<<<<<< HEAD
 make_install_args="INS_BASE=/usr MANDIR=/share/man"
+=======
+make_install_args="INS_BASE=/usr MANDIR=/man"
+revision=1
+makedepends="acl-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Highly portable CD/DVD/BluRay command line recording software"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=b43c8f35973393772f21b052de66d7239ac3ea84ceb32b179fcca21792e4813d
@@ -30,8 +36,11 @@ long_desc="
 
 conf_files="/etc/default/rscsi /etc/default/cdrecord"
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full acl
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install()
 {

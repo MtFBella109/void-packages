@@ -4,8 +4,12 @@ version=0.5
 revision=11
 build_style=gnu-configure
 configure_args="--disable-glibtest --enable-sql"
+<<<<<<< HEAD
 hostmakedepends="flex bison pkg-config"
 makedepends="readline-devel libglib-devel"
+=======
+makedepends="flex bison pkg-config glib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library and utilities for reading Microsoft Access Databases"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.0-or-later"
@@ -15,6 +19,7 @@ checksum=7a5db39fecff5ce4fb91e019acf5795b40221aff09bbd6d84f8dec60f017b05d
 
 CFLAGS="-fcommon"
 
+<<<<<<< HEAD
 pre_configure() {
 	case "${XBPS_TARGET_MACHINE}" in
 		*-musl) sed -i -e "s/^host_os=.*/host_os=gnu/" configure
@@ -37,3 +42,5 @@ libmdb_package() {
 		vmove "usr/lib/*.so.*"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

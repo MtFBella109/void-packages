@@ -1,11 +1,19 @@
 # Template file for 'cairo-devel'.
 #
+<<<<<<< HEAD
 short_desc="${sourcepkg} (development files)"
+=======
+depends="freetype-devel fontconfig-devel glib-devel libpng-devel libxcb-devel libX11-devel libXrender-devel pixman-devel MesaLib-devel cairo>=1.12.2"
+short_desc="${sourcepkg} - development files"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD
 Add_dependency run cairo
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

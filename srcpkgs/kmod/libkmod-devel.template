@@ -1,0 +1,14 @@
+# Template file for 'libkmod-devel'.
+#
+depends="zlib-devel libkmod"
+short_desc="${short_desc} - development files"
+long_desc="${long_desc}
+
+ This package contains the files needed for developing applications
+ that use libkmod."
+
+
+do_install() {
+	vmove usr/include usr
+	vmove usr/lib/pkgconfig usr/lib
+}

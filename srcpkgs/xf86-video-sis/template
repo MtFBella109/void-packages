@@ -2,7 +2,13 @@
 pkgname=xf86-video-sis
 version=0.10.2
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="glibc xorg-server"
+makedepends="xorg-server-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=3aad701799e355669b9027a9baedd623fe6b7ce93da9ac22b6902fd7e38128c2
@@ -10,5 +16,8 @@ long_desc="
  This is the video driver for SiS (Silicon Integrated Systems) and XGI
  video chips for the Xorg X11 server."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

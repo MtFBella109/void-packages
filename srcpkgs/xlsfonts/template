@@ -21,14 +21,23 @@ post_install() {
 pkgname=xlsfonts
 version=1.0.2
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config"
+fulldepends="glibc libX11"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Server font list displayer for X"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=cc6e519b783b082a2fe4cd06ea5b3693ee6bdb23f4b36e7a72753c524ef5111c
 long_desc="
  Utility to list the fonts available on an X server."
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libX11
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

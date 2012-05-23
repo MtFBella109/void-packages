@@ -3,10 +3,14 @@ pkgname=xmlto
 version=0.0.29
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 # Requires bash!
 configure_args="ac_cv_path_BASH=/bin/bash"
 hostmakedepends="autoconf automake libxslt docbook-xsl"
 depends="bash libxslt docbook-xsl"
+=======
+fulldepends="libxslt docbook-xsl coreutils grep"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Tool to help transform XML documents into other formats"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -14,6 +18,13 @@ homepage="https://pagure.io/xmlto/"
 distfiles="https://pagure.io/xmlto/archive/${version}/xmlto-${version}.tar.gz"
 checksum=40504db68718385a4eaa9154a28f59e51e59d006d1aa14f5bc9d6fded1d6017a
 
+<<<<<<< HEAD
 pre_configure() {
 	autoreconf -fi
+=======
+
+post_install() {
+	# Requires bash!
+	sed -i "s|^#!/bin/sh|#!/bin/bash|" ${DESTDIR}/usr/bin/xmlto
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

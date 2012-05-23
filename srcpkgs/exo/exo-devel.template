@@ -1,11 +1,19 @@
 # Template file for 'exo-devel'.
 #
+<<<<<<< HEAD
 short_desc="${sourcepkg} development files"
+=======
+depends="gtk+-devel libxfce4util-devel exo>=0.8.0"
+short_desc="${short_desc} - development files"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD
 Add_dependency run exo
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

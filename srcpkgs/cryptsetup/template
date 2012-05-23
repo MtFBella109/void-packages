@@ -3,6 +3,7 @@ pkgname=cryptsetup
 version=2.8.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--with-crypto_backend=openssl --disable-asciidoc
  --enable-libargon2 $(vopt_enable pwquality)"
 make_check_args="-C tests"
@@ -17,11 +18,30 @@ homepage="https://gitlab.com/cryptsetup/cryptsetup"
 changelog="https://gitlab.com/cryptsetup/cryptsetup/raw/master/docs/v${version}-ReleaseNotes"
 distfiles="${KERNEL_SITE}/utils/cryptsetup/v${version%.*}/cryptsetup-${version}.tar.xz"
 checksum=cc9e2d37c25a871cea37520b28d532207b0c1670fb10fc54d68071f63f5243a2
+=======
+makedepends="pkg-config popt-devel libuuid-devel device-mapper-devel libgcrypt-devel"
+short_desc="Setup virtual encryption devices under dm-crypt Linux"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3"
+checksum=82b143328c2b427ef2b89fb76c701d311c95b54093c21bbf22342f7b393bddcb
+long_desc="
+ Cryptsetup provides an interface for configuring encryption on block devices
+ (such as /home or swap partitions), using the Linux kernel device mapper target
+ dm-crypt. It features integrated Linux Unified Key Setup (LUKS) support.
+
+ Cryptsetup is backwards compatible with the on-disk format of cryptoloop, but
+ also supports more secure formats. This package includes support for automatically
+ configuring encrypted devices at boot time via the config file /etc/crypttab.
+ Additional features are cryptoroot support through initramfs-tools and several
+ supported ways to read a passphrase or key."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 subpackages="libcryptsetup cryptsetup-devel"
 build_options="pwquality"
 desc_option_pwquality="Enable support for checking password quality via libpwquality"
 make_check=ci-skip # tests depending on accessing /dev/mapper/control fail on CI
 
+<<<<<<< HEAD
 post_patch() {
 	if [ "$XBPS_TARGET_LIBC" = musl ]; then
 		# Require losetup from util-linux, also failing when present
@@ -67,3 +87,5 @@ cryptsetup-devel_package() {
 		esac
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

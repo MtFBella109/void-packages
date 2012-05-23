@@ -27,7 +27,12 @@ alsa-lib-devel_package() {
 pkgname=alsa-lib
 version=1.0.20
 distfiles="ftp://ftp.alsa-project.org/pub/lib/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config python-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The Advanced Linux Sound Architecture (ALSA) library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=15f8d0eef1da10c62136107e7b585bc8beb9c9e9b7ad177654097f8c15e57a63
@@ -39,7 +44,11 @@ long_desc="
  programming and provide higher level functionality as well as support for
  the older OSS API, providing binary compatibility for most OSS programs."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 Add_dependency build pkg-config
 Add_dependency full glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+subpackages="$pkgname-devel $pkgname-python"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

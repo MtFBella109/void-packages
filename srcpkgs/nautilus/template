@@ -1,5 +1,6 @@
 # Template file for 'nautilus'
 pkgname=nautilus
+<<<<<<< HEAD
 version=48.3
 revision=1
 build_style=meson
@@ -25,10 +26,28 @@ checksum=21a2aea005160db083c7a1d4d2c0989b845cc722c04ef9ebb60125a7ec5b393d
 # tests timeout:
 # 11/11 test-nautilus-search-engine-tracker            TIMEOUT        480.00s
 make_check=ci-skip
+=======
+version=3.4.2
+distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-update-mimedb --disable-tracker
+--disable-schemas-compile --disable-nst-extension --disable-debug"
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config intltool gobject-introspection gtk+3-devel libnotify-devel libexif-devel exempi-devel libxml2-devel gnome-desktop-devel"
+fulldepends="gsettings-desktop-schemas"
+short_desc="The GNOME file manager"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=752afa41189b0b6c73dc3769cd885e184c29d6d394345ec05cd48b0004e0f452
+long_desc="
+ Nautilus is the official file manager for the GNOME desktop. It is
+ designed to be primarly a file manager, but there is support for web and
+ file viewing too."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 build_options="gir"
 build_options_default="gir"
 
+<<<<<<< HEAD
 libnautilus_package() {
 	short_desc+=" - shared libraries"
 	pkg_install() {
@@ -47,3 +66,7 @@ nautilus-devel_package() {
 		fi
 	}
 }
+=======
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

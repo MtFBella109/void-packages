@@ -3,6 +3,7 @@ pkgname=wavpack
 version=5.7.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-static"
 short_desc="Hybrid lossless audio compression"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -37,3 +38,18 @@ wavpack-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+configure_args="--enable-mmx"
+makedepends="pkg-config"
+short_desc="An audio codec (lossy and lossless)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=175ee4f2effd6f51e6ec487956f41177256bf892c2e8e07de5d27ed4ee6888c5
+long_desc="
+ WavPack is a completely open audio compression format providing lossless,
+ high-quality lossy, and a unique hybrid compression mode. Although the
+ technology is loosely based on previous versions of WavPack, the new version
+ 4 format has been designed from the ground up to offer unparalleled
+ performance and functionality."
+
+subpackages="libwavpack $pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

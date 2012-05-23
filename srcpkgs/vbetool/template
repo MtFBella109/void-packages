@@ -6,6 +6,7 @@ revision=5
 archs="i686* x86_64*"
 build_style=gnu-configure
 make_build_args="LIBS=-lpci"
+<<<<<<< HEAD
 makedepends="zlib-devel libx86-devel pciutils-devel"
 short_desc="Run real-mode video BIOS code to alter hardware state"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -17,6 +18,10 @@ checksum=4d26ddc43144593742349e69481e3536ce3482faaa9ad4494fdc7c8b7662f954
 distfiles="http://www.codon.org.uk/~mjg59/vbetool/download/vbetool-$version.tar.gz"
 build_style=gnu_configure
 make_build_args="LIBS=-lpci"
+=======
+depends="pciutils"
+makedepends="zlib-devel libx86-devel pciutils-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Run real-mode video BIOS code to alter hardware state"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=4d26ddc43144593742349e69481e3536ce3482faaa9ad4494fdc7c8b7662f954
@@ -25,8 +30,11 @@ long_desc="
  able to alter DPMS states, save/restore video card state and attempt to
  initialize the video card from scratch."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full zlib
 Add_dependency full libx86
 Add_dependency build pciutils
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

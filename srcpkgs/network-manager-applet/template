@@ -1,5 +1,6 @@
 # Template file for 'network-manager-applet'
 pkgname=network-manager-applet
+<<<<<<< HEAD
 version=1.36.0
 revision=1
 build_style=meson
@@ -18,3 +19,46 @@ changelog="https://gitlab.gnome.org/GNOME/network-manager-applet/-/raw/main/NEWS
 distfiles="${GNOME_SITE}/network-manager-applet/${version%.*}/network-manager-applet-${version}.tar.xz"
 checksum=a84704487ea3afe1485c47fb2ab598b8f779f540ae0dcbf0a1c5f85e64a7e253
 lib32disabled=yes
+=======
+version=0.9.4.1
+distfiles="${GNOME_SITE}/$pkgname/0.9/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-schemas-install --disable-static
+--with-gconf-schema-file-dir=/usr/share/gconf/schemas --with-bluetooth"
+depends="NetworkManager polkit-gnome notification-daemon hicolor-icon-theme"
+makedepends="pkg-config intltool GConf-devel libgnome-keyring-devel NetworkManager-devel gnome-bluetooth-devel libnotify-devel polkit-devel"
+fulldepends="iso-codes"
+short_desc="NetworkManager panel applet for GNOME"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.gnome.org/projects/NetworkManager/"
+license="GPL-2"
+checksum=b6b6de75e28d1fbcdfdbb51c0e40fcd6bc0ec0385bfecd16c457260491cd2ff7
+long_desc="
+ NetworkManager attempts to keep an active network connection available at all
+ times. It is intended only for the desktop use-case, and is not intended for
+ usage on servers. The point of NetworkManager is to make networking
+ configuration and setup as painless and automatic as possible. If using DHCP,
+ NetworkManager is _intended_ to replace default routes, obtain IP addresses
+ from a DHCP server, and change nameservers whenever it sees fit.
+
+ This package contains a systray applet for GNOME's notification area but it
+ also works for other desktop environments which provide a systray like KDE or
+ Xfce. It displays the available networks and allows to easily switch between
+ them. For encrypted networks it will prompt the user for the key/passphrase
+ and it can optionally store them in the gnome-keyring."
+
+subpackages="libnm-gtk ${pkgname}-devel"
+gconf_schemas="${pkgname}.schemas"
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+# XXX: mobile-broadband-provier-info deps.
+
+
+
+post_install() {
+	mv ${DESTDIR}/usr/share/gconf/schemas/*.schemas ${wrksrc}
+	gconf-merge-schema ${DESTDIR}/usr/share/gconf/schemas/${gconf_schemas} \
+		--domain nm-applet ${wrksrc}/*.schemas
+}
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,10 +1,19 @@
 # Template file for 'libjpeg-turbo'
 pkgname=libjpeg-turbo
+<<<<<<< HEAD
 version=3.1.1
 revision=1
 build_style=cmake
 configure_args="-DWITH_JPEG8=1"
 hostmakedepends="yasm"
+=======
+version=1.2.0
+homepage="http://libjpeg-turbo.virtualgl.org/"
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
+build_style=gnu-configure
+configure_args="--with-jpeg8"
+makedepends="nasm"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Derivative of libjpeg which uses SIMD instructions"
 maintainer="Daniel Martinez <danielmartinez@cock.li>"
 license="IJG, BSD-3-Clause, Zlib"
@@ -15,6 +24,11 @@ checksum=aadc97ea91f6ef078b0ae3a62bba69e008d9a7db19b34e4ac973b19b71b4217c
 
 provides="jpeg-8_1"
 replaces="jpeg>=0"
+<<<<<<< HEAD
+=======
+subpackages="${pkgname}-devel ${pkgname}-tools"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vlicense LICENSE.md

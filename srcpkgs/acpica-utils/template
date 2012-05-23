@@ -2,10 +2,14 @@
 pkgname=acpica-utils
 version=20240827
 revision=1
+<<<<<<< HEAD
 build_style="gnu-makefile"
 make_use_env=yes
 make_build_args="NOWERROR=TRUE BITS=${XBPS_TARGET_WORDSIZE}"
 hostmakedepends="flex"
+=======
+makedepends="flex"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Intel ACPI CA Unix utilities"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only, BSD-3-Clause"
@@ -13,8 +17,24 @@ homepage="https://www.acpica.org/"
 distfiles="https://github.com/user-attachments/files/16769900/acpica-unix-${version}.tar.gz"
 checksum=373d4f08da7f1e838191311cb0fc2615ca9c76f47b1e103631e20292a38b4836
 
+<<<<<<< HEAD
 post_extract() {
 	mv source/include/ACPIXF.H source/include/acpixf.h
+=======
+    * ASL Compiler/Disassembler
+    * ACPI Simulator (AcpiExec)
+    * ACPI Table Extractor"
+
+
+do_build()
+{
+	cd ${wrksrc}/tools/acpiexec && make && \
+		cp -f acpiexec ${wrksrc} && make clean || return 1
+	cd ${wrksrc}
+	for _dir_ in compiler tools/acpisrc tools/acpixtract; do
+		make -C ${_dir_} || return 1
+	done
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }
 
 post_install() {

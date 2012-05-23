@@ -46,6 +46,7 @@ configure_args="--enable-wide-chars --enable-88-color --enable-broken-osc
  --with-app-defaults=/usr/share/X11/app-defaults --enable-i18n
  --disable-full-tgetent --disable-imake --enable-doublechars
  --enable-freetype --enable-tcap-query --enable-logging --enable-dabbrev"
+makedepends="libXft-devel libXaw-devel ncurses-devel fontconfig-devel libX11-devel libXmu-devel libXt-devel libICE-devel"
 short_desc="X Terminal Emulator"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=b253870e0cc4d702a77ae63df1ed8933274f79d56060add48e8ee714ceac1e5b
@@ -58,6 +59,7 @@ long_desc="
  (i.e., background color erase). It also implements most of the control
  sequences for VT220."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency build ncurses
 Add_dependency run ncurses-libs
@@ -65,3 +67,5 @@ Add_dependency full readline
 Add_dependency full libXft
 Add_dependency full libXaw
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

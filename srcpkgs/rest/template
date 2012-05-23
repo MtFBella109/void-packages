@@ -1,5 +1,6 @@
 # Template file for 'rest'
 pkgname=rest
+<<<<<<< HEAD
 version=0.9.1
 revision=1
 build_style=meson
@@ -9,6 +10,14 @@ configure_args="$(vopt_bool gir introspection) -Dexamples=false -Dsoup2=false
 hostmakedepends="pkg-config glib-devel gi-docgen"
 makedepends="libsoup3-devel json-glib-devel libxml2-devel"
 depends="ca-certificates"
+=======
+version=0.7.12
+homepage="http://www.gnome.org"
+distfiles="${GNOME_SITE}/$pkgname/0.7/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+revision=2
+makedepends="pkg-config gobject-introspection glib-devel libsoup-devel libsoup-gnome-devel libxml2-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="RESTful library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -21,6 +30,7 @@ checksum=9266a5c10ece383e193dfb7ffb07b509cc1f51521ab8dad76af96ed14212c2e3
 build_options="gir"
 build_options_default="gir"
 
+<<<<<<< HEAD
 pre_build() {
 	# help gi-docgen find gi files on cross
 	if [ -n "$CROSS_BUILD" ]; then
@@ -42,3 +52,5 @@ rest-devel_package() {
 		fi
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

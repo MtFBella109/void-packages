@@ -1,5 +1,6 @@
 # Template file for 'valabind'
 pkgname=valabind
+<<<<<<< HEAD
 version=1.8.0
 revision=3
 build_style=meson
@@ -12,3 +13,25 @@ license="GPL-3.0-or-later"
 homepage="https://radare.org/r/"
 distfiles="https://github.com/radare/valabind/archive/${version}.tar.gz"
 checksum=3eba8c36c923eda932a95b8d0c16b7b30e8cdda442252431990436519cf87cdd
+=======
+version=0.6.5
+homepage="http://radare.org"
+distfiles="$homepage/get/$pkgname-$version.tar.gz"
+build_style=gnu-makefile
+makedepends="pkg-config vala-devel glib-devel"
+short_desc="Tool to transform vala source files to swig, GIR or GEAR"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="LGPL-3"
+checksum=161641fc4a6ed0e22fcc82c85c8f91e41f18ae02260151f19293ee36c7c4b751
+long_desc="
+ Valabind is a tool to parse vala[1] or vapi files to transform
+ them into swig interface files, C++ source files, GIR or GEAR.
+
+ With swig, you can create language bindings for any API
+ written in vala or C with a vapi interface.
+
+ It can also generate bindings for C++ and v8-GearBox."
+
+disable_parallel_build=yes
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

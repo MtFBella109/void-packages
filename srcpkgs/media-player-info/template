@@ -3,6 +3,7 @@ pkgname=media-player-info
 version=24
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config python3"
 makedepends="eudev-libudev-devel"
 short_desc="Data files describing media player capabilities, for post-HAL systems"
@@ -12,6 +13,19 @@ homepage="https://www.freedesktop.org/wiki/Software/media-player-info/"
 changelog="https://cgit.freedesktop.org/media-player-info/plain/NEWS"
 distfiles="${FREEDESKTOP_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
 checksum=e6cf46db0b503e9929407ec6aa3fcd2becc9e2ca945b4ff787c98c8db63a1134
+=======
+depends="udev"
+makedepends="libudev-devel pkg-config"
+short_desc="Data files describing media player capabilities, for post-HAL systems"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="BSD"
+checksum=341ee6d21e6dcc683384c7f42633d7773e577260ec2e52d83b802d1a569e5244
+long_desc="
+ This package includes data files describing media player capabilities for use
+ in post-HAL systems."
+ 
+noarch=yes
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vlicense COPYING

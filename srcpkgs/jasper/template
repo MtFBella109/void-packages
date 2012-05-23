@@ -40,6 +40,7 @@ revision=1
 distfiles="http://www.ece.uvic.ca/~mdadams/jasper/software/$pkgname-$version.zip"
 build_style=gnu_configure
 configure_args="--enable-shared --without-x --disable-opengl"
+makedepends="unzip jpeg-devel"
 short_desc="Software-based reference implementation of the JPEG-2000 codec"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=6b905a9c2aca2e275544212666eefc4eb44d95d0a57e4305457b407fe63f9494
@@ -51,8 +52,12 @@ long_desc="
  software has also been submitted to the ISO for inclusion in the JPEG-2000
  Part-5 standard (as an official reference implementation)."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 Add_dependency build unzip
 Add_dependency full glibc
 Add_dependency full jpeg
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+subpackages="libjasper $pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,5 +1,6 @@
 # Template file for 'wgetpaste'
 pkgname=wgetpaste
+<<<<<<< HEAD
 version=2.33
 revision=1
 depends="bash wget"
@@ -9,6 +10,21 @@ license="MIT"
 homepage="http://wgetpaste.zlin.dk/"
 distfiles="https://github.com/zlin/wgetpaste/releases/download/${version}/wgetpaste-${version}.tar.xz"
 checksum=e9359d84a3a63bbbd128621535c5302f2e3a85e23a52200e81e8fab9b77e971b
+=======
+version=2.20
+distfiles="http://wgetpaste.zlin.dk/$pkgname-$version.tar.bz2"
+fulldepends="bash wget"
+short_desc="A script that automates pasting to a number of pastebin services"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://wgetpaste.zlin.dk/"
+license="Public domain"
+checksum=7a53836d02e07cefc3c2978bb129a037fa1e1222ba0e275c4e818230a6d6fb9e
+long_desc="
+ A script that automates pasting to a number of pastebin services."
+
+noarch=yes
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install() {
 	vbin ${pkgname}

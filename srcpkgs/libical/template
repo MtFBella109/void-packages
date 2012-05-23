@@ -1,5 +1,6 @@
 # Template file for 'libical'
 pkgname=libical
+<<<<<<< HEAD
 version=3.0.18
 revision=1
 build_style=cmake
@@ -9,6 +10,14 @@ configure_args="-DICAL_BUILD_DOCS=false
 hostmakedepends="gettext libglib-devel libxml2-devel perl pkg-config $(vopt_if gir vala)"
 makedepends="libglib-devel libxml2-devel $(vopt_if gir vala-devel)"
 checkdepends="python3-gobject"
+=======
+version=0.46
+distfiles="${SOURCEFORGE_SITE}/freeassociation/$pkgname-$version.tar.gz"
+build_style=gnu-configure
+configure_args="--enable-shared"
+revision=2
+makedepends="flex automake"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Reference implementation of the iCalendar data type and format"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-only, MPL-2.0"
@@ -17,8 +26,12 @@ changelog="https://raw.githubusercontent.com/libical/libical/master/ReleaseNotes
 distfiles="https://github.com/libical/libical/archive/v${version}.tar.gz"
 checksum=72b7dc1a5937533aee5a2baefc990983b66b141dd80d43b51f80aced4aae219c
 
+<<<<<<< HEAD
 build_options="gir"
 build_options_default="gir"
+=======
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_build() {
 	# export GIR_EXTRA_LIBS_PATH=$wrksrc/build/lib

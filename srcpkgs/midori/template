@@ -1,10 +1,18 @@
 # Template file for 'midori'
 pkgname=midori
+<<<<<<< HEAD
 version=0.2.0
 distfiles="http://archive.xfce.org/src/apps/$pkgname/0.2/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--enable-libidn --enable-sqlite --enable-addons
  --disable-hildon --enable-unique --enable-docs"
+=======
+version=0.4.6
+distfiles="http://archive.xfce.org/src/apps/$pkgname/0.4/$pkgname-$version.tar.bz2"
+build_style=waf
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config intltool python>=0 gtk+-devel libxml2-devel dbus-glib-devel librsvg-devel libnotify-devel libsoup-devel webkit-gtk-devel sqlite-devel libXext-devel libXScrnSaver-devel libunique1-devel vala-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Lightweight web browser using WebKit GTK+"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=97c79d20807899bad4b241385c7cbf3a4f85d2673b1b6c12059878450e3e971a
@@ -25,6 +33,7 @@ conf_files="/etc/xdg/midori/search"
 gtk_iconcache_dirs="/usr/share/icons/hicolor"
 triggers="gtk-icon-cache"
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build intltool
 Add_dependency build librsvg
@@ -36,3 +45,6 @@ Add_dependency full desktop-file-utils
 Add_dependency full webkit-gtk
 Add_dependency full libunique
 Add_dependency full sqlite
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

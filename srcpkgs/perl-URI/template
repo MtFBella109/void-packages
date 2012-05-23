@@ -21,7 +21,12 @@ pkgname=perl-URI
 version=1.40
 wrksrc="URI-$version"
 distfiles="${CPAN_SITE}/URI/GAAS/URI-$version.tar.gz"
+<<<<<<< HEAD
 build_style=perl_module
+=======
+build_style=perl-module
+fulldepends="perl"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Perl Uniform Resource Identifiers class (URI, RFC 2396)"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=7104e9c602083066967c6fbfd06c2648f839fedb866e9bc77ae6c263d3f42fbf
@@ -40,6 +45,9 @@ long_desc="
  the new interface."
 
 noarch=yes
+<<<<<<< HEAD
 Add_dependency build perl-MIME-Base64
 Add_dependency full perl
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

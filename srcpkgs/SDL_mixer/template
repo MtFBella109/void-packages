@@ -14,7 +14,27 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
 homepage="http://www.libsdl.org/projects/SDL_mixer/"
 distfiles="http://www.libsdl.org/projects/$pkgname/release/$pkgname-$version.tar.gz"
+<<<<<<< HEAD
 checksum=1644308279a975799049e4826af2cfc787cad2abb11aa14562e402521f86992a
+=======
+build_style=gnu-configure
+depends="libvorbis libmikmod smpeg libflac"
+makedepends="SDL-devel libvorbis-devel libmikmod-devel libflac-devel smpeg-devel fluidsynth-devel"
+short_desc="Multi-channel audio mixer library"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="BSD"
+checksum=1644308279a975799049e4826af2cfc787cad2abb11aa14562e402521f86992a
+long_desc="
+ SDL_mixer is a sample multi-channel audio mixer library. It supports any
+ number of simultaneously playing channels of 16 bit stereo audio, plus
+ a single channel of music, mixed by the popular MikMod MOD, Timidity MIDI,
+ Ogg Vorbis, and SMPEG MP3 libraries."
+
+subpackages="$pkgname-devel"
+# The following are dlopen(3)ed at runtime.
+#Add_dependency run libfluidsynth
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure() {
 	sed -e "/CONFIG_FILE_ETC/s|/etc/timidity.cfg|/etc/timidity++/timidity.cfg|" \

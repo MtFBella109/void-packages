@@ -2,7 +2,13 @@
 pkgname=libxfce4menu
 version=4.6.1
 distfiles="http://mocha.xfce.org/archive/xfce-4.6.1/src/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="glibc glib libxfce4util"
+makedepends="pkg-config intltool glib-devel libxfce4util-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="freedesktop.org compliant menu implementation for Xfce"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=5442b458b0e4f6bbbb6ddfbf1a7789dde1d270ab85686a3be77731a4d5ef84da
@@ -11,9 +17,12 @@ long_desc="
  for XFCE."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build intltool
 Add_dependency full glibc
 Add_dependency full glib
 Add_dependency full gtk+
 Add_dependency full libxfce4util
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

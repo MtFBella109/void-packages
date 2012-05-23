@@ -2,6 +2,7 @@
 pkgname=orc
 version=0.4.41
 revision=2
+<<<<<<< HEAD
 build_style=meson
 build_helper="gir"
 configure_args="-Dexamples=disabled -Dtests=disabled
@@ -37,3 +38,16 @@ orc-devel_package() {
 		fi
 	}
 }
+=======
+makedepends="pkg-config"
+short_desc="The Oild Runtime Compiler"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=6b0c536984871954364976516ea0328e2dcd856111726a23e609504ba2b12313
+long_desc="
+ Orc is a library and set of tools for compiling and executing very simple
+ programs that operate on arrays of data.  The “language” is a generic assembly
+ language that represents many of the features available in SIMD architectures,
+ including saturated addition and subtraction, and many arithmetic operations."
+
+subpackages="orc-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

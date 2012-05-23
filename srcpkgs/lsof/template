@@ -2,10 +2,16 @@
 pkgname=lsof
 version=4.99.5
 revision=1
+<<<<<<< HEAD
 build_style=gnu-configure
 configure_args="--enable-security --disable-liblsof"
 hostmakedepends="automake groff"
 checkdepends="util-linux procps-ng"
+=======
+wrksrc=lsof_${version}
+distfiles="ftp://sunsite.ualberta.ca/pub/Mirror/lsof/lsof_${version}.tar.bz2"
+depends="glibc"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="LiSt Open Files"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="lsof"
@@ -14,9 +20,12 @@ changelog="https://raw.githubusercontent.com/lsof-org/lsof/master/00DIST"
 distfiles="https://github.com/lsof-org/lsof/releases/download/${version}/lsof-${version}.tar.gz"
 checksum=4682c2491ec8b3d62f84e135afc1d9ead1bad5f034b50716f0c3826a4ee7d229
 
+<<<<<<< HEAD
 post_extract() {
 	# Ensure tests always run
 	ln -sf /bin/true tests/CkTestDB
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 	# Skip tests/LTsock on GitHub CI
 	# hostname/IP resolution fails in CI container

@@ -1,11 +1,16 @@
 # Template file for 'enchant-devel'.
 #
+depends="pkg-config glib-devel aspell-devel hunspell-devel enchant"
 short_desc="${sourcepkg} development files"
 long_desc="${long_desc}
 
  This package contains files for development, headers, static libs, etc."
 
+<<<<<<< HEAD
 Add_dependency run enchant
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

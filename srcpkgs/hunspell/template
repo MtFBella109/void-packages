@@ -5,6 +5,7 @@ version=1.7.2
 revision=1
 build_style=gnu-configure
 configure_args="--with-ui"
+<<<<<<< HEAD
 hostmakedepends="automake bison libtool pkg-config gettext-devel-tools"
 makedepends="ncurses-devel"
 short_desc="Spell checker and morphological analyzer"
@@ -47,6 +48,9 @@ version=1.2.8
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 configure_args="--with-ui"
+=======
+makedepends="pkg-config bison libstdc++-devel ncurses-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Improved spellchecker"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=af563e13646620e608052b46974e10d0fc3e4d48b1b996f9771cbfac6dfc3c38
@@ -65,8 +69,11 @@ long_desc="
 
 # XXX Add ncursesw dependency
 subpackages="$pkgname-devel" 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build bison
 Add_dependency full glibc
 Add_dependency full ncurses
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -3,18 +3,28 @@ pkgname=screen
 version=5.0.1
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-telnet --enable-utmp --enable-socket-dir=/run/screens"
 makedepends="libutempter-devel ncurses-devel pam-devel"
 conf_files="/etc/screenrc /etc/skel/.screenrc"
 short_desc="GNU screen manager with VT100/ANSI terminal emulation"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="GPL-3.0-or-later"
+=======
+configure_args="--with-sys-screenrc=/etc/screenrc -enable-pam --enable-colors256"
+makedepends="pam-devel ncurses-devel glibc-devel"
+short_desc="The GNU screen utility"
+maintainer="davehome <davehome@redthumb.info.tm>"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 homepage="http://www.gnu.org/s/screen/"
 distfiles="${GNU_SITE}/$pkgname/$pkgname-$version.tar.gz"
 checksum=2dae36f4db379ffcd14b691596ba6ec18ac3a9e22bc47ac239789ab58409869d
 make_check=no  # check is broken in 5.0.0
 
+<<<<<<< HEAD
 build_options="multiuser"
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 if [ "$XBPS_TARGET_LIBC" = "glibc" ]; then
 	makedepends+=" libxcrypt-devel"

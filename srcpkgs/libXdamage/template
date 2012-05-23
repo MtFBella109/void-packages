@@ -32,7 +32,13 @@ libXdamage-devel_package() {
 pkgname=libXdamage
 version=1.1.2
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=2
+makedepends="pkg-config xproto damageproto libX11-devel libXfixes-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xdamage extension (Library)"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a56a10acb34827c4d1a0ee282a338cbb04baa03d7fc7bc69e5690915c8fc7c0a
@@ -40,6 +46,7 @@ long_desc="
  This package contains the Xdamage extension."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build xproto
 Add_dependency build damageproto
@@ -47,3 +54,5 @@ Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libXfixes
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

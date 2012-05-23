@@ -23,7 +23,13 @@ post_install() {
 pkgname=xrdb
 version=1.0.6
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+makedepends="pkg-config libX11-devel libXmu-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X server resource database utility"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=8d062a3764665fcf22b14df4a5aca6af1e6d7d613296875b31b68e74ef66fc99
@@ -32,8 +38,11 @@ long_desc="
 
  This is from the modular X.org X11 project."
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libXmu
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

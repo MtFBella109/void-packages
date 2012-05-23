@@ -22,11 +22,20 @@ post_install() {
 =======
 # Template build file for 'xkeyboard-config'.
 pkgname=xkeyboard-config
+<<<<<<< HEAD
 version=1.5
 distfiles="http://xlibs.freedesktop.org/xkbdesc/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--with-xkb-rules-symlink=xfree86,xorg
  --enable-compat-rules"
+=======
+version=2.5.1
+distfiles="http://xorg.freedesktop.org/releases/individual/data/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+configure_args="--with-xkb-rules-symlink=xfree86,xorg --enable-compat-rules"
+makedepends="intltool libX11-devel"
+fulldepends="xkbcomp"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X Keyboard Configuration Database"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=ce15ff22ad6bc0ff7ae735d5ec65dd6dfd736d7eef0cf5ff394f823e663447e4
@@ -39,7 +48,10 @@ long_desc="
  X implementations. The project is targeted to XKB-based systems."
 
 noarch=yes
+<<<<<<< HEAD
 
 Add_dependency full xkbcomp
 Add_dependency build intltool
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -28,7 +28,13 @@ post_install() {
 pkgname=xf86-video-mach64
 version=6.8.2
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="glibc xorg-server"
+makedepends="xorg-server-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg ATI Mach64 video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=b91194033023a41793a525a631789df1d229b228af0d44dcbe20b06ed66c671d
@@ -36,6 +42,9 @@ long_desc="
  This is the video driver for ATI Mach64 video cards for
  the Xorg X11 server."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

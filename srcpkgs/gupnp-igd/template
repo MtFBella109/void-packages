@@ -1,5 +1,6 @@
 # Template file for 'gupnp-igd'
 pkgname=gupnp-igd
+<<<<<<< HEAD
 version=1.4.0
 revision=1
 _commit=a10bc3732e978f364319cbf7e67b71efa6b0b504
@@ -8,6 +9,15 @@ build_helper="gir"
 configure_args="$(vopt_bool gir introspection)"
 hostmakedepends="pkg-config glib-devel"
 makedepends="libglib-devel libxml2-devel gssdp-devel gupnp-devel"
+=======
+version=0.1.11
+homepage="http://gupnp.org"
+distfiles="${GNOME_SITE}/$pkgname/0.1/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+configure_args="--disable-python --disable-static"
+revision=3
+makedepends="pkg-config glib-devel libxml2-devel libsoup-devel gssdp-devel gupnp-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library to handle UPnP IGD port mapping"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -21,6 +31,7 @@ checksum=6dcfef6298bd2fceed36393b43cb46254b22bded577bad244f8b043210e98b5f
 build_options="gir"
 build_options_default="gir"
 
+<<<<<<< HEAD
 gupnp-igd-devel_package() {
 	depends="gupnp-devel ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -31,3 +42,5 @@ gupnp-igd-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

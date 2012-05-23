@@ -3,6 +3,7 @@ pkgname=perl-HTTP-Cookies
 version=6.10
 revision=1
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl"
 makedepends="perl-HTTP-Message"
 depends="${makedepends}"
@@ -12,3 +13,29 @@ license="Artistic-1.0-Perl,  GPL-1.0-or-later"
 homepage="https://metacpan.org/release/HTTP-Cookies"
 distfiles="${CPAN_SITE}/HTTP/HTTP-Cookies-$version.tar.gz"
 checksum=e36f36633c5ce6b5e4b876ffcf74787cc5efe0736dd7f487bdd73c14f0bd7007
+=======
+fulldepends="perl-HTTP-Message perl"
+short_desc="HTTP::Cookies - HTTP cookie jars"
+maintainer="davehome <davehome@redthumb.info.tm>"
+homepage="http://search.cpan.org/~gaas/HTTP-Cookies-6.00/lib/HTTP/Cookies.pm"
+license="GPL-2"
+checksum=30b5741894696493748336226b91e1a6bda66480f5fa758f5ce10b21f360a81c
+long_desc="
+ This class is for objects that represent a cookie jar -- that is, a database
+ of all the HTTP cookies that a given LWP::UserAgent object knows about.
+ 
+ Cookies are a general mechanism which server side connections can use to both
+ store and retrieve information on the client side of the connection. For more
+ information about cookies refer to http://curl.haxx.se/rfc/cookie_spec.html
+ and http://www.cookiecentral.com/. This module also implements the new style
+ cookies described in RFC 2965. The two variants of cookies are supposed to be
+ able to coexist happily.
+ 
+ Instances of the class HTTP::Cookies are able to store a collection of
+ Set-Cookie2: and Set-Cookie: headers and are able to use this information to
+ initialize Cookie-headers in HTTP::Request objects. The state of a
+ HTTP::Cookies object can be saved in and restored from files."
+
+noarch=yes
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

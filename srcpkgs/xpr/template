@@ -21,7 +21,13 @@ post_install() {
 pkgname=xpr
 version=1.0.3
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+makedepends="pkg-config libX11-devel libXmu-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Print an X window dump"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=2878d6b04ef81ec415fa81313565bee521bf94132127615b9d717d5a489b937d
@@ -31,8 +37,11 @@ long_desc="
  PP3812 page printer, the HP LaserJet (or other PCL printers), or the HP
  PaintJet."
  
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libXmu
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

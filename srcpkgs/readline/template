@@ -21,6 +21,7 @@ distfiles="http://savory.googlecode.com/files/${pkgname}-${_dist_ver}.tar.gz"
 build_style=gnu_configure
 configure_args="--with-curses --enable-multibyte"
 make_build_args="SHLIB_LIBS=-lncurses"
+makedepends="ncurses-devel"
 short_desc="The GNU Readline Library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=1199d905c025735b34cf67d03078585e18f84707052413279fe68ce48c1cc1de
@@ -34,10 +35,13 @@ long_desc="
  commands."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency full	glibc
 Add_dependency build	ncurses
 Add_dependency run	ncurses-libs
 Add_dependency build	texinfo
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure()
 {

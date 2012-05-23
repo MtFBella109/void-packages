@@ -2,6 +2,7 @@
 pkgname=liblrdf
 version=0.6.1
 revision=2
+<<<<<<< HEAD
 build_style=gnu-configure
 hostmakedepends="automake libtool pkg-config"
 makedepends="ladspa-sdk raptor-devel"
@@ -11,6 +12,18 @@ license="GPL-2.0-only"
 homepage="https://github.com/swh/LRDF"
 distfiles="https://github.com/swh/LRDF/archive/v${version}.tar.gz"
 checksum=d579417c477ac3635844cd1b94f273ee2529a8c3b6b21f9b09d15f462b89b1ef
+=======
+makedepends="automake pkg-config ladspa-sdk raptor-devel"
+short_desc="A lightweight RDF library with special support for LADSPA plugins"
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="GPL-2"
+checksum=95e98e86ba06ed73a5571cbcff3ee88e481b403b6eb727e9eb182870efd9b204
+long_desc="
+ This package contains ${short_desc}."
+
+subpackages="$pkgname-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure() {
 	autoreconf -fi

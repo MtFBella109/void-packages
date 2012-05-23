@@ -1,5 +1,6 @@
 # Template file for 'i3status'
 pkgname=i3status
+<<<<<<< HEAD
 version=2.15
 revision=1
 build_style=meson
@@ -22,6 +23,26 @@ make_check=no
 
 build_options="pulseaudio"
 build_options_default="pulseaudio"
+=======
+version=2.3
+homepage="http://i3wm.org/i3status"
+distfiles="${homepage}/${pkgname}-${version}.tar.bz2"
+depends="libcap-progs"
+makedepends="asciidoc confuse-devel wireless_tools-devel alsa-lib-devel"
+short_desc="Generates status bar to use with dzen2 or xmobar."
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="BSD"
+checksum=552dac4649f4e142c88ad3c42faace1fc372515c1b9dd979ebca58d36fa4bb1a
+long_desc="
+ i3 is a tiling window manager, completely written from scratch. The target
+ platforms are GNU/Linux and BSD operating systems, our code is Free and Open
+ Source Software (FOSS) under the BSD license. i3 is primarily targeted at
+ advanced users and developers."
+
+conf_files="/etc/i3status.conf"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vlicense LICENSE

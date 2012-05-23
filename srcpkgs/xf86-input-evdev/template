@@ -33,7 +33,13 @@ xf86-input-evdev-devel_package() {
 pkgname=xf86-input-evdev
 version=2.3.0
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="xorg-server"
+makedepends="xorg-server-devel mtdev-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg event device input driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=6d57420cce9201a14f2fb5c5f6bc8999ffdcc9520020d54290eb22db27c366c8
@@ -42,6 +48,9 @@ long_desc="
  Xorg X11 server."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

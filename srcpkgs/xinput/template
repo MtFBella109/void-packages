@@ -21,7 +21,12 @@ post_install() {
 pkgname=xinput
 version=1.5.0
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config libXext-devel libXi-devel libXrandr-devel libXinerama-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Utility to configure and test X input devices"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a84728e34bb5edd36ecc1b5489f48ad1467ad5aab1f74f1b7789f826a1ffcaf9
@@ -29,9 +34,12 @@ long_desc="
  xinput is a utility to list available input devices, query information about
  a device and change input device settings."
  
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libXext
 Add_dependency full libXi
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

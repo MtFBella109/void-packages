@@ -22,7 +22,13 @@ post_install() {
 pkgname=xset
 version=1.1.0
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=2
+makedepends="pkg-config libXmu-devel libX11-devel libXext-devel libXxf86misc-devel libXfontcache-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X11 user preferences utility"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=72c859c6030890a25cf828d0b2743454e50eadab30f6be8c17172fe97a554643
@@ -32,6 +38,7 @@ long_desc="
  DPMS, font paths, keyboard LEDs, mouse pointer, pixel colors,
  keyboard autorepeat, and screen saver."
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full libX11
@@ -39,3 +46,6 @@ Add_dependency full libXext
 Add_dependency full libXmu
 Add_dependency full libXfontcache
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

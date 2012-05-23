@@ -2,6 +2,7 @@
 pkgname=lxc
 version=6.0.3
 revision=3
+<<<<<<< HEAD
 build_style=meson
 configure_args="-Dpam-cgroup=true -Drootfs-mount-path=/var/lxc/containers
  -Ddistrosysconfdir=default
@@ -17,6 +18,18 @@ license="LGPL-2.1-or-later"
 homepage="https://linuxcontainers.org"
 distfiles="https://linuxcontainers.org/downloads/lxc/lxc-${version}.tar.gz"
 checksum=adac0837d2abfd2903916eaf56f60756f131327311f4f25ad917f6a71f73f98c
+=======
+distfiles="http://lxc.sourceforge.net/download/lxc/lxc-$version.tar.gz"
+build_style=gnu-configure
+makedepends="libcap-devel"
+short_desc="LinuX Containers"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=fa3b28cdb79b7c4735eaa8535dd014f94c8b7683d8ce2934d5836d241f48da09
+long_desc="
+ The  container technology is actively being pushed into the mainstream linux
+ kernel. It provides the resource management through the control groups aka
+ process containers and resource isolation through the namespaces.
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 conf_files="/etc/lxc/default.conf"
 make_dirs="
@@ -31,6 +44,7 @@ post_install() {
 	vsv lxc-autostart
 }
 
+<<<<<<< HEAD
 liblxc_package() {
 	short_desc="${_desc} - shared library"
 	pkg_install() {
@@ -48,3 +62,5 @@ lxc-devel_package() {
 		vmove "usr/lib/*.a"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

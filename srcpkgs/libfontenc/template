@@ -33,7 +33,12 @@ libfontenc-devel_package() {
 pkgname=libfontenc
 version=1.0.5
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config xproto zlib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The fontenc Library from X.org"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=7f3cde0331e9ad3da720b1a8255e121673701199df0802b62380436e74222700
@@ -41,8 +46,11 @@ long_desc="
  This provides the fontenc Library from the modular X.org X11 project."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build xproto
 Add_dependency full glibc
 Add_dependency full zlib
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

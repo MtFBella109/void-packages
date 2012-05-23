@@ -47,7 +47,13 @@ libgcrypt-devel_package() {
 pkgname=libgcrypt
 version=1.4.4
 distfiles="ftp://ftp.gnupg.org/gcrypt/$pkgname/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=2
+makedepends="libgpg-error-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNU cryptographic library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=3212b88080cf8fa006164d38fc176fafa5c29591c8384f284ab880db0dbf306f
@@ -60,7 +66,10 @@ long_desc="
  lot of supporting functions."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full libgpg-error
 Add_dependency build texinfo
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

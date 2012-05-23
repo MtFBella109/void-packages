@@ -19,6 +19,11 @@ do_install() {
 distfiles="${KERNEL_SITE}/utils/fs/zisofs/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 make_install_args="INSTALLROOT=$XBPS_DESTDIR/$pkgname-$version"
+<<<<<<< HEAD
+=======
+revision=1
+makedepends="zlib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="ISO9660 transparent compression tool"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=ae4e53e4914934d41660248fb59d3c8761f1f1fd180d5ec993c17ddb3afd04f3
@@ -30,6 +35,9 @@ long_desc="
  Non-compressed files on a zisofs file system are still accessible by legacy
  systems."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full zlib
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

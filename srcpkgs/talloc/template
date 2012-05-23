@@ -2,6 +2,7 @@
 pkgname=talloc
 version=2.4.3
 revision=2
+<<<<<<< HEAD
 build_style=waf3
 build_helper="qemu"
 configure_script="buildtools/bin/waf"
@@ -10,6 +11,9 @@ configure_args="--sysconfdir=/etc --localstatedir=/var
  --builtin-libraries=replace --bundled-libraries=pytalloc-util"
 hostmakedepends="pkg-config docbook2x"
 makedepends="python3-devel libtirpc-devel libxslt gettext-devel"
+=======
+makedepends="pkg-config libxslt docbook-xsl"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Hierarchical pool based memory allocator with destructors"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
@@ -17,8 +21,12 @@ homepage="https://talloc.samba.org/"
 distfiles="https://download.samba.org/pub/${pkgname}/${pkgname}-${version}.tar.gz"
 checksum=dc46c40b9f46bb34dd97fe41f548b0e8b247b77a918576733c528e83abd854dd
 
+<<<<<<< HEAD
 export PYTHON_CONFIG="${XBPS_CROSS_BASE}/usr/bin/python3-config"
 export PYTHONHASHSEED=1
+=======
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 talloc-python3_package() {
 	short_desc+=" - Python3 bindings"

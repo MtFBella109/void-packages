@@ -4,6 +4,7 @@ pkgname=gawk
 version=5.3.2
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--with-readline --disable-pma"
 makedepends="readline-devel"
 short_desc="GNU awk utility"
@@ -44,11 +45,18 @@ version=3.1.7
 distfiles="http://ftp.gnu.org/gnu/$pkgname/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 configure_args="ac_cv_func_working_mktime=yes"
+=======
+configure_args="ac_cv_func_working_mktime=yes --with-readline"
+makedepends="readline-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The GNU awk utility"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=f2a2f3b3053837c56fd42d801419e6a2aa89326c72308a87737da44191713a4d
 long_desc="
  The GNU AWK utility, a pattern scanning and processing tool."
 
+<<<<<<< HEAD
 Add_dependency run glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

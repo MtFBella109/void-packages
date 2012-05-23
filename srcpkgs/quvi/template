@@ -10,4 +10,24 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="http://quvi.sourceforge.net/"
 distfiles="${SOURCEFORGE_SITE}/quvi/quvi-$version.tar.gz"
+<<<<<<< HEAD
 checksum=85a54308bb0b682db9d4a8a4e7341d3d3bc9d3037c15f5ddad104efb45dbc5c4
+=======
+build_style=gnu-configure
+makedepends="pkg-config libquvi-devel"
+short_desc="Command-line tool for parsing video download links"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="LGPL-2.1"
+checksum=0dd934a4fc0e58d2655efe85c212e182f3adbbde4690d00a735177e1e264ba5a
+long_desc="
+ It originates from the idea of working around the flash requirement found
+ on many media hosting websites (e.g. YouTube).
+
+  * Parses additional media details (e.g. media title, media ID)
+  * Supported platforms include Linux, *BSD systems
+  * C library: Fast and low system footprint
+  * Easy to extend: uses lua for scripting
+  * Supports 40+ websites
+  * C API is simple to use"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

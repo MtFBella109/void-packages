@@ -22,7 +22,13 @@ post_install() {
 pkgname=xcb-proto
 version=1.5
 distfiles="http://xcb.freedesktop.org/dist/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="libxml2"
+fulldepends="python"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="XML-XCB (X C Bindings) protocol descriptions"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=0cf35b258e8f32773bcbd397ef3aca3ee6cac152260c99d2bd851488884c4638
@@ -46,6 +52,11 @@ long_desc="
  used by Python code generators in individual language bindings."
 
 noarch=yes
+<<<<<<< HEAD
 Add_dependency build python
 Add_dependency build libxml2
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+pycompile_module="xcbgen"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

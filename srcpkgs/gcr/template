@@ -1,5 +1,6 @@
 # Template file for 'gcr'
 pkgname=gcr
+<<<<<<< HEAD
 version=3.41.2
 revision=1
 build_style=meson
@@ -11,6 +12,17 @@ hostmakedepends="gettext glib-devel gnupg gi-docgen gettext pkg-config openssh
 makedepends="gtk+3-devel libgcrypt-devel libsecret-devel p11-kit-devel libxslt-devel"
 depends="desktop-file-utils hicolor-icon-theme gnupg"
 checkdepends="dbus"
+=======
+version=3.4.1
+homepage="http://www.gnome.org"
+distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-debug --disable-update-mime
+--disable-update-icon-cache --disable-schemas-compile"
+depends="hicolor-icon-theme desktop-file-utils"
+makedepends="which pkg-config intltool gnome-doc-utils gobject-introspection gtk+3-devel p11-kit-devel libgcrypt-devel libtasn1-tools"
+fulldepends="gnupg"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNOME crypto package"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.0-or-later, LGPL-2.1-or-later, GPL-2.0-or-later"
@@ -30,6 +42,7 @@ post_install() {
 	vinstall ${FILESDIR}/10-gcr-memlock.conf 644 etc/security/limits.d
 }
 
+<<<<<<< HEAD
 gcr-devel_package() {
 	depends="${makedepends} gcr>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -44,3 +57,6 @@ gcr-devel_package() {
 		fi
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,5 +1,6 @@
 # Template file for 'v4l-utils'
 pkgname=v4l-utils
+<<<<<<< HEAD
 version=1.28.1
 revision=2
 build_style=meson
@@ -7,6 +8,13 @@ configure_args="-Dqv4l2=disabled -Dudevdir=/usr/lib/udev -Dgconv=disabled"
 hostmakedepends="perl pkg-config gettext-devel"
 makedepends="libjpeg-turbo-devel libsysfs-devel eudev-libudev-devel alsa-lib-devel
  libX11-devel"
+=======
+version=0.8.5
+revision=5
+distfiles="http://linuxtv.org/downloads/$pkgname/$pkgname-$version.tar.bz2"
+depends="sysfsutils"
+makedepends="which jpeg-devel libsysfs-devel qt-devel libstdc++-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Userspace tools and libraries for Video 4 Linux"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
@@ -16,6 +24,7 @@ distfiles="https://linuxtv.org/downloads/v4l-utils/v4l-utils-${version}.tar.xz"
 checksum=0fa075ce59b6618847af6ea191b6155565ccaa44de0504581ddfed795a328a82
 conf_files="/etc/rc_maps.cfg"
 
+<<<<<<< HEAD
 case "$XBPS_TARGET_MACHINE" in
 	*-musl) makedepends+=" argp-standalone"
 		CFLAGS="-D__off_t=off_t -D__off64_t=off_t"
@@ -31,4 +40,19 @@ v4l-utils-devel_package() {
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.so"
 	}
+=======
+
+
+do_build()
+{
+	sed -i 's|CFLAGS :=|CFLAGS ?=|' Make.rules
+	make PREFIX=/usr ${makejobs}
+}
+
+do_install()
+{
+	make PREFIX=/usr DESTDIR=${DESTDIR} install
+	rm -f ${DESTDIR}/usr/bin/ivtv-ctl
+	chmod 0755 ${DESTDIR}/usr/lib/libv4l
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

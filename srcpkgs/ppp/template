@@ -5,12 +5,22 @@
 # * NetworkManager-l2tp
 # When update this package
 pkgname=ppp
+<<<<<<< HEAD
 version=2.5.0
 revision=1
 build_style=gnu-configure
 configure_args="--enable-cbcp"
 hostmakedepends="pkg-config"
 makedepends="libpcap-devel openssl-devel"
+=======
+version=2.4.5
+distfiles="ftp://ftp.samba.org/pub/ppp/ppp-$version.tar.gz"
+build_style=configure
+configure_args="--prefix=/usr"
+make_install_target="DESTDIR=$XBPS_DESTDIR/$pkgname-$version/usr install"
+revision=2
+makedepends="libpcap-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="PPP (Point-to-Point Protocol) daemon"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause, LGPL-2.0-or-later, GPL-2.0-or-later, Public Domain"
@@ -35,10 +45,13 @@ if [ "$XBPS_TARGET_LIBC" = "glibc" ]; then
 	makedepends+=" libxcrypt-devel"
 fi
 
+<<<<<<< HEAD
 post_install() {
 	case "$XBPS_TARGET_MACHINE" in
 		*-musl) vinstall include/net/ppp_defs.h 644 usr/include/net;;
 	esac
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 	chmod 755 ${DESTDIR}/usr/lib/pppd/${version}/*.so
 

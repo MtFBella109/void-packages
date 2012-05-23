@@ -1,0 +1,14 @@
+# Template file for 'samba-devel'.
+#
+depends="libsmbclient>=3.6.5"
+short_desc="${short_desc} - development files"
+long_desc="
+ ${long_desc}
+
+ This package provides development files: headers, static libraries, etc."
+
+noarch=yes
+
+do_install() {
+	vmove usr/include usr
+}

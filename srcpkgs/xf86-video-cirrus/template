@@ -26,7 +26,13 @@ post_install() {
 pkgname=xf86-video-cirrus
 version=1.3.2
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="xorg-server"
+makedepends="xorg-server-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg Cirrus Logic video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=529a98a42c94ba5e1b9269e6f7b32a9e76cfd2d4728df08aeba615df8b28ca1a
@@ -34,6 +40,9 @@ long_desc="
  This is the video driver for Cirrus Logic video cards for
  the Xorg X11 server."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

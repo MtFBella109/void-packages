@@ -3,9 +3,14 @@ pkgname=libgnomecanvas
 version=2.30.3
 revision=10
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static"
 hostmakedepends="pkg-config intltool glib-devel"
 makedepends="gtk+-devel libart-devel"
+=======
+revision=3
+makedepends="pkg-config intltool gtk+-devel libart-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNOME Canvas library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.0-or-later"
@@ -19,6 +24,7 @@ post_patch() {
 		configure
 }
 
+<<<<<<< HEAD
 libgnomecanvas-devel_package() {
 	depends="gtk+-devel libart-devel ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" -- development files"
@@ -29,3 +35,7 @@ libgnomecanvas-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+subpackages="$pkgname-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

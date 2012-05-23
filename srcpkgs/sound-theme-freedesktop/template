@@ -3,7 +3,11 @@ pkgname=sound-theme-freedesktop
 version=0.8
 revision=3
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config intltool"
+=======
+makedepends="pkg-config intltool"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Freedesktop sound theme"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="custom:multiple"
@@ -11,6 +15,11 @@ homepage="http://freedesktop.org/wiki/Specifications/sound-theme-spec"
 distfiles="http://people.freedesktop.org/~mccann/dist/sound-theme-freedesktop-${version}.tar.bz2"
 checksum=cb518b20eef05ec2e82dda1fa89a292c1760dc023aba91b8aa69bafac85e8a14
 
+<<<<<<< HEAD
 post_install() {
 	vlicense CREDITS
 }
+=======
+noarch=yes
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

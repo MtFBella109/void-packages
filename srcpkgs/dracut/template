@@ -1,9 +1,35 @@
 # Template file for 'dracut'
 pkgname=dracut
+<<<<<<< HEAD
 version=107
 revision=1
 build_style=configure
 configure_args="--prefix=/usr --sysconfdir=/etc"
+=======
+version=014
+revision=3
+distfiles="${KERNEL_SITE}/utils/boot/$pkgname/$pkgname-$version.tar.xz"
+build_style=gnu-makefile
+make_build_args="sysconfdir=/etc"
+make_install_args="sysconfdir=/etc"
+depends="busybox psmisc>=22.14_2"
+makedepends="libxslt docbook-xsl"
+short_desc="A new initramfs infrastructure"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=8766a0eecd51b4bc6647e7870ba269dffbbbe21954984b23c77f21ce1fd034d1
+long_desc="
+ Unlike existing initramfs, this is an attempt at having as little as possible
+ hard-coded into the initramfs as possible. The initramfs has (basically) one
+ purpose in life -- getting the rootfs mounted so that we can transition to the
+ real rootfs. This is all driven off of device availability. Therefore, instead
+ of scripts hard-coded to do various things, we depend on udev to create device
+ nodes for us and then when we have the rootfs's device node, we mount and
+ carry on. Having the root on MD, LVM2, LUKS is supported as well as NFS,
+ iSCSI, NBD and FCOE with dracut-network."
+
+noarch=yes
+subpackages="dracut-network"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 conf_files="/etc/dracut.conf"
 hostmakedepends="pkg-config asciidoc"
 makedepends="libkmod-devel"
@@ -23,6 +49,7 @@ subpackages="dracut-network"
 # Checks require distfiles come from a git repository
 make_check=no
 
+<<<<<<< HEAD
 make_dirs="
  /etc/dracut.conf.d 0755 root root
  /usr/lib/dracut/dracut.conf.d 0755 root root"
@@ -53,6 +80,9 @@ post_install() {
 	rm -r "${DESTDIR}"/usr/lib/dracut/test
 	rm -r "${DESTDIR}"/usr/lib/dracut/dracut.conf.d/test*
 	rm -r "${DESTDIR}"/usr/lib/dracut/modules.d/80test*
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 }
 

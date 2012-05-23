@@ -1,7 +1,17 @@
 # Template file for 'virtualbox-ose'
 pkgname=virtualbox-ose
+<<<<<<< HEAD
 version=7.2.4
 revision=1
+=======
+_vbox_distver=4.1.16
+version=${_vbox_distver}
+wrksrc="VirtualBox-${version}"
+patch_args="-Np1"
+distfiles="http://download.virtualbox.org/virtualbox/$version/VirtualBox-$version.tar.bz2"
+depends="virtualbox-ose-dkms>=4.1.16 hicolor-icon-theme desktop-file-utils"
+makedepends="which openssl-devel libcurl-devel libpng-devel SDL-devel qt-devel libXext-devel libXcursor-devel libXinerama-devel libXrandr-devel libXcomposite-devel MesaLib-devel libIDL-devel glib-devel pam-devel pulseaudio-devel libxslt-devel libcap-devel xorg-server-devel docbook-xsl acpica-utils kernel-headers dev86 yasm"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="General-purpose full virtualizer for x86 hardware"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only, CDDL-1.0"
@@ -14,6 +24,7 @@ nopie=yes
 lib32disabled=yes
 archs="x86_64"
 
+<<<<<<< HEAD
 hostmakedepends="acpica-utils dev86 perl pkg-config qt6-tools tar yasm which glslang
  vulkan-loader"
 makedepends="device-mapper-devel docbook-xsl gsoap-devel libcap-devel libcurl-devel
@@ -38,6 +49,12 @@ do_configure() {
 		--with-makeself="/bin/echo" \
 		--disable-python --disable-kmods --nofatal --enable-webservice
 }
+=======
+if [ "${XBPS_MACHINE}" = "x86_64" ]; then
+	Add_dependency build gcc-c++-multilib
+fi
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_build() {
 	export USERNAME="builder@void"

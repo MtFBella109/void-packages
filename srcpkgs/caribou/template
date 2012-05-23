@@ -3,6 +3,7 @@ pkgname=caribou
 version=0.4.21
 revision=10
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper="gir"
 configure_args="--disable-schemas-compile --disable-static --disable-gtk2-module
  PYTHON=/usr/bin/python3"
@@ -19,6 +20,20 @@ homepage="https://wiki.gnome.org/Projects/Caribou"
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=9c43d9f4bd30f4fea7f780d4e8b14f7589107c52e9cb6bd202bd0d1c2064de55
 lib32disabled=yes
+=======
+configure_args="--disable-schemas-compile --disable-static
+--disable-gtk2-module"
+makedepends="pkg-config intltool gnome-doc-utils gobject-introspection vala-devel libxklavier-devel libgee-devel pygobject-devel clutter-devel gtk+3-devel libXtst-devel"
+fulldepends="pyatspi dbus-python pygobject gir-freedesktop at-spi2-atk desktop-file-utils"
+short_desc="An alternative to the Gnome On-screen Keyboard"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=bcc64498b20c368747c3630d501a66ccf904db15d855f33fd4f963b5b19723ad
+long_desc="
+ Caribou is a text entry and UI navigation application being developed as an
+ alternative to the Gnome On-screen Keyboard. The overarching goal for Caribou
+ is to create a usable solution for people whose primary way of accessing a
+ computer is a switch device.
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 pre_configure() {
 	cp /usr/bin/gettextize .
@@ -31,6 +46,7 @@ pre_configure() {
 	find -name '*.vala' -exec touch {} \;
 }
 
+<<<<<<< HEAD
 libcaribou_package() {
 	lib32disabled=yes
 	short_desc+=" - library"
@@ -56,3 +72,6 @@ caribou-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

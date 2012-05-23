@@ -13,6 +13,7 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="http://www.flyn.org/projects/libdmapsharing/index.html"
 distfiles="http://www.flyn.org/projects/libdmapsharing/$pkgname-$version.tar.gz"
+<<<<<<< HEAD
 checksum=3659f63f29e11d6d6ae78b53d7cc6be3f3adeff9c00c67cc50ad19c6af699f7a
 make_check=no # network
 
@@ -31,3 +32,20 @@ libdmapsharing-devel_package() {
 		vmove usr/share/vala
 	}
 }
+=======
+build_style=gnu-configure
+configure_args="--with-mdns=avahi"
+makedepends="pkg-config gtk+-devel avahi-glib-libs-devel libsoup-devel gst-plugins-base-devel libgee-devel"
+short_desc="A library that implements the DMAP family of protocols"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="LGPL-2.1"
+checksum=3f9ba35058fe7c8df06a893807a455e5328c11ebaee58019373f9310cc3930fa
+long_desc="
+ Libdmapsharing is a library you may use to access, share and control the
+ playback of media content using DMAP (DAAP, DPAP and DACP). Libdmapsharing also
+ detects audio AirPlay services; coupled with the AirPlay support in PulseAudio
+ or GStreamer, this can allow an application to stream audio to an AirPlay."
+
+subpackages="$pkgname-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

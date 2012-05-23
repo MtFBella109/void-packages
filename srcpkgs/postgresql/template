@@ -1,5 +1,6 @@
 # Template file for 'postgresql'
 pkgname=postgresql
+<<<<<<< HEAD
 version=17
 revision=1
 depends="postgresql${version}"
@@ -7,6 +8,27 @@ short_desc="PostgreSQL server meta package"
 maintainer="Piotr Wójcik <chocimier@tlen.pl>"
 license="PostgreSQL"
 homepage="https://www.postgresql.org"
+=======
+version=8.4.10
+distfiles="ftp://ftp.postgresql.org/pub/source/v${version}/${pkgname}-${version}.tar.bz2"
+build_style=gnu-configure
+configure_args="--with-docdir=/usr/share/doc --with-openssl --with-python
+--with-pam --datadir=/usr/share/postgresql --enable-thread-safety
+--with-perl --with-tcl --without-ldap --without-gssapi --without-krb5
+--without-bonjour --with-libxml --with-libxslt --disable-rpath
+--with-system-tzdata=/usr/share/zoneinfo --enable-nls"
+makedepends="flex readline-devel openssl-devel perl tcl-devel python-devel libxml2-devel libxslt-devel pam-devel"
+short_desc="Sophisticated open-source Object-Relational DBMS"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.postgresql.org"
+license="BSD"
+checksum=749f83e9d467b07dcd012fdf2b1615c577b410fd219b44a27bb7097bb1b07cfb
+long_desc="
+ PostgreSQL is a powerful, open source object-relational database system.
+ It has more than 15 years of active development and a proven architecture
+ that has earned it a strong reputation for reliability, data integrity,
+ and correctness."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 build_options="languages"
 desc_option_languages="Include procedural languages as dependency"
@@ -22,6 +44,7 @@ if [ "$build_option_languages" ]; then
 	subpackages+=" postgresql-plperl postgresql-plpython postgresql-pltcl"
 fi
 
+<<<<<<< HEAD
 do_install() {
 	vdoc "${FILESDIR}/README.voidlinux"
 }
@@ -70,4 +93,14 @@ postgresql-full_package() {
 	if [ "$build_option_languages" ]; then
 		depends+=" postgresql-plpython postgresql-plperl postgresql-pltcl"
 	fi
+=======
+
+post_install() {
+	vinstall ${FILESDIR}/${pkgname}.confd 644 etc/default ${pkgname}
+	vinstall ${FILESDIR}/${pkgname}.service 644 lib/systemd/system
+	vinstall ${FILESDIR}/${pkgname}-initdb 755 lib/systemd/scripts
+	vinstall ${FILESDIR}/${pkgname}.pam 644 etc/pam.d ${pkgname}
+	vinstall ${DESTDIR}/usr/share/${pkgname}/${pkgname}.conf.sample \
+		644 etc/${pkgname} ${pkgname}.conf
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }

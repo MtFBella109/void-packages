@@ -1,5 +1,6 @@
 # Template file for 'libvdpau'
 pkgname=libvdpau
+<<<<<<< HEAD
 version=1.5
 revision=1
 build_style=meson
@@ -12,6 +13,27 @@ license="MIT"
 homepage="https://freedesktop.org/wiki/Software/VDPAU/"
 distfiles="https://gitlab.freedesktop.org/vdpau/libvdpau/-/archive/${version}/libvdpau-${version}.tar.gz"
 checksum=66490802f30426d30ff9e8af35263bbbbaa23b52d0a2d797d06959c3d19638fd
+=======
+version=0.4.1
+revision=4
+distfiles="http://people.freedesktop.org/~aplattner/vdpau/$pkgname-$version.tar.gz"
+build_style=gnu-configure
+makedepends="pkg-config dri2proto libX11-devel libXext-devel"
+short_desc="The Video Decode and Presentation API for UNIX"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://cgit.freedesktop.org/~aplattner/libvdpau"
+license="MIT"
+checksum=061b6f86c64912f79851bfefcac4f77b401e9a939dbbb7b1ec795bc7d5aaf59b
+long_desc="
+ The Video Decode and Presentation API for Unix (VDPAU) provides a complete
+ solution for decoding, post-processing, compositing, and displaying
+ compressed or uncompressed video streams. These video streams may be combined
+ (composited) with bitmap content, to implement OSDs and other application
+ user interfaces."
+
+subpackages="$pkgname-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	vlicense COPYING

@@ -3,6 +3,7 @@ pkgname=alsa-plugins
 version=1.2.12
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-maemo-plugin"
 hostmakedepends="pkg-config"
 makedepends="ffmpeg6-devel jack-devel libsamplerate-devel pulseaudio-devel"
@@ -12,6 +13,23 @@ license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="http://www.alsa-project.org"
 distfiles="https://www.alsa-project.org/files/pub/plugins/${pkgname}-${version}.tar.bz2"
 checksum=7bd8a83d304e8e2d86a25895d8dcb0ef0245a8df32e271959cdbdc6af39b66f2
+=======
+configure_args="--disable-maemo-plugin --with-speex=lib"
+makedepends="pkg-config alsa-lib-devel speex-devel ffmpeg-devel libsamplerate-devel pulseaudio-devel jack-devel"
+short_desc="Advanced Linux Sound Architecture (ALSA) extra plugins"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2, LGPL-2.1"
+checksum=a0e374fd6d5ee9683473a5b6e73dadde61d54851065ed670d6627d344b565aab
+long_desc="
+ The Advanced Linux Sound Architecture (ALSA) provides audio and MIDI
+ functionality to the Linux operating system.
+
+ This package includes some ALSA extra plugins for PulseAudio, Speex,
+ FFmpeg's libavcodec library and libsamplerate."
+
+conf_files="/etc/asound.conf"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
 	rm -rfv ${DESTDIR}/etc/alsa/conf.d

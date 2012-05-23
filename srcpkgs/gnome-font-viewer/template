@@ -1,5 +1,6 @@
 # Template file for 'gnome-font-viewer'
 pkgname=gnome-font-viewer
+<<<<<<< HEAD
 version=48.0
 revision=1
 build_style=meson
@@ -16,3 +17,24 @@ changelog="https://gitlab.gnome.org/GNOME/gnome-font-viewer/-/raw/main/NEWS"
 #changelog="https://gitlab.gnome.org/GNOME/gnome-font-viewer/-/raw/gnome-48/NEWS"
 distfiles="${GNOME_SITE}/gnome-font-viewer/${version%.*}/gnome-font-viewer-${version}.tar.xz"
 checksum=732624231b624ff5c7ac03a8ce71be12393daa53551d11550b20d7b0a3a872a7
+=======
+version=3.4.0
+distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-schemas-compile --disable-scrollkeeper"
+depends="desktop-file-utils"
+makedepends="which pkg-config intltool itstool gnome-doc-utils gtk+3-devel"
+fulldepends="gsettings-desktop-schemas"
+short_desc="A font viewer for GNOME"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+checksum=6311fc6e390b7ddfde4fbe5954452d0846a0b3991e9e52f179be3969e6033a76
+long_desc="
+ This package contains $pkgname, a font viewer for the GNOME desktop."
+
+replaces="gnome-utils>=3.0"
+
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

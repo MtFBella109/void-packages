@@ -2,12 +2,21 @@
 pkgname=xf86-input-mouse
 version=1.5.0
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="glibc xorg-server"
+makedepends="xorg-server-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg mouse input driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=f303e20872ab2fb20e07a7f734d17723346d2b4b8687ea2086f7a7468d1ab397
 long_desc="
  This is the mouse input driver for the Xorg X11 server."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

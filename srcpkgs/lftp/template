@@ -5,11 +5,16 @@ version=4.9.2
 revision=3
 build_style=gnu-configure
 configure_args="--with-modules --disable-rpath --without-included-regex
+<<<<<<< HEAD
  --with-openssl i_cv_posix_fallocate_works=yes --with-zlib=${XBPS_CROSS_BASE}/usr
  --with-readline=${XBPS_CROSS_BASE}/usr gl_cv_func_signbit=yes"
 hostmakedepends="pkg-config"
 makedepends="zlib-devel ncurses-devel readline-devel openssl-devel
  expat-devel libidn-devel gettext-devel"
+=======
+--with-openssl"
+makedepends="ncurses-devel readline-devel openssl-devel expat-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Sophisticated FTP/HTTP client"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
@@ -35,7 +40,10 @@ long_desc="
 
 conf_files="/etc/lftp.conf"
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full readline
 Add_dependency full openssl
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -4,6 +4,7 @@ version=0.32.2
 revision=2
 build_style=gnu-configure
 configure_args="--with-expat --with-ssl=openssl --enable-shared
+<<<<<<< HEAD
  --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt --disable-static
  --disable-nls"
 make_build_args="all docs"
@@ -11,6 +12,11 @@ make_install_args="install"
 hostmakedepends="automake libtool pkg-config xmlto"
 makedepends="zlib-devel expat-devel openssl-devel libproxy-devel"
 depends="ca-certificates"
+=======
+--with-ca-bundle=/etc/ssl/certs/ca-certificates.crt"
+depends="ca-certificates"
+makedepends="zlib-devel expat-devel openssl-devel mit-krb5-devel e2fsprogs-devel libproxy-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="HTTP and WebDAV client library, with a C interface"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.0-or-later"
@@ -22,6 +28,7 @@ post_patch() {
 	vsed -i autogen.sh -e 's/which/command -v/'
 }
 
+<<<<<<< HEAD
 pre_configure() {
 	./autogen.sh
 }
@@ -38,3 +45,7 @@ neon-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+subpackages="neon-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -3,6 +3,7 @@ pkgname=gnome-user-docs
 version=48.2
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="gettext pkg-config itstool"
 makedepends="yelp"
 depends="yelp"
@@ -13,3 +14,17 @@ homepage="https://gitlab.gnome.org/GNOME/gnome-user-docs"
 changelog="https://gitlab.gnome.org/GNOME/gnome-user-docs/-/raw/master/NEWS"
 distfiles="${GNOME_SITE}/gnome-user-docs/${version%.*}/gnome-user-docs-${version}.tar.xz"
 checksum=67829f764ba672d7f99ff72ef6513b40cc931fb401bf7bd7db5f805e7bfa3db9
+=======
+depends="yelp"
+makedepends="pkg-config intltool itstool gnome-doc-utils"
+short_desc="User documentation for GNOME"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=dbbee5a13e0ef9b64366149fc68faeb7716c533a3b613306e9c077d92d38849a
+long_desc="
+ This package provides several GNOME 3 documentation: the GNOME Access Guide,
+ the Introduction to GNOME document, the System Administration Guide and the
+ Users Guide."
+
+noarch=yes
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

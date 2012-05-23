@@ -35,10 +35,17 @@ libwnck-devel_package() {
 =======
 # Template build file for 'libwnck'.
 pkgname=libwnck
+<<<<<<< HEAD
 version=2.26.1
 distfiles="${GNOME_SITE}/libwnck/2.26/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--localstatedir=/var"
+=======
+version=3.4.2
+distfiles="${GNOME_SITE}/libwnck/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+makedepends="pkg-config intltool gobject-introspection startup-notification-devel gtk+3-devel libXres-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library for layout and rendering of text"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=53737b2bcc520d16d4a83517e2ec6ee52269cec2706a9b4cdb876615c525f430
@@ -47,6 +54,7 @@ long_desc="
  for writing pagers and taskslists and stuff."
 
 subpackages="$pkgname-devel"
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build intltool
 Add_dependency build libXt
@@ -58,3 +66,6 @@ Add_dependency full startup-notification
 Add_dependency full libSM
 Add_dependency full libX11
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

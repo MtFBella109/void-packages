@@ -46,9 +46,18 @@ imlib2-webp_package() {
 =======
 # Template build file for 'imlib2'.
 pkgname=imlib2
+<<<<<<< HEAD
 version=1.4.0
 distfiles="$SOURCEFORGE_SITE/enlightenment/$pkgname-$version.tar.gz"
 build_style=gnu_configure
+=======
+version=1.4.2
+revision=5
+distfiles="${SOURCEFORGE_SITE}/enlightenment/imlib2-$version.tar.gz"
+build_style=gnu-configure
+configure_args="--sysconfdir=/etc/imlib2 --enable-visibility-hiding"
+makedepends="pkg-config zlib-devel freetype-devel jpeg-devel libpng-devel tiff-devel libid3tag-devel giflib-devel libX11-devel libXext-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Image manipulation library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=5b663a420e1008ddc047665912cad473323803da
@@ -75,4 +84,10 @@ long_desc="
   * Provide plug-in filter interface
   * Provide on-the-fly runtime plug-in image loading and saving interface
   * Fastest image compositing, rendering and manipulation library for X"
+<<<<<<< HEAD
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+subpackages="$pkgname-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

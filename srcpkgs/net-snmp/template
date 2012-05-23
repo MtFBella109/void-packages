@@ -1,10 +1,17 @@
 # Template file for 'net-snmp'
 pkgname=net-snmp
+<<<<<<< HEAD
 version=5.9.1
 revision=6
 hostmakedepends="pkg-config unzip"
 makedepends="bzip2-devel openssl-devel libnl3-devel pciutils-devel
  libsensors-devel pcre-devel"
+=======
+version=5.7.1
+distfiles="$SOURCEFORGE_SITE/$pkgname/$pkgname-$version.tar.gz"
+depends="python"
+makedepends="perl bzip2-devel openssl-devel libnl-devel pciutils-devel python-devel python-distribute"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Simple Network Management Protocol (SNMP) suite"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Net-SNMP"
@@ -12,7 +19,13 @@ homepage="http://www.net-snmp.org/"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
 checksum=eb7fd4a44de6cddbffd9a92a85ad1309e5c1054fb9d5a7dd93079c8953f48c3f
 
+<<<<<<< HEAD
 LDFLAGS="-lpthread"
+=======
+subpackages="lib${pkgname} $pkgname-devel"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_configure() {
 	# Stop GNU grep from being stupid, and recognizing source code

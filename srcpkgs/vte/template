@@ -1,9 +1,18 @@
 # Template build file for 'vte'.
 pkgname=vte
+<<<<<<< HEAD
 version=0.22.2
 distfiles="${GNOME_SITE}/vte/0.22/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--localstatedir=/var --disable-python"
+=======
+version=0.28.2
+distfiles="${GNOME_SITE}/vte/0.28/$pkgname-$version.tar.bz2"
+build_style=gnu-configure
+configure_args="--with-gtk=2.0"
+revision=3
+makedepends="pkg-config intltool gtk+-devel ncurses-devel pygtk-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Terminal widget with improved accessibility and I18N support"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=33bbf9d88004f19ec846c42c1a18f3625c8ffdfc264997803846bee96a80a0a9
@@ -11,6 +20,7 @@ long_desc="
  Terminal widget with improved font, internationalization and
  accessibility support for the GNOME 2 desktop."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 Add_dependency build pkg-config
 Add_dependency build intltool
@@ -25,3 +35,7 @@ Add_dependency full libSM
 Add_dependency full libX11
 Add_dependency run  ncurses-libs
 # XXX Add missing pygtk dependency
+=======
+subpackages="vte-python vte-devel"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

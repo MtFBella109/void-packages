@@ -1,5 +1,6 @@
 # Template file for 'gnome-settings-daemon'
 pkgname=gnome-settings-daemon
+<<<<<<< HEAD
 version=48.1
 revision=1
 build_style=meson
@@ -15,6 +16,17 @@ makedepends="NetworkManager-devel alsa-lib-devel colord-devel cups-devel gcr4-de
 depends="hicolor-icon-theme"
 checkdepends="elogind libnotify python3-dbusmock python3-gobject
  python3-pycodestyle which hwids eudev"
+=======
+version=3.4.2
+revision=2
+distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-static --enable-cups
+--disable-schemas-compile --enable-systemd"
+depends="pulseaudio hicolor-icon-theme"
+makedepends="pkg-config intltool gtk+3-devel libxklavier-devel libnotify-devel libcanberra-devel pulseaudio-devel nss-devel startup-notification-devel GConf-devel gnome-desktop-devel libgnomekbd-devel colord-devel upower-devel xf86-input-wacom-devel libwacom-devel systemd-devel cups-devel"
+fulldepends="gsettings-desktop-schemas"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNOME settings daemon"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
@@ -28,6 +40,7 @@ if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" polkit"
 fi
 
+<<<<<<< HEAD
 gnome-settings-daemon-devel_package() {
 	depends="libglib-devel"
 	short_desc+=" - development files"
@@ -36,3 +49,6 @@ gnome-settings-daemon-devel_package() {
 		vmove usr/lib/pkgconfig
 	}
 }
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -2,7 +2,13 @@
 pkgname=libXevie
 version=1.0.2
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=2
+makedepends="pkg-config xproto xextproto evieext libX11-devel libXext-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X Event Interceptor Library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=ff70b81ad145932db2d206735cefcb698dadad241001df7ba6b97e8081d174da
@@ -10,6 +16,7 @@ long_desc="
  This package contains the library and header files for the X Event
  Interceptor Library. This is from the modular X.org project."
  
+<<<<<<< HEAD
 subpackages="devel"
 Add_dependency build pkg-config
 Add_dependency build xproto
@@ -18,3 +25,6 @@ Add_dependency build evieext
 Add_dependency full glibc
 Add_dependency full libX11
 Add_dependency full libXext
+=======
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

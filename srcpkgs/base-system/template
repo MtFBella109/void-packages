@@ -1,5 +1,6 @@
 # Template file for 'base-system'
 pkgname=base-system
+<<<<<<< HEAD
 version=0.114
 revision=2
 metapackage=yes
@@ -7,6 +8,18 @@ short_desc="Void Linux base system meta package"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="Public Domain"
 homepage="https://www.voidlinux.org"
+=======
+version=0.55
+build_style=meta-template
+homepage="http://code.google.com/p/xbps"
+depends="base-files ncurses coreutils findutils diffutils dash bash grep texinfo file sed gawk less which tar man-pages man-db shadow e2fsprogs btrfs-progs xfsprogs nilfs-utils eject kbd psmisc procps sudo tzdata iana-etc udev systemd logrotate cron-daemon syslog-daemon acpid openssh-client dhcpcd iproute2 iputils bridge-utils ifenslave wireless_tools wpa_supplicant xbps wifi-firmware kernel void-artwork"
+short_desc="Void GNU/Linux base system meta package"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="Public domain"
+long_desc="
+ This package installs the base system packages for the
+ Void GNU/Linux system."
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 depends="
  base-files>=0.77 ncurses coreutils findutils diffutils libgcc
@@ -16,6 +29,7 @@ depends="
  kbd iproute2 iputils iw wpa_supplicant xbps nvi sudo wifi-firmware
  void-artwork traceroute ethtool kmod acpid eudev runit-void removed-packages"
 
+<<<<<<< HEAD
 case "$XBPS_TARGET_MACHINE" in
 	*-musl) depends+=" musl";;
 	*) depends+=" glibc-locales";;
@@ -24,3 +38,5 @@ esac
 case "$XBPS_TARGET_MACHINE" in
 	i686*|x86_64*|ppc*) depends+=" linux";;
 esac
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

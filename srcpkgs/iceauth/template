@@ -21,7 +21,13 @@ post_install() {
 pkgname=iceauth
 version=1.0.3
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+revision=1
+makedepends="pkg-config xproto libICE-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="ICE protocol utility"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=abca3ff6c9f2da2600a474f0e92ae5e62c43914f7bd3d948b91b0a7f9117d81e
@@ -31,8 +37,11 @@ long_desc="
 
  This is from the modular X.org X11 project."
  
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency build xproto
 Add_dependency full glibc
 Add_dependency full libICE
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

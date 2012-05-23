@@ -1,5 +1,6 @@
 # Template file for 'dwm'
 pkgname=dwm
+<<<<<<< HEAD
 version=6.6
 revision=1
 makedepends="libXinerama-devel libXft-devel freetype-devel"
@@ -9,6 +10,21 @@ license="MIT"
 homepage="https://dwm.suckless.org"
 distfiles="https://dl.suckless.org/dwm/dwm-${version}.tar.gz"
 checksum=7cfc2c6d9386c07c49e2c906f209c18ba3364ce0b4872eae39f56efdb7fc00a3
+=======
+version=6.0
+homepage="http://dwm.suckless.org"
+distfiles="http://dl.suckless.org/dwm/dwm-$version.tar.gz"
+makedepends="libX11-devel libXinerama-devel"
+short_desc="A dynamic window manager for X"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="MIT"
+checksum=b2b9483de69259eeea56844899bb2385158d3e79a42d82b10c142099fc8eeb56
+long_desc="
+ dwm is a dynamic window manager for X. It manages windows in tiled, monocle
+ and floating layouts. All of the layouts can be applied dynamically,
+ optimising the environment for the application in use and the task performed."
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_build() {
 	[ -e ${FILESDIR}/config.h ] && cp ${FILESDIR}/config.h config.h

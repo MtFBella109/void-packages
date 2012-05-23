@@ -3,6 +3,7 @@ pkgname=perl-LWP-MediaTypes
 version=6.04
 revision=2
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl"
 makedepends="$hostmakedepends"
 depends="$makedepends"
@@ -13,3 +14,19 @@ license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/LWP-MediaTypes"
 distfiles="${CPAN_SITE}/LWP/LWP-MediaTypes-${version}.tar.gz"
 checksum=8f1bca12dab16a1c2a7c03a49c5e58cce41a6fec9519f0aadfba8dad997919d9
+=======
+fulldepends="perl"
+short_desc="LWP::MediaTypes - guess media type for a file or a URL"
+maintainer="davehome <davehome@redthumb.info.tm>"
+homepage="http://search.cpan.org/~gaas/LWP-MediaTypes-6.01/lib/LWP/MediaTypes.pm"
+license="GPL-2"
+checksum=df25a848796bb53ae465924fb1192a19400f37d7446b2fe7f73443db07c51dba
+long_desc="
+ This module provides functions for handling media (also known as MIME) types
+ and encodings. The mapping from file extensions to media types is defined by
+ the media.types file. If the ~/.media.types file exists it is used instead.
+ For backwards compatibility we will also look for ~/.mime.types."
+
+noarch=yes
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -2,12 +2,21 @@
 pkgname=xf86-input-acecad
 version=1.4.0
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+depends="glibc libsysfs xorg-server"
+makedepends="libsysfs-devel xorg-server-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg acecad input driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=48341d8b6b0060228134b36543986c949ea828d6ce6d0484d29b3dde9ddbd556
 long_desc="
  This is the acecad input driver for the Xorg X11 server."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full xorg-server
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

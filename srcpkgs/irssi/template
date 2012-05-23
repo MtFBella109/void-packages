@@ -78,8 +78,15 @@ irssi-devel_package() {
 pkgname=irssi
 version=0.8.14
 distfiles="http://www.irssi.org/files/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 configure_args="--with-proxy"
 build_style=gnu_configure
+=======
+configure_args="--with-proxy --with-perl=module"
+build_style=gnu-configure
+depends="zlib"
+makedepends="perl pkg-config zlib-devel glib-devel openssl-devel ncurses-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Secure and modular IRC client with text mode user interface"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=63ea70eb1ce6fb3c995e984f919dcd18882e916478779dd899de9385ef8fdf28
@@ -93,6 +100,7 @@ long_desc="
 conf_files="/etc/irssi.conf"
 subpackages="$pkgname-devel"
 
+<<<<<<< HEAD
 Add_dependency full	glibc
 Add_dependency full	glib
 Add_dependency full	perl
@@ -100,3 +108,6 @@ Add_dependency full	openssl
 Add_dependency build	ncurses
 Add_dependency run	ncurses-libs
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

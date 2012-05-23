@@ -3,9 +3,15 @@ pkgname=taglib
 version=2.1.1
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DWITH_MP4=ON -DWITH_ASF=ON -DBUILD_SHARED_LIBS=ON"
 hostmakedepends="pkg-config"
 makedepends="zlib-devel utfcpp"
+=======
+configure_args="-DWITH_MP4=ON -DWITH_ASF=ON"
+revision=2
+makedepends="zlib-devel pkg-config cmake"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library for accessing ID tags in various media files"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later, MPL-1.1"
@@ -14,6 +20,7 @@ changelog="https://raw.githubusercontent.com/taglib/taglib/master/CHANGELOG.md"
 distfiles="https://github.com/taglib/taglib/archive/v${version}.tar.gz"
 checksum=bd57924496a272322d6f9252502da4e620b6ab9777992e8934779ebd64babd6e
 
+<<<<<<< HEAD
 taglib-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision} zlib-devel"
 	short_desc+=" - development files"
@@ -25,3 +32,6 @@ taglib-devel_package() {
 		vmove "usr/lib/*.so"
 	}
 }
+=======
+subpackages="$pkgname-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

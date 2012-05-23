@@ -3,6 +3,7 @@ pkgname=perl-IPC-Run
 version=20231003.0
 revision=1
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl"
 makedepends="${hostmakedepends}"
 depends="${makedepends}"
@@ -12,3 +13,18 @@ license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/IPC-Run"
 distfiles="${CPAN_SITE}/IPC/IPC-Run-${version}.tar.gz"
 checksum=eb25bbdf5913d291797ef1bfe998f15130b455d3ed02aacde6856f0b25e4fe57
+=======
+fulldepends="perl"
+short_desc="system() and background procs w/ piping, redirs, ptys"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://search.cpan.org/dist/IPC-Run/lib/IPC/Run.pm"
+license="GPL-2"
+checksum=2f0070e34e5a10e5e4e4efdb812b01c7e32919818d43a030d90ca34200902883
+long_desc="
+ IPC::Run allows you to run and interact with child processes using files,
+ pipes, and pseudo-ttys. Both system()-style and scripted usages are
+ supported and may be mixed. Likewise, functional and OO API styles are
+ both supported and may be mixed."
+
+noarch=yes
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -13,6 +13,4 @@ long_desc="
 
 conf_files="/etc/xbps-src.conf"
 
-Add_dependency full glibc
-Add_dependency full libarchive
-Add_dependency full proplib
+

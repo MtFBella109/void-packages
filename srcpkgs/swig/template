@@ -2,13 +2,31 @@
 pkgname=swig
 version=4.3.0
 revision=1
+<<<<<<< HEAD
 build_style=gnu-configure
 configure_args="--with-pcre2-prefix=${XBPS_CROSS_BASE}/usr"
 hostmakedepends="bison"
 makedepends="zlib-devel pcre2-devel"
+=======
+makedepends="bison pcre-devel zlib-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Simplified Wrapper and Interface Generator"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="http://www.swig.org"
+<<<<<<< HEAD
 distfiles="${SOURCEFORGE_SITE}/swig/swig-${version}.tar.gz"
 checksum=f7203ef796f61af986c70c05816236cbd0d31b7aa9631e5ab53020ab7804aa9e
+=======
+license="GPL-3"
+checksum="763a117730d26f8e5ed67f5718c6c0761fbb8461680fc20269db8c0839e1ec8a"
+long_desc="
+ SWIG is an interface compiler that connects programs written in C and C++
+ with scripting languages such as Perl, Python, Ruby, and Tcl. It works by
+ taking the declarations found in C/C++ header files and using them to
+ generate the wrapper code that scripting languages need to access the
+ underlying C/C++ code. In addition, SWIG provides a variety of customization
+ features that let you tailor the wrapping process to suit your application."
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

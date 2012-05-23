@@ -21,7 +21,11 @@ do_install() {
 =======
 version=2.29
 distfiles="${SOURCEFORGE_SITE}/dejavu/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=custom-install
+=======
+fulldepends="font-util"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="DejaVu family of TrueType fonts"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a09f2c14fca1e5908d61ce37997aaaef8b0a1b46c01a8b0834ca6873dc398ad6
@@ -36,7 +40,6 @@ noarch=yes
 font_dirs="/usr/share/fonts/TTF"
 triggers="x11-fonts"
 
-Add_dependency full font-util
 
 do_install()
 {

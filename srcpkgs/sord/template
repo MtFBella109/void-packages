@@ -1,5 +1,6 @@
 # Template file for 'sord'
 pkgname=sord
+<<<<<<< HEAD
 version=0.16.16
 revision=1
 build_style=meson
@@ -7,12 +8,23 @@ hostmakedepends="pkg-config"
 makedepends="serd-devel pcre-devel zix-devel"
 short_desc="Lightweight C library for storing RDF data in memory"
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+version=0.5.0
+build_style=waf
+homepage="http://drobilla.net/software/sord/"
+distfiles="http://download.drobilla.net/${pkgname}-${version}.tar.bz2"
+revision=2
+makedepends="pkg-config python serd-devel"
+short_desc="Lightweight C library for storing RDF data in memory."
+maintainer="davehome <davehome@redthumb.info.tm>"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 license="ISC"
 homepage="https://drobilla.net/software/sord.html"
 changelog="https://gitlab.com/drobilla/sord/-/raw/master/NEWS"
 distfiles="https://download.drobilla.net/sord-${version}.tar.xz"
 checksum=257f876d756143da02ee84c9260af93559d6249dd87f317e70ab5fffcc975fd0
 
+<<<<<<< HEAD
 if [ "$XBPS_CHECK_PKGS" ]; then
 	configure_args="-Dtests=enabled"
 else
@@ -39,3 +51,5 @@ libsord_package() {
 		vmove "usr/lib/*.so.*"
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

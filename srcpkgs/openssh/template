@@ -4,6 +4,7 @@ pkgname=openssh
 version=10.2p1
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--datadir=/usr/share/openssh
  --sysconfdir=/etc/ssh --without-selinux --with-privsep-user=nobody
  --with-mantype=doc --without-rpath --with-xauth=/usr/bin/xauth
@@ -94,6 +95,15 @@ configure_args="--libexecdir=/usr/libexec/openssh --with-tcp-wrappers
  --with-pam --with-mantype=man --with-xauth=/usr/bin/xauth
  --without-rpath --with-ssl-engine
  --without-selinux --with-privsep-path=/var/chroot/ssh"
+=======
+configure_args="--without-tcp-wrappers --datadir=/usr/share/openssh
+--sysconfdir=/etc/ssh --without-selinux --with-privsep-user=nobody --with-pam
+--with-mantype=man --without-rpath --with-xauth=/usr/bin/xauth
+--with-ssl-engine --disable-strip --with-privsep-path=/var/chroot/ssh
+--with-kerberos5=/usr"
+depends="shadow"
+makedepends="perl>=0 zlib-devel openssl-devel pam-devel mit-krb5-devel e2fsprogs-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The OpenSSH implementation of SSH protocol versions 1 and 2"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=d0c917462896974480b14454a8e1cb8b809291f67e5b9779c9b4dc4156c5ef12
@@ -115,6 +125,7 @@ long_desc="
 conf_files="/etc/ssh/moduli"
 subpackages="$pkgname-client $pkgname-server"
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full zlib
 Add_dependency full openssl
@@ -134,6 +145,16 @@ post_install()
 		${DESTDIR}/usr/share/man/man1/ssh-copy-id.1
 	# Install the OpenRC service
 	install -D -m755 ${FILESDIR}/sshd.rc ${DESTDIR}/etc/init.d/sshd
+=======
+
+
+post_install() {
+	vinstall contrib/sshd.pam.generic 644 etc/pam.d sshd
+	vinstall contrib/findssl.sh 755 usr/bin findssl
+	vinstall contrib/ssh-copy-id 755 usr/bin
+	vinstall contrib/ssh-copy-id.1 644 usr/share/man/man1
+	vinstall LICENCE 644 usr/share/licenses/${pkgname}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 	sed -i \
 		-e 's|^#ListenAddress 0.0.0.0|ListenAddress 0.0.0.0|g' \

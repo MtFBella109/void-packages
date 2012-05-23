@@ -2,7 +2,13 @@
 pkgname=dhcpcd-dbus
 version=0.4.2
 distfiles="http://roy.marples.name/downloads/dhcpcd/dhcpcd-dbus-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_makefile
+=======
+build_style=gnu-makefile
+makedepends="pkg-config dbus-devel"
+fulldepends="dhcpcd dbus"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="dhcpcd D-Bus interface"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=beaf6c45b0066530576d44357ae8a4b32dd036c200910eb5ca5364dc8d4dc996
@@ -10,7 +16,10 @@ long_desc="
  dhcpcd-dbus is the dhcpcd D-Bus interface, receives interface configuration
  events from the dhcpcd control socket and emits them to the DBus listeners."
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full dhcpcd
 Add_dependency full dbus
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

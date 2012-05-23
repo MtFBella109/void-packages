@@ -1,5 +1,6 @@
 # Template file for 'cups'
 pkgname=cups
+<<<<<<< HEAD
 version=2.4.13
 revision=1
 build_style=gnu-configure
@@ -9,6 +10,16 @@ hostmakedepends="gnutls-devel pkg-config
 makedepends="acl-devel gnutls-devel libpaper-devel libusb-devel pam-devel
  zlib-devel $(vopt_if avahi avahi-libs-devel) $(vopt_if gssapi mit-krb5-devel)"
 depends="xdg-utils"
+=======
+version=1.5.3
+revision=4
+patch_args="-Np1"
+homepage="http://www.cups.org/"
+license="GPL-2"
+distfiles="ftp://ftp.easysw.com/pub/cups/${version}/cups-${version}-source.tar.bz2"
+depends="libcups>=1.5.3_1"
+makedepends="automake acl-devel jpeg-devel libpng-devel tiff-devel openssl-devel pam-devel mit-krb5-devel poppler-devel libusb-devel avahi-libs-devel systemd-devel gnutls-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Common Unix Printing System"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Apache-2.0 WITH custom:GPL-2.0-LGPL-2.0-Exception, Zlib"
@@ -31,10 +42,30 @@ make_dirs="
 build_options="avahi gssapi"
 build_options_default="avahi"
 
+<<<<<<< HEAD
 system_accounts="cups"
 system_groups=lpadmin
 cups_pgroup=lp
 cups_homedir=/var/spool/cups
+=======
+conf_files="
+/etc/cups/cupsd.conf
+/etc/cups/snmp.conf
+/etc/cups/printers.conf
+/etc/cups/classes.conf
+/etc/cups/client.conf
+/etc/cups/subscriptions.conf
+/etc/dbus-1/system.d/cups.conf
+/etc/logrotate.d/cups
+/etc/pam.d/cups"
+
+subpackages="libcups cups-devel"
+
+pre_configure() {
+	aclocal -I config-scripts
+	autoconf -I config-scripts
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_configure() {
 	./configure ${configure_args} --sbindir=/usr/bin --libdir=/usr/lib \

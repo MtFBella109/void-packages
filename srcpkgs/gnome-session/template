@@ -1,5 +1,6 @@
 # Template file for 'gnome-session'
 pkgname=gnome-session
+<<<<<<< HEAD
 version=48.0
 revision=1
 build_style=meson
@@ -16,3 +17,28 @@ homepage="https://gitlab.gnome.org/GNOME/gnome-session"
 changelog="https://gitlab.gnome.org/GNOME/gnome-session/-/raw/main/NEWS"
 distfiles="${GNOME_SITE}/gnome-session/${version%%.*}/gnome-session-${version}.tar.xz"
 checksum=dd909fbc5b22cdbdb2fc4df1a47d78d1b5943ccc5e61e6a20a1846246347c417
+=======
+version=3.4.2
+distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-schemas-compile --enable-systemd"
+depends="gsettings-desktop-schemas dconf alsa-plugins hicolor-icon-theme desktop-file-utils"
+makedepends="pkg-config intltool upower-devel GConf-devel json-glib-devel startup-notification-devel libXtst-devel gtk+3-devel systemd-devel"
+short_desc="GNOME session management utilities"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.gnome.org"
+license="GPL-2, LGPL-2.1"
+checksum=6c2cbc86b63bb4869f4f95e7771ec6eee0c02965b732d634de5c8122607c4356
+long_desc="
+ gnome-session provides the following components:
+
+  * The GNOME session manager.
+  * The GNOME session manager configuration program and several other
+    session management related utilities.
+  * The GNOME session manager proxy, which handles basic session
+    management for applications that do not support XSM."
+
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

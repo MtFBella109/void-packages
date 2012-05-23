@@ -1,12 +1,16 @@
 # Template file for 'poppler-glib'.
 #
+depends="poppler-devel>=0.20.0 poppler-glib>=0.20.0"
 short_desc="${sourcepkg} GLib bindings (development files)"
 long_desc="${long_desc}
 
  This package contains development files for GTK+/Glib bindings."
 
+<<<<<<< HEAD
 Add_dependency run poppler
 Add_dependency run poppler-glib
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 do_install()
 {

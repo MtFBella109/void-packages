@@ -1,5 +1,6 @@
 # Template file for 'json-glib'
 pkgname=json-glib
+<<<<<<< HEAD
 version=1.10.8
 revision=1
 build_style=meson
@@ -16,11 +17,27 @@ homepage="https://live.gnome.org/JsonGlib"
 changelog="https://gitlab.gnome.org/GNOME/json-glib/-/raw/main/NEWS"
 distfiles="${GNOME_SITE}/json-glib/${version%.*}/json-glib-${version}.tar.xz"
 checksum=55c5c141a564245b8f8fbe7698663c87a45a7333c2a2c56f06f811ab73b212dd
+=======
+version=0.14.2
+revision=4
+distfiles="${GNOME_SITE}/${pkgname}/0.14/${pkgname}-${version}.tar.xz"
+configure_args="--enable-static --with-pic=yes"
+build_style=gnu-configure
+makedepends="pkg-config glib-devel gobject-introspection"
+short_desc="A JSON parser for GLib-based libraries and applications"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://live.gnome.org/JsonGlib"
+license="LGPL-2"
+checksum=b816a5fa3e5664b08679a6972a6e5693d6cc1990ff4a6f94c07554db96be94a7
+long_desc="
+ JSON-GLib implements a full JSON parser using GLib and GObject.
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 # Package build options
 build_options="gir gtk_doc"
 build_options_default="gir"
 
+<<<<<<< HEAD
 if [ -z "$CROSS_BUILD" ]; then
 	build_options_default+=" gtk_doc"
 fi
@@ -45,3 +62,6 @@ json-glib-devel_package() {
 		fi
 	}
 }
+=======
+subpackages="${pkgname}-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

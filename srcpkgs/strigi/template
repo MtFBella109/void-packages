@@ -1,0 +1,20 @@
+# Template file for 'strigi'
+pkgname=strigi
+version=0.7.2
+revision=3
+distfiles="http://www.vandenoever.info/software/${pkgname}/${pkgname}-${version}.tar.bz2"
+build_style=cmake
+configure_args="-DENABLE_INOTIFY=ON"
+makedepends="pkg-config cmake exiv2-devel libxml2-devel clucene-devel dbus-devel qt-devel"
+short_desc="Small fast desktop searching program"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=1ca421bbe420d1839bbe6bfe7c4b52a05590a9b7a7eda77924b554c98e602ab8
+long_desc="
+ Strigi is a daemon which uses a very fast and efficient crawler that can index
+ data on your harddrive. Indexing operations are performed without hammering
+ your system, this makes Strigi the fastest and smallest desktop searching
+ program. Strigi can index different file formats, including the contents of
+ the archive files."
+
+subpackages="strigi-devel"
+

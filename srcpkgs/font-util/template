@@ -10,7 +10,13 @@ hostmakedepends="pkg-config bdftopcf"
 pkgname=font-util
 version=1.1.1
 distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+<<<<<<< HEAD
 build_style=gnu_configure
+=======
+build_style=gnu-configure
+makedepends="pkg-config bdftopcf"
+fulldepends="font-alias expat freetype fontconfig mkfontdir mkfontscale"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Tools for truncating and subseting of ISO10646-1 BDF fonts"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a33f1e3b0d7c3fd7c3505ce68888fec3cf897353084187d96e1e821fe3c02f88
@@ -21,13 +27,17 @@ long_desc="
  font. It also provides mapping-files (character set tables)
  and the fontutil pkg-config and autoconf macro files."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency build pkg-config
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 #
 # These aren't really required, but this is to centralize the
 # requirement of dependent packages.
 #
+<<<<<<< HEAD
 <<<<<<< HEAD
 depends="font-alias expat freetype fontconfig mkfontscale"
 short_desc="Tools for truncating and subseting of ISO10646-1 BDF fonts"
@@ -50,3 +60,5 @@ Add_dependency build bdftopcf
 Add_dependency full mkfontdir
 Add_dependency full mkfontscale
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

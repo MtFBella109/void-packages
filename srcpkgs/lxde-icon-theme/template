@@ -3,6 +3,7 @@ pkgname=lxde-icon-theme
 version=0.5.2
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="automake"
 depends="gtk-update-icon-cache"
 short_desc="LXDE default default icon theme based on nuoveXT2"
@@ -15,3 +16,17 @@ checksum=5b71da247ba25ddcd991a3a184ca5ac92f40b7676766e1e59437067a20f7ecf7
 pre_configure() {
 	autoreconf -fi
 }
+=======
+depends="gtk+"
+makedepends="pkg-config gtk+-devel"
+short_desc="LXDE Standard icon theme"
+maintainer="Juan RP <xtraeme@gmail.com>"
+checksum=a75c0412033a0a0bf6b3912bb37409fbdae1b9a574f2821929aca8749e7ff3a3
+long_desc="
+ This package contains lxde-icon-theme which is the default icon theme
+ for LXDE, also known as nuoveXT2 icon theme."
+ 
+noarch=yes
+gtk_iconcache_dirs="/usr/share/icons/nuoveXT2"
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

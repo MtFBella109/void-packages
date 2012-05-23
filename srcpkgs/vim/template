@@ -1,6 +1,7 @@
 # Template file for 'vim'
 pkgname=vim
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=9.1.1215
 revision=3
 create_wrksrc=required
@@ -226,6 +227,18 @@ revision=1
 wrksrc=vim72
 distfiles="ftp://ftp.vim.org/pub/vim/unix/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+_distver=7.3
+_patchver=515
+version=${_distver}.${_patchver}
+build_style=gnu-configure
+configure_args="--disable-perlinterp --disable-pythoninterp --disable-rubyinterp
+--disable-cscope --disable-workshop --disable-netbeans --disable-sniff
+--disable-gpm --disable-hangulinput --disable-xim --enable-gui=no
+--without-x --enable-multibyte --with-tlib=ncursesw"
+depends="vim-common>=7.3.515"
+makedepends="mercurial ncurses-devel acl-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Vim editor (vi clone)"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=914db0f2205ebd6f02878295ec2506036ea7500399db112c61a01491cd9a1d86
@@ -234,8 +247,20 @@ long_desc="
  have been added: multi level undo, syntax highlighting, command line history,
  on-line help, filename completion, block operations, etc."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency build ncurses
 Add_dependency run  ncurses-libs
 Add_dependency full acl
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+nofetch=yes
+noextract=yes
+subpackages="vim-common"
+
+
+do_fetch() {
+	local url="http://code.google.com/p/vim/"
+	hg clone -u v7-3-${_patchver} ${url} ${pkgname}-${version}
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

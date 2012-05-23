@@ -1,5 +1,6 @@
 # Template file for 'folks'
 pkgname=folks
+<<<<<<< HEAD
 version=0.15.9
 revision=1
 build_style=meson
@@ -11,6 +12,14 @@ makedepends="readline-devel telepathy-glib-devel zeitgeist-devel
  libgee-devel evolution-data-server-devel $(vopt_if gir vala-devel)"
 depends="zeitgeist"
 checkdepends="python3-dbusmock bluez"
+=======
+version=0.6.9
+homepage="http://telepathy.freedesktop.org/wiki/Folks"
+distfiles="${GNOME_SITE}/$pkgname/0.6/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--enable-vala --enable-tracker-backend"
+makedepends="pkg-config intltool which gobject-introspection vala-devel dbus-glib-devel telepathy-glib-devel libgee-devel>=0.6.2.1_1 libsocialweb-devel evolution-data-server-devel tracker-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GObject Library to aggregate people into metacontacts"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -26,8 +35,11 @@ make_check=no
 # disable parallelism to fix some failing tests in the ci
 export MESON_TESTTHREADS=1
 
+<<<<<<< HEAD
 build_options="gir"
 build_options_default="gir"
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 folks-devel_package() {
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"

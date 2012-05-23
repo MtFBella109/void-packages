@@ -4,6 +4,7 @@ pkgname=epdfview
 version=0.1.8
 revision=12
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="gtk+-devel poppler-glib-devel"
 depends="hicolor-icon-theme desktop-file-utils"
@@ -28,6 +29,10 @@ revision=2
 distfiles="
 http://trac.emma-soft.com/epdfview/chrome/site/releases/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
+=======
+makedepends="pkg-config gtk+-devel poppler-glib-devel"
+fulldepends="hicolor-icon-theme desktop-file-utils"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Lightweight PDF viewer using Poppler and GTK+"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=0afbb0f348d4ba916cf58da48b4749b7cca6a9038136b27dc652161913704ae8
@@ -38,6 +43,7 @@ long_desc="
  The aim of ePDFView is to make a simple PDF document viewer, in the lines
  of Evince but without using the Gnome libraries."
 
+<<<<<<< HEAD
 Add_dependency build pkg-config
 Add_dependency full glibc
 Add_dependency full gtk+
@@ -46,3 +52,16 @@ Add_dependency build poppler
 Add_dependency run poppler-glib
 Add_dependency run libstdc++
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+
+post_install()
+{
+	for f in 24 32 48; do
+		install -Dm644 data/icon_${pkgname}-${f}.png \
+			${DESTDIR}/usr/share/icons/hicolor/${f}x${f}/apps/${pkgname}.png
+	done
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

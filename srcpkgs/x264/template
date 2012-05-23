@@ -1,10 +1,19 @@
 # Template file for 'x264'
 pkgname=x264
+<<<<<<< HEAD
 version=20191217.2245
 revision=1
 build_style=gnu-configure
 configure_args="--enable-static --enable-shared"
 hostmakedepends="nasm perl"
+=======
+_snap_date=20120126
+_snap_rev=2245
+version="${_snap_date}.${_snap_rev}"
+wrksrc="x264-snapshot-${_snap_date}-${_snap_rev}-stable"
+distfiles="http://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-${_snap_date}-${_snap_rev}-stable.tar.bz2"
+makedepends="yasm"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Free library for encoding H264/AVC video streams"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -12,12 +21,19 @@ homepage="https://www.videolan.org/developers/x264.html"
 distfiles="${VIDEOLAN_SITE}/x264/snapshots/x264-snapshot-${version//./-}-stable.tar.bz2"
 checksum=b2495c8f2930167d470994b1ce02b0f4bfb24b3317ba36ba7f112e9809264160
 
+<<<<<<< HEAD
 pre_configure() {
 	case "$XBPS_TARGET_MACHINE" in
 		armv5*|mips*|ppc*) configure_args+=" --disable-asm";;
 		aarch64*|armv[67]*) export AS=$CC;;
 		*) export AS=nasm;;
 	esac
+=======
+subpackages="$pkgname-devel"
+
+do_configure() {
+	./configure --disable-swscale --enable-pic --enable-shared
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }
 
 x264-devel_package() {

@@ -1,5 +1,6 @@
 # Template file for 'gssdp'
 pkgname=gssdp
+<<<<<<< HEAD
 version=1.6.3
 revision=1
 build_style=meson
@@ -8,6 +9,14 @@ configure_args="$(vopt_bool gir vapi) $(vopt_bool gir introspection)
  -Dexamples=false -Dgtk_doc=false"
 hostmakedepends="pkg-config glib-devel $(vopt_if gir vala)"
 makedepends="gtk4-devel libsoup3-devel libglib-devel"
+=======
+version=0.12.1
+homepage="http://gupnp.org"
+distfiles="${GNOME_SITE}/gssdp/0.12/gssdp-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-static"
+makedepends="pkg-config intltool gtk+-devel libsoup-devel gobject-introspection"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GObject-based library for SSDP"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -20,6 +29,7 @@ make_check=ci-skip
 build_options="gir man"
 build_options_default="gir"
 
+<<<<<<< HEAD
 case "$XBPS_MACHINE" in
 	x86_64*|i686|ppc64le*|ppc64) build_options_default+=" man" ;;
 esac
@@ -42,3 +52,5 @@ gssdp-devel_package() {
 		fi
 	}
 }
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

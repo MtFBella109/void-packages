@@ -1,10 +1,19 @@
 # Template file for 'boost'
 pkgname=boost
+<<<<<<< HEAD
 version=1.89.0
 revision=1
 hostmakedepends="which bzip2-devel icu-devel python3-devel pkg-config"
 makedepends="zlib-devel bzip2-devel icu-devel python3-devel liblzma-devel libzstd-devel"
 checkdepends="openssl-devel libpng-devel libjpeg-turbo-devel"
+=======
+version=1.44.0
+revision=3
+_boostver="$(echo $version|sed 's|\.|_|g')"
+wrksrc=${pkgname}_${_boostver}
+distfiles="${SOURCEFORGE_SITE}/$pkgname/${pkgname}_${_boostver}.tar.bz2"
+makedepends="zlib-devel icu-devel python-devel"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Free peer-reviewed portable C++ source libraries"
 maintainer="John <me@johnnynator.dev>"
 license="BSL-1.0"
@@ -14,6 +23,7 @@ checksum=85a33fa22621b4f314f8e85e1a5e2a9363d22e4f4992925d4bb3bc631b5a0c7a
 python_version=3
 noverifyrdeps=yes
 
+<<<<<<< HEAD
 # please do NOT delete below lines,
 # upgrade boost requires patching a lot of software,
 # which requires months of planning
@@ -21,6 +31,9 @@ if [ "${version%beta*}" != "$version" ]; then
 	_version=${version/beta/b}
 	distfiles="https://boostorg.jfrog.io/artifactory/main/beta/${version%.rc*}/source/boost_${_version//./_}.tar.bz2"
 fi
+=======
+subpackages="boost-build boost-devel boost-jam boost-python"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 replaces="libboost_program_options1.80>=0 libboost_math_c99f1.80>=0
  libboost_stacktrace_basic1.80>=0 libboost_stacktrace_noop1.80>=0

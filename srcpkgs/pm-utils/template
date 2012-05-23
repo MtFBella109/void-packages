@@ -1,9 +1,23 @@
 # Template file for 'pm-utils'
 pkgname=pm-utils
+<<<<<<< HEAD
 version=1.2.5
 revision=1
 distfiles="http://$pkgname.freedesktop.org/releases/$pkgname-$version.tar.gz"
 build_style=gnu_configure
+=======
+version=1.4.1
+revision=4
+patch_args="-Np1"
+distfiles="
+http://pm-utils.freedesktop.org/releases/$pkgname-$version.tar.gz
+http://pm-utils.freedesktop.org/releases/pm-quirks-20100619.tar.gz"
+build_style=gnu-configure
+configure_args="--libdir=/usr/lib"
+depends="bash"
+makedepends="xmlto"
+fulldepends="procps dmidecode ethtool vbetool"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Power Management Utilities"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=84cf07c7771ffe91c1b6f3a60c43fc76a44ae8d6c90e47bfdd6b1a7482a0e4ce
@@ -11,9 +25,12 @@ long_desc="
  $pkgname is a small collection of scripts that handle suspend and
  resume on behalf of HAL (Hardware Abstraction Layer)."
 
+<<<<<<< HEAD
 Add_dependency full glibc
 Add_dependency full procps
 Add_dependency full vbetool
+=======
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install()
 {

@@ -1,5 +1,6 @@
 # Template file for 'gnome-shell'
 pkgname=gnome-shell
+<<<<<<< HEAD
 version=48.5
 revision=2
 build_style=meson
@@ -16,6 +17,16 @@ makedepends="gnome-control-center-devel at-spi2-atk-devel
 depends="elogind gnome-control-center gsettings-desktop-schemas gnome-menus
  upower gstreamer1-pipewire gst-plugins-good1 ibus-gtk4"
 checkdepends="xvfb-run mesa-dri $depends"
+=======
+version=3.4.1
+distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
+build_style=gnu-configure
+configure_args="--disable-schemas-compile --without-systemd
+--with-ca-certificates=/etc/ssl/certs/ca-certificates.crt"
+depends="caribou pulseaudio mesa-demos desktop-file-utils"
+makedepends="pkg-config intltool gnome-doc-utils gobject-introspection json-glib-devel>=0.14.0 startup-notification-devel network-manager-applet-devel folks-devel gnome-menus-devel gnome-desktop-devel gnome-bluetooth-devel libcroco-devel gjs-devel mutter-devel telepathy-logger-devel libcanberra-devel pulseaudio-devel polkit-devel libgnome-keyring-devel gcr-devel libgudev-devel"
+fulldepends="ca-certificates gir-freedesktop"
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNOME core user interface"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -25,8 +36,14 @@ changelog="https://gitlab.gnome.org/GNOME/gnome-shell/-/raw/gnome-48/NEWS"
 distfiles="${GNOME_SITE}/gnome-shell/${version%%.*}/gnome-shell-${version}.tar.xz"
 checksum=87270785b290c824312004c6651432d2c7288bd8403c17d8e06f007019604cdf
 
+<<<<<<< HEAD
 do_check() {
 	mkdir /tmp/gnome-shell-xdg
 	XDG_RUNTIME_DIR=/tmp xvfb-run ninja -C build test
 	rm -rf /tmp/gnome-shell-xdg
 }
+=======
+gtk_iconcache_dirs="/usr/share/icons/hicolor"
+
+
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

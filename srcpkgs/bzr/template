@@ -3,6 +3,7 @@ pkgname=bzr
 version=2.0.1
 distfiles="http://launchpad.net/bzr/2.0/$version/+download/bzr-$version.tar.gz"
 build_style=python-module
+makedepends="zlib-devel python-devel"
 short_desc="Distributed version control system that Just Works"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=3438bd7b5d07486d85a63cf47a26f3532ef7fb4019770ca48faddfa9875e06c9
@@ -12,4 +13,13 @@ long_desc="
  Bazaar adapts to the way you want to work, and you can try it out in
  five minutes."
 
+<<<<<<< HEAD
 Add_dependency full python
+=======
+pycompile_module="bzrlib"
+
+
+pre_install() {
+	sed -i -e "s|man/man1|share/man/man1|" setup.py
+}
+>>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
