@@ -1,18 +1,23 @@
 # Template file for 'cmake'
 pkgname=cmake
-version=2.6.2
-distfiles="http://www.cmake.org/files/v2.6/$pkgname-$version.tar.gz"
+version=2.8.10
+revision=1
+subpackages="cmake-gui"
 build_style=configure
 configure_script=./bootstrap
 configure_args="--prefix=/usr --mandir=/share/man
- --docdir=/share/doc/cmake --system-libs"
+ --docdir=/share/doc/cmake --system-libs --qt-gui"
 if [ -n "$XBPS_MAKEJOBS" ]; then
 	configure_args="$configure_args --parallel=$XBPS_MAKEJOBS"
 fi
-makedepends="zlib-devel expat-devel libarchive-devel libcurl-devel ncurses-devel libarchive-devel qt-devel"
+makedepends="zlib-devel expat-devel libarchive-devel libcurl-devel
+ ncurses-devel libarchive-devel qt-devel"
 short_desc="Cross-platform, open-source build system"
 maintainer="Juan RP <xtraeme@gmail.com>"
-checksum=b3f5a9dfa97fb82cb1b7d78a62d949f93c8d4317af36674f337d27066fa6b7e9
+license="BSD"
+homepage="http://www.cmake.org"
+distfiles="http://www.cmake.org/files/v2.8/$pkgname-$version.tar.gz"
+checksum=a18b721c547c2ce2ea9378f2687caca4398fc348982ede799e96b26924cc9e04
 long_desc="
  CMake is a cross-platform, open-source build system. CMake is a family
  of tools designed to build, test and package software. CMake is used
@@ -24,16 +29,3 @@ long_desc="
 Add_dependency full glibc
 Add_dependency full openssl
 
-<<<<<<< HEAD
-}
-Add_dependency build zlib-devel
-Add_dependency build expat-devel
-Add_dependency build bzip2-devel
-Add_dependency build libarchive-devel
-Add_dependency build libcurl-devel
-Add_dependency build ncurses-devel
-Add_dependency build bzip2-devel
-Add_dependency build libarchive-devel
-Add_dependency build qt-devel
-=======
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
