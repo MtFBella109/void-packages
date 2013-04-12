@@ -1,48 +1,12 @@
-# Template file for 'nodejs'
-pkgname=nodejs
-<<<<<<< HEAD
-version=22.15.0
-revision=2
-build_style=configure
-configure_args="
- --prefix=/usr
- --enable-lto
- --shared-zlib
- --shared-ada
- $(vopt_if icu --with-intl=system-icu)
- $(vopt_if ssl --shared-openssl)
- $(vopt_if libuv --shared-libuv)
- $(vopt_if nghttp2 --shared-nghttp2)
- $(vopt_if cares --shared-cares)
- $(vopt_if brotli --shared-brotli)"
-make_build_args="V=1 LD=$CXX"
-hostmakedepends="pkg-config python3-setuptools"
-_make_depends="
- zlib-devel
- ada-devel
- $(vopt_if icu icu-devel)
- $(vopt_if ssl openssl-devel)
- $(vopt_if libuv libuv-devel)
- $(vopt_if nghttp2 nghttp2-devel)
- $(vopt_if cares c-ares-devel)
- $(vopt_if brotli brotli-devel)"
-makedepends="${_make_depends}"
-checkdepends="procps-ng iana-etc"
-=======
-version=0.6.11
+version=0.10.4
+revision=1
+wrksrc=node-v${version}
+short_desc="Evented I/O for V8 javascript"
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="MIT"
 homepage="http://nodejs.org/"
 distfiles="${homepage}/dist/v${version}/node-v${version}.tar.gz"
-makedepends="pkg-config openssl-devel v8-devel zlib-devel"
-fulldepends="python"
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
-short_desc="Evented I/O for V8 javascript"
-maintainer="Orphaned <orphan@voidlinux.org>"
-license="MIT"
-homepage="https://nodejs.org/"
-changelog="https://raw.githubusercontent.com/nodejs/node/main/doc/changelogs/CHANGELOG_V${version%%.*}.md"
-distfiles="https://nodejs.org/dist/v${version}/node-v${version}.tar.xz"
-checksum=e7c4226d1d92f33ad854d6da4f7e519e77690b8e73f93496881f8c539174d9df
-python_version=3
+checksum=1c960d2822447a9e4f7c46b832ff05e86743033c6643d644975af1cbf6a44fb8
 
 build_options="ssl libuv icu nghttp2 cares brotli"
 desc_option_ssl="Enable shared openssl"
@@ -57,19 +21,7 @@ replaces="iojs>=0"
 conflicts="nodejs-lts-10"
 provides="nodejs-runtime-0_1"
 
-<<<<<<< HEAD
-if [ "$CROSS_BUILD" ]; then
-	# Need these for host v8 for torque, see https://github.com/nodejs/node/pull/21079
-	hostmakedepends+=" ${_make_depends}"
-fi
 
-# https://build.voidlinux.org/builders/i686_builder/builds/27325/steps/shell_3/logs/stdio
-if [ "$XBPS_WORDSIZE" = 32 ]; then
-	LDFLAGS="-Wl,--no-keep-memory"
-fi
-=======
-
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 if [ "$XBPS_WORDSIZE" -ne "$XBPS_TARGET_WORDSIZE" ]; then
 	nocross="host and target must have the same pointer size"
