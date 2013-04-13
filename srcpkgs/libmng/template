@@ -30,6 +30,7 @@ libmng-devel_package() {
 # Template build file for 'libmng'.
 pkgname=libmng
 version=1.0.10
+<<<<<<< HEAD
 revision=1
 distfiles="http://www.libmng.com/download/libmng-$version.tar.bz2"
 <<<<<<< HEAD
@@ -38,6 +39,13 @@ build_style=gnu_configure
 build_style=gnu-configure
 makedepends="automake jpeg-devel zlib-devel lcms-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+revision=7
+build_style=gnu-configure
+configure_args="--disable-static"
+hostmakedepends="automake libtool"
+makedepends="libjpeg-turbo-devel zlib-devel lcms-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Multiple-image Network Graphics (MNG) reference library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=7b1477816c54b4d8ee0690c583982637910a1801ece0b0831e03fd07882e8118
@@ -66,4 +74,19 @@ pre_configure()
 	ln -s makefiles/Makefile.am .
 	autoreconf -f -i
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+}
+
+libmng-devel_package() {
+	depends="libjpeg-turbo-devel zlib-devel lcms-devel libmng>=${version}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/share/man/man3
+	}
+}
+
+libmng_package() {
+	pkg_install() {
+		vmove usr
+	}
 }

@@ -1,5 +1,6 @@
 # Template file for 'libcdio'
 pkgname=libcdio
+<<<<<<< HEAD
 version=2.2.0
 revision=2
 <<<<<<< HEAD
@@ -15,19 +16,43 @@ license="GPL-3.0-or-later"
 homepage="http://www.gnu.org/software/libcdio/"
 distfiles="https://github.com/libcdio/libcdio/releases/download/${version}/libcdio-${version}.tar.gz"
 checksum=1b6c58137f71721ddb78773432d26252ee6500d92d227d4c4892631c30ea7abb
+=======
+version=0.83
+build_style=gnu-configure
+revision=3
+hostmakedepends="pkg-config"
+makedepends="ncurses-devel libcddb-devel"
+short_desc="CD-ROM access library"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3"
+homepage="http://www.gnu.org/software/libcdio/"
+distfiles="http://ftp.gnu.org/gnu/libcdio/$pkgname-$version.tar.gz"
+checksum=235017e3eccb86424f9c108f2c5d5fca62630bda8c9dcf23b425ba9c5e2482c0
+long_desc="
+ This library is to encapsulate CD-ROM reading and
+ control. Applications wishing to be oblivious of the OS- and
+ device-dependent properties of a CD-ROM can use this library.
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 
 pre_configure() {
 	autoreconf -fi
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 libcdio-devel_package() {
 	depends="libcddb-devel libcdio>=${version}_${revision}"
 	short_desc+=" - development files"
+=======
+libcdio-devel_package() {
+	depends="libcddb-devel libcdio>=${version}"
+	short_desc+=" -- development files"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	pkg_install() {
 		vmove usr/include
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.a"
+<<<<<<< HEAD
 		vmove "usr/lib/*.so"
 		vmove usr/share
 	}
@@ -35,3 +60,14 @@ libcdio-devel_package() {
 =======
 subpackages="$pkgname-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+		vmove usr/share
+	}
+}
+
+libcdio_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

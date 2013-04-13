@@ -1,5 +1,6 @@
 # Template file for 'ltris'
 pkgname=ltris
+<<<<<<< HEAD
 version=1.2.6
 revision=2
 build_style=gnu-configure
@@ -18,8 +19,17 @@ CFLAGS+=" -fgnu89-inline"
 =======
 revision=1
 makedepends="bison SDL-devel SDL_mixer-devel"
+=======
+version=1.0.14
+revision=2
+build_style=gnu-configure
+configure_args="--localstatedir=/var/games/ltris"
+hostmakedepends="bison"
+makedepends="SDL-devel SDL_mixer-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="An SDL tetris clone"
 maintainer="Juan RP <xtraeme@gmail.com>"
+distfiles="${SOURCEFORGE_SITE}/lgames/$pkgname-$version.tar.gz"
 checksum=d6816aa70f55c73e0de2ccb81281a92aa063d3a90b362810002db010f4e3b3b2
 long_desc="
  LTris as a tetris clone: differently shaped blocks are falling down the
@@ -27,4 +37,13 @@ long_desc="
  units with the aim of building lines without gaps which then disappear
  (causing any block above the deleted line to fall down)."
 
+<<<<<<< HEAD
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+ltris_package() {
+	pkg_install() {
+		vmove usr
+		vmove var
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

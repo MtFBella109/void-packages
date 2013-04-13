@@ -1,6 +1,7 @@
 # Template file for 'libmad'
 pkgname=libmad
 version=0.15.1b
+<<<<<<< HEAD
 revision=10
 build_style=gnu-configure
 <<<<<<< HEAD
@@ -8,6 +9,11 @@ hostmakedepends="automake pkg-config"
 =======
 makedepends="automake"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+revision=6
+build_style=gnu-configure
+hostmakedepends="automake pkg-config"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="High-quality MPEG audio decoder"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -54,4 +60,20 @@ pre_configure()
 {
 	cd ${wrksrc} && autoconf || return 1
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+}
+
+libmad-devel_package() {
+	depends="${sourcepkg}-${version}_${revision}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.a"
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libmad_package() {
+	pkg_install() {
+		vmove usr
+	}
 }

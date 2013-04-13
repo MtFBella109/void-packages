@@ -1,8 +1,13 @@
 <<<<<<< HEAD
 # Template file for 'libcroco'
 pkgname=libcroco
+<<<<<<< HEAD
 version=0.6.13
 revision=1
+=======
+version=0.6.8
+revision=2
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="libglib-devel libxml2-devel"
@@ -48,6 +53,7 @@ long_desc="
  parsing and manipulation toolkit. It provides a Simple Api for CSS
  and Cascading Style Sheet Object Model parser, a CSS2 selection
  engine, and an XML/CSS layout/rendering engine."
+<<<<<<< HEAD
  
 subpackages="$pkgname-devel"
 <<<<<<< HEAD
@@ -58,3 +64,23 @@ Add_dependency full libxml2
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+
+libcroco-devel_package() {
+	depends="glib-devel libxml2-devel ${sourcepkg}-${version}_${revision}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/share
+		vmove "usr/lib/*.a"
+		vmove usr/lib/pkgconfig
+		vmove "usr/bin/croco-*config"
+	}
+}
+
+libcroco_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

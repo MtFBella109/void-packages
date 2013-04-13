@@ -1,7 +1,12 @@
 # Template file for 'libstatgrab'
 pkgname=libstatgrab
+<<<<<<< HEAD
 version=0.92.1
 revision=1
+=======
+version=0.17
+revision=2
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 configure_args="--disable-static"
 hostmakedepends="autoconf"
@@ -11,6 +16,7 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later, GPL-2.0-or-later"
 homepage="http://www.i-scream.org/libstatgrab"
 distfiles="http://www.mirrorservice.org/sites/ftp.i-scream.org/pub/i-scream/${pkgname}/${pkgname}-${version}.tar.gz"
+<<<<<<< HEAD
 checksum=5688aa4a685547d7174a8a373ea9d8ee927e766e3cc302bdee34523c2c5d6c11
 
 case "$XBPS_TARGET_MACHINE" in
@@ -20,11 +26,19 @@ esac
 pre_configure() {
 	autoconf
 }
+=======
+checksum=bbaa88c6bde8bd3cf2720b81a26528cc055a7e83e4ea3bdb1d0a3c4287cceb88
+long_desc="
+ libstatgrab is a library which provides an easy to use interface for
+ accessing system statistics. Available statistics include CPU, Load,
+ Memory, Swap, Disk I/O, and Network I/O." 
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 
 libstatgrab-devel_package() {
 	depends="${sourcepkg}-${version}_${revision}"
 	short_desc+=" -- development files"
 	pkg_install() {
+<<<<<<< HEAD
 		vmove usr/bin/statgrab-make*
 		vmove usr/include
 		vmove usr/lib/pkgconfig
@@ -32,3 +46,16 @@ libstatgrab-devel_package() {
 		vmove usr/share/man/man3
 	}
 }
+=======
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share/man/man3
+	}
+}
+
+libstatgrab_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

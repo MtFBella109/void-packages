@@ -1,16 +1,26 @@
 # Template file for 'libmowgli'
 pkgname=libmowgli
+<<<<<<< HEAD
 version=2.1.3
 revision=9
+=======
+version=2.0.0
+revision=4
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="openssl-devel"
 short_desc="Performance and usability-oriented extensions to C"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="https://github.com/atheme/libmowgli-2"
 distfiles="https://github.com/atheme/libmowgli-2/archive/v${version}.tar.gz"
 checksum=b7faab2fb9f46366a52b51443054a2ed4ecdd04774c65754bf807c5e9bdda477
+=======
+distfiles="http://atheme.org/downloads/${pkgname}-${version}.tar.gz"
+checksum=7c5a94082899d055fc9a02b94e2658b42616fdb98e58e9a71165c07b6f5cceba
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 
 post_install() {
 	vlicense COPYING
@@ -23,5 +33,20 @@ libmowgli-devel_package() {
 		vmove usr/include
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.so"
+	}
+}
+
+libmowgli-devel_package() {
+	depends="openssl-devel libmowgli>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libmowgli_package() {
+	pkg_install() {
+		vmove usr
 	}
 }

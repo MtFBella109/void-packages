@@ -51,6 +51,7 @@ long_desc="
  bitstream headers, but Theora will make use of this extra freedom
  in the future to improve over what is possible with VP3."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 <<<<<<< HEAD
 Add_dependency build pkg-config
@@ -59,3 +60,21 @@ Add_dependency full libogg
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+libtheora-devel_package() {
+	depends="libogg-devel libtheora>=${version}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+		vmove usr/share
+	}
+}
+
+libtheora_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

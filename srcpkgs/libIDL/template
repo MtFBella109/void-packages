@@ -32,6 +32,7 @@ libIDL-devel_package() {
 # Template build file for 'libIDL'.
 pkgname=libIDL
 version=0.8.13
+<<<<<<< HEAD
 distfiles="${GNOME_SITE}/$pkgname/0.8/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure
@@ -39,8 +40,15 @@ build_style=gnu_configure
 build_style=gnu-configure
 makedepends="pkg-config flex glib-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+revision=5
+build_style=gnu-configure
+hostmakedepends="pkg-config flex"
+makedepends="libglib-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="CORBA Interface Definition Language parser"
 maintainer="Juan RP <xtraeme@gmail.com>"
+distfiles="${GNOME_SITE}/$pkgname/0.8/$pkgname-$version.tar.bz2"
 checksum=bccc7e10dae979518ff012f8464e47ec4b3558a5456a94c8679653aa0b262b71
 long_desc="
  libIDL is a library licensed under the GNU LGPL for creating trees of
@@ -65,6 +73,7 @@ long_desc="
  full semantic analysis with some optimizations, and will attempt to
  generate meaningful errors and warnings for invalid or deprecated IDL."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 <<<<<<< HEAD
 Add_dependency build pkg-config
@@ -74,3 +83,25 @@ Add_dependency full glib
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+if [ "$CROSS_BUILD" ]; then
+	makedepends+=" libfl-devel"
+fi
+
+libIDL-devel_package() {
+	depends="libIDL>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/bin
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+	}
+}
+
+libIDL_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

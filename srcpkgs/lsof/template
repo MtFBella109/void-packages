@@ -9,6 +9,14 @@ hostmakedepends="automake groff"
 checkdepends="util-linux procps-ng"
 =======
 wrksrc=lsof_${version}
+<<<<<<< HEAD
+=======
+hostmakedepends="which perl"
+short_desc="LiSt Open Files"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://people.freebsd.org/~abe/"
+license="lsof"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 distfiles="ftp://sunsite.ualberta.ca/pub/Mirror/lsof/lsof_${version}.tar.bz2"
 depends="glibc"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
@@ -36,4 +44,10 @@ post_extract() {
 
 post_install() {
 	vlicense COPYING
+}
+
+lsof_package() {
+	pkg_install() {
+		vmove usr
+	}
 }

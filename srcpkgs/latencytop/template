@@ -1,6 +1,7 @@
 # Template file for 'latencytop'
 pkgname=latencytop
 version=0.5
+<<<<<<< HEAD
 revision=4
 build_style=gnu-makefile
 <<<<<<< HEAD
@@ -9,11 +10,21 @@ makedepends="gtk+-devel ncurses-devel"
 =======
 makedepends="pkg-config gtk+-devel ncurses-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+revision=1
+build_style=gnu-makefile
+hostmakedepends="pkg-config"
+makedepends="gtk+-devel ncurses-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Measuring and fixing Linux latency"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2"
 homepage="http://www.latencytop.org"
+<<<<<<< HEAD
 distfiles="${DEBIAN_SITE}/main/l/$pkgname/${pkgname}_${version}.orig.tar.gz"
+=======
+distfiles="http://www.latencytop.org/download/$pkgname-$version.tar.gz"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 checksum=9e7f72fbea7bd918e71212a1eabaad8488d2c602205d2e3c95d62cd57e9203ef
 
 <<<<<<< HEAD
@@ -30,8 +41,13 @@ do_install() {
  operation/action is causing the latency to happen so that the code can be changed
  to avoid the worst latency hiccups."
 
-
 pre_install() {
 	vmkdir usr/sbin
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+}
+
+latencytop_package() {
+	pkg_install() {
+		vmove usr
+	}
 }

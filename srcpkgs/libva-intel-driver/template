@@ -15,8 +15,13 @@ version=1.0.17
 wrksrc=${_distname}-${version}
 distfiles="http://cgit.freedesktop.org/vaapi/${_distname}/snapshot/${_distname}-$version.tar.bz2"
 build_style=gnu-configure
+<<<<<<< HEAD
 makedepends="automake pkg-config libva-devel libdrm-devel libX11-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="libtool automake pkg-config"
+makedepends="libX11-devel libva-devel>=1:1.0.16 libdrm-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Video Acceleration (VA) API - Intel Graphics backend"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
@@ -46,4 +51,11 @@ pre_configure() {
 
 post_install() {
 	vlicense COPYING
+}
+
+libva-intel-driver_package() {
+	depends="libva>=1:1.0.16"
+	pkg_install() {
+		vmove usr
+	}
 }

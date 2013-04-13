@@ -1,6 +1,7 @@
 # Template file for 'libpeas'
 pkgname=libpeas
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=1.36.0
 revision=4
 build_style=meson
@@ -18,6 +19,15 @@ configure_args="--enable-vala"
 depends="pygobject hicolor-icon-theme"
 makedepends="pkg-config intltool vala-devel libgirepository-devel gtk+3-devel python-devel pygobject-devel gjs-devel libseed-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+version=1.8.0
+revision=2
+build_style=gnu-configure
+configure_args="--without-demo --disable-demo"
+hostmakedepends="pkg-config intltool gobject-introspection"
+makedepends="vala-devel>=0.20 libgirepository-devel gjs-devel
+ gtk+3-devel>=3.8 libseed-devel python-devel pygobject-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Gobject-based plugins engine"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -45,8 +55,34 @@ libpeas-devel_package() {
  of features mirroring the desiderata of most of the applications providing an
  extension framework."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 gtk_iconcache_dirs="/usr/share/icons/hicolor"
 
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+post_install() {
+	# Remove demo.
+	rm -rf ${DESTDIR}/usr/bin ${DESTDIR}/usr/lib/peas-demo
+}
+
+libpeas-devel_package() {
+	depends="libglib-devel gtk+3-devel>=3.8 libgirepository-devel
+		${sourcepkg}-${version}_${revision}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share/gir-1.0
+		vmove usr/share/gtk-doc
+	}
+}
+
+libpeas_package() {
+	depends="pygobject hicolor-icon-theme"
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

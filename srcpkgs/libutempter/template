@@ -1,6 +1,10 @@
 # Template file for 'libutempter'
 pkgname=libutempter
+<<<<<<< HEAD
 version=1.2.1
+=======
+version=1.1.6
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 revision=2
 build_style=gnu-makefile
 short_desc="Library interface to record user sessions in utmp/wtmp files"
@@ -11,6 +15,7 @@ distfiles="http://ftp.altlinux.org/pub/people/ldv/utempter/${pkgname}-${version}
 checksum=967fef372f391de501843ad87570c6cf5dabd9651f00f1783090fbc12b2a34cb
 
 libutempter-devel_package() {
+<<<<<<< HEAD
 	depends="${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
 	pkg_install() {
@@ -19,4 +24,19 @@ libutempter-devel_package() {
 		vmove "usr/lib/*.so"
 		vmove usr/share
 	}
+=======
+	depends="${sourcepkg}>=${version}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.a"
+		vmove usr/share
+	}
+}
+
+libutempter_package() {
+	pkg_install() {
+		vmove usr
+	}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 }

@@ -12,6 +12,7 @@ license="BSD-3-Clause-Clear"
 =======
 version=1.0.0
 wrksrc="libvpx-v${version}"
+<<<<<<< HEAD
 distfiles="http://webm.googlecode.com/files/${pkgname}-v${version}.tar.bz2"
 build_style=configure
 configure_args="--enable-vp8 --enable-runtime-cpu-detect --enable-shared
@@ -19,6 +20,9 @@ configure_args="--enable-vp8 --enable-runtime-cpu-detect --enable-shared
 make_install_target="DIST_DIR=${XBPS_DESTDIR}/${pkgname}-${version}/usr install"
 revision=2
 makedepends="which perl>=0 yasm"
+=======
+hostmakedepends="which perl yasm"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="The VP8 Codec SDK"
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
@@ -78,5 +82,21 @@ libvpx-devel_package() {
 		vmove "usr/lib/*.a"
 		vmove "usr/lib/*.so"
 		vmove usr/lib/pkgconfig
+	}
+}
+
+libvpx-devel_package() {
+	depends="libvpx>=$version"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.a"
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libvpx_package() {
+	pkg_install() {
+		vmove usr
 	}
 }

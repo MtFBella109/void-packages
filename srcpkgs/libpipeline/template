@@ -1,5 +1,6 @@
 # Template file for 'libpipeline'
 pkgname=libpipeline
+<<<<<<< HEAD
 version=1.5.8
 revision=1
 build_style=gnu-configure
@@ -14,10 +15,34 @@ checksum=1b1203ca152ccd63983c3f2112f7fe6fa5afd453218ede5153d1b31e11bb8405
 libpipeline-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
+=======
+version=1.2.2
+revision=3
+build_style=gnu-configure
+short_desc="A pipeline manipulation library"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://libpipeline.nongnu.org/"
+license="GPL-2"
+distfiles="${NONGNU_SITE}/$pkgname/$pkgname-$version.tar.gz"
+checksum=6b0e6be44479051196f80baeefeefa5fbdac428a7149b3858998769f461ba198
+
+libpipeline-devel_package() {
+	depends="libpipeline>=$version"
+	short_desc="${short_desc} - development files"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	pkg_install() {
 		vmove usr/include
 		vmove usr/share
 		vmove usr/lib/pkgconfig
+<<<<<<< HEAD
 		vmove "usr/lib/*.so"
+=======
+	}
+}
+
+libpipeline_package() {
+	pkg_install() {
+		vmove usr
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }

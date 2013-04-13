@@ -1,12 +1,20 @@
 # Template file for 'libxdg-basedir'
 pkgname=libxdg-basedir
+<<<<<<< HEAD
 version=1.2.0
 revision=4
 build_style=gnu-configure
 hostmakedepends="automake libtool"
+=======
+version=1.1.1
+revision=3
+build_style=gnu-configure
+homepage="http://n.ethz.ch/student/nevillm/download/libxdg-basedir"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Implementation of the XDG Base Directory Specifications"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="https://github.com/devnev/libxdg-basedir"
 distfiles="https://github.com/devnev/libxdg-basedir/archive/libxdg-basedir-${version}.tar.gz"
 checksum=1c2b0032a539033313b5be2e48ddd0ae94c84faf21d93956d53562eef4614868
@@ -27,5 +35,23 @@ libxdg-basedir-devel_package() {
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.a"
 		vmove "usr/lib/*.so"
+=======
+distfiles="${homepage}/${pkgname}-${version}.tar.gz"
+checksum=2855b44619dc8d43ba7df995e538bf383f53b4276a26c7c26b7ec03c7b9be0ac
+
+libxdg-basedir-devel_package() {
+	depends="libxdg-basedir>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+        	vmove usr/include
+        	vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+	}
+}
+
+libxdg-basedir_package() {
+	pkg_install() {
+		vmove usr
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }

@@ -8,14 +8,21 @@ hostmakedepends="pkg-config"
 makedepends="libglib-devel"
 =======
 version=0.6
+<<<<<<< HEAD
 revision=4
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
 makedepends="pkg-config glib-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+revision=6
+hostmakedepends="pkg-config"
+makedepends="libglib-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="MMS stream protocol library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.0-or-later"
 homepage="http://sourceforge.net/projects/libmms/"
+<<<<<<< HEAD
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
 checksum=3c05e05aebcbfcc044d9e8c2d4646cd8359be39a3f0ba8ce4e72a9094bee704f
 
@@ -35,10 +42,41 @@ subpackages="$pkgname-devel"
 do_build()
 {
 	./configure --prefix=/usr CFLAGS="-fPIC -DPIC" && make ${makejobs}
+=======
+license="LGPL-2.1"
+maintainer="Juan RP <xtraeme@gmail.com>"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
+checksum=1f894f33b5e0334bd7c75343480bdf3a9cf79232aa92085c03f1a67e7d4ceb9d
+long_desc="
+ libmms is a library for downloading (streaming) media files using the mmst
+ and mmsh protocols."
+
+do_configure() {
+	./configure ${CONFIGURE_SHARED_ARGS} CFLAGS="-fPIC -DPIC"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 }
 
-do_install()
-{
+do_build() {
+	make ${makejobs}
+}
+
+do_install() {
 	make DESTDIR=${DESTDIR} install
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+}
+
+libmms-devel_package() {
+	depends="libglib-devel libmms>=${version}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+	}
+}
+
+libmms_package() {
+	pkg_install() {
+		vmove usr
+	}
 }

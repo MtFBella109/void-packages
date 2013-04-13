@@ -3,6 +3,7 @@ pkgname=libconfig
 version=1.8.1
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="automake byacc flex libtool texinfo"
 short_desc="C Configuration File Library"
 maintainer="skmpz <dem.procopiou@gmail.com>"
@@ -14,15 +15,28 @@ checksum=e95798d2992a66ecd547ce3651d7e10642ff2211427c43a7238186ff4c372627
 pre_configure() {
 	autoreconf -vi
 }
+=======
+short_desc="C Configuration File Library"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://hyperrealm.com/libconfig/libconfig.html"
+license="LGPL-2.1"
+distfiles="http://www.hyperrealm.com/libconfig/${pkgname}-${version}.tar.gz"
+checksum=18b1509fbf438a8c7f9b0af32284e458189b5f6dfd044f898926109f3c3c01ed
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 
 libconfig++_package() {
 	short_desc="C++ Configuration File Library"
 	pkg_install() {
+<<<<<<< HEAD
 		vmove usr/lib/libconfig++.so.*
+=======
+		vmove "usr/lib/libconfig++.so*"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }
 
 libconfig++-devel_package() {
+<<<<<<< HEAD
 	depends="libconfig++>=${version}_${revision}"
 	short_desc="C++ Configuration File Library - development files"
 	pkg_install() {
@@ -30,10 +44,19 @@ libconfig++-devel_package() {
 		vmove usr/lib/pkgconfig/libconfig++.pc
 		vmove usr/lib/libconfig++.a
 		vmove usr/lib/libconfig++.so
+=======
+	depends="libconfig++>=${version}"
+	short_desc="C++ Configuration File Library -- development files"
+	pkg_install() {
+		vmove usr/include/libconfig.h++
+		vmove usr/lib/pkgconfig/libconfig++.pc
+		vmove "usr/lib/libconfig++.a"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }
 
 libconfig-devel_package() {
+<<<<<<< HEAD
 	depends="libconfig>=${version}_${revision}"
 	short_desc+=" - development files"
 	pkg_install() {
@@ -44,3 +67,20 @@ libconfig-devel_package() {
 		vmove usr/share
 	}
 }
+=======
+	depends="libconfig>=${version}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/libconfig.a"
+		vmove usr/share
+	}
+}
+
+libconfig_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

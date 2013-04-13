@@ -47,6 +47,7 @@ long_desc="
  so that it may be layered on top of any proprietary implementation of
  Xlib or Xt.
 
+<<<<<<< HEAD
  This also includes the Mini Xmu library that does not use Xt and Xaw.
 
  This is from the modular X.org project."
@@ -67,3 +68,22 @@ Add_dependency full libuuid
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+ This also includes the Mini Xmu library that does not use Xt and Xaw."
+
+libXmu-devel_package() {
+	depends="xproto libXext-devel libXt-devel libXmu>=${version}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.a"
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libXmu_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

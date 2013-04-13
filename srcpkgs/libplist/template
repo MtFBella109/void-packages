@@ -1,6 +1,7 @@
 # Template file for 'libplist'
 pkgname=libplist
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=2.2.0
 revision=6
 build_style=gnu-configure
@@ -15,6 +16,14 @@ build_style=cmake
 configure_args="-DCMAKE_SKIP_RPATH=ON"
 makedepends="cmake swig python-devel glib-devel libxml2-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+version=1.8
+revision=3
+build_style=cmake
+configure_args="-DCMAKE_SKIP_RPATH=ON"
+hostmakedepends="cmake swig python-devel Cython"
+makedepends="libglib-devel libxml2-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Apple Property List library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-only"
@@ -23,6 +32,7 @@ changelog="https://raw.githubusercontent.com/libimobiledevice/libplist/master/NE
 distfiles="https://github.com/libimobiledevice/libplist/archive/${version}.tar.gz"
 checksum=7e654bdd5d8b96f03240227ed09057377f06ebad08e1c37d0cfa2abe6ba0cee2
 
+<<<<<<< HEAD
 pre_configure() {
 	sed -i 's,-L$(libdir),,g' cython/Makefile.am
 	export PYTHON_CPPFLAGS=" -I${XBPS_CROSS_BASE}/${py3_inc}"
@@ -44,10 +54,26 @@ libplist-python3_package() {
 	short_desc+=" - Python3 bindings"
 	pkg_install() {
 		vmove "${py3_lib}"
+=======
+disable_parallel_build=yes
+
+libplist++_package() {
+	short_desc+=" -- C++ runtime library"
+	pkg_install() {
+		vmove "usr/lib/libplist++.*"
+	}
+}
+
+libplist-python_package() {
+	short_desc+=" -- Python bindings"
+	pkg_install() {
+		vmove usr/lib/python2.7
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }
 
 libplist-devel_package() {
+<<<<<<< HEAD
 	depends="libxml2-devel libplist++>=${version}_${revision} libplist>=${version}_${revision}"
 	short_desc+=" - development files"
 	pkg_install() {
@@ -58,3 +84,18 @@ libplist-devel_package() {
 }
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+	depends="libplist++>=${version} libplist>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libplist_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

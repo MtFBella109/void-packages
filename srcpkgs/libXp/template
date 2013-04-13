@@ -1,6 +1,7 @@
 # Template build file for 'libXp'.
 pkgname=libXp
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=1.0.4
 revision=1
 build_style=gnu-configure
@@ -37,15 +38,36 @@ build_style=gnu_configure
 makedepends="pkg-config xproto xextproto printproto libX11-devel libXext-devel libXau-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X Print Service Extension Library"
+=======
+version=1.0.0
+revision=5
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="xproto xextproto printproto libX11-devel libXext-devel"
+short_desc="X Print Service Extension Library"
+homepage="http://xorg.freedesktop.org"
+license="MIT"
+distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=7e64b1550ce85b05762e960459ac676a0406c786756b200ff29c57f84bce9cae
 long_desc="
  The X Print Service Extension Library (libXp) provides public APIs
  to allow client applications to render to non-display devices.
- It can query about printers, send jobs, and more.
+ It can query about printers, send jobs, and more."
 
- This is from the modular X.org."
+libXp-devel_package() {
+	depends="libXp>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+		vmove usr/share
+	}
+}
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 <<<<<<< HEAD
 Add_dependency build pkg-config
@@ -59,3 +81,10 @@ Add_dependency full libXau
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+libXp_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

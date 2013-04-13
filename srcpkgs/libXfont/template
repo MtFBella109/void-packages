@@ -16,6 +16,7 @@ long_desc="
  This package provides the X font Library from the modular
  X.org X11 project."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 <<<<<<< HEAD
 Add_dependency build pkg-config
@@ -29,8 +30,32 @@ Add_dependency full freetype
 Add_dependency full libfontenc
 =======
 
+=======
+hostmakedepends="pkg-config xtrans"
+makedepends="xproto xtrans fontcacheproto fontsproto freetype-devel libfontenc-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 
 post_install() {
 	vinstall COPYING 644 usr/share/licenses/${pkgname}
 }
+<<<<<<< HEAD
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+
+libXfont-devel_package() {
+	depends="xproto fontsproto zlib-devel libfontenc-devel freetype-devel
+		libXfont-${version}_${revision}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+	}
+}
+
+libXfont_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

@@ -1,7 +1,11 @@
 # Template file for 'librlog'
 pkgname=librlog
 version=1.4
+<<<<<<< HEAD
 revision=5
+=======
+revision=3
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 short_desc="Flexible message logging facility for C++ programs and libraries"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -15,11 +19,25 @@ post_install() {
 }
 
 librlog-devel_package() {
+<<<<<<< HEAD
 	depends="${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
 	pkg_install() {
 		vmove usr/include
 		vmove usr/lib/pkgconfig
 		vmove usr/lib/*.so
+=======
+	depends="${sourcepkg}>=${version}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+librlog_package() {
+	pkg_install() {
+		vmove usr
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }

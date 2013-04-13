@@ -1,5 +1,6 @@
 # Template file for 'lxc'
 pkgname=lxc
+<<<<<<< HEAD
 version=6.0.3
 revision=3
 <<<<<<< HEAD
@@ -21,6 +22,12 @@ checksum=adac0837d2abfd2903916eaf56f60756f131327311f4f25ad917f6a71f73f98c
 =======
 distfiles="http://lxc.sourceforge.net/download/lxc/lxc-$version.tar.gz"
 build_style=gnu-configure
+=======
+version=0.8.0
+revision=2
+build_style=gnu-configure
+configure_args="--disable-apparmor"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 makedepends="libcap-devel"
 short_desc="LinuX Containers"
 maintainer="Juan RP <xtraeme@gmail.com>"
@@ -31,6 +38,7 @@ long_desc="
  process containers and resource isolation through the namespaces.
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
+<<<<<<< HEAD
 conf_files="/etc/lxc/default.conf"
 make_dirs="
 	/var/lib/lxc 0755 root root
@@ -49,10 +57,21 @@ liblxc_package() {
 	short_desc="${_desc} - shared library"
 	pkg_install() {
 		vmove "usr/lib/*.so.*"
+=======
+ The linux containers, lxc, aims to use these new functionalities to provide
+ an userspace container object which provides full resource isolation and
+ resource control for an application or a system."
+
+liblxc_package() {
+	short_desc="${short_desc} - shared library"
+	pkg_install() {
+		vmove "usr/lib/*.so*"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }
 
 lxc-devel_package() {
+<<<<<<< HEAD
 	depends="${makedepends} liblxc>=${version}_${revision}"
 	short_desc="${_desc} - development files"
 	pkg_install() {
@@ -64,3 +83,18 @@ lxc-devel_package() {
 }
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+	depends="libcap-devel liblxc-${version}_${revision}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+lxc_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

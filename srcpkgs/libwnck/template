@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 # Template file for 'libwnck'
 pkgname=libwnck
+<<<<<<< HEAD
 version=43.2
 revision=1
 build_style=meson
@@ -8,6 +9,12 @@ build_helper="gir"
 configure_args="$(vopt_feature gir introspection)"
 hostmakedepends="gdk-pixbuf-devel pkg-config gettext glib-devel
  $(vopt_if gir gobject-introspection)"
+=======
+version=3.4.5
+revision=2
+build_style=gnu-configure
+hostmakedepends="pkg-config intltool gobject-introspection"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 makedepends="startup-notification-devel gtk+3-devel libXres-devel"
 short_desc="Library for layout and rendering of text"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -43,6 +50,7 @@ configure_args="--localstatedir=/var"
 =======
 version=3.4.2
 distfiles="${GNOME_SITE}/libwnck/3.4/$pkgname-$version.tar.xz"
+<<<<<<< HEAD
 build_style=gnu-configure
 makedepends="pkg-config intltool gobject-introspection startup-notification-devel gtk+3-devel libXres-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
@@ -69,3 +77,23 @@ Add_dependency full libX11
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+checksum=560f9709405fb33500c2f79efabdb1c4056866dec281f354ad3da97181fbf381
+
+libwnck-devel_package() {
+	depends="gtk+3-devel startup-notification-devel libXres-devel libwnck>=${version}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share/gir-1.0
+		vmove usr/share/gtk-doc
+	}
+}
+
+libwnck_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

@@ -38,14 +38,20 @@ distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 =======
 build_style=gnu-configure
+<<<<<<< HEAD
 makedepends="pkg-config xproto xextproto xf86dgaproto libX11-devel libXext-devel glibc-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="pkg-config"
+makedepends="xf86dgaproto libXext-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Library for the XFree86-DGA X extension"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=8d37f8895ecff15cb821a3e77bd505598983a5c6eae546e77e2d3070a8de5616
 long_desc="
  These functions provide an interface to the server extension
  XFree86-DGA Extension which allows local programs direct access
+<<<<<<< HEAD
  to the video frame buffer.
 
  This library is from the modular X.org project."
@@ -62,3 +68,23 @@ Add_dependency full libXext
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+ to the video frame buffer."
+
+libXxf86dga-devel_package() {
+	depends="xf86dgaproto libXext-devel libXxf86dga>=$version"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.a"
+		vmove usr/lib/pkgconfig
+		vmove usr/share
+	}
+}
+
+libXxf86dga_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

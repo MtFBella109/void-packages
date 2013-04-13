@@ -1,5 +1,6 @@
 # Template file for 'libdiscid'
 pkgname=libdiscid
+<<<<<<< HEAD
 version=0.6.4
 revision=1
 build_style=gnu-configure
@@ -18,5 +19,35 @@ libdiscid-devel_package() {
 		vmove usr/include
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.so"
+=======
+version=0.2.2
+revision=3
+build_style=gnu-configure
+configure_args="--disable-static"
+short_desc="A Library for creating MusicBrainz DiscIDs"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+homepage="http://musicbrainz.org/doc/libdiscid"
+distfiles="http://users.musicbrainz.org/~matt/$pkgname-$version.tar.gz"
+checksum=974b5d5ab23fb45910a4fe171045a22a749cd8cb9833168f7178839993a58402
+long_desc="
+ libdiscid is a C library for creating MusicBrainz DiscIDs from audio CDs.
+ It reads a CD's table of contents (TOC) and generates an identifier which
+ can be used to lookup the CD at MusicBrainz. Additionally, it provides a
+ submission URL for adding the DiscID to the database."
+
+libdiscid-devel_package() {
+	depends="libdiscid>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libdiscid_package() {
+	pkg_install() {
+		vmove usr
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }

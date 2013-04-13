@@ -3,7 +3,11 @@
 # THIS PKG MUST BE SYNCHRONIZED WITH "srcpkgs/libfm-extra"
 #
 pkgname=libfm
+<<<<<<< HEAD
 version=1.4.0
+=======
+version=1.1.0
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 revision=2
 build_style=gnu-configure
 <<<<<<< HEAD
@@ -25,6 +29,7 @@ makedepends="pkg-config intltool dbus-glib-devel gtk+-devel menu-cache-devel"
 fulldepends="desktop-file-utils udisks"
 short_desc="LXDE GLib/GIO based library"
 maintainer="Juan RP <xtraeme@gmail.com>"
+<<<<<<< HEAD
 checksum=1740681cff4cd4c5a2eaa9805d8898269cfb6a49a0bda0acb242def15bc7131b
 long_desc="
  libfm is a glib/gio-based lib used to develop file managers providing some
@@ -86,3 +91,32 @@ libfm-gtk+3-devel_package() {
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+homepage="http://pcmanfm.sourceforge.net/"
+license="GPL-2"
+distfiles="${SOURCEFORGE_SITE}/pcmanfm/$pkgname-$version.tar.gz"
+checksum=b9426e588670b53570b808c49abd1d103863614dd3622559b8c3ef1392fe0b3d
+
+hostmakedepends="pkg-config intltool"
+makedepends="libexif-devel dbus-glib-devel gtk+-devel
+ menu-cache-devel vala-devel"
+
+libfm-devel_package() {
+	depends="gtk+-devel menu-cache-devel libfm-${version}_${revision}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libfm_package() {
+	conf_files="
+		/etc/xdg/libfm/libfm.conf
+		/etc/xdg/libfm/pref-apps.conf"
+	depends="desktop-file-utils udisks"
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

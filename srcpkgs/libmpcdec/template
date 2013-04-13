@@ -10,6 +10,7 @@ homepage="http://musepack.net/"
 distfiles="http://files.musepack.net/source/$pkgname-$version.tar.bz2"
 checksum=4bd54929a80850754f27b568d7891e1e3e1b8d2f208d371f27d1fda09e6f12a8
 
+<<<<<<< HEAD
 post_install() {
 	vlicense COPYING
 }
@@ -21,5 +22,23 @@ libmpcdec-devel_package() {
 		vmove usr/include
 		vmove "usr/lib/*.a"
 		vmove "usr/lib/*.so"
+=======
+ It is based on the MPEG-1 Layer-2 / MP2 algorithms, but since 1997 it has
+ rapidly developed and vastly improved and is now at an advanced stage in
+ which it contains heavily optimized and patentless code."
+
+libmpcdec-devel_package() {
+	depends="libmpcdec>=${version}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.a"
+	}
+}
+
+libmpcdec_package() {
+	pkg_install() {
+		vmove usr
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }

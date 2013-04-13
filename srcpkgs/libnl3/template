@@ -1,5 +1,6 @@
 # Template file for 'libnl3'
 pkgname=libnl3
+<<<<<<< HEAD
 version=3.11.0
 revision=1
 build_style=gnu-configure
@@ -8,6 +9,14 @@ configure_args="--disable-static"
 hostmakedepends="flex pkg-config"
 =======
 makedepends="flex"
+=======
+version=3.2.11
+revision=3
+wrksrc=libnl-${version}
+build_style=gnu-configure
+configure_args="--disable-static"
+hostmakedepends="flex"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Netlink Protocol Library Suite"
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="LGPL-2.1"
@@ -16,6 +25,7 @@ long_desc="
  The libnl suite is a collection of libraries providing APIs to netlink
  protocol based Linux kernel interfaces.
 
+<<<<<<< HEAD
  Netlink is a IPC mechanism primarly between the kernel and user space
  processes. It was designed to be a more flexible successor to ioctl to
  provide mainly networking related kernel configuration and monitoring
@@ -50,9 +60,43 @@ libnl3-progs_package() {
 	short_desc+=" - CLI utilities"
 	pkg_install() {
 		vmove usr/bin
+=======
+if [ "$CROSS_BUILD" ]; then
+	hostmakedepends+=" automake libtool"
+	makedepends="libfl-devel"
+	pre_configure() {
+		autoreconf -fi
+	}
+fi
+
+libnl3-devel_package() {
+	depends="libnl3>=${version}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libnl3-progs_package() {
+	short_desc="${short_desc} - cli utilities"
+	pkg_install() {
+		vmove usr/sbin
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 		vmove usr/share/man/man8
 		vmove usr/lib/libnl
 	}
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+
+libnl3_package() {
+	conf_files="/etc/libnl/pktloc /etc/libnl/classid"
+	pkg_install() {
+		vmove etc
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

@@ -38,6 +38,7 @@ libxklavier-devel_package() {
 # Template build file for 'libxklavier'.
 pkgname=libxklavier
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=3.9
 distfiles="${GNOME_SITE}/$pkgname/$version/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
@@ -50,6 +51,14 @@ build_style=gnu-configure
 makedepends="pkg-config glib-devel libxkbfile-devel libxml2-devel>=2.7.8 libXi-devel gobject-introspection"
 fulldepends="xkeyboard-config iso-codes"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+version=5.3
+revision=3
+build_style=gnu-configure
+configure_args="--disable-static"
+hostmakedepends="pkg-config gobject-introspection"
+makedepends="libglib-devel libxkbfile-devel libxml2-devel>=2.7.8 libXi-devel xkeyboard-config iso-codes"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Library providing high-level API for X Keyboard Extension"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=462a4e427f201a23de194f824dce70c84867464956f2f6c8dd4a5e07f1f4a554
@@ -59,6 +68,7 @@ long_desc="
  commercial X servers. It is useful for creating XKB-related software
  (layout indicators etc)."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 <<<<<<< HEAD
 Add_dependency build pkg-config
@@ -73,3 +83,21 @@ Add_dependency full iso-codes
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+libxklavier-devel_package() {
+	depends="libglib-devel libxml2-devel>=2.7.8 libxklavier>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/share
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libxklavier_package() {
+	depends="xkeyboard-config iso-codes"
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

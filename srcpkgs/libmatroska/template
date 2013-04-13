@@ -7,9 +7,10 @@ build_style=cmake
 configure_args="-DBUILD_SHARED_LIBS=ON"
 =======
 version=1.3.0
-distfiles="http://www.bunkus.org/videotools/mkvtoolnix/sources/$pkgname-$version.tar.bz2"
+revision=3
 build_style=gnu-makefile
 build_wrksrc="make/linux"
+<<<<<<< HEAD
 make_install_target="prefix=$XBPS_DESTDIR/$pkgname-$version/usr install"
 revision=2
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
@@ -21,6 +22,20 @@ homepage="https://www.matroska.org/downloads/libraries.html"
 changelog="https://raw.githubusercontent.com/Matroska-Org/libmatroska/master/NEWS.md"
 distfiles="https://github.com/Matroska-Org/libmatroska/archive/refs/tags/release-${version}.tar.gz"
 checksum=64763443947833e6c17f1f555f4bb0df6c9f91881810d9d5e0f0bad3622d308b
+=======
+makedepends="libebml-devel"
+short_desc="Extensible open standard Audio/Video container format"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://dl.matroska.org/downloads/libmatroska/"
+license="LGPL-2.1"
+distfiles="http://www.bunkus.org/videotools/mkvtoolnix/sources/$pkgname-$version.tar.bz2"
+checksum=5231ec958571365e719a6fd3c220227af6cf0f14e0bd1bcf766ddbc068d18e69
+long_desc="
+ Matroska aims to become THE Standard of Multimedia Container Formats.
+ It was derived from a project called MCF, but differentiates from it
+ significantly. It is based on EBML (Extensible Binary Meta Language),
+ a binary derivative of XML.
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 
 <<<<<<< HEAD
 libmatroska-devel_package() {
@@ -46,5 +61,26 @@ libmatroska-devel_package() {
   - Selectable audio streams
   - Modularly extendable"
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+do_install() {
+	make prefix=${DESTDIR}/usr install
+}
+
+libmatroska-devel_package() {
+	depends="libebml-devel libmatroska>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.a"
+	}
+}
+
+libmatroska_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

@@ -50,3 +50,11 @@ post_install() {
 		ln -sf ${pkgname}.desktop default.desktop
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }
+
+lightdm-gtk-greeter_package() {
+	conf_files="/etc/lightdm/lightdm-gtk-greeter.conf"
+	depends="lightdm"
+	pkg_install() {
+		vmove usr
+	}
+}

@@ -3,9 +3,12 @@ pkgname=libcaca
 version=0.99.beta20
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="$(vopt_enable x11)"
 hostmakedepends="libtool automake pkg-config"
 makedepends="ncurses-devel imlib2-devel $(vopt_if opengl 'libfreeglut-devel')"
+=======
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Graphics library that outputs text instead of pixels"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="WTFPL"
@@ -34,4 +37,25 @@ libcaca-devel_package() {
 		vmove usr/lib/pkgconfig
 		vmove usr/share/man/man1/caca-config.1
 	}
+<<<<<<< HEAD
+=======
+fi
+
+libcaca-devel_package() {
+	depends="libcaca>=${version}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/bin/caca-config
+		vmove usr/include
+		vmove "usr/lib/*.a"
+		vmove usr/lib/pkgconfig
+		vmove usr/share/man/man1/caca-config.1
+	}
+}
+
+libcaca_package() {
+	pkg_install() {
+		vmove usr
+	}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 }

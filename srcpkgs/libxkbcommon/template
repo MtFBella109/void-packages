@@ -1,60 +1,37 @@
 # Template file for 'libxkbcommon'
 pkgname=libxkbcommon
-version=1.13.0
-revision=1
-build_style=meson
-# b_ndebug=false is needed to pass the test suite, as it relies on side effects
-# in the arguments of assert calls.
-configure_args="-Denable-x11=true -Denable-docs=false
- -Denable-wayland=true -Denable-xkbregistry=true -Db_ndebug=false"
-hostmakedepends="pkg-config bison wayland-protocols wayland-devel"
-makedepends="xkeyboard-config libxcb-devel wayland-devel wayland-protocols
- xorgproto libxml2-devel"
-depends="xkeyboard-config"
-checkdepends="${depends} xvfb-run setxkbmap"
+version=0.2.0
+revision=3
+build_style=gnu-configure
+configure_args="--disable-static"
+hostmakedepends="pkg-config flex"
 short_desc="Library to handle keyboard descriptions"
-maintainer="Andrew J. Hesford <ajh@sideband.org>"
-license="MIT"
-homepage="https://xkbcommon.org/"
-changelog="https://github.com/xkbcommon/libxkbcommon/blob/master/NEWS.md"
-distfiles="https://github.com/xkbcommon/libxkbcommon/archive/xkbcommon-${version}.tar.gz"
-checksum=cd9367eec501867dfe7ddc3f6b18a026f2a2844a89d19108448d376cb849c9ed
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://xkbcommon.org/"
+license="MIT/X11"
+distfiles="http://xkbcommon.org/download/${pkgname}-${version}.tar.bz2"
+checksum=74eb0a121ca3998015fd687591426bb15c524645a72cf602831b2e729172fb42
+long_desc="
+ xkbcommon is a library to handle keyboard descriptions, including loading
+ them from disk, parsing them and handling their state. It's mainly meant
+ for client toolkits, window systems, and other system applications;
+ currently that includes Wayland, kmscon, GTK+, Clutter, and more."
 
-post_install() {
-	vlicense LICENSE
-}
-
-libxkbcommon-x11_package() {
-	short_desc+=" - X11 support"
-	pkg_install() {
-		vmove "usr/lib/*x11*.so.*"
-	}
-}
-
-libxkbregistry_package() {
-	short_desc="XKB API to query available rules, models, layouts, variants and options"
-	pkg_install() {
-		vmove "usr/lib/libxkbregistry.so.*"
-	}
-}
+if [ "$CROSS_BUILD" ]; then
+	makedepends+=" libfl-devel"
+fi
 
 libxkbcommon-devel_package() {
-	depends="${sourcepkg}-x11>=${version}_${revision}
-	 libxkbregistry>=${version}_${revision}
-	 ${sourcepkg}>=${version}_${revision} libxcb-devel"
-	short_desc+=" - development files"
+	depends="${sourcepkg}-${version}_${revision}"
+	short_desc="${short_desc} -- development files"
 	pkg_install() {
 		vmove usr/include
 		vmove usr/lib/pkgconfig
-		vmove "usr/lib/*.so"
 	}
 }
 
-libxkbcommon-tools_package() {
-	short_desc+=" - utilities"
+libxkbcommon_package() {
 	pkg_install() {
-		vmove usr/bin
-		vmove usr/libexec
-		vmove usr/share/man
+		vmove usr
 	}
 }

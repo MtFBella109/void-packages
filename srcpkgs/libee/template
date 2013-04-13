@@ -1,11 +1,17 @@
 # Template file for 'libee'
 pkgname=libee
+<<<<<<< HEAD
 version=0.4.1
 revision=4
+=======
+version=0.4.0
+revision=2
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 configure_args="--disable-static"
 hostmakedepends="pkg-config"
 makedepends="libestr-devel"
+<<<<<<< HEAD
 short_desc="Event expression library inspired by CEE"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -16,6 +22,8 @@ checksum=c0dac01938593deee06c3d161e4eda4ecc0fd7317e1321bd96e301aceb7fb027
 =======
 build_style=gnu-configure
 makedepends="pkg-config libestr-devel"
+=======
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Event expression library inspired by CEE"
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="LGPL-2.1"
@@ -28,6 +36,7 @@ long_desc="
 disable_parallel_build=yes
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 libee-devel_package() {
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
@@ -39,3 +48,19 @@ libee-devel_package() {
 }
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+libee-devel_package() {
+	depends="libestr-devel libee>=${version}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libee_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

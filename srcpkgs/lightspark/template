@@ -4,6 +4,7 @@ version=0.4.5
 revision=2
 build_style=cmake
 configure_args="-DAUDIO_BACKEND=pulse -DENABLE_CURL=1 -DCOMPILE_PLUGIN=1"
+<<<<<<< HEAD
 distfiles="http://launchpad.net/lightspark/trunk/$pkgname-$version/+download/$pkgname-$version.tar.gz"
 depends="libgcc glibc zlib libffi libpcre glib glibmm libcurl boost fontconfig libX11 libGL SDL ftgl glew ffmpeg cairo libpulseaudio"
 makedepends="pkg-config cmake nasm libffi-devel libX11-devel fontconfig-devel zlib-devel boost-devel SDL-devel ffmpeg-devel libcurl-devel gtk+-devel glib-devel MesaLib-devel ftgl-devel glew-devel pcre-devel libxml++-devel glibmm-devel libstdc++-devel cairo-devel pulseaudio-devel llvm-devel"
@@ -25,3 +26,24 @@ gtk_iconcache_dirs="/usr/share/icons/hicolor"
 
 
 
+=======
+makedepends="pkg-config cmake nasm pcre-devel>=8.30 libffi-devel libX11-devel
+ fontconfig-devel boost-devel SDL-devel ffmpeg-devel>=1.0.1 libcurl-devel
+ MesaLib-devel ftgl-devel glew-devel>=1.9.0 libxml2-devel libxml++-devel
+ glibmm-devel gtk+-devel libjpeg-turbo-devel pulseaudio-devel llvm>=3.2
+ librtmp-devel liblzma-devel"
+short_desc="Modern, free, open-source flash player implementation"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://lightspark.github.com/"
+license="LGPL-3"
+distfiles="http://launchpad.net/lightspark/trunk/$pkgname-$version/+download/$pkgname-$version.tar.gz"
+checksum=f3df63692ad8409888336a58f4db96b3344737d492df3a3f06c7359fdf26c85b
+
+lightspark_package() {
+	conf_files="/etc/xdg/lightspark.conf"
+	depends="hicolor-icon-theme desktop-file-utils"
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

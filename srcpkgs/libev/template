@@ -1,18 +1,33 @@
 # Template file for 'libev'
 pkgname=libev
+<<<<<<< HEAD
 version=4.33
 revision=1
+=======
+version=4.15
+revision=3
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 short_desc="High-performance event loop loosely modelled after libevent"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, BSD-2-Clause"
 homepage="http://software.schmorp.de/pkg/libev.html"
 distfiles="http://dist.schmorp.de/${pkgname}/${pkgname}-${version}.tar.gz"
+<<<<<<< HEAD
 checksum=507eb7b8d1015fbec5b935f34ebed15bf346bed04a11ab82b8eee848c4205aea
+=======
+checksum=b2dd43a073556f5350cbed05b6ef444dcc4b563f4e0b1009d7bf448261606feb
+long_desc="
+ A full-featured and high-performance (see benchmark) event loop that is
+ loosely modelled after libevent, but without its limitations and bugs. It is
+ used, among others, in the GNU Virtual Private Ethernet and rxvt-unicode
+ packages, and in the Deliantra MORPG Server and Client."
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 
 post_install() {
 	# Conflicts with libevent, not necessary.
 	rm -f ${DESTDIR}/usr/include/event.h
+<<<<<<< HEAD
 	vlicense LICENSE
 }
 
@@ -24,5 +39,21 @@ libev-devel_package() {
 		vmove usr/lib/*.a
 		vmove usr/lib/*.so
 		vmove usr/share/man
+=======
+}
+
+libev-devel_package() {
+	depends="libev>=${version}"
+	short_desc="${short_desc} -- Development files"
+	pkg_install() {
+        	vmove usr/include
+		vmove "usr/lib/*.a"
+	}
+}
+
+libev_package() {
+	pkg_install() {
+		vmove usr
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }

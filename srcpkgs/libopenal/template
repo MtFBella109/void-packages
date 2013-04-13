@@ -1,5 +1,6 @@
 # Template file for 'libopenal'
 pkgname=libopenal
+<<<<<<< HEAD
 version=1.23.1
 revision=2
 <<<<<<< HEAD
@@ -17,6 +18,12 @@ distfiles="http://openal-soft.org/openal-releases/openal-soft-${version}.tar.bz2
 checksum=796f4b89134c4e57270b7f0d755f0fa3435b90da437b745160a49bd41c845b21
 =======
 makedepends="pkg-config cmake alsa-lib-devel pulseaudio-devel SDL-devel"
+=======
+version=1.15
+revision=2
+build_style=cmake
+wrksrc="openal-soft-${version}"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="A cross-platform 3D audio library"
 maintainer="davehome <davehome@redthumb.info.tm>"
 license="LGPL-2.1"
@@ -29,6 +36,7 @@ long_desc="
 build_options="sndio"
 build_options_default="sndio"
 
+<<<<<<< HEAD
 pre_configure() {
 	case "$XBPS_TARGET_MACHINE" in
 	arm*)	# Hack to not compile (broken) arm_neon.h inlining of indirect function calls
@@ -56,3 +64,24 @@ libopenal-devel_package() {
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="pkg-config cmake"
+makedepends="alsa-lib-devel pulseaudio-devel SDL-devel ffmpeg-devel"
+
+libopenal-devel_package() {
+	depends="${sourcepkg}>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libopenal_package() {
+	# dlopen(3)d dependencies
+	depends="alsa-lib libpulseaudio SDL"
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

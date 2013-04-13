@@ -1,7 +1,12 @@
 # Template file for 'libgtop'
 pkgname=libgtop
+<<<<<<< HEAD
 version=2.41.3
 revision=1
+=======
+version=2.28.4
+revision=3
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 <<<<<<< HEAD
 build_helper="gir"
@@ -10,6 +15,7 @@ hostmakedepends="pkg-config perl python3-distutils-extra"
 makedepends="libglib-devel libXau-devel"
 =======
 configure_args="-with-libgtop-smp"
+<<<<<<< HEAD
 revision=2
 makedepends="pkg-config intltool glib-devel libXau-devel gobject-introspection"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
@@ -43,3 +49,37 @@ libgtop-devel_package() {
 }
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="pkg-config intltool gobject-introspection"
+makedepends="libglib-devel libXau-devel"
+short_desc="Library to retrieve system information, used in GNOME"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.gnome.org/"
+license="LGPL-2.1"
+distfiles="${GNOME_SITE}/$pkgname/2.28/$pkgname-$version.tar.bz2"
+checksum=098568c08e412c0be2980a322ff3e7403a6d72192391d276a16943cbd3874182
+long_desc="
+ libgtop is a library that fetches system information about the running
+ system such as cpu and memory usage, active processes etc. It
+ provides a setgid server that fetches the information and a
+ client-side library that talks to this server."
+
+libgtop-devel_package() {
+	depends="libglib-devel libXau-devel libgtop>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+		vmove usr/share/doc
+		vmove usr/share/info
+		vmove usr/share/gir-1.0
+	}
+}
+
+libgtop_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

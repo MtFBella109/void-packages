@@ -4,6 +4,7 @@ pkgname=libgweather
 reverts="40.0_1"
 version=4.4.4
 revision=1
+<<<<<<< HEAD
 build_style=meson
 build_helper="gir"
 configure_args="$(vopt_bool gir enable_vala) $(vopt_bool gir introspection)
@@ -12,6 +13,14 @@ hostmakedepends="glib-devel gettext pkg-config python3-gobject-devel
  $(vopt_if gir vala) $(vopt_if gtk_doc gi-docgen)"
 makedepends="geocode-glib-devel libsoup3-devel json-glib-devel libxml2-devel"
 depends="tzdata"
+=======
+build_style=gnu-configure
+configure_args="--disable-schemas-compile 
+ --enable-locations-compression --with-zoneinfo-dir=/usr/share/zoneinfo"
+hostmakedepends="pkg-config intltool gobject-introspection"
+makedepends="libxml2-devel libsoup-gnome-devel gtk+3-devel>=3.8.0
+ gnome-icon-theme"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="GNOME Weather information access library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -37,6 +46,7 @@ checksum=ee9c4d09f33ae2b066dd1e696aa3e483a689cba6d63bcd388cc2ef95df9b1b60
 long_desc="
  libgweather is a library to access weather information from online
  services for numerous locations."
+<<<<<<< HEAD
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 build_options="gir gtk_doc"
@@ -72,4 +82,24 @@ post_install() {
 	gconf-merge-schema ${DESTDIR}/usr/share/gconf/schemas/${gconf_schemas} \
 		--domain ${pkgname}-3.0 ${wrksrc}/*.schemas
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+
+libgweather-devel_package() {
+	depends="gdk-pixbuf-devel gtk+3-devel libxml2-devel
+		libsoup-devel ${sourcepkg}-${version}_${revision}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share/gir-1.0
+		vmove usr/share/gtk-doc
+	}
+}
+
+libgweather_package() {
+	depends="gnome-icon-theme"
+	pkg_install() {
+		vmove usr
+	}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 }

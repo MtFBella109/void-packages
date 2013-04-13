@@ -32,6 +32,7 @@ libXScrnSaver-devel_package() {
 =======
 # Template build file for 'libXScrnSaver'.
 pkgname=libXScrnSaver
+<<<<<<< HEAD
 version=1.2.0
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
@@ -43,10 +44,24 @@ makedepends="pkg-config xextproto scrnsaverproto libX11-devel libXext-devel"
 short_desc="X11 Screen Saver Library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=5b067bec0f2eb6405226bde5f20ca107eb0e5c11f5e5e24b455930c450487f85
+=======
+version=1.2.2
+revision=1
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="xextproto scrnsaverproto libX11-devel libXext-devel"
+short_desc="X11 Screen Saver Library"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="MIT"
+homepage="${XORG_SITE}"
+distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+checksum=8ff1efa7341c7f34bcf9b17c89648d6325ddaae22e3904e091794e0b4426ce1d
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 long_desc="
  This package contains the library for the X11 Screen Saver extension.
  This is from the modular X.org X11 project."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 <<<<<<< HEAD
 Add_dependency build pkg-config
@@ -58,3 +73,21 @@ Add_dependency full libXext
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+libXScrnSaver-devel_package() {
+	depends="scrnsaverproto libX11-devel libXext-devel libXScrnSaver>=${version}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.a"
+		vmove usr/lib/pkgconfig
+		vmove usr/share
+	}
+}
+
+libXScrnSaver_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

@@ -39,6 +39,7 @@ makedepends="pkg-config dmxproto libX11-devel libXext-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="DMX Extension for Xorg"
 maintainer="Juan RP <xtraeme@gmail.com>"
+<<<<<<< HEAD
 checksum=1904a8f848cc5d76105cb07707890aca095540a37fb0a63d359f71da51d3e2d5
 long_desc="
  This packages provides the DMX extension for the Xorg server.
@@ -56,3 +57,26 @@ Add_dependency full libXext
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+license="MIT"
+homepage="${XORG_SITE}"
+distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+checksum=a7870b648a8768d65432af76dd11581ff69f3955118540d5967eb1eef43838ba
+
+libdmx-devel_package() {
+	depends="dmxproto libXext-devel libdmx>=${version}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.a"
+		vmove usr/lib/pkgconfig
+		vmove usr/share
+	}
+}
+
+libdmx_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

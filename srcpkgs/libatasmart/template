@@ -1,5 +1,6 @@
 # Template file for 'libatasmart'
 pkgname=libatasmart
+<<<<<<< HEAD
 version=0.19
 revision=5
 build_style=gnu-configure
@@ -7,6 +8,14 @@ build_style=gnu-configure
 configure_args="--sbindir=/usr/bin --disable-static"
 hostmakedepends="automake libtool pkg-config"
 makedepends="eudev-libudev-devel"
+=======
+version=0.17
+revision=8
+build_style=gnu-configure
+configure_args="--disable-static"
+hostmakedepends="pkg-config"
+makedepends="libudev-devel>=183"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="ATA S.M.A.R.T. Reading and Parsing Library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -33,8 +42,27 @@ makedepends="pkg-config libudev-devel"
 short_desc="ATA S.M.A.R.T. Reading and Parsing Library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=2d62a11274f32cde2f074adef9ceb662bf205618dfc8f8e74b9be6a8b1ed5ffd
+<<<<<<< HEAD
 long_desc="
  ${short_desc}"
  
 subpackages="$pkgname-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+
+libatasmart-devel_package() {
+	depends="libudev-devel libatasmart-${version}_${revision}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share
+	}
+}
+
+libatasmart_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

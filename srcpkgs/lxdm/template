@@ -1,7 +1,12 @@
 # Template file for 'lxdm'
 pkgname=lxdm
+<<<<<<< HEAD
 version=0.5.3
 revision=5
+=======
+version=0.4.1
+revision=6
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 <<<<<<< HEAD
 configure_args="--disable-consolekit --with-pam --enable-gtk3"
@@ -26,8 +31,13 @@ checksum=4891efee81c72a400cc6703e40aa76f3f3853833d048b72ec805da0f93567f2f
 system_groups="lxdm"
 =======
 configure_args="-with-xconn=xcb"
+<<<<<<< HEAD
 makedepends="pkg-config intltool gtk+-devel ConsoleKit-devel"
 fulldepends="iso-codes"
+=======
+hostmakedepends="pkg-config intltool"
+makedepends="gtk+-devel iso-codes"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="GUI login manager for LXDE"
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="GPL-3"
@@ -35,6 +45,7 @@ checksum=9e0d0a5672fcf31a18de8178ce73eab1723d6ae7097dfe41e9fe2c46e180cf08
 long_desc="
  A lightweight dropped-in replacement for GDM or KDM."
 
+<<<<<<< HEAD
 provides="display-manager-0"
 replaces="display-manager>=0"
 
@@ -61,6 +72,8 @@ pre_configure() {
 pre_build() {
 	sed -i 's,@DATADIRNAME@,share,g' -i po/Makefile
 }
+=======
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 post_install() {
 	vsv lxdm
 	# Use our own pam file.
@@ -71,4 +84,24 @@ post_install() {
 	sed -i 's,/usr/sbin,/usr/bin,g' ${DESTDIR}/usr/bin/lxdm
 	vmkdir var/lib/lxdm
 	echo 'GDK_CORE_DEVICE_EVENTS=true' > ${DESTDIR}/var/lib/lxdm/.pam_environment
+}
+
+lxdm_package() {
+	depends="shadow"
+	conf_files="
+		/etc/lxdm/LoginReady
+		/etc/lxdm/PostLogin
+		/etc/lxdm/PostLogout
+		/etc/lxdm/PreLogin
+		/etc/lxdm/PreReboot
+		/etc/lxdm/PreShutdown
+		/etc/lxdm/Xsession
+		/etc/lxdm/lxdm.conf
+		/etc/pam.d/lxdm"
+	system_groups="lxdm"
+	systemd_services="lxdm.service off"
+	pkg_install() {
+		vmove etc
+		vmove usr
+	}
 }

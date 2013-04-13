@@ -1,6 +1,7 @@
 # Template file for 'libusb-compat'
 pkgname=libusb-compat
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=0.1.8
 revision=1
 build_style=gnu-configure
@@ -36,11 +37,25 @@ makedepends="pkg-config libusb-devel"
 short_desc="A libusb-0.1 compatibility library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=69ad5d62946885a60368381a3354b8fd19597bc6fc9ee25b4598977771429b8d
+=======
+version=0.1.4
+revision=2
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="libusb-devel"
+short_desc="A libusb-0.1 compatibility library"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="LGPL-2.1"
+homepage="http://libusb.sourceforge.net/"
+distfiles="${SOURCEFORGE_SITE}/libusb/$pkgname-$version.tar.bz2"
+checksum=ed5bdd160c7b01ef767fb931a81b454f46226d1e2cf58502ced758d3e5a9fdc4
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 long_desc="
  $pkgname is a replacement for libusb-0.1. However, instead of being an actual
  implementation, libusb-0.1 is more of a compatibility layer (or wrapper) which
  just converts libusb-0.1 calls into their libusb-1.0 equivalents."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 <<<<<<< HEAD
 Add_dependency full glibc
@@ -48,3 +63,21 @@ Add_dependency full libusb
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+libusb-compat-devel_package() {
+	depends="libusb-compat>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/bin
+		vmove usr/include
+		vmove "usr/lib/*.a"
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libusb-compat_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

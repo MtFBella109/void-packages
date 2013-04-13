@@ -1,5 +1,6 @@
 # Template file for 'libcgroup'
 pkgname=libcgroup
+<<<<<<< HEAD
 version=3.0.0
 revision=1
 build_style=gnu-configure
@@ -50,3 +51,39 @@ libcgroup-devel_package() {
 }
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+version=0.38
+revision=2
+build_style=gnu-configure
+configure_args="--enable-pam-module-dir=/usr/lib/security"
+hostmakedepends="flex"
+makedepends="pam-devel"
+short_desc="Library that abstracts the control group file system in Linux"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="LGPL-2.1"
+homepage="http://libcg.sourceforge.net"
+distfiles="${SOURCEFORGE_SITE}/libcg/$pkgname-$version.tar.bz2"
+checksum=5d36d1a48b95f62fe9fcdf74a5a4089512e5e43e6011aa1504fd6f2a0909867f
+long_desc="
+ ${pkgname} aims to provide programmers easily usable APIs to use the
+ control group file system."
+
+if [ "$CROSS_BUILD" ]; then
+	makedepends+=" libfl-devel"
+fi
+
+libcgroup-devel_package() {
+	depends="libcgroup>=${version}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libcgroup_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

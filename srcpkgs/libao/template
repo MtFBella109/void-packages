@@ -1,5 +1,6 @@
 # Template file for 'libao'
 pkgname=libao
+<<<<<<< HEAD
 version=1.2.2
 revision=4
 build_style=gnu-configure
@@ -13,6 +14,21 @@ license="GPL-2.0-or-later"
 homepage="https://xiph.org/ao/"
 distfiles="https://github.com/xiph/libao/archive/${version}.tar.gz"
 checksum=df8a6d0e238feeccb26a783e778716fb41a801536fe7b6fce068e313c0e2bf4d
+=======
+version=1.1.0
+revision=2
+build_style=gnu-configure
+configure_args="--enable-alsa-mmap"
+homepage="http://xiph.org/ao/"
+short_desc="Cross-platform audio output library"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+distfiles="http://downloads.xiph.org/releases/ao/${pkgname}-${version}.tar.gz"
+checksum=29de5bb9b1726ba890455ef7e562d877df87811febb0d99ee69164b88c171bd4
+
+hostmakedepends="pkg-config"
+makedepends="alsa-lib-devel pulseaudio-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 
 pre_configure() {
 	autoreconf -fi
@@ -44,5 +60,24 @@ libao-sndio_package() {
 	short_desc+=" - sndio plugin"
 	pkg_install() {
 		vmove usr/lib/ao/plugins-4/libsndio.so
+	}
+}
+
+libao-devel_package() {
+	depends="libao>=${version}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share/doc
+		vmove usr/share/aclocal
+	}
+}
+
+libao_package() {
+	conf_files="/etc/libao.conf"
+	pkg_install() {
+		vmove etc
+		vmove usr
 	}
 }

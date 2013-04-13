@@ -6,6 +6,9 @@ revision=1
 build_style=gnu-configure
 configure_args="--without-xmlto"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 hostmakedepends="pkg-config"
 makedepends="libXext-devel libXt-devel libXmu-devel libXpm-devel"
 short_desc="X Athena Widgets Library"
@@ -45,6 +48,7 @@ maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=740aaee9b09586b1c80f80890381c5ee70ea11efa4b6159f707c0f3684c6f328
 long_desc="
  Xaw is the X Athena Widget Set. Xaw is a widget set based on the
+<<<<<<< HEAD
  X Toolkit Intrinsics (Xt) Library.
 
  This libXaw is from the modular Xorg X11."
@@ -63,3 +67,23 @@ Add_dependency full libXpm
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+ X Toolkit Intrinsics (Xt) Library."
+
+libXaw-devel_package() {
+	depends="xproto libXext-devel libXt-devel libXmu-devel libXpm-devel libXaw>=$version"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.a"
+		vmove usr/lib/pkgconfig
+		vmove usr/share
+	}
+}
+
+libXaw_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

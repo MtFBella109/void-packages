@@ -1,8 +1,13 @@
 # Template file for 'libgdata'
 pkgname=libgdata
+<<<<<<< HEAD
 version=0.12.0
 homepage="http://live.gnome.org/libgdata"
 distfiles="${GNOME_SITE}/$pkgname/0.12/$pkgname-$version.tar.xz"
+=======
+version=0.13.3
+revision=1
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 makedepends="pkg-config flex intltool gobject-introspection glib-devel gtk+3-devel libsoup-gnome-devel liboauth-devel libgnome-keyring-devel"
 short_desc="Library for accessing GData webservices"
@@ -14,5 +19,26 @@ long_desc="
  GData protocol — most notably, Google's services. It provides APIs to access
  the common Google services, and has full asynchronous support."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 
+=======
+libgdata-devel_package() {
+	depends="glib-devel libxml2-devel libsoup-devel liboauth-devel
+		gcr-devel gnome-online-accounts-devel
+		libgdata-${version}_${revision}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share/gtk-doc
+		vmove usr/share/gir-1.0
+	}
+}
+
+libgdata_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

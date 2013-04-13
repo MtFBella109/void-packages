@@ -1,7 +1,11 @@
 # Template file for 'lockdev'
 pkgname=lockdev
 version=1.0.3
+<<<<<<< HEAD
 revision=6
+=======
+revision=1
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Run-time shared library for locking devices"
 maintainer="Orphaned <orphan@voidlinux.org>"
 homepage="http://packages.qa.debian.org/l/lockdev.html"
@@ -27,11 +31,25 @@ do_install() {
 }
 
 lockdev-devel_package() {
+<<<<<<< HEAD
 	depends="${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
+=======
+	depends="lockdev>=$version"
+	short_desc="${short_desc} -- development files"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	pkg_install() {
 		vmove usr/include
 		vmove "usr/lib/*.a"
 		vmove usr/share
 	}
 }
+<<<<<<< HEAD
+=======
+
+lockdev_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

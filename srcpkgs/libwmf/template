@@ -2,6 +2,7 @@
 # Template file for 'libwmf'
 pkgname=libwmf
 version=0.2.8.4
+<<<<<<< HEAD
 revision=18
 build_style=gnu-configure
 configure_args="--with-freetype=${XBPS_CROSS_BASE}/usr
@@ -12,6 +13,16 @@ hostmakedepends="automake libtool pkg-config gsfonts"
 makedepends="zlib-devel freetype-devel libjpeg-turbo-devel libpng-devel
  expat-devel glib-devel gtk+-devel gd-devel gsfonts"
 depends="gsfonts"
+=======
+revision=14
+build_style=gnu-configure
+configure_args="--with-gsfontdir=/usr/share/fonts/Type1
+--with-fontdir=/usr/share/fonts/Type1 --disable-static
+--with-gsfontmap=/usr/share/ghostscript/8.15/lib/Fontmap.GS"
+hostmakedepends="pkg-config"
+makedepends="freetype-devel libjpeg-turbo-devel libpng-devel>=1.5.10
+ expat-devel glib-devel gtk+-devel gd-devel gsfonts"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Library for reading and converting WMF (Windows Meta Files)"
 maintainer="Orphaned <orphan@voidlinux.org>"
 homepage="http://wvware.sourceforge.net/libwmf.html"
@@ -28,12 +39,18 @@ post_install() {
 }
 
 libwmf-devel_package() {
+<<<<<<< HEAD
 	depends="${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
+=======
+	depends="${sourcepkg}-${version}_${revision}"
+	short_desc="${short_desc} -- development files"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	pkg_install() {
 		vmove usr/include
 		vmove usr/share/doc
 		vmove usr/bin/libwmf-config
+<<<<<<< HEAD
 		vmove "usr/lib/*.so"
 	}
 }
@@ -84,3 +101,15 @@ post_install()
 	rm -rf ${DESTDIR}/usr/share/fonts
 }
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+	}
+}
+
+libwmf_package() {
+	depends="gsfonts"
+	triggers="gtk-pixbuf-loaders"
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

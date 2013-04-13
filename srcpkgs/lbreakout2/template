@@ -1,6 +1,10 @@
 # Template file for 'lbreakout2'
 pkgname=lbreakout2
+<<<<<<< HEAD
 version=2.6.5
+=======
+version=2.6.4
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 revision=2
 build_style=gnu-configure
 configure_args="--enable-sdl-net --localstatedir=/var/games/$pkgname"
@@ -27,6 +31,7 @@ post_install() {
  And if you're through with all the levels you can create complete new
  levelsets with the integrated easy-to-use level editor!"
 
+<<<<<<< HEAD
 
 post_install()
 {
@@ -35,4 +40,16 @@ post_install()
 	install -Dm755 ${FILESDIR}/lbreakout2.png \
 		${DESTDIR}/usr/share/pixmaps/lbreakout2.png
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+post_install() {
+	vinstall ${FILESDIR}/lbreakout2.desktop 644 usr/share/applications
+	vinstall ${FILESDIR}/lbreakout2.png 644 usr/share/pixmaps
+}
+
+lbreakout2_package() {
+	pkg_install() {
+		vmove usr
+		vmove var
+	}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 }

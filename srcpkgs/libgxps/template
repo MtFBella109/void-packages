@@ -12,6 +12,7 @@ makedepends="cairo-devel libglib-devel libjpeg-turbo-devel libpng-devel
  tiff-devel lcms2-devel libarchive-devel freetype-devel"
 =======
 version=0.2.2
+<<<<<<< HEAD
 homepage="http://live.gnome.org/libgxps"
 distfiles="${GNOME_SITE}/$pkgname/0.2/$pkgname-$version.tar.xz"
 build_style=gnu-configure
@@ -45,3 +46,33 @@ libgxps-devel_package() {
 }
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+revision=5
+build_style=gnu-configure
+configure_args="--disable-static"
+hostmakedepends="pkg-config gobject-introspection"
+makedepends="libglib-devel libjpeg-turbo-devel libpng-devel>=1.5.10
+ tiff-devel lcms2-devel libarchive-devel>=3.1.2 freetype-devel"
+short_desc="GObject base library for XPS documents"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="LGPL-2.1"
+homepage="http://live.gnome.org/libgxps"
+distfiles="${GNOME_SITE}/$pkgname/0.2/$pkgname-$version.tar.xz"
+checksum=39d104739bf0db43905c315de1d8002460f1a098576f4418f69294013a5820be
+
+libgxps-devel_package() {
+	depends="libglib-devel libarchive-devel cairo-devel libgxps>=$version"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/share
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libgxps_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

@@ -1,10 +1,19 @@
 # Template file for 'libgnome-keyring'
 pkgname=libgnome-keyring
+<<<<<<< HEAD
 version=3.4.1
 distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
 build_style=gnu-configure
 configure_args="--disable-debug"
 makedepends="pkg-config intltool dbus-devel glib-devel libgcrypt-devel libgpg-error-devel gobject-introspection"
+=======
+version=3.8.0
+revision=2
+build_style=gnu-configure
+configure_args="--disable-debug"
+hostmakedepends="pkg-config intltool gobject-introspection"
+makedepends="dbus-devel libglib-devel libgcrypt-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="GNOME keyring client library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://www.gnome.org"
@@ -19,5 +28,24 @@ long_desc="
  password, and there is also a session keyring which is never stored to
  disk, but forgotten when the session ends."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 
+=======
+libgnome-keyring-devel_package() {
+	depends="libglib-devel ${sourcepkg}>=${version}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share/gir-1.0
+		vmove usr/share/gtk-doc
+	}
+}
+
+libgnome-keyring_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

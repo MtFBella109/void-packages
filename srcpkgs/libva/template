@@ -2,6 +2,7 @@
 # NOTE: keep this pkg synchronized with libva-glx and the minor version with libva-utils
 pkgname=libva
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=2.22.0
 revision=1
 build_style=meson
@@ -16,6 +17,16 @@ distfiles="http://cgit.freedesktop.org/libva/snapshot/libva-$version.tar.bz2"
 build_style=gnu-configure
 makedepends="pkg-config automake libXfixes-devel MesaLib-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+_distver=1.1.0
+version=1:${_distver}
+revision=2
+wrksrc="${pkgname}-${_distver}"
+build_style=gnu-configure
+configure_args="--disable-static"
+hostmakedepends="pkg-config"
+makedepends="libXfixes-devel MesaLib-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Video Acceleration (VA) API"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
@@ -47,5 +58,20 @@ libva-devel_package() {
 		vmove usr/include
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.so"
+	}
+}
+
+libva-devel_package() {
+	depends="libva-${version}_${revision}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libva_package() {
+	pkg_install() {
+		vmove usr
 	}
 }

@@ -1,5 +1,6 @@
 # Template file for 'liblo'
 pkgname=liblo
+<<<<<<< HEAD
 version=0.32
 revision=1
 build_style=gnu-configure
@@ -23,5 +24,32 @@ liblo-devel_package() {
 		vmove usr/include
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.so"
+=======
+version=0.26
+revision=3
+build_style=gnu-configure
+short_desc="Lightweight OSC implementation"
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="LGPL-2.1"
+homepage="http://plugin.org.uk/liblo/"
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
+checksum=a636fb09f8178ad0d5303e94fec37b182d3062a0e3daee85eed2a39ab6232258
+long_desc="
+ liblo is an implementation of the Open Sound Control protocol for POSIX
+ systems, started by Steve Harris and now maintained by Stephen Sinclair."
+
+liblo-devel_package() {
+	depends="liblo>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+        	vmove usr/include
+        	vmove usr/lib/pkgconfig
+	}
+}
+
+liblo_package() {
+	pkg_install() {
+		vmove usr
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }

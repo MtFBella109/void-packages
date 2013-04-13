@@ -1,5 +1,6 @@
 # Template file for 'libcec'
 pkgname=libcec
+<<<<<<< HEAD
 version=6.0.2
 revision=5
 build_style=cmake
@@ -7,6 +8,11 @@ configure_args="Python_ADDITIONAL_VERSIONS=${py3_ver}"
 hostmakedepends="pkg-config libtool swig"
 makedepends="eudev-libudev-devel lockdev-devel p8-platform-devel
  libXrandr-devel python3-devel"
+=======
+version=2.1.1
+revision=1
+wrksrc="${pkgname}-${pkgname}-${version}"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="USB CEC Adapter communication Library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -14,20 +20,49 @@ homepage="https://github.com/Pulse-Eight/libcec"
 distfiles="https://github.com/Pulse-Eight/libcec/archive/libcec-${version}.tar.gz"
 checksum=090696d7a4fb772d7acebbb06f91ab92e025531c7c91824046b9e4e71ecb3377
 
+<<<<<<< HEAD
 cec-client_package() {
 	depends="libcec>=${version}"
 	short_desc+=" - client tool"
 	pkg_install() {
 		vmove usr/bin
 	}
+=======
+hostmakedepends="automake pkg-config"
+makedepends="libudev-devel lockdev-devel"
+
+if [ "$XBPS_TARGET_MACHINE" = "armv6l" ]; then
+	makedepends+=" rpi-firmware"
+fi
+
+pre_configure() {
+	autoreconf -fi
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 }
 python3-libcec_package() {
 	short_desc+=" - python bindings"
 	depends="python3 libcec>=${version}"
 
+<<<<<<< HEAD
 	pkg_install() {
 		vmove "${py3_lib}"
 	}
+=======
+do_configure() {
+	local _rpiargs
+
+	if [ "$XBPS_TARGET_MACHINE" = "armv6l" ]; then
+		_rpiargs="--enable-rpi"
+		if [ "$XBPS_CROSS_BASE" ]; then
+			_rpiargs+=" --with-rpi-include-path=${XBPS_CROSS_BASE}/opt/vc/include"
+			_rpiargs+=" --with-rpi-lib-path=${XBPS_CROSS_BASE}/opt/vc/lib"
+		else
+			_rpiargs+=" --with-rpi-include-path=/opt/vc/include"
+			_rpiargs+=" --with-rpi-lib-path=/opt/vc/lib"
+		fi
+	fi
+	./configure ${CONFIGURE_SHARED_ARGS} ${_rpiargs} LDFLAGS=
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 }
 libcec-devel_package() {
 	short_desc+=" - development files"
@@ -36,5 +71,19 @@ libcec-devel_package() {
 		vmove usr/include
 		vmove "usr/lib/*.so"
 		vmove usr/lib/pkgconfig
+	}
+}
+
+cec-client_package() {
+	depends="libcec>=${version}"
+	short_desc="${short_desc} -- client tool"
+	pkg_install() {
+		vmove usr/bin
+	}
+}
+
+libcec_package() {
+	pkg_install() {
+		vmove usr
 	}
 }

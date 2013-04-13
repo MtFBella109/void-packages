@@ -1,12 +1,18 @@
 # Template file for 'libestr'
 pkgname=libestr
+<<<<<<< HEAD
 version=0.1.11
 revision=1
+=======
+version=0.1.4
+revision=2
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 short_desc="C library for string processing"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="http://libestr.adiscon.com"
+<<<<<<< HEAD
 distfiles="${homepage}/files/download/${pkgname}-${version}.tar.gz"
 checksum=46632b2785ff4a231dcf241eeb0dcb5fc0c7d4da8ee49cf5687722cdbe8b2024
 
@@ -18,5 +24,24 @@ libestr-devel_package() {
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.a"
 		vmove "usr/lib/*.so"
+=======
+distfiles="$homepage/files/download/$pkgname-$version.tar.gz"
+checksum=e30b05bc3091e2c35464d7ac736b2d4e5c054cc883e244c920b571e533de85e3
+long_desc="
+ This package provides a C library with some essentials for string processing."
+
+libestr-devel_package() {
+	depends="libestr>=${version}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libestr_package() {
+	pkg_install() {
+		vmove usr
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }

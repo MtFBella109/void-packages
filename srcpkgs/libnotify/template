@@ -41,18 +41,30 @@ distfiles="http://www.galago-project.org/files/releases/source/$pkgname/$pkgname
 build_style=gnu_configure
 =======
 version=0.7.5
-distfiles="${GNOME_SITE}/$pkgname/0.7/$pkgname-$version.tar.xz"
+revision=2
 build_style=gnu-configure
 configure_args="--disable-static"
+<<<<<<< HEAD
 makedepends="pkg-config glib-devel libpng-devel gdk-pixbuf-devel gtk+3-devel gobject-introspection"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Desktop notification library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=0799db8ea1500b65a477421a8c930cc8c8b0bbc0596e55ea1601e2542f3fb0d9
+=======
+hostmakedepends="pkg-config gobject-introspection"
+makedepends="libglib-devel libpng-devel gdk-pixbuf-devel gtk+3-devel"
+short_desc="Desktop notification library"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://library.gnome.org/devel/notification-spec/"
+license="LGPL-2.1"
+distfiles="${GNOME_SITE}/$pkgname/0.7/$pkgname-$version.tar.xz"
+checksum=4378cb47874ba4d5f759b7890d8d28d086e81d3f0bd4f6e84e5ab66d82ffb652
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 long_desc="
  libnotify is an implementation of the freedesktop.org desktop
  notification specification."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 <<<<<<< HEAD
 Add_dependency build pkg-config
@@ -63,3 +75,20 @@ Add_dependency full gtk+
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+libnotify-devel_package() {
+	depends="gdk-pixbuf-devel libglib-devel libnotify>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/share
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libnotify_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

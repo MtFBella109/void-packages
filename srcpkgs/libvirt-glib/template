@@ -1,6 +1,7 @@
 # Template file for 'libvirt-glib'
 pkgname=libvirt-glib
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=5.0.0
 revision=1
 build_helper="gir"
@@ -23,6 +24,14 @@ distfiles="http://libvirt.org/sources/glib/$pkgname-$version.tar.gz"
 build_style=gnu-configure
 configure_args="--disable-static"
 makedepends="pkg-config glib-devel libvirt-devel libxml2-devel python-devel gobject-introspection vala-devel"
+=======
+version=0.1.4
+revision=2
+build_style=gnu-configure
+configure_args="--disable-static"
+hostmakedepends="pkg-config gobject-introspection"
+makedepends="libglib-devel libvirt-devel libxml2-devel python-devel vala-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="libvirt glib integration"
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://libvirt.org"
@@ -33,6 +42,7 @@ long_desc="
  suited for glib-based applications, via three libraries:
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
+<<<<<<< HEAD
 build_options="doc gir vala"
 build_options_default="gir vala"
 
@@ -57,3 +67,34 @@ libvirt-glib-devel_package() {
 subpackages="$pkgname-devel $pkgname-python"
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+  - libvirt-glib - GLib main loop integration and misc helper APIs
+  - libvirt-gconfig - GObjects for manipulating libvirt XML documents
+  - libvirt-gobject - GObjects for managing libvirt objects"
+
+libvirt-glib-devel_package() {
+	depends="libglib-devel libxml2-devel libvirt-devel libvirt-glib>=${version}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share/gtk-doc
+		vmove usr/share/gir-1.0
+		vmove usr/share/vala
+	}
+}
+
+libvirt-glib-python_package() {
+	depends="python"
+	short_desc="${short_desc} - python bindings"
+	pkg_install() {
+		vmove "usr/lib/python*"
+	}
+}
+
+libvirt-glib_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

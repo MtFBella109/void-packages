@@ -58,6 +58,7 @@ librsvg-utils_package() {
 # Template build file for 'librsvg'.
 pkgname=librsvg
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=2.26.0
 revision=1
 distfiles="${GNOME_SITE}/$pkgname/2.26/$pkgname-$version.tar.bz2"
@@ -70,6 +71,14 @@ distfiles="${GNOME_SITE}/$pkgname/2.36/$pkgname-$version.tar.xz"
 build_style=gnu-configure
 configure_args="--disable-static --enable-introspection"
 makedepends="pkg-config intltool python>=0 libcroco-devel gtk+-devel gtk+3-devel gobject-introspection"
+=======
+version=2.37.0
+revision=2
+build_style=gnu-configure
+configure_args="--disable-static --enable-introspection"
+hostmakedepends="pkg-config intltool python gobject-introspection"
+makedepends="libpng-devel>=1.5.10 libcroco-devel gtk+-devel gtk+3-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="SVG library for GNOME"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 maintainer="Juan RP <xtraeme@gmail.com>"
@@ -81,6 +90,7 @@ long_desc="
  This package provides the librsvg library as well as some addons: a pixbuf
  loader and a theme engine for the GTK+ toolkit."
 
+<<<<<<< HEAD
 triggers="gtk-immodules gtk-pixbuf-loaders"
  
 subpackages="$pkgname-devel"
@@ -101,3 +111,24 @@ post_install()
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+librsvg-devel_package() {
+	depends="gdk-pixbuf-devel cairo-devel libcroco-devel
+		${sourcepkg}-${version}_${revision}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share/gtk-doc
+		vmove usr/share/gir-1.0
+	}
+}
+
+librsvg_package() {
+	depends="gdk-pixbuf>=2.26.1_2"
+	triggers="gtk-pixbuf-loaders"
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

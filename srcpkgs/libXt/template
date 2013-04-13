@@ -4,9 +4,14 @@ pkgname=libXt
 version=1.3.1
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-malloc0returnsnull"
 hostmakedepends="pkg-config xorgproto"
 makedepends="xorgproto libSM-devel libX11-devel"
+=======
+hostmakedepends="pkg-config"
+makedepends="xproto kbproto libSM-devel libX11-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="X Toolkit Intrinsics library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
@@ -50,6 +55,7 @@ long_desc="
  widgets. It also provides functions for handling events, initializing
  windows, and interpreting resource files.
 
+<<<<<<< HEAD
  This is from the modular X.org project."
 
 subpackages="$pkgname-devel"
@@ -66,3 +72,27 @@ Add_dependency full libuuid
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+if [ "$CROSS_BUILD" ]; then
+	hostmakedepends+=" xproto"
+	configure_args="CC_FOR_BUILD=cc CFLAGS_FOR_BUILD="
+fi
+
+libXt-devel_package() {
+	depends="xproto libSM-devel libICE-devel libX11-devel libXt>=${version}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.a"
+		vmove usr/lib/pkgconfig
+		vmove usr/share/man
+		vmove usr/share/doc
+	}
+}
+
+libXt_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

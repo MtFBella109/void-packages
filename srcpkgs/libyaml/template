@@ -1,12 +1,20 @@
 # Template file for 'libyaml'
 pkgname=libyaml
+<<<<<<< HEAD
 version=0.2.5
 revision=1
 build_style=gnu-configure
 hostmakedepends="automake libtool"
+=======
+version=0.1.4
+revision=2
+wrksrc="yaml-${version}"
+build_style=gnu-configure
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Fast YAML 1.1 parser and emitter library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="https://pyyaml.org/wiki/LibYAML"
 distfiles="https://github.com/yaml/libyaml/archive/${version}.tar.gz"
 checksum=fa240dbf262be053f3898006d502d514936c818e422afdcf33921c63bed9bf2e
@@ -15,6 +23,15 @@ pre_configure() {
 	autoreconf -fi
 }
 
+=======
+homepage="http://pyyaml.org/wiki/LibYAML"
+distfiles="http://pyyaml.org/download/libyaml/yaml-${version}.tar.gz"
+checksum=7bf81554ae5ab2d9b6977da398ea789722e0db75b86bffdaeb4e66d961de6a37
+long_desc="
+ LibYAML is a C library for parsing and emitting data in YAML 1.1, a
+ human-readable data serialization format."
+
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 post_install() {
 	vlicense License
 }
@@ -27,5 +44,21 @@ libyaml-devel_package() {
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.a"
 		vmove "usr/lib/*.so"
+	}
+}
+
+libyaml-devel_package() {
+	depends="libyaml>=${version}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+	}
+}
+
+libyaml_package() {
+	pkg_install() {
+		vmove usr
 	}
 }

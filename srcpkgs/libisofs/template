@@ -1,11 +1,17 @@
 # Template file for 'libisofs'
 pkgname=libisofs
+<<<<<<< HEAD
 version=1.5.6.pl01
 revision=1
+=======
+version=1.2.6
+revision=2
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 configure_args="--enable-libacl --enable-xattr"
 makedepends="acl-devel zlib-devel"
 short_desc="Library to create ISO9660 images"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://dev.lovelyhq.com/libburnia/web/wiki/Libisofs"
@@ -27,3 +33,25 @@ libisofs-devel_package() {
 =======
 subpackages="$pkgname-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.libburnia-project.org"
+license="GPL-2"
+distfiles="http://files.libburnia-project.org/releases/$pkgname-$version.tar.gz"
+checksum=c89da6821d5cac049657a27bbbc19d69b475ca51bfd595804617ee6ee2e977b7
+
+libisofs-devel_package() {
+	depends="zlib-devel acl-devel attr-devel libisofs>=$version"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libisofs_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

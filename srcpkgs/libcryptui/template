@@ -1,7 +1,12 @@
 # Template file for 'libcryptui'
 pkgname=libcryptui
+<<<<<<< HEAD
 version=3.12.2
 revision=5
+=======
+version=3.8.0
+revision=1
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 build_helper="gir"
 configure_args="--disable-static --disable-update-mime-database
@@ -15,14 +20,21 @@ makedepends="libSM-devel dbus-glib-devel gtk+3-devel gpgme-devel
 depends="hicolor-icon-theme gnupg"
 =======
 --disable-schemas-compile"
+<<<<<<< HEAD
 depends="hicolor-icon-theme"
 makedepends="pkg-config intltool dbus-glib-devel gtk+3-devel gpgme-devel libnotify-devel libgnome-keyring-devel gobject-introspection"
 fulldepends="gnupg"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="pkg-config intltool gobject-introspection"
+makedepends="libSM-devel dbus-glib-devel gtk+3-devel>=3.8 gpgme-devel
+ libnotify-devel libgnome-keyring-devel>=3.8 gnupg"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="GNOME Interface components for OpenPGP"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.0-or-later"
 homepage="http://www.gnome.org"
+<<<<<<< HEAD
 distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
 checksum=71ead1a7b496f07f6c5102ae79945dd2515b7b9342c6edefe58b47318be20866
 
@@ -51,3 +63,29 @@ libcryptui-devel_package() {
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+license="GPL-2, LGPL-2.1"
+distfiles="${GNOME_SITE}/$pkgname/3.8/$pkgname-$version.tar.xz"
+checksum=10eed96e33b6d7286795a7c678a5655a86ae099fb98d1f7211aa28aa636c0837
+long_desc="
+ $pkgname is a library used for prompting for PGP keys. It's likely that this
+ library will become deprecated in the near future."
+
+libcryptui-devel_package() {
+	depends="gtk+3-devel dbus-glib-devel libcryptui>=${version}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share/gir-1.0
+		vmove usr/share/gtk-doc
+	}
+}
+
+libcryptui_package() {
+	depends="hicolor-icon-theme libgnome-keyring>=3.8 gnupg"
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

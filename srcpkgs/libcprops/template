@@ -4,13 +4,18 @@ version=0.1.12
 revision=2
 build_style=gnu-configure
 configure_args="--disable-cpsp --disable-cpsvc"
+<<<<<<< HEAD
 hostmakedepends="flex makedepend which"
+=======
+hostmakedepends="which flex makedepend"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="C prototyping tools"
 maintainer="Orphaned <orphan@voidlinux.org>"
 homepage="http://cprops.sourceforge.net/"
 license="LGPL-2.1"
 distfiles="${SOURCEFORGE_SITE}/cprops/${pkgname}-${version}.tar.bz2"
 checksum=3737772d2718a2c550adf4ca92cc492e613aa9200aae2bbaaf128d90f4ef67f2
+<<<<<<< HEAD
 nocross="autotools TRY_RUN checking for PTHREAD_MUTEX_RECURSIVE"
 
 libcprops-devel_package() {
@@ -23,3 +28,25 @@ libcprops-devel_package() {
 		vmove usr/share
 	}
 }
+=======
+
+if [ "$CROSS_BUILD" ]; then
+	makedepends="libfl-devel"
+fi
+
+libcprops-devel_package() {
+	depends="${sourcepkg}>=${version}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.a"
+		vmove usr/share
+	}
+}
+
+libcprops_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

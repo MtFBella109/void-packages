@@ -3,6 +3,7 @@ pkgname=libbsd
 version=0.12.2
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 makedepends="libmd-devel"
 short_desc="Provides useful functions commonly found on BSD system"
 maintainer="Duncaen <duncaen@voidlinux.org>"
@@ -18,11 +19,38 @@ post_install() {
 libbsd-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision} libmd-devel"
 	short_desc+=" - development files"
+=======
+short_desc="Provides useful functions commonly found on BSD system"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://libbsd.freedesktop.org/wiki/"
+license="BSD"
+distfiles="http://libbsd.freedesktop.org/releases/libbsd-${version}.tar.gz"
+checksum=922b4885e0ccfd64b92fcacdb3fba18024fcab1e0c1b073f5ec0fe76388cbfdc
+long_desc="
+ This library provides useful functions commonly found on BSD systems, and
+ lacking on others like GNU systems, thus making it easier to port projects
+ with strong BSD origins, without needing to embed the same code over and
+ over again on each project."
+
+libbsd-devel_package() {
+	depends="${sourcepkg}>=${version}"
+	short_desc="${short_desc} -- development files"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	pkg_install() {
 		vmove usr/include
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.a"
+<<<<<<< HEAD
 		vmove "usr/lib/*.so"
 		vmove usr/share/man
+=======
+		vmove usr/share
+	}
+}
+
+libbsd_package() {
+	pkg_install() {
+		vmove usr
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }

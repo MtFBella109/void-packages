@@ -1,20 +1,50 @@
 # Template build file for 'libass.
 pkgname=libass
+<<<<<<< HEAD
 version=0.10.0
 distfiles="http://libass.googlecode.com/files/${pkgname}-${version}.tar.xz"
 build_style=gnu-configure
 configure_args="--disable-static"
 makedepends="pkg-config enca-devel fontconfig-devel fribidi-devel"
+=======
+version=0.10.1
+revision=2
+build_style=gnu-configure
+configure_args="--disable-static"
+hostmakedepends="pkg-config"
+makedepends="enca-devel fontconfig-devel fribidi-devel harfbuzz-devel>=0.9.5"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="A portable library for SSA/ASS subtitles rendering"
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://xorg.freedesktop.org/"
 license="MIT"
+<<<<<<< HEAD
 checksum=4da592020f6d7db889ec7bb09a2c78afa17b18eb86b9ffc6237d5a575ebd7541
 long_desc="
  The $pkgname package contains $short_desc."
 
 subpackages="$pkgname-devel"
+=======
+distfiles="http://libass.googlecode.com/files/${pkgname}-${version}.tar.xz"
+checksum=fbf287ac6d0dbdf015783b7354280ad8371c106326ad3f77a99471bc5aa18210
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 
 post_install() {
 	vinstall COPYING 644 usr/share/licenses/${pkgname}
+}
+
+libass-devel_package() {
+	depends="fontconfig-devel enca-devel fribidi-devel
+		libass-${version}_${revision}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libass_package() {
+	pkg_install() {
+		vmove usr
+	}
 }

@@ -1,15 +1,38 @@
 # Template file for 'libnl'
 pkgname=libnl
 version=1.1
+<<<<<<< HEAD
 distfiles="ftp://ftp.archlinux.org/other/libnl/${pkgname}-${version}.tar.gz"
 build_style=gnu_configure
+=======
+revision=5
+build_style=gnu-configure
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Library for applications dealing with netlink sockets"
 maintainer="Juan RP <xtraeme@gmail.com>"
+distfiles="ftp://ftp.archlinux.org/other/libnl/${pkgname}-${version}.tar.gz"
 checksum=35cea4cfb6cd8af0cafa0f34fff81def5a1f193b8b8384299b4b21883e22edc3
 long_desc="
  libnl is a library for applications dealing with netlink sockets.
  The library provides an interface for raw netlink messaging and various
  netlink family specific interfaces."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 Add_dependency full glibc
+=======
+libnl-devel_package() {
+	depends="libnl>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libnl_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

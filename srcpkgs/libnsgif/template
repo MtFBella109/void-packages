@@ -1,5 +1,6 @@
 # Template file for 'libnsgif'
 pkgname=libnsgif
+<<<<<<< HEAD
 version=1.0.0
 revision=1
 hostmakedepends="netsurf-buildsystem"
@@ -10,6 +11,23 @@ homepage="https://www.netsurf-browser.org"
 distfiles="https://download.netsurf-browser.org/libs/releases/${pkgname}-${version}-src.tar.gz"
 checksum=6014c842f61454d2f5a0f8243d7a8d7bde9b7da3ccfdca2d346c7c0b2c4c061b
 CFLAGS="-Wno-error"
+=======
+version=0.0.3
+revision=4
+short_desc="Decoding library for the GIF image file format, written in C."
+maintainer="davehome <davehome@redthumb.info.tm>"
+homepage="http://www.netsurf-browser.org"
+license="MIT"
+distfiles="${homepage}/projects/releases/${pkgname}-${version}-src.tar.gz"
+checksum=7a1e6873bec6814289b653c630714246adc1040cc8b250c78bb309eaf8d5f19c
+long_desc="
+ libnsgif is a decoding library for the GIF image file format, written
+ in C. It was developed as part of the NetSurf project and is available
+ for use by other software under the MIT licence.
+
+ * Features
+ 	Decodes GIF files"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 
 do_build() {
 	make ${makejobs} COMPONENT_TYPE=lib-shared PREFIX=/usr
@@ -31,5 +49,21 @@ libnsgif-devel_package() {
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.a"
 		vmove "usr/lib/*.so"
+	}
+}
+
+libnsgif-devel_package() {
+	depends="libnsgif>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+	}
+}
+
+libnsgif_package() {
+	pkg_install() {
+		vmove usr
 	}
 }

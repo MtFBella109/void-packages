@@ -1,7 +1,12 @@
 # Template file for 'libxml++'.
 pkgname=libxml++
+<<<<<<< HEAD
 version=2.40.1
 revision=4
+=======
+version=2.36.0
+revision=2
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 <<<<<<< HEAD
 hostmakedepends="pkg-config perl"
@@ -14,8 +19,26 @@ short_desc="C++ bindings for libxml2"
 maintainer="Orphaned <orphan@voidlinux.org>"
 homepage="http://libxmlplusplus.sourceforge.net/"
 license="LGPL-2.1"
+<<<<<<< HEAD
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=4ad4abdd3258874f61c2e2a41d08e9930677976d303653cd1670d3e9f35463e9
+=======
+distfiles="${GNOME_SITE}/${pkgname}/2.36/${pkgname}-${version}.tar.xz"
+checksum=bfdf327bf9ebd12946b7aa6a152045f209d5c9fecd06ebfcdf9b3e7c1af6e2e1
+long_desc="
+ This library allows to manipulate XML files. It includes support
+ to read, modify and write XML and HTML files. There is DTDs support
+ this includes parsing and validation even with complex DtDs, either
+ at parse time or later once the document has been modified. The output
+ can be a simple SAX stream or and in-memory DOM like representations.
+ In this case one can use the built-in XPath and XPointer implementation
+ to select subnodes or ranges. A flexible Input/Output mechanism is
+ available, with existing HTTP and FTP modules and combined to an
+ URI library."
+
+hostmakedepends="pkg-config"
+makedepends="libsigc++-devel libxml2-devel libglib-devel glibmm-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 
 <<<<<<< HEAD
 pre_install() {
@@ -30,12 +53,26 @@ pre_install()
 }
 
 libxml++-devel_package() {
+<<<<<<< HEAD
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
+=======
+	depends="libxml2-devel ${sourcepkg}-${version}_${revision}"
+	short_desc="${short_desc} - development files"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	pkg_install() {
 		vmove usr/include
 		vmove usr/lib/pkgconfig
 		vmove usr/lib/libxml++-2.6/include
+<<<<<<< HEAD
 		vmove "usr/lib/*.so"
+=======
+	}
+}
+
+libxml++_package() {
+	pkg_install() {
+		vmove usr
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }

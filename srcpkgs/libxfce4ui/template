@@ -1,22 +1,36 @@
 # Template file for 'libxfce4ui'
 pkgname=libxfce4ui
+<<<<<<< HEAD
 version=4.20.2
 revision=1
+=======
+version=4.10.0
+revision=2
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 <<<<<<< HEAD
 build_helper="gir"
 configure_args="--disable-static --enable-tests --enable-introspection --enable-vala"
 =======
 configure_args="--disable-static"
+<<<<<<< HEAD
 makedepends="pkg-config intltool gtk+-devel libxfce4util-devel xfconf-devel dbus-glib-devel libxml2-devel startup-notification-devel"
+=======
+hostmakedepends="pkg-config intltool"
+makedepends="gtk+-devel libxfce4util-devel xfconf-devel dbus-glib-devel
+ libxml2-devel startup-notification-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Replacement of the old libxfcegui4 library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="GPL-2, LGPL-2.1"
+homepage="http://xfce.org"
+distfiles="http://archive.xfce.org/xfce/4.10/src/$pkgname-$version.tar.bz2"
 checksum=a2b9fa288ccb5f16fa13264e507ba3f7b8da0176da259a11239f21538c0ea3e2
 long_desc="
  This is libxfce4ui, the replacement of the old libxfcegui4 library. It is used
  to share commonly used Xfce widgets amoung the Xfce applications."
 
+<<<<<<< HEAD
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 conf_files="/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml"
 hostmakedepends="pkg-config glib-devel gettext vala"
@@ -53,3 +67,22 @@ libxfce4ui-glade_package() {
 }
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+libxfce4ui-devel_package() {
+	depends="gtk+-devel libxfce4util-devel xfconf-devel libxfce4ui>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share/gtk-doc
+	}
+}
+
+libxfce4ui_package() {
+	conf_files="/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml"
+	pkg_install() {
+		vmove etc
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

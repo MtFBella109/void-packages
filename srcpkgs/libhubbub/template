@@ -14,13 +14,22 @@ checksum=8ac1e6f5f3d48c05141d59391719534290c59cd029efc249eb4fdbac102cd5a5
 CFLAGS="-Wno-error"
 =======
 version=0.1.2
+<<<<<<< HEAD
 homepage="http://www.netsurf-browser.org"
 distfiles="${homepage}/projects/releases/hubbub-${version}-src.tar.gz"
 makedepends="perl pkg-config libxslt-devel json-c-devel libparserutils-devel"
 short_desc="HTML5 compliant parsing library, written in C."
+=======
+revision=2
+hostmakedepends="perl pkg-config"
+makedepends="libxslt-devel json-c-devel libparserutils-devel"
+short_desc="HTML5 compliant parsing library, written in C"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 maintainer="davehome <davehome@redthumb.info.tm>"
-checksum=95a1d5a71055b28a8e4ce4dc8516b8f0ed691c5ee03525bf73600495657f1b52
+homepage="http://www.netsurf-browser.org"
 license="MIT"
+distfiles="${homepage}/projects/releases/hubbub-${version}-src.tar.gz"
+checksum=95a1d5a71055b28a8e4ce4dc8516b8f0ed691c5ee03525bf73600495657f1b52
 long_desc="
  Hubbub is an HTML5 compliant parsing library, written in C. It was
  developed as part of the NetSurf project and is available for use
@@ -39,9 +48,6 @@ long_desc="
  	Well-tested (~90% test coverage)
  	Portable
  	Shared library"
-
-subpackages="${pkgname}-devel"
-
 
 wrksrc=hubbub-${version}
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
@@ -66,5 +72,21 @@ libhubbub-devel_package() {
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.a"
 		vmove "usr/lib/*.so"
+	}
+}
+
+libhubbub-devel_package() {
+	depends="libhubbub>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+	}
+}
+
+libhubbub_package() {
+	pkg_install() {
+		vmove usr
 	}
 }

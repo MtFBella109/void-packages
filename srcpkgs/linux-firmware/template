@@ -28,6 +28,7 @@ noarch=yes
 nofetch=yes
 noextract=yes
 
+<<<<<<< HEAD
 replaces="kernel-firmware>=0 radeon-firmware>=0 iwl1000-firmware>=0
 iwl3945-firmware>=0 iwl4965-firmware>=0 iwl5000-firmware>=0 rt73usb-firmware>=0
 iwl5150-firmware>=0 iwl6000-firmware>=0 rt2800usb>=0 rt61-firmware>=0
@@ -207,5 +208,47 @@ linux-firmware-qualcomm_package() {
 	nostrip=yes
 	pkg_install() {
 		vmove usr/lib/firmware/qcom
+	}
+=======
+do_install() {
+	vmkdir usr/lib/firmware
+	vmkdir usr/share/licenses/${pkgname}
+	vcopy "*" usr/lib/firmware
+	rm -f ${DESTDIR}/usr/lib/firmware/GPL{,-3}
+	mv ${DESTDIR}/usr/lib/firmware/{LICEN*,WHENCE} \
+		${DESTDIR}/usr/share/licenses/${pkgname}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+}
+
+linux-firmware-network_package() {
+	short_desc="${short_desc} for network modules"
+	noarch=yes
+	pkg_install() {
+		# 3Com
+		vmove usr/lib/firmware/3com
+		# Realtek
+		vmove usr/lib/firmware/RTL8192E
+		vmove "usr/lib/firmware/rt*"
+		# Atheros
+		vmove "usr/lib/firmware/ath*"
+		vmove "usr/lib/firmware/ar*"
+		# bnx2
+		vmove "usr/lib/firmware/bnx2*"
+		# Broadcom
+		vmove usr/lib/firmware/brcm
+		# Intel
+		vmove "usr/lib/firmware/i*"
+	}
+}
+
+linux-firmware_package() {
+	replaces="kernel-firmware>=0 radeon-firmware>=0 iwl1000-firmware>=0
+		iwl3945-firmware>=0 iwl4965-firmware>=0 iwl5000-firmware>=0
+		iwl5150-firmware>=0 iwl6000-firmware>=0 rt73usb-firmware>=0
+		rt2800usb>=0 rt61-firmware>=0 ar9170-firmware>=0"
+	depends="${pkgname}-network-${version}_${revision}"
+	noarch=yes
+	pkg_install() {
+		vmove usr
 	}
 }

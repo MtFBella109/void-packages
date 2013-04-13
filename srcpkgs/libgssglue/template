@@ -1,7 +1,13 @@
 # Template file for 'libgssglue'
 pkgname=libgssglue
+<<<<<<< HEAD
 version=0.9
 revision=1
+=======
+version=0.4
+revision=3
+subpackages="$pkgname-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 configure_args="--disable-static"
 conf_files="/etc/gssapi_mech.conf"
@@ -31,5 +37,22 @@ libgssglue-devel_package() {
 		vmove usr/include
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.so"
+	}
+}
+
+libgssglue-devel_package() {
+	depends="libgssglue>=${version}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libgssglue_package() {
+	conf_files="/etc/gssapi_mech.conf"
+	pkg_install() {
+		vmove etc
+		vmove usr
 	}
 }

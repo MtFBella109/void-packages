@@ -1,5 +1,6 @@
 # Template file for 'lilv'
 pkgname=lilv
+<<<<<<< HEAD
 version=0.24.26
 revision=2
 <<<<<<< HEAD
@@ -11,10 +12,19 @@ short_desc="Simple yet powerful C API for using LV2 plugins"
 maintainer="Orphaned <orphan@voidlinux.org>"
 =======
 makedepends="pkg-config python sord-devel lv2core"
+=======
+version=0.14.4
+revision=2
+build_style=waf
+configure_args="--dyn-manifest"
+makedepends="pkg-config python serd-devel>=0.18.0 sord-devel
+ sratom-devel>=0.4.0 lv2"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Lilv is a simple yet powerful C API for using LV2 plugins."
 maintainer="davehome <davehome@redthumb.info.tm>"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 license="ISC"
+<<<<<<< HEAD
 homepage="https://gitlab.com/lv2/lilv"
 changelog="https://gitlab.com/lv2/lilv/-/raw/main/NEWS"
 distfiles="https://download.drobilla.net/lilv-${version}.tar.xz"
@@ -39,10 +49,34 @@ lilv-bash-completion_package() {
 	short_desc+=" - Bash completion for Lilv"
 	pkg_install() {
 		vcompletion tools/lilv.bash_completion bash
+=======
+homepage="http://drobilla.net/software/lilv/"
+distfiles="http://download.drobilla.net/${pkgname}-${version}.tar.bz2"
+checksum=4a92b3961f1483370509200741c33e826e4205308bee09923d0fd938653fdf8b
+long_desc="
+ Lilv is a library to make the use of LV2 plugins as simple as possible for
+ applications. Lilv is the successor to SLV2, rewritten to be significantly
+ faster and have minimal dependencies."
+
+liblilv_package() {
+	short_desc="${short_desc} - Runtime library"
+	pkg_install()
+		vmove "usr/lib/*.so*"
+		chmod 755 ${PKGDESTDIR}/usr/lib/*.so*
+	}
+}
+
+lilv-bash-completion_package() {
+	depends="bash-completion lilv"
+	short_desc="${short_desc} - Bash completion for Lilv"
+	pkg_install() {
+		vmove usr/etc
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }
 
 lilv-devel_package() {
+<<<<<<< HEAD
 	depends="serd-devel sord-devel sratom-devel lv2 liblilv>=${version}_${revision}"
 	short_desc+=" - Development files"
 	pkg_install() {
@@ -53,3 +87,18 @@ lilv-devel_package() {
 }
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+	depends="sord-devel liblilv>=${version}"
+	short_desc="${short_desc} - Development files"
+	pkg_install() {
+        	vmove usr/include
+        	vmove usr/lib/pkgconfig
+	}
+}
+
+lilv_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

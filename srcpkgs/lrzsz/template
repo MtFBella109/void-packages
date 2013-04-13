@@ -10,4 +10,25 @@ license="GPL-2.0-or-later"
 homepage="https://ohse.de/uwe/software/lrzsz.html"
 distfiles="https://ohse.de/uwe/releases/$pkgname-$version.tar.gz"
 checksum=c28b36b14bddb014d9e9c97c52459852f97bd405f89113f30bee45ed92728ff1
+<<<<<<< HEAD
 conflicts="trx>=0 sx>=0"
+=======
+
+do_configure() {
+	./configure --prefix=/usr --mandir=/usr/share/man
+}
+
+do_build() {
+	make ${makejobs}
+}
+
+do_install() {
+	make DESTDIR=$DESTDIR install
+}
+
+lrzsz_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

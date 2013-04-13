@@ -14,7 +14,10 @@ makedepends="zlib-devel ncurses-devel readline-devel openssl-devel
 =======
 --with-openssl"
 makedepends="ncurses-devel readline-devel openssl-devel expat-devel"
+<<<<<<< HEAD
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Sophisticated FTP/HTTP client"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
@@ -31,6 +34,7 @@ configure_args="--with-modules --disable-rpath --without-included-regex
  --with-openssl"
 short_desc="Sophisticated ftp/http client"
 maintainer="Juan RP <xtraeme@gmail.com>"
+<<<<<<< HEAD
 checksum=aea71d26c37aafe67ce6760173141a006f682b35c59bec151ff8c5213198ee91
 long_desc="
  LFTP is sophisticated ftp/http client, file transfer program supporting a
@@ -47,3 +51,17 @@ Add_dependency full openssl
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+homepage="http://lftp.yar.ru/"
+license="GPL-3"
+distfiles="http://ftp.yars.free.net/pub/source/lftp/lftp-$version.tar.xz"
+checksum=86d399b1515950e54c47950a99260919b9bb9cb5775ac14334e66b6b88b5ce84
+
+lftp_package() {
+	conf_files="/etc/lftp.conf"
+	pkg_install() {
+		vmove etc
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

@@ -1,5 +1,6 @@
 # Template file for 'libssh2'
 pkgname=libssh2
+<<<<<<< HEAD
 version=1.11.1
 revision=1
 build_style=cmake
@@ -32,6 +33,10 @@ libssh2-devel_package() {
 }
 =======
 distfiles="http://www.libssh2.org/download/$pkgname-$version.tar.gz"
+=======
+version=1.4.3
+revision=2
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 makedepends="openssl-devel"
 short_desc="library implementing the SSH2 protocol"
@@ -43,5 +48,23 @@ long_desc="
  regular terminal, SCP and SFTP sessions; port forwarding; password, key-based
  and keyboard-interactive authentication."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+libssh2-devel_package() {
+	depends="${sourcepkg}>=${version}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share
+	}
+}
+
+libssh2_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

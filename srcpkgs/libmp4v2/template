@@ -1,7 +1,12 @@
 # Template file for 'libmp4v2'
 pkgname=libmp4v2
 version=2.0.0
+<<<<<<< HEAD
 revision=4
+=======
+revision=2
+wrksrc="mp4v2-${version}"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 make_install_args="install-man"
 short_desc="MPEG-4 library from mpeg4ip"
@@ -11,6 +16,7 @@ license="MPL-1.1"
 distfiles="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/mp4v2/mp4v2-${version}.tar.bz2"
 checksum=0319b9a60b667cf10ee0ec7505eb7bdc0a2e21ca7a93db96ec5bd758e3428338
 
+<<<<<<< HEAD
 CXXFLAGS="-Wno-narrowing"
 
 libmp4v2-devel_package() {
@@ -20,6 +26,20 @@ libmp4v2-devel_package() {
 		vmove usr/include
 		vmove "usr/lib/*.a"
 		vmove "usr/lib/*.so"
+=======
+libmp4v2-devel_package() {
+	depends="libmp4v2>=${version}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.a"
+	}
+}
+
+libmp4v2_package() {
+	pkg_install() {
+		vmove "usr/lib/*.so*"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }
 

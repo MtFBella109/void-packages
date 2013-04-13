@@ -1,6 +1,7 @@
 # Template file for 'lftpfs'
 pkgname=lftpfs
 version=0.4.3
+<<<<<<< HEAD
 revision=3
 build_style=perl-module
 <<<<<<< HEAD
@@ -10,11 +11,21 @@ depends="$makedepends"
 =======
 fulldepends="perl-Fuse perl-IPC-Run lftp"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+revision=1
+build_style=perl-module
+makedepends="perl-Fuse perl-IPC-Run lftp"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Filesystem with caching based on FUSE and LFTP"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="http://lftpfs.sourceforge.net/"
+<<<<<<< HEAD
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
+=======
+license="GPL-2"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 checksum=5116e06dfc03c4000f3157916d4bf2b9bcd6f47667790217dbf3b9f04861bf39
 <<<<<<< HEAD
 =======
@@ -31,11 +42,19 @@ long_desc="
     using as mirror tool with on-demand download of files
 "
 
-noarch=yes
-
-post_install()
-{
+post_install() {
 	vmkdir usr
 	mv ${DESTDIR}/usr/lib/perl5/vendor_perl/bin ${DESTDIR}/usr
 }
+<<<<<<< HEAD
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+
+lftpfs_package() {
+	depends="perl-Fuse perl-IPC-Run lftp"
+	noarch="yes"
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

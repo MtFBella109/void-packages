@@ -1,6 +1,7 @@
 # Template build file for 'libXfontcache'.
 pkgname=libXfontcache
 version=1.0.4
+<<<<<<< HEAD
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure
@@ -9,13 +10,31 @@ build_style=gnu-configure
 makedepends="pkg-config xproto fontcacheproto libX11-devel libXext-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X-TrueType font cache extension client library "
+=======
+revision=5
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="xproto fontcacheproto libX11-devel libXext-devel"
+short_desc="X-TrueType font cache extension client library"
+homepage="http://xorg.freedesktop.org"
+license="MIT"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 maintainer="Juan RP <xtraeme@gmail.com>"
+distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
 checksum=ffe747cfbf81cdd862af1b05d021ad1ab83b623eab5b32b0a618efb4c0f3e01c
-long_desc="
- This package provides the X-TrueType font cache extension client library.
 
- This is from the modular X.org X11 project."
+libXfontcache-devel_package() {
+	depends="fontcacheproto libXfontcache>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+		vmove usr/share
+	}
+}
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 <<<<<<< HEAD
 Add_dependency build pkg-config
@@ -26,3 +45,10 @@ Add_dependency full libX11
 Add_dependency full libXext
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+libXfontcache_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

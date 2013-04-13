@@ -1,12 +1,23 @@
 # Template file for 'libtomcrypt'
 pkgname=libtomcrypt
+<<<<<<< HEAD
 version=1.18.2
 revision=2
 hostmakedepends="libtool"
 makedepends="gmp-devel libtommath-devel"
+=======
+version=1.17
+revision=2
+patch_args="-Np1"
+build_style=gnu-makefile
+hostmakedepends="libtool"
+make_build_args="-f makefile.shared"
+make_install_args="-f makefile.shared NODOCS=1"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Fairly comprehensive, modular and portable cryptographic toolkit"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Public domain"
+<<<<<<< HEAD
 homepage="http://www.libtom.net/?page=features&newsitems=5&whatfile=crypt"
 distfiles="https://github.com/libtom/libtomcrypt/releases/download/v${version}/crypt-${version}.tar.xz"
 checksum=96ad4c3b8336050993c5bc2cf6c057484f2b0f9f763448151567fbab5e767b84
@@ -43,5 +54,30 @@ libtomcrypt-devel_package() {
 		vmove "usr/lib/*.a"
 		vmove "usr/lib/*.so"
 		vmove usr/share/man/man3
+=======
+homepage="http://www.libtom.org/?page=features&newsitems=5&whatfile=crypt"
+distfiles="http://www.libtom.org/files/crypt-${version}.tar.bz2"
+checksum=e33b47d77a495091c8703175a25c8228aff043140b2554c08a3c3cd71f79d116
+long_desc="
+ LibTomCrypt is a fairly comprehensive, modular and portable cryptographic
+ toolkit that provides developers with a vast array of well known published
+ block ciphers, one-way hash functions, chaining modes, pseudo-random number
+ generators, public key cryptography and a plethora of other routines."
+
+libtomcrypt-devel_package() {
+	depends="${sourcepkg}-${version}_${revision}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include usr
+		vmove usr/lib/pkgconfig usr/lib
+		vmove "usr/lib/*.a" usr/lib
+		vinstall ${sourcepkg}.3 644 usr/share/man/man3
+	}
+}
+
+libtomcrypt_package() {
+	pkg_install() {
+		vmove usr
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }

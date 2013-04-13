@@ -1,5 +1,6 @@
 # Template file for 'lxrandr'
 pkgname=lxrandr
+<<<<<<< HEAD
 version=0.3.3
 revision=1
 <<<<<<< HEAD
@@ -13,12 +14,32 @@ depends="atk cairo fontconfig freetype pango"
 makedepends="pkg-config intltool gtk+-devel"
 fulldepends="desktop-file-utils"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+version=0.1.2
+build_style=gnu-configure
+revision=2
+hostmakedepends="pkg-config intltool"
+makedepends="gtk+-devel desktop-file-utils"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="LXDE Monitor configuration tool"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://lxde.org/"
+<<<<<<< HEAD
 distfiles="https://github.com/lxde/lxrandr/archive/refs/tags/${version}.tar.gz"
 checksum=24d0abaee830b0b2973ba9d2e46b3c801445342f7d5d3297c021a8a4a471f512
+=======
+license="GPL2"
+maintainer="Juan RP <xtraeme@gmail.com>"
+distfiles="${SOURCEFORGE_SITE}/lxde/$pkgname-$version.tar.gz"
+checksum=fb8139478f6cfeac6a2d8adb4e55e8cad099bfe2da7c82253c935ba719f9cf19
+long_desc="
+ This is a very basic monitor config tool utilizing the X extension called
+ RandR. It can let you change the screen resolution on the fly. Besides, when
+ you run lxrandr with external monitor connected, its GUI will change, and
+ show you some quick options to get your projector or external monitor working
+ correctly.
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 
 <<<<<<< HEAD
 pre_configure() {
@@ -30,6 +51,15 @@ pre_configure() {
  monitor and just want to get their work done without reading a lot of 
  geek-centered manuals or command line tutorials."
 
+<<<<<<< HEAD
 
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+lxrandr_package() {
+	depends="desktop-file-utils"
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

@@ -31,6 +31,17 @@ libvisual-devel_package() {
 # Template file for 'libvisual'.
 pkgname=libvisual
 version=0.4.0
+<<<<<<< HEAD
+=======
+revision=5
+build_style=gnu-configure
+configure_args="--disable-static"
+hostmakedepends="pkg-config"
+short_desc="Abstraction library for audio visualisation plugins"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://sourceforge.net/projects/libvisual/"
+license="LGPL-2.1"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
 <<<<<<< HEAD
 build_style=gnu_configure
@@ -54,6 +65,7 @@ long_desc="
  done by the application it also enables the developer to draw the visual
  anywhere he wants."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 <<<<<<< HEAD
 Add_dependency build pkg-config
@@ -61,3 +73,19 @@ Add_dependency full glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+libvisual-devel_package() {
+	depends="libvisual-${version}_${revision}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libvisual_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

@@ -1,6 +1,7 @@
 # Template file for 'libwacom'
 pkgname=libwacom
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=2.16.1
 revision=1
 build_style=meson
@@ -47,3 +48,36 @@ libwacom-devel_package() {
 =======
 subpackages="$pkgname-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+version=0.7
+revision=2
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="libgudev-devel"
+short_desc="Library to identify wacom tablets"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="MIT"
+homepage="http://sourceforge.net/apps/mediawiki/linuxwacom/index.php?title=Main_Page"
+distfiles="${SOURCEFORGE_SITE}/linuxwacom/$pkgname-$version.tar.bz2"
+checksum=210c48b595461ebee63b1a846a6eb1d8f029b49d02ccbde34eadf551a5a68a78
+long_desc="
+ libwacom is a library to identify wacom tablets and their model-specific
+ features. It provides easy access to information such as is this a built-in
+ on-screen tablet, what is the size of this model, etc."
+
+libwacom-devel_package() {
+	depends="libglib-devel libwacom>=$version"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+	}
+}
+
+libwacom_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

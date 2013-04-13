@@ -1,6 +1,7 @@
 # Template file for 'libunique1'.
 pkgname=libunique1
 version=1.1.6
+<<<<<<< HEAD
 wrksrc="libunique-${version}"
 patch_args="-Np1"
 distfiles="${GNOME_SITE}/libunique/1.1/libunique-$version.tar.bz2"
@@ -8,6 +9,15 @@ build_style=gnu-configure
 configure_args="--disable-static --disable-dbus"
 revision=3
 makedepends="automake pkg-config gobject-introspection gtk+-devel"
+=======
+revision=5
+wrksrc="libunique-${version}"
+patch_args="-Np1"
+build_style=gnu-configure
+configure_args="--disable-static --disable-dbus"
+hostmakedepends="libtool automake pkg-config gobject-introspection"
+makedepends="gtk+-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Library for writing single instance applications (GTK+2)"
 maintainer="xtraeme <xtraeme@gmail.org>"
 homepage="http://live.gnome.org/LibUnique"
@@ -37,4 +47,20 @@ pre_configure() {
 		sed -i -s "s|G_CONST_RETURN|const|g" "$f"
 	done
 	autoreconf -fi
+}
+
+libunique1-devel_package() {
+	depends="gtk+-devel ${sourcepkg}-${version}_${revision}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share
+	}
+}
+
+libunique1_package() {
+	pkg_install() {
+		vmove usr
+	}
 }

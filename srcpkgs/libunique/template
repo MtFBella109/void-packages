@@ -6,15 +6,26 @@ distfiles="${GNOME_SITE}/$pkgname/1.0/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 =======
 version=3.0.2
-distfiles="${GNOME_SITE}/$pkgname/3.0/$pkgname-$version.tar.bz2"
+revision=4
 build_style=gnu-configure
 configure_args="--enable-bacon=yes --enable-dbus=yes"
+<<<<<<< HEAD
 revision=3
 makedepends="pkg-config libX11-devel atk-devel glib-devel pango-devel cairo-devel freetype-devel fontconfig-devel dbus-devel dbus-glib-devel gtk+3-devel gobject-introspection"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library for writing single instance applications"
 maintainer="pancake <pancake@nopcode.org>"
 checksum=d627a10f523af14e9ead655ebab3a26e7faeea006bdfa7739bc4c04058ddf4c6
+=======
+hostmakedepends="pkg-config gobject-introspection"
+makedepends="dbus-glib-devel gtk+3-devel"
+short_desc="Library for writing single instance applications"
+maintainer="xtraeme <xtraeme@gmail.org>"
+homepage="http://live.gnome.org/LibUnique"
+license="LGPL-2.1"
+distfiles="${GNOME_SITE}/$pkgname/3.0/$pkgname-$version.tar.bz2"
+checksum=50269a87c7aabf1e25f01b3bbb280133138ffd7b6776289894c614a4b6ca968d
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 long_desc="
  Unique is a library for writing single instance application. If you launch a
  single instance application twice, the second instance will either just quit
@@ -27,6 +38,7 @@ long_desc="
  Unique aims to replace the BaconMessageConnection code that has been copied
  by many projects and the code using Bonobo and D-Bus."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 <<<<<<< HEAD
 Add_dependency full glibc
@@ -35,3 +47,20 @@ Add_dependency full dbus-glib
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+libunique-devel_package() {
+	depends="dbus-glib-devel libunique>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share
+	}
+}
+
+libunique_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

@@ -8,16 +8,35 @@ short_desc="C library providing data structures and common functions"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="http://libhx.sourceforge.net/"
+<<<<<<< HEAD
 distfiles="https://inai.de/files/libhx/libHX-${version}.tar.xz"
 checksum=760018915add802df416acdb5e2a3911139d44ca29e3bfc783d5aff1990db6a0
 
 libHX-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
+=======
+license="LGPL-2.1"
+distfiles="${SOURCEFORGE_SITE}/libhx/${pkgname}-${version}.tar.xz"
+checksum=a1550dc9cb8d441dce83dbd1f2b609ae45439e95568c945499d0a084cc76f1e6
+
+libHX-devel_package() {
+	depends="${sourcepkg}-${version}_${revision}"
+	short_desc="${short_desc} -- development files"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	pkg_install() {
 		vmove usr/include
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.a"
+<<<<<<< HEAD
 		vmove usr/lib/libHX.so
+=======
+	}
+}
+
+libHX_package() {
+	pkg_install() {
+		vmove usr
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }

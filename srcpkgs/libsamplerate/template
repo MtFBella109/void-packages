@@ -1,7 +1,12 @@
 # Template file for 'libsamplerate'
 pkgname=libsamplerate
+<<<<<<< HEAD
 version=0.2.2
 revision=1
+=======
+version=0.1.8
+revision=2
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 <<<<<<< HEAD
 hostmakedepends="pkg-config"
@@ -17,6 +22,7 @@ homepage="https://libsndfile.github.io/libsamplerate/"
 distfiles="https://github.com/libsndfile/libsamplerate/releases/download/${version}/libsamplerate-${version}.tar.xz"
 checksum=3258da280511d24b49d6b08615bbe824d0cacc9842b0e4caf11c52cf2b043893
 
+<<<<<<< HEAD
 CFLAGS="-fPIC"
 
 <<<<<<< HEAD
@@ -38,3 +44,27 @@ libsamplerate-devel_package() {
 =======
 subpackages="$pkgname-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+ SRC is capable of arbitrary and time varying conversions; from downsampling
+ by a factor of 256 to upsampling by the same factor. Arbitrary in this case
+ means that the ratio of input and output sample rates can be an irrational
+ number. The conversion ratio can also vary with time for speeding up and
+ slowing down effects."
+
+libsamplerate-devel_package() {
+	depends="libsndfile-devel ${sourcepkg}>=${version}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+		vmove usr/share/doc
+	}
+}
+
+libsamplerate_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

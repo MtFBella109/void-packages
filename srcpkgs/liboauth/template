@@ -1,6 +1,10 @@
 # Template file for 'liboauth'
 pkgname=liboauth
+<<<<<<< HEAD
 version=1.0.3
+=======
+version=0.9.4
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 revision=3
 build_style=gnu-configure
 configure_args="--enable-nss"
@@ -32,10 +36,10 @@ liboauth-devel_package() {
 =======
 homepage="http://liboauth.sourceforge.net"
 license="MIT"
-revision=2
 makedepends="pkg-config libcurl-devel nss-devel"
 short_desc="C library implementing OAuth Core RFC 5849"
 maintainer="Juan RP <xtraeme@gmail.com>"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
 checksum=77e372359caca5375fbcc63ac638f349e6c93c98d291992d8ebb9bb8291ca549
 long_desc="
  liboauth is a collection of POSIX-c functions implementing the OAuth Core
@@ -44,5 +48,24 @@ long_desc="
  functionality to sign requests or verify OAuth signatures as well as
  perform HTTP requests."
  
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+liboauth-devel_package() {
+	depends="libcurl-devel nss-devel liboauth>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/share
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+	}
+}
+
+liboauth_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

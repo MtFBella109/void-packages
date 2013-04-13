@@ -1,8 +1,13 @@
 # Template file for 'ltrace'
 pkgname=ltrace
+<<<<<<< HEAD
 version=0.7.3.20160924
 revision=2
 _githash=82c66409c7a93ca6ad2e4563ef030dfb7e6df4d4
+=======
+version=0.7.2
+revision=1
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 hostmakedepends="automake libtool"
 makedepends="elfutils-devel"
@@ -10,6 +15,7 @@ short_desc="Tracks runtime library calls in dynamically linked programs"
 maintainer="Orphaned <orphan@voidlinux.org>"
 homepage="http://ltrace.org"
 license="GPL-2"
+<<<<<<< HEAD
 distfiles="https://github.com/dkogan/ltrace/archive/${_githash}.tar.gz"
 checksum=4aecf69e4a33331aed1e50ce4907e73a98cbccc4835febc3473863474304d547
 
@@ -27,4 +33,19 @@ pre_configure() {
 	mkdir -p config 
 	autoreconf -fi
 
+=======
+distfiles="https://alioth.debian.org/frs/download.php/3848/ltrace-${version}.tar.bz2"
+checksum=bd9e7bd94ba6728fd3ec57f4bcfef8240260bea8f4fcebbc9c454d07ccc11894
+long_desc="
+ ltrace intercepts and records dynamic library calls which are called by an
+ executed process and the signals received by that process. It can also
+ intercept and print the system calls executed by the program."
+
+ltrace_package() {
+	conf_files="/etc/ltrace.conf"
+	pkg_install() {
+		vmove etc
+		vmove usr
+	}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 }

@@ -1,11 +1,19 @@
 # Template file for 'libzeitgeist'
 pkgname=libzeitgeist
 version=0.3.18
+<<<<<<< HEAD
 revision=5
 build_style=gnu-configure
 configure_args="--disable-static"
 hostmakedepends="pkg-config"
 makedepends="libglib-devel"
+=======
+revision=2
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="libglib-devel"
+configure_args="--disable-static"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Zeitgeist Client Library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -18,13 +26,30 @@ post_install() {
 }
 
 libzeitgeist-devel_package() {
+<<<<<<< HEAD
 	depends="${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
 	pkg_install() {
 		vmove usr/include
 		vmove usr/lib/pkgconfig
 		vmove usr/lib/*.so
+=======
+	depends="${sourcepkg}>=$version"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 		vmove usr/share/vala
 		vmove usr/share/gtk-doc
 	}
 }
+<<<<<<< HEAD
+=======
+
+libzeitgeist_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

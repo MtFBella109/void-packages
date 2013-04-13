@@ -1,5 +1,6 @@
 # Template file for 'lutok'
 pkgname=lutok
+<<<<<<< HEAD
 version=0.6.1
 revision=1
 build_style=gnu-configure
@@ -30,9 +31,46 @@ lutok-devel_package() {
 		vmove usr/include
 		vmove "usr/lib/*.a"
 		vmove "usr/lib/*.so"
+=======
+version=0.2
+revision=3
+build_style=gnu-configure
+configure_args="--with-doxygen"
+hostmakedepends="pkg-config doxygen"
+makedepends="lua-devel"
+short_desc="Lightweight C++ API for Lua"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="BSD"
+homepage="http://code.google.com/p/lutok"
+distfiles="https://lutok.googlecode.com/files/lutok-$version.tar.gz"
+checksum=df6f175fdd417ff830ec46509816a40b92fec816de726e815b4ae4f7fea405bd
+long_desc="
+ Lutok provides thin C++ wrappers around the Lua C API to ease the interaction
+ between C++ and Lua. These wrappers make intensive use of RAII to prevent
+ resource leakage, expose C++-friendly data types, report errors by means of
+ exceptions and ensure that the Lua stack is always left untouched in the face
+ of errors. The library also provides a small subset of miscellaneous utility
+ functions built on top of the wrappers."
+
+lutok-devel_package() {
+	depends="lua-devel lutok>=$version"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.a"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 		vmove usr/lib/pkgconfig
 		vmove usr/share/doc
 	}
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+
+lutok_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

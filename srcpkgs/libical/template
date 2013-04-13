@@ -12,9 +12,10 @@ makedepends="libglib-devel libxml2-devel $(vopt_if gir vala-devel)"
 checkdepends="python3-gobject"
 =======
 version=0.46
-distfiles="${SOURCEFORGE_SITE}/freeassociation/$pkgname-$version.tar.gz"
+revision=4
 build_style=gnu-configure
 configure_args="--enable-shared"
+<<<<<<< HEAD
 revision=2
 makedepends="flex automake"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
@@ -53,5 +54,34 @@ libical-devel_package() {
 			vmove usr/share/vala
 		fi
 		vmove usr/lib/cmake
+	}
+=======
+hostmakedepends="flex automake libtool"
+short_desc="Reference implementation of the iCalendar data type and format"
+homepage="http://sourceforge.net/projects/freeassociation/"
+license="LGPL-2.1, MPL-1"
+maintainer="Juan RP <xtraeme@gmail.com>"
+distfiles="${SOURCEFORGE_SITE}/freeassociation/$pkgname-$version.tar.gz"
+checksum=000762efb81501421d94ec56343648a62b3bd2884e7cdf6f638e2c207dd8f6a1
+
+pre_configure() {
+	sed -i "s|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g" -i configure.in
+	./bootstrap
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+}
+
+libical-devel_package() {
+	depends="libical>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+	}
+}
+
+libical_package() {
+	pkg_install() {
+		vmove usr
 	}
 }

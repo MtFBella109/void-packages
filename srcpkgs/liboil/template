@@ -2,6 +2,7 @@
 # Template file for 'liboil'
 pkgname=liboil
 version=0.3.17
+<<<<<<< HEAD
 revision=6
 build_style=gnu-configure
 <<<<<<< HEAD
@@ -41,6 +42,17 @@ makedepends="pkg-config"
 short_desc="Library of Optimized Inner Loops, CPU optimized functions"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=009115b0fc888dfe28903fecfe806707c544ccad6554ebabdeb3a1d88ec1e9d1
+=======
+build_style=gnu-configure
+revision=3
+hostmakedepends="pkg-config"
+short_desc="Library of Optimized Inner Loops, CPU optimized functions"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="${XORG_HOME}"
+license="BSD"
+distfiles="http://liboil.freedesktop.org/download/$pkgname-$version.tar.gz"
+checksum=105f02079b0b50034c759db34b473ecb5704ffa20a5486b60a8b7698128bfc69
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 long_desc="
  Liboil is a library of simple functions that are optimized for various CPUs.
  These functions are generally loops implementing simple algorithms, such as
@@ -49,6 +61,7 @@ long_desc="
  significant optimization using various techniques, especially by using
  extended instructions provided by modern CPUs (Altivec, MMX, SSE, etc.)."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 <<<<<<< HEAD
 Add_dependency build pkg-config
@@ -56,3 +69,21 @@ Add_dependency full glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+liboil-devel_package() {
+	depends="liboil>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+		vmove usr/share/gtk-doc
+	}
+}
+
+liboil_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

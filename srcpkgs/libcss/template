@@ -14,13 +14,21 @@ checksum=2df215bbec34d51d60c1a04b01b2df4d5d18f510f1f3a7af4b80cddb5671154e
 CFLAGS="-Wno-error"
 =======
 version=0.1.2
+<<<<<<< HEAD
 homepage="http://www.netsurf-browser.org"
 distfiles="${homepage}/projects/releases/${pkgname}-${version}-src.tar.gz"
 makedepends="pkg-config perl libparserutils-devel libwapcaplet-devel"
+=======
+revision=2
+hostmakedepends="pkg-config perl"
+makedepends="libparserutils-devel libwapcaplet-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="CSS parser and selection engine, written in C."
 maintainer="davehome <davehome@redthumb.info.tm>"
-checksum=92c112a059bc5ae490392439401005b47ca5c270f891f6317b64aac738ae1f5e
 license="MIT"
+homepage="http://www.netsurf-browser.org"
+distfiles="${homepage}/projects/releases/${pkgname}-${version}-src.tar.gz"
+checksum=92c112a059bc5ae490392439401005b47ca5c270f891f6317b64aac738ae1f5e
 long_desc="
  LibCSS is a CSS (Cascading Style Sheet) parser and selection engine,
  written in C. It was developed as part of the NetSurf project and is
@@ -35,10 +43,13 @@ long_desc="
  	Portable
  	Shared library"
 
+<<<<<<< HEAD
 subpackages="${pkgname}-devel"
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
+=======
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 do_build() {
 	make ${makejobs} HOST_CC=cc COMPONENT_TYPE=lib-static PREFIX=/usr BUILDDIR=build-static-lib
 	make ${makejobs} HOST_CC=cc COMPONENT_TYPE=lib-shared PREFIX=/usr
@@ -62,5 +73,21 @@ libcss-devel_package() {
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.a"
 		vmove "usr/lib/*.so"
+	}
+}
+
+libcss-devel_package() {
+	depends="libcss>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+	}
+}
+
+libcss_package() {
+	pkg_install() {
+		vmove usr
 	}
 }

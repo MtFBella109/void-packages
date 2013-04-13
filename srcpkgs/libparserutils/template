@@ -13,14 +13,20 @@ checksum=317ed5c718f17927b5721974bae5de32c3fd6d055db131ad31b4312a032ed139
 CFLAGS="-Wno-error"
 =======
 version=0.1.1
+<<<<<<< HEAD
 revision=3
 homepage="http://www.netsurf-browser.org"
 distfiles="${homepage}/projects/releases/${pkgname}-${version}-src.tar.gz"
+=======
+revision=5
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 makedepends="perl"
 short_desc="Library for building efficient parsers, written in C."
 maintainer="davehome <davehome@redthumb.info.tm>"
-checksum=2d3f1887d3027b7df1fcacd5f74aba16d3c22a86c169816cd712857a1be0aaf3
+homepage="http://www.netsurf-browser.org"
 license="MIT"
+distfiles="${homepage}/projects/releases/${pkgname}-${version}-src.tar.gz"
+checksum=2d3f1887d3027b7df1fcacd5f74aba16d3c22a86c169816cd712857a1be0aaf3
 long_desc="
  LibParserUtils is a library for building efficient parsers, written
  in C. It was developed as part of the NetSurf project and is available
@@ -38,10 +44,13 @@ long_desc="
  	Portable
  	Shared library"
 
+<<<<<<< HEAD
 subpackages="${pkgname}-devel"
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
+=======
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 do_build() {
 	make ${makejobs} COMPONENT_TYPE=lib-shared PREFIX=/usr
 	make ${makejobs} COMPONENT_TYPE=lib-static PREFIX=/usr
@@ -62,5 +71,21 @@ libparserutils-devel_package() {
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.a"
 		vmove "usr/lib/*.so"
+	}
+}
+
+libparserutils-devel_package() {
+	depends="libparserutils>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+	}
+}
+
+libparserutils_package() {
+	pkg_install() {
+		vmove usr
 	}
 }

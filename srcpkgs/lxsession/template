@@ -1,5 +1,6 @@
 # Template file for 'lxsession'
 pkgname=lxsession
+<<<<<<< HEAD
 version=0.5.6
 revision=1
 build_style=gnu-configure
@@ -13,13 +14,31 @@ revision=2
 makedepends="pkg-config intltool dbus-devel gtk+-devel"
 fulldepends="dbus-x11 upower ConsoleKit-x11 hicolor-icon-theme"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+version=0.4.6.1
+revision=3
+build_style=gnu-configure
+hostmakedepends="pkg-config intltool"
+makedepends="dbus-devel gtk+-devel upower hicolor-icon-theme"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="LXDE X11 Session Manager"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://lxde.org/"
+<<<<<<< HEAD
 distfiles="https://github.com/lxde/lxsession/archive/refs/tags/${version}.tar.gz"
 checksum=af469d7ed6edbd733da6ad01a46fef3eff871483db5b3d8ecc3c856dbcbed12f
 replaces="lxpolkit>=0"
+=======
+license="GPL2"
+maintainer="Juan RP <xtraeme@gmail.com>"
+distfiles="${SOURCEFORGE_SITE}/lxde/$pkgname-$version.tar.gz"
+checksum=bd6a7ef3c0ba4b9eedf3c58624dbce8bbbba3b179abbc552bf10c2830eec3ee1
+long_desc="
+ LXSession is a lightweight X11 session manager with fewer dependencies,
+ designed for use with the LXDE (Lightweight X11 Desktop Environment). It
+ derived from XSM and have following differences:
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 
 <<<<<<< HEAD
 pre_configure() {
@@ -37,5 +56,14 @@ pre_configure() {
  LXSession has also a built-in lightweight Xsettings daemon, which can
  configure GTK+ themes, keyboard, and mouse for you on session startup."
 
+<<<<<<< HEAD
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+lxsession_package() {
+	depends="upower hicolor-icon-theme"
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

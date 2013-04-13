@@ -1,5 +1,6 @@
 # Template file for 'lxappearance'
 pkgname=lxappearance
+<<<<<<< HEAD
 version=0.6.4
 revision=2
 build_style=gnu-configure
@@ -13,10 +14,18 @@ revision=1
 makedepends="pkg-config intltool gtk+-devel freetype-devel"
 fulldepends="desktop-file-utils"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+version=0.5.1
+revision=2
+build_style=gnu-configure
+hostmakedepends="pkg-config intltool"
+makedepends="gtk+-devel desktop-file-utils"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="LXDE Theme Switcher"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://lxde.org/"
+<<<<<<< HEAD
 distfiles="https://github.com/lxde/lxappearance/archive/refs/tags/${version}.tar.gz"
 checksum=9f067a8a126b9779ba12648c76136d9ba3e7ec7920c568df7819d128fdf39e03
 
@@ -30,3 +39,19 @@ pre_configure() {
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+license="GPL2"
+maintainer="Juan RP <xtraeme@gmail.com>"
+distfiles="${SOURCEFORGE_SITE}/lxde/$pkgname-$version.tar.gz"
+checksum=74e638257092201a572f1fcd4eb93c195c9fa75e27602662de542b002e6deade
+long_desc="
+ LXAppearance is the standard theme switcher of LXDE. Users are able to
+ change the theme, icons, and fonts used by applications easily."
+
+lxappearance_package() {
+	depends="desktop-file-utils"
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

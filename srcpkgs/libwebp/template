@@ -1,6 +1,7 @@
 # Template file for 'libwebp'
 pkgname=libwebp
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=1.6.0
 revision=3
 build_style=cmake
@@ -11,6 +12,19 @@ makedepends="giflib-devel libpng-devel libfreeglut-devel
  $(vopt_if tiff tiff-devel)"
 =======
 version=0.1.3
+=======
+version=0.2.1
+revision=3
+build_style=gnu-configure
+configure_args="--disable-static"
+hostmakedepends="automake libtool"
+makedepends="libjpeg-turbo-devel libpng-devel>=1.5.10 tiff-devel"
+subpackages="$pkgname-devel"
+short_desc="WebP image format"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://code.google.com/speed/webp/"
+license="BSD"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 distfiles="http://webp.googlecode.com/files/${pkgname}-${version}.tar.gz"
 build_style=gnu-configure
 revision=2
@@ -73,5 +87,20 @@ libsharpyuv-devel_package() {
 		vmove usr/include/webp/sharpyuv
 		vmove usr/lib/pkgconfig/libsharpyuv.pc
 		vmove usr/lib/libsharpyuv.so
+	}
+}
+
+libwebp-devel_package() {
+	depends="libjpeg-turbo-devel libpng-devel libwebp>=${version}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libwebp_package() {
+	pkg_install() {
+		vmove usr
 	}
 }

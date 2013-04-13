@@ -1,6 +1,7 @@
 # Template build file for 'libXxf86misc'.
 pkgname=libXxf86misc
 version=1.0.1
+<<<<<<< HEAD
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure
@@ -8,14 +9,22 @@ build_style=gnu_configure
 build_style=gnu-configure
 makedepends="pkg-config xproto xextproto xf86miscproto libX11-devel libXext-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+revision=5
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="xproto xextproto xf86miscproto libX11-devel libXext-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Library for the XFree86-Misc X extension"
 maintainer="Juan RP <xtraeme@gmail.com>"
+distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
 checksum=2122d67d49aaa06eeaeb3db173ea8a7048f3b52665e5135874bc5cadada91289
 long_desc="
  This library from the modular X.org project provides an interface
  to the XFree86-Misc extension which allows various server settings
  to be queried and changed dynamically."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 <<<<<<< HEAD
 Add_dependency build pkg-config
@@ -27,3 +36,21 @@ Add_dependency full libX11
 Add_dependency full libXext
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+libXxf86misc-devel_package() {
+	depends="xproto xextproto xf86miscproto libX11-devel libXxf86misc>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+		vmove usr/share
+	}
+}
+
+libXxf86misc_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

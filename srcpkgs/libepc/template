@@ -1,10 +1,17 @@
 # Template file for 'libepc'
 pkgname=libepc
 version=0.4.4
+<<<<<<< HEAD
 homepage="http://live.gnome.org/libepc"
 distfiles="${GNOME_SITE}/$pkgname/0.4/$pkgname-$version.tar.xz"
 build_style=gnu-configure
 makedepends="pkg-config intltool gtk+3-devel libsoup-devel avahi-glib-libs-devel avahi-ui-libs-devel"
+=======
+revision=2
+build_style=gnu-configure
+makedepends="pkg-config intltool gtk+3-devel libsoup-devel avahi-glib-libs-devel
+ avahi-ui-libs-devel gnutls-devel>=3.1.5 libuuid-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Easy Publish and Consume Library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="LGPL-2.1"
@@ -20,5 +27,23 @@ long_desc="
  You can use this library as a key/value store published to the network,
  using encryption, authentication and service discovery."
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel"
 
+=======
+libepc-devel_package() {
+	depends="gtk+3-devel avahi-glib-libs-devel libsoup-devel libepc>=${version}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/share/gtk-doc
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libepc_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

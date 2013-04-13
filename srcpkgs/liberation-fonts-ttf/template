@@ -33,9 +33,13 @@ long_desc="
  and Bitstream Vera Sans Mono)."
 
 
+<<<<<<< HEAD
 noarch=yes
 font_dirs="/usr/share/fonts/TTF"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+makedepends="font-util xbps-triggers>=0.58"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 
 do_install() {
 	vmkdir usr/share/fonts/TTF/liberation
@@ -48,4 +52,13 @@ do_install() {
 		etc/fonts/conf.avail 30-${pkgname}-sans.conf
 	vinstall ${FILESDIR}/30-0-liberation-serif.conf 644 \
 		etc/fonts/conf.avail 30-${pkgname}-serif.conf
+}
+
+liberation-fonts-ttf_package() {
+	depends="${makedepends}"
+	noarch="yes"
+	font_dirs="/usr/share/fonts/TTF"
+	pkg_install() {
+		vmove usr
+	}
 }

@@ -1,7 +1,11 @@
 # Template file for 'logrotate'
 pkgname=logrotate
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=3.22.0
+=======
+version=3.8.1
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 revision=1
 <<<<<<< HEAD
 build_style=gnu-configure
@@ -30,11 +34,20 @@ build_style=gnu_makefile
 make_install_args="PREFIX=$XBPS_DESTDIR/$pkgname-$version"
 =======
 makedepends="popt-devel"
+<<<<<<< HEAD
 fulldepends="gzip"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Log file rotation and periodic maintenance"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=21aa3dc830e8cc895ee4199d9325aa1e37cd3b525d0eaef400f66f6c7fc536dd
+=======
+short_desc="Log file rotation and periodic maintenance"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="https://fedorahosted.org/logrotate/"
+license="GPL-2"
+distfiles="https://fedorahosted.org/releases/l/o/$pkgname/${pkgname}-${version}.tar.gz"
+checksum=c12471e70ae8bc923bd5c4f25e8fd6483b68c6301f3cd79f7cfe37bc5b370169
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 long_desc="
  $pkgname performs periodic maintenance of log files. The most common
  action is rotating log files and archiving the old logs to one or more
@@ -43,6 +56,7 @@ long_desc="
  rotation to handle stopping, restarting, or sending signals to servers,
  and it automatically compresses logs when it archives them."
 
+<<<<<<< HEAD
 conf_files="/etc/logrotate.conf"
 
 <<<<<<< HEAD
@@ -65,4 +79,26 @@ post_install()
 	install -m744 ${FILESDIR}/logrotate.cron-daily \
 		${DESTDIR}/etc/cron.daily/logrotate
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+do_build() {
+	sed -i "s|CFLAGS = -Wall|CFLAGS += -Wall|" Makefile
+	sed -i 's|$(BASEDIR)/man|$(BASEDIR)/share/man|' Makefile
+	sed -i "s|/bin/\(g.*zip\)|/usr/bin/\1|g" config.h
+	make ${makejobs}
+}
+
+do_install() {
+	make PREFIX=${DESTDIR} install
+
+	vinstall ${FILESDIR}/logrotate.conf 644 etc
+	vinstall ${FILESDIR}/logrotate.cron-daily 744 etc/cron.daily logrotate
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+}
+
+logrotate_package() {
+	conf_files="/etc/logrotate.conf"
+	pkg_install() {
+		vmove etc
+		vmove usr
+	}
 }

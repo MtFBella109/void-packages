@@ -1,6 +1,7 @@
 # Template file for 'libproxy'
 pkgname=libproxy
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=0.5.11
 revision=1
 build_style=meson
@@ -40,6 +41,14 @@ configure_args="--without-gnome --without-kde --without-webkit
 =======
 makedepends="pkg-config python cmake"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+version=0.4.10
+revision=2
+build_style=cmake
+configure_args="-DWITH_GNOME=0 -DWITH_KDE4=0 -DWITH_MOZJS=0 -DWITH_NM=0
+ -DWITH_PERL=0 -DWITH_PYTHON=1 -DWITH_WEBKIT=0"
+hostmakedepends="pkg-config python cmake"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="A library handling all the details of proxy configuration"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=59ded160b3547d29e37cc9d06359f7f37d94112214e4532430cd65e704c1339a
@@ -56,6 +65,7 @@ long_desc="
     * a standard way of dealing with proxy settings across all scenarios
     * a sublime sense of joy and accomplishment"
 
+<<<<<<< HEAD
 subpackages="$pkgname-devel $pkgname-python"
 <<<<<<< HEAD
 Add_dependency build pkg-config
@@ -65,3 +75,28 @@ Add_dependency run glibc
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+libproxy-devel_package() {
+	depends="libproxy>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/share
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libproxy-python_package() {
+	depends="libproxy>=${version} python"
+	short_desc+=" -- python bindings"
+	pkg_install() {
+		vmove "usr/lib/python*"
+	}
+}
+
+libproxy_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

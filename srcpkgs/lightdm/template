@@ -1,7 +1,12 @@
 # Template file for 'lightdm'
 pkgname=lightdm
+<<<<<<< HEAD
 version=1.32.0
 revision=7
+=======
+version=1.4.0
+revision=4
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 <<<<<<< HEAD
 build_helper="gir"
@@ -16,6 +21,7 @@ makedepends="dbus-glib-devel libxklavier-devel libxml2-devel
 depends="dbus accountsservice virtual?lightdm-greeter"
 =======
 configure_args="--with-greeter-session=lightdm-gtk-greeter
+<<<<<<< HEAD
 --with-greeter-user=lightdm --disable-static --disable-tests"
 depends="accountsservice"
 makedepends="pkg-config intltool dbus-glib-devel libxklavier-devel libxml2-devel qt-devel gtk+3-devel libxcb-devel libXdmcp-devel pam-devel vala-devel gobject-introspection"
@@ -40,6 +46,26 @@ build_options="gir"
 build_options_default="gir"
 =======
 subpackages="liblightdm-gobject liblightdm-qt lightdm-devel"
+=======
+ --with-greeter-user=lightdm --disable-static --disable-tests"
+short_desc="Light Display Manager"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3, LGPL-3"
+homepage="https://launchpad.net/lightdm"
+distfiles="https://launchpad.net/lightdm/1.4/$version/+download/$pkgname-$version.tar.gz"
+checksum=3486a9f828864a78d452696cf6fef6e1dec2f4ef92a72e90ab37edf9a0824c43
+long_desc="
+ An X display manager that:
+  * Has a lightweight codebase
+  * Is standards compliant (PAM, ConsoleKit, etc)
+  * Has a well defined interface between the server and user interface
+  * Fully themeable (easiest with the webkit interface)
+  * Cross-desktop (greeters can be written in any toolkit)"
+
+makedepends="pkg-config intltool dbus-glib-devel libxklavier-devel libxml2-devel
+ qt-devel gtk+3-devel libxcb-devel libXdmcp-devel pam-devel vala-devel
+ gobject-introspection itstool gnome-icon-theme dbus"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 
 
 
@@ -90,5 +116,51 @@ lightdm-devel_package() {
 			vmove usr/share/vala
 			vmove usr/share/gir-1.0
 		fi
+	}
+}
+
+liblightdm-gobject_package() {
+	short_desc="${short_desc} - GObject support library"
+	pkg_install() {
+		vmove "usr/lib/liblightdm-gobject*.so*"
+		vmove usr/lib/girepository-1.0
+	}
+}
+
+liblightdm-qt_package() {
+	short_desc="${short_desc} - QT support library"
+	pkg_install() {
+		vmove "usr/lib/liblightdm-qt*.so*"
+	}
+}
+
+lightdm-devel_package() {
+	depends="libglib-devel liblightdm-gobject-${version}_${revision}
+		liblightdm-qt-${version}_${revision}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share/gtk-doc
+		vmove usr/share/vala
+		vmove usr/share/gir-1.0
+	}
+}
+
+lightdm_package() {
+	conf_files="
+		/etc/lightdm/keys.conf
+		/etc/lightdm/lightdm.conf
+		/etc/lightdm/users.conf
+		/etc/pam.d/lightdm
+		/etc/pam.d/lightdm-autologin"
+	system_accounts="lightdm"
+	lightdm_homedir="/var/cache/lightdm"
+	systemd_services="lightdm.service off"
+	make_dirs="/var/cache/lightdm 0755 lightdm lightdm"
+	depends="gnome-icon-theme dbus accountsservice upower"
+	pkg_install() {
+		vmove etc
+		vmove usr
 	}
 }

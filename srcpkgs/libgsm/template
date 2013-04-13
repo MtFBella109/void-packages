@@ -1,5 +1,6 @@
 # Template file for 'libgsm'
 pkgname=libgsm
+<<<<<<< HEAD
 version=1.0.22
 revision=2
 short_desc="GSM 06.10 lossy speech compression"
@@ -8,12 +9,30 @@ license="TU-Berlin-2.0"
 homepage="http://www.quut.com/gsm/"
 distfiles="http://www.quut.com/gsm/gsm-${version}.tar.gz"
 checksum=f0072e91f6bb85a878b2f6dbf4a0b7c850c4deb8049d554c65340b3bf69df0ac
+=======
+version=1.0.13
+wrksrc=gsm-1.0-pl13
+revision=7
+homepage="http://www.quut.com/gsm/"
+distfiles="http://www.mangler.org/downloads/${pkgname}-${version}.tar.gz"
+short_desc="GSM 06.10 lossy speech compression"
+maintainer="davehome <davehome@redthumb.info.tm>"
+license="BSD-style"
+checksum=52c518244d428c2e56c543b98c9135f4a76ff780c32455580b793f60a0a092ad
+long_desc="
+ GSM (Global System for Mobile communications) is a cellular phone system
+ standard popular outside the USA.
+
+ GSM includes a codec, often just referred to as the GSM when discussing
+ codecs."
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 
 do_build() {
 	make CC=$CC LD=$CC AR=$AR CCFLAGS="$CFLAGS"
 }
 
 do_install() {
+<<<<<<< HEAD
 	vmkdir usr/bin
 	vmkdir usr/lib
 	vmkdir usr/include/gsm
@@ -41,5 +60,33 @@ libgsm-devel_package() {
 		vmove usr/lib/*.a
 		vmove usr/lib/*.so
 		vmove usr/share/man/man3
+=======
+	vmkdir usr/include/gsm
+	vmkdir usr/lib
+	vmkdir usr/bin
+
+	install -m755 bin/* ${DESTDIR}/usr/bin
+	install -m755 lib/*.so ${DESTDIR}/usr/lib
+	install -m644 lib/*.a ${DESTDIR}/usr/lib
+	install -m644 inc/* ${DESTDIR}/usr/include/gsm
+
+	rm -f ${DESTDIR}/usr/include/gsm/*.orig
+	cd ${DESTDIR}/usr/include/gsm
+	ln -s gsm/gsm.h
+}
+
+libgsm-devel_package() {
+	depends="libgsm>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.a"
+	}	
+}
+
+libgsm_package() {
+	pkg_install() {
+		vmove usr
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }

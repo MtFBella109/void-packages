@@ -1,8 +1,13 @@
 # Template file for 'libnfsidmap'
 pkgname=libnfsidmap
+<<<<<<< HEAD
 version=0.24
 homepage="http://www.citi.umich.edu/projects/nfsv4/linux/"
 distfiles="$homepage/$pkgname/$pkgname-$version.tar.gz"
+=======
+version=0.25
+revision=2
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 configure_args="--disable-static"
 makedepends="libldap-devel"
@@ -16,4 +21,18 @@ long_desc="
  When NFSv4 is using AUTH_GSS (which currently only supports Kerberos v5), the
  NFSv4 server mapping functions MUST use secure communications."
 
-subpackages="$pkgname-devel"
+libnfsidmap-devel_package() {
+	depends="libldap-devel libnfsidmap>=${version}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share/man/man3
+	}
+}
+
+libnfsidmap_package() {
+	pkg_install() {
+		vmove usr
+	}
+}

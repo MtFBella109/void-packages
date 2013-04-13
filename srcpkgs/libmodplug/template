@@ -1,7 +1,12 @@
 # Template file for 'libmodplug'
 pkgname=libmodplug
+<<<<<<< HEAD
 version=0.8.9.0
 revision=1
+=======
+version=0.8.8.3
+revision=3
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 configure_args="--enable-static"
 short_desc="A MOD playing library"
@@ -9,6 +14,7 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 homepage="http://modplug-xmms.sourceforge.net/"
 license="Public domain"
 distfiles="${SOURCEFORGE_SITE}/modplug-xmms/$pkgname-$version.tar.gz"
+<<<<<<< HEAD
 checksum=457ca5a6c179656d66c01505c0d95fafaead4329b9dbaa0f997d00a3508ad9de
 
 libmodplug-devel_package() {
@@ -19,5 +25,28 @@ libmodplug-devel_package() {
 		vmove "usr/lib/*.a"
 		vmove "usr/lib/*.so"
 		vmove usr/lib/pkgconfig
+=======
+checksum=0d52a259e85c4f50491d66128d7c476bc67a44d3930b965014954289c0c3f4a5
+long_desc="
+ libmodplug renders mod music files as raw audio data, for playing or
+ conversion. libmodplug is based on the fast and high quality mod playing code
+ written and released to the public domain by Olivier Lapicque. mod, .s3m, .it,
+ .xm, and a number of lesser-known formats are supported. Optional features
+ include high-quality resampling, bass expansion, surround and reverb."
+
+libmodplug-devel_package() {
+	depends="libmodplug>=${version}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.a" 
+		vmove usr/lib/pkgconfig 
+	}
+}
+
+libmodplug_package() {
+	pkg_install() {
+		vmove usr
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }

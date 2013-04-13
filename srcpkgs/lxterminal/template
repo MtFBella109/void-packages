@@ -1,5 +1,6 @@
 # Template file for 'lxterminal'
 pkgname=lxterminal
+<<<<<<< HEAD
 version=0.4.1
 revision=1
 <<<<<<< HEAD
@@ -10,14 +11,32 @@ makedepends="gtk+3-devel vte3-devel"
 depends="desktop-file-utils"
 =======
 makedepends="pkg-config intltool gtk+-devel vte-devel"
+=======
+version=0.1.11
+revision=2
+build_style=gnu-configure
+hostmakedepends="pkg-config intltool"
+makedepends="gtk+-devel vte-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 fulldepends="desktop-file-utils"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="LXDE Terminal emulator"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://lxde.org/"
+<<<<<<< HEAD
 distfiles="https://github.com/lxde/lxterminal/archive/refs/tags/${version}.tar.gz"
 checksum=d5da0646e20ad2be44ef69a9d620be5f1ec43b156dc585ebe203dd7b05c31d88
+=======
+license="GPL2"
+maintainer="Juan RP <xtraeme@gmail.com>"
+distfiles="${SOURCEFORGE_SITE}/lxde/$pkgname-$version.tar.gz"
+checksum=f495166b308a96e8c30c8892b33ab163f3865253a9bbd4bdac462f974fda7253
+long_desc="
+ LXterminal is a VTE-based terminal emulator from LXDE project which
+ supports multiple tabs. It is completely desktop-independent and does not
+ have any unnecessary dependencies.
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 
 <<<<<<< HEAD
 pre_configure() {
@@ -27,6 +46,14 @@ pre_configure() {
  In order to reduce memory usage and increase the performance, all instances
  of the terminal are sharing a single process."
 
+<<<<<<< HEAD
 
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+lxterminal_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

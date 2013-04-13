@@ -1,5 +1,6 @@
 # Template build file for 'libXevie'.
 pkgname=libXevie
+<<<<<<< HEAD
 version=1.0.2
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
@@ -9,13 +10,26 @@ build_style=gnu-configure
 revision=2
 makedepends="pkg-config xproto xextproto evieext libX11-devel libXext-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+version=1.0.3
+revision=3
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="xproto xextproto evieext libX11-devel libXext-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="X Event Interceptor Library"
 maintainer="Juan RP <xtraeme@gmail.com>"
+<<<<<<< HEAD
 checksum=ff70b81ad145932db2d206735cefcb698dadad241001df7ba6b97e8081d174da
+=======
+distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+checksum=c00b382123e58f595b3cecaa50471ebec534660e5f92ae46d94266345844fd73
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 long_desc="
  This package contains the library and header files for the X Event
  Interceptor Library. This is from the modular X.org project."
  
+<<<<<<< HEAD
 <<<<<<< HEAD
 subpackages="devel"
 Add_dependency build pkg-config
@@ -28,3 +42,21 @@ Add_dependency full libXext
 =======
 subpackages="$pkgname-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+libXevie-devel_package() {
+	depends="xproto xextproto evieext libX11-devel libXext-devel libXevie>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.a"
+		vmove usr/share
+	}
+}
+
+libXevie_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

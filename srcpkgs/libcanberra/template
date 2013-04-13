@@ -1,7 +1,11 @@
 # Template file for 'libcanberra'
 pkgname=libcanberra
 version=0.30
+<<<<<<< HEAD
 revision=15
+=======
+revision=2
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 <<<<<<< HEAD
 configure_args="--enable-alsa --enable-null --disable-lynx
@@ -9,6 +13,7 @@ configure_args="--enable-alsa --enable-null --disable-lynx
 hostmakedepends="gettext pkg-config gtk-doc"
 makedepends="gtk+3-devel libvorbis-devel libltdl-devel
  gstreamer1-devel alsa-lib-devel tdb-devel pulseaudio-devel
+<<<<<<< HEAD
  eudev-libudev-devel vala-devel"
 =======
 configure_args="--enable-alsa --enable-null
@@ -17,6 +22,9 @@ configure_args="--enable-alsa --enable-null
 --with-systemdsystemunitdir=/lib/systemd/system"
 makedepends="pkg-config gtk+-devel gtk+3-devel libvorbis-devel libltdl-devel gstreamer-devel alsa-lib-devel tdb-devel pulseaudio-devel libudev-devel vala-devel GConf-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+ libudev-devel>=183 vala-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="XDG Sound Theme and Name Specification library implementation"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -61,7 +69,26 @@ libcanberra-devel_package() {
    3. libcanberra-gtk-module: a Gtk+ module that uses libcanberra-gtk to
       trigger input feedback event sounds"
 
+<<<<<<< HEAD
 gconf_schemas="libcanberra.schemas"
 subpackages="$pkgname-devel"
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+libcanberra-devel_package() {
+	depends="gtk+-devel gtk+3-devel ${sourcepkg}-${version}_${revision}"
+	short_desc="${sourcepkg} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share/gtk-doc
+		vmove usr/share/vala
+	}
+}
+
+libcanberra_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

@@ -1,5 +1,6 @@
 # Template file for 'lxpanel'
 pkgname=lxpanel
+<<<<<<< HEAD
 version=0.11.1
 revision=2
 build_style=gnu-configure
@@ -14,10 +15,19 @@ depends="lxmenu-data"
 makedepends="pkg-config intltool alsa-lib-devel gtk+-devel menu-cache-devel libwnck2-devel wireless_tools-devel"
 fulldepends="lxmenu-data>=0.1.2"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+version=0.5.9
+revision=4
+build_style=gnu-configure
+hostmakedepends="pkg-config intltool"
+makedepends="alsa-lib-devel gtk+-devel menu-cache-devel libwnck2-devel
+ wireless_tools-devel lxmenu-data>=0.1.2"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="LXDE Standard panel"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://lxde.org/"
+<<<<<<< HEAD
 distfiles="https://github.com/lxde/lxpanel/archive/refs/tags/${version}.tar.gz"
 checksum=24334dde6ed37d32bb021f902dbd54a1e6cdd01f35a778d80fcd3acd23a0e93b
 
@@ -40,3 +50,32 @@ lxpanel-devel_package() {
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+license="GPL2"
+maintainer="Juan RP <xtraeme@gmail.com>"
+distfiles="${SOURCEFORGE_SITE}/lxde/$pkgname-$version.tar.gz"
+checksum=2bde7d68b5a7136b205fcd497f70a67a0610fe04785d4469b3a0f9c7f30b729e
+long_desc="
+ The LXPanel, is the standard panel of LXDE. The desktop panel can generate
+ menu for installed applications automatically from *.desktop files. It can
+ be configured from GUI preference dialog, and there is no need to edit config
+ files. The component provides a Run dialog with autocompletion."
+
+CFLAGS="-lgmodule-2.0"
+
+lxpanel-devel_package() {
+	depends="menu-cache-devel lxpanel>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
+
+lxpanel_package() {
+	depends="lxmenu-data>=0.1.2"
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

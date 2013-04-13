@@ -1,6 +1,7 @@
 # Template file for 'libsigc++'
 pkgname=libsigc++
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=2.12.1
 revision=1
 build_style=meson
@@ -9,11 +10,16 @@ meson_builddir="meson_build"
 =======
 version=2.2.10
 distfiles="${GNOME_SITE}/$pkgname/2.2/$pkgname-$version.tar.bz2"
+=======
+version=2.2.11
+revision=2
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 configure_args="--disable-documentation"
 makedepends="libstdc++-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Type-safe callback system for C++ programs"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://libsigcplusplus.github.io/libsigcplusplus/"
@@ -34,14 +40,46 @@ pre_configure() {
 libsigc++-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
+=======
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://libsigc.sourceforge.net/"
+license="LGPL-2.1"
+distfiles="${GNOME_SITE}/${pkgname}/2.2/${pkgname}-${version}.tar.xz"
+checksum=9834045f74f56752c2c6b3cdc195c30ab8314ad22dc8e626d6f67f940f1e4957
+long_desc="
+ libsigc++ implements a full callback system for use in widget
+ libraries, abstract interfaces, and general programming. Originally
+ part of the Gtk-- widget set, libsigc++ is now a separate library to
+ provide for more general use. It is the most complete library of its
+ kind with the ability to connect an abstract callback to a class
+ method, function, or function object. It contains adaptor classes for
+ connection of dissimilar callbacks and has an ease of use unmatched by
+ other C++ callback libraries. Libsigc++ is licensed under the GNU
+ Library General Public License, LGPL."
+
+libsigc++-devel_package() {
+	depends="libsigc++>=${version}"
+	short_desc="${short_desc} - development files"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	pkg_install() {
 		vmove usr/include
 		vmove usr/lib/pkgconfig
 		vmove usr/lib/sigc++-2.0
 		vmove "usr/lib/*.a"
+<<<<<<< HEAD
 		vmove "usr/lib/*.so"
 	}
 }
 =======
 subpackages="$pkgname-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+	}
+}
+
+libsigc++_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

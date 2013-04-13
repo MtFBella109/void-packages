@@ -1,14 +1,26 @@
 # Template file for 'libldap'
 pkgname=libldap
+<<<<<<< HEAD
 version=2.4.31
+=======
+version=2.4.33
+revision=2
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 wrksrc="openldap-${version}"
 homepage="http://www.openldap.org"
 distfiles="ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/openldap-$version.tgz"
 build_style=gnu-configure
 configure_args="--enable-dynamic --enable-proctitle --with-tls
+<<<<<<< HEAD
 --enable-ipv6 --enable-local --with-cyrus-sasl --with-threads
 --enable-syslog --disable-slapd"
 makedepends="pkg-config libsasl-devel openssl-devel groff"
+=======
+ --enable-ipv6 --enable-local --with-cyrus-sasl --with-threads
+ --enable-syslog --disable-slapd --disable-static"
+hostmakedepends="pkg-config groff"
+makedepends="libsasl-devel openssl-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="OpenLDAP libraries"
 license="OpenLDAP License v2.8 -- BSD alike"
 maintainer="Juan RP <xtraeme@gmail.com>"
@@ -17,10 +29,13 @@ long_desc="
  These are the run-time libraries for the OpenLDAP (Lightweight Directory
  Access Protocol) servers and clients."
 
+<<<<<<< HEAD
 conf_files="/etc/openldap/ldap.conf" 
 subpackages="libldap-devel"
 
 
+=======
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 post_install() {
 	# Remove unused stuff.
 	rm -rf ${DESTDIR}/usr/bin
@@ -31,4 +46,21 @@ post_install() {
 	mv ${DESTDIR}/usr/share/man/ldap.conf.5 ${DESTDIR}/usr/share/man/man5
 	# License	
 	vinstall LICENSE 644 usr/share/licenses/$pkgname
+}
+
+libldap-devel_package() {
+	depends="openssl-devel libsasl-devel ${sourcepkg}-${version}_${revision}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/share/man/man3
+	}
+}
+
+libldap_package() {
+	conf_files="/etc/openldap/ldap.conf" 
+	pkg_install() {
+		vmove etc
+		vmove usr
+	}
 }

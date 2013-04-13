@@ -1,5 +1,6 @@
 # Template file for 'libraw'
 pkgname=libraw
+<<<<<<< HEAD
 version=0.21.4
 revision=1
 build_style=gnu-configure
@@ -9,6 +10,15 @@ makedepends="jasper-devel lcms2-devel libgomp-devel"
 =======
 makedepends="pkg-config lcms2-devel jasper-devel libgomp-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+version=0.14.7
+revision=2
+wrksrc=LibRaw-${version}
+build_style=gnu-configure
+configure_args="--disable-static"
+hostmakedepends="pkg-config"
+makedepends="lcms2-devel jasper-devel libgomp-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Raw image decoder library"
 maintainer="Daniel Martinez <danielmartinez@cock.li>"
 license="LGPL-2.1-only, CDDL-1.0"
@@ -18,6 +28,7 @@ distfiles="https://www.libraw.org/data/LibRaw-${version}.tar.gz"
 checksum=6be43f19397e43214ff56aab056bf3ff4925ca14012ce5a1538a172406a09e63
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 pre_configure() {
 	autoreconf -fi
 }
@@ -26,6 +37,8 @@ subpackages="${pkgname}-devel ${pkgname}-progs"
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
+=======
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 post_install() {
 	vmkdir usr/share/licenses
 	rm -f ${DESTDIR}/usr/share/doc/libraw/Changelog.txt
@@ -33,6 +46,7 @@ post_install() {
 }
 
 libraw-devel_package() {
+<<<<<<< HEAD
 	depends="${makedepends} libraw>=${version}_${revision}"
 	short_desc+=" - development files"
 	pkg_install() {
@@ -40,12 +54,32 @@ libraw-devel_package() {
 		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.a"
 		vmove "usr/lib/*.so"
+=======
+	depends="lcms2-devel jasper-devel libraw>=${version}"
+	short_desc="${short_desc} - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	}
 }
 
 libraw-progs_package() {
+<<<<<<< HEAD
 	short_desc+=" - applications"
+=======
+	short_desc="${short_desc} - applications"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	pkg_install() {
 		vmove usr/bin
 	}
 }
+<<<<<<< HEAD
+=======
+
+libraw_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

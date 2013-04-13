@@ -1,5 +1,6 @@
 # Template file for 'libdvdnav'
 pkgname=libdvdnav
+<<<<<<< HEAD
 version=6.1.1
 revision=1
 build_style=gnu-configure
@@ -31,7 +32,48 @@ libdvdnav-devel_package() {
 =======
 subpackages="$pkgname-devel"
 
+=======
+version=4.2.0
+revision=2
+build_style=gnu-configure
+hostmakedepends="automake"
+makedepends="libdvdread-devel"
+short_desc="Library to navigate DVDs"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+homepage="http://dvdnav.mplayerhq.hu/"
+distfiles="http://dvdnav.mplayerhq.hu/releases/$pkgname-$version.tar.bz2"
+checksum=8c971b08276c89ddcecd26fc44204460fd250dc57346f03476d3077188c47550
+long_desc="
+ libdvdnav is a library that allows easy use of sophisticated DVD navigation
+ features such as DVD menus, multiangle playback and even interactive DVD
+ games. All this functionality is provided through a simple API which
+ provides the DVD playback as a single logical stream of blocks, intermitted
+ by special dvdnav events to report certain conditions. The main usage of
+ libdvdnav is a loop regularly calling a function to get the next block,
+ surrounded by additional calls to tell the library of user interaction.
+ The whole DVD virtual machine and internal playback states are completely
+ encapsulated."
+
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 pre_configure() {
 	./autogen.sh
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+}
+
+libdvdnav-devel_package() {
+	depends="libdvdread-devel libdvdnav>=${version}"
+	short_desc+=" -- development files"
+	pkg_install() {
+		vmove usr/bin
+		vmove usr/include
+		vmove usr/share
+		vmove usr/lib/pkgconfig
+	}
+}
+
+libdvdnav_package() {
+	pkg_install() {
+		vmove usr
+	}
 }

@@ -1,16 +1,25 @@
 # Template file for 'libgnomecanvas'
 pkgname=libgnomecanvas
 version=2.30.3
+<<<<<<< HEAD
 revision=10
+=======
+revision=6
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 <<<<<<< HEAD
 configure_args="--disable-static"
+<<<<<<< HEAD
 hostmakedepends="pkg-config intltool glib-devel"
 makedepends="gtk+-devel libart-devel"
 =======
 revision=3
 makedepends="pkg-config intltool gtk+-devel libart-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="pkg-config intltool"
+makedepends="gtk+-devel libart-devel"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="GNOME Canvas library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.0-or-later"
@@ -18,6 +27,7 @@ homepage="http://gnome.org/"
 distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.bz2"
 checksum=859b78e08489fce4d5c15c676fec1cd79782f115f516e8ad8bed6abcb8dedd40
 
+<<<<<<< HEAD
 post_patch() {
 	vsed -i -e 's/DATADIRNAME=lib/DATADIRNAME=share/' \
 		-e 's,localedir=.*eval echo.*,localedir=/usr/share/locale,' \
@@ -27,11 +37,24 @@ post_patch() {
 <<<<<<< HEAD
 libgnomecanvas-devel_package() {
 	depends="gtk+-devel libart-devel ${sourcepkg}>=${version}_${revision}"
+=======
+ The GNOME canvas is an engine for structured graphics that offers a rich
+ imaging model, high performance rendering, and a powerful, high-level API.
+ It offers a choice of two rendering back-ends, one based on Xlib for
+ extremely fast display, and another based on Libart, a sophisticated,
+ antialiased, alpha-compositing engine. Applications have a choice between
+ the Xlib imaging model or a superset of the PostScript imaging model,
+ depending on the level of graphic sophistication required."
+
+libgnomecanvas-devel_package() {
+	depends="gtk+-devel libart-devel libgnomecanvas-${version}_${revision}"
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 	short_desc+=" -- development files"
 	pkg_install() {
 		vmove usr/include
 		vmove usr/lib/pkgconfig
 		vmove usr/share/gtk-doc
+<<<<<<< HEAD
 		vmove "usr/lib/*.so"
 	}
 }
@@ -39,3 +62,13 @@ libgnomecanvas-devel_package() {
 subpackages="$pkgname-devel"
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+	}
+}
+
+libgnomecanvas_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

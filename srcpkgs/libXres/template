@@ -32,11 +32,16 @@ libXres-devel_package() {
 =======
 # Template build file for 'libXres'.
 pkgname=libXres
+<<<<<<< HEAD
 version=1.0.4
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure
 =======
+=======
+version=1.0.6
+revision=2
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 makedepends="pkg-config resourceproto libX11-devel libXext-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
@@ -49,6 +54,7 @@ long_desc="
 
  X-Resource is an extension that allows a client to query the X
  server about its usage of various resources."
+<<<<<<< HEAD
  
 subpackages="$pkgname-devel"
 <<<<<<< HEAD
@@ -62,3 +68,22 @@ Add_dependency full libXext
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+
+libXres-devel_package() {
+	depends="xproto libXext-devel libXres>=${version}"
+	short_desc="${short_desc} -- development files"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.a"
+		vmove usr/lib/pkgconfig
+		vmove usr/share
+	}
+}
+
+libXres_package() {
+	pkg_install() {
+		vmove usr
+	}
+}
+>>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
