@@ -69,3 +69,12 @@ post_install()
 {
 	rm -rf ${DESTDIR}/var/log
 }
+
+xorg-server_package() {
+	# See hw/xfree86/common/xf86Module.h. Only care for the major version.
+	provides="xserver-abi-extension-8_1 xserver-abi-input-20_1 xserver-abi-video-15_1"
+	depends="xkeyboard-config"
+	pkg_install() {
+		vmove all
+	}
+}
