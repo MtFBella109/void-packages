@@ -1,48 +1,18 @@
-<<<<<<< HEAD
-# Template file for 'xf86-video-cirrus'
-pkgname=xf86-video-cirrus
-version=1.6.0
-revision=1
-build_style=gnu-configure
-hostmakedepends="pkg-config"
-makedepends="xorg-server-devel"
-depends="virtual?xserver-abi-video-25_1"
-short_desc="Xorg Cirrus Logic video driver"
-maintainer="Orphaned <orphan@voidlinux.org>"
-license="MIT"
-homepage="http://xorg.freedesktop.org"
-distfiles="${XORG_SITE}/driver/${pkgname}-${version}.tar.xz"
-checksum=0ef3fa0083de3d9a040f11b3af38598d8405f1165b908fdd6712c30038326401
-lib32disabled=yes
-
-LDFLAGS="-Wl,-z,lazy"
-CFLAGS="-fcommon -Wno-pointer-arith -Wno-discarded-qualifiers -Wno-unused-label"
-
-post_install() {
-	vlicense COPYING
-}
-=======
 # Template build file for 'xf86-video-cirrus'.
 pkgname=xf86-video-cirrus
 version=1.3.2
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
-<<<<<<< HEAD
-build_style=gnu_configure
-=======
 build_style=gnu-configure
 depends="xorg-server"
 makedepends="xorg-server-devel"
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg Cirrus Logic video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
-checksum=529a98a42c94ba5e1b9269e6f7b32a9e76cfd2d4728df08aeba615df8b28ca1a
-long_desc="
- This is the video driver for Cirrus Logic video cards for
- the Xorg X11 server."
+distfiles="${XORG_SITE}/driver/${pkgname}-${version}.tar.bz2"
+checksum=3361e1a65d9b84c464752fd612bdf6087622c6dd204121715366a170e5c3ccd7
 
-<<<<<<< HEAD
-Add_dependency full glibc
-Add_dependency full xorg-server
->>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
-=======
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+xf86-video-cirrus_package() {
+	depends="xserver-abi-video-15_1"
+	pkg_install() {
+		vmove all
+	}
+}
