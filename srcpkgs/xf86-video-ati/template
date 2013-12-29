@@ -1,55 +1,36 @@
-<<<<<<< HEAD
-# Template file for 'xf86-video-ati'
-pkgname=xf86-video-ati
-version=22.0.0
-revision=1
-build_style=gnu-configure
-hostmakedepends="pkg-config"
-makedepends="xorgproto eudev-libudev-devel libpciaccess-devel
- libdrm-devel pixman-devel MesaLib-devel xorg-server-devel"
-depends="virtual?xserver-abi-video-25_1 mesa-dri"
-short_desc="Xorg ATI Radeon video driver"
-maintainer="Orphaned <orphan@voidlinux.org>"
-license="MIT"
-homepage="https://wiki.freedesktop.org/xorg"
-distfiles="${XORG_SITE}/driver/xf86-video-ati-${version}.tar.gz"
-checksum=75f2d4ed4d1041ae9eb2a11816b919e18aee9a25db1556b3d938fff31d3c86f3
-
-lib32disabled=yes
-CFLAGS="-fcommon"
-LDFLAGS="-Wl,-z,lazy"
-
-case "$XBPS_TARGET_MACHINE" in
-	armv6*) broken="no dri.h";;
-esac
-
-post_install() {
-	vlicense COPYING
-}
-=======
 # Template build file for 'xf86-video-ati'.
 pkgname=xf86-video-ati
-version=6.12.4
-distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
-<<<<<<< HEAD
-build_style=gnu_configure
-=======
 build_style=gnu-configure
 depends="xorg-server"
 makedepends="pkg-config xf86driproto libudev-devel libpciaccess-devel libdrm-devel pixman-devel xorg-server-devel MesaLib-devel"
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg ATI Radeon video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=cfde066a7087a19b624f79e95cb9a6c97a847b8802cf38d4ae6022758bf338f6
 long_desc="
  This is the video driver for ATI Radeon cards for the Xorg X11 server."
 
-<<<<<<< HEAD
-Add_dependency full glibc
-Add_dependency full xorg-server
->>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
-=======
 replaces="${pkgname}>=0"
 
 
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+version=7.2.0
+revision=3
+build_style=gnu-configure
+configure_args="--enable-glamor"
+hostmakedepends="pkg-config"
+makedepends="xf86driproto libudev-devel>=183 libpciaccess-devel
+ libdrm-devel pixman-devel MesaLib-devel>=9.0.2 glamor-egl-devel
+ xorg-server-devel>=1.15<1.16"
+short_desc="Xorg ATI Radeon video driver"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://xorg.freedesktop.org"
+license="MIT"
+distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+checksum=f30f5efdc8d7d18d06eda7ef2f91a8b7290f1cfbf6ff26362cd47ab8969daec4
+
+xf86-video-ati_package() {
+	replaces="xf86-video-ati>=0"
+	depends="xserver-abi-video-15_1 mesa-ati-dri"
+	pkg_install() {
+		vmove all
+	}
+}
