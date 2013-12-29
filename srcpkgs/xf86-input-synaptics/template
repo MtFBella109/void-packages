@@ -1,45 +1,10 @@
-<<<<<<< HEAD
-# Template file for 'xf86-input-synaptics'
-pkgname=xf86-input-synaptics
-version=1.10.0
-revision=1
-build_style=gnu-configure
-hostmakedepends="pkg-config"
-makedepends="libX11-devel libXtst-devel libevdev-devel
- pixman-devel libpciaccess-devel xorg-server-devel"
-depends="virtual?xserver-abi-input-24_1"
-short_desc="Xorg synaptics touchpad input driver"
-maintainer="Orphaned <orphan@voidlinux.org>"
-license="MIT"
-homepage="http://www.x.org/"
-distfiles="${XORG_SITE}/driver/${pkgname}-${version}.tar.gz"
-checksum=4d0538454c636c763731f601db0ef5164e089fc6eb0988fe6bcd53e4b5d377da
-lib32disabled=yes
-
-post_install() {
-	vlicense COPYING
-}
-
-xf86-input-synaptics-devel_package() {
-	lib32disabled=yes
-	short_desc+=" - development files"
-	pkg_install() {
-		vmove usr/include
-		vmove usr/lib/pkgconfig
-	}
-}
-=======
 # Template build file for 'xf86-input-synaptics'.
 pkgname=xf86-input-synaptics
 version=1.2.0
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
-<<<<<<< HEAD
-build_style=gnu_configure
-=======
 build_style=gnu-configure
 depends="xorg-server"
 makedepends="libXtst-devel libX11-devel libXi-devel mtdev-devel pixman-devel libpciaccess-devel xorg-server-devel"
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xorg synaptics touchpad input driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=ddd5ad4c25ad2f2e46134272bf047522882deba8ac3ac04d5e11f8bd9718620c
@@ -47,11 +12,12 @@ long_desc="
  This is the synaptics input driver for the Xorg X11 server."
 
 subpackages="$pkgname-devel"
-<<<<<<< HEAD
-Add_dependency full glibc
-Add_dependency full xorg-server
->>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
-=======
 
 
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+
+xf86-input-synaptics_package() {
+	depends="xserver-abi-input-20_1"
+	pkg_install() {
+		vmove all
+	}
+}
