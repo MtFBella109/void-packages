@@ -1,19 +1,11 @@
 # Template file for 'xf86-input-wacom'
 pkgname=xf86-input-wacom
-<<<<<<< HEAD
-version=1.2.3
-revision=1
-build_style=meson
-hostmakedepends="pkg-config"
-makedepends="xorg-server-devel libXrandr-devel libXinerama-devel libXi-devel eudev-libudev-devel"
-depends="virtual?xserver-abi-input-24_1"
-=======
-version=0.14.0
-distfiles="${SOURCEFORGE_SITE}/linuxwacom/$pkgname-$version.tar.bz2"
+version=0.23.0
+revision=2
 build_style=gnu-configure
-depends="xorg-server"
-makedepends="xorg-server-devel libXrandr-devel libXinerama-devel libXi-devel"
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+configure_args="--with-xorg-conf-dir=/etc/X11/xorg.conf.d"
+hostmakedepends="pkg-config"
+makedepends="xorg-server-devel>=1.15<1.16 libXrandr-devel libXinerama-devel libXi-devel"
 short_desc="Xorg Wacom tablet input driver"
 maintainer="classabbyamp <void@placeviolette.net>"
 license="GPL-2.0-only"
@@ -22,19 +14,16 @@ distfiles="https://github.com/linuxwacom/xf86-input-wacom/releases/download/xf86
 checksum=70365826c3ca58cc81d98fab8f048f2c375e78c786111eb8a72a67a5721cb146
 lib32disabled=yes
 
-<<<<<<< HEAD
-xf86-input-wacom-devel_package() {
-	lib32disabled=yes
-	short_desc+=" - development files"
-	pkg_install() {
-		vmove usr/include
-		vmove usr/lib/pkgconfig
-	}
-=======
 subpackages="$pkgname-devel"
 
 
 post_install() {
 	vinstall ${FILESDIR}/70-wacom.rules 644 lib/udev/rules.d
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+}
+
+xf86-input-wacom_package() {
+	depends="xserver-abi-input-20_1"
+	pkg_install() {
+		vmove all
+	}
 }
