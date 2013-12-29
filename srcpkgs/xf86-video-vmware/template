@@ -1,49 +1,24 @@
-<<<<<<< HEAD
-# Template file for 'xf86-video-vmware'
-pkgname=xf86-video-vmware
-version=13.4.0
-revision=1
-archs="i686* x86_64*"
-build_style=gnu-configure
-configure_args="--enable-vmwarectrl-client"
-<<<<<<< HEAD
-hostmakedepends="pkg-config"
-makedepends="libdrm-devel MesaLib-devel xorg-server-devel"
-depends="virtual?xserver-abi-video-25_1 mesa-dri"
-short_desc="Modular Xorg VMware virtual video driver"
-maintainer="Orphaned <orphan@voidlinux.org>"
-license="MIT"
-homepage="http://xorg.freedesktop.org"
-distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.gz"
-checksum=d2667ab30350fb1c39393fc4b79ac33ef8b67d5d6cefeb6fb99b111758031b98
-
-lib32disabled=yes
-
-LDFLAGS="-Wl,-z,lazy"
-
-post_install() {
-	vlicense COPYING
-}
-=======
 # Template build file for 'xf86-video-vmware'.
 pkgname=xf86-video-vmware
-version=10.16.8
-revision=2
-distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
-build_style=gnu_configure
-=======
-depends="xorg-server MesaLib>=8.0.2_1"
-makedepends="pkg-config libdrm-devel MesaLib>=8.0.2_1 MesaLib-devel>=8.0.2_1 xorg-server-devel"
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+version=13.0.1
+revision=4
+only_for_archs="i686 x86_64"
+build_style=gnu-configure
+configure_args="--enable-vmwarectrl-client"
+hostmakedepends="automake libtool pkg-config xorg-util-macros"
+makedepends="libdrm-devel MesaLib-devel>=10.0.0_2 xorg-server-devel>=1.15<1.16"
 short_desc="Modular Xorg VMware virtual video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=956443948d94f7459b0056d8cb8ff2cd9fba4621d8b61f0257cb84469ea7da07
 long_desc="
  This is the VMware virtual video driver for the modular Xorg server."
-<<<<<<< HEAD
+pre_configure() {
+	autoreconf -fi
+}
 
-Add_dependency full glibc
-Add_dependency full xorg-server	">=1.7.1"
->>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
-=======
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+xf86-video-vmware_package() {
+	depends="xserver-abi-video-15_1 mesa-vmwgfx-dri"
+	pkg_install() {
+		vmove all
+	}
+}
