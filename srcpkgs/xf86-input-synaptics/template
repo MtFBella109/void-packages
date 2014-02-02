@@ -3,8 +3,10 @@ pkgname=xf86-input-synaptics
 version=1.2.0
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
 build_style=gnu-configure
-depends="xorg-server"
-makedepends="libXtst-devel libX11-devel libXi-devel mtdev-devel pixman-devel libpciaccess-devel xorg-server-devel"
+hostmakedepends="pkg-config"
+makedepends="libX11-devel libXtst-devel mtdev-devel
+ pixman-devel libpciaccess-devel xorg-server-devel>=1.15<1.16"
+depends="xserver-abi-input-20_1"
 short_desc="Xorg synaptics touchpad input driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=ddd5ad4c25ad2f2e46134272bf047522882deba8ac3ac04d5e11f8bd9718620c
@@ -14,10 +16,10 @@ long_desc="
 subpackages="$pkgname-devel"
 
 
-
-xf86-input-synaptics_package() {
-	depends="xserver-abi-input-20_1"
+xf86-input-synaptics-devel_package() {
+	short_desc+=" - development files"
 	pkg_install() {
-		vmove all
+		vmove usr/include
+		vmove usr/lib/pkgconfig
 	}
 }

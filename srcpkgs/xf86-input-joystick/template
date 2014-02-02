@@ -3,19 +3,23 @@ pkgname=xf86-input-joystick
 version=1.4.99.2
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
 build_style=gnu-configure
-depends="glibc xorg-server"
-makedepends="xorg-server-devel"
+hostmakedepends="pkg-config"
+makedepends="xorg-server-devel>=1.15<1.16"
+depends="xserver-abi-input-20_1"
 short_desc="Joystick Input driver for Xorg"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=7224e93a8560362d454a104e8bb481213dcb559b41516c7b883c0881e25252bb
 long_desc="
  This is the Joystick Input driver for the Xorg X11 server."
 
-subpackages="$pkgname-devel"
+post_install() {
+	vinstall ${FILESDIR}/50-joystick.conf 644 etc/X11/xorg.conf.d
+}
 
-xf86-input-joystick_package() {
-	depends="xserver-abi-input-20_1"
+xf86-input-joystick-devel_package() {
+	short_desc+=" - development files"
 	pkg_install() {
-		vmove all
+		vmove usr/include
+		vmove usr/lib/pkgconfig
 	}
 }

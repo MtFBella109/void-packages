@@ -1,20 +1,18 @@
 # Template build file for 'xf86-input-vmmouse'.
 pkgname=xf86-input-vmmouse
-version=12.6.5
-distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
-build_style=gnu_configure
+version=13.0.0
+revision=3
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="xorg-server-devel>=1.15<1.16"
+depends="xserver-abi-input-20_1"
 short_desc="Xorg VMware virtual mouse input driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=381ac3b9dc47f7bb425b4748fc9945e9c70054e40d71aedcd5327b5834d68c0d
 long_desc="
  This is the VMware virtual mouse input driver for the Xorg X11 server."
 
-Add_dependency full glibc
-Add_dependency full xorg-server
-
-xf86-input-vmmouse_package() {
-	depends="xserver-abi-input-20_1"
-	pkg_install() {
-		vmove all
-	}
+post_install() {
+	# Remove HAL stuff, it's obsolete.
+	rm -rf ${DESTDIR}/usr/{lib,share}/hal
 }

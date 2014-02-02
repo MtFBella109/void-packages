@@ -27,7 +27,7 @@ makedepends="openssl-devel libcurl-devel libpng-devel>=1.6 libvpx-devel
  alsa-lib-devel pulseaudio-devel SDL-devel qt-devel libXcursor-devel
  libXinerama-devel libXcomposite-devel libIDL-devel libglib-devel
  pam-devel python-devel libxslt-devel libcap-devel xorg-server-devel>=1.15<1.16
- device-mapper-devel docbook-xsl"
+ device-mapper-devel docbook-xsl shadow"
 
 if [ "$XBPS_MACHINE" = "x86_64" ]; then
 	makedepends+=" gcc-multilib"
