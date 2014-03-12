@@ -1,7 +1,7 @@
 # Template build file for 'xf86-input-synaptics'.
 pkgname=xf86-input-synaptics
-version=1.2.0
-distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+version=1.7.4
+revision=1
 build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="libX11-devel libXtst-devel mtdev-devel
@@ -9,12 +9,10 @@ makedepends="libX11-devel libXtst-devel mtdev-devel
 depends="xserver-abi-input-20_1"
 short_desc="Xorg synaptics touchpad input driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
-checksum=ddd5ad4c25ad2f2e46134272bf047522882deba8ac3ac04d5e11f8bd9718620c
-long_desc="
- This is the synaptics input driver for the Xorg X11 server."
-
-subpackages="$pkgname-devel"
-
+homepage="http://www.x.org/"
+license="MIT"
+distfiles="${XORG_SITE}/driver/${pkgname}-${version}.tar.bz2"
+checksum=56a2d2df7bd39e29f56102c62f153e023f3e9b2f5e255309d33fab8e81945af7
 
 xf86-input-synaptics-devel_package() {
 	short_desc+=" - development files"
