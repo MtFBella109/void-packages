@@ -14,6 +14,8 @@ checksum=a58c0de29cbd2b7d1a1ac5ee70a94ad1ed2a085132803c0ca83f2dd8513b4c20
 long_desc="
  The X.org X11 Server from the modularized source tree of X.org X11."
 
+lib32disabled=yes
+
 hostmakedepends="pkg-config perl flex"
 makedepends="libfl-devel damageproto inputproto>=2.2 glproto>=1.4.17 xproto>=7.0.25
  dri2proto>=2.1 xf86driproto randrproto videoproto compositeproto scrnsaverproto
