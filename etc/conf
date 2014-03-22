@@ -1,0 +1,2 @@
+XBPS_ALLOW_RESTRICTED=yes
+repository=https://repo-de.voidlinux.org/current
