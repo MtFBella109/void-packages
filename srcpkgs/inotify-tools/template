@@ -3,13 +3,13 @@ pkgname=inotify-tools
 version=3.20.11.0
 revision=1
 build_style=gnu-configure
-hostmakedepends="automake libtool"
 short_desc="Provides a simple interface to inotify"
-maintainer="Enno Boland <gottox@voidlinux.org>"
-license="GPL-2.0-or-later"
-homepage="https://github.com/inotify-tools/inotify-tools"
-distfiles="https://github.com/inotify-tools/inotify-tools/archive/${version}.tar.gz"
-checksum=58a3cde89e4a5111a87ac16b56b06a8f885460fca0aea51b69c856ce30a37a14
+maintainer="Enno Boland <eb@s01.de>"
+license="GPLv2"
+hostmakedepends="automake libtool"
+homepage="http://wiki.github.com/rvoicilas/inotify-tools/"
+distfiles="https://github.com/rvoicilas/${pkgname}/archive/v${version}.tar.gz"
+checksum=97a4fdf9132da47c2baa677c1a427c435ee55a26df42b2b74a41489b9fbd2323
 
 pre_configure() {
 	autoreconf -fi
