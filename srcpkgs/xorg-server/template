@@ -1,86 +1,76 @@
 # Template build file for 'xorg-server'.
 pkgname=xorg-server
-version=1.15.2
-revision=2
+version=1.16.0
+revision=1
 build_style=gnu-configure
 configure_args="--enable-ipv6 --enable-xcsecurity --enable-record
  --enable-xnest --enable-xephyr --enable-composite --enable-xvfb
  --disable-static --disable-config-hal --disable-xfbdev --disable-xfake
- --disable-config-dbus --enable-config-udev --sysconfdir=/etc/X11
+ --enable-config-udev --enable-config-udev-kms --sysconfdir=/etc/X11
  --with-xkb-path=/usr/share/X11/xkb --with-xkb-output=/var/lib/xkb
  --with-fontrootdir=/usr/share/fonts/X11 --with-sha1=libcrypto
  --disable-dmx --disable-xfree86-utils --enable-dga --enable-xorg
  --enable-kdrive --enable-kdrive-evdev --enable-kdrive-kbd
  --enable-kdrive-mouse --enable-xorg --enable-xcsecurity
- --disable-linux-acpi --disable-linux-apm"
+ --disable-linux-acpi --disable-linux-apm --enable-xwayland
+ --enable-suid-wrapper"
 short_desc="The X11 server from X.org"
 maintainer="Juan RP <xtraeme@gmail.com>"
-checksum=a58c0de29cbd2b7d1a1ac5ee70a94ad1ed2a085132803c0ca83f2dd8513b4c20
-long_desc="
- The X.org X11 Server from the modularized source tree of X.org X11."
+homepage="http://xorg.freedesktop.org"
+license="MIT/X11, BSD"
+distfiles="${XORG_SITE}/xserver/${pkgname}-${version}.tar.bz2"
+checksum=38330a03c5f7a38745a3f9816cf069db5b8844eebb358fd39dbabf61f32cd06b
 
 lib32disabled=yes
 
 hostmakedepends="pkg-config perl flex"
 makedepends="
- libfl-devel damageproto inputproto>=2.2 glproto>=1.4.17 xproto>=7.0.25 presentproto
+ libfl-devel damageproto inputproto>=2.2 glproto>=1.4.17 xproto>=7.0.26 presentproto
  dri2proto>=2.1 dri3proto xf86driproto randrproto videoproto compositeproto scrnsaverproto
  resourceproto>=1.2.0 xineramaproto xcmiscproto bigreqsproto xcb-util-devel
  xcb-util-image-devel xcb-util-keysyms-devel xcb-util-wm-devel libudev-devel>=183
  libressl-devel libX11-devel libXext-devel libdmx-devel libpciaccess-devel
  libXfont-devel libXmu-devel libXrender-devel libXfixes-devel libXi-devel
  libXaw-devel libdrm-devel libXtst-devel libXres-devel libxkbui-devel
- libxkbfile-devel libXxf86dga-devel libXv-devel pixman-devel xkeyboard-config"
+ libxkbfile-devel libXxf86dga-devel libXv-devel pixman-devel libxshmfence-devel
+ wayland-devel libepoxy-devel xkeyboard-config"
 # See hw/xfree86/common/xf86Module.h. Only care for the major version.
 depends="xkeyboard-config"
-provides="xserver-abi-extension-8_1 xserver-abi-input-20_1 xserver-abi-video-15_1"
+provides="xserver-abi-extension-8_1 xserver-abi-input-21_1 xserver-abi-video-18_1"
 
-Add_dependency build dri2proto	">=2.1"
-Add_dependency full glibc
-Add_dependency full openssl
-Add_dependency full dbus
-Add_dependency full hal
-Add_dependency full libX11
-Add_dependency full libdrm
-Add_dependency full libXdmcp
-Add_dependency full libXfont
-Add_dependency full libfontenc
-Add_dependency full libXext
-Add_dependency full libXau
-Add_dependency full libpciaccess
-Add_dependency full libXmu
-Add_dependency full libXrender
-Add_dependency full libXfixes
-Add_dependency full libXi
-Add_dependency full libXaw
-Add_dependency full libXt
-Add_dependency full libXpm
-Add_dependency full libXcomposite
-Add_dependency full libXScrnSaver
-Add_dependency full libXres
-Add_dependency full libXtst
-Add_dependency full libXxf86dga
-Add_dependency full libdmx
-Add_dependency full libxkbui
-Add_dependency full libxkbfile
-Add_dependency full libXxf86misc
-Add_dependency full libXxf86vm
-Add_dependency full libXv
-Add_dependency full libXinerama
-Add_dependency full libXrandr
-Add_dependency full MesaLib
-Add_dependency full pixman
-Add_dependency full xkbcomp
-Add_dependency full xkeyboard-config
-Add_dependency build xf86driproto
-Add_dependency build perl
-Add_dependency build pkg-config
-Add_dependency build flex
+# Package build options
+build_options="systemd"
+build_options_default="systemd"
 
-pre_configure()
-{
-	# Fix dbus config path
-	sed -i -e 's/\$(sysconfdir)/\/etc/' $wrksrc/config/Makefile.*
+if [ "$build_option_systemd" ]; then
+	configure_args+=" --enable-systemd-logind --with-systemd-daemon"
+	makedepends+=" dbus-devel systemd-devel"
+else
+	configure_args+=" --disable-systemd-logind --without-systemd-daemon"
+fi
+
+if [ "$XBPS_TARGET_MACHINE" = "i686" -o "$XBPS_TARGET_MACHINE" = "x86_64" ]; then
+	# Enable glamor/dri/opengl by default on x86.
+	configure_args+=" --enable-dri2 --enable-dri3 --enable-glx-tls --enable-glx"
+	makedepends+=" MesaLib-devel>=10"
+else
+	# Enable dri2 on !x86 via libdri.
+	configure_args+=" --disable-glx --disable-dri --enable-dri2 --enable-dri3"
+	makedepends+=" dri2proto libdri2-devel-git"
+fi
+
+post_install() {
+	vinstall ${FILESDIR}/11-quirks.conf 644 etc/X11/xorg.conf.d
+	vinstall COPYING 644 usr/share/licenses/${pkgname}
+
+	chmod 4755 ${DESTDIR}/usr/libexec/Xorg.wrap
+
+	if [ -e ${DESTDIR}/usr/lib/xorg/modules/extensions/libglx.so ]; then
+		# Support nvidia and amd binary blobs to provide their own
+		# implementation.
+		mv ${DESTDIR}/usr/lib/xorg/modules/extensions/libglx.so \
+			${DESTDIR}/usr/lib/xorg/modules/extensions/libglx-xorg.so
+	fi
 }
 
 post_install()
@@ -101,6 +91,13 @@ xorg-server-xvfb_package() {
 	pkg_install() {
 		vmove usr/bin/Xvfb
 		vmove usr/share/man/man1/Xvfb.1
+	}
+}
+
+xorg-server-wrapper_package() {
+	short_desc+=" - suid wrapper for non KMS capable drivers"
+	pkg_install() {
+		vmove usr/libexec/Xorg.wrap
 	}
 }
 
