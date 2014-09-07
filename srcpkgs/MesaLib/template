@@ -1,13 +1,8 @@
 # Template build file for 'MesaLib'.
 pkgname=MesaLib
-version=7.6
+version=10.2.7
 revision=1
-wrksrc="Mesa-$version"
-distfiles="ftp://ftp.freedesktop.org/pub/mesa/$version/$pkgname-$version.tar.bz2"
-<<<<<<< HEAD
-build_style=gnu_configure
-configure_args="--enable-glx-tls --enable-xcb"
-=======
+wrksrc="Mesa-${version}"
 build_style=gnu-configure
 configure_args="--enable-glx-tls --enable-shared-glapi --enable-gallium-g3dvl
 --enable-shared-dricore --enable-gles1 --enable-gles2 --enable-openvg
@@ -16,38 +11,14 @@ configure_args="--enable-glx-tls --enable-shared-glapi --enable-gallium-g3dvl
 --enable-texture-float --with-gallium-drivers=i915,r300,r600,svga,swrast
 --with-dri-drivers=i915,i965,r200,radeon,swrast"
 makedepends="perl>=0 flex pkg-config glproto dri2proto>=2.1 makedepend libXext-devel libXxf86vm-devel libXdamage-devel libXfixes-devel libxcb-devel libudev-devel libdrm-devel expat-devel libXt-devel talloc-devel libxml2-python llvm-devel libvdpau-devel libXvMC-devel>=1.0.6"
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Graphics library similar to SGI's OpenGL"
 maintainer="Juan RP <xtraeme@gmail.com>"
-checksum=782a7b2810b1c466b3a994eba96485b59b47cc1120c0caa24de1aecf1e013830
-long_desc="
- MesaLib is a 3-D graphics library with an API which is very similar to
- that of OpenGL*. To the extent that Mesa utilizes the OpenGL command syntax
- or state machine, it is being used with authorization from Silicon Graphics,
- Inc. However, the author makes no claim that Mesa is in any way a
- compatible replacement for OpenGL or associated with Silicon Graphics, Inc."
+homepage="http://www.mesa3d.org/"
+license="MIT, LGPL-2.1"
+distfiles="ftp://ftp.freedesktop.org/pub/mesa/${version}/${pkgname}-${version}.tar.bz2"
+checksum=27b958063a4c002071f14ed45c7d2a1ee52cd85e4ac8876e8a1c273495a7d43f
 
-<<<<<<< HEAD
-subpackages="$pkgname-devel"
-Add_dependency build pkg-config
-Add_dependency build glproto
-Add_dependency build dri2proto	">=2.1"
-Add_dependency build makedepend
-Add_dependency full glibc
-Add_dependency full expat
-Add_dependency full libdrm	">=2.4.15"
-Add_dependency full libX11
-Add_dependency full libXext
-Add_dependency full libXt
-Add_dependency full libXmu
-Add_dependency full libXi
-Add_dependency full libXfixes
-Add_dependency full libXdamage
-Add_dependency full libXxf86vm
-Add_dependency run  libstdc++
-=======
 # XXX reenable nouveau driver when it's updated for libdrm>=2.4.34
 subpackages="libEGL libglapi libGLES libGL libGLU libOpenVG"
 subpackages="${subpackages} ${pkgname}-devel"
 
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
