@@ -3,31 +3,20 @@ pkgname=connman
 version=1.45
 revision=1
 build_style=gnu-configure
-<<<<<<< HEAD
-configure_args="--enable-polkit --enable-client --enable-pie --enable-ethernet
- --enable-wifi --enable-bluetooth --enable-loopback --enable-nmcompat
- --enable-openvpn --with-openvpn=/usr/bin/openvpn --enable-openconnect
- --enable-iwd --disable-tools --disable-wispr
- --with-openconnect=/usr/bin/openconnect"
-hostmakedepends="automake iptables libtool pkg-config"
-makedepends="gnutls-devel iptables-devel libglib-devel libmnl-devel
- openconnect-devel readline-devel"
-depends="dbus wpa_supplicant"
-=======
 configure_args="--enable-pie --enable-threads --enable-ethernet
 --enable-wifi --enable-bluetooth --enable-loopback --enable-nmcompat
 --enable-polkit --enable-client --with-systemdunitdir=/lib/systemd/system"
 makedepends="pkg-config glib-devel dbus-devel iptables-devel gnutls-devel"
 fulldepends="dbus bluez wpa_supplicant"
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Open Source CONNection MANager"
-maintainer="Orphaned <orphan@voidlinux.org>"
-license="GPL-2.0-only"
-homepage="https://git.kernel.org/pub/scm/network/connman/connman.git"
-changelog="https://git.kernel.org/pub/scm/network/connman/connman.git/plain/ChangeLog"
-distfiles="${KERNEL_SITE}/network/${pkgname}/${pkgname}-${version}.tar.xz"
-checksum=77128cce80865455c4f106b5901a575e2dfdb35a7d2e2e2996f16e85cba10913
-lib32disabled=yes
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+homepage="http://connman.net/"
+distfiles="${KERNEL_SITE}/network/$pkgname/$pkgname-$version.tar.xz"
+checksum=7184e4b6d954449ee00a30e188924b3e37a20ad2fd9a0b76a2bdd82c863dcf8a
+
+build_options="systemd"
+replaces="runit-void<20141013_2"
 
 pre_configure() {
 	case "$XBPS_TARGET_MACHINE" in
@@ -44,18 +33,6 @@ post_install() {
 	# Install the client connmanctl.
 	vbin client/connmanctl
 	vsv connmand
-	vinstall ${FILESDIR}/connmand.conf 755 usr/share/dbus-1/system.d/
 }
 
-<<<<<<< HEAD
-connman-devel_package() {
-	depends="dbus-devel libglib-devel"
-	short_desc+=" - development files"
-	pkg_install() {
-		vmove usr/include
-		vmove usr/lib/pkgconfig
-	}
-}
-=======
 
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

@@ -1,4 +1,8 @@
 #!/bin/sh
+<<<<<<< HEAD
 exec 2>&1
 [ -r conf ] && . ./conf
 exec connmand -n ${OPTS}
+=======
+exec connmand -n
+>>>>>>> d84f21b64f8 (connman: added runit service.)
