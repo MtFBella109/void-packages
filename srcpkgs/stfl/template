@@ -1,5 +1,6 @@
 # Template file for 'stfl'
 pkgname=stfl
+<<<<<<< HEAD
 version=0.24
 revision=4
 build_style=gnu-makefile
@@ -25,4 +26,28 @@ stfl-devel_package() {
 		vmove "usr/lib/*.so"
 		vmove "usr/lib/*.a"
 	}
+=======
+version=0.23
+revision=1
+build_style=gnu-makefile
+hostmakedepends="swig patch"
+makedepends="ncurses-devel"
+depends="ncurses"
+short_desc="Curses-based widget set for text terminals"
+maintainer="Logen K <logen@sudotask.com>"
+license="GPL-3"
+homepage="http://www.clifford.at/stfl/"
+distfiles="http://www.clifford.at/${pkgname}/${pkgname}-${version}.tar.gz"
+checksum=e75ed8427905ad50faf43ed5fefd0cf7b16ee0c1ca87e15d33e360bb92aedfde
+
+post_extract(){
+  patch -Np1 -i ${FILESDIR}/stfl-void.patch
+
+}
+do_build(){
+  LDFLAGS=""
+}
+post_install(){
+  ln -sf libstfl.so.${version} ${DESTDIR}/usr/lib/libstfl.so.0
+>>>>>>> 0e07dfd0ba6 (New package: stfl-0.23)
 }
