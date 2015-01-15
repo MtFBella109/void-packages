@@ -7,30 +7,10 @@ short_desc="Bootstrap a basic Debian system"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="MIT"
 homepage="http://packages.qa.debian.org/d/debootstrap.html"
-distfiles="${DEBIAN_SITE}/main/d/debootstrap/debootstrap_${version}_all.deb
- ${DEBIAN_SITE}/main/d/debian-archive-keyring/debian-archive-keyring_2023.4_all.deb"
-checksum="8c02cb8ad712eb67afb0d23fab175c562804cc97eda70b70cb0f3bc2a21732d7
- 6e93a87b9e50bd81518880ec07a62f95d7d8452f4aa703f5b0a3076439f1022c"
-
-case "$XBPS_TARGET_MACHINE" in
-	armv5*l*) _debarch=armel;;
-	arm*l*) _debarch=armhf;;
-	aarch64*) _debarch=arm64;;
-	x86_64*) _debarch=amd64;;
-	i686*) _debarch=i386;;
-	ppc64le*) _debarch=ppc64el;;
-	ppc64*) _debarch=ppc64;;
-	ppc*) _debarch=powerpc;;
-	riscv64*) _debarch=riscv64;;
-	*) broken="please add your architecture";;
-esac
-
-post_extract() {
-	rm -r usr/share/doc/debian-archive-keyring
-
-	mv usr/sbin usr/bin
-	echo ${_debarch} > usr/share/debootstrap/arch
-}
+distfiles="${DEBIAN_SITE}/main/d/${pkgname}/${pkgname}_${version}_all.deb
+ ${DEBIAN_SITE}/main/d/debian-archive-keyring/debian-archive-keyring_2014.3_all.deb"
+checksum="60ea5fbab57d5e9d6140ae5f7fa228717d960a4f9780d5762010ba49716d4bed
+ 017a2fba215cd64612891f5aa02546be5c0e30923a66672f889867cc6dd8d3a0"
 
 do_install() {
 	vcopy usr /
