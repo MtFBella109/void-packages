@@ -1,6 +1,10 @@
 # Template file for 'rygel'
 pkgname=rygel
+<<<<<<< HEAD
 version=0.24.2
+=======
+version=0.26.0
+>>>>>>> 49bdd5f91b7 (rygel: update to 0.26.0.)
 revision=1
 build_style=gnu-configure
 configure_args="--enable-gst-launch-plugin"
@@ -14,8 +18,12 @@ hostmakedepends="automake libtool pkg-config intltool gettext-devel
  glib-devel vala-devel gobject-introspection"
 makedepends="sqlite-devel gtk+3-devel
  libsoup-devel libgee08-devel gupnp-av-devel
+<<<<<<< HEAD
  gupnp-dlna-devel tracker-devel libmediaart-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+=======
+ gupnp-dlna-devel tracker-devel libmediaart2-devel"
+>>>>>>> 49bdd5f91b7 (rygel: update to 0.26.0.)
 depends="hicolor-icon-theme desktop-file-utils"
 makedepends="pkg-config intltool sqlite-devel vala-devel gtk+3-devel libsoup-devel libgee-devel gssdp-devel>=0.12.0 gupnp-av-devel gupnp-dlna-devel"
 short_desc="GNOME home media solution"
@@ -28,7 +36,7 @@ maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.gnome.org"
 license="GPL-2"
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
-checksum=a9056281b0e0d38f32ec34ad84b51b16228c7accfef601025e0ed3ddf3cc0904
+checksum=5821b47fb04346af513723f186e900bb640c0c77d16011a9125c266b455085cf
 
 pre_configure() {
 	autoreconf -fi
