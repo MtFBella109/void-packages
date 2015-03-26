@@ -1,4 +1,5 @@
 # Template file for 'toxic'
+<<<<<<< HEAD
 pkgname=toxic
 version=0.15.1
 revision=2
@@ -17,3 +18,23 @@ checksum=56cedc37b22a1411c68fd8b395f40f515d6a4779be02540c5cd495665caa127c
 do_build() {
 	make CC=$CC USER_CFLAGS="$CFLAGS" USER_LDFLAGS="$LDFLAGS" ${makejobs}
 }
+=======
+pkgname="toxic"
+version="0.5.2"
+revision=1
+_commithash="0c39e7b158ff74a2ef4ed62a72b5b7a3c878ac7f"
+short_desc="NCurses-based TOX instant messanger client"
+maintainer="Stefan Mühlinghaus <jazzman@alphabreed.com>"
+license="GPL-3"
+homepage="https://wiki.tox.im/Toxic"
+depends="toxcore-git>=20150313_2"
+makedepends="toxcore-devel-git>=20150313_2 libX11-devel freealut-devel libconfig-devel ncurses-libs ncurses-devel>=5.9_10 libopenal-devel libnotify-devel libvpx-devel libsodium-devel opus-devel"
+hostmakedepends="pkg-config"
+build_style="gnu-makefile"
+distfiles="https://github.com/Tox/toxic/archive/${_commithash}.tar.gz"
+checksum="14990c674363004b7d2d4c14706f8a6232eb0b546e7b8f9889867761de548435"
+make_install_args="-C build ${make_install_args}"
+make_build_args="${make_install_args}"
+wrksrc="toxic-${_commithash}"
+
+>>>>>>> 5d974296192 (toxic, toxcore: Changed download method and updated common/shlibs)
