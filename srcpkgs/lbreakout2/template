@@ -10,11 +10,15 @@ build_style=gnu-configure
 configure_args="--enable-sdl-net --localstatedir=/var/games/$pkgname"
 make_install_args="doc_dir=/usr/share/doc"
 <<<<<<< HEAD
+<<<<<<< HEAD
 makedepends="zlib-devel libpng-devel SDL_mixer-devel SDL_net-devel"
 =======
 depends="glibc zlib libpng SDL SDL_mixer SDL_net"
 makedepends="zlib-devel libpng-devel SDL-devel SDL_mixer-devel SDL_net-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+makedepends="zlib-devel libpng-devel SDL-devel SDL_mixer-devel SDL_net-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Breakout-style arcade game"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"

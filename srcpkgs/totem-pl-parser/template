@@ -6,6 +6,7 @@ revision=1
 build_style=meson
 build_helper="gir"
 # XXX needs libquvi>=0.9
+<<<<<<< HEAD
 configure_args="-Denable-libarchive=yes -Denable-libgcrypt=yes
  -Dintrospection=$(vopt_if gir true false)"
 hostmakedepends="glib-devel intltool pkg-config"
@@ -17,6 +18,13 @@ build_style=gnu-configure
 configure_args="--disable-static --enable-quvi --enable-libarchive --enable-libgcrypt"
 makedepends="pkg-config intltool gobject-introspection libsoup-gnome-devel glib-devel gmime-devel libarchive-devel libgcrypt-devel libquvi-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+configure_args="--disable-static --enable-libarchive --enable-libgcrypt
+ $(vopt_enable gir introspection)"
+hostmakedepends="pkg-config intltool glib-devel
+ $(vopt_if gir gobject-introspection)"
+makedepends="libsoup-gnome-devel gmime-devel libarchive-devel libgcrypt-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Totem playlist parser library"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.0-or-later"

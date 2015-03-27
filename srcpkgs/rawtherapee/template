@@ -4,10 +4,16 @@ version=5.12
 revision=1
 build_style=cmake
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="-DCACHE_NAME_SUFFIX=\"\" -DWITH_LTO=ON -DWITH_SYSTEM_LIBRAW=ON"
 hostmakedepends="pkg-config"
 makedepends="fftw-devel gtkmm-devel lensfun-devel libcanberra-devel libgomp-devel
  libiptcdata-devel librsvg-devel exiv2-devel libraw-devel libjxl-devel"
+=======
+hostmakedepends="cmake pkg-config mercurial"
+makedepends="fftw-devel libcanberra-devel libpng-devel gtkmm2-devel
+ lcms2-devel libiptcdata-devel libgomp-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils hicolor-icon-theme"
 =======
 depends="desktop-file-utils hicolor-icon-theme"

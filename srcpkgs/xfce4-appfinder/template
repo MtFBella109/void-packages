@@ -5,8 +5,13 @@ version=4.20.0
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 hostmakedepends="pkg-config gettext"
 makedepends="garcon-devel libxfce4ui-devel gtk+3-devel"
+=======
+hostmakedepends="pkg-config intltool"
+makedepends="garcon-devel libxfce4ui-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils hicolor-icon-theme"
 short_desc="Appfinder for the Xfce Desktop Environment"
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"

@@ -3,10 +3,16 @@ pkgname=NetworkManager-openvpn
 version=1.12.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static --with-gtk4"
 hostmakedepends="gettext glib-devel pkg-config"
 makedepends="gtk+3-devel libglib-devel libnma-devel libsecret-devel gtk4-devel"
 depends="openvpn"
+=======
+configure_args="--disable-static"
+hostmakedepends="pkg-config intltool"
+makedepends="gtk+3-devel network-manager-applet-devel libsecret-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="NetworkManager VPN plugin for OpenVPN"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"

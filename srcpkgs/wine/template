@@ -50,8 +50,14 @@ makedepends="gettext-devel ncurses-devel glu-devel libSM-devel
  libXext-devel libX11-devel libXpm-devel libXinerama-devel
  libXcomposite-devel libXmu-devel libXxf86vm-devel
  libXcursor-devel libXrandr-devel libXdamage-devel libXi-devel
+<<<<<<< HEAD
  alsa-lib-devel libgphoto2-devel glib-devel
  freetype-devel pulseaudio-devel giflib-devel
+=======
+ libldap-devel alsa-lib-devel libgphoto2-devel libxml2-devel
+ libxslt-devel glib-devel freetype-devel
+ mpg123-devel libgsm-devel libopenal-devel giflib-devel libpng-devel
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
  v4l-utils-devel fontconfig-devel gnutls-devel dbus-devel sane-devel
  libpcap-devel cups-devel ocl-icd-devel vulkan-loader-devel gst-plugins-base1-devel
  SDL2-devel"

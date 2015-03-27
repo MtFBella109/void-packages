@@ -13,6 +13,7 @@ configure_args="--sbindir=/usr/bin --enable-gnutls --enable-mysql
  --enable-elasticsearch --enable-testbench --disable-libsystemd
  --enable-clickhouse"
 hostmakedepends="pkg-config postgresql-libs-devel"
+<<<<<<< HEAD
 makedepends="gnutls-devel libcurl-devel libestr-devel libfastjson-devel
  liblogging-devel libmariadbclient-devel mit-krb5-devel postgresql-libs-devel
  libgcrypt-devel"
@@ -24,6 +25,11 @@ homepage="https://www.rsyslog.com"
 changelog="https://raw.githubusercontent.com/rsyslog/rsyslog/master/ChangeLog"
 distfiles="${homepage}/files/download/rsyslog/${pkgname}-${version}.tar.gz"
 checksum=8cdfa5a077cba576bdd6b1841cc2848b774e663b2e44a39512bb820174174802
+=======
+makedepends="json-c-devel gnutls-devel postgresql-libs-devel
+ libmysqlclient-devel mit-krb5-devel libestr-devel
+ libee-devel liblogging-devel $(vopt_if systemd systemd-devel)"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="/etc/rsyslog.conf"
 make_dirs="/etc/rsyslog.d 0755 root root"
 lib32disabled=yes

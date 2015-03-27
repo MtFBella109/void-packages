@@ -5,6 +5,7 @@ version=0.4.4
 homepage="http://live.gnome.org/libepc"
 distfiles="${GNOME_SITE}/$pkgname/0.4/$pkgname-$version.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
 makedepends="pkg-config intltool gtk+3-devel libsoup-devel avahi-glib-libs-devel avahi-ui-libs-devel"
 =======
 revision=2
@@ -12,6 +13,11 @@ build_style=gnu-configure
 makedepends="pkg-config intltool gtk+3-devel libsoup-devel avahi-glib-libs-devel
  avahi-ui-libs-devel gnutls-devel>=3.1.5 libuuid-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+=======
+hostmakedepends="pkg-config intltool"
+makedepends="gtk+3-devel libsoup-devel avahi-glib-libs-devel
+ avahi-ui-libs-devel gnutls-devel libuuid-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Easy Publish and Consume Library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="LGPL-2.1"

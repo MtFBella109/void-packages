@@ -1,10 +1,15 @@
 # Template file for 'neverball'
 pkgname=neverball
 version=1.6.0
+<<<<<<< HEAD
 revision=5
 <<<<<<< HEAD
 hostmakedepends="gettext"
 makedepends="libpng-devel libjpeg-turbo-devel libvorbis-devel SDL2_ttf-devel physfs-devel"
+=======
+revision=1
+makedepends="libpng-devel libjpeg-turbo-devel libvorbis-devel SDL2_ttf-devel physfs-devel desktop-file-utils"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils"
 =======
 distfiles="http://www.neverball.org/$pkgname-$version.tar.gz"

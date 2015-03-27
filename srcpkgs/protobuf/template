@@ -42,8 +42,13 @@ replaces="${conflicts}"
 <<<<<<< HEAD
 if [ "$CROSS_BUILD" ]; then
 	# needs host protoc
+<<<<<<< HEAD
 	hostmakedepends+=" ${pkgname}"
 	configure_args+=" -Dprotobuf_PROTOC_EXE=/usr/bin/protoc"
+=======
+	hostmakedepends+=" protobuf"
+	configure_args+=" --with-protoc=/usr/bin/protoc"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 fi
 
 post_install() {

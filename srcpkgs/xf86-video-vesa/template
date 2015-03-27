@@ -7,8 +7,13 @@ distfiles="http://xbps.nopcode.org/distfiles/${pkgname}-${_gitrev}.tar.gz"
 #distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
 build_style=gnu-configure
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="xorg-server-devel>=1.15<1.16"
 depends="xserver-abi-video-15_1"
+=======
+makedepends="xorg-server-devel"
+depends="virtual?xserver-abi-video-19_1"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Xorg VESA video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a3657971232e9c7db3e7517a8aedd86d3ef4d159f7099ec974cdd03aafa41080

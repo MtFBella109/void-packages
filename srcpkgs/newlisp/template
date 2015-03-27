@@ -1,6 +1,7 @@
 # Template file for 'newlisp'
 pkgname=newlisp
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=10.7.5
 revision=3
 makedepends="readline-devel libffi-devel"
@@ -14,6 +15,10 @@ checksum=dc2d0ff651c2b275bc4af3af8ba59851a6fb6e1eaddc20ae75fb60b1e90126ec
 version=10.3.9
 homepage="http://www.newlisp.org"
 distfiles="$homepage/downloads/development/$pkgname-$version.tgz"
+=======
+version=10.6.2
+revision=1
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="readline-devel libffi-devel"
 short_desc="Lisp-like, general-purpose scripting language"
 maintainer="Juan RP <xtraeme@gmail.com>"

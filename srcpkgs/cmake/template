@@ -4,6 +4,7 @@ version=2.8.10
 revision=1
 subpackages="cmake-gui"
 build_style=configure
+<<<<<<< HEAD
 configure_script=./bootstrap
 configure_args="--prefix=/usr --mandir=/share/man
  --docdir=/share/doc/cmake --system-libs --qt-gui"
@@ -12,6 +13,9 @@ if [ -n "$XBPS_MAKEJOBS" ]; then
 fi
 makedepends="zlib-devel expat-devel libarchive-devel libcurl-devel
  ncurses-devel libarchive-devel qt-devel"
+=======
+makedepends="zlib-devel bzip2-devel expat-devel libcurl-devel jsoncpp-devel ncurses-devel libarchive-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Cross-platform, open-source build system"
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="BSD"

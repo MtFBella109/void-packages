@@ -3,6 +3,7 @@ pkgname=freerdp
 version=2.11.7
 revision=2
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DWITH_ALSA=ON -DWITH_CUPS=OFF -DWITH_FFMPEG=ON
  -DWITH_GSTREAMER_0_10=OFF -DWITH_GSTREAMER_1_0=OFF -DWITH_JPEG=ON
  -DWITH_LIBSYSTEMD=OFF -DWITH_PCSC=OFF -DWITH_PULSE=ON -DWITH_WAYLAND=ON
@@ -16,6 +17,19 @@ makedepends="alsa-lib-devel ffmpeg6-devel glib-devel libusb-devel
  libxkbcommon-devel wayland-devel cairo-devel libXdamage-devel"
 short_desc="Free RDP (Remote Desktop Protocol) client"
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+configure_args="-DWITH_JPEG=ON -DWITH_PULSE=ON -DWITH_XINERAMA=ON
+ -DWITH_XEXT=ON -DWITH_XCURSOR=ON -DWITH_XI=ON -DWITH_XRENDER=ON -DWITH_XV=ON
+ -DWITH_XKBFILE=ON -DWITH_FFMPEG=ON -DWITH_GSTREAMER=OFF -DWITH_ALSA=ON
+ -DWITH_CUPS=OFF -DWITH_PCSC=OFF"
+hostmakedepends="pkg-config cmake"
+makedepends="
+ alsa-lib-devel libjpeg-turbo-devel pulseaudio-devel libXinerama-devel
+ libXext-devel libXcursor-devel libXi-devel libXrender-devel libXv-devel
+ libxkbfile-devel ffmpeg-devel libressl-devel zlib-devel"
+short_desc="A Free RDP (Remote Desktop Protocol) client"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 license="Apache-2.0"
 homepage="https://www.freerdp.com/"
 changelog="https://raw.githubusercontent.com/FreeRDP/FreeRDP/master/ChangeLog"

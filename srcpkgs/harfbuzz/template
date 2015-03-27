@@ -1,5 +1,6 @@
 # Template file for 'harfbuzz'
 pkgname=harfbuzz
+<<<<<<< HEAD
 version=11.3.3
 revision=2
 build_style=meson
@@ -22,6 +23,20 @@ homepage="https://harfbuzz.github.io/"
 changelog="https://github.com/harfbuzz/harfbuzz/raw/main/NEWS"
 distfiles="https://github.com/harfbuzz/harfbuzz/releases/download/${version}/harfbuzz-${version}.tar.xz"
 checksum=e1fbca6b32a91ae91ecd9eb2ca8d47a5bfe2b1cb2e54855ab7a0b464919ef358
+=======
+version=0.9.40
+revision=1
+build_style=gnu-configure
+configure_args="--with-glib --with-freetype --with-cairo --with-icu --with-graphite2"
+hostmakedepends="automake libtool pkg-config glib-devel"
+makedepends="libglib-devel icu-devel freetype-devel cairo-devel graphite-devel"
+short_desc="An OpenType text shaping engine"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.freedesktop.org/wiki/Software/HarfBuzz/"
+license="LGPL-2.1"
+distfiles="http://www.freedesktop.org/software/harfbuzz/release/${pkgname}-${version}.tar.bz2"
+checksum=1771d53583be6d91ca961854b2a24fb239ef0545eed221ae3349abae0ab8321f
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 if [ "$XBPS_CHECK_PKGS" ]; then
 	configure_args+=" -Dtests=enabled"

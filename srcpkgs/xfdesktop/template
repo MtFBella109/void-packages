@@ -4,12 +4,19 @@ pkgname=xfdesktop
 <<<<<<< HEAD
 version=4.20.1
 revision=1
+<<<<<<< HEAD
 build_style=meson
 configure_args="-Dtests=false"
 hostmakedepends="pkg-config gettext glib-devel Thunar-devel"
 makedepends="libxfce4ui-devel exo-devel garcon-devel
  gtk-layer-shell-devel libyaml-devel libxfce4windowing-devel
  libnotify-devel libwnck-devel"
+=======
+build_style=gnu-configure
+hostmakedepends="pkg-config intltool glib-devel dbus-glib-devel"
+makedepends="libxfce4ui-devel exo-devel Thunar-devel garcon-devel
+ libnotify-devel libwnck2-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme desktop-file-utils"
 short_desc="Desktop manager for the Xfce Desktop Environment"
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"

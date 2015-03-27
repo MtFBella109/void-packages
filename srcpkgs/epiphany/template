@@ -24,11 +24,23 @@ checksum=0f66552ad6593c7952a3ddee5bf515656c8c434871076d9f1a91a7af9346b1b4
 version=3.4.2
 distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-schemas-compile --disable-scrollkeeper
 --disable-tests --enable-seed"
 depends="ca-certificates hicolor-icon-theme desktop-file-utils webkit-gtk3>=1.8.0"
 makedepends="which pkg-config intltool gnome-doc-utils gobject-introspection nss-devel libgnome-keyring-devel libsoup-gnome-devel webkit-gtk3-devel>=1.8.0 startup-notification-devel NetworkManager-devel libseed-devel libnotify-devel avahi-libs-devel avahi-glib-libs-devel"
 fulldepends="iso-codes gsettings-desktop-schemas"
+=======
+configure_args="--disable-schemas-compile --disable-tests"
+hostmakedepends="which pkg-config intltool itstool gnome-doc-utils
+ gobject-introspection glib-devel"
+makedepends="nss-devel libsoup-gnome-devel libnotify-devel
+ webkit2gtk-devel sqlite-devel libxslt-devel avahi-glib-libs-devel
+ startup-notification-devel NetworkManager-devel gcr-devel
+ gnome-desktop-devel libsecret-devel libwnck-devel iso-codes"
+depends="webkit2gtk>=2.6 gsettings-desktop-schemas>=3.14 ca-certificates
+ hicolor-icon-theme desktop-file-utils iso-codes"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Intuitive GNOME web browser"
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://www.gnome.org/projects/epiphany/"

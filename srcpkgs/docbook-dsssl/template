@@ -2,7 +2,12 @@
 pkgname=docbook-dsssl
 version=1.79
 <<<<<<< HEAD
+<<<<<<< HEAD
 revision=5
+=======
+revision=2
+noarch="yes"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="xmlcatmgr docbook-xml"
 depends="${makedepends}"
 =======

@@ -3,6 +3,7 @@ pkgname=hugin
 version=2023.0.0
 revision=3
 build_style=cmake
+<<<<<<< HEAD
 build_helper=cmake-wxWidgets-gtk3
 configure_args="-DBUILD_WITH_EPOXY=on"
 pycompile_dirs="usr/share/hugin/data/plugins usr/share/hugin/data/plugins-templates"
@@ -20,6 +21,20 @@ changelog="https://hugin.sourceforge.io/releases/${version}/en.shtml"
 distfiles="${SOURCEFORGE_SITE}/hugin/hugin/hugin-${version%.*}/hugin-${version}.tar.bz2"
 checksum=04a39fccc6017e0544c639bd22309472c574d35b3455cbade1fc3870e631632b
 python_version=3
+=======
+configure_args="-DwxWidgets_CONFIG_EXECUTABLE=/usr/bin/wx-config-3.0"
+maintainer="Dominik Honnef <dominik@honnef.co>"
+hostmakedepends="cmake pkg-config exiftool"
+makedepends="wxWidgets-devel tiff-devel libpng-devel libopenexr-devel
+ exiv2-devel libfreeglut-devel libpano13-devel boost-devel MesaLib-devel
+ lensfun-devel python-devel swig glew-devel libXmu-devel libXi-devel glu-devel"
+depends="exiftool"
+license="GPL-2"
+homepage="http://hugin.sourceforge.net/"
+short_desc="An easy to use panoramic imaging toolchain"
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}/${pkgname}-${version%.*}/${pkgname}-${version}.tar.bz2"
+checksum=f098aa0ede44010d3bb2bb38693177533fd776c45063a338c4c483d7e471ec29
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 CXXFLAGS="-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
 

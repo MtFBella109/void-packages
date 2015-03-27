@@ -1,6 +1,7 @@
 # Template file for 'seahorse-nautilus'
 pkgname=seahorse-nautilus
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=3.11.92.2022.10.9
 revision=2
 _commit=0fd324c191565bff76ca45a01b2da14b4ab7b3bd
@@ -8,6 +9,16 @@ build_style=meson
 hostmakedepends="pkg-config gettext gnupg glib-devel"
 makedepends="gtk+3-devel nautilus-devel libnotify-devel
  gpgme-devel libcryptui-devel gcr-devel"
+=======
+version=3.10.1
+revision=3
+lib32disabled=yes
+build_style=gnu-configure
+configure_args="--disable-schemas-compile"
+hostmakedepends="pkg-config intltool gnome-doc-utils gpgme-devel"
+makedepends="gtk+3-devel nautilus-devel libnotify-devel
+ gpgme-devel libcryptui-devel gcr-devel libgnome-keyring-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="gnupg desktop-file-utils"
 short_desc="Nautilus plugin for OpenPGP file encryption/decryption"
 maintainer="Orphaned <orphan@voidlinux.org>"

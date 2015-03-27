@@ -15,12 +15,20 @@ makedepends="geocode-glib-devel libsoup3-devel json-glib-devel libxml2-devel"
 depends="tzdata"
 =======
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-schemas-compile 
  --enable-locations-compression --with-zoneinfo-dir=/usr/share/zoneinfo"
 hostmakedepends="pkg-config intltool gobject-introspection"
 makedepends="libxml2-devel libsoup-gnome-devel gtk+3-devel>=3.8.0
  gnome-icon-theme"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+=======
+build_options="gir"
+configure_args="$(vopt_enable gir '--enable-introspection --enable-vala' '--disable-introspection --disable-vala')
+ --disable-schemas-compile --enable-locations-compression --with-zoneinfo-dir=/usr/share/zoneinfo"
+hostmakedepends="pkg-config intltool glib-devel $(vopt_if gir 'gobject-introspection vala-devel')"
+makedepends="libxml2-devel libsoup-gnome-devel gtk+3-devel geocode-glib-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNOME Weather information access library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"

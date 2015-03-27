@@ -5,6 +5,7 @@ version=5.3.2
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="--with-readline --disable-pma"
 makedepends="readline-devel"
 short_desc="GNU awk utility"
@@ -49,6 +50,11 @@ configure_args="ac_cv_func_working_mktime=yes"
 configure_args="ac_cv_func_working_mktime=yes --with-readline"
 makedepends="readline-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+configure_args="--with-readline"
+makedepends="readline-devel"
+conflicts="chroot-gawk>=0"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="The GNU awk utility"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=f2a2f3b3053837c56fd42d801419e6a2aa89326c72308a87737da44191713a4d

@@ -3,8 +3,13 @@ pkgname=perl-Devel-GlobalDestruction
 version=0.14
 revision=3
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl-Sub-Exporter-Progressive"
 makedepends="${hostmakedepends}"
+=======
+hostmakedepends="perl"
+makedepends="${hostmakedepends} perl-Sub-Exporter-Progressive"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="${makedepends}"
 short_desc="Expose the flag which marks global destruction"
 maintainer="Orphaned <orphan@voidlinux.org>"

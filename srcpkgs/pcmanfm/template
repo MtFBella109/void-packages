@@ -4,6 +4,7 @@ version=1.4.0
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="--with-gtk=3"
 hostmakedepends="pkg-config intltool automake gettext-devel glib-devel"
 makedepends="gtk+3-devel libfm-gtk+3-devel"
@@ -12,6 +13,12 @@ depends="desktop-file-utils lxmenu-data"
 makedepends="automake pkg-config intltool gtk+-devel libfm-devel"
 fulldepends="desktop-file-utils"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="pkg-config intltool"
+makedepends="gtk+-devel libfm-devel"
+depends="desktop-file-utils"
+conf_files="/etc/xdg/pcmanfm/default/pcmanfm.conf"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="LXDE file manager"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"

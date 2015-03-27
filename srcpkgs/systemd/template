@@ -42,7 +42,12 @@ system_groups="lock"
 depends="xbps-triggers>=0.64 dbus kbd libcap-progs
  libudev>=${version} systemd-libs>=${version}"
 
+<<<<<<< HEAD
 hostmakedepends="which pkg-config intltool gperf libxslt docbook-xsl"
+=======
+makedepends="acl-devel dbus-devel libcap-devel libkmod-devel
+ liblzma-devel cryptsetup-devel libblkid-devel libgcrypt-devel pam-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 makedepends="acl-devel pam-devel dbus-devel libcap-devel libkmod-devel
  liblzma-devel cryptsetup-devel libblkid-devel libglib-devel libgcrypt-devel

@@ -5,7 +5,11 @@ version=4.20.0
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 hostmakedepends="pkg-config gettext"
+=======
+hostmakedepends="pkg-config intltool"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="libxfce4ui-devel startup-notification-devel
  libXcomposite-devel libXdamage-devel libXfixes-devel libXrandr-devel
  libXrender-devel libXpresent-devel libwnck-devel"

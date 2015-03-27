@@ -5,6 +5,7 @@ revision=2
 build_style=configure
 configure_args="prefix=/usr LD=$CC"
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="ncurses-devel faad2-devel libcdio-devel libcdio-paranoia-devel
  libcddb-devel libdiscid-devel libflac-devel libao-devel libmad-devel
  libmodplug-devel libmp4v2-devel libmpcdec-devel pulseaudio-devel
@@ -19,6 +20,23 @@ checksum=44b96cd5f84b0d84c33097c48454232d5e6a19cd33b9b6503ba9c13b6686bfc7
 build_options="elogind"
 build_options_default="elogind"
 desc_option_elogind="Support MPRIS interface via elogind"
+=======
+makedepends="ncurses-devel faad2-devel libflac-devel libao-devel libmad-devel
+ libmodplug-devel libmp4v2-devel libmpcdec-devel pulseaudio-devel
+ opusfile-devel wavpack-devel alsa-lib-devel libvorbis-devel ffmpeg-devel"
+
+do_configure() {
+	./configure prefix=/usr
+}
+
+do_build() {
+	make GCC=$CC CC=$CC LD=$CC ${makejobs}
+}
+
+do_install() {
+	make DESTDIR=${DESTDIR} install
+}
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 cmus-libao_package() {
 	short_desc+=" - libao output plugin"

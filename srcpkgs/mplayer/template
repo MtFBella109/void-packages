@@ -4,7 +4,11 @@ version=1.5
 revision=2
 build_style=configure
 hostmakedepends="pkg-config yasm"
+<<<<<<< HEAD
 makedepends="xorgproto eudev-libudev-devel libpng-devel libass-devel
+=======
+makedepends="videoproto libudev-devel libpng-devel
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
  libvorbis-devel SDL_image-devel x264-devel jack-devel samba-devel
  mpg123-devel xcb-util-devel xcb-util-keysyms-devel libsamplerate-devel
  libXxf86vm-devel libXinerama-devel libXpm-devel libXvMC-devel libXv-devel
@@ -12,7 +16,11 @@ makedepends="xorgproto eudev-libudev-devel libpng-devel libass-devel
  avahi-libs-devel MesaLib-devel libmad-devel liba52-devel libdca-devel
  libdvbpsi-devel libgcrypt-devel gtk+-devel libnotify-devel dbus-glib-devel
  gnutls-devel taglib-devel libmatroska-devel libmpcdec-devel libproxy-devel
+<<<<<<< HEAD
  libcdio-paranoia-devel libdvdnav-devel libsysfs-devel libusb-compat-devel
+=======
+ libcdio-paranoia-devel libdvdnav-devel libsysfs-devel libusb-compat-devel libass-devel
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
  sqlite-devel librsvg-devel libtheora-devel speex-devel pulseaudio-devel
  libmodplug-devel libva-devel libvdpau-devel v4l-utils-devel xvidcore-devel"
 short_desc="Multimedia player"

@@ -9,8 +9,12 @@ build_style=gnu-configure
 make_check_args="XFAIL_TESTS=tests/test-session-info"
 hostmakedepends="pkg-config"
 makedepends="libglib-devel dbus-devel libXfixes-devel libXrandr-devel
+<<<<<<< HEAD
  libXinerama-devel libpciaccess-devel spice-protocol desktop-file-utils
  alsa-lib-devel libdrm-devel"
+=======
+ libXinerama-devel libpciaccess-devel spice-protocol desktop-file-utils"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="dbus"
 checkdepends="procps-ng"
 =======

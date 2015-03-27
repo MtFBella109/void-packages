@@ -6,7 +6,10 @@ build_style=gnu-configure
 configure_args="--disable-static --enable-release"
 hostmakedepends="pkg-config"
 makedepends="mpfr-devel raptor-devel"
+<<<<<<< HEAD
 checkdepends="perl"
+=======
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="RDF Query Library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later, GPL-2.0-or-later, Apache-2.0"

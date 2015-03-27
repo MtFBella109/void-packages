@@ -4,9 +4,15 @@ version=2.095
 revision=1
 build_style=perl-module
 hostmakedepends="perl"
+<<<<<<< HEAD
 makedepends="${hostmakedepends} perl-Net-SSLeay perl-URI"
 depends="perl perl-Net-SSLeay perl-URI"
 checkdepends="perl-IO-Socket-INET6"
+=======
+makedepends="${hostmakedepends}"
+depends="${makedepends} perl-Net-SSLeay perl-URI"
+noarch="yes"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="IO::Socket::SSL -- SSL sockets with IO::Socket interface"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"

@@ -2,6 +2,7 @@
 pkgname=fontforge
 version=20251009
 revision=1
+<<<<<<< HEAD
 build_style=cmake
 hostmakedepends="automake ca-certificates gettext libltdl-devel libtool m4
  pkg-config python3 python3-setuptools python3-packaging-bootstrap"
@@ -9,6 +10,13 @@ makedepends="desktop-file-utils giflib-devel gtkmm-devel hicolor-icon-theme
  libjpeg-turbo-devel libltdl-devel libpng-devel libspiro-devel libxml2-devel
  pango-devel python3-devel readline-devel tiff-devel woff2-devel zlib-devel"
 depends="desktop-files-utils"
+=======
+build_style=gnu-configure
+hostmakedepends="automake libtool libltdl-devel pkg-config git python"
+makedepends="libltdl-devel python-devel zlib-devel pango-devel readline-devel
+ giflib-devel libpng-devel libjpeg-turbo-devel tiff-devel libxml2-devel
+ libspiro-devel hicolor-icon-theme desktop-file-utils"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme desktop-file-utils"
 short_desc="Create and modify PostScript, TrueType and SVG fonts"
 maintainer="Leah Neukirchen <leah@vuxu.org>"

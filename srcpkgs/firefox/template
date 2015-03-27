@@ -31,8 +31,19 @@ makedepends="nss-devel libjpeg-turbo-devel gtk+3-devel
 depends="nss>=3.72 nspr>=4.32 desktop-file-utils hicolor-icon-theme pciutils"
 conflicts="firefox-esr>=0"
 
+<<<<<<< HEAD
 build_options="alsa jack dbus pulseaudio xscreensaver sndio wayland lto pgo clang wasi debug"
 build_options_default="alsa jack dbus pulseaudio xscreensaver sndio wayland clang wasi"
+=======
+hostmakedepends="unzip zip pkg-config perl python yasm libXt-devel"
+makedepends="nss-devel libjpeg-turbo-devel libpng-devel
+ icu-devel pixman-devel sqlite-devel gst-plugins-base1-devel gtk+-devel
+ libevent-devel libnotify-devel libvpx-devel>1.3.0 libXrender-devel
+ startup-notification-devel dbus-glib-devel alsa-lib-devel pulseaudio-devel
+ hunspell-devel libXcomposite-devel libSM-devel libXScrnSaver-devel
+ libXt-devel libXdamage-devel"
+depends="nss>=3.17 desktop-file-utils hicolor-icon-theme"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 if [ "$XBPS_WORDSIZE" != "32" ]; then
 	build_options_default+=" debug"

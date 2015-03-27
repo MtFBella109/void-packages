@@ -10,7 +10,14 @@ short_desc="Virtual machine designed for dynamic languages"
 maintainer="pancake <pancake@nopcode.org>"
 license="Artistic-2.0"
 homepage="http://www.parrot.org"
+<<<<<<< HEAD
 distfiles="http://ftp.parrot.org/releases/supported/${version}/parrot-${version}.tar.bz2"
+=======
+hostmakedepends="perl"
+configure_script="perl Configure.pl"
+license="Artistic"
+distfiles="ftp://ftp.parrot.org/pub/parrot/releases/supported/${version}/parrot-${version}.tar.bz2"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 checksum=ad5f3723c216675b9ebc2e3d3807d24fd13aa55e1eb3e7ffcad4062e0026f482
 nopie=yes
 

@@ -3,6 +3,7 @@ pkgname=xfce4-sensors-plugin
 <<<<<<< HEAD
 version=1.5.0
 revision=1
+<<<<<<< HEAD
 build_style=meson
 # sysfsacpi requires procacpi, but detection logic is dumb
 # xnvctrl requires libXNVCtrol.so
@@ -11,6 +12,12 @@ configure_args="-Dhddtemp-path=/usr/bin/hddtemp -Dprocacpi=enabled
 hostmakedepends="pkg-config gettext"
 makedepends="libsensors-devel xfce4-panel-devel libnotify-devel libglib-devel
  gtk+3-devel libxfce4ui-devel libxfce4util-devel "
+=======
+build_style=gnu-configure
+configure_args="--disable-static"
+hostmakedepends="pkg-config intltool"
+makedepends="libsensors-devel libxfce4ui-devel xfce4-panel-devel libnotify-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme desktop-file-utils"
 short_desc="Xfce hardware sensors plugin"
 maintainer="Orphaned <orphan@voidlinux.org>"

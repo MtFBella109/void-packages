@@ -3,10 +3,15 @@ pkgname=nmap
 version=7.98
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--without-ndiff --with-openssl --with-zenmap $(vopt_with lua liblua)"
 hostmakedepends="python3-setuptools automake python3-build python3-pip pkg-config python3-cairo python3-gobject"
 makedepends="libpcap-devel openssl-devel libssh2-devel pcre-devel
  $(vopt_if lua lua54-devel)"
+=======
+configure_args="--without-ndiff --with-openssl $(vopt_with lua liblua)"
+makedepends="libpcap-devel pcre-devel libressl-devel $(vopt_if lua lua-devel)"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Utility for network discovery and security auditing"
 maintainer="Piraty <mail@piraty.dev>"
 license="custom:nmap"

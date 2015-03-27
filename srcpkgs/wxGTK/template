@@ -3,9 +3,23 @@ pkgname=wxGTK
 version=2.8.12.1
 distfiles="${SOURCEFORGE_SITE}/wxpython/wxPython-src-${version}.tar.bz2"
 wrksrc="wxPython-src-${version}"
+<<<<<<< HEAD
 makedepends="pkg-config zlib-devel libpng-devel jpeg-devel libXpm-devel tiff-devel expat-devel libX11-devel libXinerama-devel GConf-devel cairo-devel gtk+-devel MesaLib-devel"
 short_desc="The wxWidgets GUI toolkit library (GTK Version)"
 maintainer="davehome <davehome@redthumb.info.tm>"
+=======
+build_style=gnu-configure
+configure_args="--enable-monolithic --with-gtk=2 --with-x --with-opengl
+ --enable-unicode --enable-graphics_ctx --enable-optimize --enable-mediactrl
+ --with-regex=builtin  --with-libpng=sys --with-libxpm=sys --with-libjpeg=sys
+ --with-libtiff=sys --disable-precomp-headers"
+hostmakedepends="pkg-config"
+makedepends="zlib-devel libpng-devel libjpeg-turbo-devel
+ libXpm-devel tiff-devel expat-devel libXinerama-devel libSM-devel libXt-devel
+ GConf-devel gtk+-devel glu-devel gst-plugins-base-devel"
+short_desc="The wxWidgets GUI toolkit library (version 2)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://www.wxwidgets.org/"
 license="wxWindows"
 checksum=1f3f153d9f1504c6ce2d2c4b23e940b8f58b81f4cba35cda1a5bb31142243cd0

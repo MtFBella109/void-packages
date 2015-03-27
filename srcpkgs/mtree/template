@@ -3,8 +3,12 @@ pkgname=mtree
 version=1.0.4
 revision=7
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="automake"
 makedepends="openssl-devel"
+=======
+makedepends="libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Utility for creating and verifying file hierarchies"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="BSD-3-Clause"

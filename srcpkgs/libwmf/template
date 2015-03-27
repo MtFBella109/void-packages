@@ -19,8 +19,13 @@ build_style=gnu-configure
 configure_args="--with-gsfontdir=/usr/share/fonts/Type1
 --with-fontdir=/usr/share/fonts/Type1 --disable-static
 --with-gsfontmap=/usr/share/ghostscript/8.15/lib/Fontmap.GS"
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="freetype-devel libjpeg-turbo-devel libpng-devel>=1.5.10
+=======
+hostmakedepends="automake libtool pkg-config gsfonts freetype-devel"
+makedepends="zlib-devel freetype-devel libjpeg-turbo-devel libpng-devel
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
  expat-devel glib-devel gtk+-devel gd-devel gsfonts"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Library for reading and converting WMF (Windows Meta Files)"

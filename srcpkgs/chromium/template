@@ -52,6 +52,7 @@ checksum=6663d346462a1785721c8358eb5c3c952ae8273e4e95835d0a567285d1cab494
 
 lib32disabled=yes
 
+<<<<<<< HEAD
 build_options="clang libcxx debug vaapi pulseaudio sndio pipewire lto drumbrake qt6"
 build_options_default="clang libcxx vaapi pulseaudio pipewire qt6"
 desc_option_clang="Use clang to build"
@@ -60,6 +61,19 @@ desc_option_debug="Build with debug symbols"
 desc_option_lto="Enable Link Time Optimization"
 desc_option_pipewire="Enable support for screen sharing for WebRTC via PipeWire"
 desc_option_drumbrake="WebAssembly Interpreter"
+=======
+hostmakedepends="yasm python pkg-config perl gperf bison ninja hwids icu-devel"
+makedepends="libpng-devel gtk+-devel nss-devel pciutils-devel
+ libXi-devel libgcrypt-devel libgnome-keyring-devel cups-devel elfutils-devel
+ libXcomposite-devel speech-dispatcher-devel libXrandr-devel mit-krb5-devel
+ libXScrnSaver-devel alsa-lib-devel icu-devel snappy-devel
+ libxml2-devel libxslt-devel pulseaudio-devel nss-devel libexif-devel
+ libXcursor-devel libflac-devel speex-devel libmtp-devel libwebp-devel
+ libjpeg-turbo-devel libevent-devel json-c-devel re2-devel harfbuzz-devel
+ minizip-devel jsoncpp-devel zlib-devel libcap-devel libXdamage-devel"
+depends="hwids desktop-file-utils hicolor-icon-theme"
+nostrip_files="nacl_irt_x86_64.nexe nacl_irt_x86_32.nexe"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 <<<<<<< HEAD
 if [ "$XBPS_LIBC" = musl ]; then

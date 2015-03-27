@@ -3,8 +3,16 @@ pkgname=gtkhtml
 version=4.2.1
 distfiles="${GNOME_SITE}/${pkgname}/4.2/${pkgname}-${version}.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
 makedepends="pkg-config intltool gtk+3-devel enchant-devel libsoup-gnome-devel"
 fulldepends="gnome-icon-theme gsettings-desktop-schemas iso-codes"
+=======
+hostmakedepends="pkg-config intltool"
+makedepends="gtk+3-devel enchant-devel ORBit2-devel
+ libsoup-gnome-devel gsettings-desktop-schemas-devel
+ gsettings-desktop-schemas iso-codes"
+depends="gsettings-desktop-schemas>=3.12 iso-codes"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Layout engine written in C using the GTK+ widget toolkit"
 maintainer="davehome <davehome@redthumb.info.tm>"
 homepage="http://www.gnome.org"

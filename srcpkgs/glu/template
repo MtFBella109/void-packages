@@ -6,6 +6,12 @@ build_style=meson
 configure_args="-Ddefault_library=shared"
 hostmakedepends="pkg-config"
 makedepends="MesaLib-devel"
+<<<<<<< HEAD
+=======
+replaces="libGLU<9.0"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="LGPL-2.1"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Mesa OpenGL utility library (GLU)"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="SGI-B-2.0"

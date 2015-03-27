@@ -6,9 +6,15 @@ version=5.16.6
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="--disable-static --disable-schemas-compile"
 hostmakedepends="pkg-config python3 intltool libxslt glib-devel"
 makedepends="libglib-devel telepathy-glib-devel NetworkManager-devel"
+=======
+configure_args="--disable-static --enable-gnome-keyring --disable-schemas-compile"
+hostmakedepends="pkg-config python-devel intltool libxslt glib-devel"
+makedepends="libglib-devel telepathy-glib-devel NetworkManager-devel libgnome-keyring-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="telepathy-glib>=0.22"
 short_desc="Account manager and channel dispatcher for the Telepathy framework"
 maintainer="Orphaned <orphan@voidlinux.org>"

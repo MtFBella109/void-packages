@@ -1,5 +1,6 @@
 # Template file for 'mixxx'
 pkgname=mixxx
+<<<<<<< HEAD
 version=2.5.1
 revision=4
 build_style=cmake
@@ -17,6 +18,16 @@ makedepends="benchmark-devel chromaprint-devel faad2-devel ffmpeg6-devel
  qt6-tools-devel qtkeychain-qt6-devel qt6-shadertools-devel libebur128-devel
  gsl-devel guidelines-support-library openssl-devel libkeyfinder-devel"
 depends="qt6-plugin-sqlite"
+=======
+version=1.11.0
+revision=4
+hostmakedepends="scons pkg-config"
+makedepends="qt-devel portaudio-devel libusb-devel libmad-devel protobuf-devel
+ libid3tag-devel libvorbis-devel libflac-devel glu-devel taglib-devel
+ libsndfile-devel portmidi-devel vamp-plugin-sdk-devel faad2-devel
+ libmp4v2-devel"
+depends="qt-plugin-sqlite"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Open source digital DJing software that allows mixing music"
 maintainer="prez <prez@national.shitposting.agency>"
 license="GPL-2.0-or-later"

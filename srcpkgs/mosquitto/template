@@ -7,6 +7,7 @@ make_build_args="WITH_WEBSOCKETS=yes WITH_BUNDLED_DEPS=no"
 make_install_args="prefix=/usr"
 make_check_target=test
 conf_files="/etc/mosquitto/mosquitto.conf"
+<<<<<<< HEAD
 makedepends="c-ares-devel openssl-devel uthash libwebsockets-devel cJSON-devel"
 checkdepends="CUnit-devel python3"
 short_desc="MQTT version 3.1/3.1.1/5.0 compatible message broker"
@@ -41,6 +42,15 @@ pre_check() {
 pre_install() {
 	sed -i 's,sbin,bin,g' */Makefile
 }
+=======
+makedepends="libressl-devel libuuid-devel"
+short_desc="MQTT version 3.1/3.1.1 compatible message broker"
+maintainer="Lukas Braun <koomi@hackerspace-bamberg.de>"
+license="BSD"
+homepage="http://mosquitto.org/"
+distfiles="http://mosquitto.org/files/source/mosquitto-${version}.tar.gz"
+checksum=591f3adcb6ed92c01f7ace1c878af728b797fe836892535620aa6106f42dbcc6
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 post_install() {
 	vlicense edl-v10 LICENSE

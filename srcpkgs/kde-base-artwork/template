@@ -1,0 +1,14 @@
+# Template file for 'kde-base-artwork'
+pkgname=kde-base-artwork
+version=4.14.2
+revision=2
+noarch=yes
+build_style=cmake
+hostmakedepends="cmake automoc4 pkg-config"
+makedepends="libressl-devel qt-devel phonon-devel kdelibs-devel"
+short_desc="KDE base artwork"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL, LGPL, FDL"
+homepage="http://www.kde.org"
+distfiles="http://download.kde.org/stable/${version}/src/${pkgname}-${version}.tar.xz"
+checksum=c71a0ab11cc9c3c3ee5af6ea7ca7e2b7e51ecca5acb06541dffde983ad0438b5

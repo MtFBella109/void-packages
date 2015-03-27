@@ -1,4 +1,5 @@
 # Template file for 'xfce4-clipman-plugin'
+<<<<<<< HEAD
 pkgname=xfce4-clipman-plugin
 version=1.7.0
 revision=1
@@ -6,6 +7,16 @@ build_style=meson
 hostmakedepends="gettext pkg-config wayland-devel glib-devel"
 makedepends="xfce4-panel-devel libXtst-devel qrencode-devel libglib-devel"
 short_desc="Clipboard plugin for the Xfce4 panel"
+=======
+pkgname="xfce4-clipman-plugin"
+version="1.2.6"
+revision=2
+build_style=gnu-configure
+depends="gtk-update-icon-cache"
+makedepends="xfce4-panel-devel libunique1-devel libXtst-devel qrencode-devel exo-devel libxfce4ui-devel"
+hostmakedepends="intltool pkg-config"
+short_desc="A clipboard plugin for the Xfce4 panel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 maintainer="Aaditya Bagga <abchk1234@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://goodies.xfce.org/projects/panel-plugins/xfce4-clipman-plugin"

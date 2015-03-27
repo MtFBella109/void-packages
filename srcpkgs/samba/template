@@ -51,10 +51,19 @@ homepage="http://www.samba.org"
 distfiles="https://download.samba.org/pub/samba/stable/${pkgname}-${version}.tar.gz"
 checksum=f93c3af5295340d08106c7c0dcfb85e4f85057dfd14587aa8817beb31aff88f7
 lib32disabled=yes
+<<<<<<< HEAD
 conf_files="/etc/pam.d/samba /etc/samba/smb.conf"
 make_dirs="/etc/samba/private 0750 root root"
 subpackages="smbclient samba-ctdb samba-cups samba-devel samba-libs
  samba-python3 samba-dc"
+=======
+build_options="systemd"
+conf_files="/etc/pam.d/samba"
+hostmakedepends="pkg-config perl python-devel"
+makedepends="readline-devel libcap-devel popt-devel e2fsprogs-devel
+ mit-krb5-devel libldap-devel pam-devel acl-devel avahi-libs-devel
+ tdb-devel talloc-devel cups-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 <<<<<<< HEAD
 if [ "$XBPS_TARGET_LIBC" = "musl" ]; then

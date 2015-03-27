@@ -1,7 +1,17 @@
 # Template file for 'perl-Parse-CPAN-Meta'
 pkgname=perl-Parse-CPAN-Meta
+<<<<<<< HEAD
 version=1.4422
 revision=3
+=======
+version=1.4414
+revision=2
+wrksrc="Parse-CPAN-Meta-${version}"
+hostmakedepends="perl"
+makedepends="${hostmakedepends}"
+depends="${makedepends}"
+noarch="yes"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 build_style=perl-module
 hostmakedepends="perl"
 makedepends="$hostmakedepends"

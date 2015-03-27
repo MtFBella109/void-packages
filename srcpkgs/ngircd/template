@@ -5,8 +5,12 @@ revision=1
 build_style=gnu-configure
 configure_args="--enable-ipv6 --with-openssl --without-ident ac_cv_func_getaddrinfo=yes --with-pam --with-iconv"
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="zlib-devel openssl-devel pam-devel libticonv-devel"
 checkdepends="procps-ng expect inetutils-telnet"
+=======
+makedepends="zlib-devel libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="/etc/ngircd.conf"
 short_desc="Free, portable and lightweight Internet Relay Chat server"
 maintainer="Orphaned <orphan@voidlinux.org>"

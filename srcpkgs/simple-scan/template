@@ -19,6 +19,11 @@ homepage="http://launchpad.net/simple-scan"
 distfiles="https://launchpad.net/$pkgname/3.4/$version/+download/$pkgname-$version.tar.gz"
 build_style=gnu-configure
 configure_args="--disable-schemas-compile"
+<<<<<<< HEAD
+=======
+hostmakedepends="pkg-config itstool intltool glib-devel vala"
+makedepends="colord-devel gtk+3-devel sqlite-devel dconf-devel sane-devel libgudev-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme sane"
 makedepends="pkg-config itstool intltool colord-devel gtk+3-devel dconf-devel sane-devel libgudev-devel"
 short_desc="Simple scanning utility"

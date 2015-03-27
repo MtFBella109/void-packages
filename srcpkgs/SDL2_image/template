@@ -5,8 +5,12 @@ revision=2
 build_style=cmake
 configure_args="-DSDL2IMAGE_WEBP=ON"
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="SDL2-devel libavif-devel libjpeg-turbo-devel libpng-devel libwebp-devel
  tiff-devel zlib-devel"
+=======
+makedepends="libpng-devel tiff-devel SDL2-devel libwebp-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Load images as SDL surfaces (SDL 2.x)"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Zlib"

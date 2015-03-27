@@ -1,0 +1,17 @@
+# Template file for 'enventor'
+pkgname=enventor
+version=0.5.0
+revision=1
+lib32disabled=yes
+wrksrc="${pkgname}-${version}"
+hostmakedepends="pkg-config elementary-devel"
+makedepends="elementary-devel"
+depends="desktop-file-utils"
+build_style=gnu-configure
+configure_args="--disable-static"
+homepage="http://enlightenment.org"
+short_desc="Enlightenment's EDC editor with some convenient functions"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="BSD"
+distfiles="http://download.enlightenment.org/rel/apps/${pkgname}/${pkgname}-${version}.tar.bz2"
+checksum=f726d4ac358f3d902c99c38e191d1f6edb9769a7c2475c48859c7ad9b9cd2abd

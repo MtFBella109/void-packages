@@ -4,9 +4,14 @@ version=1.68
 revision=2
 build_style=perl-module
 hostmakedepends="perl"
+<<<<<<< HEAD
 makedepends="$hostmakedepends"
 depends="$makedepends"
 checkdepends="perl-Test-MockModule"
+=======
+makedepends="${hostmakedepends}"
+depends="${makedepends}"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Provide a perl interface to ZIP archive files"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"

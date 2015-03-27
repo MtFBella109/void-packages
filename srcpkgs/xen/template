@@ -61,6 +61,7 @@ build_options_default="stubdom"
 desc_option_stubdom="Build xen with stubdom"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if [ "$build_option_stubdom" ]; then
 	# From "stubdom/configure"
 	_zlib_version=1.2.3
@@ -99,6 +100,32 @@ if [ "$build_option_stubdom" ]; then
 		pciutils-${_libpci_version}.tar.bz2
 		tpm_emulator-${_tpmemu_version}.tar.gz"
 =======
+=======
+hostmakedepends="wget bison perl pkg-config git"
+makedepends="
+ libaio-devel lzo-devel libressl-devel e2fsprogs-devel zlib-devel gnutls-devel
+ libbluetooth-devel pciutils-devel libX11-devel libXext-devel SDL-devel MesaLib-devel
+ ncurses-devel liblzma-devel python-devel yajl-devel libuuid-devel libglib-devel
+ dev86 acpica-utils pixman-devel gcc-multilib"
+depends="xen-hypervisor"
+
+build_options="systemd"
+make_dirs="
+	/var/lib/xenstored	755	root 	root
+	/var/lib/xen/xenpaging	755	root	root
+	/var/xen/dump		755	root	root
+	/etc/xen/auto		755	root	root"
+conf_files="
+	/etc/default/xendomains
+	/etc/default/xencommons
+	/etc/xen/xl.conf"
+nostrip_files="
+	openbios-ppc
+	openbios-sparc32
+	openbios-sparc64
+	palcode-clipper
+	s390-ccw.img"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 pycompile_module="xen grub"
 subpackages="xen-devel"
 

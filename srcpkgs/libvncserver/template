@@ -1,5 +1,6 @@
 # Template file for 'libvncserver'
 pkgname=libvncserver
+<<<<<<< HEAD
 version=0.9.15
 revision=1
 build_style=cmake
@@ -7,6 +8,13 @@ configure_args="-DWITH_OPENSSL=ON -DWITH_GNUTLS=OFF -DWITH_SYSTEMD=OFF"
 hostmakedepends="pkg-config"
 makedepends="zlib-devel libjpeg-turbo-devel libpng-devel openssl-devel
  lzo-devel libgcrypt-devel"
+=======
+version=0.9.9
+revision=6
+wrksrc="LibVNCServer-${version}"
+build_style=gnu-configure
+makedepends="zlib-devel libjpeg-turbo-devel libpng-devel libressl-devel gnutls-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="C libraries to easily implement VNC server or client functionality"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"

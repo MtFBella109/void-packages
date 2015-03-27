@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 # Template file for 'pango'
 pkgname=pango
+<<<<<<< HEAD
 version=1.56.3
 revision=2
 build_style=meson
@@ -10,6 +11,16 @@ configure_args="-Dbuild-examples=false $(vopt_feature gir introspection)
 hostmakedepends="glib-devel pkg-config python3-docutils"
 makedepends="fribidi-devel harfbuzz-devel libXft-devel libthai-devel"
 checkdepends="dejavu-fonts-ttf liberation-fonts-ttf cantarell-fonts"
+=======
+version=1.36.8
+revision=1
+build_style=gnu-configure
+configure_args="--with-included-modules=basic-fc $(vopt_enable gir introspection)"
+hostmakedepends="automake libtool pkg-config gtk-doc glib-devel $(vopt_if gir gobject-introspection)"
+# XXX Add missing dependency libthai.
+makedepends="libglib-devel cairo-devel libXft-devel harfbuzz-devel"
+triggers="pango-modules"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Library for layout and rendering of text"
 maintainer="cinerea0 <cinerea0@protonmail.com>"
 license="LGPL-2.1-or-later"

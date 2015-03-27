@@ -6,12 +6,21 @@ revision=7
 build_style=gnu-configure
 <<<<<<< HEAD
 configure_args="--with-crypto --enable-linuxcap --enable-ipv6 --enable-ntp-signd
+<<<<<<< HEAD
  --enable-all-clocks ol_cv_pthread_select_yields=yes"
 hostmakedepends="pkg-config autoconf automake libtool bison perl"
 makedepends="libedit-devel openssl-devel libcap-devel libevent-devel pps-tools-devel"
 short_desc="Network Time Protocol daemon and utilities"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="NTP"
+=======
+ ol_cv_pthread_select_yields=yes"
+hostmakedepends="pkg-config bison"
+makedepends="libedit-devel libressl-devel libcap-devel libevent-devel"
+short_desc="The Network Time Protocol daemon and utilities"
+license="BSD"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://www.ntp.org/"
 distfiles="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/ntp-${version}.tar.gz"
 checksum=cf84c5f3fb1a295284942624d823fffa634144e096cfc4f9969ac98ef5f468e5

@@ -5,10 +5,16 @@ revision=4
 build_style=gnu-configure
 configure_args="--etcdir=/etc/bitlbee --pidfile=/run/${pkgname}/${pkgname}.pid
  --ipcsocket=/run/${pkgname}/${pkgname}.sock
+<<<<<<< HEAD
  --strip=0 --otr=plugin
  $(vopt_if purple --purple=1 --purple=0)
  $(vopt_if pam --pam=1 --pam=0)
  $(vopt_if ldap --ldap=1 --ldap=0)"
+=======
+ --ssl=openssl --strip=0 --otr=plugin --skype=plugin"
+hostmakedepends="pkg-config asciidoc"
+makedepends="libgcrypt-devel libotr-devel libressl-devel libglib-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 make_install_args="install-etc"
 hostmakedepends="pkg-config asciidoc"
 makedepends="libgcrypt-devel libotr-devel libglib-devel gnutls-devel

@@ -3,9 +3,20 @@ pkgname=inetutils
 version=2.6
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--without-wrap --with-pam"
 makedepends="pam-devel readline-devel"
 checkdepends="iana-etc net-tools"
+=======
+configure_args="--without-wrap --with-pam --enable-ftp --enable-ftpd
+ --enable-telnet --enable-telnetd --enable-talk --enable-talkd
+ --enable-rlogin --enable-rlogind --enable-rsh --enable-rshd
+ --enable-rcp --enable-hostname --disable-rexec --disable-rexecd
+ --disable-tftp --disable-tftpd --disable-ping --disable-ping6
+ --disable-logger --disable-syslogd --disable-inetd --disable-whois
+ --disable-uucpd --disable-ifconfig --disable-traceroute"
+makedepends="ncurses-devel pam-devel readline-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNU network utilities"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"

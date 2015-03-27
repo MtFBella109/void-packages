@@ -4,6 +4,7 @@ version=4.20.1
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="--disable-gstreamer-thumbnailer --enable-poppler-thumbnailer"
 hostmakedepends="gettext pkg-config glib-devel perl"
 makedepends="ffmpegthumbnailer-devel libglib-devel libgsf-devel libopenraw-devel
@@ -12,6 +13,14 @@ makedepends="ffmpegthumbnailer-devel libglib-devel libgsf-devel libopenraw-devel
 =======
 makedepends="pkg-config intltool gtk+-devel dbus-glib-devel jpeg-devel libgsf-devel poppler-glib-devel gst-plugins-base-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+# XXX: missing support: libopenraw, ffmpegthumbnailer
+hostmakedepends="automake libtool pkg-config intltool xfce4-dev-tools
+ gettext-devel glib-devel dbus-glib-devel"
+makedepends="libjpeg-turbo-devel libpng-devel
+ gtk+-devel dbus-glib-devel libgsf-devel poppler-glib-devel
+ gst-plugins-base1-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="D-Bus Thumbnailer service"
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
 license="GPL-2.0-or-later"

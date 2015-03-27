@@ -5,8 +5,14 @@ revision=4
 build_style=gnu-configure
 # This is x86 specific.
 only_for_archs=i686
+<<<<<<< HEAD
 makedepends="pkg-config libXv-devel libXrandr-devel xorg-server-devel>=1.15<1.16"
 depends="xserver-abi-video-15_1"
+=======
+broken="does not build with xorg-server-1.17"
+makedepends="pkg-config libXv-devel libXrandr-devel xorg-server-devel"
+depends="virtual?xserver-abi-video-19_1"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Xorg AMD Geode GX/LX video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"

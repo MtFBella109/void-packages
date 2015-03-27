@@ -6,7 +6,11 @@ build_style=configure
 configure_args="--disable-internal-sqlite --prefix=/usr
  --with-sqlite=${XBPS_CROSS_BASE}/usr/include --json"
 hostmakedepends="tcl"
+<<<<<<< HEAD
 makedepends="zlib-devel openssl-devel sqlite-devel"
+=======
+makedepends="zlib-devel libressl-devel readline-devel sqlite-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Simple, high-reliability, distributed software configuration management"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"

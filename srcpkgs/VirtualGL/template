@@ -3,10 +3,18 @@ pkgname=VirtualGL
 version=3.1
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DTJPEG_INCLUDE_DIR=${XBPS_CROSS_BASE}/usr/include
  -DTJPEG_LIBRARY=${XBPS_CROSS_BASE}/usr/lib/libturbojpeg.so -DVGL_SYSTEMFLTK=ON"
 makedepends="libXv-devel glu-devel libjpeg-turbo-devel MesaLib-devel
  libXtst-devel fltk-devel openssl-devel ocl-icd-devel xcb-util-keysyms-devel"
+=======
+configure_args="-DTJPEG_INCLUDE_DIR=/usr/include
+ -DTJPEG_LIBRARY=/usr/lib/libturbojpeg.so -DVGL_LIBDIR=/usr/lib
+ -DVGL_BINDIR=/usr/bin -DVGL_DOCDIR=/usr/share/doc/${pkgname}"
+hostmakedepends="cmake"
+makedepends="libXv-devel glu-devel libjpeg-turbo-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Run remote OpenGL applications with full acceleration"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"

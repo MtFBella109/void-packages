@@ -1,5 +1,6 @@
 # Template file for 'jack'
 pkgname=jack
+<<<<<<< HEAD
 version=1.9.22
 revision=1
 build_style=waf3
@@ -10,6 +11,17 @@ makedepends="eigen opus-devel libsamplerate-devel dbus-devel db-devel celt-devel
  $(vopt_if ffado libffado-devel)"
 depends="python3-dbus"
 =======
+=======
+version=1.9.10
+revision=5
+# XXX libffado (firewire)
+hostmakedepends="pkg-config python"
+makedepends="eigen opus-devel libsamplerate-devel readline-devel dbus-devel celt-devel"
+depends="python-dbus"
+short_desc="JACK Audio Connection Kit low-latency sound server (pro audio)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2, LGPL-2.1"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://jackaudio.org/"
 distfiles="http://www.grame.fr/~letz/${pkgname}-${version}.tgz"
 makedepends="python pkg-config libstdc++-devel glibc-devel libsamplerate-devel readline-devel ncurses-devel alsa-lib-devel dbus-devel expat-devel libsndfile-devel celt-devel"

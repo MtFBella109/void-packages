@@ -1,5 +1,6 @@
 # Template file for 'bitcoin'
 pkgname=bitcoin
+<<<<<<< HEAD
 version=25.1
 revision=1
 build_style=gnu-configure
@@ -8,6 +9,13 @@ configure_args="--with-incompatible-bdb --disable-ccache --disable-static
 hostmakedepends="automake libtool pkg-config yasm"
 makedepends="db-devel boost-devel-minimal miniupnpc-devel qt5-tools-devel
  libevent-devel qrencode-devel sqlite-devel"
+=======
+version=0.10.0
+revision=2
+create_wrksrc=yes
+hostmakedepends="pkg-config yasm"
+makedepends="db-devel protobuf-devel libressl-devel boost-devel miniupnpc-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Bitcoin is a peer-to-peer network based digital currency"
 maintainer="Daniel A. Maierhofer <git@damadmai.at>"
 license="MIT"

@@ -1,5 +1,6 @@
 # Template file for 'attic'
 pkgname=attic
+<<<<<<< HEAD
 version=0.16
 revision=25
 build_style=python3-module
@@ -9,6 +10,20 @@ depends="python3-msgpack python3-llfuse"
 short_desc="Deduplicating backup program for efficient and secure backups"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="BSD-3-Clause"
+=======
+version=0.14
+revision=4
+wrksrc="Attic-$version"
+build_style=python-module
+hostmakedepends="python3.4-setuptools python3.4-devel libressl-devel python3.4-Sphinx"
+makedepends="${hostmakedepends/python3.4-setuptools/} acl-devel"
+depends="python3.4-msgpack"
+python_versions="3.4"
+pycompile_version="3.4"
+pycompile_module="attic"
+short_desc="A deduplicating backup program for efficient and secure backups"
+maintainer="Christian Neukirchen <chneukirchen@gmail.com>"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="https://attic-backup.org/"
 distfiles="${PYPI_SITE}/A/Attic/Attic-${version}.tar.gz"
 checksum=6650cd28072101c2e05941e77b93a62f91da6179785e4e4b4880916c469bba2c

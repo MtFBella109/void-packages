@@ -3,6 +3,7 @@
 
 pkgname=poppler-qt4
 wrksrc="poppler-${version}"
+<<<<<<< HEAD
 makedepends="pkg-config gobject-introspection tiff-devel lcms2-devel libcurl-devel qt-devel"
 fulldepends="poppler-data"
 short_desc="${short_desc} -- QT bindings"
@@ -13,6 +14,23 @@ configure_args="${configure_args} --disable-poppler-glib --enable-poppler-qt4
 --disable-poppler-cpp --disable-utils --disable-gtk-test"
 subpackages="poppler-qt4-devel"
 
+=======
+build_style=gnu-configure
+configure_args="--enable-zlib --enable-libcurl --enable-libjpeg
+ --enable-libtiff --disable-libopenjpeg --enable-cairo-output
+ --enable-xpdf-headers --disable-gtk-test --disable-poppler-glib
+ --enable-poppler-qt4 --disable-poppler-qt5 --disable-poppler-cpp
+ --disable-utils --disable-static --disable-introspection"
+hostmakedepends="pkg-config"
+makedepends="libpng-devel tiff-devel lcms2-devel libcurl-devel
+ fontconfig-devel cairo-devel qt-devel"
+short_desc="PDF rendering library - Qt4 bindings"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+homepage="http://poppler.freedesktop.org"
+distfiles="${homepage}/poppler-$version.tar.xz"
+checksum=4963e31ba5e17530a87b16588e22928bc044e8d28d02303dded981bff6725b98
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 post_install() {
 	rm -f ${DESTDIR}/usr/lib/libpoppler.*

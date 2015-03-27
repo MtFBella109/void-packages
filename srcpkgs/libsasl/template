@@ -14,9 +14,13 @@ configure_args="--enable-cram --enable-digest --enable-auth-sasldb
  --with-devrandom=/dev/random
  ac_cv_gssapi_supports_spnego=yes"
 hostmakedepends="automake libtool pkg-config"
+<<<<<<< HEAD
 makedepends="db-devel"
 =======
 makedepends="openssl-devel"
+=======
+makedepends="db-devel mit-krb5-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 wrksrc="cyrus-sasl-${version}"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Cyrus SASL - runtime shared libraries"

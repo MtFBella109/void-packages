@@ -31,10 +31,16 @@ build_options_default="ldap"
 desc_option_lmdb="Enable LMDB database backend"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 post_patch() {
 =======
 noextract=yes
 subpackages="$pkgname-devel $pkgname-libs $pkgname-client"
+=======
+hostmakedepends="perl flex e2fsprogs-devel"
+makedepends="db-devel e2fsprogs-devel libressl-devel"
+depends="mit-krb5-client>=${version}_${revision}"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conflicts="heimdal>=0"
 
 

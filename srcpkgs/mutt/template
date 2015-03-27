@@ -3,6 +3,7 @@ pkgname=mutt
 version=2.2.15
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-pop --enable-imap --enable-smtp --enable-hcache
  --enable-gpgme --with-idn2 --with-ssl --without-sasl --with-gsasl
  --enable-sidebar --enable-autocrypt --with-sqlite3
@@ -12,6 +13,15 @@ conf_files="/etc/${pkgname}/Muttrc"
 hostmakedepends="perl pkg-config gettext w3m"
 makedepends="gdbm-devel gpgme-devel libidn2-devel openssl-devel gsasl-devel
  ncurses-devel zlib-devel sqlite-devel libunistring-devel libgpg-error-devel"
+=======
+configure_args="--enable-pop --enable-imap --enable-smtp
+ --enable-gpgme --with-regex --with-idn --with-ssl --with-sasl
+ --with-gpgme-prefix=${XBPS_CROSS_BASE}/usr
+ --with-gdbm=${XBPS_CROSS_BASE}/usr mutt_cv_regex_broken=no"
+hostmakedepends="perl pkg-config libidn-devel automake"
+makedepends="ncurses-devel libressl-devel libidn-devel gpgme-devel gdbm-devel
+ libsasl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="mime-types"
 short_desc="Mutt Mail Client"
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"

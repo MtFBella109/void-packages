@@ -7,8 +7,14 @@ configure_args="--disable-schemas-install"
 hostmakedepends="pkg-config gettext glib-devel"
 # XXX missing libgpod
 makedepends="dbus-glib-devel libnotify-devel gtk+3-devel gmtk-devel
+<<<<<<< HEAD
  libXScrnSaver-devel alsa-lib-devel pulseaudio-devel
  libgda-devel desktop-file-utils hicolor-icon-theme mplayer"
+=======
+ libXScrnSaver-devel nautilus-devel alsa-lib-devel pulseaudio-devel
+ libgda-devel libmusicbrainz-devel desktop-file-utils
+ hicolor-icon-theme mplayer"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="mplayer desktop-file-utils hicolor-icon-theme"
 short_desc="Simple MPlayer GUI for GNOME"
 maintainer="Orphaned <orphan@voidlinux.org>"

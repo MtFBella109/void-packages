@@ -8,8 +8,12 @@ conf_files="/etc/dillo/dillorc
  /etc/dillo/domainrc
  /etc/dillo/dpidrc
  /etc/dillo/keysrc"
+<<<<<<< HEAD
 hostmakedepends="which"
 makedepends="fltk-devel openssl-devel"
+=======
+makedepends="fltk-devel libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Small and light graphical web browser"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="GPL-3.0-or-later"

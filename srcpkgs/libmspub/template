@@ -4,7 +4,11 @@ version=0.1.4
 revision=14
 build_style=gnu-configure
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="icu-devel boost-devel-minimal librevenge-devel zlib-devel"
+=======
+makedepends="icu-devel boost-devel librevenge-devel zlib-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Library for parsing the mspub file structure"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="MPL-2.0"

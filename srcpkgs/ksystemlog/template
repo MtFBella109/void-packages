@@ -3,6 +3,7 @@ pkgname=ksystemlog
 version=25.08.3
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
  -DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -11,9 +12,18 @@ hostmakedepends="extra-cmake-modules gettext kf6-kconfig kf6-kcoreaddons kf6-kdo
  pkg-config qt6-base qt6-tools"
 makedepends="kf6-kxmlgui-devel kf6-kcoreaddons-devel kf6-kwidgetsaddons-devel
  kf6-kitemviews-devel kf6-kio-devel kf6-kconfig-devel kf6-karchive-devel
+<<<<<<< HEAD
  kf6-ki18n-devel kf6-kcompletion-devel kf6-ktextwidgets-devel
  kf6-kcrash-devel
  libaudit-devel"
+=======
+ kf6-ki18n-devel kf6-kcompletion-devel kf6-ktextwidgets-devel"
+=======
+configure_args="-Wno-dev -DKDE4_BUILD_TESTS=OFF -DSYSCONF_INSTALL_DIR=/etc"
+hostmakedepends="cmake automoc4 pkg-config"
+makedepends="glib-devel libressl-devel qt-devel phonon-devel kdelibs-devel kde-runtime-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+>>>>>>> 6358bb77850 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="KDE System log viewer tool"
 maintainer="Piotr Wójcik <chocimier@tlen.pl>"
 license="GPL-2.0-or-later"

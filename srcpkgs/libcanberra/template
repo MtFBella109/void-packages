@@ -14,6 +14,7 @@ hostmakedepends="gettext pkg-config gtk-doc"
 makedepends="gtk+3-devel libvorbis-devel libltdl-devel
  gstreamer1-devel alsa-lib-devel tdb-devel pulseaudio-devel
 <<<<<<< HEAD
+<<<<<<< HEAD
  eudev-libudev-devel vala-devel"
 =======
 configure_args="--enable-alsa --enable-null
@@ -25,6 +26,9 @@ makedepends="pkg-config gtk+-devel gtk+3-devel libvorbis-devel libltdl-devel gst
 =======
  libudev-devel>=183 vala-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+=======
+ libudev-devel vala-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="XDG Sound Theme and Name Specification library implementation"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"

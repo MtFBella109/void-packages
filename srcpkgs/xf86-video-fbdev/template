@@ -4,8 +4,13 @@ version=0.4.1
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
 build_style=gnu-configure
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="xorg-server-devel>=1.15<1.16"
 depends="xserver-abi-video-15_1"
+=======
+makedepends="xorg-server-devel"
+depends="virtual?xserver-abi-video-19_1"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Xorg framebuffer video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=2bf857179523433a9cc6c6eea059298db4c865e649aa58dfc67c828f28b7288f

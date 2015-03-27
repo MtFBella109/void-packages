@@ -4,6 +4,7 @@ version=3.22.0
 revision=3
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 hostmakedepends="pkg-config intltool glib-devel"
 makedepends="libjpeg-turbo-devel gtk+3-devel
  libnotify-devel avahi-glib-libs-devel dbus-glib-devel telepathy-glib-devel
@@ -14,6 +15,15 @@ configure_args="--disable-schemas-compile"
 depends="desktop-file-utils"
 makedepends="pkg-config intltool gnome-doc-utils jpeg-devel gtk+3-devel libnotify-devel avahi-glib-libs-devel dbus-glib-devel telepathy-glib-devel libsoup-devel libXtst-devel NetworkManager-devel libgnome-keyring-devel gnutls-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+configure_args="--disable-schemas-compile"
+hostmakedepends="pkg-config intltool gnome-doc-utils glib-devel"
+makedepends="libjpeg-turbo-devel gtk+3-devel
+ libnotify-devel avahi-glib-libs-devel dbus-glib-devel telepathy-glib-devel
+ libsoup-devel libXtst-devel NetworkManager-devel libsecret-devel
+ gnutls-devel libSM-devel"
+depends="libsoup>=2.46 desktop-file-utils"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="VNC server for the GNOME desktop"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"

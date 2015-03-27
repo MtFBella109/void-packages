@@ -3,10 +3,28 @@ pkgname=empathy
 version=3.4.2.1
 distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-schemas-compile --disable-static"
 depends="webkit-gtk3>=1.6.3"
 makedepends="pkg-config intltool gnome-doc-utils itstool telepathy-glib-devel>=0.15.5 telepathy-logger-devel telepathy-farstream-devel telepathy-mission-control-devel evolution-data-server-devel geoclue-devel folks-devel libcanberra-devel libnotify-devel clutter-gtk-devel clutter-gst-devel webkit-gtk3-devel gcr-devel pulseaudio-devel enchant-devel NetworkManager-devel gnome-online-accounts-devel libchamplain-devel nautilus-sendto-devel cheese-devel gnutls-devel"
 fulldepends="iso-codes"
+=======
+configure_args="
+ --enable-gst-1.0=yes --enable-gudev=yes --enable-spell=yes
+ --disable-schemas-compile --disable-static --enable-goa=no
+ --enable-ubuntu-online-accounts=no --enable-geocode=yes
+ --enable-location=yes --enable-nautilus-sendto=no --enable-map=yes"
+hostmakedepends="pkg-config intltool gnome-doc-utils itstool"
+makedepends="
+ libcanberra-devel clutter-gst-devel clutter-gtk-devel
+ telepathy-glib-devel telepathy-logger-devel libnotify-devel
+ telepathy-farstream-devel telepathy-mission-control-devel
+ evolution-data-server-devel geocode-glib-devel folks-devel
+ webkitgtk-devel libgudev-devel pulseaudio-devel cheese-devel
+ enchant-devel NetworkManager-devel libchamplain-devel
+ gnutls-devel gsettings-desktop-schemas-devel geoclue2 iso-codes"
+depends="gsettings-desktop-schemas>=3.12 geoclue2>=2.1 iso-codes"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNOME instant messaging client using the Telepathy framework"
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://live.gnome.org/Empathy"

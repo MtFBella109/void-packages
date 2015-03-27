@@ -28,6 +28,7 @@ long_desc="
 ..."
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
+<<<<<<< HEAD
 build_options="cups"
 build_options_default="cups"
 
@@ -41,6 +42,14 @@ case "$XBPS_TARGET_MACHINE" in
 esac
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="automake libtool pkg-config"
+makedepends="
+ zlib-devel dbus-devel libXext-devel libXt-devel libpng-devel
+ fontconfig-devel jasper-devel tiff-devel lcms2-devel jbig2dec-devel
+ cups-devel"
+depends="gsfonts"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 pre_configure() {
 	# force it to use system libs.

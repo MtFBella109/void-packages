@@ -7,8 +7,12 @@ build_style=gnu-configure
 build_helper="gir"
 configure_args="--disable-static $(vopt_enable gir introspection)"
 hostmakedepends="pkg-config glib-devel"
+<<<<<<< HEAD
 makedepends="libglib-devel libxkbfile-devel libxml2-devel libXi-devel
  xkeyboard-config iso-codes"
+=======
+makedepends="libglib-devel libxkbfile-devel libxml2-devel libXi-devel xkeyboard-config iso-codes"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="xkeyboard-config iso-codes"
 short_desc="Library providing high-level API for X Keyboard Extension"
 maintainer="Orphaned <orphan@voidlinux.org>"

@@ -1,10 +1,19 @@
 # Template file for 'fs-uae'
 pkgname=fs-uae
+<<<<<<< HEAD
 version=3.1.66
 revision=1
 build_style=gnu-configure
 hostmakedepends="pkg-config gettext zip"
 makedepends="libmpeg2-devel SDL2-devel libglib-devel libpng-devel libopenal-devel"
+=======
+version=2.2.2
+revision=3
+build_style=gnu-makefile
+hostmakedepends="pkg-config"
+makedepends="SDL-devel MesaLib-devel freetype-devel libglib-devel libpng-devel libopenal-devel"
+depends="desktop-file-utils hicolor-icon-theme"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="FS-UAE Amiga Emulator"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"

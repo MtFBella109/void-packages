@@ -14,12 +14,19 @@ configure_args="--disable-static --enable-tests --enable-introspection --enable-
 =======
 configure_args="--disable-static"
 <<<<<<< HEAD
+<<<<<<< HEAD
 makedepends="pkg-config intltool gtk+-devel libxfce4util-devel xfconf-devel dbus-glib-devel libxml2-devel startup-notification-devel"
 =======
 hostmakedepends="pkg-config intltool"
 makedepends="gtk+-devel libxfce4util-devel xfconf-devel dbus-glib-devel
  libxml2-devel startup-notification-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+=======
+hostmakedepends="xfce4-dev-tools pkg-config intltool glib-devel gettext-devel"
+makedepends="gtk+-devel libxfce4util-devel xfconf-devel dbus-glib-devel
+ libxml2-devel startup-notification-devel libSM-devel"
+conf_files="/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Replacement of the old libxfcegui4 library"
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="GPL-2, LGPL-2.1"

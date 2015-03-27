@@ -26,7 +26,16 @@ homepage="http://live.gnome.org/Grilo"
 distfiles="${GNOME_SITE}/$pkgname/0.1/$pkgname-$version.tar.xz"
 build_style=gnu-configure
 configure_args="--disable-static --enable-shoutcast"
+<<<<<<< HEAD
 makedepends="pkg-config grilo-devel gupnp-av-devel libquvi-devel rest-devel sqlite-devel libgcrypt-devel gmime-devel libgdata-devel tracker-devel"
+=======
+hostmakedepends="pkg-config intltool itstool gnome-doc-utils"
+# XXX missing plugins: dmap and fakemetadata.
+makedepends="grilo-devel gupnp-av-devel json-glib-devel
+ libquvi-devel rest-devel sqlite-devel libgcrypt-devel gmime-devel
+ tracker-devel totem-pl-parser-devel libgdata-devel
+ gnome-online-accounts-devel avahi-glib-libs-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Plugins for Grilo"
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="LGPL-2.1"

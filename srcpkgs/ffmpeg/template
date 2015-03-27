@@ -48,6 +48,7 @@ long_desc="
  handle audio and video. It is a three-in-one solution.
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
+<<<<<<< HEAD
 build_options="x265 v4l2 vaapi vdpau vpx fdk_aac aom nvenc sndio pulseaudio
  dav1d zimg webp sofa vulkan drm srt rist nvdec"
 build_options_default="x265 v4l2 vpx aom sndio pulseaudio dav1d webp vulkan drm srt rist"
@@ -56,6 +57,14 @@ desc_option_srt="Enable support for SRT (Secure, Reliable, Transport)"
 desc_option_rist="Enable support for RIST (Reliable Internet Stream Transport)"
 desc_option_sofa="Enable support for AES SOFA"
 desc_option_webp="Enable support for WebP"
+=======
+hostmakedepends="pkg-config perl yasm"
+makedepends="zlib-devel bzip2-devel freetype-devel alsa-lib-devel libXfixes-devel
+ libXext-devel libXvMC-devel faad2-devel lame-devel libtheora-devel gnutls-devel
+ libvorbis-devel x264-devel xvidcore-devel jack-devel SDL-devel
+ libcdio-paranoia-devel libvpx-devel librtmp-devel freetype-devel libmodplug-devel
+ speex-devel celt-devel harfbuzz-devel libass-devel opus-devel pulseaudio-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 case "$XBPS_TARGET_MACHINE" in
 	i686*|x86_64*)

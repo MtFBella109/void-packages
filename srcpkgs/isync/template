@@ -3,10 +3,16 @@ pkgname=isync
 version=1.5.1
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="perl pkg-config"
 makedepends="openssl-devel libsasl-devel db-devel zlib-devel"
 depends="ca-certificates"
 checkdepends="perl perl-Clone perl-enum"
+=======
+hostmakedepends="pkg-config"
+makedepends="libressl-devel db-devel"
+depends="virtual?openssl"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="IMAP and MailDir mailbox synchronizer"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="GPL-2.0-or-later WITH custom:LicenseRef-isync-GPL-exception"

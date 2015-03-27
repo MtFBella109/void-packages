@@ -51,11 +51,30 @@ maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://libmtp.sourceforge.net"
 license="LGPL-2.1"
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
+<<<<<<< HEAD
 checksum=787679171baf8b3cf2fcc03196c705ab4d7cbc969bd71f9d3696be1ce7f1c63a
 long_desc="
  libmtp is an implementation of Microsoft's Media Transfer Protocol (MTP)
  in the form of a library suitable primarily for POSIX compliant operating
  systems."
+=======
+checksum=3f9e87536aa40e560d0c153a505e38096b1df5ea15fad783691e9a8ca4dd2282
+
+if [ "$CROSS_BUILD" ]; then
+	# XXX needs host mtp-hotplug
+	hostmakedepends+=" libmtp"
+fi
+
+pre_configure() {
+	if [ "$CROSS_BUILD" ]; then
+		sed -e "s,\(util/mtp-hotplug \),mtp-hotplug ,g" -i Makefile.in
+	fi
+}
+
+post_install() {
+	sed -i "/^Unable to open/d" ${DESTDIR}/usr/lib/udev/rules.d/69-libmtp.rules
+}
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 libmtp-devel_package() {
 	depends="libusb-devel libmtp>=${version}"

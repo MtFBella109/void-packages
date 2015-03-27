@@ -1,5 +1,6 @@
 # Template file for 'enlightenment'
 pkgname=enlightenment
+<<<<<<< HEAD
 version=0.25.4
 revision=2
 build_style=meson
@@ -7,6 +8,19 @@ configure_args="--sysconfdir=/etc -Dpam=true -Dsystemd=false
  $(vopt_bool wayland wl)"
 hostmakedepends="efl pkg-config gettext $(vopt_if wayland 'xorg-server-xwayland wayland-devel')"
 makedepends="gettext-devel efl-devel pam-devel xkeyboard-config libexif-devel
+=======
+version=0.19.4
+revision=1
+lib32disabled=yes
+# Package build options
+build_options="systemd wayland"
+build_style=gnu-configure
+configure_args="--enable-pam --disable-bluez4 $(vopt_enable systemd)
+ $(vopt_if wayland '--enable-wayland-egl --enable-wayland-clients' '--disable-wayland-egl')"
+hostmakedepends="pkg-config efl"
+makedepends="pam-devel pixman-devel elementary-devel
+ $(vopt_if systemd systemd-devel)
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
  $(vopt_if wayland 'libxkbcommon-devel MesaLib-devel wayland-devel')"
 depends="desktop-file-utils hicolor-icon-theme xkeyboard-config
  $(vopt_if wayland xorg-server-xwayland)"

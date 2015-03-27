@@ -4,6 +4,7 @@ version=25.08.3
 revision=1
 build_style=cmake
 # XXX KolabLibraries, Kolabxml
+<<<<<<< HEAD
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
  -DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -45,3 +46,9 @@ post_install() {
 		vlicense LICENSES/$license
 	done
 }
+=======
+hostmakedepends="cmake automoc4 pkg-config"
+makedepends="libressl-devel qt-devel phonon-devel kdelibs-devel
+ kdepimlibs-devel akonadi-devel boost-devel libxml2-devel
+ qjson-devel libkgapi-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)

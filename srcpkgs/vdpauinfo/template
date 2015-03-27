@@ -4,11 +4,16 @@ version=1.5
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 hostmakedepends="pkg-config automake"
 makedepends="libvdpau-devel"
 =======
 makedepends="automake pkg-config libvdpau-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="pkg-config"
+makedepends="libvdpau-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Command line utility for querying the capabilities of a VDPAU device"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"

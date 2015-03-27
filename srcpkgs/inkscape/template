@@ -1,6 +1,7 @@
 # Template file for 'inkscape'
 pkgname=inkscape
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=1.4.2
 revision=3
 build_style=cmake
@@ -17,6 +18,19 @@ depends="desktop-file-utils hicolor-icon-theme python3-Pillow python3-appdirs
  python3-cssselect python3-lxml python3-numpy python3-requests python3-scour
  python3-tinycss2"
 checkdepends="$depends GraphicsMagick ImageMagick cantarell-fonts gtest-devel bc"
+=======
+version=0.91
+revision=4
+build_style=gnu-configure
+configure_args="--enable-lcms --enable-poppler-cairo
+ --without-gnome-vfs --disable-static"
+hostmakedepends="pkg-config intltool"
+makedepends="
+ popt-devel libpng-devel gsl-devel gc-devel gtkmm2-devel libxslt-devel
+ lcms2-devel poppler-glib-devel boost-devel libmagick-devel
+ libvisio-devel libwpg-devel libcdr-devel dbus-glib-devel libgomp-devel"
+depends="desktop-file-utils hicolor-icon-theme"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Vector-based drawing program"
 maintainer="Alex Lohr <alexthkloss@web.de>"
 license="GPL-2.0-only, LGPL-2.1-or-later"

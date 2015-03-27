@@ -5,6 +5,7 @@ revision=2
 build_style=gnu-configure
 build_helper="gir"
 configure_args="--enable-fts --enable-datahub $(vopt_enable gir introspection)"
+<<<<<<< HEAD
 hostmakedepends="automake libtool pkg-config gettext-devel
  python3-rdflib $(vopt_if vala vala)"
 makedepends="json-glib-devel gtk+3-devel telepathy-glib-devel
@@ -19,6 +20,20 @@ changelog="https://gitlab.freedesktop.org/zeitgeist/zeitgeist/-/raw/main/NEWS"
 distfiles="https://launchpad.net/zeitgeist/${version%.*}/${version}/+download/zeitgeist-${version}.tar.xz"
 checksum=da0e11160b2a36fe6260acf62b4190e29755fd5df130818157a04883c1eb7237
 make_check_pre="xvfb-run"
+=======
+hostmakedepends="pkg-config intltool vala-devel $(vopt_if gir gobject-introspection)"
+makedepends="
+ python-rdflib json-glib-devel gtk+3-devel telepathy-glib-devel
+ python-gobject-devel dbus-devel sqlite-devel xapian-core-devel raptor"
+depends="python-dbus python-gobject"
+pycompile_module="zeitgeist"
+short_desc="logs the users’ activities and events"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://zeitgeist-project.com"
+license="LGPL-2.1"
+distfiles="https://launchpad.net/${pkgname}/${version%.*}/${version}/+download/${pkgname}-${version}.tar.xz"
+checksum=769b5abfe67ef632414efa1d35a1462c5cd86c8792bb4635b4c3d93a5f15f061
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 # Package build options
 build_options="gir vala"

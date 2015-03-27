@@ -5,6 +5,7 @@ revision=7
 build_style=gnu-configure
 build_helper="gir"
 configure_args="--with-ui --with-gtksourceview --with-graphviz --enable-json
+<<<<<<< HEAD
  --enable-system-sqlite --without-libsoup"
 hostmakedepends="automake pkg-config intltool itstool flex perl glib-devel"
 makedepends="gtk+3-devel libxml2-devel libxslt-devel
@@ -13,6 +14,14 @@ makedepends="gtk+3-devel libxml2-devel libxslt-devel
  json-glib-devel readline-devel libmariadbclient-devel"
 depends="sqlite"
 checkdepends="xvfb-run"
+=======
+ --enable-system-sqlite"
+hostmakedepends="pkg-config intltool itstool flex perl"
+makedepends="glib-devel gtk+3-devel libxml2-devel libxslt-devel
+ libressl-devel libgcrypt-devel sqlite-devel db-devel libsoup-devel
+ libsecret-devel libgnome-keyring-devel gtksourceview-devel graphviz-devel
+ json-glib-devel readline-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="/etc/libgda-5.0/config"
 short_desc="Database and data abstraction layer"
 maintainer="Orphaned <orphan@voidlinux.org>"

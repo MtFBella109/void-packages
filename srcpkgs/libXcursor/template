@@ -5,7 +5,11 @@ version=1.2.3
 revision=2
 build_style=gnu-configure
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="xorgproto libXfixes-devel libXrender-devel"
+=======
+makedepends="fixesproto libXfixes-devel libXrender-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Client-side cursor loading library for X"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"

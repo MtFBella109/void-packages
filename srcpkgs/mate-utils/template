@@ -3,6 +3,7 @@ pkgname=mate-utils
 version=1.28.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static --disable-schemas-compile --enable-ipv6
  GTK_LAYER_SHELL_REQUIRED_VERSION=0 GDK_WAYLAND_REQUIRED_VERSION=0
  $(vopt_enable wayland) $(vopt_enable wayland in-process)"
@@ -11,6 +12,11 @@ hostmakedepends="pkg-config gettext itstool glib-devel librsvg-utils
 makedepends="gtk+3-devel libSM-devel libICE-devel zlib-devel libcanberra-devel
  libXext-devel libX11-devel libgtop-devel libmate-panel-devel udisks2-devel
  mate-desktop-devel $(vopt_if wayland 'wayland-devel gtk-layer-shell-devel')"
+=======
+configure_args="--with-gtk=2.0 --disable-static"
+hostmakedepends="pkg-config intltool itstool glib-devel"
+makedepends="gtk+-devel libSM-devel zlib-devel libcanberra-devel libgtop-devel libmate-panel-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils"
 short_desc="Common utilities for the MATE desktop"
 maintainer="skmpz <dem.procopiou@gmail.com>"

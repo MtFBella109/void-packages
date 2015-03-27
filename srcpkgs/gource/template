@@ -6,8 +6,13 @@ build_style=gnu-configure
 configure_args="--with-tinyxml --enable-ttf-font-dir=/usr/share/fonts/TTF
  --with-boost-libdir=$XBPS_CROSS_BASE/usr/lib/ --with-boost-system=c"
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="tinyxml-devel libpng-devel SDL2_image-devel glew-devel
  freetype-devel boost-devel-minimal libboost_filesystem glm pcre2-devel"
+=======
+makedepends="tinyxml-devel SDL2_image-devel glew-devel
+ freetype-devel boost-devel glm pcre-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="freefont-ttf"
 short_desc="Software version control visualization"
 maintainer="icp <pangolin@vivaldi.net>"

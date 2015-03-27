@@ -15,12 +15,26 @@ long_desc="
  Qt(TM) is a GUI software toolkit. Qt simplifies the task of writing and
  maintaining GUI (graphical user interface) applications."
 
+<<<<<<< HEAD
 subpackages="qt-libphonon qt-plugin-pgsql qt-plugin-mysql qt-plugin-sqlite"
 subpackages="${subpackages} qt-demos qt-docs qt-qmake qt-qtconfig"
 subpackages="${subpackages} qt-designer qt-devel qt-devel-tools"
 subpackages="${subpackages} qt-plugin-gstreamer"
 
 # XXX Missing dependencies: unixodbc.
+=======
+nocross=yes
+hostmakedepends="pkg-config"
+makedepends="
+ libressl-devel libpng-devel MesaLib-devel libXrender-devel unixodbc-devel
+ fontconfig-devel libXi-devel libXv-devel libXinerama-devel libXrandr-devel
+ libXcursor-devel dbus-devel glib-devel icu-devel cups-devel libjpeg-turbo-devel
+ sqlite-devel alsa-lib-devel tiff-devel libmng-devel libxshmfence-devel
+ libSM-devel gtk+-devel libmysqlclient-devel postgresql-libs-devel
+ pulseaudio-devel"
+depends="qtchooser hicolor-icon-theme"
+replaces="qt-qtconfig>=0"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 do_configure() {
 	export LD_LIBRARY_PATH="${wrksrc}/lib:${LD_LIBRARY_PATH}"

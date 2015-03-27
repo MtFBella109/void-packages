@@ -43,9 +43,28 @@ long_desc="
  QEMU is a generic and open source machine emulator and virtualizer.
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
+<<<<<<< HEAD
 build_options="gtk3 iscsi jack numa opengl pulseaudio sdl2 smartcard spice virgl"
 build_options_default="gtk3 iscsi jack numa opengl pulseaudio sdl2 smartcard spice virgl"
 desc_option_sdl2="Enable SDL (2.x) video output"
+=======
+nostrip=yes
+hostmakedepends="pkg-config perl python automake libtool flex"
+makedepends="libpng-devel libjpeg-turbo-devel pixman-devel snappy-devel
+ libuuid-devel libX11-devel alsa-lib-devel libaio-devel gnutls-devel
+ libsasl-devel libglib-devel ncurses-devel libseccomp-devel nss-devel
+ libcurl-devel xfsprogs-devel libcap-ng-devel libcap-devel vde2-devel usbredir-devel
+ libbluetooth-devel libssh2-devel libusb-devel pulseaudio-devel libnfs-devel
+ $(vopt_if sdl SDL-devel) $(vopt_if sdl2 SDL2-devel) $(vopt_if gtk gtk+-devel)
+ $(vopt_if spice spice-devel)"
+conf_files="/etc/qemu/target-x86_64.conf"
+
+build_options="gtk sdl sdl2 spice"
+build_options_default="sdl"
+desc_option_gtk="Enable GTK display and use it by default"
+desc_option_sdl="Use SDL (1.x) video output"
+desc_option_sdl2="Use SDL (2.x) video output"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 desc_option_spice="Enable support for SPICE"
 desc_option_virgl="Enable support for VirGL (A Virtual 3D GPU renderer)"
 desc_option_smartcard="Enable smartcard support"

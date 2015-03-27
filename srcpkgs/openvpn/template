@@ -3,6 +3,7 @@ pkgname=openvpn
 version=2.6.15
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="$(vopt_enable pkcs11) --disable-systemd
  $(vopt_if mbedtls --with-crypto-library=mbedtls)"
 hostmakedepends="pkg-config"
@@ -25,6 +26,18 @@ build_options_default="pkcs11"
 desc_option_mbedtls="Build with mbedtls support"
 desc_option_pkcs11="Enable support for PKCS#11"
 vopt_conflict mbedtls pkcs11
+=======
+configure_args="--enable-password-save --enable-iproute2 $(vopt_enable systemd)"
+hostmakedepends="iproute2"
+makedepends="libressl-devel lzo-devel pam-devel $(vopt_if systemd systemd-devel)"
+depends="iproute2"
+short_desc="An easy-to-use, robust, and highly configurable VPN (Virtual Private Network)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+homepage="http://www.openvpn.net"
+distfiles="http://swupdate.openvpn.org/community/releases/${pkgname}-${version}.tar.gz"
+checksum=7baed2ff39c12e1a1a289ec0b46fcc49ff094ca58b8d8d5f29b36ac649ee5b26
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 post_install() {
 	vmkdir usr/share/examples/${pkgname}

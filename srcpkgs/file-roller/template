@@ -3,11 +3,18 @@ pkgname=file-roller
 <<<<<<< HEAD
 version=44.5
 revision=1
+<<<<<<< HEAD
 build_style=meson
 hostmakedepends="gettext glib-devel itstool pkg-config desktop-file-utils
  gtk-update-icon-cache cpio"
 makedepends="libadwaita-devel libarchive-devel libportal-gtk4-devel
  nautilus-devel"
+=======
+build_style=gnu-configure
+configure_args="--disable-schemas-compile --enable-magic --disable-static"
+hostmakedepends="pkg-config intltool gnome-doc-utils itstool glib-devel"
+makedepends="nautilus-devel json-glib-devel libnotify-devel libarchive-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils hicolor-icon-theme"
 short_desc="GNOME Front-end to archiving programs like tar and zip"
 maintainer="Enno Boland <gottox@voidlinux.org>"

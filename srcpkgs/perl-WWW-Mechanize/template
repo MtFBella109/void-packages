@@ -3,6 +3,7 @@ pkgname=perl-WWW-Mechanize
 version=2.19
 revision=1
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl-CGI perl-HTML-Form perl-HTML-Tree
  perl-HTTP-Response-Encoding perl-HTTP-Server-Simple perl-Test-Warn"
 makedepends="perl-CGI perl-HTML-Form perl-HTML-Tree perl-HTTP-Response-Encoding
@@ -10,6 +11,14 @@ makedepends="perl-CGI perl-HTML-Form perl-HTML-Tree perl-HTTP-Response-Encoding
 depends="$makedepends"
 checkdepends="perl-Test-Deep perl-Test-Exception perl-Test-Fatal
  perl-Test-NoWarnings perl-Test-Output perl-Test-Warnings perl-HTTP-Daemon"
+=======
+hostmakedepends="perl perl-LWP perl-HTML-Parser perl-URI
+	perl-HTTP-Response-Encoding perl-HTTP-Server-Simple
+	perl-Test-Warn perl-HTML-Form"
+makedepends="${hostmakedepends}"
+depends="${makedepends}"
+noarch="yes"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="WWW::Mechanize - Handy web browsing in a Perl object"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"

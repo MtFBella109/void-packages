@@ -3,6 +3,7 @@ pkgname=kdeplasma-addons
 version=6.5.2
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QMLDIR=lib/qt6/qml -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
 hostmakedepends="extra-cmake-modules qt6-base qt6-tools pkg-config gettext
@@ -27,7 +28,27 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://invent.kde.org/plasma/kdeplasma-addons"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
+<<<<<<< HEAD
 checksum=935b1ca2890cab03ef9bf0cacc8fb5a6044fa688487d4b60f97ab239a3b95684
+=======
+checksum=4bdbdc2892bbf6211c3be6c02177f7ffdce10ab1546d811a4b59024192b77bce
+=======
+configure_args="-Wno-dev -DKDE4_BUILD_TESTS=OFF -DSYSCONF_INSTALL_DIR=/etc -DWITH_Nepomuk=OFF"
+# XXX scim, marble.
+hostmakedepends="cmake automoc4 pkg-config"
+makedepends="libressl-devel qt-devel phonon-devel strigi-devel qoauth-devel
+ kdelibs-devel kdepimlibs-devel
+ kde-workspace-devel libkexiv2-devel libdbusmenu-qt-devel
+ libXtst-devel attica-devel libXrender-devel eigen2 glib-devel ibus-devel
+ qimageblitz-devel boost-devel qjson-devel MesaLib-devel marble-devel"
+short_desc="KDE Plasma Add-ons"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL, LGPL, FDL"
+homepage="http://www.kde.org"
+distfiles="http://download.kde.org/stable/${version}/src/${pkgname}-${version}.tar.xz"
+checksum=85656b9c4a709629563d14ca2371e7544f38366c3e54af4c8ddaaf9d500d201b
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+>>>>>>> 6358bb77850 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 if [ "$XBPS_WORDSIZE$XBPS_WORDSIZE" = "64$XBPS_TARGET_WORDSIZE" ]; then
 	makedepends+=" qt6-webengine-devel"

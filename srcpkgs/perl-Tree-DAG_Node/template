@@ -4,7 +4,11 @@ version=1.35
 revision=1
 build_style=perl-module
 hostmakedepends="perl"
+<<<<<<< HEAD
 makedepends="${hostmakedepends} perl-File-Slurper"
+=======
+makedepends="${hostmakedepends} perl-File-Slurp-Tiny"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="${makedepends}"
 short_desc="Tree::DAG_Node - An N-ary tree"
 maintainer="Leah Neukirchen <leah@vuxu.org>"

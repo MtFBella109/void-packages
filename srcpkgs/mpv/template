@@ -1,5 +1,6 @@
 # Template file for 'mpv'
 pkgname=mpv
+<<<<<<< HEAD
 version=0.40.0
 revision=3
 build_style=meson
@@ -34,6 +35,22 @@ makedepends="MesaLib-devel ffmpeg6-devel harfbuzz-devel libXv-devel libass-devel
  $(vopt_if vulkan "vulkan-loader-devel")
  $(vopt_if wayland "wayland-devel wayland-protocols libxkbcommon-devel")
  $(vopt_if x11 "libXScrnSaver-devel libXinerama-devel libXrandr-devel libXpresent-devel")"
+=======
+version=0.8.3
+revision=1
+short_desc="Video player based on MPlayer/mplayer2"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+homepage="http://mpv.io"
+build_style=waf
+hostmakedepends="pkg-config python-docutils perl"
+makedepends="
+ ffmpeg-devel libass-devel lcms2-devel libXinerama-devel lua-devel
+ mpg123-devel libXv-devel libxkbcommon-devel libva-glx-devel libvdpau-devel
+ alsa-lib-devel libbluray-devel libcdio-paranoia-devel libdvdread-devel pulseaudio-devel
+ MesaLib-devel harfbuzz-devel libXScrnSaver-devel jack-devel libdvdnav-devel
+ wayland-devel libuuid-devel libguess-devel libXrandr-devel samba-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils hicolor-icon-theme"
 short_desc="Video player based on MPlayer/mplayer2"
 maintainer="travankor <travankor@tuta.io>"

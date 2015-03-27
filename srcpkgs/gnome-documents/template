@@ -3,6 +3,15 @@ pkgname=gnome-documents
 version=0.4.2
 distfiles="${GNOME_SITE}/$pkgname/0.4/$pkgname-$version.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
+=======
+hostmakedepends="pkg-config intltool itstool docbook-xsl gobject-introspection"
+makedepends="
+ clutter-gtk-devel gnome-desktop-devel libzapojit-devel
+ gnome-online-accounts-devel libgdata-devel tracker-devel
+ evince-devel gjs-devel libsoup-gnome-devel vala-devel
+ webkitgtk-devel librsvg-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils hicolor-icon-theme"
 makedepends="pkg-config intltool vala-devel gobject-introspection clutter-gtk-devel gnome-desktop-devel gnome-online-accounts-devel libgdata-devel tracker-devel evince-devel gjs-devel liboauth-devel"
 short_desc="Documents Manager for GNOME"

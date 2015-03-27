@@ -4,9 +4,16 @@ version=3.4.0.1
 homepage="http://live.gnome.org/GnomeTweakTool"
 distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
 depends="pygobject desktop-file-utils"
 makedepends="pkg-config intltool pygobject-devel"
 fulldepends="GConf gsettings-desktop-schemas"
+=======
+hostmakedepends="pkg-config intltool"
+makedepends="gtk+3-devel python-gobject-devel gsettings-desktop-schemas-devel"
+depends="python python-gobject>=3.14 gsettings-desktop-schemas>=3.14 dconf hicolor-icon-theme desktop-file-utils"
+pycompile_module="gtweak"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNOME3 tool to customize advanced options"
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="GPL-2"

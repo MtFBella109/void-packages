@@ -4,12 +4,21 @@ version=6.4.30
 revision=5
 build_style=gnu-configure
 configure_args="--with-ssl=${XBPS_CROSS_BASE}/usr"
+<<<<<<< HEAD
 hostmakedepends="python3 pkg-config"
 makedepends="openssl-devel"
 depends="fetchmailconf"
 short_desc="Remote-mail retrieval utility"
 maintainer="Piotr Wójcik <chocimier@tlen.pl>"
 license="GPL-2.0-only"
+=======
+hostmakedepends="python-devel"
+makedepends="libressl-devel"
+depends="python"
+short_desc="A remote-mail retrieval utility"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://fetchmail.sourceforge.net/"
 changelog="https://gitlab.com/fetchmail/fetchmail/-/raw/legacy_64/NEWS"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.xz"

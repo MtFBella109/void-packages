@@ -23,8 +23,23 @@ homepage="https://projects.gnome.org/anjuta"
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=42a93130ed3ee02d064a7094e94e1ffae2032b3f35a87bf441e37fc3bb3a148f
 
+<<<<<<< HEAD
 if [ "$XBPS_TARGET_LIBC" = "glibc" ]; then
 	makedepends+=" libxcrypt-devel"
+=======
+hostmakedepends="pkg-config intltool flex itstool python autogen glib-devel
+ $(vopt_if gir gobject-introspection)"
+makedepends="
+ gtksourceview-devel libxml2-devel vte3-devel gjs-devel
+ libxslt-devel glade3-devel graphviz-devel vala-devel
+ libgda-devel devhelp-devel sqlite-devel apr-util-devel
+ neon-devel subversion-devel python-devel gdl-devel"
+depends="autogen"
+
+# Disable gir for cross builds.
+if [ -z "$CROSS_BUILD" ]; then
+	build_options_default="gir"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 fi
 
 build_options="gir"

@@ -3,10 +3,16 @@ pkgname=perl-Net-SSLeay
 version=1.94
 revision=2
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl openssl openssl-devel"
 makedepends="perl zlib-devel openssl-devel"
 depends="perl"
 checkdepends="perl-Test-Warn perl-Test-NoWarnings perl-Test-Exception perl-Test-Pod"
+=======
+hostmakedepends="perl libressl-openssl"
+makedepends="perl zlib-devel libressl-devel"
+depends="perl>=5.20"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Net::SSLeay - Perl extension for using OpenSSL"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="Artistic-2.0"

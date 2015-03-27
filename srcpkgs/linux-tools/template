@@ -11,12 +11,25 @@ makedepends="babeltrace-devel binutils-devel elfutils-devel eudev-libudev-devel
  slang-devel libaudit-devel libtraceevent-devel libpfm4-devel"
 depends="cpupower-${version}_${revision} perf-${version}_${revision} usbip-${version}_${revision}"
 short_desc="Linux kernel tools meta-pkg"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="https://www.kernel.org"
 distfiles="${KERNEL_SITE}/kernel/v${version%%.*}.x/linux-${version}.tar.xz"
 checksum=7a574bbc20802ea76b52ca7faf07267f72045e861b18915c5272a98c27abf884
 python_version=3
+=======
+hostmakedepends="flex perl asciidoc xmlto python automake libtool"
+makedepends="pciutils-devel python-devel libglib-devel libsysfs-devel
+ elfutils-devel libunwind-devel binutils-devel zlib-devel slang-devel
+ libudev-devel"
+depends="cpupower>=${version} perf>=${version} usbip>=${version}"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+homepage="http://www.kernel.org"
+distfiles="http://ftp.kernel.org/pub/linux/kernel/v3.x/linux-${version}.tar.xz"
+checksum=717f36a65735bdd7afcb452578cc221c7fde8f6a0073e2feb62473466bdfa763
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 subpackages="cpupower freefall libcpupower libcpupower-devel libusbip
  libusbip-devel perf tmon usbip bpftool"

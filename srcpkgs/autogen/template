@@ -3,9 +3,15 @@ pkgname=autogen
 version=5.18.16
 revision=3
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static --disable-dependency-tracking --without-libregex ag_cv_run_strcspn=false"
 hostmakedepends="automake guile libtool perl pkg-config tar which"
 makedepends="guile guile-devel libatomic_ops-devel libxml2-devel gc-devel"
+=======
+configure_args="--disable-static"
+hostmakedepends="pkg-config perl"
+makedepends="guile guile-devel libxml2-devel gc-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="guile perl"
 short_desc="Automated Program Generator"
 maintainer="Orphaned <orphan@voidlinux.org>"

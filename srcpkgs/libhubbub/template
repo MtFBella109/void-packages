@@ -3,7 +3,11 @@ pkgname=libhubbub
 <<<<<<< HEAD
 version=0.3.8
 revision=1
+<<<<<<< HEAD
 hostmakedepends="gperf perl pkg-config netsurf-buildsystem"
+=======
+hostmakedepends="perl pkg-config netsurf-buildsystem"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="libxslt-devel json-c-devel libparserutils-devel"
 short_desc="HTML5 compliant parsing library, written in C"
 maintainer="Orphaned <orphan@voidlinux.org>"

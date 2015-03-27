@@ -19,6 +19,11 @@ version=0.6.0
 homepage="http://goodies.xfce.org/projects/applications/ristretto"
 distfiles="http://archive.xfce.org/src/apps/$pkgname/${version%.*}/$pkgname-$version.tar.bz2"
 build_style=gnu-configure
+<<<<<<< HEAD
+=======
+hostmakedepends="pkg-config intltool"
+makedepends="libexif-devel dbus-glib-devel libxfce4ui-devel exo-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme desktop-file-utils"
 makedepends="pkg-config intltool gtk+-devel libexif-devel xfconf-devel dbus-glib-devel libxfce4util-devel libxfce4ui-devel exo-devel"
 short_desc="Picture-viewer for the Xfce desktop environment"

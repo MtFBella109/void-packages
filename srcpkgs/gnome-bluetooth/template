@@ -1,2 +1,32 @@
 # Template file for 'gnome-bluetooth'
 pkgname=gnome-bluetooth
+<<<<<<< HEAD
+=======
+version=3.14.0
+revision=1
+build_style=gnu-configure
+configure_args="--disable-static --disable-desktop-update
+ --disable-schemas-compile --disable-icon-update"
+hostmakedepends="pkg-config intltool itstool gnome-doc-utils gobject-introspection glib-devel"
+makedepends="libXi-devel gtk+3-devel libnotify-devel dconf-devel
+ gvfs-devel bluez eudev-libudev-devel"
+depends="bluez>=5 dconf>=0.20 gvfs>=1.20 hicolor-icon-theme desktop-file-utils"
+short_desc="The GNOME Bluetooth Subsystem"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://live.gnome.org/GnomeBluetooth"
+license="GPL-2, LGPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=e2ef5e0036748eeb4756e8cb57e9909f10b771d290086dd1f377451d3fe18b09
+
+gnome-bluetooth-devel_package() {
+	depends="glib-devel gtk+3-devel ${sourcepkg}>=${version}"
+	short_desc+=" - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share/gir-1.0
+		vmove usr/share/gtk-doc
+		vmove "usr/lib/*.so"
+	}
+}
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)

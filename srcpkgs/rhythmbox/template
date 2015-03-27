@@ -2,6 +2,7 @@
 pkgname=rhythmbox
 version=3.4.8
 revision=1
+<<<<<<< HEAD
 build_style=meson
 build_helper=gir
 configure_args="-Dgudev=enabled $(vopt_feature gir plugins_vala) -Ddaap=enabled"
@@ -19,6 +20,22 @@ depends="desktop-file-utils hicolor-icon-theme"
 short_desc="GNOME integrated music management application"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+build_style=gnu-configure
+configure_args="--disable-static --disable-schemas-compile
+ --with-webkit --with-gudev --without-hal --enable-vala"
+hostmakedepends="pkg-config intltool gnome-doc-utils itstool gobject-introspection"
+makedepends="gtk+3-devel libsoup-gnome-devel totem-pl-parser-devel
+ json-glib-devel libgudev-devel GConf-devel libdiscid-devel vala-devel
+ libmtp-devel avahi-glib-libs-devel libpeas-devel brasero-devel
+ libnotify-devel tdb-devel libsecret-devel libSM-devel webkitgtk-devel
+ grilo-devel gst-plugins-base1-devel clutter-gtk-devel
+ python3.4-devel python-gobject-devel libdmapsharing-devel"
+depends="gir-freedesktop desktop-file-utils hicolor-icon-theme"
+short_desc="GNOME integrated music management application, inspired by Apple's iTunes"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://www.rhythmbox.org"
 <<<<<<< HEAD
 distfiles="${GNOME_SITE}/rhythmbox/${version::3}/rhythmbox-${version}.tar.xz"

@@ -5,10 +5,16 @@ version=4.24
 revision=1
 build_style=meson
 hostmakedepends="pkg-config perl"
+<<<<<<< HEAD
 makedepends="pcre2-devel yajl-devel libxcb-devel libev-devel
  pango-devel startup-notification-devel libxkbcommon-devel
  xcb-util-keysyms-devel xcb-util-wm-devel xcb-util-cursor-devel
  xcb-util-xrm-devel"
+=======
+makedepends="pcre-devel yajl-devel libxcb-devel libev-devel
+ pango-devel startup-notification-devel libxkbcommon-devel
+ xcb-util-keysyms-devel xcb-util-wm-devel xcb-util-cursor-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="/etc/i3/config /etc/i3/config.keycodes"
 short_desc="Improved tiling window manager"
 maintainer="Rodrigo Oliveira <mdkcore@qtrnn.io>"

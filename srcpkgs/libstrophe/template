@@ -3,6 +3,7 @@ pkgname=libstrophe
 version=0.14.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="$(vopt_enable cares) $(vopt_enable tls)"
 hostmakedepends="automake libtool pkg-config"
 makedepends="$(vopt_if cares c-ares-devel) expat-devel
@@ -10,6 +11,13 @@ makedepends="$(vopt_if cares c-ares-devel) expat-devel
 short_desc="Minimal XMPP library written in C"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-only"
+=======
+hostmakedepends="automake libtool pkg-config git"
+makedepends="expat-devel zlib-devel libressl-devel"
+short_desc="A minimal XMPP library written in C"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://strophe.im/libstrophe/"
 changelog="https://raw.githubusercontent.com/strophe/libstrophe/master/ChangeLog"
 distfiles="https://github.com/strophe/libstrophe/archive/${version}.tar.gz"

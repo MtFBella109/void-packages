@@ -2,8 +2,14 @@
 pkgname=bwidget
 version=1.9.16
 revision=1
+<<<<<<< HEAD
 makedepends="tk"
 depends="tk"
+=======
+noarch=yes
+makedepends="tk"
+depends="${makedepends}"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Set of extension widgets for Tcl/Tk"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="TCL"

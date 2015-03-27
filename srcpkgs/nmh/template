@@ -3,10 +3,42 @@ pkgname=nmh
 version=1.8
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--with-cyrus-sasl --with-tls"
 makedepends="db-devel libcurl-devel openssl-devel libsasl-devel ncurses-devel"
 checkdepends="groff lynx tar"
 conf_files="/etc/nmh/*"
+=======
+configure_args="--sysconfdir=/etc/nmh --libdir=/usr/libexec/nmh --with-cyrus-sasl --with-tls"
+makedepends="ncurses-devel db-devel libsasl-devel libressl-devel"
+conf_files="
+ /etc/nmh/MailAliases
+ /etc/nmh/components
+ /etc/nmh/digestcomps
+ /etc/nmh/distcomps
+ /etc/nmh/forwcomps
+ /etc/nmh/mhl.body
+ /etc/nmh/mhl.digest
+ /etc/nmh/mhl.format
+ /etc/nmh/mhl.forward
+ /etc/nmh/mhl.headers
+ /etc/nmh/mhl.reply
+ /etc/nmh/mhn.defaults
+ /etc/nmh/mts.conf
+ /etc/nmh/rcvdistcomps
+ /etc/nmh/rcvdistcomps.outbox
+ /etc/nmh/replcomps
+ /etc/nmh/replgroupcomps
+ /etc/nmh/scan.MMDDYY
+ /etc/nmh/scan.YYYYMMDD
+ /etc/nmh/scan.default
+ /etc/nmh/scan.mailx
+ /etc/nmh/scan.nomime
+ /etc/nmh/scan.size
+ /etc/nmh/scan.time
+ /etc/nmh/scan.timely
+ /etc/nmh/scan.unseen"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Message Handling System (New RAND Mail Handler)"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="BSD-3-Clause"

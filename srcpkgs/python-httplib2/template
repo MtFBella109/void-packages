@@ -1,0 +1,30 @@
+# Template file for 'python-httplib2'
+pkgname=python-httplib2
+version=0.9
+revision=4
+noarch=yes
+patch_args="-Np1"
+wrksrc="httplib2-${version}"
+build_style=python-module
+python_versions="2.7 3.4"
+hostmakedepends="python-setuptools python3.4-setuptools"
+makedepends="python-devel python3.4-devel libressl-devel"
+depends="python ca-certificates"
+pycompile_module="httplib2"
+short_desc="A comprehensive HTTP client library (Python2)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="https://github.com/jcgregorio/httplib2/"
+license="MIT"
+distfiles="https://pypi.python.org/packages/source/h/httplib2/httplib2-${version}.tar.gz"
+checksum=39ea8c6a6d9f595c177a16134fc49a990ad8d382758cbf469c8659662f2f51ab
+
+python3.4-httplib2_package() {
+	noarch=yes
+	depends="python3.4"
+	pycompile_version="3.4"
+	pycompile_module="httplib2"
+	short_desc="${short_desc/Python2/Python3.4}"
+	pkg_install() {
+		vmove usr/lib/python3.4
+	}
+}

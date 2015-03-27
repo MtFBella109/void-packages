@@ -1,7 +1,13 @@
 # Template file for 'kde-baseapps'
 pkgname=kde-baseapps
+<<<<<<< HEAD
 version=25.08.3
 revision=1
+=======
+<<<<<<< HEAD
+version=24.02.0
+revision=3
+>>>>>>> 6358bb77850 (xbps-src: always require current srcpkgs version in build dependencies.)
 metapackage=yes
 depends="
 	dolphin>=${version}
@@ -11,6 +17,23 @@ short_desc="KDE base applications meta-package for Void Linux"
 maintainer="John <me@johnnynator.dev>"
 license="GPL-2.0-only"
 homepage="https://www.kde.org"
+=======
+version=4.14.2
+revision=2
+build_style=cmake
+configure_args="-Wno-dev -DKDE4_BUILD_TESTS=OFF"
+hostmakedepends="cmake automoc4 pkg-config"
+makedepends="glib-devel libressl-devel qt-devel phonon-devel strigi-devel
+ tidy-devel libXt-devel kdelibs-devel kactivities-devel
+ kfilemetadata-devel baloo-devel baloo-widgets-devel"
+depends="hicolor-icon-theme oxygen-icons"
+short_desc="KDE base applications"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL, LGPL, FDL"
+homepage="http://www.kde.org"
+distfiles="http://download.kde.org/stable/${version}/src/${pkgname}-${version}.tar.xz"
+checksum=dfe3728522be0d10b1b79f54fe06b26be89b62cc88025d394c5750a31a26defe
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 if [ "$XBPS_WORDSIZE$XBPS_WORDSIZE" = "64$XBPS_TARGET_WORDSIZE" ]; then
 	depends+=" khelpcenter>=${version}"

@@ -1,5 +1,6 @@
 # Template file for 'kodi'
 pkgname=kodi
+<<<<<<< HEAD
 version=21.2
 revision=2
 _codename="Omega"
@@ -44,6 +45,40 @@ makedepends="eudev-libudev-devel pcre-devel expat-devel libpng-devel libjpeg-tur
  libmicrohttpd-devel libcec-devel dcadec-devel flatbuffers-devel fmt-devel lcms2-devel
  libfstrcmp-devel rapidjson libcdio-paranoia spdlog libwaylandpp-devel libinput-devel
  libdav1d-devel gtest-devel python3-devel"
+=======
+version=14.1
+revision=6
+wrksrc="xbmc-${version}-Helix"
+short_desc="A software media player and entertainment hub for digital media"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.kodi.tv"
+license="GPL-2"
+distfiles="https://github.com/xbmc/xbmc/archive/${version}-Helix.tar.gz"
+checksum=a38059e292cf8523918834e49fcc2d688525ceb7951ddf7f5ee535f4147255d6
+
+lib32disabled=yes
+broken_as_needed=yes
+only_for_archs="i686 x86_64"
+
+provides="xbmc-${version}_${revision}"
+replaces="xbmc>=0"
+
+# XXX add support for afp.
+hostmakedepends="
+ automake libtool pkg-config gperf cmake zip unzip nasm yasm python-devel
+ swig openjdk-jre gettext-devel libltdl-devel curl"
+makedepends="
+ libudev-devel pcre-devel expat-devel libpng-devel libjpeg-turbo-devel
+ libXrandr-devel avahi-libs-devel pulseaudio-devel samba-devel tiff-devel
+ libmysqlclient-devel libmpeg2-devel wavpack-devel zlib-devel lzo-devel
+ libXmu-devel glew-devel fribidi-devel sqlite-devel libcdio-devel freetype-devel
+ jasper-devel faac-devel SDL_image-devel faad2-devel libmodplug-devel libressl-devel
+ libmad-devel fontconfig-devel libXinerama-devel libsamplerate-devel libmms-devel
+ enca-devel boost-devel libcurl-devel libva-devel libvdpau-devel libass-devel
+ libbluetooth-devel yajl-devel libplist-devel librtmp-devel tinyxml-devel
+ taglib-devel libcap-devel lame-devel libbluray-devel libnfs-devel ffmpeg-devel
+ libcec-devel libxslt-devel gnutls-devel libssh-devel libmicrohttpd-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 # The following dependencies are dlopen(3)ed.
 depends="libbluray libmad libvorbis libcurl libflac libmodplug libass libmpeg2
  lame librtmp libnfs>=1.9.7 libplist>=1.12 glxinfo hicolor-icon-theme

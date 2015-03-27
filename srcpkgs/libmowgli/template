@@ -9,7 +9,11 @@ revision=4
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="openssl-devel"
+=======
+makedepends="libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Performance and usability-oriented extensions to C"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"

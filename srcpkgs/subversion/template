@@ -6,6 +6,7 @@ pkgname=subversion
 <<<<<<< HEAD
 version=1.14.5
 revision=1
+<<<<<<< HEAD
 build_style=gnu-configure
 configure_args="--disable-javahl --disable-static --config-cache
  --with-gnome-keyring --with-editor=vi --disable-mod-activation
@@ -14,6 +15,20 @@ hostmakedepends="pkg-config perl python3 gettext"
 makedepends="apache-devel gdbm-devel serf-devel
  libsecret-devel liblz4-devel python3-devel sqlite-devel py3c
  file-devel perl"
+=======
+short_desc="Enterprise-class centralized version control for the masses"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="Apache-2.0, BSD"
+homepage="http://subversion.apache.org/"
+distfiles="http://apache.rediris.es/subversion/subversion-${version}.tar.bz2"
+checksum=10b056420e1f194c12840368f6bf58842e6200f9cb8cc5ebbf9be2e89e56e4d9
+
+hostmakedepends="pkg-config"
+makedepends="db-devel perl python-devel swig apr-util-devel
+ libldap-devel serf-devel gdbm-devel expat-devel apr-devel libuuid-devel
+ sqlite-devel libsasl-devel dbus-devel libgnome-keyring-devel glib-devel
+ qt-devel kdelibs-devel apache-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="ca-certificates"
 =======
 version=1.7.5

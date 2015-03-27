@@ -9,8 +9,20 @@ build_style=gnu-configure
 configure_args="--enable-shared --disable-rpath --enable-pie
  PKG_CONFIG=/usr/bin/pkg-config"
 make_build_args="all capi"
+<<<<<<< HEAD
 hostmakedepends="pkg-config bison groff"
 makedepends="zlib-devel readline-devel libffi-devel openssl-devel
+=======
+short_desc="Ruby programming language"
+homepage="http://www.ruby-lang.org/en/"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="BSD"
+distfiles="ftp://ftp.ruby-lang.org/pub/ruby/2.2/${pkgname}-${version}.tar.bz2"
+checksum=4e5676073246b7ade207be3e80a930567a88100513591a0f19fc38e247370065
+
+hostmakedepends="pkg-config bison groff doxygen graphviz"
+makedepends="zlib-devel readline-devel libffi-devel libressl-devel
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
  gdbm-devel libyaml-devel pango-devel"
 short_desc="Ruby programming language"
 homepage="https://www.ruby-lang.org/en/"
@@ -19,8 +31,13 @@ license="Ruby, BSD-2-Clause"
 distfiles="https://cache.ruby-lang.org/pub/ruby/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=db425a86f6e07546957578f4946cc700a91e7fd51115a86c56e096f30e0530c7
 
+<<<<<<< HEAD
 if [ "$XBPS_TARGET_LIBC" = "glibc" ]; then
 	makedepends+=" libxcrypt-devel"
+=======
+if [ "$CROSS_BUILD" ]; then
+	hostmakedepends+=" ruby"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 fi
 
 case "$XBPS_TARGET_MACHINE" in

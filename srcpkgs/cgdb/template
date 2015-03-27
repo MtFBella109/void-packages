@@ -3,9 +3,14 @@ pkgname=cgdb
 version=0.8.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="ac_cv_rl_version=6.3
  ac_cv_file__proc_self_status=yes"
 hostmakedepends="flex texinfo"
+=======
+configure_args="--with-installed-readline=${XBPS_CROSS_BASE}/usr ac_cv_rl_version=6.3"
+hostmakedepends="flex help2man"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="ncurses-devel readline-devel"
 depends="gdb"
 short_desc="Curses-based interface to the GNU Debugger"

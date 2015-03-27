@@ -2,12 +2,21 @@
 pkgname=fuse-sshfs
 version=3.7.3
 revision=2
+<<<<<<< HEAD
 build_style=meson
 configure_args="--sbindir=bin"
 hostmakedepends="pkg-config python3-docutils"
 makedepends="fuse3-devel libglib-devel"
 depends="openssh"
 checkdepends="python3-pytest which"
+=======
+wrksrc="sshfs-fuse-${version}"
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="libglib-devel fuse-devel openssh"
+depends="openssh>=6.1p1"
+replaces="sshfs-fuse>=0"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="FUSE client based on the SSH File Transfer Protocol"
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="GPL-2.0-or-later"

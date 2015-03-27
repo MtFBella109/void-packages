@@ -26,11 +26,17 @@ checksum=db7fab7cce791e7727ebbef2334301c821d79a550ec55c9ef096b610b03eb6b7
 # same as $PASS in tests/cert-tests/certtool.sh
 make_check_pre="env GNUTLS_PIN=1234"
 
+<<<<<<< HEAD
 if [ "$XBPS_CHECK_PKGS" ]; then
 	configure_args+=" --enable-tests"
 else
 	configure_args+=" --disable-tests"
 fi
+=======
+hostmakedepends="automake gettext-devel pkg-config libtool"
+makedepends="zlib-devel lzo-devel readline-devel libgpg-error-devel
+ libtasn1-devel libgcrypt-devel p11-kit-devel nettle-devel libidn-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 post_install() {
 	rm -rf ${DESTDIR}/usr/share/doc

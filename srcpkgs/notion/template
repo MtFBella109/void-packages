@@ -6,6 +6,11 @@ hostmakedepends="pkg-config gettext groff lua54"
 makedepends="libSM-devel libXext-devel libXft-devel libXinerama-devel
  libXrandr-devel lua54-devel readline-devel"
 short_desc="Tabbed, tiling window manager"
+<<<<<<< HEAD
+=======
+hostmakedepends="pkg-config groff lua"
+makedepends="lua-devel libXext-devel libSM-devel libXinerama-devel libXrandr-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 maintainer="Julian Wiesener <jw@vtoc.de>"
 license="LGPL-2.1-or-later"
 homepage="https://notionwm.net/"

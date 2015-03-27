@@ -3,6 +3,7 @@ pkgname=w3m
 version=0.5.5
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--libexecdir=/usr/lib --enable-image=x11,fb
  --with-nkf=/usr/bin/nkf
  --with-imagelib=imlib2 --with-termlib=ncurses --disable-w3mmailer"
@@ -11,6 +12,15 @@ makedepends="zlib-devel ncurses-devel gc-devel openssl-devel imlib2-devel
  libX11-devel"
 short_desc="Text-based Web browser and pager (with Debian patches)"
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
+=======
+configure_args="
+ --libexecdir=/usr/lib --enable-image=x11,fb --with-imagelib=imlib2
+ --with-termlib=ncurses --disable-w3mmailer --disable-mouse"
+hostmakedepends="pkg-config gc-devel perl"
+makedepends="zlib-devel ncurses-devel gc-devel libressl-devel imlib2-devel libX11-devel"
+short_desc="Text-based Web browser, as well as pager"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 license="MIT"
 # https://github.com/tats/w3m/issues/304
 homepage="https://sr.ht/~rkta/w3m/"

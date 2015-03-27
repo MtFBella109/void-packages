@@ -9,7 +9,11 @@ configure_args="--with-libevent --with-conf-file=/etc/unbound/unbound.conf
  --enable-dnscrypt --enable-event-api --sbindir=/usr/bin
  --with-rootkey-file=/etc/dns/root.key --with-username=_unbound"
 conf_files="/etc/unbound/unbound.conf"
+<<<<<<< HEAD
 makedepends="expat-devel libevent-devel libsodium-devel"
+=======
+makedepends="libressl-devel expat-devel libevent-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="dnssec-anchors"
 short_desc="Validating, recursive, and caching DNS resolver"
 maintainer="Leah Neukirchen <leah@vuxu.org>"

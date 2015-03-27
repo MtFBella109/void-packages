@@ -5,6 +5,7 @@ revision=1
 build_style=gnu-configure
 configure_args="--with-readline"
 <<<<<<< HEAD
+<<<<<<< HEAD
 hostmakedepends="ed flex texinfo"
 makedepends="readline-devel"
 short_desc="Arbitrary precision numeric processing language"
@@ -33,6 +34,12 @@ do_build() {
 makedepends="flex readline-devel"
 short_desc="An arbitrary precision numeric processing language."
 maintainer="davehome <davehome@redthumb.info.tm>"
+=======
+hostmakedepends="flex"
+makedepends="readline-devel"
+short_desc="An arbitrary precision numeric processing language"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://www.gnu.org/software/${pkgname}/"
 license="GPL-3"
 checksum=7ee4abbcfac03d8a6e1a8a3440558a3d239d6b858585063e745c760957725ecc

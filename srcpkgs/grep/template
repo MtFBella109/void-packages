@@ -17,12 +17,24 @@ checksum=2649b27c0e90e632eadcd757be06c6e9a4f48d941de51e7c0f83ff76408a07b9
 # Template build file for 'grep'.
 pkgname=grep
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=2.5.4
 distfiles="http://ftp.gnu.org/gnu/grep/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 configure_args="--disable-perl-regexp"
 =======
 version=2.12
+=======
+version=2.21
+revision=2
+build_pie=yes
+build_style=gnu-configure
+makedepends="pcre-devel"
+conflicts="chroot-grep>=0"
+short_desc="The GNU grep utility"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://www.gnu.org/software/grep/"
 distfiles="http://ftp.gnu.org/gnu/grep/$pkgname-$version.tar.xz"
 build_style=gnu-configure

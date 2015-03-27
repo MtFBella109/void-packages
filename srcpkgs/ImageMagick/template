@@ -25,6 +25,7 @@ checksum=818e21a248986f15a6ba0221ab3ccbaed3d3abee4a6feb4609c6f2432a30d7ed
 subpackages="libmagick libmagick-devel"
 
 keep_libtool_archives=yes
+<<<<<<< HEAD
 conf_files="/etc/ImageMagick-${version%%.*}/*.xml"
 
 if [ -z "$CROSS_BUILD" ]; then
@@ -43,6 +44,28 @@ pre_check() {
 	# Disable failing checks
 	vsed -i '/validate-formats/d' Makefile
 }
+=======
+hostmakedepends="pkg-config perl"
+makedepends="perl libjpeg-turbo-devel libpng-devel tiff-devel
+ lcms2-devel freetype-devel libwebp-devel fontconfig-devel libXext-devel
+ libXt-devel libltdl-devel libxml2-devel glib-devel pango-devel gdk-pixbuf-devel
+ libwmf-devel fftw-devel djvulibre-devel liblzma-devel libgomp-devel
+ librsvg-devel ghostscript-devel ocl-icd-devel"
+conf_files="
+ /etc/ImageMagick-${_majorver%%.*}/coder.xml
+ /etc/ImageMagick-${_majorver%%.*}/colors.xml
+ /etc/ImageMagick-${_majorver%%.*}/delegates.xml
+ /etc/ImageMagick-${_majorver%%.*}/log.xml
+ /etc/ImageMagick-${_majorver%%.*}/magic.xml
+ /etc/ImageMagick-${_majorver%%.*}/mime.xml
+ /etc/ImageMagick-${_majorver%%.*}/policy.xml
+ /etc/ImageMagick-${_majorver%%.*}/quantization-table.xml
+ /etc/ImageMagick-${_majorver%%.*}/thresholds.xml
+ /etc/ImageMagick-${_majorver%%.*}/type.xml
+ /etc/ImageMagick-${_majorver%%.*}/type-dejavu.xml
+ /etc/ImageMagick-${_majorver%%.*}/type-ghostscript.xml
+ /etc/ImageMagick-${_majorver%%.*}/type-windows.xml"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 post_install() {
 	if [ "$CROSS_BUILD" ]; then

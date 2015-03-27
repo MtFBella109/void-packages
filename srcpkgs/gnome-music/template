@@ -2,6 +2,7 @@
 pkgname=gnome-music
 version=48.0
 revision=1
+<<<<<<< HEAD
 build_helper="gir"
 build_style=meson
 hostmakedepends="gettext glib-devel itstool pkg-config
@@ -12,6 +13,15 @@ makedepends="gnome-desktop-devel grilo-devel libmediaart-devel
 depends="desktop-file-utils python3-dbus python3-gobject python3-requests
  tinysparql localsearch gst-plugins-good1 grilo-plugins libdazzle
  libmediaart libadwaita"
+=======
+lib32disabled=yes
+build_style=gnu-configure
+configure_args="PYTHON=python3.4"
+hostmakedepends="pkg-config intltool itstool gobject-introspection glib-devel"
+makedepends="python3.4-devel python-gobject-devel python3.4-dbus
+ grilo-devel gnome-desktop-devel libmediaart-devel"
+depends="python3.4-gobject>=3.14 python3.4-dbus desktop-file-utils"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNOME music playing application"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"

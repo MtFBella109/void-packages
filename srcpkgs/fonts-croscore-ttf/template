@@ -1,8 +1,18 @@
 # Template file for 'fonts-croscore-ttf'
 pkgname=fonts-croscore-ttf
+<<<<<<< HEAD
 version=1.31.0
 revision=3
 depends="font-util xbps-triggers"
+=======
+version=1.23.0
+revision=2
+wrksrc="croscorefonts-${version}"
+makedepends="font-util xbps-triggers"
+depends="${makedepends}"
+noarch="yes"
+font_dirs="/usr/share/fonts/TTF"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="TrueType fonts Arimo, Cousine, Tinos and SymbolNeu from Google"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Apache-2.0"

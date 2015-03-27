@@ -24,10 +24,17 @@ version=1.8.0
 revision=2
 build_style=gnu-configure
 configure_args="--without-demo --disable-demo"
+<<<<<<< HEAD
 hostmakedepends="pkg-config intltool gobject-introspection"
 makedepends="vala-devel>=0.20 libgirepository-devel gjs-devel
  gtk+3-devel>=3.8 libseed-devel python-devel pygobject-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+=======
+hostmakedepends="pkg-config intltool gobject-introspection glib-devel"
+makedepends="vala-devel libgirepository-devel gtk+3-devel libseed-devel
+ python-gobject-devel"
+depends="python-gobject hicolor-icon-theme gjs>=1.38"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Gobject-based plugins engine"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later"

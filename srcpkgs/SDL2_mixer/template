@@ -4,8 +4,12 @@ version=2.8.1
 revision=1
 build_style=gnu-configure
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="SDL2-devel libvorbis-devel libmikmod-devel libflac-devel
  libmodplug-devel mpg123-devel smpeg2-devel fluidsynth-devel opusfile-devel"
+=======
+makedepends="SDL2-devel libvorbis-devel libmikmod-devel libflac-devel smpeg-devel fluidsynth-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 # The following deps are dlopen(3)ed at runtime.
 depends="libvorbis libmikmod libmpg123 libmodplug libflac smpeg2 opusfile"
 short_desc="Multi-channel audio mixer library (SDL 2.x)"

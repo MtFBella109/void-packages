@@ -16,6 +16,11 @@ revision=3
 distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
 build_style=gnu-configure
 configure_args="--disable-static"
+<<<<<<< HEAD
+=======
+hostmakedepends="pkg-config intltool gobject-introspection glib-devel"
+makedepends="libxml2-devel gtk+3-devel libxklavier-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils"
 makedepends="pkg-config intltool libxml2-devel gtk+3-devel libxklavier-devel>=5.2.1_1 gobject-introspection"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

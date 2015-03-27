@@ -4,11 +4,23 @@ version=3.4.2
 homepage="http://www.gnome.org"
 distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--with-openldap
 --with-krb5=/usr --with-nspr-includes=/usr/include/nspr
 --with-nss-includes=/usr/include/nss --enable-vala-bindings"
 makedepends="pkg-config intltool flex gperf gobject-introspection sqlite-devel dbus-glib-devel GConf-devel mit-krb5-devel nss-devel libical-devel libgweather-devel libldap-devel libgdata-devel gnome-online-accounts-devel vala-devel liboauth-devel libgnome-keyring-devel"
 short_desc="Evolution data server"
+=======
+configure_args="--with-openldap --disable-uoa
+ --with-krb5=/usr --with-nspr-includes=/usr/include/nspr
+ --with-nss-includes=/usr/include/nss --enable-vala-bindings"
+hostmakedepends="pkg-config intltool flex gperf gobject-introspection"
+makedepends="db-devel sqlite-devel mit-krb5-devel nss-devel libical-devel
+ libsecret-devel libsoup-gnome-devel gcr-devel libldap-devel
+ libgdata-devel vala-devel libgweather-devel icu-devel"
+depends="libsoup-gnome>=2.46 libgweather>=3.12"
+short_desc="Centralized access to appointments and contacts"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="GPL-2"
 homepage="http://www.gnome.org"

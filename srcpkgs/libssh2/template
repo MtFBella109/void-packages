@@ -3,9 +3,15 @@ pkgname=libssh2
 <<<<<<< HEAD
 version=1.11.1
 revision=1
+<<<<<<< HEAD
 build_style=cmake
 configure_args="-DENABLE_ZLIB_COMPRESSION=ON -DRUN_DOCKER_TESTS=OFF"
 makedepends="zlib-devel openssl-devel"
+=======
+build_style=gnu-configure
+configure_args="--with-libssl-prefix=${XBPS_CROSS_BASE}/usr"
+makedepends="zlib-devel libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Library implementing the SSH2 protocol"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"

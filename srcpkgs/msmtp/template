@@ -24,7 +24,40 @@ build_options="idn sasl gnome msmtpd"
 build_options_default="idn sasl msmtpd"
 desc_option_msmtpd="Build minimal SMTP server"
 
+<<<<<<< HEAD
 post_install() {
 	vsconf doc/msmtprc-system.example
 	vsconf doc/msmtprc-user.example
 }
+=======
+if [ "$build_option_openssl" ]; then
+	configure_args+=" --with-tls=openssl"
+	makedepends+=" libressl-devel"
+elif [ "$build_option_gnutls" ]; then
+	configure_args+=" --with-tls=gnutls"
+	makedepends+=" gnutls-devel"
+else
+	configure_args+=" --with-tls=no"
+fi
+
+if [ "$build_option_idn" ]; then
+	configure_args+=" --with-libidn"
+	makedepends+=" libidn-devel"
+else
+	configure_args+=" --without-libidn"
+fi
+
+if [ "$build_option_sasl" ]; then
+	configure_args+=" --with-libgsasl"
+	makedepends+=" gsasl-devel"
+else
+	configure_args+=" --without-libgsasl"
+fi
+
+if [ "$build_option_gnome" ]; then
+	configure_args+=" --with-libsecret"
+	makedepends+=" libsecret-devel"
+else
+	configure_args+=" --without-libsecret"
+fi
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)

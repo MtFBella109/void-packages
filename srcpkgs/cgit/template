@@ -5,6 +5,7 @@ version=1.2.3
 revision=4
 create_wrksrc=yes
 hostmakedepends="asciidoc"
+<<<<<<< HEAD
 makedepends="zlib-devel"
 checkdepends="perl tidy5 unzip lzip zstd xz tar which"
 short_desc="Hyperfast web frontend for git repositories written in C"
@@ -12,6 +13,14 @@ maintainer="Duncaen <duncaen@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="https://git.zx2c4.com/cgit/"
 distfiles="https://git.zx2c4.com/cgit/snapshot/cgit-${version}.tar.xz
+=======
+makedepends="libressl-devel zlib-devel"
+short_desc="A fast webinterface for git"
+maintainer="Eivind Uggedal <eivind@uggedal.com>"
+homepage="http://git.zx2c4.com/cgit/"
+license="GPL-2"
+distfiles="http://git.zx2c4.com/cgit/snapshot/cgit-${version}.tar.xz
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
  https://www.kernel.org/pub/software/scm/git/git-${_git_version}.tar.xz"
 checksum="@19645e5106adac722941623462dfe2b85d8969610b753119444ed19b8e22a311
  @5061e83aa1c7cc5825a378bd1e35df1f4af412903486d2e2fceb6d8a064455cf"

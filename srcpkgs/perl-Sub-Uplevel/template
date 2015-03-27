@@ -4,8 +4,14 @@ version=0.2800
 revision=3
 build_style=perl-module
 hostmakedepends="perl"
+<<<<<<< HEAD
 makedepends="$hostmakedepends"
 depends="$makedepends"
+=======
+makedepends="${hostmakedepends}"
+depends="${makedepends}"
+noarch="yes"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Sub::Uplevel - apparently run a function in a higher stack frame"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"

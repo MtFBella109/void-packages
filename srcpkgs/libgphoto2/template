@@ -11,6 +11,7 @@ build_style=gnu-configure
 <<<<<<< HEAD
 configure_args="--disable-static --disable-rpath udevscriptdir=/usr/lib/udev"
 <<<<<<< HEAD
+<<<<<<< HEAD
 hostmakedepends="automake gettext-devel libtool pkg-config"
 makedepends="gd-devel libexif-devel libltdl-devel libusb-compat-devel
  libxml2-devel"
@@ -23,6 +24,11 @@ makedepends="pkg-config libltdl-devel libusb-compat-devel jpeg-devel gd-devel li
 hostmakedepends="pkg-config"
 makedepends="libltdl-devel libusb-compat-devel libjpeg-turbo-devel gd-devel libexif-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+=======
+hostmakedepends="automake libtool pkg-config gettext-devel"
+makedepends="libltdl-devel libusb-compat-devel libjpeg-turbo-devel gd-devel libexif-devel"
+depends="${pkgname}-udev-rules-${version}_${revision}"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Digital camera access library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"

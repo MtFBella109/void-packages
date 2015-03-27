@@ -40,6 +40,7 @@ long_desc="
 lib32disabled=yes
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # XXX Add missing deps: gme, telepathy, libtar (for skins2).
 hostmakedepends="automake libtool pkg-config flex gettext libgcrypt-devel
  live555-devel gettext-devel $(vopt_if lua lua52) $(vopt_if chromecast protobuf)"
@@ -53,6 +54,21 @@ makedepends="
  ncurses-devel opus-devel pulseaudio-devel sndio-devel speex-devel taglib-devel
  wayland-protocols x264-devel xcb-util-devel xcb-util-keysyms-devel
  live555-devel libdvdread-devel chromaprint-devel
+=======
+# XXX Add missing deps: gme, telepathy, lua, live555, libtar (for skins2).
+hostmakedepends="automake libtool pkg-config libgcrypt-devel"
+makedepends="videoproto libudev-devel libpng-devel libupnp-devel
+ ncurses-devel libvorbis-devel x264-devel ffmpeg-devel
+ xcb-util-devel xcb-util-keysyms-devel libsamplerate-devel
+ libXxf86vm-devel libXinerama-devel libXpm-devel libXvMC-devel libXv-devel
+ libmpeg2-devel libflac-devel fribidi-devel freetype-devel libproxy-devel
+ avahi-libs-devel libmad-devel liba52-devel libdca-devel libass-devel
+ libdvbpsi-devel libgcrypt-devel dbus-glib-devel samba-devel libmodplug-devel
+ gnutls-devel taglib-devel libmatroska-devel libmpcdec-devel
+ libcdio-devel libdvdnav-devel libsysfs-devel libmtp-devel
+ sqlite-devel libtheora-devel speex-devel pulseaudio-devel libxml2-devel
+ opus-devel libbluray-devel faad2-devel jack-devel libSM-devel freefont-ttf
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
  $(vopt_if notify libnotify-devel) $(vopt_if opengl MesaLib-devel)
  $(vopt_if qt qt5-x11extras-devel) $(vopt_if qt qt5-svg-devel)
  $(vopt_if v4l2 v4l-utils-devel) $(vopt_if smb samba-devel)

@@ -6,12 +6,27 @@ _triplet="x86_64-unknown-linux-gnu"
 pkgname=gcc-multilib
 version=14.2.1+20250405
 revision=1
+<<<<<<< HEAD
 _patchver="${version%+*}"
 _minorver="${version%.*}"
 _majorver="${_minorver%.*}"
 hostmakedepends="perl flex tar"
 makedepends="zlib-devel libzstd-devel isl-devel libmpc-devel gmp-devel mpfr-devel
  glibc-32bit glibc-devel-32bit"
+=======
+wrksrc="gcc-${version}"
+short_desc="The GNU C Compiler (multilib files)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://gcc.gnu.org"
+license="GFDL-1.2, GPL-3, LGPL-2.1"
+distfiles="http://ftp.gnu.org/pub/gnu/gcc/gcc-$version/gcc-$version.tar.bz2"
+checksum=2020c98295856aa13fda0f2f3a4794490757fc24bcca918d52cc8b4917b972dd
+
+hostmakedepends="perl flex zip unzip"
+makedepends="zlib-devel libmpc-devel ppl-devel cloog-devel
+ isl-devel libfl-devel glibc-32bit glibc-devel-32bit"
+
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="
  gcc>=${_minorver}
  libgcc-32bit>=${_minorver}

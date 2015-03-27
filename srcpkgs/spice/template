@@ -4,6 +4,7 @@ version=0.16.0
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="--disable-tunnel --disable-opengl --enable-smartcard
  --with-sasl --disable-static --enable-xinerama --disable-celt051"
 hostmakedepends="pkg-config python3"
@@ -17,6 +18,14 @@ configure_args="--disable-tunnel --disable-opengl --disable-smartcard --with-sas
 revision=2
 makedepends="pkg-config spice-protocol>=0.10.1 jpeg-devel pixman-devel openssl-devel celt051-devel alsa-lib-devel libXfixes-devel libXrender-devel libXrandr-devel libXinerama-devel libsasl-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+configure_args="--disable-tunnel --disable-opengl --disable-smartcard
+ --with-sasl --disable-static --enable-xinerama"
+hostmakedepends="pkg-config python-parsing"
+makedepends="spice-protocol libjpeg-turbo-devel pixman-devel
+ libressl-devel celt051-devel alsa-lib-devel libXfixes-devel libXrender-devel
+ libXrandr-devel libsasl-devel libXinerama-devel libglib-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Implements the SPICE protocol"
 maintainer="Anachron <gith@cron.world>"
 license="LGPL-2.1-or-later"

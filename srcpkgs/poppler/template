@@ -5,6 +5,7 @@
 pkgname=poppler
 version=25.11.0
 revision=1
+<<<<<<< HEAD
 _testVersion=9d5011815a14c157ba25bb160187842fb81579a5
 build_style=cmake
 build_helper="gir"
@@ -18,6 +19,17 @@ makedepends="libpng-devel libglib-devel cairo-devel tiff-devel lcms2-devel
  nss-devel libcurl-devel libopenjpeg2-devel gpgmepp-devel
  freetype-devel fontconfig-devel libjpeg-turbo-devel libpng-devel tiff-devel
  zlib-devel $(vopt_if boost boost-devel)"
+=======
+build_style=gnu-configure
+configure_args="--enable-zlib --enable-libcurl --enable-libjpeg
+ --enable-libtiff --disable-libopenjpeg --enable-cairo-output
+ --enable-xpdf-headers --disable-poppler-qt4 --disable-poppler-qt5
+ --disable-gtk-test $(vopt_enable gir introspection)"
+hostmakedepends="automake libtool pkg-config glib-devel gettext-devel"
+makedepends="libpng-devel glib-devel cairo-devel tiff-devel lcms2-devel
+ libcurl-devel $(vopt_if gir gobject-introspection)"
+depends="poppler-data"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="PDF rendering library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, GPL-3.0-or-later"

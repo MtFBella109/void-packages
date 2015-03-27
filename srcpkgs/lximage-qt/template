@@ -3,9 +3,15 @@ pkgname=lximage-qt
 version=2.3.0
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 hostmakedepends="pkg-config lxqt-build-tools qt6-base qt6-tools perl"
 makedepends="qt6-svg-devel libfm-qt-devel menu-cache-devel
  libexif-devel libX11-devel libXfixes-devel"
+=======
+configure_args="-DUSE_QT5=1"
+hostmakedepends="cmake pkg-config"
+makedepends="liblxqt-devel libexif-devel libfm-extra-devel libfm-devel libfm-qt5-devel" 
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="LXQt image viewer"
 maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="GPL-2.0-or-later"

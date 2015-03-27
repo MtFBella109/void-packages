@@ -20,10 +20,20 @@ homepage="https://wayland.freedesktop.org/"
 distfiles="https://gitlab.freedesktop.org/wayland/weston/-/releases/${version}/downloads/weston-${version}.tar.xz"
 checksum=a8150505b126a59df781fe8c30c8e6f87da7013e179039eb844a5bbbcc7c79b3
 lib32disabled=yes
+<<<<<<< HEAD
 replaces="weston-colord>=0 weston-x11>=0 weston-xwayland>=0"
 provides="weston-colord-${version}_${revision}
  weston-x11-${version}_${revision}
  weston-xwayland-${version}_${revision}"
+=======
+hostmakedepends="pkg-config wayland-devel autoconf automake libtool"
+makedepends="libpng-devel wayland-devel libxkbcommon-devel
+ pixman-devel pango-devel cairo-devel mtdev-devel libwebp-devel
+ poppler-glib-devel pam-devel lcms2-devel libudev-devel libdrm-devel
+ libinput-devel libxcb-devel libXcursor-devel colord-devel
+ $(vopt_if backtrace libunwind-devel) $(vopt_if dbus dbus-devel)
+ $(vopt_if systemd systemd-devel) $(vopt_if vaapi libva-devel)"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 # Package build options
 build_options="vaapi"

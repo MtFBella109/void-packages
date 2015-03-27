@@ -8,8 +8,12 @@ configure_args="--with-openssl --with-libexpat --without-gnutls
  --with-bashcompletiondir=/usr/share/bash-completion/completions
  --enable-libaria2"
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="c-ares-devel expat-devel gmp-devel openssl-devel sqlite-devel
  zlib-devel"
+=======
+makedepends="zlib-devel gmp-devel expat-devel libressl-devel sqlite-devel c-ares-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="ca-certificates"
 checkdepends="libcppunit-devel"
 short_desc="Lightweight multi-protocol/multi-source command-line download utility"

@@ -8,6 +8,7 @@ build_style=gnu-configure
 configure_args="ac_cv_sizeof_off_t=8"
 hostmakedepends="pkg-config"
 makedepends="libuuid-devel libblkid-devel ncurses-devel readline-devel device-mapper-devel"
+<<<<<<< HEAD
 checkdepends="e2fsprogs perl python3"
 short_desc="GNU Parted disk partition resizing program"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -15,6 +16,8 @@ license="GPL-3.0-or-later"
 =======
 configure_args="--without-included-regex --disable-rpath --disable-debug"
 makedepends="pkg-config libuuid-devel libblkid-devel ncurses-devel readline-devel device-mapper-devel"
+=======
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="The GNU Parted disk partition resizing program"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 homepage="http://www.gnu.org/software/parted/"

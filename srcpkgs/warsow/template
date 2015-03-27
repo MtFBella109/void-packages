@@ -7,9 +7,16 @@ build_style=cmake
 configure_args="-DQFUSION_GAME=Warsow"
 make_cmd=make
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="libcurl-devel libvorbis-devel libtheora-devel libjpeg-turbo-devel
  libopenal-devel MesaLib-devel libXi-devel libXxf86dga-devel
  fontconfig-devel SDL2-devel"
+=======
+makedepends="libcurl-devel libvorbis-devel libtheora-devel
+ libjpeg-turbo-devel libpng-devel SDL-devel libopenal-devel MesaLib-devel
+ libXext-devel libXinerama-devel libXrandr-devel libXxf86vm-devel libXi-devel
+ libXxf86dga-devel fontconfig-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 # libopenal is dlopen(3)ed at runtime.
 depends="desktop-file-utils warsow-data>=2.1 libopenal"
 short_desc="Free online multiplayer competitive FPS based on the Qfusion engine"

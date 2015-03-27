@@ -14,8 +14,13 @@ homepage="http://gupnp.org/"
 distfiles="${GNOME_SITE}/$pkgname/0.6/$pkgname-$version.tar.xz"
 build_style=gnu-configure
 configure_args="--disable-static"
+<<<<<<< HEAD
 makedepends="pkg-config gobject-introspection gst-plugins-base-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="pkg-config"
+makedepends="gst-plugins-base1-devel vala-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GUPnP DLNA"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"

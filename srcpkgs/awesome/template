@@ -4,9 +4,24 @@ version=4.3
 revision=10
 build_style=cmake
 <<<<<<< HEAD
+<<<<<<< HEAD
 build_helper="qemu"
 configure_args="-DSYSCONFDIR=/etc"
 =======
+=======
+configure_args="-DSYSCONFDIR=/etc -DLUA_LIBRARY=/usr/lib/liblua.so.5.2"
+hostmakedepends="cmake which xmlto asciidoc pkg-config"
+makedepends="
+ libxcb-devel pango-devel xcb-util-devel xcb-util-image-devel
+ xcb-util-keysyms-devel xcb-util-wm-devel xcb-util-cursor-devel
+ startup-notification-devel imlib2-devel ImageMagick lgi
+ libxdg-basedir-devel gdk-pixbuf-devel lua-devel dbus-devel"
+depends="dbus-x11 lgi>=0.7.2 pango"
+conf_files="/etc/xdg/awesome/rc.lua"
+short_desc="Highly configurable, next gen framework window manager for X"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://awesome.naquadah.org"
 distfiles="${homepage}/download/${pkgname}-${version}.tar.xz"
 revision=3

@@ -3,9 +3,15 @@ pkgname=perl-Math-BigInt-GMP
 version=1.7003
 revision=1
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl"
 makedepends="perl gmp-devel"
 depends="perl"
+=======
+hostmakedepends="perl gmp-devel"
+makedepends="${hostmakedepends}"
+depends="${hostmakedepends}"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Math::BigInt::GMP - Use the GMP library for Math::BigInt routines"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"

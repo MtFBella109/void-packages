@@ -1,0 +1,22 @@
+# Template file for 'valadoc-git'
+pkgname=valadoc-git
+version=20150113
+revision=1
+build_style=gnu-configure
+hostmakedepends="pkg-config libtool automake git vala-devel"
+makedepends="libglib-devel vala-devel libgee08-devel graphviz-devel"
+replaces="valadoc>=0"
+provides="valadoc-${version}_${revision}"
+short_desc="Documentation tool for the vala project"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="LGPL-3"
+homepage="https://live.gnome.org/Valadoc"
+
+do_fetch() {
+	local url="git://git.gnome.org/valadoc"
+	msg_normal "Fetching source from $url ...\n"
+	git clone ${url} ${pkgname}-${version}
+}
+pre_configure() {
+        ./autogen.sh
+}

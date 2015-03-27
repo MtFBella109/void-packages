@@ -5,6 +5,7 @@ revision=4
 build_style=meson
 build_helper=qemu
 # Use /nix/var as suggested by the official Manual.
+<<<<<<< HEAD
 # configure_args="--localstatedir=/nix/var --with-sandbox-shell=/usr/bin/busybox.static"
 # requires rapidcheck
 configure_args="-Dunit-tests=false -Dlibstore:sandbox-shell=/usr/bin/busybox.static"
@@ -38,6 +39,13 @@ esac
 
 CXXFLAGS="-Wno-deprecated-declarations -UNDEBUG"
 
+=======
+configure_args="--localstatedir=/nix/var"
+depends="curl perl-WWW-Curl perl-DBD-SQLite"
+hostmakedepends="pkg-config flex ${depends}"
+# Extra run-time dependencies.
+makedepends="bzip2-devel libressl-devel sqlite-devel gc-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 # Default configuration file.
 conf_files="/etc/nix/nix.conf"
 # Create required build users/groups.

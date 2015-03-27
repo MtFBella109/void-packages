@@ -33,6 +33,7 @@ long_desc="
  applications and many other types of audio applications.
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
+<<<<<<< HEAD
 build_options="sndio"
 build_options_default="sndio"
 
@@ -44,6 +45,12 @@ pre_configure() {
 		;;
 	esac
 }
+=======
+hostmakedepends="pkg-config cmake"
+makedepends="alsa-lib-devel pulseaudio-devel SDL-devel ffmpeg-devel"
+# dlopen(3)d dependencies
+depends="alsa-lib libpulseaudio SDL"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 post_install() {
 	rm -f ${DESTDIR}/usr/share/openal/alsoftrc.sample

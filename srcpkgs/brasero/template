@@ -6,6 +6,7 @@ build_style=gnu-configure
 build_helper="gir"
 configure_args="--disable-schemas-compile --disable-caches"
 <<<<<<< HEAD
+<<<<<<< HEAD
 hostmakedepends="pkg-config intltool cdrtools itstool"
 makedepends="gst-plugins-base1-devel totem-pl-parser-devel libnotify-devel
  libcanberra-devel libisofs-devel libburn-devel libSM-devel dconf-devel"
@@ -14,6 +15,13 @@ depends="cdrdao cdrtools dconf shared-mime-info hicolor-icon-theme desktop-file-
 depends="cdrtools dconf>=0 shared-mime-info hicolor-icon-theme desktop-file-utils"
 makedepends="pkg-config intltool which gnome-doc-utils gobject-introspection gst-plugins-base-devel totem-pl-parser-devel libnotify-devel libcanberra-devel nautilus-devel tracker-devel libisofs-devel libburn-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="pkg-config intltool which gnome-doc-utils itstool"
+makedepends="gst-plugins-base1-devel totem-pl-parser-devel libnotify-devel
+ libcanberra-devel nautilus-devel tracker-devel libisofs-devel
+ libburn-devel libSM-devel cdrtools dconf-devel"
+depends="cdrtools dconf>=0.20 shared-mime-info hicolor-icon-theme desktop-file-utils"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Application to burn CD/DVD for the Gnome Desktop"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"

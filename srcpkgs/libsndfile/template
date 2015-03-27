@@ -9,12 +9,17 @@ revision=3
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="--enable-static"
 hostmakedepends="pkg-config python3"
 makedepends="alsa-lib-devel libvorbis-devel libflac-devel sqlite-devel opus-devel mpg123-devel lame-devel"
 =======
 makedepends="pkg-config python alsa-lib-devel libvorbis-devel>=1.2.3 libflac-devel sqlite-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="pkg-config python"
+makedepends="alsa-lib-devel libvorbis-devel libflac-devel sqlite-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="C library for reading and writing files containing sampled sound"
 <<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"

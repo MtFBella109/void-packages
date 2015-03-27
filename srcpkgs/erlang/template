@@ -3,9 +3,16 @@ pkgname=erlang
 version=26.2.5.12
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 make_install_target="install install-docs"
 hostmakedepends="autoconf libxslt perl tar"
 makedepends="openssl-devel ncurses-devel unixodbc-devel zlib-devel"
+=======
+configure_args="--enable-smp-support"
+hostmakedepends="perl libxslt"
+makedepends="ncurses-devel unixodbc-devel libressl-devel
+ $(vopt_if x11 'wxGTK-devel glu-devel')"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Concurrent functional programming language developed by Ericsson"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Apache-2.0"

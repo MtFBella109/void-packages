@@ -4,6 +4,7 @@ version=6.15
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="--disable-systemd"
 make_install_args="ROOTSBINDIR=/usr/bin"
 hostmakedepends="automake pkg-config libcap-ng-devel python3-docutils"
@@ -11,6 +12,12 @@ makedepends="mit-krb5-devel talloc-devel libcap-ng-devel samba-devel keyutils-de
 =======
 makedepends="mit-krb5-devel talloc-devel libcap-ng-devel samba-devel keyutils-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+configure_args="--sbindir=/usr/sbin"
+make_install_args="ROOTSBINDIR=/usr/sbin"
+hostmakedepends="pkg-config libcap-ng-devel"
+makedepends="mit-krb5-devel talloc-devel libcap-ng-devel samba-devel keyutils-devel pam-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="CIFS filesystem user-space tools"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"

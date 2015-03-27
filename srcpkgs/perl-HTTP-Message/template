@@ -4,9 +4,14 @@ version=6.45
 revision=1
 build_style=perl-module
 <<<<<<< HEAD
+<<<<<<< HEAD
 hostmakedepends="perl"
 makedepends="perl-LWP-MediaTypes perl-Encode-Locale perl-URI perl-HTTP-Date
  perl-Try-Tiny perl-IO-HTML perl-Clone"
+=======
+hostmakedepends="perl"
+makedepends="perl-LWP-MediaTypes perl-Encode-Locale perl-URI perl-HTTP-Date perl-HTML-Parser"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="${makedepends}"
 checkdepends="perl-Test-Needs"
 short_desc="HTTP::Message - HTTP style message (base class)"

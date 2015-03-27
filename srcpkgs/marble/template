@@ -3,6 +3,7 @@ pkgname=marble
 version=25.08.3
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DMARBLE_PRI_INSTALL_DIR=/usr/lib/qt6/mkspecs/modules
  -DKDE_INSTALL_QMLDIR=lib/qt6/qml
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -47,6 +48,13 @@ pre_check() {
 	mkdir -p $HOME/.local/share/marble
 	ln -sf $wrksrc/data "$HOME/.local/share/marble/"
 }
+=======
+hostmakedepends="cmake automoc4 pkg-config"
+makedepends="libressl-devel qt-devel kdelibs-devel phonon-devel"
+replaces="libmarble>=0"
+distfiles="http://download.kde.org/stable/${version}/src/marble-${version}.tar.xz"
+checksum="4d6667cf67ae9976e4c1efc306be222d13f2ee5927483325411ae0e9631dc0f0"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 marble-devel_package() {
 	short_desc+=" - development files"

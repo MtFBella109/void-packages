@@ -5,7 +5,10 @@ revision=1
 build_style=gnu-configure
 configure_args="--enable-threads --enable-xft --enable-shared"
 <<<<<<< HEAD
+<<<<<<< HEAD
 hostmakedepends="man-db"
+=======
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="libjpeg-turbo-devel libpng-devel MesaLib-devel alsa-lib-devel
  freetype-devel libXinerama-devel libXft-devel"
 =======

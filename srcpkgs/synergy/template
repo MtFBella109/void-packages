@@ -4,6 +4,7 @@ pkgname=synergy
 version=1.13.0
 revision=3
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DBUILD_TESTS=OFF -DSYNERGY_BUILD_LEGACY_GUI=ON"
 hostmakedepends="unzip pkg-config qt5-qmake qt5-host-tools"
 makedepends="avahi-compat-libs-devel libcurl-devel avahi-compat-libs-devel
@@ -16,6 +17,11 @@ wrksrc=${pkgname}-${version}-Source
 distfiles="http://synergy.googlecode.com/files/$pkgname-$version-Source.tar.gz"
 makedepends="cmake libXtst-devel libXext-devel libXinerama-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="cmake unzip pkg-config"
+makedepends="avahi-compat-libs-devel libcurl-devel crypto++-devel
+ libSM-devel libXext-devel libXrandr-devel libXtst-devel libXinerama-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Share a single mouse and keyboard between multiple computers"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"

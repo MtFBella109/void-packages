@@ -20,9 +20,15 @@ replaces="rpcgen>=0"
 
 hostmakedepends="pkg-config libtirpc-devel rpcsvc-proto mit-krb5-devel"
 makedepends="libblkid-devel libmount-devel libtirpc-devel
+<<<<<<< HEAD
  keyutils-devel libevent-devel mit-krb5-devel
  device-mapper-devel libcap-devel sqlite-devel
  libxml2-devel libnl3-devel"
+=======
+ librpcsecgss-devel libnfsidmap-devel keyutils-devel
+ libevent-devel device-mapper-devel libcap-devel mit-krb5-devel
+ libblkid-devel sqlite-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="rpcbind"
 python_version=3
 conf_files="/etc/exports"

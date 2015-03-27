@@ -3,6 +3,7 @@ pkgname=kwalletmanager
 version=25.08.3
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
 hostmakedepends="extra-cmake-modules gettext kf6-kdoctools pkg-config
@@ -14,4 +15,15 @@ license="GPL-2.0-only"
 homepage="https://kde.org/applications/system/org.kde.kwalletmanager5"
 changelog="https://kde.org/announcements/changelogs/gear/${version}/#kwalletmanager"
 distfiles="${KDE_SITE}/release-service/${version}/src/kwalletmanager-${version}.tar.xz"
+<<<<<<< HEAD
 checksum=54b6b63eb55fd554d31215319c20bbafd2e1bf948ab6b4fa4d84b5614b6dc52d
+=======
+checksum=5c2beeaadb9efbcbb9ebff8945a57d5806cccad8e78a8514f578253871449596
+=======
+configure_args="-Wno-dev -DKDE4_BUILD_TESTS=OFF -DSYSCONF_INSTALL_DIR=/etc"
+
+hostmakedepends="cmake automoc4 pkg-config"
+makedepends="glib-devel libressl-devel qt-devel phonon-devel
+ kdelibs-devel kdepimlibs-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+>>>>>>> 6358bb77850 (xbps-src: always require current srcpkgs version in build dependencies.)

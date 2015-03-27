@@ -1,0 +1,35 @@
+# Template file for 'mutt-kz'
+pkgname=mutt-kz
+version=20141129
+revision=6
+build_style=gnu-configure
+configure_args="--enable-notmuch --enable-pop --enable-imap --enable-smtp
+ --enable-hcache --enable-gpgme --with-regex --with-idn --with-ssl --with-sasl
+ --with-gpgme-prefix=${XBPS_CROSS_BASE}/usr
+ --with-gdbm=${XBPS_CROSS_BASE}/usr mutt_cv_regex_broken=no"
+hostmakedepends="perl pkg-config libidn-devel automake git"
+makedepends="ncurses-devel libressl-devel libidn-devel gpgme-devel
+ libnotmuch-devel gdbm-devel libsasl-devel"
+depends="notmuch mime-types"
+conf_files="/etc/Muttrc"
+short_desc="mutt fork with notmuch support and another improvements"
+maintainer="Jan S. <jan.schreib@gmail.com>"
+license="GPL-3"
+homepage="https://github.com/karelzak/mutt-kz/"
+
+provides="mutt-${version}_${revision}"
+replaces="mutt>=0"
+
+do_fetch() {
+	git clone git://github.com/karelzak/mutt-kz.git ${pkgname}-${version}
+}
+pre_configure() {
+	autoreconf -fi
+}
+post_install() {
+	# provided by mime-types.
+	rm ${DESTDIR}/etc/mime.*
+	# move dist to examples dir.
+	vmkdir usr/share/examples/${pkgname}
+	mv ${DESTDIR}/etc/Muttrc.dist ${DESTDIR}/usr/share/examples/${pkgname}
+}

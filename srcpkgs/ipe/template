@@ -1,5 +1,6 @@
 # Template file for 'ipe'
 pkgname=ipe
+<<<<<<< HEAD
 version=7.2.26
 revision=16
 _tools_commit=v7.2.24.1
@@ -8,6 +9,12 @@ hostmakedepends="pkg-config doxygen qt5-qmake qt5-tools qt5-host-tools"
 makedepends="cairo-devel gsl-devel libcurl-devel libjpeg-turbo-devel
  libspiro-devel lua53-devel poppler-devel qt5-devel qtspell-devel"
 depends="qt5-svg"
+=======
+version=7.1.7
+revision=3
+hostmakedepends="pkg-config git"
+makedepends="qt-devel lua-devel libjpeg-turbo-devel cairo-devel poppler-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Drawing editor for creating figures in PDF or EPS formats"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"

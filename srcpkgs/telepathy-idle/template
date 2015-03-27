@@ -4,7 +4,11 @@ version=0.2.2
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 hostmakedepends="pkg-config python3 libxslt"
+=======
+hostmakedepends="pkg-config python libxslt"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="dbus-glib-devel telepathy-glib-devel"
 depends="telepathy-glib>=0.22"
 checkdepends="python3-dbus"

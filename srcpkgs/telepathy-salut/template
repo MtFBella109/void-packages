@@ -5,6 +5,12 @@ distfiles="http://telepathy.freedesktop.org/releases/$pkgname/$pkgname-$version.
 build_style=gnu-configure
 configure_args="--disable-tests --disable-debug --disable-plugins --with-tls=openssl
 --disable-avahi-tests --disable-static"
+<<<<<<< HEAD
+=======
+hostmakedepends="pkg-config xmldiff glib-devel"
+makedepends="glib-devel avahi-glib-libs-devel libsoup-devel telepathy-glib-devel
+ libressl-devel libuuid-devel sqlite-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="avahi"
 makedepends="pkg-config xmldiff avahi-glib-libs-devel libsoup-devel telepathy-glib-devel openssl-devel libuuid-devel sqlite-devel"
 short_desc="A link-local XMPP connection manager for Telepathy"

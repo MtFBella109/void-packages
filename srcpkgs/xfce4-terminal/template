@@ -1,5 +1,6 @@
 # Template file for 'xfce4-terminal'
 pkgname=xfce4-terminal
+<<<<<<< HEAD
 version=1.1.5
 revision=1
 build_style=meson
@@ -14,3 +15,17 @@ homepage="https://docs.xfce.org/apps/xfce4-terminal/start"
 changelog="https://gitlab.xfce.org/apps/xfce4-terminal/-/raw/master/NEWS"
 distfiles="https://archive.xfce.org/src/apps/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=3c5b1d3a01a9a113852ac0f77d1c85bf3a356b43de33ec805b21ceca7d6f0a63
+=======
+version=0.6.3
+revision=5
+build_style=gnu-configure
+hostmakedepends="pkg-config intltool"
+makedepends="dbus-glib-devel exo-devel vte-devel libxfce4ui-devel"
+depends="hicolor-icon-theme desktop-file-utils"
+short_desc="A modern terminal emulator primarly for the Xfce desktop environment"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.xfce.org"
+license="GPL-2"
+distfiles="http://archive.xfce.org/src/apps/${pkgname}/${version%.*}/${pkgname}-${version}.tar.bz2"
+checksum=912f4716c2395a14a80620ef982b4af1e2a67a8df9a1ef0b802ecae826057e08
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)

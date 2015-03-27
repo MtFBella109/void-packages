@@ -4,10 +4,17 @@ version=6.04
 revision=2
 build_style=perl-module
 <<<<<<< HEAD
+<<<<<<< HEAD
 hostmakedepends="perl"
 makedepends="$hostmakedepends"
 depends="$makedepends"
 checkdepends="perl-Test-Fatal"
+=======
+hostmakedepends="perl"
+makedepends="${hostmakedepends}"
+depends="${makedepends}"
+noarch="yes"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="LWP::MediaTypes - guess media type for a file or a URL"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"

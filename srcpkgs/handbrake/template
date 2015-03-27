@@ -1,5 +1,6 @@
 # Template file for 'handbrake'
 pkgname=handbrake
+<<<<<<< HEAD
 version=1.10.2
 revision=2
 build_style=configure
@@ -18,6 +19,19 @@ makedepends="bzip2-devel gst-plugins-base1-devel gtk4-devel libavcodec6
  $(vopt_if qsv 'libva-devel libdrm-devel libvpl-devel')
  $(vopt_if nvenc nv-codec-headers)"
 depends="desktop-file-utils gst-plugins-good1 hicolor-icon-theme"
+=======
+version=0.10.1
+revision=1
+wrksrc="HandBrake-${version}"
+hostmakedepends="automake libtool cmake pkg-config intltool
+ python yasm wget m4 gettext-devel"
+makedepends="zlib-devel bzip2-devel libnotify-devel gtk+3-devel ncurses-devel
+ gst-plugins-base1-devel webkitgtk-devel libgudev-devel x264-devel
+ dbus-glib-devel fribidi-devel libass-devel fontconfig-devel libxml2-devel
+ libogg-devel libdvdnav-devel libdvdread-devel libtheora-devel lame-devel
+ libsamplerate-devel libbluray-devel librsvg-devel"
+depends="gst-plugins-good1 desktop-file-utils hicolor-icon-theme"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Multithreaded video transcoder"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-only"

@@ -3,8 +3,17 @@ pkgname=gpsbabel
 version=1.7.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper=qmake
 makedepends="qt5-devel qt5-webkit-devel libusb-compat-devel"
+=======
+maintainer="Carlo Dormeletti <carloDOTdormelettiATaliceDOTit>"
+homepage="http://www.gpsbabel.org/"
+license="GPL-2"
+short_desc="Converts waypoints, tracks, and routes between popular GPS formats"
+hostmakedepends="perl docbook-xml xmlwf openjdk-jre offo-hyphenation"
+makedepends="qt-devel libusb-compat-devel expat-devel libxslt-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils"
 short_desc="Converts waypoints, tracks, and routes between popular GPS formats"
 maintainer="Orphaned <orphan@voidlinux.org>"

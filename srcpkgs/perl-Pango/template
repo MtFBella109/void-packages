@@ -3,9 +3,15 @@ pkgname=perl-Pango
 version=1.227
 revision=12
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl perl-ExtUtils-Depends perl-ExtUtils-PkgConfig perl-Cairo"
 makedepends="perl-Cairo pango-devel"
 depends="perl-Cairo>=1.000"
+=======
+hostmakedepends="perl"
+makedepends="perl-ExtUtils-Depends perl-ExtUtils-PkgConfig perl-Glib perl-Cairo pango-devel"
+depends=" perl-Cairo>=1.000"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Perl bindings for Pango"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"

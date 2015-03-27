@@ -4,8 +4,13 @@ version=1.643
 revision=6
 build_style=perl-module
 hostmakedepends="perl"
+<<<<<<< HEAD
 makedepends="$hostmakedepends"
 depends="$makedepends"
+=======
+makedepends="${hostmakedepends}"
+depends="${makedepends}"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Database independent interface for Perl"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"

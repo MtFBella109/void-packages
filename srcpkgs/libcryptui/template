@@ -21,6 +21,7 @@ depends="hicolor-icon-theme gnupg"
 =======
 --disable-schemas-compile"
 <<<<<<< HEAD
+<<<<<<< HEAD
 depends="hicolor-icon-theme"
 makedepends="pkg-config intltool dbus-glib-devel gtk+3-devel gpgme-devel libnotify-devel libgnome-keyring-devel gobject-introspection"
 fulldepends="gnupg"
@@ -30,6 +31,12 @@ hostmakedepends="pkg-config intltool gobject-introspection"
 makedepends="libSM-devel dbus-glib-devel gtk+3-devel>=3.8 gpgme-devel
  libnotify-devel libgnome-keyring-devel>=3.8 gnupg"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+=======
+hostmakedepends="pkg-config intltool"
+makedepends="libSM-devel dbus-glib-devel gtk+3-devel gpgme-devel
+ libnotify-devel libgnome-keyring-devel gnupg"
+depends="hicolor-icon-theme libgnome-keyring>=3.10 gnupg"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNOME Interface components for OpenPGP"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.0-or-later"

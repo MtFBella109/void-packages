@@ -3,7 +3,13 @@ pkgname=at-spi2-atk
 version=2.4.0
 distfiles="${GNOME_SITE}/$pkgname/2.4/$pkgname-$version.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
 makedepends="pkg-config intltool gtk+3-devel at-spi2-core-devel"
+=======
+hostmakedepends="automake libtool pkg-config intltool glib-devel"
+makedepends="libglib-devel atk-devel at-spi2-core-devel"
+depends="at-spi2-core>=2.14"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="A GTK+ module that bridges ATK to D-Bus at-spi"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=28e9c21ec8a76cae4914bdbc011c4f6bf1beeaa27751a88534d87364e6a888bf

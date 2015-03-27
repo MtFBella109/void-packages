@@ -6,7 +6,11 @@ revision=2
 build_style=gnu-configure
 configure_args="--enable-malloc0returnsnull"
 hostmakedepends="pkg-config xmlto"
+<<<<<<< HEAD
 makedepends="xorgproto libXfixes-devel libXext-devel"
+=======
+makedepends="inputproto libXfixes-devel libXext-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="X Input extension library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"

@@ -1,11 +1,19 @@
 # Template file for 'xfce4-screenshooter'
 pkgname=xfce4-screenshooter
+<<<<<<< HEAD
 version=1.11.2
 revision=1
 build_style=meson
 hostmakedepends="pkg-config gettext glib-devel wayland-devel"
 makedepends="libxfce4ui-devel xfce4-panel-devel exo-devel libsoup3-devel
  wayland-devel wayland-protocols libxfce4util-devel xfconf-devel"
+=======
+version=1.8.2
+revision=2
+build_style=gnu-configure
+hostmakedepends="pkg-config intltool glib-devel"
+makedepends="libxfce4ui-devel xfce4-panel-devel exo-devel libsoup-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils hicolor-icon-theme"
 short_desc="Plugin that makes screenshots for the Xfce panel"
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"

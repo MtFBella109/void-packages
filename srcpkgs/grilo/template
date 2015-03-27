@@ -3,6 +3,7 @@ pkgname=grilo
 <<<<<<< HEAD
 version=0.3.19
 revision=1
+<<<<<<< HEAD
 build_style=meson
 build_helper="gir"
 configure_args="$(vopt_bool gir enable-introspection) $(vopt_bool gir enable-vala)
@@ -13,6 +14,16 @@ makedepends="gtk+3-devel libxml2-devel libsoup3-devel liboauth-devel
  totem-pl-parser-devel"
 =======
 version=0.1.18
+=======
+build_style=gnu-configure
+configure_args="--disable-static --disable-vala $(vopt_enable gir introspection)"
+hostmakedepends="libtool pkg-config intltool
+ $(vopt_if gir 'vala-devel gobject-introspection')"
+makedepends="gtk+3-devel libxml2-devel libsoup-devel liboauth-devel totem-pl-parser-devel"
+short_desc="Framework focused on making media discovery and browsing easy"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="LGPL-2.1"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://live.gnome.org/Grilo"
 distfiles="${GNOME_SITE}/$pkgname/0.1/$pkgname-$version.tar.xz"
 build_style=gnu-configure

@@ -4,7 +4,13 @@ version=0.7.6
 revision=5
 build_style=gnu-configure
 hostmakedepends="automake libtool pkg-config"
+<<<<<<< HEAD
 makedepends="libdmtx-devel libmagick-devel libXext-devel libxml2-devel"
+=======
+makedepends="libdmtx-devel libmagick-devel"
+license="GPL-2"
+homepage="http://www.libdmtx.org/"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Command-line utilities for working with Data Matrix barcodes"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"

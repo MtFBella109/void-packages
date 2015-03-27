@@ -5,8 +5,23 @@ homepage="http://live.gnome.org/Tracker"
 distfiles="${GNOME_SITE}/$pkgname/0.14/$pkgname-$version.tar.xz"
 build_style=gnu-configure
 configure_args="--enable-libflac --enable-libvorbis --disable-unit-tests
+<<<<<<< HEAD
 --enable-libtiff --disable-static --enable-network-manager"
 makedepends="pkg-config intltool gobject-introspection libgee-devel libgnome-keyring-devel upower-devel exempi-devel poppler-glib-devel libgsf-devel icu-devel enca-devel libvorbis-devel libflac-devel nautilus-devel gnome-panel-devel taglib-devel giflib-devel totem-pl-parser-devel gupnp-dlna-devel libexif-devel tiff-devel network-manager-applet-devel"
+=======
+ --enable-libtiff --disable-static --enable-network-manager
+ $(vopt_enable gir introspection)
+ ac_cv_lib_sqlite3_sqlite3_threadsafe=yes ax_cv_sqlite_threadsafe=yes"
+hostmakedepends="automake libtool pkg-config intltool glib-devel
+ gettext-devel gobject-introspection"
+makedepends="
+ libpng-devel libgee-devel libsecret-devel upower-devel
+ exempi-devel poppler-glib-devel gupnp-dlna-devel libgxps-devel
+ libgsf-devel icu-devel enca-devel libvorbis-devel libflac-devel
+ taglib-devel giflib-devel totem-pl-parser-devel
+ libexif-devel tiff-devel network-manager-applet-devel sqlite-devel
+ libmediaart-devel libuuid-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Personal search tool and storage system"
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="GPL-2"

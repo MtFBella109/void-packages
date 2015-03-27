@@ -11,8 +11,12 @@ wrksrc="$pkgname-$version-stable"
 subpackages="$pkgname-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
+<<<<<<< HEAD
 makedepends="openssl-devel"
 <<<<<<< HEAD
+=======
+makedepends="libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Abstract asynchronous event notification library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"

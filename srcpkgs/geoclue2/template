@@ -2,6 +2,7 @@
 pkgname=geoclue2
 version=2.7.1
 revision=1
+<<<<<<< HEAD
 build_style=meson
 build_helper="gir"
 configure_args="-Ddbus-srv-user=_geoclue2 -Dgtk-doc=false
@@ -19,6 +20,22 @@ changelog="https://gitlab.freedesktop.org/geoclue/geoclue/-/raw/master/NEWS"
 distfiles="https://gitlab.freedesktop.org/geoclue/geoclue/-/archive/${version}/geoclue-${version}.tar.bz2"
 checksum=5624cd41148643c46d681d39153c7d26fdb8831e7e7c8601c300732fa8a6db1c
 system_accounts="_geoclue2"
+=======
+wrksrc="geoclue-${version}"
+build_style=gnu-configure
+configure_args="--disable-static --disable-schemas-compile $(vopt_enable gir introspection)"
+hostmakedepends="pkg-config intltool glib-devel $(vopt_if gir gobject-introspection)"
+makedepends="libudev-devel json-glib-devel libsoup-gnome-devel ModemManager-devel"
+depends="libsoup>=2.44"
+conf_file="/etc/geoclue/geoclue.conf"
+short_desc="The Geoinformation Service (2.x series)"
+homepage="http://www.freedesktop.org/wiki/Software/GeoClue"
+license="LGPL-2.1"
+maintainer="Juan RP <xtraeme@gmail.com>"
+distfiles="http://www.freedesktop.org/software/geoclue/releases/${version%.*}/geoclue-${version}.tar.xz"
+checksum=f1d7e7a9c60633d3d747f55fee848299114b3222a4d65e955c2cbcd297d01c68
+
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 lib32disabled=yes
 
 build_options="gir"

@@ -5,8 +5,13 @@ revision=12
 _origname="pcsc-perl"
 build_style=perl-module
 hostmakedepends="pkg-config perl"
+<<<<<<< HEAD
 makedepends="perl pcsclite-devel"
 depends="perl libpcsclite"
+=======
+makedepends="${hostmakedepends} pcsclite-devel"
+depends="perl>=5.20  libpcsclite"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Perl wrapper to the PC/SC smartcard library (pcsc-lite)"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="GPL-2.0-or-later"

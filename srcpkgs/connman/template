@@ -3,11 +3,23 @@ pkgname=connman
 version=1.45
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-pie --enable-threads --enable-ethernet
 --enable-wifi --enable-bluetooth --enable-loopback --enable-nmcompat
 --enable-polkit --enable-client --with-systemdunitdir=/lib/systemd/system"
 makedepends="pkg-config glib-devel dbus-devel iptables-devel gnutls-devel"
 fulldepends="dbus bluez wpa_supplicant"
+=======
+configure_args="
+ --enable-polkit --enable-client --enable-pie --enable-ethernet
+ --enable-wifi --enable-bluetooth --enable-loopback --enable-nmcompat
+ --enable-openvpn --with-openvpn=/usr/bin/openvpn --enable-openconnect
+ --with-openconnect=/usr/sbin/openconnect
+ $(vopt_if systemd --with-systemdunitdir=/usr/lib/systemd/system)"
+hostmakedepends="pkg-config wpa_supplicant iptables"
+makedepends="libglib-devel dbus-devel iptables-devel gnutls-devel readline-devel"
+depends="wpa_supplicant"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Open Source CONNection MANager"
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="GPL-2"

@@ -5,11 +5,17 @@ version=4.20.2
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="--with-locales-dir=/usr/share/locale"
 hostmakedepends="pkg-config intltool flex glib-devel dbus-glib-devel"
 makedepends="libical-devel libnotify-devel gtk+3-devel popt-devel
  libxfce4util-devel libxfce4ui-devel xfce4-panel-devel pango-devel
  libglib-devel dbus-glib-devel cairo-devel gdk-pixbuf-devel"
+=======
+hostmakedepends="pkg-config intltool flex"
+makedepends="libical-devel libnotify-devel gtk+-devel dbus-glib-devel
+ popt-devel xfce4-panel-devel libxfce4util-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme desktop-file-utils"
 short_desc="Simple calendar application for Xfce"
 maintainer="Orphaned <orphan@voidlinux.org>"

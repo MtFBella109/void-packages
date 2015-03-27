@@ -67,10 +67,18 @@ else
 	# when zlib has been compiled with glibc 2.32.
 	LDFLAGS="-lzstd -pthread"
 fi
+<<<<<<< HEAD
 makedepends="zlib-devel libzstd-devel"
 depends="binutils libgcc-devel-${version}_${revision}
  libstdc++-devel-${version}_${revision} libatomic-devel-${version}_${revision}"
 checkdepends="dejagnu"
+=======
+makedepends="zlib-devel libmpc-devel cloog-devel"
+depends="binutils libgcc-${version}_${revision}"
+# mudflap is gone in 4.9
+replaces="libmudflap>=0 libmudflap-devel>=0 chroot-gcc>=0"
+
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 subpackages="libgcc libgomp libgomp-devel libatomic libatomic-devel"
 
 build_options="ada gnatboot"

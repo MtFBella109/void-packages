@@ -16,6 +16,7 @@ version=0.2.2
 homepage="http://live.gnome.org/libgxps"
 distfiles="${GNOME_SITE}/$pkgname/0.2/$pkgname-$version.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static"
 makedepends="pkg-config glib-devel jpeg-devel tiff-devel lcms2-devel libarchive-devel freetype-devel gobject-introspection"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
@@ -53,6 +54,12 @@ configure_args="--disable-static"
 hostmakedepends="pkg-config gobject-introspection"
 makedepends="libglib-devel libjpeg-turbo-devel libpng-devel>=1.5.10
  tiff-devel lcms2-devel libarchive-devel>=3.1.2 freetype-devel"
+=======
+configure_args="--disable-static $(vopt_enable gir introspection)"
+hostmakedepends="pkg-config $(vopt_if gir gobject-introspection)"
+makedepends="cairo-devel libglib-devel libjpeg-turbo-devel libpng-devel
+ tiff-devel lcms2-devel libarchive-devel freetype-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GObject base library for XPS documents"
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="LGPL-2.1"

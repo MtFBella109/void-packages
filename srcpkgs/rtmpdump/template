@@ -1,10 +1,16 @@
 # Template file for 'rtmpdump'
 pkgname=rtmpdump
+<<<<<<< HEAD
 version=2.4.20161210
 revision=10
 _patchlevel=${version##*.}
 create_wrksrc=yes
 makedepends="zlib-devel $(vopt_if gnutls 'gnutls-devel' 'openssl-devel')"
+=======
+version=2.4
+revision=8
+makedepends="zlib-devel libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Toolkit for RTMP streams"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"

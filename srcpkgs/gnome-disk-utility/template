@@ -23,7 +23,17 @@ lib32disabled=yes
 version=3.4.1
 distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static"
+=======
+configure_args="--disable-static $(vopt_enable gir introspection)
+ $(vopt_enable systemd libsystemd-login)"
+hostmakedepends="pkg-config intltool gnome-doc-utils
+ glib-devel $(vopt_if gir gobject-introspection)"
+makedepends="liblzma-devel gtk+3-devel libcanberra-devel udisks2-devel
+ libdvdread-devel libsecret-devel libpwquality-devel libnotify-devel
+ gnome-settings-daemon-devel $(vopt_if systemd systemd-devel)"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme desktop-file-utils"
 makedepends="pkg-config intltool gnome-doc-utils gtk+3-devel udisks2-devel"
 short_desc="GNOME libraries and applications for dealing with storage devices"

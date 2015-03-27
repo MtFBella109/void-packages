@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 # Template file for 'sqlite'
 pkgname=sqlite
+<<<<<<< HEAD
 version=3.50.4
 revision=1
 _amalgamationver=$(printf "%d%02d%02d00\n" ${version//./ })
@@ -14,6 +15,16 @@ configure_args="--enable-threadsafe --enable-load-extension --enable-math
  --with-tcl=$XBPS_CROSS_BASE/usr/lib"
 hostmakedepends="tcl"
 makedepends="libedit-devel zlib-devel tcl-devel"
+=======
+version=3.8.8.3
+revision=2
+_amalgamationver=3080803
+wrksrc="sqlite-autoconf-${_amalgamationver}"
+build_pie=yes
+build_style=gnu-configure
+configure_args="--enable-threadsafe --enable-readline --enable-dynamic-extensions"
+makedepends="readline-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="SQL Database Engine in a C Library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Public Domain"

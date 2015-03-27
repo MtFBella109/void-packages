@@ -25,6 +25,7 @@ homepage="https://www.gimp.org"
 distfiles="https://download.gimp.org/gimp/v${version%.*}/gimp-${version/+rc/-RC}.tar.xz"
 checksum=8caa2ec275bf09326575654ac276afc083f8491e7cca45d19cf29e696aecab25
 lib32disabled=yes
+<<<<<<< HEAD
 
 if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" gimp"
@@ -36,6 +37,32 @@ if [ -n "$XBPS_CHECK_PKGS" ]; then
 else
 	configure_args+=" -Dheadless-tests=disabled"
 fi
+=======
+build_style=gnu-configure
+configure_args="--without-aa --without-gvfs --enable-gimp-console
+ --enable-python --with-gif-compression=lzw --with-libcurl --enable-mp"
+hostmakedepends="pkg-config intltool"
+makedepends="libpng-devel gtk+-devel lcms2-devel
+ alsa-lib-devel dbus-glib-devel libXmu-devel libXcursor-devel
+ libexif-devel libsoup-devel webkitgtk2-devel libwmf-devel librsvg-devel
+ libmng-devel libXpm-devel libcurl-devel babl-devel gegl-devel pygtk-devel
+ libgudev-devel jasper-devel poppler-glib-devel ghostscript-devel iso-codes"
+short_desc="The GNU image manipulation program"
+conf_files="
+	/etc/gimp/2.0/gimprc
+	/etc/gimp/2.0/gtkrc
+	/etc/gimp/2.0/templaterc
+	/etc/gimp/2.0/unitrc
+	/etc/gimp/2.0/sessionrc
+	/etc/gimp/2.0/controllerrc
+	/etc/gimp/2.0/menurc"
+depends="desktop-file-utils hicolor-icon-theme iso-codes"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.gimp.org"
+license="GPL-3"
+distfiles="http://download.gimp.org/pub/gimp/v${version%.*}/gimp-${version}.tar.bz2"
+checksum=d82a958641c9c752d68e35f65840925c08e314cea90222ad845892a40e05b22d
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 libgimp_package() {
 	short_desc+=" - runtime libraries"

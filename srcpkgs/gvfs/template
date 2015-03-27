@@ -19,11 +19,27 @@ makedepends="avahi-glib-libs-devel dbus-glib-devel fuse3-devel gcr4-devel
 version=1.12.3
 distfiles="${GNOME_SITE}/$pkgname/1.12/$pkgname-$version.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-hal --disable-afc
 --with-bash-completion-dir=/etc/bash_completion.d"
 makedepends="pkg-config intltool libbluetooth-devel dbus-glib-devel libopenobex-devel libgudev-devel libexif-devel libusb-compat-devel fuse-devel libarchive-devel libcdio-devel libsoup-gnome-devel libgphoto2-devel libgnome-keyring-devel samba-devel avahi-glib-libs-devel udisks2-devel libgcrypt-devel"
 fulldepends="obex-data-server"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+configure_args="--disable-hal $(vopt_enable systemd)
+ --with-bash-completion-dir=/usr/share/bash-completion/completions
+ --with-samba-includes=${XBPS_CROSS_BASE}/usr/include
+ --with-samba-libs=${XBPS_CROSS_BASE}/usr/lib
+ --with-archive-includes=${XBPS_CROSS_BASE}/usr/include
+ --with-archive-libs=${XBPS_CROSS_BASE}/usr/lib"
+hostmakedepends="pkg-config intltool libxslt docbook-xsl glib-devel"
+makedepends="
+ libbluetooth-devel dbus-glib-devel libgudev-devel libexif-devel libbluray-devel
+ fuse-devel libarchive-devel libcdio-paranoia-devel libsoup-gnome-devel
+ libgphoto2-devel libsecret-devel gtk+3-devel samba-devel libmtp-devel
+ avahi-glib-libs-devel udisks2-devel libgcrypt-devel $(vopt_if systemd systemd-devel)
+ libobexftp-devel libimobiledevice-devel libarchive-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Userspace virtual filesystem"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -37,6 +53,22 @@ shlib_provides="libgvfscommon.so libgvfsdaemon.so"
 subpackages="gvfs-afc gvfs-afp gvfs-cdda gvfs-gphoto2 gvfs-mtp gvfs-smb gvfs-goa gvfs-devel"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+# Package build options
+build_options="systemd"
+subpackages="gvfs-afc gvfs-afp gvfs-cdda gvfs-gphoto2 gvfs-mtp gvfs-obex gvfs-smb gvfs-devel"
+
+if [ -z "$CROSS_BUILD" ]; then
+	makedepends+=" gnome-online-accounts-devel"
+	subpackages+=" gvfs-goa"
+fi
+
+post_install() {
+	ln -s gvfs-open ${DESTDIR}/usr/bin/gnome-open
+}
+
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 gvfs-devel_package() {
 	short_desc+=" - development files (transitional dummy package)"
 	metapackage=yes

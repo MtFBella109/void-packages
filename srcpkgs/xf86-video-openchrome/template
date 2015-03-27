@@ -5,8 +5,13 @@ distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
 build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="libdrm-devel libX11-devel libXext-devel libXv-devel libXvMC-devel
+<<<<<<< HEAD
  MesaLib-devel xorg-server-devel>=1.15<1.16"
 depends="xserver-abi-video-15_1"
+=======
+ MesaLib-devel xorg-server-devel"
+depends="virtual?xserver-abi-video-19_1"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Xorg VIA Unichromes video driver"
 maintainer="Juan RP <xtraeme@gmail.com>"
 distfiles="${XORG_SITE}/driver/${pkgname}-${version}.tar.bz2"

@@ -5,8 +5,13 @@ version=0.8000
 revision=2
 build_style=perl-module
 hostmakedepends="perl"
+<<<<<<< HEAD
 makedepends="$hostmakedepends"
 depends="$makedepends"
+=======
+makedepends="${hostmakedepends}"
+depends="${makedepends}"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Easily build XS extensions that depend on XS extensions"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"

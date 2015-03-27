@@ -15,6 +15,7 @@ checksum=c9e4b98f72db3e9084dc7abe5f0ccf09bfc3e2f327706371dba4c2ee0a14c29b
 
 lib32disabled=yes
 
+<<<<<<< HEAD
 hostmakedepends="autoconf unzip zip pkg-config perl python3 yasm rust cargo
  llvm clang nodejs cbindgen nasm which tar"
 makedepends="nss-devel libjpeg-turbo-devel gtk+3-devel libicu77-devel
@@ -25,6 +26,15 @@ makedepends="nss-devel libjpeg-turbo-devel gtk+3-devel libicu77-devel
  $(vopt_if xscreensaver libXScrnSaver-devel)
  $(vopt_if sndio sndio-devel) $(vopt_if jack jack-devel)"
 depends="nss>=3.72 nspr>=4.32 desktop-file-utils hicolor-icon-theme libotr"
+=======
+hostmakedepends="unzip zip perl python yasm pkg-config autoconf"
+makedepends="python-devel cairo-devel libjpeg-turbo-devel pixman-devel
+ nss-devel sqlite-devel libXrender-devel gtk+-devel libevent-devel
+ libvpx-devel hunspell-devel startup-notification-devel dbus-glib-devel
+ alsa-lib-devel wireless_tools-devel libXScrnSaver-devel libSM-devel libXt-devel
+ pulseaudio-devel"
+depends="desktop-file-utils hicolor-icon-theme"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 build_options="alsa jack dbus pulseaudio xscreensaver sndio wayland"
 build_options_default="alsa jack dbus pulseaudio xscreensaver sndio wayland"

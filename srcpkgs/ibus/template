@@ -3,6 +3,7 @@ pkgname=ibus
 version=1.5.32
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper="gir"
 configure_args="--enable-ui --enable-gtk3 --enable-gtk4
  --enable-memconf --enable-dconf --enable-wayland --enable-xim
@@ -18,6 +19,19 @@ makedepends="dconf-devel gtk+-devel gtk+3-devel gtk4-devel hicolor-icon-theme
  vala libXtst-devel libdbusmenu-gtk3-devel"
 depends="hicolor-icon-theme iso-codes setxkbmap dconf python3-xdg
  dbus-x11 ibus-gtk+3 $(vopt_if ibus_setup 'python3-gobject>=3.12.1_3')"
+=======
+configure_args="--enable-ui --enable-gtk3 --disable-python
+ --disable-tests --disable-schemas-compile --enable-memconf
+ --disable-schemas-install --enable-dconf --disable-gconf
+ $(vopt_enable gir introspection) $(vopt_enable ibus_setup setup)"
+hostmakedepends="automake gettext-devel libtool pkg-config intltool
+ dconf GConf python glib-devel $(vopt_if gir gobject-introspection)"
+makedepends="dconf-devel librsvg-devel gtk+-devel gtk+3-devel
+ vala-devel libnotify-devel hicolor-icon-theme iso-codes dbus-x11 python-xdg"
+depends="hicolor-icon-theme iso-codes dbus-x11 python-xdg
+ $(vopt_if ibus_setup 'python-gobject>=3.12.1_3')"
+triggers="gtk-immodules gtk3-immodules"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Intelligent Input Bus"
 maintainer="oreo639 <oreo6391@gmail.com>"
 license="LGPL-2.1-or-later"

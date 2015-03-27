@@ -4,12 +4,26 @@ version=0.10.31
 distfiles="http://gstreamer.freedesktop.org/src/$pkgname/$pkgname-$version.tar.xz"
 build_style=gnu-configure
 configure_args="--with-gudev --with-libv4l2 --enable-experimental
+<<<<<<< HEAD
 --disable-schemas-install --disable-aalib --disable-esd --disable-hal
 --disable-libcaca --disable-libdv --disable-dv1394 --disable-shout2
 --with-gconf-schema-file-dir=/usr/share/gconf/schemas --enable-speex"
 makedepends="pkg-config intltool libxml2-devel libgudev-devel libflac-devel libXext-devel libXdamage-devel libXfixes-devel gtk+-devel taglib-devel libsoup-devel libsoup-gnome-devel gstreamer-devel gst-plugins-base-devel GConf-devel pulseaudio-devel orc-devel libXv-devel wavpack-devel v4l-utils-devel jack-devel speex-devel"
 short_desc="Core GStreamer libraries and elements"
 maintainer="Juan RP <xtraeme@gmail.org>"
+=======
+ --disable-schemas-install --disable-aalib --disable-esd --disable-hal
+ --disable-libcaca --disable-libdv --disable-dv1394 --disable-shout2
+ --with-gconf-schema-file-dir=/usr/share/gconf/schemas --enable-speex"
+# XXX: build libcaca, libdv, dv1394 and shout2 modules.
+hostmakedepends="pkg-config intltool glib-devel"
+makedepends="libpng-devel libxml2-devel
+ libgudev-devel libflac-devel libXdamage-devel gtk+-devel taglib-devel
+ libsoup-gnome-devel gst-plugins-base-devel GConf-devel pulseaudio-devel
+ orc-devel wavpack-devel v4l-utils-devel jack-devel speex-devel"
+short_desc="GStreamer set of well-maintained good plug-ins"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://gstreamer.freedesktop.org/"
 license="LGPL-2.1"
 checksum=77a8436a7c0a15f876bad29616835046890df2bcaf72da02151bd91e3d292b64

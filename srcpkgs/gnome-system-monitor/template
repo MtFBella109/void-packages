@@ -20,10 +20,17 @@ checksum=133c3a6e286366e659fd2d80582409a7bd5edae456e63c4f69ccf66ed6fc6638
 version=3.4.1
 distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-schemas-compile --disable-scrollkeeper
 --localstatedir=/var --enable-systemd"
 makedepends="which pkg-config intltool gnome-doc-utils libgtop-devel libwnck-devel gtkmm-devel librsvg-devel systemd-devel"
 fulldepends="gnome-icon-theme"
+=======
+build_options="systemd"
+configure_args="--disable-schemas-compile --enable-wnck $(vopt_enable systemd)"
+hostmakedepends="which pkg-config intltool itstool gnome-doc-utils"
+makedepends="libwnck-devel gtkmm-devel librsvg-devel libgtop-devel $(vopt_if systemd systemd-devel)"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Process viewer and system resource monitor for GNOME"
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://www.gnome.org"

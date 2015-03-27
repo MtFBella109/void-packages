@@ -5,8 +5,12 @@ revision=1
 build_style=gnu-configure
 configure_args="--without-systemd"
 make_dirs="/var/lib/lockdown 0755 usbmux usbmux"
+<<<<<<< HEAD
 hostmakedepends="pkg-config automake libtool"
 makedepends="libusb-devel libimobiledevice-devel"
+=======
+makedepends="libusb-devel libimobiledevice-devel $(vopt_if systemd systemd-devel)"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="USB Multiplex Daemon"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"

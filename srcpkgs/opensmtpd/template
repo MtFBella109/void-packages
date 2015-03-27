@@ -14,7 +14,11 @@ configure_args="--sysconfdir=/etc/smtpd --sbindir=/usr/bin
  ac_cv_func_strlcat=no
  ac_cv_func_strlcpy=no"
 hostmakedepends="automake libtool pkg-config bison"
+<<<<<<< HEAD
 makedepends="zlib-devel openssl-devel libevent-devel db-devel pam-devel"
+=======
+makedepends="zlib-devel libressl-devel libevent-devel db-devel libasr-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="ca-certificates"
 conf_files="/etc/smtpd/smtpd.conf /etc/smtpd/aliases"
 short_desc="Free implementation of the server-side SMTP protocol"

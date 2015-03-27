@@ -47,11 +47,26 @@ short_desc="Network Management daemon"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Projects/NetworkManager"
+<<<<<<< HEAD
 changelog="https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/raw/nm-1-50/NEWS"
 distfiles="${GNOME_SITE}/NetworkManager/${version%.*}/NetworkManager-${version}.tar.xz"
 checksum=fc03e7388a656cebc454c5d89481626122b1975d7c26babc64dc7e488faa66e3
 # TODO: Some tests require network namespaces to run.
 make_check=extended
+=======
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=3a66afec670c975edd9832e620b725a5f16ed267a1b9e1b2d51ef27250d85947
+
+hostmakedepends="
+ automake libtool pkg-config intltool gnutls-devel glib-devel dbus-glib-devel
+ gettext-devel gtk-doc dbus iproute2 dhcpcd wpa_supplicant bluez iptables
+ $(vopt_if gir gobject-introspection)"
+makedepends="libuuid-devel gnutls-devel dbus-glib-devel libgudev-devel
+ libnl3-devel polkit-devel ppp-devel iptables-devel libsoup-devel
+ ModemManager-devel readline-devel libndp-devel"
+
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 lib32disabled=yes
 conf_files="/etc/NetworkManager/NetworkManager.conf"
 make_dirs="

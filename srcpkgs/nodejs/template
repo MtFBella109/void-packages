@@ -1,6 +1,12 @@
 version=0.10.4
 revision=1
 wrksrc=node-v${version}
+<<<<<<< HEAD
+=======
+hostmakedepends="pkg-config python"
+makedepends="libressl-devel zlib-devel python-devel libuv-devel"
+depends="python"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Evented I/O for V8 javascript"
 maintainer="davehome <davehome@redthumb.info.tm>"
 license="MIT"

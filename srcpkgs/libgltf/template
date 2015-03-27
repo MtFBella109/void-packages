@@ -4,7 +4,11 @@ version=0.1.0
 revision=4
 build_style=gnu-configure
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="boost-devel-minimal glew-devel glu-devel glm libepoxy-devel"
+=======
+makedepends="boost-devel glew-devel glu-devel glm"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="C++ Library for rendering OpenGL models stored in glTF format"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="MPL-2.0"

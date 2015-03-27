@@ -3,6 +3,7 @@ pkgname=libimobiledevice
 version=1.3.0
 revision=7
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="automake libtool pkgconf python3-Cython"
 makedepends="python3-devel libglib-devel openssl-devel
  libusb-devel libplist-devel libusbmuxd-devel"
@@ -23,6 +24,16 @@ post_patch() {
 	vsed -e '/SSL_CTX_set_security_level/d' -i src/idevice.c
 	vsed -e 's,-L$(libdir),,g' -i cython/Makefile.am
 }
+=======
+hostmakedepends="automake libtool pkg-config python-devel"
+makedepends="python-devel libglib-devel libressl-devel libusb-devel libplist-devel libusbmuxd-devel"
+short_desc="A library to communicate with Apple devices"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2,LGPL-2.1"
+homepage="http://www.libimobiledevice.org/"
+distfiles="http://www.libimobiledevice.org/downloads/${pkgname}-${version}.tar.bz2"
+checksum=786b0de0875053bf61b5531a86ae8119e320edab724fc62fe2150cc931f11037
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 pre_configure() {
 	export PYTHON_CPPFLAGS="-I${XBPS_CROSS_BASE}/${py3_inc}"

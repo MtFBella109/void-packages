@@ -4,6 +4,7 @@ pkgname=net-snmp
 version=5.9.1
 revision=6
 hostmakedepends="pkg-config unzip"
+<<<<<<< HEAD
 makedepends="bzip2-devel openssl-devel libnl3-devel pciutils-devel
  libsensors-devel pcre-devel"
 =======
@@ -12,6 +13,9 @@ distfiles="$SOURCEFORGE_SITE/$pkgname/$pkgname-$version.tar.gz"
 depends="python"
 makedepends="perl bzip2-devel openssl-devel libnl-devel pciutils-devel python-devel python-distribute"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+makedepends="bzip2-devel libressl-devel libnl-devel pciutils-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Simple Network Management Protocol (SNMP) suite"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Net-SNMP"

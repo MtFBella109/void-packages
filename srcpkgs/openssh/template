@@ -9,6 +9,7 @@ configure_args="--datadir=/usr/share/openssh
  --sysconfdir=/etc/ssh --without-selinux --with-privsep-user=nobody
  --with-mantype=doc --without-rpath --with-xauth=/usr/bin/xauth
  --disable-strip --with-privsep-path=/var/chroot/ssh
+<<<<<<< HEAD
  --with-default-path=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/bin
  --with-superuser-path=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/bin
  --with-pid-dir=/run --with-pam
@@ -29,6 +30,16 @@ homepage="https://www.openssh.com"
 changelog="https://www.openssh.com/releasenotes.html"
 distfiles="https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/${pkgname}-${version}.tar.gz"
 checksum=ccc42c0419937959263fa1dbd16dafc18c56b984c03562d2937ce56a60f798b2
+=======
+ --with-pid-dir=/run --with-pam --with-pie --without-kerberos5
+ $(vopt_with ldns) $(vopt_if ssl --with-ssl-engine --without-openssl)
+ --without-ssh1 --with-libedit LD=$CC"
+hostmakedepends="automake libtool perl"
+makedepends="zlib-devel pam-devel libedit-devel
+ $(vopt_if ssl 'libressl-devel $(vopt_if ldns libldns-devel)"
+short_desc="The OpenSSH implementation of SSH protocol"
+replaces="openssh-server>=0"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="/etc/ssh/moduli /etc/ssh/ssh_config /etc/ssh/sshd_config /etc/pam.d/sshd"
 make_dirs="
  /var/chroot/ssh 0755 root root

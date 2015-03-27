@@ -1,0 +1,35 @@
+# Template file for 'docker'
+pkgname=docker
+version=1.5.0
+revision=1
+hostmakedepends="git go"
+makedepends="libbtrfs-devel sqlite-devel device-mapper-devel"
+short_desc="Easily create lightweight, portable, self-sufficient containers from any application"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="Apache-2.0"
+homepage="http://www.docker.io"
+system_groups="docker"
+
+# These are required at run-time.
+depends="iptables xz git"
+build_options="systemd"
+nostrip=yes
+nocross=yes
+
+do_fetch() {
+	git clone -b v${version} git://github.com/docker/docker ${pkgname}-${version}
+}
+do_build() {
+	export AUTO_GOPATH=1
+	./hack/make.sh dynbinary
+}
+do_install() {
+	vbin bundles/${version}/dynbinary/docker-${version} docker
+	vinstall bundles/${version}/dynbinary/dockerinit-${version} 755 usr/lib/docker dockerinit
+	vinstall contrib/completion/bash/docker 644 usr/share/bash-completion/completions
+	vinstall contrib/completion/zsh/_docker 644 usr/share/zsh/site-functions
+	if [ "$build_option_systemd" ]; then
+		vinstall contrib/init/systemd/docker.service 644 usr/lib/systemd/system
+	fi
+	vsv docker
+}

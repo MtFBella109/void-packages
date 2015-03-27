@@ -1,5 +1,6 @@
 # Template file for 'gnome-nettool'
 pkgname=gnome-nettool
+<<<<<<< HEAD
 version=42.0
 revision=2
 build_style=meson
@@ -11,6 +12,17 @@ depends="bind-utils desktop-file-utils hicolor-icon-theme iputils net-tools
 short_desc="Collection of GNOME3 Networking Tools"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+version=3.8.1
+revision=3
+build_style=gnu-configure
+hostmakedepends="which pkg-config intltool itstool gnome-doc-utils"
+makedepends="gtk+3-devel gsettings-desktop-schemas-devel libgtop-devel
+ hicolor-icon-theme desktop-file-utils traceroute iputils bind-utils net-tools"
+depends="hicolor-icon-theme desktop-file-utils traceroute iputils bind-utils net-tools"
+short_desc="A Collection of GNOME3 Networking Tools"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://www.gnome.org"
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=a54f29eef2038aee69551c8b19ca4f758e5eb9e2090a4bc6b5633dff0188751f

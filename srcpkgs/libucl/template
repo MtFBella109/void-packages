@@ -5,8 +5,12 @@ revision=2
 build_style=gnu-configure
 configure_args="--enable-urls --enable-signatures"
 hostmakedepends="automake libtool pkg-config"
+<<<<<<< HEAD
 makedepends="libcurl-devel"
 checkdepends="xz"
+=======
+makedepends="libcurl-devel libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Universal configuration library parser"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"

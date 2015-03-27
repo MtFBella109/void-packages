@@ -5,12 +5,20 @@ version=4.20.2
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 build_helper=gir
 configure_args="--enable-sound-settings --enable-xrandr --enable-upower-glib"
 hostmakedepends="gettext pkg-config glib-devel libxml2 wayland-devel"
 makedepends="exo-devel garcon-devel libcanberra-devel libnotify-devel
  libglib-devel gtk-layer-shell-devel wayland-devel
  libxklavier-devel upower-devel libXrandr-devel xf86-input-libinput-devel"
+=======
+configure_args="--enable-sound-settings --enable-pluggable-dialogs"
+hostmakedepends="pkg-config intltool"
+makedepends="libxfce4ui-devel libXi-devel libXcursor-devel
+ exo-devel libXrandr-devel libxklavier-devel libnotify-devel dbus-devel
+ libcanberra-devel garcon-devel upower0-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils gnome-icon-theme"
 conf_files="/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml"
 short_desc="Xfce settings manager"

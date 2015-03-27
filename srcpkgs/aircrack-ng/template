@@ -2,6 +2,7 @@
 pkgname=aircrack-ng
 version=1.7
 revision=5
+<<<<<<< HEAD
 build_style=gnu-configure
 hostmakedepends="automake ethtool libtool pkg-config python3 python3-setuptools"
 makedepends="libhwloc-devel libnl3-devel libpcap-devel libpciaccess-devel
@@ -29,3 +30,16 @@ post_install() {
 	vlicense LICENSE
 	vlicense LICENSE.OpenSSL
 }
+=======
+build_style=gnu-makefile
+make_build_args="sqlite=true libnl=true"
+make_install_args="prefix=/usr sqlite=true libnl=true"
+hostmakedepends="pkg-config"
+makedepends="zlib-devel libressl-devel sqlite-devel libnl3-devel"
+short_desc="A key cracker for the 802.11 WEP and WPA-PSK protocols"
+homepage="http://www.aircrack-ng.org/"
+maintainer="Jan S. <jan.schreib@gmail.com>"
+license="GPL-2"
+distfiles="http://download.aircrack-ng.org/${pkgname}-${_aircrack_ver}-${_aircrack_rc}.tar.gz"
+checksum=cf3134521e1c3d7aed4e384e3e5e7b6959e2d485bd1554474608a3a9328e35fd
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)

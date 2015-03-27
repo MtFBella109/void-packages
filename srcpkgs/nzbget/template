@@ -9,7 +9,11 @@ configure_args="--with-tlslib=OpenSSL
  --with-zlib-includes=${XBPS_CROSS_BASE}/usr/include
  --with-zlib-libraries=${XBPS_CROSS_BASE}/usr/lib"
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="libxml2-devel ncurses-devel openssl-devel"
+=======
+makedepends="libxml2-devel ncurses-devel libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Download from Usenet using .nzb files"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="GPL-2.0-or-later"

@@ -5,9 +5,16 @@ revision=20
 build_style=cmake
 hostmakedepends="gettext pkg-config python3-setuptools python3-devel vala-devel"
 makedepends="alsa-lib-devel fftw-devel pulseaudio-devel libexif-devel
+<<<<<<< HEAD
  libical-devel libxklavier-devel zeitgeist-devel libsensors-devel vala-devel
  cairo-dock-devel gnome-menus-devel vte3-devel python3-devel upower-devel"
 depends="cairo-dock>=${version} upower"
+=======
+ libical-devel libxklavier-devel zeitgeist-devel libsensors-devel
+ cairo-dock-devel gnome-menus-devel webkitgtk-devel
+ vte290-devel vala-devel python-devel python3.4-devel upower0-devel"
+depends="cairo-dock>=${version} $(vopt_if systemd '' 'ConsoleKit2 upower0')"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Plugins for cairo-dock"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, GPL-3.0-or-later"

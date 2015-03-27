@@ -1,5 +1,6 @@
 # Template file for 'gnome-sound-recorder'
 pkgname=gnome-sound-recorder
+<<<<<<< HEAD
 version=42.0
 revision=2
 build_helper="gir"
@@ -9,6 +10,16 @@ makedepends="gjs-devel libglib-devel gtk4-devel libadwaita-devel
  gst-plugins-bad1-devel"
 depends="desktop-file-utils gjs gsettings-desktop-schemas gst-plugins-bad1
  gst-plugins-good1 libhandy1 libadwaita"
+=======
+version=3.14.2
+revision=1
+lib32disabled=yes
+build_style=gnu-configure
+configure_args="--disable-schemas-compile"
+hostmakedepends="pkg-config intltool itstool glib-devel gobject-introspection"
+makedepends="gtk+3-devel gsettings-desktop-schemas-devel gjs-devel gst-plugins-base1"
+depends="desktop-file-utils gjs>=1.40 gsettings-desktop-schemas>=3.14 gst-plugins-base1"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNOME sound recorder application"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"

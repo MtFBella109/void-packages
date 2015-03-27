@@ -3,6 +3,7 @@ pkgname=folks
 <<<<<<< HEAD
 version=0.15.9
 revision=1
+<<<<<<< HEAD
 build_style=meson
 build_helper="gir"
 configure_args="-Db_lto=false"
@@ -10,6 +11,19 @@ hostmakedepends="pkg-config gettext glib-devel python3-dbusmock
  evolution-data-server-devel $(vopt_if gir vala)"
 makedepends="readline-devel telepathy-glib-devel zeitgeist-devel
  libgee-devel evolution-data-server-devel $(vopt_if gir vala-devel)"
+=======
+build_style=gnu-configure
+build_options="gir"
+configure_args="
+ --disable-static --disable-fatal-warnings
+ --disable-libsocialweb-backend --disable-schemas-compile
+ $(vopt_enable gir introspection)"
+hostmakedepends="pkg-config intltool vala-devel
+ $(vopt_if gir gobject-introspection)"
+makedepends="
+ readline-devel telepathy-glib-devel zeitgeist-devel
+ libgee08-devel evolution-data-server-devel tracker-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="zeitgeist"
 checkdepends="python3-dbusmock bluez"
 =======

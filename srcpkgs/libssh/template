@@ -3,9 +3,14 @@ pkgname=libssh
 version=0.11.3
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 hostmakedepends="pkg-config python3"
 makedepends="zlib-devel openssl-devel cmocka-devel"
 checkdepends="openssh"
+=======
+hostmakedepends="cmake pkg-config"
+makedepends="zlib-devel libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Multiplatform C library implementing the SSH v2 protocol"
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="LGPL-2.1-or-later"

@@ -2,6 +2,7 @@
 pkgname=gnome-boxes
 version=48.0
 revision=1
+<<<<<<< HEAD
 build_helper="gir"
 build_style=meson
 hostmakedepends="gettext itstool pkg-config vala glib-devel desktop-file-utils
@@ -19,3 +20,21 @@ homepage="https://wiki.gnome.org/Apps/Boxes"
 changelog="https://gitlab.gnome.org/GNOME/gnome-boxes/-/raw/main/NEWS"
 distfiles="${GNOME_SITE}/gnome-boxes/${version%%.*}/gnome-boxes-${version}.tar.xz"
 checksum=d05f5f42568fafbf6d88771161b06ed5f739d43121278d418cae95c56e513ead
+=======
+# XXX ovirt support.
+build_style=gnu-configure
+configure_args="--enable-smartcard"
+hostmakedepends="pkg-config intltool itstool gobject-introspection"
+makedepends="clutter-gtk-devel gtk+3-devel gtk-vnc-devel libuuid-devel
+ libvirt-glib-devel libxml2-devel libgudev-devel libosinfo-devel
+ tracker-devel spice-gtk-devel spice-protocol vala-devel
+ libsoup-devel libarchive-devel"
+depends="qemu libvirt-glib>=0.1.6 libosinfo>=0.2.10 desktop-file-utils
+ hicolor-icon-theme shared-mime-info"
+short_desc="GNOME 3 application to access remote or virtual systems"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="https://live.gnome.org/Boxes"
+license="LGPL-2"
+distfiles="${GNOME_SITE}/$pkgname/3.14/$pkgname-$version.tar.xz"
+checksum=048df41ce1bcece1d89dfddcb571ed17dfa7f614929cd63f3079d14c66c10f24
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)

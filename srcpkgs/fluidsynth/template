@@ -11,8 +11,13 @@ makedepends="SDL3-devel glib-devel jack-devel libsndfile-devel pipewire-devel pu
  libinstpatch-devel readline-devel portaudio-devel ladspa-sdk"
 =======
 configure_args="-DLIB_SUFFIX="
+<<<<<<< HEAD
 makedepends="cmake glib-devel jack-devel pulseaudio-devel dbus-devel readline-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="pkg-config cmake"
+makedepends="glib-devel jack-devel pulseaudio-devel readline-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Real-time software synthesizer based on the SoundFont 2 specifications"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"

@@ -4,7 +4,11 @@ pkgname=thunar-volman
 version=4.20.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config gettext"
+=======
+hostmakedepends="pkg-config intltool"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="libgudev-devel libnotify-devel libxfce4ui-devel exo-devel"
 depends="hicolor-icon-theme desktop-file-utils"
 short_desc="Thunar Volume Manager"

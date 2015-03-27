@@ -3,11 +3,22 @@ pkgname=opensc
 version=0.26.1
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-static=no --enable-doc --enable-man
  --with-xsl-stylesheetsdir=/usr/share/xsl/docbook
  --with-completiondir=/usr/share/bash-completion/completions"
 hostmakedepends="automake docbook-xsl libtool libxslt pkg-config"
 makedepends="openssl-devel pcsclite-devel readline-devel zlib-devel"
+=======
+configure_args="--enable-man  --enable-sm --enable-static=no --enable-doc
+ --with-xsl-stylesheetsdir=/usr/share/xsl/docbook"
+hostmakedepends="automake libtool pkg-config docbook-xsl libxslt"
+makedepends="readline-devel pcsclite-devel libressl-devel zlib-devel"
+conf_files="/etc/opensc.conf"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="https://github.com/OpenSC/OpenSC/wiki"
+license="LGPL-2.1"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Tools and libraries for smart cards"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"

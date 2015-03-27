@@ -6,12 +6,20 @@ build_style=gnu-configure
 configure_args="
  --sysconfdir=/etc/ups --with-doc=man --disable-static
  --datadir=/usr/share/ups --with-user=nut --with-group=nut --with-ssl
+<<<<<<< HEAD
  --with-usb --with-dev --with-serial -with-avahi --with-udev-dir=/usr/lib/udev
  --with-libltdl --without-ipmi --without-freeipmi --without-systemdsystemunitdir
  --with-snmp --with-drvpath=/usr/libexec/nut $(vopt_with cgi) --with-statepath=/run/ups"
 hostmakedepends="pkg-config asciidoc python3-packaging-bootstrap"
 makedepends="avahi-libs-devel openssl-devel libusb-compat-devel neon-devel
  net-snmp-devel $(vopt_if cgi gd-devel) libltdl-devel"
+=======
+ --with-usb --without-dev --with-serial -with-avahi --with-udev-dir=/usr/lib/udev
+ --without-libltdl --without-ipmi --without-freeipmi"
+hostmakedepends="pkg-config"
+makedepends="avahi-libs-devel libressl-devel libusb-compat-devel neon-devel"
+system_accounts="nut"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="
 	/etc/ups/ups.conf
 	/etc/ups/upsd.users

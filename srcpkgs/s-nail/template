@@ -1,11 +1,18 @@
 # Template file for 's-nail'
 pkgname=s-nail
+<<<<<<< HEAD
 version=14.9.25
 revision=1
 build_helper="qemu"
 hostmakedepends="perl"
 makedepends="libidn2-devel openssl-devel ncurses-devel"
 conf_files="/etc/s-nail.rc"
+=======
+version=14.7.11
+revision=3
+makedepends="libressl-devel libidn-devel"
+conf_files="/etc/mail.rc"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Mail processing system with a command syntax reminiscent of ed"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="BSD-4-Clause, BSD-3-Clause, BSD-2-Clause, ISC"

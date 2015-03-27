@@ -7,6 +7,7 @@ build_style=gnu-configure
 configure_args="--with-db=db --with-pager=less --with-gzip=/usr/bin/gzip
  --with-bzip2=/usr/bin/bzip2 --disable-rpath --enable-threads=posix
  --with-lzma=/usr/bin/lzma --with-xz=/usr/bin/xz --disable-setuid
+<<<<<<< HEAD
  --without-included-regex --enable-automatic-create --with-libseccomp
  --without-systemdsystemunitdir --without-systemdtmpfilesdir
  --enable-cache-owner=_man --disable-year2038"
@@ -14,6 +15,12 @@ hostmakedepends="groff pkg-config"
 makedepends="db-devel gettext-devel groff libpipeline-devel libseccomp-devel
  zlib-devel"
 depends="bzip2 coreutils grep groff gzip less"
+=======
+ --without-included-regex --enable-automatic-create"
+hostmakedepends="pkg-config groff"
+makedepends="db-devel zlib-devel libpipeline-devel groff"
+depends="bzip2 gzip less groff grep coreutils"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="/etc/man_db.conf"
 short_desc="On-line manual database"
 maintainer="Orphaned <orphan@voidlinux.org>"

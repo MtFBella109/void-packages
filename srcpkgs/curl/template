@@ -4,6 +4,7 @@ pkgname=curl
 version=8.17.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="ac_cv_sizeof_off_t=8 --enable-threaded-resolver --enable-ipv6
  --with-random=/dev/urandom
  $(vopt_with rtmp librtmp) $(vopt_with gssapi) $(vopt_enable ldap) $(vopt_with gnutls)
@@ -27,6 +28,13 @@ makedepends="nghttp2-devel zlib-devel
  $(vopt_if psl 'libpsl-devel') $(vopt_if idn 'libidn2-devel')
  $(vopt_if ssl 'openssl-devel') $(vopt_if zstd 'libzstd-devel')
  $(vopt_if http3 'nghttp3-devel ngtcp2-devel')"
+=======
+configure_args="ac_cv_sizeof_off_t=8 --disable-ldaps --without-gssapi
+ --enable-threaded-resolver --enable-ipv6
+ --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt"
+hostmakedepends="pkg-config perl groff"
+makedepends="zlib-devel libidn-devel libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="ca-certificates"
 # openssh isn't in checkdepends, because test 581 locks up
 checkdepends="python3 stunnel nghttp2 impacket"

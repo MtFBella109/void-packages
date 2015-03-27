@@ -30,11 +30,21 @@ make_check=ci-skip
 version=3.4.2
 distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-update-mimedb --disable-tracker
 --disable-schemas-compile --disable-nst-extension --disable-debug"
 depends="hicolor-icon-theme desktop-file-utils"
 makedepends="pkg-config intltool gobject-introspection gtk+3-devel libnotify-devel libexif-devel exempi-devel libxml2-devel gnome-desktop-devel"
 fulldepends="gsettings-desktop-schemas"
+=======
+configure_args="--disable-update-mimedb --disable-debug
+ --disable-schemas-compile --disable-nst-extension"
+hostmakedepends="pkg-config intltool gobject-introspection
+ glib-devel"
+makedepends="gtk+3-devel libnotify-devel libexif-devel exempi-devel
+ libxml2-devel tracker-devel gnome-desktop-devel"
+depends="hicolor-icon-theme desktop-file-utils gsettings-desktop-schemas>=3.14"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="The GNOME file manager"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=752afa41189b0b6c73dc3769cd885e184c29d6d394345ec05cd48b0004e0f452

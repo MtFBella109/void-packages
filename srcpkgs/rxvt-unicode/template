@@ -44,8 +44,41 @@ checksum=aaa13fcbc149fe0f3f391f933279580f74a96fd312d6ed06b8ff03c2d46672e8
 build_options="gdk_pixbuf perl startup_notification unicode3"
 desc_option_unicode3="Use 21 instead of 16 bits to represent unicode chars"
 
+<<<<<<< HEAD
 # Enable gdk_pixbuf & startup-notification by default.
 build_options_default="gdk_pixbuf perl startup_notification unicode3"
+=======
+# Enable startup-notification by default.
+build_options_default="perl startup_notification"
+
+if [ "$build_option_gdk_pixbuf" ]; then
+	configure_args+=" --enable-pixbuf"
+	makedepends+=" gdk-pixbuf-devel"
+else
+	configure_args+=" --disable-pixbuf"
+fi
+
+if [ "$build_option_perl" ]; then
+	configure_args+=" --enable-perl"
+	hostmakedepends+=" perl autoconf"
+	makedepends+=" perl"
+else
+	configure_args+=" --disable-perl"
+fi
+
+if [ "$build_option_startup_notification" ]; then
+	configure_args+=" --enable-startup-notification"
+	makedepends+=" startup-notification-devel"
+else
+	configure_args+=" --disable-startup-notification"
+fi
+
+if [ "$build_option_unicode3" ]; then
+	configure_args+=" --enable-unicode3"
+else
+	configure_args+=" --disable-unicode3"
+fi
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 _cross_perl() {
 	if [ "$CROSS_BUILD" ]; then

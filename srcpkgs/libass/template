@@ -12,8 +12,12 @@ revision=2
 build_style=gnu-configure
 configure_args="--disable-static"
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="enca-devel fontconfig-devel fribidi-devel harfbuzz-devel>=0.9.5"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+=======
+makedepends="enca-devel fontconfig-devel fribidi-devel harfbuzz-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="A portable library for SSA/ASS subtitles rendering"
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://xorg.freedesktop.org/"

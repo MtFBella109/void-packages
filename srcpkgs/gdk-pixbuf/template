@@ -22,8 +22,17 @@ checksum=b9505b3445b9a7e48ced34760c3bcb73e966df3ac94c95a148cb669ab748e3c7
 version=2.26.1
 distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--without-libjasper --with-included-loaders=png --with-x11"
 makedepends="perl>=0 pkg-config glib-devel libpng-devel jpeg-devel tiff-devel libX11-devel gobject-introspection"
+=======
+configure_args="$(vopt_enable gir introspection) --without-libjasper
+ --with-included-loaders=png --with-x11 gio_can_sniff=yes"
+hostmakedepends="automake libtool perl pkg-config gettext-devel
+ glib-devel $(vopt_if gir gobject-introspection)"
+makedepends="libglib-devel libpng-devel libjpeg-turbo-devel tiff-devel libX11-devel"
+triggers="gtk-pixbuf-loaders"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="An Image loading library for The GTK+ toolkit (v2)"
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://www.gtk.org/"

@@ -2,12 +2,18 @@
 pkgname=encfs
 version=1.9.5
 revision=7
+<<<<<<< HEAD
 build_style=cmake
 configure_args="-DUSE_INTERNAL_TINYXML=OFF"
 make_build_target="all"
 hostmakedepends="gettext pkg-config perl"
 makedepends="fuse-devel openssl-devel gettext-devel tinyxml2-devel"
 depends="perl" # for encfssh
+=======
+build_style=gnu-configure
+hostmakedepends="pkg-config perl"
+makedepends="fuse-devel libressl-devel librlog-devel boost-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Encrypted filesystem in user-space"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-3.0-or-later"

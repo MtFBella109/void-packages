@@ -2,6 +2,7 @@
 pkgname=gnome-clocks
 version=48.0
 revision=1
+<<<<<<< HEAD
 build_helper="gir"
 build_style=meson
 hostmakedepends="pkg-config gettext itstool glib-devel vala
@@ -11,6 +12,14 @@ makedepends="glib-devel vala-devel gnome-desktop-devel
  libgweather-devel geocode-glib-devel geoclue2-devel
  hicolor-icon-theme"
 depends="desktop-file-utils hicolor-icon-theme"
+=======
+build_style=gnu-configure
+hostmakedepends="pkg-config intltool itstool gobject-introspection"
+makedepends="glib-devel vala-devel gnome-desktop-devel
+ libgweather-devel libcanberra-devel libnotify-devel
+ geocode-glib-devel geoclue2 desktop-file-utils hicolor-icon-theme"
+depends="geoclue2>=2.1 desktop-file-utils hicolor-icon-theme"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Clock application for the GNOME Desktop"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"

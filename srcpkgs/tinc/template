@@ -3,7 +3,12 @@ pkgname=tinc
 version=1.0.36
 revision=4
 build_style=gnu-configure
+<<<<<<< HEAD
 makedepends="zlib-devel lzo-devel openssl-devel"
+=======
+build_options="systemd"
+makedepends="zlib-devel lzo-devel libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="VPN (Virtual Private Network) daemon"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"

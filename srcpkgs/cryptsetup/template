@@ -8,9 +8,13 @@ configure_args="--with-crypto_backend=openssl --disable-asciidoc
  --enable-libargon2 $(vopt_enable pwquality)"
 make_check_args="-C tests"
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="device-mapper-devel json-c-devel openssl-devel popt-devel
  libargon2-devel libssh-devel $(vopt_if pwquality libpwquality-devel)"
 checkdepends="procps-ng which jq tar xz xxd"
+=======
+makedepends="popt-devel libuuid-devel device-mapper-devel libressl-devel $(vopt_if pwquality libpwquality-devel)"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Setup virtual encryption devices under Linux dm-crypt"
 maintainer="Daniel Eyßer <daniel.eysser@gmail.com>"
 license="GPL-2.0-or-later"

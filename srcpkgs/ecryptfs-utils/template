@@ -7,12 +7,19 @@ configure_args="--sbindir=/usr/bin
  --with-pamdir=/usr/lib/security --enable-gpg --enable-gui
  --with-gpgme-prefix=${XBPS_CROSS_BASE}/usr --disable-pywrap"
 hostmakedepends="automake gettext-devel glib-devel libtool pkg-config intltool swig"
+<<<<<<< HEAD
 makedepends="pam-devel nss-devel openssl-devel keyutils-devel gpgme-devel gtk+-devel"
 depends="gettext"
 _desc="Ecryptfs cryptographic filesystem"
 short_desc="${_desc} - utilities"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+makedepends="python-devel pam-devel nss-devel libressl-devel keyutils-devel gpgme-devel gtk+-devel"
+short_desc="ecryptfs cryptographic filesystem (utilities)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://ecryptfs.org/"
 distfiles="http://launchpad.net/ecryptfs/trunk/${version}/+download/${pkgname}_${version}.orig.tar.gz"
 checksum=112cb3e37e81a1ecd8e39516725dec0ce55c5f3df6284e0f4cc0f118750a987f

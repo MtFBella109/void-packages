@@ -4,7 +4,11 @@ version=0.09
 revision=17
 build_style=perl-module
 hostmakedepends="perl"
+<<<<<<< HEAD
 makedepends="perl openssl-devel"
+=======
+makedepends="perl libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="${hostmakedepends}"
 short_desc="Crypt::OpenSSL::Bignum - OpenSSL multiprecision integer arithmetic"
 maintainer="Orphaned <orphan@voidlinux.org>"

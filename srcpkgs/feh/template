@@ -6,9 +6,14 @@ build_style=gnu-makefile
 make_use_env=yes
 make_build_args="exif=1 help=1 stat64=1 inotify=1"
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="giblib-devel libXinerama-devel libXt-devel libcurl-devel
  libexif-devel libjpeg-turbo-devel"
 depends="libjpeg-turbo-tools"
+=======
+makedepends="giblib-devel libcurl-devel libexif-devel
+ libpng-devel libjpeg-turbo-devel libXinerama-devel libXt-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Fast and light imlib2-based image viewer"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT-feh"

@@ -4,6 +4,7 @@ version=4.7.1
 revision=1
 build_style=cmake
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="-DENABLE_MAN=ON -DENABLE_PERL=ON
  -DENABLE_LUA=ON -DENABLE_RUBY=ON -DENABLE_SPELL=ON
  -DENABLE_GUILE=OFF -DENABLE_PHP=OFF -DENABLE_JAVASCRIPT=OFF"
@@ -12,6 +13,12 @@ hostmakedepends="gettext libgcrypt-devel pkg-config python3
 makedepends="aspell-devel cJSON-devel gnutls-devel libcurl-devel libgcrypt-devel
  libzstd-devel lua53-devel ncurses-devel perl python3-devel
  ruby-devel tcl-devel"
+=======
+configure_args="-DENABLE_MAN=ON -DPYTHON_EXECUTABLE=/usr/bin/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so"
+hostmakedepends="cmake pkg-config python-devel libgcrypt-devel tcl-devel asciidoc"
+makedepends="tcl-devel aspell-devel libgcrypt-devel gnutls-devel
+ python-devel ruby-devel lua-devel libcurl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="ca-certificates"
 short_desc="Fast, light and extensible IRC client"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
@@ -36,6 +43,7 @@ long_desc="
   - fully documented: user's guide, API, FAQ,.. translated in many languages"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
+<<<<<<< HEAD
 subpackages="weechat-aspell weechat-devel weechat-ruby weechat-python weechat-tcl weechat-lua weechat-perl"
 
 <<<<<<< HEAD
@@ -47,6 +55,12 @@ if [ "$CROSS_BUILD" ]; then
 	 -DPERL_LIBRARY=${XBPS_CROSS_BASE}/usr/lib/libperl.so
 	 -DPERL_CFLAGS=-I$_perlpath
 	 -DPERL_LFLAGS=-L$_perlpath"
+=======
+subpackages="weechat-aspell weechat-devel weechat-ruby weechat-python weechat-tcl weechat-lua"
+if [ -z "$CROSS_BUILD" ]; then
+	makedepends+=" perl"
+	subpackages+=" weechat-perl"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 fi
 pre_configure() {
 	configure_args+=" -DRuby_CONFIG_INCLUDE_DIR=${XBPS_CROSS_BASE}/$(pkg-config --variable=rubyarchhdrdir ruby-3.4)"

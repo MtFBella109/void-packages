@@ -3,10 +3,17 @@ pkgname=qingy
 version=1.0.0
 revision=30
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-optimizations --disable-static --disable-DirectFB-support
  --enable-crypto=libgcrypt $(vopt_enable pam) $(vopt_enable x11 x-support)"
 makedepends="ncurses-devel libgcrypt-devel $(vopt_if pam pam-devel)
  $(vopt_if x11 'libXScrnSaver-devel libX11-devel xorgproto')"
+=======
+makedepends="ncurses-devel libressl-devel
+ $(vopt_if pam pam-devel) $(vopt_if x11 'libXScrnSaver-devel libX11-devel scrnsaverproto')"
+configure_args="--disable-static --disable-DirectFB-support
+ $(vopt_enable pam) $(vopt_enable x11 x-support)"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Qingy Is Not Getty"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"

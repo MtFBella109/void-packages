@@ -4,8 +4,13 @@ pkgname=perl-XML-Parser
 version=2.46
 revision=7
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl"
 makedepends="perl expat-devel"
+=======
+hostmakedepends="perl expat-devel"
+makedepends="${hostmakedepends}"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="perl>=5.20"
 short_desc="Perl extension interface to James Clark's XML parser, expat"
 maintainer="Orphaned <orphan@voidlinux.org>"

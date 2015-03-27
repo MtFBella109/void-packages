@@ -20,6 +20,22 @@ distfiles="https://github.com/hexchat/hexchat/archive/v${version}.tar.gz"
 checksum=486d73cdb6a89fa91cfbe242107901d06e777bea25956a7786c4a831a2caa0e3
 build_options="LuaJIT"
 lib32disabled=yes
+<<<<<<< HEAD
+=======
+build_style=gnu-configure
+hostmakedepends="pkg-config intltool glib-devel gdk-pixbuf-devel"
+makedepends="gtk+-devel libressl-devel dbus-glib-devel perl python-devel
+ libnotify-devel libcanberra-devel libxml2-devel pciutils-devel libproxy-devel"
+depends="desktop-file-utils enchant iso-codes"
+configure_args=" --enable-openssl --enable-dbus --disable-textfe --enable-ipv6
+ --enable-perl --enable-python"
+short_desc="A GTK+ based IRC client successor of Xchat"
+maintainer="Carlo Dormeletti <carloDOTdormelettiATaliceDOTit>"
+homepage="http://hexchat.github.io/"
+license="GPL"
+distfiles="http://dl.hexchat.net/hexchat/${pkgname}-${version}.tar.xz"
+checksum=87ebf365c576656fa3f23f51d319b3a6d279e4a932f2f8961d891dd5a5e1b52c
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 case "$XBPS_TARGET_MACHINE" in
 	arm*-musl) : "LuaJIT is broken for musl cross arches" ;;

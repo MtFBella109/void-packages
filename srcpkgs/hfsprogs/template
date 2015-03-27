@@ -1,5 +1,6 @@
 # Template file for 'hfsprogs'
 pkgname=hfsprogs
+<<<<<<< HEAD
 _md5sum=0435afc389b919027b69616ad1b05709
 version=540.1.linux3
 revision=9
@@ -7,6 +8,16 @@ hostmakedepends="clang"
 makedepends="openssl-devel libuuid-devel"
 short_desc="Apple's mkfs and fsck for HFS and HFS+ file systems"
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+_distver=332.25
+_patchver=11
+version=${_distver}debian${_patchver}
+create_wrksrc=yes
+revision=4
+makedepends="libbsd-devel libressl-devel"
+short_desc="mkfs and fsck for HFS and HFS+ file systems"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 license="APSL-2.0"
 homepage="https://www.opensource.apple.com/"
 distfiles="https://src.fedoraproject.org/repo/pkgs/hfsplus-tools/diskdev_cmds-${version}.tar.gz/${_md5sum}/diskdev_cmds-${version}.tar.gz"

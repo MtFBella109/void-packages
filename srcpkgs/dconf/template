@@ -3,6 +3,7 @@ pkgname=dconf
 <<<<<<< HEAD
 version=0.40.0
 revision=1
+<<<<<<< HEAD
 build_style=meson
 hostmakedepends="docbook-xsl glib-devel libxslt pkg-config vala"
 makedepends="dbus-devel libglib-devel gtk+3-devel libxml2-devel vala-devel
@@ -14,6 +15,17 @@ license="LGPL-2.1-or-later"
 homepage="https://wiki.gnome.org/Projects/dconf"
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=cf7f22a4c9200421d8d3325c5c1b8b93a36843650c9f95d6451e20f0bcb24533
+=======
+build_style=gnu-configure
+hostmakedepends="pkg-config intltool libxslt docbook-xsl glib-devel"
+makedepends="vala-devel dbus-devel gtk+3-devel libxml2-devel"
+short_desc="A low-level configuration system"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://live.gnome.org/dconf"
+license="LGPL-2.1"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=0a277cb0c3f09e77d9413c5a9b3577fc2b5d6e941b59b44940392e024a224b8e
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 dconf-devel_package() {
 	depends="libglib-devel vala-devel>=0.24 dconf>=${version}_${revision}"

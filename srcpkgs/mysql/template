@@ -1,5 +1,6 @@
 # Template file for 'mysql'
 pkgname=mysql
+<<<<<<< HEAD
 version=5.1.54
 distfiles="http://downloads.mysql.com/archives/mysql-5.1/$pkgname-$version.tar.gz"
 build_style=gnu-configure
@@ -13,6 +14,28 @@ configure_args="--sysconfdir=/etc/mysql
 --with-mysqld-user=mysqld --enable-thread-safe-client
 --libexecdir=/usr/sbin --without-readline"
 revision=4
+=======
+version=5.6.23
+revision=2
+build_style=cmake
+configure_args="-DSYSCONFDIR=/etc/mysql -DMYSQL_DATADIR=/var/lib/mysql
+ -DMYSQL_UNIX_ADDR=/run/mysqld/mysqld.sock -DDEFAULT_CHARSET=utf8
+ -DDEFAULT_COLLATION=utf8_general_ci -DENABLED_LOCAL_INFILE=ON
+ -DINSTALL_INFODIR=share/mysql/docs -DINSTALL_MANDIR=share/man
+ -DINSTALL_PLUGINDIR=lib/mysql/plugin -DINSTALL_SCRIPTDIR=bin
+ -DINSTALL_INCLUDEDIR=include/mysql -DINSTALL_DOCREADMEDIR=share/mysql
+ -DINSTALL_SUPPORTFILESDIR=share/mysql -DINSTALL_MYSQLSHAREDIR=share/mysql
+ -DINSTALL_DOCDIR=share/mysql/docs -DINSTALL_SHAREDIR=share/mysql
+ -DWITH_ZLIB=system -DWITH_SSL=system -DWITH_LIBWRAP=OFF
+ -DWITH_EXTRA_CHARSETS=complex -DWITH_EMBEDDED_SERVER=ON
+ -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_PARTITION_STORAGE_ENGINE=1
+ -DWITHOUT_EXAMPLE_STORAGE_ENGINE=1 -DWITHOUT_ARCHIVE_STORAGE_ENGINE=1
+ -DWITHOUT_BLACKHOLE_STORAGE_ENGINE=1 -DWITHOUT_FEDERATED_STORAGE_ENGINE=1
+ -DSTACK_DIRECTION=1 -DHAVE_LLVM_LIBCPP_EXITCODE=0"
+lib32disabled=yes
+hostmakedepends="perl cmake bison ncurses-devel"
+makedepends="zlib-devel ncurses-devel libressl-devel readline-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="mysql-client"
 makedepends="libstdc++-devel zlib-devel tcp_wrappers-devel ncurses-devel openssl-devel readline-devel"
 fulldepends="perl>=0 procps"

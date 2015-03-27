@@ -5,6 +5,7 @@ revision=1
 build_style=meson
 hostmakedepends="pkg-config"
 makedepends="libXrandr-devel libva-devel MesaLib-devel gst-plugins-bad1-devel"
+<<<<<<< HEAD
 short_desc="VA-API plugins for GStreamer 1.x"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -12,6 +13,15 @@ homepage="https://gstreamer.freedesktop.org"
 changelog="https://gstreamer.freedesktop.org/releases/${version%.*}/#${version}"
 distfiles="https://gstreamer.freedesktop.org/src/gstreamer-vaapi/gstreamer-vaapi-${version}.tar.xz"
 checksum=b42d44db63f3195a6f33296e1ead32c14d01ef27452b7068f1a2d86624f55ea9
+=======
+short_desc="VA-API plugins for GStreamer (1.x)"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3"
+homepage="http://www.freedesktop.org/software/vaapi/releases/gstreamer-vaapi/"
+distfiles="http://www.freedesktop.org/software/vaapi/releases/${pkgname}/${pkgname}-${version}.tar.bz2"
+checksum=0dd236c7bf225322b8934fdba99a7a9e4542566a2acbe7564cdc3ec2c8b73c9d
+nocross=yes
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 pre_check() {
 	# Seems to need certain hardware to pass

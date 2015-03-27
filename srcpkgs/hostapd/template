@@ -5,7 +5,11 @@ revision=1
 build_wrksrc="$pkgname"
 conf_files="/etc/hostapd/hostapd.conf"
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="libnl3-devel openssl-devel"
+=======
+makedepends="libnl3-devel libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="IEEE 802.11 AP, IEEE 802.1X/WPA/WPA2/EAP/RADIUS Authenticator"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"

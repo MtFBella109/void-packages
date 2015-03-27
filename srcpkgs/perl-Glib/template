@@ -29,9 +29,15 @@ distfiles="${SOURCEFORGE_SITE}/gtk2-perl/Glib-$version.tar.gz"
 build_style=perl_module
 =======
 build_style=perl-module
+<<<<<<< HEAD
 makedepends="perl-ExtUtils-Depends>=0.300 perl-ExtUtils-PkgConfig>=1.00 glib-devel"
 fulldepends="perl"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="perl"
+makedepends="perl-ExtUtils-Depends perl-ExtUtils-PkgConfig glib-devel"
+depends="${hostmakedepends/glib-devel/}"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Perl bindings for Glib 2"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=6dd382eb27c228104d9265e0c3962f854dde5004c05e2793a2da0ec16da8399a

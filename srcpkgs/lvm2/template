@@ -19,6 +19,7 @@ configure_args="--disable-selinux --enable-readline --enable-pkgconfig
  --with-default-locking-dir=/run/lock/lvm"
 hostmakedepends="pkg-config"
 <<<<<<< HEAD
+<<<<<<< HEAD
 makedepends="eudev-libudev-devel libaio-devel libblkid-devel
  readline-devel thin-provisioning-tools"
 depends="thin-provisioning-tools"
@@ -30,6 +31,11 @@ changelog="https://abi-laboratory.pro/?view=changelog&l=lvm2&v=${version}"
 distfiles="https://mirrors.kernel.org/sourceware/lvm2/releases/LVM2.${version}.tgz"
 checksum=30c53776cb4ddf6bf9eca29d0c28dbf9c5ac170c09154321213b11c3dbb5be9c
 conf_files="/etc/lvm/*.conf /etc/lvm/profile/*"
+=======
+# By using eudev we avoid a cyclic dependency:
+# 	device-mapper -> systemd -> cryptsetup -> device-mapper
+makedepends="libblkid-devel readline-devel eudev-libudev-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 make_dirs="
  /etc/lvm/archive 0755 root root
  /etc/lvm/backup 0755 root root"

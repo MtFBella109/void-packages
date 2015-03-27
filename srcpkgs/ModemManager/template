@@ -2,6 +2,7 @@
 pkgname=ModemManager
 version=1.24.0
 revision=1
+<<<<<<< HEAD
 build_style=meson
 build_helper=gir
 configure_args="-Dpolkit=permissive -Dsystemdsystemunitdir=no
@@ -13,6 +14,17 @@ hostmakedepends="pkg-config $(vopt_if gir vala-devel)
 makedepends="libglib-devel libgudev-devel polkit-devel libqmi-devel
  libmbim-devel libxslt-devel ppp $(vopt_if gir vala-devel)
  python3-gobject-devel python3-dbus-devel bash-completion elogind-devel"
+=======
+build_options="gir systemd"
+build_style=gnu-configure
+configure_args="--disable-static --sbindir=/usr/bin
+ --with-udev-base-dir=/usr/lib/udev --with-polkit=permissive
+ $(vopt_enable gir introspection)"
+hostmakedepends="pkg-config intltool glib-devel
+ $(vopt_if gir 'vala-devel gobject-introspection')"
+makedepends="glib-devel libgudev-devel polkit-devel libqmi-devel
+ libmbim-devel ppp libqmi-devel $(vopt_if systemd systemd-devel)"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme ppp"
 checkdepends="dbus"
 short_desc="Mobile broadband modem management service"

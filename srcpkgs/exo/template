@@ -6,6 +6,7 @@ revision=1
 build_style=gnu-configure
 configure_args="--disable-static"
 <<<<<<< HEAD
+<<<<<<< HEAD
 hostmakedepends="pkg-config gettext glib-devel"
 makedepends="gtk+3-devel libxfce4ui-devel"
 depends="hicolor-icon-theme desktop-file-utils"
@@ -16,6 +17,29 @@ homepage="https://docs.xfce.org/xfce/exo/start"
 changelog="https://gitlab.xfce.org/xfce/exo/-/raw/master/NEWS"
 distfiles="https://archive.xfce.org/src/xfce/exo/${version%.*}/exo-${version}.tar.bz2"
 checksum=4277f799245f1efde01cd917fd538ba6b12cf91c9f8a73fe2035fd5456ec078d
+=======
+hostmakedepends="xfce4-dev-tools pkg-config intltool gettext-devel glib-devel perl-URI"
+makedepends="gtk+-devel libxfce4ui-devel perl-URI"
+depends="hicolor-icon-theme desktop-file-utils perl-URI"
+conf_files="/etc/xdg/xfce4/helpers.rc"
+short_desc="Application library for the Xfce desktop environment"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2, LGPL-2.1"
+homepage="http://xfce.org"
+distfiles="http://archive.xfce.org/src/xfce/exo/${version%.*}/exo-${version}.tar.bz2"
+checksum=cced5fdbc0b61a5d976210ff71ecdd81b89fcd15e5860a44f50da7b83fb2deaa
+
+pre_configure() {
+	if [ "$CROSS_BUILD" ]; then
+		export ac_cv_strftime_extensions=yes
+
+		# Disable tests:
+		sed -i 's/^\([[:blank:]]*po\).*$/\1/;/^[[:blank:]]*tests$/d' Makefile.am
+	fi
+	mkdir m4
+	NOCONFIGURE=1 xdt-autogen
+}
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 exo-devel_package() {
 	depends="libxfce4ui-devel exo-${version}_${revision}"

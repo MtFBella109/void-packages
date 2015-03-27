@@ -29,6 +29,12 @@ homepage="https://mariadb.com"
 distfiles="https://archive.mariadb.org/mariadb-${version}/source/mariadb-${version}.tar.gz"
 checksum=19a9e980e57fa332931f643b48ad7390528c889ff6ea8b0e16fd306aa3088238
 lib32disabled=yes
+<<<<<<< HEAD
+=======
+hostmakedepends="perl cmake bison ncurses-devel"
+makedepends="zlib-devel ncurses-devel libressl-devel readline-devel pcre-devel"
+depends="mariadb-client"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 provides="mysql-${version}_${revision}"
 replaces="mysql>=0"
 system_accounts="mysql"

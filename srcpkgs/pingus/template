@@ -1,11 +1,17 @@
 # Template file for 'pingus'
 pkgname=pingus
 version=0.7.6
+<<<<<<< HEAD
 revision=14
 build_style=scons
 hostmakedepends="pkg-config"
 makedepends="SDL_image-devel SDL_mixer-devel boost-devel-minimal libpng-devel"
 depends="${pkgname}-data"
+=======
+revision=3
+hostmakedepends="scons pkg-config"
+makedepends="SDL_image-devel SDL_mixer-devel boost-devel libpng-devel libXi-devel zlib-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Free Lemmings-like puzzle game"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"

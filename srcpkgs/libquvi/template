@@ -5,7 +5,11 @@ version=0.4.1
 revision=10
 build_style=gnu-configure
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="lua52-devel libcurl-devel libquvi-scripts"
+=======
+makedepends="lua-devel libcurl-devel libquvi-scripts"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="libquvi-scripts>=${version}"
 short_desc="C library that can be used to parse flash media stream URLs"
 maintainer="Orphaned <orphan@voidlinux.org>"

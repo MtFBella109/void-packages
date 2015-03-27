@@ -4,9 +4,15 @@ version=0.11.3
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 hostmakedepends="pkg-config gettext xfce4-dev-tools automake libtool"
 makedepends="libxfce4ui-devel xfce4-panel-devel libxml2-devel libsoup3-devel
  json-c-devel upower-devel"
+=======
+configure_args="--disable-upower"
+hostmakedepends="pkg-config intltool"
+makedepends="libxfce4ui-devel xfce4-panel-devel libxml2-devel libsoup-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme"
 short_desc="XFCE panel plugin to show temperature and weather"
 maintainer="Orphaned <orphan@voidlinux.org>"

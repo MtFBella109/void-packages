@@ -4,6 +4,7 @@ version=7.2.10
 revision=3
 archs="x86_64* aarch64* ppc64le*"
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--without-internal-zlib --with-readline --with-layout=debian"
 hostmakedepends="automake libtool flex gperf net-tools which"
 makedepends="openssl-devel libldap-devel readline-devel libxml2-devel mit-krb5-devel"
@@ -30,6 +31,17 @@ CFLAGS+=" -Wno-format-overflow -Wno-stringop-truncation -Wno-misleading-indentat
 pre_configure() {
 	NOCONFIGURE=1 autoreconf -fi
 }
+=======
+wrksrc="${pkgname}-opensource-${version}"
+hostmakedepends="flex gperf net-tools"
+makedepends="libressl-devel libldap-devel readline-devel libxml2-devel mit-krb5-devel"
+short_desc="A scalable cross-platform server of virtuoso"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-2"
+homepage="http://virtuoso.openlinksw.com/wiki/main/Main/"
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-opensource-${version}.tar.gz"
+checksum=08d05c6165117de0370e81aa89ddab618e645b5110be301f72e6ffea7044ca50
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 do_configure() {
 	./configure ${configure_args} --program-transform-name='s/isql$$/isql-vt/;s/isqlw/isqlw-vt/'

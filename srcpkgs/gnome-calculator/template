@@ -2,6 +2,7 @@
 pkgname=gnome-calculator
 version=48.1
 revision=1
+<<<<<<< HEAD
 build_style=meson
 build_helper="gir"
 hostmakedepends="cmake gettext glib-devel itstool pkg-config vala
@@ -17,3 +18,15 @@ changelog="https://gitlab.gnome.org/GNOME/gnome-calculator/-/raw/gnome-48/NEWS"
 #changelog="https://gitlab.gnome.org/GNOME/gnome-calculator/-/raw/master/NEWS"
 distfiles="${GNOME_SITE}/gnome-calculator/${version%%.*}/gnome-calculator-${version}.tar.xz"
 checksum=bc4bd41a9ba190f45cbee0d8c6752cdc5d28b0cef1c6bd0c01e2dae1f3c19162
+=======
+build_style=gnu-configure
+hostmakedepends="pkg-config intltool itstool gnome-doc-utils"
+makedepends="libxml2-devel gtk+3-devel gsettings-desktop-schemas-devel gtksourceview-devel"
+depends="gsettings-desktop-schemas>=3.12 hicolor-icon-theme desktop-file-utils"
+short_desc="The GNOME calculator"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=99cb2451d67d51486c0f54497dd26c0e57d0d984866ddf8678a62ba195fed140
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)

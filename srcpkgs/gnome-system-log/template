@@ -5,7 +5,11 @@ revision=4
 build_style=gnu-configure
 <<<<<<< HEAD
 configure_args="--disable-schemas-compile"
+<<<<<<< HEAD
 hostmakedepends="pkg-config intltool itstool glib-devel"
+=======
+hostmakedepends="which pkg-config intltool itstool gnome-doc-utils"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="gtk+3-devel"
 depends="hicolor-icon-theme desktop-file-utils"
 short_desc="GNOME system log viewer"

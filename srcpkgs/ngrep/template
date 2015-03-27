@@ -1,5 +1,6 @@
 # Template file for 'ngrep'
 pkgname=ngrep
+<<<<<<< HEAD
 version=1.47
 revision=1
 build_style=gnu-configure
@@ -8,6 +9,14 @@ hostmakedepends="pkg-config"
 makedepends="pcre-devel libpcap-devel"
 short_desc="Like GNU grep applied to the network layer"
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+version=1.45
+revision=4
+hostmakedepends="automake pkg-config"
+makedepends="pcre-devel libpcap-devel libressl-devel"
+short_desc="grep-like utility for network interfaces"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 license="MIT"
 homepage="https://github.com/jpr5/ngrep"
 distfiles="https://github.com/jpr5/ngrep/archive/V${version/./_}.tar.gz"

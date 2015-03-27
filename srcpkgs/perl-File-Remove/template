@@ -3,8 +3,13 @@ pkgname=perl-File-Remove
 version=1.58
 revision=2
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl-Module-Build"
 makedepends="perl"
+=======
+hostmakedepends="perl"
+makedepends="${hostmakedepends}"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="${makedepends}"
 short_desc="Perl module to removes files and directories"
 maintainer="Orphaned <orphan@voidlinux.org>"

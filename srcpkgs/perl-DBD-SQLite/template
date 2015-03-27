@@ -3,10 +3,16 @@ pkgname=perl-DBD-SQLite
 version=1.66
 revision=6
 build_style=perl-module
+<<<<<<< HEAD
 configure_args="SQLITE_LOCATION=${XBPS_CROSS_BASE}/usr"
 hostmakedepends="perl perl-DBI"
 makedepends="${hostmakedepends} sqlite-devel"
 depends="$hostmakedepends"
+=======
+hostmakedepends="perl perl-DBI"
+makedepends="${hostmakedepends}"
+depends="${makedepends}"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="DBD::SQLite - Self-contained RDBMS in a DBI driver"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"

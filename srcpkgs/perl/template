@@ -2,10 +2,16 @@
 # Template file for 'perl'
 pkgname=perl
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=5.40.2
 revision=2
 _perl_cross_version=1.6.2
 build_style=gnu-configure
+=======
+version=5.20.2
+revision=3
+hostmakedepends="less"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="zlib-devel bzip2-devel gdbm-devel db-devel"
 depends="less"
 checkdepends="iana-etc perl-AnyEvent perl-Test-Pod procps-ng"
@@ -160,6 +166,7 @@ for f in ${provides}; do
 	replaces+=" $($XBPS_UHELPER_CMD getpkgname ${f})>=0"
 done
 
+<<<<<<< HEAD
 post_extract() {
 	local TAR=$(command -v bsdtar || command -v tar)
 	$TAR --strip-components=1 -xf \
@@ -171,6 +178,13 @@ post_extract() {
 
 	[ -n "${SOURCE_DATE_EPOCH}" ] && touch -h -d @$SOURCE_DATE_EPOCH patchlevel.h
 }
+=======
+# Before updating this package to a new major version, run ${FILESDIR}/provides.pl
+# against ${wrksrc} to find the list of built in packages.
+if [ "$CROSS_BUILD" ]; then
+	hostmakedepends+=" perl"
+fi
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 do_configure() {
 	local _args="-Dusethreads -Duseshrplib -Dusesoname -Dusevendorprefix

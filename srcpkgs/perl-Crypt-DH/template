@@ -3,9 +3,16 @@ pkgname=perl-Crypt-DH
 version=0.07
 revision=10
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl perl-Math-BigInt-GMP perl-Archive-Zip"
 makedepends="$hostmakedepends"
 depends="$makedepends"
+=======
+hostmakedepends="perl perl-Math-BigInt-GMP"
+makedepends="${hostmakedepends}"
+depends="${makedepends}"
+noarch="yes"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Crypt::DH - Diffie-Hellman key exchange system"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"

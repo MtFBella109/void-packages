@@ -3,11 +3,17 @@ pkgname=abook
 version=0.6.1
 revision=3
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="automake libtool gettext gettext-devel tar"
 makedepends="ncurses-devel readline-devel"
 short_desc="Text-based addressbook designed to use with mutt mail client"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+makedepends="ncurses-devel readline-devel"
+maintainer="Philipp Hirsch <itself@hanspolo.net>"
+license="GPL-2"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://abook.sourceforge.net/"
 distfiles="http://abook.sourceforge.net/devel/${pkgname}-${version}.tar.gz"
 checksum=f0a90df8694fb34685ecdd45d97db28b88046c15c95e7b0700596028bd8bc0f9

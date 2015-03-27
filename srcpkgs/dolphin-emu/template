@@ -17,6 +17,7 @@ _vma_commit=3bab6924988e5f19bf36586a496156cf72f70d9f
 _watcher_commit=b03bdcfc11549df595b77239cefe2643943a3e2f
 archs="x86_64* aarch64* ppc64le* i686"
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DDISTRIBUTOR=voidlinux.org -DENABLE_ANALYTICS=OFF
  -DENABLE_AUTOUPDATE=OFF -DUSE_DISCORD_PRESENCE=OFF"
 hostmakedepends="gettext pkg-config python3 qt6-base qt6-tools"
@@ -26,6 +27,13 @@ makedepends="SDL3-devel SFML-devel alsa-lib-devel ffmpeg6-devel glew-devel
  mbedtls2-devel miniupnpc-devel portaudio-devel pugixml-devel pulseaudio-devel
  qt6-base-devel qt6-svg-devel soundtouch-devel xxHash-devel zlib-devel
  minizip-ng-devel zlib-ng-devel"
+=======
+hostmakedepends="cmake pkg-config"
+makedepends="
+ zlib-devel glew-devel libusb-devel gtk+-devel miniupnpc-devel
+ SDL2-devel pulseaudio-devel alsa-lib-devel ffmpeg-devel libgomp-devel
+ portaudio-devel libopenal-devel soundtouch-devel lzo-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils"
 short_desc="Gamecube / Wii / Triforce emulator"
 maintainer="Henry Naguski <henry@nilsu.org>"

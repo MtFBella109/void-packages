@@ -21,8 +21,18 @@ fi
 
 haproxy_homedir="/var/lib/${pkgname}"
 make_dirs="$haproxy_homedir 0750 ${pkgname} ${pkgname}"
+<<<<<<< HEAD
 conf_files="/etc/${pkgname}/${pkgname}.cfg"
 system_accounts="haproxy"
+=======
+makedepends="libressl-devel pcre-devel zlib-devel"
+short_desc="Reliable, high performance TCP/HTTP load balancer"
+maintainer="Eivind Uggedal <eivind@uggedal.com>"
+license="GPL-2 LGPL-2.1"
+homepage="http://www.haproxy.org"
+distfiles="${homepage}/download/${version%.*}/src/${pkgname}-${version}.tar.gz"
+checksum=8b5aa462988405f09c8a6169294b202d7f524a5450a02dd92e7c216680f793bf
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 do_build() {
 	local target="linux-${XBPS_TARGET_LIBC}"

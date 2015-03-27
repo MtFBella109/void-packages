@@ -4,10 +4,18 @@ version=0.24.2
 revision=1
 build_style=gnu-configure
 configure_args="--enable-gst-launch-plugin"
+<<<<<<< HEAD
 hostmakedepends="pkg-config intltool"
 makedepends="sqlite-devel vala-devel>=0.24 gtk+3-devel
  libsoup-devel>=2.44 libgee08-devel>=0.14 gupnp-av-devel>=0.12.1
  gupnp-dlna-devel>=0.10 tracker-devel>=1.0 libmediaart-devel>=0.6"
+=======
+hostmakedepends="automake libtool pkg-config intltool gettext-devel
+ glib-devel vala-devel gobject-introspection"
+makedepends="sqlite-devel gtk+3-devel
+ libsoup-devel libgee08-devel gupnp-av-devel
+ gupnp-dlna-devel tracker-devel libmediaart-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme desktop-file-utils"
 makedepends="pkg-config intltool sqlite-devel vala-devel gtk+3-devel libsoup-devel libgee-devel gssdp-devel>=0.12.0 gupnp-av-devel gupnp-dlna-devel"
 short_desc="GNOME home media solution"

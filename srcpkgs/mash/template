@@ -4,11 +4,16 @@ version=0.2.0
 revision=9
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 build_helper="gir"
 configure_args="--disable-static $(vopt_enable gir introspection)
  --enable-gtk-doc"
 hostmakedepends="automake glib-devel intltool libtool pkg-config
  $(vopt_if gir gobject-introspection) gtk-doc"
+=======
+configure_args="--enable-introspection --disable-static"
+hostmakedepends="pkg-config intltool gobject-introspection"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="clutter-devel"
 depends="clutter>=1.18"
 short_desc="Small library for using 3D models within a Clutter scene"

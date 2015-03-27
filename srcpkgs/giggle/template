@@ -4,9 +4,14 @@ version=0.7
 revision=2
 <<<<<<< HEAD
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config itstool intltool glib-devel git
  automake gettext-devel libtool tar yelp-tools"
 makedepends="gtksourceview-devel"
+=======
+hostmakedepends="pkg-config itstool intltool glib-devel git"
+makedepends="gtksourceview-devel vte290-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils hicolor-icon-theme"
 =======
 makedepends="pkg-config itstool intltool gtksourceview-devel vte3-devel evolution-data-server-devel"

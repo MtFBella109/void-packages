@@ -10,6 +10,7 @@ makedepends="icu-devel libldap-devel libmariadbclient-devel pcre2-devel
 version=2.9.1
 homepage="http://www.postfix.org/"
 distfiles="ftp://ftp.porcupine.org/mirrors/postfix-release/official/$pkgname-$version.tar.gz"
+<<<<<<< HEAD
 makedepends="perl>=0 openssl-devel db-devel pcre-devel libsasl-devel libldap-devel libmysqlclient-devel postgresql-libs-devel sqlite-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="High-performance mail transport agent"
@@ -18,6 +19,18 @@ license="IPL-1.0, EPL-2.0"
 homepage="https://www.postfix.org/"
 distfiles="http://ftp.porcupine.org/mirrors/postfix-release/official/${pkgname}-${version}.tar.gz"
 checksum=89a5e8a90cfd100b44acb12697288808d32aabeed117890e399cae888b047ca8
+=======
+checksum=f4154c1db58c0300897d4c430bd90714ac7855249df59cc8828910fd5ccb031e
+
+hostmakedepends="perl"
+makedepends="libressl-devel db-devel pcre-devel libsasl-devel
+ libldap-devel libmysqlclient-devel postgresql-libs-devel sqlite-devel"
+
+if [ "$CROSS_BUILD" ]; then
+	# XXX postfix-install needs native binaries.
+	hostmakedepends+=" ${pkgname}"
+fi
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 system_accounts="postfix"
 postfix_homedir="/var/spool/postfix"

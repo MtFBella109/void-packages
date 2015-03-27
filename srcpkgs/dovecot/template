@@ -20,9 +20,16 @@ distfiles="https://dovecot.org/releases/2.4/dovecot-${version//r/-}.tar.gz"
 checksum=2cd62e4d22b9fc1c80bd38649739950f0dbda34fbc3e62624fb6842264e93c6e
 keep_libtool_archives=yes
 
+<<<<<<< HEAD
 if [ "$XBPS_TARGET_LIBC" = "glibc" ]; then
 	makedepends+=" libxcrypt-devel"
 fi
+=======
+makedepends="
+ lz4-devel zlib-devel bzip2-devel liblzma-devel libressl-devel mit-krb5-devel
+ libmysqlclient-devel postgresql-libs-devel sqlite-devel
+ libldap-devel libcap-devel pam-devel libcurl-devel expat-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 if [ "$CROSS_BUILD" ]; then
 	_tsize=${XBPS_TARGET_WORDSIZE}
@@ -42,6 +49,15 @@ if [ "$CROSS_BUILD" ]; then
 		lib_cv_va_copy=yes
 		lib_cv___va_copy=yes
 		lib_cv_va_val_copy=yes"
+<<<<<<< HEAD
+=======
+	# XXX clucene cannot be currently cross compiled
+	configure_args+=" --without-lucene"
+	subpackages="dovecot-plugin-ldap dovecot-plugin-mysql dovecot-plugin-pgsql dovecot-plugin-sqlite"
+else
+	configure_args+=" --with-lucene"
+	makedepends+=" clucene-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 fi
 
 conf_files="

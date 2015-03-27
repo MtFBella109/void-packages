@@ -4,6 +4,7 @@ version=2.0.0
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="--enable-avahi --disable-mutool"
 hostmakedepends="pkg-config ghostscript"
 makedepends="cups-devel libppd-devel libcupsfilters-devel"
@@ -21,6 +22,17 @@ make_install_target="BUILDROOT=${XBPS_DESTDIR}/${pkgname}-${version} install"
 makedepends="pkg-config cups-devel lcms2-devel libpng-devel tiff-devel poppler-devel fontconfig-devel ghostscript-devel"
 fulldepends="ghostscript poppler-utils"
 short_desc="OpenPrinting CUPS Filters"
+=======
+configure_args="--disable-static --with-rcdir=no --enable-avahi
+ --with-browseremoteprotocols=DNSSD,CUPS"
+hostmakedepends="pkg-config ghostscript poppler-utils"
+makedepends="lcms2-devel libpng-devel libqpdf-devel
+ poppler-cpp-devel fontconfig-devel avahi-glib-libs-devel
+ ghostscript-devel cups-devel"
+depends="lib${sourcepkg}-${version}_${revision} ghostscript poppler-utils"
+conf_files="/etc/cups/cups-browsed.conf"
+short_desc="The OpenPrinting CUPS Filters"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="GPL-2, LGPL-2.1, MIT"
 checksum=6926980653e7cb5f94b91921517678cca7f0e6781364823a05f7b4b0ec919106

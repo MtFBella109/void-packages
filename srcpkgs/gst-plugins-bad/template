@@ -5,6 +5,16 @@ homepage="http://gstreamer.freedesktop.org"
 distfiles="$homepage/src/$pkgname/$pkgname-$version.tar.xz"
 build_style=gnu-configure
 configure_args="--enable-experimental --disable-static"
+<<<<<<< HEAD
+=======
+hostmakedepends="pkg-config intltool glib-devel"
+makedepends="libpng-devel alsa-lib-devel celt-devel libressl-devel
+ gst-plugins-base-devel libdca-devel orc-devel libmms-devel exempi-devel
+ libexif-devel libmpcdec-devel faac-devel SDL-devel libpng-devel
+ faad2-devel libdvdread-devel libdvdnav-devel librsvg-devel libsndfile-devel
+ xvidcore-devel jasper-devel libmodplug-devel neon-devel libcurl-devel
+ libvpx-devel libvdpau-devel libgsm-devel librtmp-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 # Requires libgstfft-0.10.so.0 from gst-plugins-base-0.10.36.
 subpackages="$pkgname-devel"
 depends="gst-plugins-base>=0.10.36"

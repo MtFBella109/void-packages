@@ -4,8 +4,16 @@ version=0.1.31
 homepage="http://http://code.google.com/p/xnoise/"
 distfiles="http://xnoise.googlecode.com/files/$pkgname-$version.tar.bz2"
 build_style=gnu-configure
+<<<<<<< HEAD
 makedepends="pkg-config intltool gtk+3-devel taglib-devel sqlite-devel libnotify-devel libsoup-devel gst-plugins-base-devel"
 fulldepends="desktop-file-utils hicolor-icon-theme"
+=======
+hostmakedepends="pkg-config intltool"
+makedepends="gtk+3-devel libtaginfo-devel sqlite-devel
+ libnotify-devel libsoup-devel gst-plugins-base1-devel gst-plugins-good1
+ desktop-file-utils hicolor-icon-theme"
+depends="desktop-file-utils hicolor-icon-theme gst-plugins-good1"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Media player for GTK+ with a slick GUI"
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="GPL-2"

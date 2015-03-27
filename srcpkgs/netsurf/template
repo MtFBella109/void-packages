@@ -3,6 +3,7 @@ pkgname=netsurf
 <<<<<<< HEAD
 version=3.11
 revision=1
+<<<<<<< HEAD
 build_style=gnu-makefile
 make_use_env=yes
 make_build_args="TARGET=gtk3 NETSURF_USE_BMP=YES NETSURF_USE_WEBP=YES
@@ -13,6 +14,14 @@ hostmakedepends="pkg-config gperf flex nsgenbind gdk-pixbuf-devel
 makedepends="
  libcurl-devel libwebp-devel libcss-devel libnsbmp-devel libnsgif-devel
  libutf8proc-devel libnsutils-devel libdom-devel gtk+3-devel"
+=======
+hostmakedepends="pkg-config gperf flex nsgenbind gdk-pixbuf-devel perl-HTML-Parser"
+makedepends="
+ libressl-devel libjpeg-turbo-devel libmng-devel libpng-devel libxml2-devel libcurl-devel
+ lcms-devel libwebp-devel libparserutils-devel libwapcaplet-devel
+ libhubbub-devel libcss-devel libnsbmp-devel libnsgif-devel libutf8proc-devel
+ libnsutils-devel libdom-devel gtk+-devel js-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils shared-mime-info"
 short_desc="Free, open source web browser written in C"
 maintainer="Orphaned <orphan@voidlinux.org>"

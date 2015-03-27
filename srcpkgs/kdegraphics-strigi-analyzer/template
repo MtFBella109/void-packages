@@ -1,0 +1,14 @@
+# Template file for 'kdegraphics-strigi-analyzer'
+pkgname=kdegraphics-strigi-analyzer
+version=4.14.2
+revision=2
+build_style=cmake
+configure_args="-Wno-dev -DKDE4_BUILD_TESTS=OFF"
+hostmakedepends="cmake automoc4 pkg-config"
+makedepends="glib-devel libressl-devel qt-devel phonon-devel strigi-devel tiff-devel kdelibs-devel"
+short_desc="KDE Strigi analyzers for various graphics file formats"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL, LGPL, FDL"
+homepage="https://projects.kde.org/projects/kde/kdegraphics/kdegraphics-strigi-analyzer"
+distfiles="http://download.kde.org/stable/${version}/src/${pkgname}-${version}.tar.xz"
+checksum=d386c621b59aa5a07e792b6ae4cab5edcd4dbe5545a5f9bce274821fc2383495

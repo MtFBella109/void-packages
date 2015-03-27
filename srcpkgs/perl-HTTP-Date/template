@@ -4,6 +4,9 @@ version=6.05
 revision=2
 build_style=perl-module
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 hostmakedepends="perl"
 makedepends="${hostmakedepends}"
 depends="${makedepends}"

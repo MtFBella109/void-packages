@@ -3,9 +3,15 @@ pkgname=sord
 <<<<<<< HEAD
 version=0.16.16
 revision=1
+<<<<<<< HEAD
 build_style=meson
 hostmakedepends="pkg-config"
 makedepends="serd-devel pcre-devel zix-devel"
+=======
+build_style=waf
+hostmakedepends="pkg-config python"
+makedepends="serd-devel pcre-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Lightweight C library for storing RDF data in memory"
 maintainer="Orphaned <orphan@voidlinux.org>"
 =======

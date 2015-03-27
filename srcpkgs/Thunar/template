@@ -15,12 +15,31 @@ makedepends="exo-devel libexif-devel libgudev-devel libnotify-devel
  libglib-devel gtk+3-devel"
 depends="desktop-file-utils hicolor-icon-theme"
 short_desc="Thunar File Manager"
+<<<<<<< HEAD
 maintainer="Saksham <voidisnull@duck.com>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://docs.xfce.org/xfce/thunar/Start"
 changelog="https://gitlab.xfce.org/xfce/thunar/-/raw/xfce-${version%.*}/NEWS"
 distfiles="https://archive.xfce.org/src/xfce/thunar/${version%.*}/thunar-${version}.tar.bz2"
 checksum=e815e034c073d634d0e77566837e1d9417b65c886924e3678e3325d5466c784d
+=======
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://thunar.xfce.org"
+license="GPL-2, LGPL-2.1"
+distfiles="http://archive.xfce.org/src/xfce/thunar/${version%.*}/${pkgname}-${version}.tar.bz2"
+checksum=b9a55104b18ae01c5190d7ea02cbd7ba56d7affed9df416bf7fec6dff2d889b2
+
+hostmakedepends="xfce4-dev-tools gettext-devel glib-devel"
+makedepends="pcre-devel libglib-devel gvfs-devel
+ libgudev-devel libnotify-devel libxfce4ui-devel xfce4-panel-devel
+ dbus-glib-devel libexif-devel startup-notification-devel exo-devel"
+depends="hicolor-icon-theme desktop-file-utils"
+
+pre_configure() {
+	mkdir m4
+	NOCONFIGURE=1 xdt-autogen
+}
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 Thunar-devel_package() {
 	depends="libglib-devel gtk+3-devel ${sourcepkg}>=${version}_${revision}"

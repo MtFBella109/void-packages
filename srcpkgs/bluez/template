@@ -4,6 +4,7 @@ version=5.78
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="--with-udevdir=/usr/lib/udev --disable-systemd
  --enable-sixaxis --enable-threads --enable-library --enable-deprecated
  --enable-external-ell --enable-mesh --enable-nfc --enable-experimental
@@ -19,6 +20,14 @@ configure_args="--libexecdir=/lib --enable-gstreamer --enable-dund
 --with-systemdsystemunitdir=/lib/systemd/system --disable-test"
 makedepends="automake>=1.11.3_1 pkg-config flex libudev-devel readline-devel gst-plugins-base-devel alsa-lib-devel dbus-devel glib-devel libusb-compat-devel libcap-ng-devel libsndfile-devel cups-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+configure_args="--with-udevdir=/usr/lib/udev
+ --enable-pie --enable-threads --enable-library $(vopt_enable systemd)"
+hostmakedepends="automake libtool pkg-config flex"
+makedepends="libglib-devel libudev-devel dbus-devel
+ cups-devel libical-devel readline-devel $(vopt_if systemd systemd-devel)"
+conf_files="/etc/bluetooth/main.conf"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Bluetooth tools and daemons"
 maintainer="Érico Nogueira <ericonr@disroot.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"

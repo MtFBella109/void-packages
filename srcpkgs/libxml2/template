@@ -4,11 +4,17 @@ pkgname=libxml2
 version=2.13.8
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--with-threads --with-history --with-icu
  --with-legacy --with-ftp --with-xptr-locs --enable-static"
 hostmakedepends="gettext pkg-config python3 python3-packaging-bootstrap"
 makedepends="zlib-devel ncurses-devel readline-devel liblzma-devel icu-devel
  python3-devel"
+=======
+configure_args="--disable-static --with-threads --with-history"
+hostmakedepends="automake libtool gettext-devel pkg-config python-devel"
+makedepends="zlib-devel ncurses-devel readline-devel liblzma-devel python-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Library providing XML and HTML support"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="MIT"

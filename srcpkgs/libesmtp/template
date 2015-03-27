@@ -5,7 +5,11 @@ version=1.0.6
 revision=22
 build_style=gnu-configure
 configure_args="--disable-static --with-openssl"
+<<<<<<< HEAD
 makedepends="openssl-devel"
+=======
+makedepends="libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Manage submission of emails using SMTP protocol"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"

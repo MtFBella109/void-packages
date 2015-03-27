@@ -6,9 +6,16 @@ revision=2
 build_style=gnu-configure
 configure_args="--enable-ipv6 --enable-xlocaledir --without-xmlto
 <<<<<<< HEAD
+<<<<<<< HEAD
  --enable-static --enable-malloc0returnsnull"
 hostmakedepends="pkg-config xorg-util-macros xorgproto"
 makedepends="xorgproto xtrans libxcb-devel"
+=======
+ --disable-secure-rpc --disable-static --enable-malloc0returnsnull"
+hostmakedepends="pkg-config"
+makedepends="xproto xextproto xtrans xcmiscproto kbproto bigreqsproto
+ inputproto xf86bigfontproto libxcb-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Base X libraries from Xorg"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="MIT"

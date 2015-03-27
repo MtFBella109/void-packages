@@ -5,10 +5,16 @@ version=1.12.5
 revision=2
 build_style=gnu-configure
 configure_args="--disable-static --sysconfdir=/etc/imlib2 --enable-visibility-hiding"
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="freetype-devel libjpeg-turbo-devel libpng-devel libwebp-devel
  tiff-devel libid3tag-devel giflib-devel libXext-devel libSM-devel
  libheif-devel librsvg-devel libopenjpeg2-devel libspectre-devel libjxl-devel"
+=======
+hostmakedepends="libtool autoconf pkg-config"
+makedepends="freetype-devel libjpeg-turbo-devel libpng-devel
+ tiff-devel libid3tag-devel giflib-devel libXext-devel libSM-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Image manipulation library"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="Imlib2"

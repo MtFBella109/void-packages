@@ -4,6 +4,7 @@ version=0.9.8
 revision=4
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 hostmakedepends="pkg-config git python3 automake gettext-devel libtool"
 makedepends="libvorbis-devel libogg-devel jack-devel libsamplerate-devel
  libflac-devel libsndfile-devel mpg123-devel ffmpeg6-devel speex-devel
@@ -17,6 +18,16 @@ depends="pygtk"
 makedepends="libvorbis-devel libogg-devel jack-devel libsamplerate-devel libflac-devel libsndfile-devel libmad-devel ffmpeg-devel speex-devel glib-devel pixman-devel pygtk-devel"
 fulldepends="mutagen desktop-file-utils shared-mime-info"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="pkg-config python-devel"
+makedepends="
+ libvorbis-devel libogg-devel jack-devel libsamplerate-devel
+ libflac-devel libsndfile-devel libmad-devel ffmpeg-devel
+ speex-devel glib-devel pixman-devel lame-devel pygtk-devel
+ libshout-idjc-devel opus-devel mutagen"
+depends="pygtk mutagen desktop-file-utils shared-mime-info"
+pycompile_module="idjcmonitor.py idjc"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Internet DJ Console"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"

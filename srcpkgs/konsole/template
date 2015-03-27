@@ -23,6 +23,7 @@ distfiles="${KDE_SITE}/release-service/${version}/src/konsole-${version}.tar.xz"
 checksum=095a7ff10df3c70779b356fb3b5984062bbc698bbed966230e3dbccf6af36615
 replaces="konsole5>=0"
 
+<<<<<<< HEAD
 do_check() {
 	cd build
 	ctest -E "ScreenTest|Vt102EmulationTest|TerminalInterfaceTest"
@@ -33,3 +34,8 @@ konsole5_package() {
 	short_desc+=" (transitional dummy package)"
 	depends="konsole>=${version}_${revision}"
 }
+=======
+hostmakedepends="cmake automoc4 pkg-config"
+makedepends="glib-devel libressl-devel qt-devel phonon-devel strigi-devel
+ kdelibs-devel kde-baseapps-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)

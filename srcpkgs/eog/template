@@ -14,11 +14,22 @@ depends="desktop-file-utils hicolor-icon-theme shared-mime-info"
 version=3.4.1
 distfiles="${GNOME_SITE}/eog/3.4/eog-$version.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-scrollkeeper"
 depends="hicolor-icon-theme desktop-file-utils"
 makedepends="which pkg-config intltool gnome-doc-utils gnome-desktop-devel libpeas-devel lcms2-devel exempi-devel libexif-devel librsvg-devel"
 fulldepends="gnome-icon-theme gsettings-desktop-schemas shared-mime-info"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+build_options="gir"
+configure_args="$(vopt_enable gir introspection)"
+hostmakedepends="pkg-config intltool gnome-doc-utils itstool
+ $(vopt_if gir gobject-introspection)"
+makedepends="
+ gnome-desktop-devel libpeas-devel lcms2-devel exempi-devel
+ libexif-devel librsvg-devel"
+depends="hicolor-icon-theme desktop-file-utils shared-mime-info"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Eye of GNOME graphics viewer program"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"

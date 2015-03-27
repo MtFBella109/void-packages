@@ -5,10 +5,14 @@ version=2.3.3
 revision=2
 build_style=gnu-configure
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="libheif-devel libjpeg-turbo-devel libpng-devel libwebp-devel tiff-devel
  fontconfig-devel libXpm-devel"
 # There needs to be a font installed for fontconfig/basic test
 checkdepends="liberation-fonts-ttf"
+=======
+makedepends="libjpeg-turbo-devel libpng-devel fontconfig-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Graphics library for the dynamic creation of images"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="custom:BSD-like"

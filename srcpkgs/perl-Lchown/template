@@ -3,9 +3,15 @@ pkgname=perl-Lchown
 version=1.01
 revision=20
 build_style=perl-ModuleBuild
+<<<<<<< HEAD
 hostmakedepends="perl perl-Module-Build"
 makedepends="$hostmakedepends"
 depends="$makedepends"
+=======
+hostmakedepends="perl"
+makedepends="${hostmakedepends}"
+depends="${makedepends}"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Perl module interface to the lchown() system call"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"

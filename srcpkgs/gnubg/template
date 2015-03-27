@@ -3,12 +3,24 @@ pkgname=gnubg
 version=1.08.003
 revision=5
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-cputest ax_cv_gcc_x86_cpuid_0x00000001=6000000
  --with-gtk3 --localedir=/usr/share/locale"
 hostmakedepends="flex gdk-pixbuf-devel gettext pkg-config python3-devel"
 makedepends="libcurl-devel libglib-devel gtk+3-devel libepoxy-devel python3-devel
  glu-devel libcanberra-devel readline-devel readline sqlite-devel"
 depends="python3"
+=======
+if [ "$XBPS_TARGET_MACHINE" = "x86_64" ]; then
+	configure_args="--enable-simd=sse2"
+fi
+hostmakedepends="pkg-config python gdk-pixbuf-devel"
+if [ "$CROSS_BUILD" ]; then
+	hostmakedepends+=" ${pkgname}"
+fi
+makedepends="libglib-devel gtk+-devel gtkglext-devel python-devel
+ libcanberra-devel readline-devel readline sqlite-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNU Backgammon game"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="GPL-3.0-or-later"

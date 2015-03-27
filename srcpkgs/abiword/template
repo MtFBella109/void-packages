@@ -3,6 +3,7 @@ pkgname=abiword
 version=3.0.5
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper=gir
 configure_args="--enable-plugins --enable-clipart --enable-templates
  --enable-introspection"
@@ -12,6 +13,14 @@ makedepends="libjpeg-turbo-devel libpng-devel fribidi-devel libgsf-devel
  libwmf-devel $(vopt_if champlain libchamplain-devel) redland-devel libical-devel
  libgcrypt-devel harfbuzz-devel $(vopt_if goffice goffice-devel)
  gtk+3-devel"
+=======
+configure_args="--enable-plugins --enable-clipart --enable-templates"
+hostmakedepends="automake libtool flex pkg-config"
+makedepends="libjpeg-turbo-devel libpng-devel fribidi-devel libgsf-devel
+ enchant-devel gtk+3-devel librsvg-devel wv-devel boost-devel libxslt-devel
+ libwmf-devel libchamplain-devel redland-devel libical-devel
+ libgcrypt-devel goffice-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme desktop-file-utils"
 short_desc="Free word processing program similar to Microsoft(R) Word"
 maintainer="Orphaned <orphan@voidlinux.org>"

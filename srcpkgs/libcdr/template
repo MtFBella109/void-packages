@@ -3,7 +3,14 @@ pkgname=libcdr
 version=0.1.8
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-debug"
+=======
+short_desc="Corel Draw file format importer library"
+maintainer="Enno Boland <eb@s01.de>"
+license="LGPL/MPL"
+makedepends="lcms2-devel icu-devel librevenge-devel boost-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 hostmakedepends="pkg-config"
 makedepends="lcms2-devel icu-devel librevenge-devel boost-devel-minimal
  libcppunit-devel zlib-devel"

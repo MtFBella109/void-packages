@@ -9,6 +9,7 @@ configure_args="$(vopt_enable gir introspection) --enable-evdev --enable-evdev-i
  --enable-wayland-backend --enable-egl-backend --enable-wayland-compositor
  --enable-gdk-backend"
 hostmakedepends="automake libtool pkg-config intltool glib-devel
+<<<<<<< HEAD
  gettext-devel gtk-doc"
 makedepends="atk-devel pango-devel libXi-devel libXcomposite-devel json-glib-devel
  libgudev-devel libxkbcommon-devel cogl-devel libinput-devel libevdev-devel
@@ -17,6 +18,13 @@ makedepends="atk-devel pango-devel libXi-devel libXcomposite-devel json-glib-dev
 configure_args="--enable-introspection"
 makedepends="pkg-config intltool libXi-devel libXcomposite-devel libdrm-devel json-glib-devel gtk+-devel cogl-devel gobject-introspection"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+ gettext-devel $(vopt_if gir gobject-introspection)"
+makedepends="
+ atk-devel pango-devel libXi-devel libXcomposite-devel json-glib-devel
+ libxkbcommon-devel cogl-devel libinput-devel eudev-libgudev-devel
+ eudev-libudev-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="OpenGL based interactive canvas library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"

@@ -1,5 +1,6 @@
 # Template file for 'notmuch'
 pkgname=notmuch
+<<<<<<< HEAD
 version=0.39
 revision=3
 build_style=configure
@@ -25,6 +26,24 @@ checksum="b88bb02a76c46bad8d313fd2bb4f8e39298b51f66fcbeb304d9f80c3eef704e3
  4299e051b10e1fa7b33ea2862790a09ebfe96859681804e5251e130f800e69d2"
 skip_extraction="database-v1.tar.xz"
 replaces="notmuch-emacs>=0"
+=======
+version=0.19
+revision=2
+hostmakedepends="automake libtool pkg-config"
+makedepends="
+ xapian-core-devel gmime-devel talloc-devel perl emacs bash-completion
+ ruby-devel python-devel python3.4-devel python-Sphinx"
+build_style=gnu-configure
+configure_args="--bashcompletiondir=/usr/share/bash-completion/completions
+  --without-zsh-completion" # zsh completion is part of zsh itself
+short_desc="The mail indexer"
+maintainer="Jan S. <jan.schreib@gmail.com>"
+license="GPL-3"
+homepage="http://notmuchmail.org"
+distfiles="http://notmuchmail.org/releases/${pkgname}-${version}.tar.gz"
+checksum=396fc6548423785ebbbe9a6cce321d957d3b2e856edb8225bb0988470833eeeb
+nocross=yes
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 make_check="ci-skip" # dtach based tests fail in CI due to no pty
 

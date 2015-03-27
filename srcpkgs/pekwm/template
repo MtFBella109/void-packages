@@ -37,6 +37,7 @@ long_desc="
  A window manager based on aewm++. Here is a compact list of changes
  between the original aewm++-1.1.16 and pekwm:
 
+<<<<<<< HEAD
  * Better structured and formatted code.
  * Possibility to group windows in a single frame.
  * Configurable keygrabber.
@@ -61,3 +62,21 @@ Add_dependency full libXrandr
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="pkg-config"
+makedepends="libjpeg-turbo-devel libpng-devel libXinerama-devel
+ libSM-devel libXft-devel libXrender-devel fontconfig-devel libXpm-devel libXrandr-devel"
+conf_files="
+	/etc/pekwm/vars
+	/etc/pekwm/mouse
+	/etc/pekwm/menu
+	/etc/pekwm/start
+	/etc/pekwm/keys
+	/etc/pekwm/autoproperties_typerules
+	/etc/pekwm/config
+	/etc/pekwm/autoproperties
+	/etc/pekwm/mouse_system
+	/etc/pekwm/mouse_sloppy
+	/etc/pekwm/mouse_click
+	/etc/pekwm/config_system"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)

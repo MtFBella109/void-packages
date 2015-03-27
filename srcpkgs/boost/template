@@ -1,6 +1,7 @@
 # Template file for 'boost'
 pkgname=boost
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=1.89.0
 revision=1
 hostmakedepends="which bzip2-devel icu-devel python3-devel pkg-config"
@@ -14,6 +15,12 @@ wrksrc=${pkgname}_${_boostver}
 distfiles="${SOURCEFORGE_SITE}/$pkgname/${pkgname}_${_boostver}.tar.bz2"
 makedepends="zlib-devel icu-devel python-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+version=1.54.0
+revision=5
+wrksrc="${pkgname}_${version//\./_}"
+makedepends="zlib-devel bzip2-devel icu-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Free peer-reviewed portable C++ source libraries"
 maintainer="John <me@johnnynator.dev>"
 license="BSL-1.0"

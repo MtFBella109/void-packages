@@ -15,9 +15,15 @@ checksum=23db7756e6c6b5cfd157bb4720a0d96aa2bb75e88d1fdf5a0f76210eef4aff60
 nocross="can't use CXX prefixed with triplet"
 CXXFLAGS="-Wno-narrowing -O3"
 
+<<<<<<< HEAD
 case "$XBPS_TARGET_MACHINE" in
 	i686*) broken="can't find C++ compiler despite being given it"
 esac
+=======
+hostmakedepends="pkg-config python"
+makedepends="SDL-devel glew-devel libao-devel libtheora-devel libvorbis-devel
+ libpng-devel libxml2-devel SDL_ttf-devel tcl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 do_build() {
 	vsed -e 's@\(SYMLINK_FOR_BINARY:=\)true@\1false@' -i build/custom.mk

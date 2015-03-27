@@ -2,10 +2,17 @@
 pkgname=xfce4-taskmanager
 version=1.6.0
 revision=1
+<<<<<<< HEAD
 build_style=meson
 hostmakedepends="pkg-config gettext glib-devel"
 makedepends="libglib-devel libxfce4ui-devel libwnck-devel libXmu-devel gtk+3-devel
  cairo-devel libXmu-devel libxfce4util-devel xfconf-devel libX11-devel"
+=======
+build_style=gnu-configure
+configure_args="--disable-static"
+hostmakedepends="pkg-config intltool"
+makedepends="libxfce4ui-devel xfce4-panel-devel libwnck2-devel libgksu-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme desktop-file-utils"
 short_desc="XFCE task manager plugin"
 maintainer="Orphaned <orphan@voidlinux.org>"

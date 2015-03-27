@@ -5,6 +5,13 @@ revision=6
 build_style=gnu-configure
 configure_args="--disable-static --enable-gsettings=yes
  --disable-schemas-install --disable-schemas-compile"
+<<<<<<< HEAD
+=======
+depends="gdb gsettings-desktop-schemas"
+makedepends="boost-devel sqlite-devel libxml2-devel libgtop-devel ghex-devel
+ gtksourceviewmm-devel vte290-devel gsettings-desktop-schemas-devel
+ libgdlmm-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 hostmakedepends="pkg-config gdb intltool itstool glib-devel"
 makedepends="boost-devel-minimal sqlite-devel libxml2-devel libgtop-devel
  gtksourceviewmm-devel vte3-devel gsettings-desktop-schemas-devel

@@ -2,12 +2,21 @@
 pkgname=marco
 version=1.28.1
 revision=1
+<<<<<<< HEAD
 build_style=meson
 hostmakedepends="gdk-pixbuf-devel zenity pkg-config gettext glib-devel"
 makedepends="libcanberra-devel libgtop-devel libSM-devel libXcursor-devel
  startup-notification-devel libX11-devel pango-devel gtk+3-devel libglib-devel
  libXcomposite-devel libXrender-devel libXrandr-devel libXinerama-devel
  mate-desktop-devel libXpresent-devel libXres-devel"
+=======
+build_style=gnu-configure
+configure_args="--disable-static --with-gtk=2.0 --enable-startup-notification --disable-schemas-compile"
+hostmakedepends="libtool pkg-config intltool itstool glib-devel gdk-pixbuf-devel zenity"
+makedepends="gtk+-devel libnotify-devel libgtop-devel libSM-devel
+ libXt-devel libXcomposite-devel mate-desktop-devel libcanberra-devel
+ startup-notification-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="zenity"
 short_desc="Window manager for MATE"
 maintainer="skmpz <dem.procopiou@gmail.com>"

@@ -1,10 +1,21 @@
 # Template file for 'eog-plugins'
 pkgname=eog-plugins
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=44.1
 revision=2
 build_style=meson
 configure_args="-Dplugin_postasa=false"
+=======
+version=3.14.1
+revision=1
+lib32disabled=yes
+build_style=gnu-configure
+hostmakedepends="pkg-config intltool"
+makedepends="eog-devel libgdata-devel
+ libchamplain-devel libpeas-devel libexif-devel
+ gsettings-desktop-schemas-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 pycompile_dirs="usr/lib/eog/plugins"
 hostmakedepends="glib-devel pkg-config gettext"
 makedepends="eog-devel libhandy1-devel

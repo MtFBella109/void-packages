@@ -3,9 +3,15 @@ pkgname=perl-Gtk2
 version=1.24993
 revision=6
 build_style=perl-module
+<<<<<<< HEAD
 hostmakedepends="perl-ExtUtils-Depends perl-ExtUtils-PkgConfig perl-Pango"
 makedepends="gtk+-devel perl-Pango"
 depends="perl perl-Pango"
+=======
+hostmakedepends="perl"
+makedepends="perl-ExtUtils-Depends perl-ExtUtils-PkgConfig gtk+-devel perl-Pango"
+depends="perl>=5.20 perl-Pango"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Perl bindings for Gtk2"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"

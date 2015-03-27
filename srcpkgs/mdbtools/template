@@ -7,9 +7,12 @@ configure_args="--disable-glibtest --enable-sql"
 <<<<<<< HEAD
 hostmakedepends="flex bison pkg-config"
 makedepends="readline-devel libglib-devel"
+<<<<<<< HEAD
 =======
 makedepends="flex bison pkg-config glib-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Library and utilities for reading Microsoft Access Databases"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.0-or-later"

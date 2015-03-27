@@ -1,6 +1,7 @@
 # Template file for 'libsecret'
 pkgname=libsecret
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=0.21.7
 revision=1
 build_style=meson
@@ -9,6 +10,14 @@ hostmakedepends="glib-devel pkg-config libxslt vala gi-docgen docbook-xsl
  gettext"
 makedepends="glib-devel libgcrypt-devel vala"
 checkdepends="python3-dbus python3-gobject dbus"
+=======
+version=0.18
+revision=2
+build_style=gnu-configure
+configure_args="--disable-static --with-libgcrypt-prefix=${XBPS_CROSS_BASE}/usr"
+hostmakedepends="pkg-config intltool gnome-doc-utils glib-devel libxslt"
+makedepends="vala-devel libgcrypt-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GObject based library for accessing the Secret Service API"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"

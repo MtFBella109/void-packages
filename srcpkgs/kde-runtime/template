@@ -1,0 +1,36 @@
+# Template file for 'kde-runtime'
+pkgname=kde-runtime
+version=4.14.2
+revision=2
+build_style=cmake
+configure_args="-Wno-dev -DKDE4_BUILD_TESTS=OFF DWITH_QNtrack=OFF -DWITH_NepomukCore=OFF"
+# XXX OpenSLP
+hostmakedepends="cmake automoc4 pkg-config"
+makedepends="
+ boost-devel glib-devel libressl-devel qt-devel phonon-devel strigi-devel
+ libXt-devel attica-devel qca-devel liblzma-devel libssh-devel
+ libjpeg-turbo-devel libpng-devel exiv2-devel alsa-lib-devel samba-devel
+ pulseaudio-devel libwebp-devel libcanberra-devel NetworkManager-devel
+ kdelibs-devel kdepimlibs-devel gpgme-devel
+ kactivities-devel libopenexr-devel libgcrypt-devel"
+depends="hicolor-icon-theme"
+short_desc="Plugins and applications necessary for running KDE applications"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL, LGPL, FDL"
+homepage="http://www.kde.org"
+distfiles="http://download.kde.org/stable/${version}/src/${pkgname}-${version}.tar.xz"
+checksum=22bcced462b785b8e50b666101ecbec04a0135656842ef5718530da621342fec
+
+post_install() {
+	rm -f ${DESTDIR}/usr/share/icons/hicolor/index.theme
+	ln -sf /usr/lib/kde4/libexec/kdesu ${DESTDIR}/usr/bin
+}
+
+kde-runtime-devel_package() {
+	short_desc+=" - development files"
+	depends="${sourcepkg}>=${version}_${revision}"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/share/apps/cmake
+	}
+}

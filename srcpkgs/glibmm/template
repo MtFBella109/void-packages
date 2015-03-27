@@ -12,8 +12,14 @@ checkdepends="glib-networking"
 version=2.32.0
 distfiles="${GNOME_SITE}/glibmm/2.32/glibmm-$version.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
 makedepends="pkg-config intltool glib-devel libsigc++-devel>=2.2.10"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="pkg-config intltool libtool glib-devel"
+makedepends="libglib-devel libsigc++-devel"
+depends="glib>=2.42"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="C++ bindings for GLib"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later"

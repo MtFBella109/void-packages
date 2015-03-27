@@ -6,8 +6,19 @@ revision=1
 # only musl
 archs="*-musl"
 build_style=configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="libarchive-devel zlib-devel openssl-devel"
+=======
+short_desc="The XBPS package system utilities - static binaries"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.voidlinux.eu/xbps"
+license="2-clause-BSD"
+
+wrksrc="xbps-${version}"
+hostmakedepends="git pkg-config"
+makedepends="zlib-devel libressl-devel libarchive-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="xbps-triggers"
 short_desc="XBPS package system utilities - static binaries"
 maintainer="Juan RP <xtraeme@voidlinux.org>"

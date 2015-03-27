@@ -18,9 +18,20 @@ license="MIT, LGPL-2.1"
 distfiles="ftp://ftp.freedesktop.org/pub/mesa/${version%.*}/${pkgname}-${version}.tar.bz2"
 checksum=0283bfe710fa449ed82e465cfa09612a269e19abb7e0382082608062ce7960b5
 
+<<<<<<< HEAD:srcpkgs/MesaLib/template
 # XXX reenable nouveau driver when it's updated for libdrm>=2.4.34
 subpackages="libEGL libglapi libGLES libGL libGLU libOpenVG"
 subpackages="${subpackages} ${pkgname}-devel"
+=======
+hostmakedepends="
+ automake libtool flex pkg-config llvm python-Mako libxml2-python wayland-devel"
+makedepends="
+ glproto dri2proto dri3proto presentproto libXext-devel libXxf86vm-devel
+ libudev-devel libdrm-devel expat-devel talloc-devel libvdpau-devel libva-devel
+ libXdamage-devel libXvMC-devel libxshmfence-devel wayland-devel
+ elfutils-devel ncurses-devel zlib-devel libffi-devel libressl-devel"
+conf_files="/etc/drirc"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.):srcpkgs/libGL/template
 
 <<<<<<< HEAD
 =======

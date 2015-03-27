@@ -3,6 +3,7 @@ pkgname=okular
 version=25.08.3
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
 hostmakedepends="extra-cmake-modules pkg-config qt6-base gettext
@@ -17,6 +18,14 @@ makedepends="discount-devel djvulibre-devel ebook-tools-devel phonon-devel
  kf6-kdoctools-devel kf6-kiconthemes-devel kf6-kio-devel kf6-kirigami-devel
  kf6-kparts-devel kf6-kpty-devel kf6-kwallet-devel kf6-kwindowsystem-devel
  kf6-threadweaver-devel kf6-ktextwidgets-devel plasma-activities-devel"
+=======
+# XXX libepub, libkscreen
+configure_args="-Wno-dev -DKDE4_BUILD_TESTS=OFF -DWITH_ActiveApp=OFF"
+hostmakedepends="cmake automoc4 pkg-config"
+makedepends="glib-devel libressl-devel qt-devel phonon-devel kdelibs-devel
+ kde-runtime-devel qimageblitz-devel libchmlib-devel djvulibre-devel libspectre-devel
+ libkexiv2-devel poppler-qt4-devel qca-devel kactivities-devel freetype-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme"
 checkdepends="ebook-tools dbus"
 short_desc="KDE Document Viewer"

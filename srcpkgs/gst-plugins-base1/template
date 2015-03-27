@@ -1,5 +1,6 @@
 # Template file for 'gst-plugins-base1'
 pkgname=gst-plugins-base1
+<<<<<<< HEAD
 version=1.26.5
 revision=1
 build_style=meson
@@ -14,6 +15,21 @@ makedepends="gstreamer1-devel glib-devel libxml2-devel pango-devel
  graphene-devel opus-devel MesaLib-devel $(vopt_if cdparanoia libcdparanoia-devel)
  $(vopt_if libvisual libvisual-devel) $(vopt_if sndio sndio-devel)
  $(vopt_if wayland 'wayland-devel wayland-protocols')"
+=======
+version=1:1.4.5
+revision=3
+wrksrc="${pkgname/1/}-${version#*:}"
+build_style=gnu-configure
+configure_args="--enable-experimental --disable-static
+ $(vopt_enable gir introspection) $(vopt_enable cdparanoia)"
+hostmakedepends="automake gettext-devel libtool python pkg-config
+ glib-devel $(vopt_if gir gobject-introspection)"
+makedepends="
+ gstreamer1-devel glib-devel libxml2-devel pango-devel
+ cairo-devel liboil-devel alsa-lib-devel libXv-devel libXext-devel
+ libvisual-devel libgudev-devel libtheora-devel libvorbis-devel
+ libSM-devel orc-devel $(vopt_if cdparanoia libcdparanoia-devel)"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="orc>=0.4.18 gstreamer1>=${version}"
 checkdepends="mesa-dri"
 short_desc="GStreamer Base Plug-ins (v1.x)"

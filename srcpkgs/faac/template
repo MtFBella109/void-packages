@@ -6,6 +6,10 @@ build_style=gnu-configure
 <<<<<<< HEAD
 configure_args="--disable-static"
 hostmakedepends="automake libtool"
+<<<<<<< HEAD
+=======
+makedepends="libmp4v2-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="AAC audio encoder library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.0-only"

@@ -6,9 +6,15 @@ revision=3
 build_style=gnu-configure
 configure_args="--enable-utf8 --enable-unicode-properties --with-pic
 <<<<<<< HEAD
+<<<<<<< HEAD
  --enable-pcregrep-libz --enable-pcregrep-libbz2 --enable-newline-is-anycrlf
  --enable-pcretest-libedit --enable-jit --enable-static"
 makedepends="bzip2-devel libedit-devel zlib-devel"
+=======
+--enable-pcregrep-libz --enable-pcregrep-libbz2 --enable-newline-is-anycrlf
+--enable-pcretest-libreadline --enable-jit --enable-static"
+makedepends="zlib-devel bzip2-devel readline-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Perl Compatible Regular Expressions"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"

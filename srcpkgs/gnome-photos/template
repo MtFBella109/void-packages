@@ -1,5 +1,6 @@
 # Template file for 'gnome-photos'
 pkgname=gnome-photos
+<<<<<<< HEAD
 version=44.0
 revision=2
 build_helper="gir"
@@ -12,6 +13,18 @@ makedepends="gtk+3-devel babl-devel exempi-devel lcms2-devel
  geocode-glib-devel libdazzle-devel gegl-devel libhandy1-devel
  libportal-gtk3-devel"
 depends="desktop-file-utils tracker tracker-miners"
+=======
+version=3.14.2
+revision=1
+build_style=gnu-configure
+configure_args="--disable-schemas-compile"
+hostmakedepends="pkg-config intltool itstool gnome-doc-utils gobject-introspection"
+makedepends="
+ gtk+3-devel babl-devel gegl-devel exempi-devel lcms2-devel gfbgraph-devel
+ tracker-devel libexif-devel librsvg-devel grilo-devel
+ gnome-online-accounts-devel gnome-desktop-devel libgdata-devel"
+depends="desktop-file-utils"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Access, organize, and share your photos on GNOME"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"

@@ -9,7 +9,13 @@ version=0.13.3
 revision=1
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
+<<<<<<< HEAD
 makedepends="pkg-config flex intltool gobject-introspection glib-devel gtk+3-devel libsoup-gnome-devel liboauth-devel libgnome-keyring-devel"
+=======
+configure_args="--disable-static $(vopt_enable gir introspection)"
+hostmakedepends="pkg-config flex intltool $(vopt_if gir gobject-introspection)"
+makedepends="json-glib-devel gtk+3-devel uhttpmock-devel liboauth-devel gcr-devel gnome-online-accounts-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Library for accessing GData webservices"
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="LGPL-2.1"

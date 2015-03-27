@@ -31,6 +31,11 @@ subpackages="bind-libs bind-utils bind-devel"
 # requires special network setup
 make_check=extended
 
+<<<<<<< HEAD
+=======
+hostmakedepends="automake libtool perl"
+makedepends="libressl-devel libxml2-devel libcap-devel readline-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="/etc/named/named.conf"
 system_accounts="named"
 named_descr="BIND DNS server"

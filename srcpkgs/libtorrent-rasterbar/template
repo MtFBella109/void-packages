@@ -3,11 +3,18 @@
 pkgname=libtorrent-rasterbar
 version=2.0.10
 revision=4
+<<<<<<< HEAD
 build_style=cmake
 configure_args="-Dbuild_examples=ON -Dbuild_tools=ON
  -Dpython-bindings=ON -Dbuild_tests=ON"
 hostmakedepends="pkg-config gettext python3-devel python3-setuptools"
 makedepends="openssl-devel boost-devel-minimal boost-python3 geoip-devel python3-devel"
+=======
+build_style=gnu-configure
+configure_args="--enable-python-binding --with-libgeoip"
+hostmakedepends="pkg-config intltool python-devel"
+makedepends="libressl-devel boost-devel boost-python python-devel geoip-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="C++ bittorrent library by Rasterbar Software"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"

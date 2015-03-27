@@ -4,9 +4,15 @@ pkgname=libxcb
 version=1.17.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-build-docs --enable-xinput --enable-xkb"
 hostmakedepends="libtool pkg-config xorg-util-macros xcb-proto"
 makedepends="libXdmcp-devel libXau-devel"
+=======
+configure_args="--disable-build-docs --disable-static --enable-xinput --enable-xkb"
+hostmakedepends="automake libtool pkg-config xorg-util-macros xcb-proto"
+makedepends="xcb-proto libXdmcp-devel libXau-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="X protocol C-language Binding"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"

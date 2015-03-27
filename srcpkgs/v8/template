@@ -1,8 +1,16 @@
 # Template file for 'v8'
 pkgname=v8
+<<<<<<< HEAD
 version=3.9.8
 distfiles="http://commondatastorage.googleapis.com/chromium-browser-official/${pkgname}-$version.tar.bz2"
 makedepends="python readline-devel"
+=======
+_sonamever=3.24
+version=${_sonamever}.35.33
+revision=1
+hostmakedepends="which python"
+makedepends="readline-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="V8 JavaScript Engine"
 maintainer="davehome <davehome@redthumb.info.tm>"
 homepage="http://code.google.com/p/v8/"

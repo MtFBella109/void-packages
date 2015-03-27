@@ -1,0 +1,17 @@
+# Template file for 'gnome-online-miners'
+pkgname=gnome-online-miners
+version=3.14.1
+revision=1
+lib32disabled=yes
+build_style=gnu-configure
+configure_args="--disable-static"
+hostmakedepends="pkg-config intltool libxslt docbook-xsl gobject-introspection"
+makedepends="libzapojit-devel libgdata-devel grilo-devel
+ tracker-devel gfbgraph-devel libmediaart-devel gnome-online-accounts-devel"
+depends="libzapojit>=0.0.3_3"
+short_desc="GNOME service that crawls through your online content"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=6c6b48be2f89400ca16560c6fff67519229034ea78be867c9fbcb86c1d7cf784

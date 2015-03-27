@@ -1,8 +1,16 @@
 # Template file for 'perl-Linux-DesktopFiles'
 pkgname=perl-Linux-DesktopFiles
+<<<<<<< HEAD
 version=0.25
 revision=3
 build_style=perl-module
+=======
+version=0.09
+revision=1
+wrksrc="${pkgname#perl-}-${version}"
+build_style=perl-ModuleBuild
+noarch=yes
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 hostmakedepends="perl"
 makedepends="${hostmakedepends}"
 depends="${makedepends}"

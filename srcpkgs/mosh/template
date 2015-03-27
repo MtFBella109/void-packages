@@ -4,8 +4,13 @@ version=1.4.0
 revision=7
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 hostmakedepends="perl pkg-config protobuf autoconf automake"
 makedepends="ncurses-devel protobuf-devel libutempter-devel openssl-devel"
+=======
+hostmakedepends="pkg-config protobuf-devel"
+makedepends="ncurses-devel protobuf-devel libutempter-devel libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="perl-IO-Tty"
 short_desc="Mobile shell, remote terminal application that allows roaming"
 maintainer="Orphaned <orphan@voidlinux.org>"

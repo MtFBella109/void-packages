@@ -4,8 +4,14 @@ version=0.36
 revision=2
 build_style=perl-module
 hostmakedepends="perl"
+<<<<<<< HEAD
 makedepends="${hostmakedepends} perl-Sub-Uplevel"
 depends="$makedepends"
+=======
+makedepends="${hostmakedepends} perl-Tree-DAG_Node"
+depends="${makedepends}"
+noarch="yes"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Test::Warn - Perl extension to test methods for warnings"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"

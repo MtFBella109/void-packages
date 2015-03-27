@@ -3,6 +3,7 @@ pkgname=mate-applets
 version=1.28.1
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static --enable-ipv6 --libexecdir=/usr/libexec/mate"
 hostmakedepends="glib-devel itstool gettext pkg-config polkit libxml2"
 makedepends="gtksourceview4-devel libgtop-devel xorgproto
@@ -11,6 +12,17 @@ makedepends="gtksourceview4-devel libgtop-devel xorgproto
  mate-desktop-devel mate-icon-theme mate-settings-daemon-devel polkit-devel
  upower-devel libnl3-devel"
 depends="mate-icon-theme"
+=======
+configure_args="--with-gtk=2.0 --disable-static
+ --enable-networkmanager --enable-ipv6"
+hostmakedepends="pkg-config intltool itstool libxslt"
+makedepends="libSM-devel gtk+-devel libmate-panel-devel NetworkManager-devel
+ mate-desktop-devel mate-settings-daemon-devel libgtop-devel libwnck2-devel
+ upower0-devel polkit-devel libxml2-devel libmateweather-devel libnotify-devel
+ libcpufreq-devel gtksourceview2-devel python-gobject-devel mate-icon-theme"
+depends="python-gobject mate-icon-theme upower0"
+pycompile_module="mate_invest"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Applets for MATE panel"
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="GPL-2.0-or-later"

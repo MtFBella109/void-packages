@@ -1,5 +1,6 @@
 # Template file for 'gnote'
 pkgname=gnote
+<<<<<<< HEAD
 version=48.1
 revision=1
 build_style=meson
@@ -7,6 +8,15 @@ hostmakedepends="pkg-config gettext itstool
  desktop-file-utils gtk-update-icon-cache"
 makedepends="libsecret-devel libxslt-devel libuuid-devel gtkmm4-devel
  libxml2-devel libadwaita-devel"
+=======
+version=3.14.2
+revision=2
+lib32disabled=yes
+build_style=gnu-configure
+configure_args="--disable-schemas-compile --disable-static --with-x11-support --with-cxx11-support"
+hostmakedepends="pkg-config itstool intltool desktop-file-utils"
+makedepends="boost-devel libsecret-devel libxslt-devel libuuid-devel gtkmm-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils"
 checkdepends="glib-devel"
 short_desc="GNOME note taking application"

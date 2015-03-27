@@ -1,6 +1,19 @@
 # Template file for 'enchant'
 pkgname=enchant
+<<<<<<< HEAD
 version=1.4.2
+=======
+version=1.6.0
+revision=1
+build_style=gnu-configure
+configure_args="--disable-zemberek --disable-ispell"
+hostmakedepends="automake libtool pkg-config"
+makedepends="glib-devel aspell-devel hunspell-devel"
+short_desc="Generic spell checking library"
+homepage="http://www.abisource.com/projects/enchant/"
+license="LGPL-2.1"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 distfiles="http://www.abisource.com/downloads/enchant/$version/enchant-$version.tar.gz"
 build_style=gnu_configure
 configure_args="--disable-zemberek --disable-ispell"

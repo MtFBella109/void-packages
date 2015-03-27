@@ -3,10 +3,18 @@ pkgname=mono
 version=6.14.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-system-aot"
 hostmakedepends="perl python3 cmake which gettext"
 makedepends="zlib-devel libX11-devel libgdiplus-devel"
 depends="ca-certificates python3-Pillow"
+=======
+configure_args="--disable-static --disable-system-aot"
+# XXX: figure out how to split this up into subpkgs.
+hostmakedepends="libtool perl python"
+makedepends="zlib-devel libX11-devel libgdiplus-devel"
+depends="libgdiplus>=${version}"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Free implementation of the .NET platform including runtime and compiler"
 maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="MIT, BSD-3-Clause, GPL-2.0-or-later, LGPL-2.0-or-later, MPL-1.1"

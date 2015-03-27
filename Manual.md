@@ -477,16 +477,24 @@ need to be quoted, and by convention, they shouldn't be.
 - `hostmakedepends` The list of `host` dependencies required to build the package, and
 that will be installed to the master directory. There is no need to specify a version
 because the current version in srcpkgs will always be required.
+<<<<<<< HEAD
 Example: `hostmakedepends="foo blah"`.
+=======
+Example `hostmakedepends="foo blah"`.
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 - `makedepends` The list of `target` dependencies required to build the package, and that
 will be installed to the master directory. There is no need to specify a version
 because the current version in srcpkgs will always be required.
+<<<<<<< HEAD
 Example: `makedepends="foo blah"`.
 
 - `checkdepends` The list of dependencies required to run the package checks, i.e.
 the script or make rule specified in the template's `do_check()` function.
 Example: `checkdepends="gtest"`.
+=======
+Example `makedepends="foo blah"`.
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 - `depends` The list of dependencies required to run the package. These dependencies
 are not installed to the master directory, rather are only checked if a binary package

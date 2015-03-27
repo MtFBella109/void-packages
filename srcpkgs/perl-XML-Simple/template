@@ -5,7 +5,11 @@ version=2.25
 revision=2
 build_style=perl-module
 hostmakedepends="perl"
+<<<<<<< HEAD
 makedepends="${hostmakedepends} perl-XML-Parser perl-XML-SAX"
+=======
+makedepends="${hostmakedepends} expat perl-XML-Parser perl-XML-SAX"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="${makedepends}"
 short_desc="Easy Perl API to read/write XML"
 homepage="https://metacpan.org/release/XML-Simple"

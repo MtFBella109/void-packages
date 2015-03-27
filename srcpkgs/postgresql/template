@@ -30,8 +30,24 @@ long_desc="
  and correctness."
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
+<<<<<<< HEAD
 build_options="languages"
 desc_option_languages="Include procedural languages as dependency"
+=======
+hostmakedepends="flex docbook docbook2x openjade"
+makedepends="libfl-devel readline-devel libressl-devel perl
+ tcl-devel python-devel libxml2-devel libxslt-devel pam-devel"
+conf_files="
+	/etc/default/${pkgname}
+	/etc/pam.d/${pkgname}
+	/etc/${pkgname}/${pkgname}.conf"
+systemd_services="${pkgname}.service on"
+# Create 'postgres' user for the server.
+system_accounts="postgres"
+postgres_homedir="/var/lib/${pkgname}"
+postgres_shell="/bin/sh"
+postgres_descr="PostgreSQL database server user"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 if [ -z "$CROSS_BUILD" ]; then
 	build_options_default="languages"

@@ -3,6 +3,7 @@ pkgname=kcachegrind
 version=25.08.3
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
 hostmakedepends="extra-cmake-modules gettext kf6-kcoreaddons kf6-kdoctools kf6-kconfig
@@ -11,6 +12,12 @@ makedepends="kf6-karchive-devel kf6-kcoreaddons-devel kf6-kdoctools-devel
  kf6-kwidgetsaddons-devel kf6-kxmlgui-devel kf6-ki18n-devel kf6-kconfig-devel
  kf6-kio-devel kf6-kdbusaddons-devel"
 depends="python3 hicolor-icon-theme"
+=======
+configure_args="-Wno-dev -DKDE4_BUILD_TESTS=OFF"
+hostmakedepends="cmake automoc4 pkg-config"
+makedepends="boost-devel glib-devel libressl-devel qt-devel phonon-devel kdelibs-devel"
+depends="python hicolor-icon-theme"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Visualization of Performance Profiling Data"
 maintainer="Piotr Wójcik <chocimier@tlen.pl>"
 license="GPL-2.0-only, GFDL-1.2-only"

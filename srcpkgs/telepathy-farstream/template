@@ -7,11 +7,18 @@ build_style=gnu-configure
 build_helper="gir"
 configure_args="--disable-static $(vopt_enable gir introspection)"
 hostmakedepends="pkg-config intltool libxslt $(vopt_if gir gobject-introspection)"
+<<<<<<< HEAD
 makedepends="dbus-glib-devel telepathy-glib-devel farstream-devel vala-devel"
 =======
 configure_args="--disable-static"
 makedepends="pkg-config intltool vala-devel libxslt gobject-introspection dbus-glib-devel telepathy-glib-devel farstream-devel python-devel pygobject2-devel gst-python-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+makedepends="
+ dbus-glib-devel telepathy-glib-devel farstream-devel
+ python-devel python-gobject2-devel gst-python-devel vala-devel"
+replaces="telepathy-farsight>=0"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Telepathy library that uses Farstream to handle Call channels"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"

@@ -1,5 +1,6 @@
 # Template file for 'mongoose'
 pkgname=mongoose
+<<<<<<< HEAD
 version=7.6
 revision=2
 build_style=gnu-makefile
@@ -14,6 +15,18 @@ license="GPL-2.0-only"
 homepage="https://mongoose.ws/"
 distfiles="https://github.com/cesanta/mongoose/archive/${version}.tar.gz"
 checksum=1ef09d971b6de1a6317c109980d6fb5a9c19b39efef2506d6b76869644b3dafa
+=======
+version=3.7
+revision=7
+wrksrc=$pkgname
+makedepends="libressl-devel"
+short_desc="An Easy to use Web server"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="MIT"
+homepage="https://code.google.com/p/mongoose/"
+distfiles="https://mongoose.googlecode.com/files/mongoose-$version.tgz"
+checksum=8376ede0378b6dd80ded78953726e9d3c18a2a8fd1a52a03efe949fd09d2ea68
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 # -Wno-error=unused-function: patched tests leave some functions unused
 # -Wno-error=sign-conversion: GCC falsely flags musl FD_{SET,ISSET,CLR}

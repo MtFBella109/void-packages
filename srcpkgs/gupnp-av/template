@@ -14,8 +14,13 @@ homepage="http://gupnp.org/"
 distfiles="${GNOME_SITE}/$pkgname/0.10/$pkgname-$version.tar.xz"
 build_style=gnu-configure
 configure_args="--disable-static"
+<<<<<<< HEAD
 makedepends="pkg-config gobject-introspection gupnp-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="pkg-config"
+makedepends="gupnp-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Library to ease handling and implementation of UPnP A/V profiles"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -25,8 +30,24 @@ distfiles="${GNOME_SITE}/gupnp-av/${version%.*}/gupnp-av-${version}.tar.xz"
 checksum=b79ce0cc4b0c66d9c54bc22183a10e5709a0011d2af272025948efcab33a3e4f
 
 # Package build options
+<<<<<<< HEAD
 build_options="gir vala"
 build_options_default="gir vala"
+=======
+build_options="gir"
+
+# Disable gir for cross builds.
+if [ -z "$CROSS_BUILD" ]; then
+	build_options_default="gir"
+fi
+
+if [ "$build_option_gir" ]; then
+	configure_args+=" --enable-introspection"
+	makedepends+=" gobject-introspection vala-devel"
+else
+	configure_args+=" --disable-introspection"
+fi
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 <<<<<<< HEAD
 gupnp-av-devel_package() {

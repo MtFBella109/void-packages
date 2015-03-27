@@ -3,6 +3,10 @@ pkgname=pen
 version=0.34.1
 revision=8
 build_style=gnu-configure
+<<<<<<< HEAD
+=======
+makedepends="geoip-devel libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 configure_args="--with-docdir=/usr/share/doc/pen"
 makedepends="geoip-devel openssl-devel"
 short_desc="Load balancer for simple TCP/UDP based protocols"

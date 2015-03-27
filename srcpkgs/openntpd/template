@@ -5,7 +5,11 @@ revision=10
 build_style=gnu-configure
 configure_args="--with-privsep-user=openntpd --with-cacert=/etc/ssl/certs.pem"
 hostmakedepends="automake libtool"
+<<<<<<< HEAD
 makedepends="libtls-devel"
+=======
+makedepends="libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="ca-certificates"
 short_desc="FREE, easy to use implementation of the Network Time Protocol"
 maintainer="Orphaned <orphan@voidlinux.org>"

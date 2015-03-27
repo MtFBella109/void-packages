@@ -2,6 +2,7 @@
 pkgname=mpd
 version=0.24.5
 revision=3
+<<<<<<< HEAD
 build_style=meson
 configure_args="-Dopus=enabled -Dmikmod=enabled -Dneighbor=true
  -Dpipe=true -Dtwolame=enabled -Dbzip2=enabled
@@ -16,6 +17,25 @@ configure_args="-Dopus=enabled -Dmikmod=enabled -Dneighbor=true
  $(vopt_feature cdio cdio_paranoia) $(vopt_feature openal openal)
  $(vopt_feature shoutcast shout) $(vopt_feature io_uring io_uring)
  $(vopt_feature openmpt openmpt) $(vopt_feature pipewire pipewire)"
+=======
+build_style=gnu-configure
+configure_args="--enable-opus --enable-mikmod --enable-neighbor-plugins
+ --enable-soundcloud --enable-pipe-output --disable-twolame-encoder
+ --disable-sidplay --enable-bzip2 --enable-zzip $(vopt_enable jack)
+ $(vopt_enable lame lame-encoder) $(vopt_enable mpcdec mpc)
+ $(vopt_enable pulseaudio pulse) $(vopt_enable wavpack)
+ $(vopt_enable libao)"
+hostmakedepends="pkg-config"
+makedepends="
+ ffmpeg-devel libmodplug-devel libmad-devel libcurl-devel faad2-devel
+ sqlite-devel libmms-devel avahi-glib-libs-devel libid3tag-devel boost-devel
+ yajl-devel libogg-devel libflac-devel libsoup-devel bzip2-devel icu-devel
+ libmikmod-devel libsndfile-devel alsa-lib-devel mpg123-devel libsamplerate-devel
+ libcdio-paranoia-devel zziplib-devel libmpdclient-devel opus-devel samba-devel libnfs-devel
+ libupnp-devel $(vopt_if jack jack-devel) $(vopt_if lame lame-devel)
+ $(vopt_if mpcdec libmpcdec-devel) $(vopt_if pulseaudio pulseaudio-devel)
+ $(vopt_if wavpack wavpack-devel) $(vopt_if libao libao-devel)"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="/etc/mpd.conf"
 hostmakedepends="pkg-config python3-Sphinx"
 makedepends="avahi-glib-libs-devel faad2-devel ffmpeg6-devel

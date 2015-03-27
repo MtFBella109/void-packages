@@ -3,6 +3,7 @@ pkgname=tcpdump
 version=4.99.5
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 makedepends="libpcap-devel openssl-devel"
 checkdepends="perl"
 short_desc="Tool for network monitoring and data acquisition"
@@ -12,6 +13,16 @@ homepage="https://www.tcpdump.org"
 changelog="https://www.tcpdump.org/tcpdump-changes.txt"
 distfiles="https://www.tcpdump.org/release/${pkgname}-${version}.tar.gz"
 checksum=8c75856e00addeeadf70dad67c9ff3dd368536b2b8563abf6854d7c764cd3adb
+=======
+configure_args="--enable-ipv6 td_cv_buggygetaddrinfo=no"
+makedepends="libpcap-devel libressl-devel"
+short_desc="A tool for network monitoring and data acquisition"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="3-clause-BSD"
+homepage="http://www.tcpdump.org"
+distfiles="http://www.tcpdump.org/release/${pkgname}-${version}.tar.gz"
+checksum=1f87fb652ce996d41e7a06c601bc6ea29b13fee922945b23770c29490f1d8ace
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 post_install() {
 	vlicense LICENSE

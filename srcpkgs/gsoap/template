@@ -3,9 +3,14 @@ pkgname=gsoap
 version=2.8.124
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-ipv6"
 hostmakedepends="unzip flex autoconf automake libtool"
 makedepends="openssl-devel zlib-devel"
+=======
+hostmakedepends="unzip flex"
+makedepends="libressl-devel zlib-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Toolkit for SOAP and REST Web Services and XML-Based Applications"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-only"

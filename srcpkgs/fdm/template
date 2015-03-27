@@ -1,11 +1,20 @@
 # Template file for 'fdm'
 pkgname=fdm
+<<<<<<< HEAD
 version=2.2
 revision=3
 build_style=gnu-configure
 configure_args="ac_cv_func_strlcpy=no ac_cv_func_strlcat=no --enable-pcre2"
 hostmakedepends="automake bison"
 makedepends="zlib-devel openssl-devel tdb-devel pcre2-devel"
+=======
+version=1.8
+revision=4
+build_style=configure
+make_build_args="PCRE=1"
+hostmakedepends="bison"
+makedepends="zlib-devel libressl-devel tdb-devel pcre-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Program to fetch and deliver mail"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="ISC"

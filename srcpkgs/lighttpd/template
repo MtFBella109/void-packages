@@ -1,5 +1,6 @@
 # Template file for 'lighttpd'
 pkgname=lighttpd
+<<<<<<< HEAD
 version=1.4.79
 revision=1
 build_style=meson
@@ -22,6 +23,12 @@ homepage="https://lighttpd.net"
 distfiles="https://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-${version}.tar.xz"
 checksum=3b29a625b3ad88702d1fea4f5f42bb7d87488f2e4efc977d7f185329ca6084bd
 
+=======
+version=1.4.35
+revision=9
+makedepends="libmysqlclient-devel lua-devel libxml2-devel sqlite-devel gdbm-devel pcre-devel libressl-devel fcgi-devel"
+hostmakedepends="automake pkg-config pcre-devel libtool"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="/etc/lighttpd/lighttpd.conf"
 system_accounts="_lighttpd"
 _lighttpd_homedir="/srv/www/${pkgname}"

@@ -4,6 +4,7 @@ version=0.4.8.17
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="--enable-gpl"
 hostmakedepends="pkg-config"
 makedepends="libcap-devel libevent-devel libscrypt-devel libseccomp-devel liblzma-devel zlib-devel libzstd-devel"
@@ -19,6 +20,14 @@ checksum=79b4725e1d4b887b9e68fd09b0d2243777d5ce3cd471e538583bcf6f9d8cdb56
 =======
 makedepends="zlib-devel openssl-devel libevent-devel"
 fulldepends="ca-certificates tsocks"
+=======
+makedepends="zlib-devel libressl-devel libevent-devel libseccomp-devel"
+depends="ca-certificates tsocks"
+conf_files="/etc/tor/tor-tsocks.conf /etc/tor/torrc"
+system_accounts="tor"
+tor_homedir="/var/lib/tor"
+make_dirs="/var/lib/tor 0700 tor tor"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Anonymity Online"
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="BSD"

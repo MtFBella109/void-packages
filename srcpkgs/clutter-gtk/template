@@ -6,11 +6,18 @@ build_style=gnu-configure
 <<<<<<< HEAD
 build_helper="gir"
 configure_args="$(vopt_enable gir introspection)"
+<<<<<<< HEAD
 hostmakedepends="pkg-config intltool"
 makedepends="gtk+3-devel clutter-devel"
 short_desc="GTK+3 bindings for the Clutter Toolkit"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+hostmakedepends="pkg-config intltool $(vopt_if gir gobject-introspection)"
+makedepends="gtk+3-devel clutter-devel"
+short_desc="GTK+3 bindings for the Clutter Tolkit"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://clutter-project.org/"
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=521493ec038973c77edcb8bc5eac23eed41645117894aaee7300b2487cb42b06

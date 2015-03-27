@@ -1,6 +1,7 @@
 # Template file for 'mupdf'
 # Static library, revbump all dependants on mupdf updates
 pkgname=mupdf
+<<<<<<< HEAD
 version=1.24.9
 revision=2
 hostmakedepends="pkg-config zlib-devel libcurl-devel freetype-devel
@@ -9,6 +10,13 @@ hostmakedepends="pkg-config zlib-devel libcurl-devel freetype-devel
  MesaLib-devel libopenjpeg2-devel glu-devel libXi-devel libfreeglut-devel
  gumbo-parser-devel"
 makedepends="$hostmakedepends"
+=======
+version=1.6
+revision=3
+wrksrc="${pkgname}-${version}-source"
+hostmakedepends="pkg-config zlib-devel libcurl-devel freetype-devel libjpeg-turbo-devel jbig2dec-devel"
+makedepends="zlib-devel libressl-devel libcurl-devel freetype-devel libjpeg-turbo-devel jbig2dec-devel libXext-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils"
 short_desc="Lightweight PDF and XPS viewer"
 maintainer="cinerea0 <cinerea0@protonmail.com>"

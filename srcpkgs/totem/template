@@ -42,8 +42,33 @@ long_desc="
  a large number of file formats. It features :
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
+<<<<<<< HEAD
 pycompile_dirs="usr/lib/totem/plugins"
 python_version=3
+=======
+build_style=gnu-configure
+configure_args="--disable-static --disable-schemas-compile
+ --disable-python --enable-nautilus"
+
+hostmakedepends="pkg-config intltool gnome-doc-utils
+ itstool gobject-introspection"
+
+# XXX missing lirc plugin.
+makedepends="
+ gnutls-devel gst-plugins-base1-devel totem-pl-parser-devel
+ evolution-data-server-devel dbus-glib-devel zeitgeist-devel
+ clutter-gst-devel clutter-gtk-devel libSM-devel
+ libpeas-devel libXtst-devel grilo-devel libepc-devel vala-devel
+ gst-plugins-bad1-devel gsettings-desktop-schemas-devel
+ nautilus-devel gst-plugins-ugly1 gst-plugins-good1
+ gnome-desktop-devel"
+depends="grilo-plugins>=0.2.12 hicolor-icon-theme desktop-file-utils
+ gst-libav>=1:1.2.4 gst-plugins-ugly1>=1:1.2.4 gst-plugins-good1>=1:1.2.4"
+
+# XXX xulrunner plugin.
+# XXX reenable python plugin if pylint pkg exists.
+#pycompile_dirs="usr/lib/totem/plugins"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 libtotem_package() {
 	short_desc+=" - runtime library"

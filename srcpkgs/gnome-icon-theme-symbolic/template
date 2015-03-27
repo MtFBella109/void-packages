@@ -6,7 +6,11 @@ build_style=gnu-configure
 <<<<<<< HEAD
 configure_args="GTK_UPDATE_ICON_CACHE=/bin/true"
 hostmakedepends="pkg-config intltool icon-naming-utils"
+<<<<<<< HEAD
 makedepends="gnome-icon-theme icon-naming-utils"
+=======
+makedepends="gnome-icon-theme"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="gnome-icon-theme>=3.12"
 short_desc="GNOME Desktop icon theme (symbolic icons)"
 maintainer="Orphaned <orphan@voidlinux.org>"

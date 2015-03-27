@@ -4,6 +4,7 @@ version=0.0.29
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Requires bash!
 configure_args="ac_cv_path_BASH=/bin/bash"
 hostmakedepends="autoconf automake libxslt docbook-xsl"
@@ -11,6 +12,10 @@ depends="bash libxslt docbook-xsl"
 =======
 fulldepends="libxslt docbook-xsl coreutils grep"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="libxslt docbook-xsl"
+depends="${hostmakedepends}"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Tool to help transform XML documents into other formats"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"

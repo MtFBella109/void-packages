@@ -3,6 +3,7 @@ pkgname=kmix
 version=25.08.3
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DSYSCONF_INSTALL_DIR=/etc
  -DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
@@ -22,4 +23,16 @@ license="GPL-2.0-or-later, LGPL-2.0-or-later, GFDL-1.2-only"
 homepage="https://www.kde.org/applications/multimedia/kmix/"
 changelog="https://kde.org/announcements/changelogs/gear/${version}/#kmix"
 distfiles="${KDE_SITE}/release-service/${version}/src/kmix-${version}.tar.xz"
+<<<<<<< HEAD
 checksum=f8428c160adb68cd9fa00d36e9543ae4f44f364fd599327e7694ab633108f79c
+=======
+checksum=df911c7e393290ff087dd17baa223372626ea79861d3553e6f23058b180bfb81
+=======
+configure_args="-Wno-dev -DKDE4_BUILD_TESTS=OFF -DSYSCONF_INSTALL_DIR=/etc"
+
+hostmakedepends="cmake automoc4 pkg-config"
+makedepends="glib-devel libressl-devel qt-devel phonon-devel strigi-devel
+ kdelibs-devel kde-baseapps-devel
+ alsa-lib-devel pulseaudio-devel libcanberra-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+>>>>>>> 6358bb77850 (xbps-src: always require current srcpkgs version in build dependencies.)

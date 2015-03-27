@@ -4,8 +4,13 @@ version=1.5.0
 revision=1
 build_style=gnu-configure
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="libinput-devel xorg-server-devel"
 depends="virtual?xserver-abi-input-24_1"
+=======
+makedepends="xorg-server-devel libinput-devel"
+depends="virtual?xserver-abi-input-21_1"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Generic input driver for the X.Org server based on libinput"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"

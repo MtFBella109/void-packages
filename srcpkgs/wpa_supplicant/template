@@ -10,6 +10,7 @@ make_build_args="V=1 BINDIR=/usr/bin"
 make_install_args="BINDIR=/usr/bin"
 make_use_env=true
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="libnl3-devel openssl-devel $(vopt_if dbus dbus-devel)
  $(vopt_if readline readline-devel)"
 short_desc="WPA/WPA2/IEEE 802.1X Supplicant"
@@ -22,6 +23,11 @@ make_check=no # has no test suite
 build_options="dbus readline"
 build_options_default="dbus readline"
 conf_files="/etc/${pkgname}/${pkgname}.conf"
+=======
+makedepends="libnl3-devel libressl-devel dbus-devel readline-devel"
+conf_files="/etc/sv/wpa_supplicant/conf /etc/sv/wpa_supplicant/log/run /etc/${pkgname}/${pkgname}.conf"
+build_options="systemd"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 pre_build() {
 	cp -f ${FILESDIR}/config .config

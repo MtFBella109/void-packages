@@ -4,6 +4,7 @@ pkgname=libchamplain
 <<<<<<< HEAD
 version=0.12.21
 revision=1
+<<<<<<< HEAD
 build_style=meson
 build_helper="gir"
 configure_args="$(vopt_bool gir introspection) $(vopt_bool gir vapi)"
@@ -12,6 +13,16 @@ makedepends="libsoup3-devel gtk+3-devel clutter-gtk-devel sqlite-devel"
 =======
 version=0.12.2
 revision=2
+=======
+build_style=gnu-configure
+configure_args="$(vopt_enable gir introspection) --disable-static"
+hostmakedepends="pkg-config intltool glib-devel $(vopt_if gir gobject-introspection)"
+makedepends="libsoup-gnome-devel gtk+3-devel clutter-gtk-devel sqlite-devel"
+short_desc="Library aimed to provide a Clutter widget to display rasterized maps"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://projects.gnome.org/libchamplain/"
+license="LGPL-2.1"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 distfiles="${GNOME_SITE}/$pkgname/0.12/$pkgname-$version.tar.xz"
 build_style=gnu-configure
 configure_args="--disable-debug --disable-static"

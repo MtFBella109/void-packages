@@ -15,9 +15,15 @@ configure_args="--disable-static --enable-shared --enable-checkapop
  --with-mysql=${XBPS_CROSS_BASE}/usr
  ac_cv_gssapi_supports_spnego=yes"
 hostmakedepends="automake libtool groff pkg-config"
+<<<<<<< HEAD
 makedepends="libsasl-devel openssl-devel db-devel libldap-devel
  mit-krb5-devel pam-devel sqlite-devel postgresql-libs-devel
  libmariadbclient-devel"
+=======
+makedepends="libsasl-devel libressl-devel db-devel libldap-devel
+ mit-krb5-devel pam-devel sqlite-devel postgresql-libs-devel
+ libmysqlclient-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="libsasl>=${version}"
 =======
 configure_args="--with-saslauthd=/run/saslauthd

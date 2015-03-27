@@ -1,0 +1,17 @@
+# Template file for 'phonon-backend-gstreamer'
+pkgname=phonon-backend-gstreamer
+version=4.8.1
+revision=1
+lib32disabled=yes
+build_style=cmake
+hostmakedepends="cmake automoc4 pkg-config"
+makedepends="MesaLib-devel qt-devel phonon-devel gst-plugins-base1-devel gst-plugins-good1"
+depends="desktop-file-utils hicolor-icon-theme gst-plugins-good1 gst-libav"
+provides="phonon-backend-0_1"
+replaces="phonon-backend>=0"
+short_desc="Phonon GStreamer backend"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="LGPL-2.1"
+homepage="http://phonon.kde.org/"
+distfiles="http://download.kde.org/stable/phonon/${pkgname}/${version}/src/${pkgname}-${version}.tar.xz"
+checksum=631a724ad0bbaca3b85cb0f0b82d82e9bcb13498276a52299eb47582602f3b4f

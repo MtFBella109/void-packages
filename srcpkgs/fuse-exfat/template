@@ -3,9 +3,14 @@
 pkgname=fuse-exfat
 version=1.4.0
 revision=1
+<<<<<<< HEAD
 build_style=gnu-configure
 hostmakedepends="pkg-config exfat-utils"
 makedepends="fuse-devel"
+=======
+hostmakedepends="scons"
+makedepends="fuse-devel exfat-utils"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="exfat-utils>=${version}"
 short_desc="Free exFAT file system implementation"
 maintainer="Orphaned <orphan@voidlinux.org>"

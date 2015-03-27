@@ -6,7 +6,11 @@ revision=1
 build_style=gnu-configure
 configure_args="--enable-malloc0returnsnull"
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="xorgproto libXext-devel libXrender-devel"
+=======
+makedepends="randrproto libXext-devel libXrender-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="X RandR Library from X.org"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"

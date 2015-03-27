@@ -9,7 +9,11 @@ configure_args="--enable-nls
  ac_cv_lib_Xrender_XRenderCreatePicture=yes ac_cv_lib_Xpm_XpmReadFileToPixmap=yes
  ac_cv_lib_Xinerama_XineramaQueryScreens=yes ac_cv_lib_Xext_XShapeCombineShape=yes
  ac_cv_lib_Xrandr_XRRQueryExtension=yes ac_cv_lib_fribidi_fribidi_version_info=yes"
+<<<<<<< HEAD
 hostmakedepends="pkg-config automake libtool gettext gettext-devel"
+=======
+hostmakedepends="pkg-config"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="libSM-devel libXrender-devel libXft-devel libXpm-devel imlib2-devel
  libXext-devel libXinerama-devel libXrandr-devel fribidi-devel"
 short_desc="Highly configurable and low resource X11 Window manager"

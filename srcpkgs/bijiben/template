@@ -1,5 +1,6 @@
 # Template file for 'bijiben'
 pkgname=bijiben
+<<<<<<< HEAD
 version=40.1
 revision=6
 build_helper="gir"
@@ -8,6 +9,19 @@ hostmakedepends="itstool pkg-config gettext glib-devel"
 makedepends="clutter-gtk-devel evolution-devel tinysparql-devel
  libwebkit2gtk41-devel libhandy1-devel libcurl-devel"
 depends="desktop-file-utils tracker"
+=======
+version=3.14.2
+revision=1
+build_style=gnu-configure
+configure_args="--disable-update-mimedb"
+hostmakedepends="pkg-config intltool itstool gobject-introspection"
+makedepends="libuuid-devel webkitgtk-devel gnome-desktop-devel
+ gnome-online-accounts-devel tracker-devel
+ clutter-gtk-devel zeitgeist-devel
+ evolution-data-server-devel evolution-devel
+ enchant-devel gtkhtml-devel"
+depends="zeitgeist>=0.9.14 desktop-file-utils"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Intuitive note editor with strong GNOME desktop integration"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-3.0-or-later"

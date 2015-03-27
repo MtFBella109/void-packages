@@ -3,12 +3,21 @@ pkgname=dgen-sdl
 version=1.33
 revision=5
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="automake libtool pkg-config nasm"
 makedepends="sdl12-compat-devel libarchive-devel"
 short_desc="Multi-platform Genesis/Mega Drive Emulator"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause, GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="http://dgen.sourceforge.net"
+=======
+hostmakedepends="pkg-config nasm"
+makedepends="SDL-devel libarchive-devel "
+short_desc="Multi‐platform Genesis/Mega Drive Emulator"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="BSD, GPL-2, LGPL-2.1"
+homepage="http://dgen.sourceforget.net"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 distfiles="${SOURCEFORGE_SITE}/dgen/${pkgname}-${version}.tar.gz"
 checksum=99e2c06017c22873c77f88186ebcc09867244eb6e042c763bb094b02b8def61e
 

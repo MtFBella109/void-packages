@@ -3,11 +3,22 @@ pkgname=gnome-terminal
 <<<<<<< HEAD
 version=3.56.2
 revision=1
+<<<<<<< HEAD
 build_style=meson
 configure_args="-Dnautilus_extension=true -Db_ndebug=false -Db_lto=false"
 hostmakedepends="glib-devel gettext itstool pkg-config docbook-xsl libxslt"
 makedepends="dconf-devel gnome-shell gsettings-desktop-schemas-devel
  nautilus-devel vte3-devel libhandy1-devel"
+=======
+lib32disabled=yes
+build_style=gnu-configure
+configure_args="--disable-static --with-nautilus-extension --disable-migration"
+hostmakedepends="which pkg-config intltool itstool gnome-doc-utils appdata-tools
+ glib-devel"
+makedepends="gtk+3-devel vte3-devel dconf-devel libuuid-devel
+ gsettings-desktop-schemas-devel nautilus-devel gnome-shell
+ desktop-file-utils"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils"
 short_desc="GNOME terminal emulator application"
 maintainer="Enno Boland <gottox@voidlinux.org>"

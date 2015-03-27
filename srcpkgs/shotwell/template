@@ -1,6 +1,7 @@
 # Template file for 'shotwell'
 pkgname=shotwell
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=0.32.13
 revision=1
 build_style=meson
@@ -14,6 +15,23 @@ makedepends="gst-plugins-base1-devel
 depends="desktop-file-utils hicolor-icon-theme"
 =======
 version=0.12.3
+=======
+version=0.20.2
+revision=2
+lib32disabled=yes
+build_style=configure
+configure_args="--prefix=/usr --disable-schemas-compile --disable-desktop-update
+--disable-icon-update --release"
+hostmakedepends="pkg-config m4 desktop-file-utils gnome-doc-utils"
+makedepends="vala-devel libgee08-devel libraw-devel
+ libgphoto2-devel libgexiv2-devel libunique-devel rest-devel
+ sqlite-devel gtk+3-devel webkitgtk-devel libgudev-devel json-glib-devel
+ gst-plugins-base1-devel"
+depends="hicolor-icon-theme desktop-file-utils libgexiv2>=0.6.0"
+short_desc="Open source photo manager for GNOME"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="LGPL-2.1"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://yorba.org/shotwell"
 distfiles="http://yorba.org/download/shotwell/stable/$pkgname-$version.tar.bz2"
 build_style=gnu-configure

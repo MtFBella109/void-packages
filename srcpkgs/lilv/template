@@ -17,12 +17,19 @@ version=0.14.4
 revision=2
 build_style=waf
 configure_args="--dyn-manifest"
+<<<<<<< HEAD
 makedepends="pkg-config python serd-devel>=0.18.0 sord-devel
  sratom-devel>=0.4.0 lv2"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Lilv is a simple yet powerful C API for using LV2 plugins."
 maintainer="davehome <davehome@redthumb.info.tm>"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="pkg-config python"
+makedepends="python-devel serd-devel sord-devel sratom-devel lv2"
+short_desc="A simple yet powerful C API for using LV2 plugins"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 license="ISC"
 <<<<<<< HEAD
 homepage="https://gitlab.com/lv2/lilv"

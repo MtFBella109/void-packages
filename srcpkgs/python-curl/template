@@ -1,0 +1,44 @@
+# Template file for 'python-curl'
+pkgname=python-curl
+version=7.19.5.1
+revision=3
+wrksrc="pycurl-${version}"
+build_style=python-module
+python_versions="2.7 3.4"
+hostmakedepends="python-devel python3.4-devel"
+makedepends="libressl-devel libcurl-devel ${hostmakedepends}"
+pycompile_module="curl"
+short_desc="Python2 interface to cURL library"
+homepage="http://pycurl.sourceforge.net/"
+license="LGPL-2.1, MIT"
+maintainer="Juan RP <xtraeme@gmail.com>"
+distfiles="http://pycurl.sourceforge.net/download/pycurl-${version}.tar.gz"
+checksum=6e9770f80459757f73bd71af82fbb29cd398b38388cdf1beab31ea91a331bc6c
+
+CFLAGS="-fno-strict-aliasing"
+
+_doc_install() {
+	vmkdir usr/share/doc/${pkgname}
+	vcopy "examples AUTHORS ChangeLog README.rst RELEASE-NOTES.rst" usr/share/doc/${pkgname}
+	# install licenses
+	vlicense COPYING-LGPL
+	vlicense COPYING-MIT
+}
+
+post_install() {
+	# remove documentation as installed by setup.py
+	rm -rf ${DESTDIR}/usr/share/doc
+	_doc_install
+}
+
+python3.4-curl_package() {
+	pycompile_version="3.4"
+	pycompile_module="curl"
+	short_desc="${short_desc/Python2/Python3.4}"
+	pkg_install() {
+		vmove usr/lib/python3.4
+		cd ${wrksrc}
+		find . -name '*.py' -exec sed -i -e 's,#! /usr/bin/env python,&3.4,' {} +
+		_doc_install
+	}
+}

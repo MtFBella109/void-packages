@@ -12,6 +12,7 @@ configure_args="--disable-static"
 hostmakedepends="pkg-config"
 makedepends="libestr-devel"
 <<<<<<< HEAD
+<<<<<<< HEAD
 short_desc="Event expression library inspired by CEE"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
@@ -24,6 +25,8 @@ build_style=gnu-configure
 makedepends="pkg-config libestr-devel"
 =======
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+=======
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Event expression library inspired by CEE"
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="LGPL-2.1"

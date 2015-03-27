@@ -4,6 +4,7 @@ version=0.2.9
 revision=4
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 build_helper="gir"
 configure_args="--disable-valgrind --disable-static $(vopt_enable gir introspection)"
 hostmakedepends="automake libtool gettext pkg-config intltool
@@ -16,6 +17,13 @@ configure_args="--disable-valgrind --disable-debug --disable-static"
 depends="gst-python pygobject2 pygtk gst-plugins-good gst-plugins-bad"
 makedepends="pkg-config intltool libnice-devel gst-plugins-base-devel python-devel gst-python-devel pygobject2-devel gupnp-devel gobject-introspection"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+configure_args="--disable-valgrind --disable-static"
+hostmakedepends="pkg-config intltool python-devel gobject-introspection"
+makedepends="python-devel gupnp-igd-devel libnice-devel
+ gst-plugins-base1-devel gst-python-devel python-gobject2-devel"
+depends="gst-python pygtk gst-plugins-good1 gst-plugins-bad1"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GStreamer modules and libraries for videoconferencing"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"

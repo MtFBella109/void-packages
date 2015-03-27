@@ -4,6 +4,7 @@ version=14.0.2
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="--with-gts --with-ann=no"
 make_build_args="HOSTCC=$BUILD_CC"
 hostmakedepends="automake flex libltdl-devel libtool perl pkg-config python3"
@@ -15,6 +16,10 @@ checkdepends="${depends}"
 revision=3
 makedepends="flex pkg-config libpng-devel gd-devel expat-devel zlib-devel gd-devel gtk+-devel glib-devel pango-devel cairo-devel libX11-devel libXpm-devel jpeg-devel fontconfig-devel freetype-devel librsvg-devel atk-devel libXaw-devel libSM-devel libICE-devel libXt-devel libXmu-devel libXpm-devel libXext-devel libltdl-devel libXrender-devel qt-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+hostmakedepends="automake libtool flex pkg-config libltdl-devel"
+makedepends="libpng-devel gd-devel gtk+-devel librsvg-devel libltdl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Graph Visualization Software"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="EPL-1.0"

@@ -5,7 +5,11 @@ revision=3
 build_style=gnu-configure
 configure_args="--enable-sha1"
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="openssl-devel libnl3-devel popt-devel libnfnetlink-devel"
+=======
+makedepends="libressl-devel libnl3-devel popt-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Failover and monitoring daemon for LVS clusters"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"

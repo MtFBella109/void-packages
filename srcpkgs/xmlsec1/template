@@ -1,11 +1,22 @@
 # Template file for 'xmlsec1'
 pkgname=xmlsec1
+<<<<<<< HEAD
 version=1.3.7
 revision=1
 build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="libxslt-devel libltdl-devel libgcrypt-devel gnutls-devel
  nspr-devel nss-devel"
+=======
+version=1.2.20
+revision=3
+hostmakedepends="libtool pkg-config gnutls-devel"
+makedepends="libxslt-devel libltdl-devel libgcrypt-devel gnutls-devel"
+build_style="gnu-configure"
+maintainer="Enno Boland <eb@s01.de>"
+license="MIT"
+homepage="http://www.aleksey.com/xmlsec/"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="XML Security Library is a C library based on LibXML2"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"

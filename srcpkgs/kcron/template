@@ -3,13 +3,23 @@ pkgname=kcron
 version=25.08.3
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
 hostmakedepends="extra-cmake-modules gettext kf6-kcoreaddons kf6-kdoctools
  kf6-kauth-tools pkg-config qt6-base kf6-kcmutils"
+<<<<<<< HEAD
 makedepends="kf6-kio-devel kf6-kconfigwidgets-devel kf6-kauth-devel
  kirigami-addons-devel qt6-declarative-devel
  kf6-kcoreaddons-devel kf6-ki18n-devel kf6-kio-devel kf6-kcmutils-devel"
+=======
+makedepends="kf6-kio-devel kf6-kconfigwidgets-devel kf6-kauth-devel kf6-kcoreaddons-devel kf6-ki18n-devel kf6-kio-devel kf6-kcmutils-devel"
+=======
+configure_args="-Wno-dev -DKDE4_BUILD_TESTS=OFF -DSYSCONF_INSTALL_DIR=/etc"
+hostmakedepends="cmake automoc4 pkg-config"
+makedepends="glib-devel libressl-devel qt-devel phonon-devel kdelibs-devel kde-runtime-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+>>>>>>> 6358bb77850 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="KDE Configure and schedule tasks"
 maintainer="Piotr Wójcik <chocimier@tlen.pl>"
 license="GPL-2.0-or-later"

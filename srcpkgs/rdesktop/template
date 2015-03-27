@@ -3,6 +3,7 @@ pkgname=rdesktop
 version=1.9.0
 revision=3
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--with-ipv6 --with-sound=alsa"
 hostmakedepends="pkg-config automake"
 makedepends="alsa-lib-devel libsamplerate-devel libXrandr-devel
@@ -11,6 +12,14 @@ makedepends="alsa-lib-devel libsamplerate-devel libXrandr-devel
 short_desc="Open source client for Windows Remote Desktop Services"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
+=======
+configure_args="--with-ipv6 --with-sound=alsa --with-openssl=${XBPS_CROSS_BASE}/usr"
+hostmakedepends="pkg-config"
+makedepends="libressl-devel alsa-lib-devel libsamplerate-devel libXrandr-devel pcsclite-devel libgssglue-devel"
+short_desc="An open source client for Windows Remote Desktop Services"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://www.rdesktop.org/"
 distfiles="https://github.com/rdesktop/rdesktop/releases/download/v${version}/rdesktop-${version}.tar.gz"
 checksum=473c2f312391379960efe41caad37852c59312bc8f100f9b5f26609ab5704288

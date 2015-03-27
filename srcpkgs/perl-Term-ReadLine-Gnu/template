@@ -4,7 +4,12 @@ version=1.42
 revision=5
 build_style=perl-module
 hostmakedepends="perl ncurses-devel readline-devel"
+<<<<<<< HEAD
 makedepends="$hostmakedepends"
+=======
+makedepends="${hostmakedepends}"
+depends="perl>=5.20"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Perl extension for the GNU readline/history library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"

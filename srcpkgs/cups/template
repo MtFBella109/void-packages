@@ -27,11 +27,27 @@ homepage="https://github.com/OpenPrinting/cups"
 distfiles="https://github.com/OpenPrinting/cups/releases/download/v${version}/cups-${version}-source.tar.gz"
 checksum=8255ecf037be72660de24a73bcada042fc5bf509fc87bc8ad16cd0675735c1a8
 
+<<<<<<< HEAD
 if [ "$XBPS_TARGET_LIBC" = "glibc" ]; then
 	makedepends+=" libxcrypt-devel"
 fi
 
 conf_files="/etc/pam.d/cups /etc/cups/*.conf /etc/xinetd.d/cups-lpd"
+=======
+hostmakedepends="automake pkg-config poppler-utils gnutls-devel avahi-libs-devel"
+makedepends="acl-devel libjpeg-turbo-devel libpng-devel tiff-devel
+ gnutls-devel pam-devel poppler-devel libusb-devel avahi-libs-devel
+ $(vopt_if systemd systemd-devel)"
+depends="xdg-utils"
+conf_files="
+	/etc/cups/cupsd.conf
+	/etc/cups/snmp.conf
+	/etc/cups/printers.conf
+	/etc/cups/classes.conf
+	/etc/cups/subscriptions.conf
+	/etc/dbus-1/system.d/cups.conf
+	/etc/pam.d/cups"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 make_dirs="
  /usr/lib/cups/driver 0755 root root
  /var/log/cups 0750 root root

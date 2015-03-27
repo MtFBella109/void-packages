@@ -12,11 +12,16 @@ configure_args="--enable-cairo=yes --enable-cogl-pango=yes
 hostmakedepends="automake libtool gettext gettext-devel pkg-config intltool
  glib-devel gobject-introspection gtk-doc"
 makedepends="libXcomposite-devel libXrandr-devel MesaLib-devel pango-devel
+<<<<<<< HEAD
  gdk-pixbuf-devel wayland-devel libXdamage-devel"
 =======
 configure_args="--enable-introspection"
 makedepends="pkg-config intltool gobject-introspection libXcomposite-devel libXdamage-devel pango-devel gdk-pixbuf-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+ gdk-pixbuf-devel gst-plugins-base1-devel wayland-devel"
+depends="gst-plugins-base1>=1:1.2.0"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Library for using 3D graphics hardware for rendering"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"

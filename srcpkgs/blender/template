@@ -1,5 +1,6 @@
 # Template file for 'blender'
 pkgname=blender
+<<<<<<< HEAD
 version=4.4.3
 revision=1
 archs="x86_64* aarch64* ppc64*"
@@ -27,6 +28,17 @@ makedepends="libgomp-devel libpng-devel tiff-devel python3-devel glu-devel
  wayland-protocols wayland-devel libxkbcommon-devel libdecor-devel
  libspnav-devel libwebp-devel potrace-devel Haru-devel openxr-devel
  pipewire-devel pulseaudio-devel eigen lzo-devel vulkan-loader-devel shaderc"
+=======
+version=2.73a
+revision=2
+hostmakedepends="cmake"
+# XXX missing deps: openimageio, opencolorio
+makedepends="
+ libgomp-devel libpng-devel tiff-devel python3.4-devel glu-devel
+ glew-devel freetype-devel jack-devel libopenal-devel libsndfile-devel
+ libsamplerate-devel ffmpeg-devel fftw-devel boost-devel pcre-devel llvm
+ libopenexr-devel libopenjpeg-devel libXi-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils hicolor-icon-theme"
 short_desc="3D graphics creation suite"
 maintainer="Enno Boland <gottox@voidlinux.org>"

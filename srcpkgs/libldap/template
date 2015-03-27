@@ -7,6 +7,20 @@ version=2.4.33
 revision=2
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 wrksrc="openldap-${version}"
+<<<<<<< HEAD
+=======
+build_style=gnu-configure
+configure_args="--enable-dynamic --enable-proctitle --with-tls
+ --enable-ipv6 --enable-local --with-cyrus-sasl --with-threads
+ --enable-syslog --disable-slapd --disable-static
+ --with-yielding_select=yes"
+hostmakedepends="pkg-config groff automake libtool"
+makedepends="libressl-devel libsasl-devel"
+conf_files="/etc/openldap/ldap.conf" 
+short_desc="OpenLDAP (Lightweight Directory Access Protocol) libraries"
+license="OpenLDAP License v2.8 - BSD alike"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://www.openldap.org"
 distfiles="ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/openldap-$version.tgz"
 build_style=gnu-configure

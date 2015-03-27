@@ -3,6 +3,7 @@ pkgname=libgit2
 version=1.7.2
 revision=2
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DENABLE_REPRODUCIBLE_BUILDS=ON -DBUILD_CLI=OFF -DUSE_SSH=ON -DUSE_HTTP_PARSER=system"
 hostmakedepends="python3 pkg-config"
 makedepends="zlib-devel openssl-devel http-parser-devel libssh2-devel"
@@ -12,6 +13,14 @@ license="custom:GPL-2.0-or-later WITH GCC-exception-2.0"
 homepage="https://libgit2.org"
 distfiles="https://github.com/libgit2/libgit2/archive/refs/tags/v${version}.tar.gz"
 checksum=de384e29d7efc9330c6cdb126ebf88342b5025d920dcb7c645defad85195ea7f
+=======
+hostmakedepends="cmake python git"
+makedepends="zlib-devel libressl-devel"
+short_desc="The Git linkable library"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://libgit2.github.com/"
+license="GPL-2 with Linking Exception"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 if [ "$XBPS_CHECK_PKGS" ]; then
 	configure_args+=" -DBUILD_TESTS=ON"

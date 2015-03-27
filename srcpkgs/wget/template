@@ -5,7 +5,14 @@ version=1.25.0
 revision=1
 <<<<<<< HEAD
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="$(vopt_if ssl '--with-ssl=openssl') $(vopt_if gnutls '--with-ssl=gnutls')"
+=======
+configure_args="--with-ssl=openssl"
+hostmakedepends="perl pkg-config"
+makedepends="libressl-devel libidn-devel libuuid-devel pcre-devel"
+depends="ca-certificates"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="/etc/wgetrc"
 hostmakedepends="perl pkg-config"
 makedepends="libidn2-devel zlib-devel libuuid-devel pcre2-devel

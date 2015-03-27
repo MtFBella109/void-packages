@@ -5,12 +5,21 @@ revision=1
 build_style=configure
 make_check_target=test
 configure_script="perl Configure.pl"
+<<<<<<< HEAD
 configure_args="--prefix=/usr --backends=moar"
 hostmakedepends="git perl"
 makedepends="MoarVM libffi-devel libtommath-devel libuv-devel mimalloc-devel"
 depends="MoarVM-${version%.*}_${revision}"
 short_desc="Lightweight Raku-like environment for virtual machines"
 maintainer="Andy Weidenbaum <atweiden@tutanota.de>"
+=======
+configure_args="--prefix=/usr/lib/perl6 --backends=moar"
+hostmakedepends="perl moarvm"
+makedepends="${hostmakedepends}"
+short_desc="Not Quite Perl, a lightweight Perl 6-like environment for VMs"
+maintainer="Ruslan <axetwe@gmail.com>"
+homepage="http://github.com/perl6/nqp"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 license="Artistic-2.0"
 homepage="https://github.com/Raku/nqp"
 distfiles="https://rakudo.org/dl/nqp/nqp-${version}.tar.gz"

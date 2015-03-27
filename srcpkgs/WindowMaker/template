@@ -8,8 +8,13 @@ configure_args="--enable-xinerama --localedir=/usr/share/locale
  --disable-static LINGUAS=*"
 hostmakedepends="automake libtool gettext pkg-config"
 makedepends="libXinerama-devel libXrandr-devel libXmu-devel libXpm-devel
+<<<<<<< HEAD
  libXft-devel libpng-devel tiff-devel giflib-devel fontconfig-devel
  libexif-devel"
+=======
+ libXpm-devel libXft-devel libpng-devel tiff-devel giflib-devel
+ fontconfig-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="
  /etc/WindowMaker/WindowMaker
  /etc/WindowMaker/WMRootMenu

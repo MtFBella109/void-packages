@@ -4,6 +4,7 @@ version=1.09
 revision=3
 build_style=perl-module
 <<<<<<< HEAD
+<<<<<<< HEAD
 hostmakedepends="perl"
 makedepends="$hostmakedepends"
 depends="$makedepends"
@@ -15,6 +16,12 @@ distfiles="${CPAN_SITE}/XML/${pkgname#perl-}-${version}.tar.gz"
 checksum=66cb355ba4ef47c10ca738bd35999723644386ac853abbeb5132841f5e8a2ad0
 =======
 fulldepends="perl"
+=======
+hostmakedepends="perl"
+makedepends="${hostmakedepends}"
+depends="${makedepends}"
+noarch="yes"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Perl Base class SAX Drivers and Filters"
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://search.cpan.org/dist/XML-SAX-Base"

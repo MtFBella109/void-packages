@@ -4,6 +4,7 @@ version=2.0.9
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="--disable-static --disable-maintainer-mode"
 hostmakedepends="pkg-config gettext"
 makedepends="gtk+3-devel lightdm-devel libayatana-appindicator-devel
@@ -14,6 +15,15 @@ configure_args="--disable-static"
 depends="lightdm"
 makedepends="pkg-config intltool glib-devel gtk+3-devel lightdm-devel libxklavier-devel"
 short_desc="Light Display Manager GTK+ Greeter"
+=======
+configure_args="--disable-static --with-gtk2"
+hostmakedepends="pkg-config intltool"
+makedepends="gtk+-devel lightdm-devel libxklavier-devel"
+depends="lightdm hicolor-icon-theme"
+conf_files="/etc/lightdm/lightdm-gtk-greeter.conf"
+conflicts="lightdm-gtk3-greeter>=0"
+short_desc="Light Display Manager GTK+ Greeter (GTK+ 2.x)"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="GPL-3, LGPL-3"
 checksum=e3e56997e200d6c3447d53b5e322ae5a478a99a71522e6b6babf421cbf6396ba

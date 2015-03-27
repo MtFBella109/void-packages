@@ -3,6 +3,7 @@ pkgname=kdegraphics-thumbnailers
 version=25.08.3
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DQT_MAJOR_VERSION=6 -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
 hostmakedepends="extra-cmake-modules kf6-kcoreaddons kf6-kconfig qt6-base
  pkg-config gettext"
@@ -21,3 +22,14 @@ kdegraphics-mobipocket_package() {
 	depends="${sourcepkg}>=${version}_${revision}"
 	metapackage=yes
 }
+=======
+configure_args="-Wno-dev -DKDE4_BUILD_TESTS=OFF"
+hostmakedepends="cmake automoc4 pkg-config"
+makedepends="glib-devel libressl-devel qt-devel phonon-devel kdelibs-devel libkexiv2-devel libkdcraw-devel"
+short_desc="KDE Thumbnailers for various graphics file formats"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL, LGPL, FDL"
+homepage="https://projects.kde.org/projects/kde/kdegraphics/kdegraphics-thumbnailers"
+distfiles="http://download.kde.org/stable/${version}/src/${pkgname}-${version}.tar.xz"
+checksum=f37f5375f9d894b42cf61a645d498a943b92987adb3251a0d8e83a4d221f4d52
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)

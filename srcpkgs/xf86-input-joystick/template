@@ -4,8 +4,13 @@ version=1.4.99.2
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
 build_style=gnu-configure
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="xorg-server-devel>=1.15<1.16"
 depends="xserver-abi-input-20_1"
+=======
+makedepends="xorg-server-devel"
+depends="virtual?xserver-abi-input-21_1"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Joystick Input driver for Xorg"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=7224e93a8560362d454a104e8bb481213dcb559b41516c7b883c0881e25252bb

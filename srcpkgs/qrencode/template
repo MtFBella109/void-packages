@@ -3,7 +3,11 @@ pkgname=qrencode
 version=4.1.1
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="automake libtool pkg-config"
+=======
+hostmakedepends="pkg-config"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="libpng-devel"
 short_desc="Library for encoding data in a QR Code symbol"
 maintainer="Orphaned <orphan@voidlinux.org>"

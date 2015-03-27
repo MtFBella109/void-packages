@@ -5,8 +5,14 @@ revision=1
 build_style=gnu-configure
 configure_args="--enable-openal --disable-sdlmixer --disable-glpng"
 <<<<<<< HEAD
+<<<<<<< HEAD
 hostmakedepends="gettext pkg-config"
 makedepends="libICE-devel libXmu-devel ftgl-devel fontconfig-devel SDL_image-devel libopenal-devel freealut-devel"
+=======
+hostmakedepends="pkg-config"
+makedepends="ftgl-devel fontconfig-devel SDL-devel
+ SDL_image-devel libopenal-devel freealut-devel desktop-file-utils"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils"
 =======
 makedepends="MesaLib-devel ftgl-devel fontconfig-devel SDL-devel SDL_image-devel libopenal-devel freealut-devel"

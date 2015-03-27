@@ -4,6 +4,7 @@ pkgname=xfsprogs
 version=6.14.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-editline=yes --enable-lib64=no --libdir=/usr/lib
  --enable-lto"
 hostmakedepends="gettext pkg-config"
@@ -11,6 +12,15 @@ makedepends="libblkid-devel libedit-devel inih-devel liburcu-devel
  libuuid-devel"
 =======
 version=3.1.8
+=======
+configure_args="--bindir=/usr/bin --sbindir=/usr/bin --enable-readline=yes --enable-blkid=yes --enable-lib64=no"
+hostmakedepends="libuuid-devel"
+makedepends="libuuid-devel libblkid-devel readline-devel"
+replaces="xfsprogs-libs>=0"
+short_desc="Utilities for managing the XFS filesystem"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="LGPL-2.1"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://oss.sgi.com/projects/xfs/"
 distfiles="ftp://ftp.archlinux.org/other/xfsprogs/$pkgname-$version.tar.gz"
 makedepends="libuuid-devel libblkid-devel readline-devel"

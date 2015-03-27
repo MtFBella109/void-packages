@@ -1,5 +1,6 @@
 # Template file for 'xfce4-notifyd'
 pkgname=xfce4-notifyd
+<<<<<<< HEAD
 version=0.9.7
 revision=1
 <<<<<<< HEAD
@@ -8,6 +9,13 @@ configure_args="-Ddbus-start-daemon=true"
 hostmakedepends="pkg-config glib-devel dbus-glib-devel gettext"
 makedepends="libnotify-devel xfce4-panel-devel sqlite-devel wayland-devel
  libcanberra-devel gtk-layer-shell-devel libglib-devel"
+=======
+version=0.2.4
+revision=4
+build_style=gnu-configure
+hostmakedepends="pkg-config intltool glib-devel dbus-glib-devel"
+makedepends="libnotify-devel libxfce4ui-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme desktop-file-utils"
 =======
 distfiles="http://archive.xfce.org/src/apps/$pkgname/0.2/$pkgname-$version.tar.bz2"

@@ -2,6 +2,7 @@
 pkgname=zathura
 version=0.5.13
 revision=1
+<<<<<<< HEAD
 build_style=meson
 configure_args="-Dsynctex=enabled"
 hostmakedepends="pkg-config gettext python3-Sphinx desktop-file-utils
@@ -27,6 +28,20 @@ if [ "$XBPS_TARGET_LIBC" = musl ]; then
 	CPPFLAGS="-D__NR_landlock_create_ruleset=444 -D__NR_landlock_add_rule=445 \
 			-D__NR_landlock_restrict_self=446"
 fi
+=======
+build_style=gnu-makefile
+# COLOR=0 to avoid "tput not found" spam in the build output
+make_build_args="COLOR=0"
+make_install_args="COLOR=0"
+maintainer="Dominik Honnef <dominik@honnef.co>"
+hostmakedepends="pkg-config intltool"
+makedepends="girara-devel sqlite-devel file-devel zlib-devel"
+license="zlib"
+homepage="http://pwmt.org/projects/zathura/installation/"
+short_desc="A highly customizable and functional document viewer"
+distfiles="http://pwmt.org/projects/${pkgname}/download/${pkgname}-${version}.tar.gz"
+checksum=fda6503dc5b21f7c667301798fbd2c978897e68b4555e8c731945cecd9d165e2
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 post_install() {
 	vlicense LICENSE

@@ -43,6 +43,20 @@ colord_homedir="/var/lib/colord"
 make_dirs="
  /var/lib/colord 0755 colord colord
  /var/lib/colord/icc 0755 colord colord"
+<<<<<<< HEAD
+=======
+short_desc="System daemon for managing color devices"
+maintainer="Juan RP <xtraeme@gmail.com>"
+homepage="http://www.freedesktop.org/software/colord"
+license="GPL-2"
+distfiles="$homepage/releases/$pkgname-$version.tar.xz"
+checksum=48ce0db4f327c94c2bec11fed98a9a73f580d34c6edcd636d90831fe3bea5ae4
+
+hostmakedepends="pkg-config intltool docbook2x gobject-introspection"
+makedepends="vala-devel libgudev-devel polkit-devel lcms2-devel dbus-devel
+ libusb-devel libgusb-devel sqlite-devel sane-devel libudev-devel
+ $(vopt_if systemd systemd-devel) bash-completion"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" colord"

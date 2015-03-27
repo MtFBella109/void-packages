@@ -8,6 +8,7 @@ build_style=cmake
 configure_args="-DWEBP_BUILD_EXTRAS=OFF -DWEBP_BUILD_VWEBP=OFF
  -DBUILD_SHARED_LIBS=ON -DCMAKE_SKIP_INSTALL_RPATH=ON"
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="giflib-devel libpng-devel libfreeglut-devel
  $(vopt_if tiff tiff-devel)"
 =======
@@ -20,6 +21,9 @@ configure_args="--disable-static"
 hostmakedepends="automake libtool"
 makedepends="libjpeg-turbo-devel libpng-devel>=1.5.10 tiff-devel"
 subpackages="$pkgname-devel"
+=======
+makedepends="libjpeg-turbo-devel libpng-devel tiff-devel giflib-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="WebP image format"
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://code.google.com/speed/webp/"

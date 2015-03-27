@@ -9,12 +9,22 @@ hostmakedepends="pkg-config glib-devel dbus xvfb-run gtk4"
 makedepends="readline-devel mozjs${version%%.*}-devel gtk4-devel"
 # depends="gtk+3"
 short_desc="Javascript for Cinnamon"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.0-or-later"
 homepage="https://github.com/linuxmint/cjs"
 distfiles="https://github.com/linuxmint/cjs/archive/refs/tags/${version}.tar.gz"
 checksum=d3432dd2722eef65b4a36db430824882b3bd90b4db469f576ff087d045e022ca
 make_check_pre="xvfb-run"
+=======
+build_style=gnu-configure
+configure_args="--disable-static"
+hostmakedepends="automake libtool gnome-common pkg-config gobject-introspection git glib-devel"
+makedepends="mozjs24-devel dbus-glib-devel readline-devel"
+maintainer="Juan RP <xtraeme@gmail.com>"
+license="GPL-3"
+homepage="http://cinnamon.linuxmint.com/"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
 pre_configure() {
 	# The deleted lines in meson.build try to build and run a simple program,

@@ -26,6 +26,7 @@ checkdepends="check-devel"
 version=3.4.1
 distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-schemas-compile --disable-scrollkeeper
 --with-at-spi-registryd-directory=/usr/libexec --without-tcp-wrappers
 --disable-static --without-systemd --with-console-kit"
@@ -42,6 +43,18 @@ changelog="https://gitlab.gnome.org/GNOME/gdm/-/raw/main/NEWS"
 distfiles="${GNOME_SITE}/gdm/${version%%.*}/gdm-${version}.tar.xz"
 checksum=1bc06daff093ec7b5e37ecb4f92e5da3474a1b1ba076edb9151ee967d1c30adf
 
+=======
+configure_args="$(vopt_enable gir introspection)
+ --disable-schemas-compile --disable-static --with-default-pam-config=arch
+ --with-at-spi-registryd-directory=/usr/libexec --without-tcp-wrappers
+ --with-screenshot-dir=/var/lib/gdm/greeter
+ --with-xauth-dir=/run/gdm --with-pid-file=/run/gdm/gdm.pid"
+hostmakedepends="automake libtool pkg-config itstool intltool gnome-doc-utils
+ $(vopt_if gir gobject-introspection)"
+makedepends="glib-devel iso-codes
+ pam-devel nss-devel accountsservice-devel gtk+3-devel upower-devel
+ libSM-devel libcanberra-devel dconf"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="
 	/etc/gdm/custom.conf
 	/etc/pam.d/gdm-autologin

@@ -1,11 +1,20 @@
 # Template file for 'lua'
 pkgname=lua
+<<<<<<< HEAD
 version=5.1.5
 patch_args="-Np1"
 distfiles="http://www.lua.org/ftp/$pkgname-$version.tar.gz"
 makedepends="ncurses-devel readline-devel"
 short_desc="Lua is a powerful, fast, lightweight, embeddable scripting language."
 maintainer="Robert Djubek <envy1988@gmail.com>"
+=======
+version=5.2.4
+revision=1
+build_pie=yes
+makedepends="ncurses-devel readline-devel"
+short_desc="Powerful, fast, lightweight, embeddable scripting language"
+maintainer="Juan RP <xtraeme@gmail.com>"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://www.lua.org"
 license="MIT"
 checksum=2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333

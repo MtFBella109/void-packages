@@ -34,9 +34,17 @@ case "$XBPS_MACHINE" in
 	x86_64*|i686|ppc64le*|ppc64) build_options_default+=" man" ;;
 esac
 
+<<<<<<< HEAD
 if [ $build_option_man ]; then
 	configure_args=" -Dmanpages=true"
 	hostmakedepends+=" pandoc"
+=======
+if [ "$build_option_gir" ]; then
+	configure_args+=" --enable-introspection"
+	makedepends+=" gobject-introspection vala-devel"
+else
+	configure_args+=" --disable-introspection"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 fi
 
 gssdp-devel_package() {

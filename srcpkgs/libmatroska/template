@@ -3,6 +3,7 @@ pkgname=libmatroska
 <<<<<<< HEAD
 version=1.7.1
 revision=1
+<<<<<<< HEAD
 build_style=cmake
 configure_args="-DBUILD_SHARED_LIBS=ON"
 =======
@@ -23,6 +24,10 @@ changelog="https://raw.githubusercontent.com/Matroska-Org/libmatroska/master/NEW
 distfiles="https://github.com/Matroska-Org/libmatroska/archive/refs/tags/release-${version}.tar.gz"
 checksum=64763443947833e6c17f1f555f4bb0df6c9f91881810d9d5e0f0bad3622d308b
 =======
+=======
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="libebml-devel"
 short_desc="Extensible open standard Audio/Video container format"
 maintainer="Juan RP <xtraeme@gmail.com>"

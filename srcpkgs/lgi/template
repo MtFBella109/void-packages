@@ -3,7 +3,12 @@ pkgname=lgi
 version=0.6.2
 revision=2
 build_style=gnu-makefile
+<<<<<<< HEAD
 makedepends="glib-devel libffi-devel lua-devel>=5.1<5.2
+=======
+hostmakedepends="pkg-config git"
+makedepends="libglib-devel libffi-devel lua-devel
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
  gobject-introspection gir-freedesktop"
 short_desc="Lua binadings for gnome/gobject using gobject-introspection library"
 maintainer="Juan RP <xtraeme@gmail.com>"

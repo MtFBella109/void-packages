@@ -6,7 +6,11 @@ build_style=gnu-configure
 configure_args="--disable-static --enable-experimental
  --disable-python --enable-kernel-switch"
 hostmakedepends="automake libtool"
+<<<<<<< HEAD
 makedepends="libpcap-devel openssl-devel"
+=======
+makedepends="libpcap-devel libressl-devel"
+>>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="
 	/etc/vde2/vdecmd
 	/etc/vde2/libvdemgmt/asyncrecv.rc
