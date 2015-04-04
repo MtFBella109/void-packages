@@ -1,3 +1,6 @@
 #!/bin/sh
+<<<<<<< HEAD
 exec 2>&1
+=======
+>>>>>>> ecd299e7a88 (pulseaudio: add systemwide service)
 exec pulseaudio --system

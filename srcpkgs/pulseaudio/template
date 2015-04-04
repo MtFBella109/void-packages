@@ -1,6 +1,7 @@
 # Template file for 'pulseaudio'
 pkgname=pulseaudio
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=16.1
 revision=2
 build_style=meson
@@ -33,6 +34,12 @@ make_check=no
 version=2.0
 revision=3
 distfiles="$FREEDESKTOP_SITE/$pkgname/releases/$pkgname-$version.tar.xz"
+=======
+version=6.0
+revision=4
+# Package build options
+build_options="systemd"
+>>>>>>> ecd299e7a88 (pulseaudio: add systemwide service)
 build_style=gnu-configure
 configure_args="--disable-oss-output --disable-oss-wrapper --disable-tcpwrap
 <<<<<<< HEAD
@@ -65,12 +72,21 @@ short_desc="A featureful, general-purpose sound server"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.freedesktop.org/wiki/Software/PulseAudio"
 license="LGPL-2"
+<<<<<<< HEAD
 checksum=28b42edd42f4879a6884af5f0ec11801ac001eb7582881215b36649aa37e2061
 long_desc="
  PulseAudio, previously known as Polypaudio, is a sound server for POSIX and
  WIN32 systems. It is a drop in replacement for the ESD sound server with much
  better latency, mixing/re-sampling quality and overall architecture.
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+system_groups="pulse-access"
+system_accounts="pulse"
+pulse_groups="audio"
+pulse_homedir="/var/run/pulse"
+distfiles="${FREEDESKTOP_SITE}/${pkgname}/releases/${pkgname}-${version}.tar.xz"
+checksum=b50640e0b80b1607600accfad2e45aabb79d379bf6354c9671efa2065477f6f6
+>>>>>>> ecd299e7a88 (pulseaudio: add systemwide service)
 
 system_groups="pulse-access"
 system_accounts="pulse"
@@ -113,10 +129,18 @@ conf_files="
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 
 post_install() {
+<<<<<<< HEAD
 	rm ${DESTDIR}/etc/dbus-1/system.d/pulseaudio-system.conf
 	vmkdir usr/share/examples/pulseaudio/sv/
 	vcopy ${FILESDIR}/pulseaudio usr/share/examples/pulseaudio/sv/
 	vdoc $FILESDIR/README.voidlinux
+=======
+	rm -f ${DESTDIR}/etc/dbus-1/system.d/pulseaudio-system.conf
+	vmkdir usr/share/bash-completion/completions
+	mv ${DESTDIR}/etc/bash_completion.d/* \
+		${DESTDIR}/usr/share/bash-completion/completions
+	vsv pulseaudio
+>>>>>>> ecd299e7a88 (pulseaudio: add systemwide service)
 }
 
 libpulseaudio_package() {
