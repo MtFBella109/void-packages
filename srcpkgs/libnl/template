@@ -9,6 +9,7 @@ revision=5
 build_style=gnu-configure
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Library for applications dealing with netlink sockets"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 distfiles="ftp://ftp.archlinux.org/other/libnl/${pkgname}-${version}.tar.gz"
 checksum=35cea4cfb6cd8af0cafa0f34fff81def5a1f193b8b8384299b4b21883e22edc3
@@ -16,6 +17,13 @@ long_desc="
  libnl is a library for applications dealing with netlink sockets.
  The library provides an interface for raw netlink messaging and various
  netlink family specific interfaces."
+=======
+homepage="http://www.infradead.org/~tgr/libnl/"
+license="LGPL-2.1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://www.infradead.org/~tgr/libnl/files/libnl-${version}.tar.gz"
+checksum=4f80c21fe5bbcdde6e72b59b4f98306063a41421f909887c34e58d93e746d063
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 subpackages="$pkgname-devel"

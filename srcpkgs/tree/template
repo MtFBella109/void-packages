@@ -3,6 +3,7 @@ pkgname=tree
 version=2.2.1
 revision=1
 build_style=gnu-makefile
+<<<<<<< HEAD
 short_desc="Recursive directory listing program"
 maintainer="icp <pangolin@vivaldi.net>"
 license="GPL-2.0-or-later"
@@ -10,6 +11,14 @@ homepage="https://oldmanprogrammer.net/source.php?dir=projects/tree"
 changelog="https://oldmanprogrammer.net/source.php?dir=projects/tree/CHANGES"
 distfiles="https://oldmanprogrammer.net/tar/tree/tree-${version}.tgz"
 checksum=68ac45dc78c0c311ada06200ffc3c285e74223ba208061f8d15ffac25e44b2ec
+=======
+homepage="http://mama.indstate.edu/users/ice/tree"
+distfiles="$homepage/src/tree-$version.tgz"
+short_desc="Resursive directory listing program"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+checksum=6957c20e82561ac4231638996e74f4cfa4e6faabc5a2f511f0b4e3940e8f7b12
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_install() {
 	make MANDIR=${DESTDIR}/usr/share/man DESTDIR=${DESTDIR}/usr/bin install

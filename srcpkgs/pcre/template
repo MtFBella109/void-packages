@@ -16,6 +16,7 @@ makedepends="bzip2-devel libedit-devel zlib-devel"
 makedepends="zlib-devel bzip2-devel readline-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Perl Compatible Regular Expressions"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
 homepage="https://www.pcre.org/"
@@ -30,6 +31,14 @@ esac
 post_install() {
 	vlicense LICENCE
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.pcre.org/"
+license="BSD"
+#distfiles="${SOURCEFORGE_SITE}/pcre/pcre-$version.tar.gz"
+distfiles="ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-${version}.tar.bz2"
+checksum=ef833457de0c40e82f573e34528f43a751ff20257ad0e86d272ed5637eb845bb
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 if [ "$CROSS_BUILD" ]; then
 	hostmakedepends="automake libtool"

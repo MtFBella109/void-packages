@@ -16,8 +16,15 @@ short_desc="C++ bindings for The GTK+ toolkit (v2)"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-only"
 homepage="http://www.gtkmm.org/"
+<<<<<<< HEAD
 distfiles="${GNOME_SITE}/gtkmm/${version%.*}/gtkmm-${version}.tar.xz"
 checksum=0680a53b7bf90b4e4bf444d1d89e6df41c777e0bacc96e9c09fc4dd2f5fe6b72
+=======
+license="LGPL-2.1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${GNOME_SITE}/gtkmm/2.24/gtkmm-$version.tar.xz"
+checksum=443a2ff3fcb42a915609f1779000390c640a6d7fd19ad8816e6161053696f5ee
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 CXXFLAGS="-std=c++11"

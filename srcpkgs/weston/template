@@ -14,7 +14,12 @@ makedepends="libpng-devel wayland-devel wayland-protocols libxkbcommon-devel
  gst-plugins-base1-devel libdisplay-info-devel freerdp-devel freerdp-server-devel
  $(vopt_if vaapi 'glu-devel libva-devel')"
 short_desc="Reference implementation of a Wayland compositor"
+<<<<<<< HEAD
 maintainer="Daniel Martinez <danielmartinez@cock.li>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://wayland.freedesktop.org/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://wayland.freedesktop.org/"
 distfiles="https://gitlab.freedesktop.org/wayland/weston/-/releases/${version}/downloads/weston-${version}.tar.xz"

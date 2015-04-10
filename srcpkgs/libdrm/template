@@ -8,7 +8,12 @@ configure_args="-Dudev=true -Dvalgrind=disabled -Dinstall-test-programs=true"
 hostmakedepends="pkg-config python3-docutils"
 makedepends="eudev-libudev-devel libpciaccess-devel"
 short_desc="Userspace interface to kernel DRM services"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://dri.freedesktop.org/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://dri.freedesktop.org/"
 distfiles="https://gitlab.freedesktop.org/mesa/drm/-/archive/libdrm-${version}/drm-libdrm-${version}.tar.gz"

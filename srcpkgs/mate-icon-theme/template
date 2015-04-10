@@ -6,12 +6,20 @@ build_style=gnu-configure
 hostmakedepends="pkg-config gettext icon-naming-utils"
 depends="gtk-update-icon-cache hicolor-icon-theme"
 short_desc="MATE icon theme"
+<<<<<<< HEAD
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="CC-BY-SA-3.0"
 homepage="https://mate-desktop.org"
 changelog="https://raw.githubusercontent.com/mate-desktop/mate-icon-theme/master/NEWS"
 distfiles="https://pub.mate-desktop.org/releases/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=94d6079060ca5df74542921de4eea38b7d02d07561c919356d95de876f9a6d3a
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=e6b981f74e7e5faa9d3a3b64580b66a327737152c1a230608367e9fa7bb63eac
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_configure() {
 	PKG_CONFIG=/usr/bin/pkg-config

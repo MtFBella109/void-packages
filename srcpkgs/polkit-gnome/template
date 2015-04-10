@@ -11,8 +11,12 @@ revision=2
 makedepends="pkg-config intltool gobject-introspection polkit-devel gtk+3-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="PolicyKit integration for the GNOME desktop"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.freedesktop.org/wiki/Software/PolicyKit"
 distfiles="${GNOME_SITE}/$pkgname/$version/$pkgname-$version.tar.xz"
 checksum=1784494963b8bf9a00eedc6cd3a2868fb123b8a5e516e66c5eda48df17ab9369

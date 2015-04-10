@@ -2,7 +2,14 @@
 pkgname=obmenu-generator
 version=0.93
 revision=1
+<<<<<<< HEAD
 depends="perl perl-Linux-DesktopFiles perl-Data-Dump perl-Gtk3"
+=======
+noarch=yes
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://trizenx.blogspot.ro/2012/02/obmenu-generator.html"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 short_desc="Perl Script to generate Openbox menu"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"

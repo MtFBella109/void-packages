@@ -22,8 +22,12 @@ makedepends="libpng-devel libxml2-devel
  libsoup-gnome-devel gst-plugins-base-devel GConf-devel pulseaudio-devel
  orc-devel wavpack-devel v4l-utils-devel jack-devel speex-devel"
 short_desc="GStreamer set of well-maintained good plug-ins"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://gstreamer.freedesktop.org/"
 license="LGPL-2.1"
 checksum=77a8436a7c0a15f876bad29616835046890df2bcaf72da02151bd91e3d292b64

@@ -5,9 +5,22 @@ revision=1
 build_style=meson
 hostmakedepends="pkg-config"
 makedepends="alsa-lib-devel jack-devel dbus-devel"
+<<<<<<< HEAD
 short_desc="ALSA sequencer to JACK MIDI bridging (for jack2)"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/linuxaudio/a2jmidid/"
 distfiles="https://github.com/linuxaudio/a2jmidid/archive/${version}.tar.gz"
 checksum=2828d283e0c9a65f0683881f09676c8c35c45c97a8a56cf77b43b4ef0231df06
+=======
+short_desc="Daemon for exposing legacy ALSA sequencer apps to JACK MIDI"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://home.gna.org/a2jmidid/"
+license="GPL-2"
+distfiles="http://download.gna.org/${pkgname}/${pkgname}-${version}.tar.bz2"
+checksum=2a9635f62aabc59edb54ada07048dd47e896b90caff94bcee710d3582606f55f
+
+do_configure() {
+	python waf configure --prefix=/usr
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

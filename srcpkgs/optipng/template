@@ -5,12 +5,20 @@ revision=1
 hostmakedepends="pkg-config"
 makedepends="zlib-devel libpng-devel"
 short_desc="Advanced PNG Optimizer"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Zlib"
 homepage="https://optipng.sourceforge.net/"
 changelog="https://optipng.sourceforge.net/history.txt"
 distfiles="${SOURCEFORGE_SITE}/optipng/optipng-${version}.tar.gz"
 checksum=25a3bd68481f21502ccaa0f4c13f84dcf6b20338e4c4e8c51f2cefbd8513398c
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="zlib"
+homepage="http://optipng.sourceforge.net/"
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
+checksum=74e54b798b012dff8993fb8d90185ca83f18cfa4935f4a93b0bcfc33c849619d
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_configure() {
 	./configure -prefix=/usr -mandir=/usr/share/man -with-system-libpng -with-system-zlib

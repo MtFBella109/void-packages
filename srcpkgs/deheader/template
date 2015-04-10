@@ -3,9 +3,20 @@ pkgname=deheader
 <<<<<<< HEAD
 version=1.11
 revision=1
+<<<<<<< HEAD
 depends="python3"
 =======
 version=0.6
+=======
+noarch="yes"
+hostmakedepends="python"
+makedepends="python"
+depends="python"
+short_desc="C and C++ header analyzer"
+homepage="http://www.catb.org/~esr/deheader/"
+license="BSD"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://www.catb.org/~esr/deheader/$pkgname-$version.tar.gz"
 fulldepends="python"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

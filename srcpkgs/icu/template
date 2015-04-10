@@ -5,12 +5,20 @@ wrksrc="icu/source"
 distfiles="http://download.icu-project.org/files/icu4c/4.2/icu4c-4_2-src.tgz"
 build_style=gnu_configure
 short_desc="Robust and full-featured Unicode services"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=65ab82b70614adf759b1e94324178597f703ad17878513e4802ccc4f061408a5
 long_desc="
  The International Components for Unicode(ICU) is a C and C++ library that
  provides robust and full-featured Unicode support on a wide variety of
  platforms. The library provides:
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.icu-project.org/"
+license="ICU License /usr/share/licenses/icu/license.html"
+distfiles="http://download.icu-project.org/files/icu4c/${version}/icu4c-${version//./_}-src.tgz"
+checksum=d42bc9a8ca6a91c55eb0925c279f49e5b508d51ef26ac9850d9be55de5bb8ab3
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
  - Calendar support
  - Character set conversions

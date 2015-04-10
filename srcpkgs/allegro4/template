@@ -10,8 +10,13 @@ makedepends="zlib-devel alsa-lib-devel jack-devel libXpm-devel libXxf86vm-devel
 # libGL.so is dlopen()ed.
 depends="virtual?libGL"
 short_desc="Portable library mainly aimed at video game and multimedia programming"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="custom:Allegro"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Allegro License (MIT alike)"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://alleg.sourceforge.net/"
 homepage="https://liballeg.org"
 distfiles="https://github.com/liballeg/allegro5/releases/download/${version}/allegro-${version}.tar.gz"

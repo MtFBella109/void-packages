@@ -1,5 +1,6 @@
 # Template file for 'runit'
 pkgname=runit
+<<<<<<< HEAD
 version=2.2.0
 revision=2
 build_style="gnu-makefile"
@@ -11,6 +12,18 @@ distfiles="https://smarden.org/runit/runit-${version}.tar.gz"
 checksum=95ef4d2868b978c7179fe47901e5c578e11cf273d292bd6208bd3a7ccb029290
 # FIXME: this is caused by some bonk tests that should be fixed in void-linux/runit at some point
 make_check=no
+=======
+version=2.1.2
+revision=5
+wrksrc="admin"
+short_desc="A UNIX init scheme with service supervision"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+homepage="http://smarden.org/runit/"
+distfiles="http://smarden.org/runit/runit-$version.tar.gz"
+checksum=6fd0160cb0cf1207de4e66754b6d39750cff14bb0aa66ab49490992c0c47ba18
+build_pie=yes
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 build_options="static"
 

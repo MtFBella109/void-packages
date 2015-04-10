@@ -23,8 +23,12 @@ depends="lightdm hicolor-icon-theme"
 conf_files="/etc/lightdm/lightdm-gtk-greeter.conf"
 conflicts="lightdm-gtk3-greeter>=0"
 short_desc="Light Display Manager GTK+ Greeter (GTK+ 2.x)"
+<<<<<<< HEAD
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-3, LGPL-3"
 checksum=e3e56997e200d6c3447d53b5e322ae5a478a99a71522e6b6babf421cbf6396ba
 long_desc="

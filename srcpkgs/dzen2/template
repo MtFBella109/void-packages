@@ -7,7 +7,11 @@ _commit=488ab66019f475e35e067646621827c18a879ba1
 hostmakedepends="pkg-config"
 makedepends="libXinerama-devel libXft-devel libXpm-devel"
 short_desc="X notification utility"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://github.com/robm/dzen"
 distfiles="$homepage/archive/$_commit.tar.gz"

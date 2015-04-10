@@ -3,6 +3,7 @@ pkgname=gc
 version=8.2.8
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 # libatomic_ops is replaced by GCC atomic intrinsics
 configure_args="--enable-static --with-libatomic-ops=none"
 hostmakedepends="pkg-config"
@@ -12,6 +13,16 @@ license="MIT"
 homepage="https://www.hboehm.info/gc/"
 distfiles="https://github.com/ivmai/bdwgc/releases/download/v${version}/gc-${version}.tar.gz"
 checksum=7649020621cb26325e1fb5c8742590d92fb48ce5c259b502faf7d9fb5dabb160
+=======
+hostmakedepends="automake pkg-config libtool"
+makedepends="libatomic_ops-devel"
+short_desc="A garbage collector for C and C++"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.hboehm.info/gc/"
+license="GPL-2"
+distfiles="http://www.hboehm.info/gc/gc_source/gc-${version}.tar.gz"
+checksum=63320ad7c45460e4a40e03f5aa4c6893783f21a16416c3282b994f933312afa2
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	mkdir -p ${DESTDIR}/usr/include/gc/

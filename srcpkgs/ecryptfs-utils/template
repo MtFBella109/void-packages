@@ -17,7 +17,7 @@ license="GPL-2.0-or-later"
 =======
 makedepends="python-devel pam-devel nss-devel libressl-devel keyutils-devel gpgme-devel gtk+-devel"
 short_desc="ecryptfs cryptographic filesystem (utilities)"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-3"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://ecryptfs.org/"

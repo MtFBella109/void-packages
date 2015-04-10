@@ -3,6 +3,7 @@ pkgname=totem
 <<<<<<< HEAD
 version=43.2
 revision=1
+<<<<<<< HEAD
 build_style=meson
 build_helper="gir"
 configure_args="-Denable-python=yes"
@@ -34,6 +35,10 @@ makedepends="which pkg-config intltool gnome-doc-utils gnutls-devel gst-plugins-
 fulldepends="grilo-plugins hicolor-icon-theme desktop-file-utils gst-ffmpeg gst-plugins-bad gst-plugins-ugly gst-plugins-good"
 short_desc="A GNOME2 integrated movie player based on Gstreamer"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+short_desc="A GNOME integrated movie player based on Gstreamer"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnome.org"
 license="custom, GPL-2"
 checksum=e1532b471a14612b5f44d29b8392716c1123f4d874cd9d01e06a11f32637341e

@@ -10,10 +10,16 @@ depends="font-util"
 short_desc="Standard X11 cursors in PCF format"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org/"
 distfiles="${XORG_SITE}/font/$pkgname-$version.tar.gz"
 checksum=37ef2363b3cfa6f5e20b65feab736db77fad484127c267b78de95d55fa39f61d
 font_dirs="/usr/share/fonts/X11/misc"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+checksum=17363eb35eece2e08144da5f060c70103b59d0972b4f4d77fd84c9a7a2dba635
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense COPYING

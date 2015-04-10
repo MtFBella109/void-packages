@@ -15,7 +15,7 @@ distfiles="https://gstreamer.freedesktop.org/src/gstreamer-vaapi/gstreamer-vaapi
 checksum=b42d44db63f3195a6f33296e1ead32c14d01ef27452b7068f1a2d86624f55ea9
 =======
 short_desc="VA-API plugins for GStreamer (1.x)"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-3"
 homepage="http://www.freedesktop.org/software/vaapi/releases/gstreamer-vaapi/"
 distfiles="http://www.freedesktop.org/software/vaapi/releases/${pkgname}/${pkgname}-${version}.tar.bz2"

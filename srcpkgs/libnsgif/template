@@ -5,6 +5,7 @@ version=1.0.0
 revision=1
 hostmakedepends="netsurf-buildsystem"
 short_desc="Decoding library for the GIF image file format, written in C"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
 homepage="https://www.netsurf-browser.org"
@@ -16,6 +17,9 @@ version=0.0.3
 revision=4
 short_desc="Decoding library for the GIF image file format, written in C."
 maintainer="davehome <davehome@redthumb.info.tm>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.netsurf-browser.org"
 license="MIT"
 distfiles="${homepage}/projects/releases/${pkgname}-${version}-src.tar.gz"

@@ -2,6 +2,7 @@
 pkgname=nemo
 version=6.4.5
 revision=1
+<<<<<<< HEAD
 build_style=meson
 build_helper=gir
 pycompile_dirs="/usr/share/nemo/actions/myaction.py"
@@ -20,6 +21,27 @@ checksum=06dc3c7884dc0ec8ce4d55ed48f0cd77cbf7bd6be5dba9ed883d49a43118ebdf
 python_version=3
 # Requires xvfb-run and dbus-run-session
 make_check=no # can't be run inside chroot due to fusermount3
+=======
+short_desc="The Cinnamon file manager (nautilus fork)"
+build_style=gnu-configure
+configure_args=" --disable-static --disable-update-mimedb
+ --disable-packagekit --disable-gtk-doc-html --disable-schemas-compile"
+hostmakedepends="automake libtool gnome-common pkg-config gobject-introspection
+ gettext-devel glib-devel intltool xmlto docbook-xml gtk-doc gir-freedesktop
+ python-polib python-gobject"
+makedepends="libexif-devel gvfs-devel dconf-devel exempi-devel
+ cinnamon-desktop-devel libnotify-devel libxml2-devel"
+depends="gvfs dconf cinnamon-translations desktop-file-utils hicolor-icon-theme"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://cinnamon.linuxmint.com/"
+distfiles="https://github.com/linuxmint/${pkgname}/archive/${version}.tar.gz"
+checksum=a4eae743f25d1a66cbb5b28675d78aee1d57224c825d6baebdf88068dc1d8d04
+
+pre_configure() {
+	# Fix build
+	sed -i '/AC_SUBST(DISABLE_DEPRECATED_CFLAGS)/d' configure.in
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_patch() {
 	# Rename 'Files' app name to avoid having the same as nautilus

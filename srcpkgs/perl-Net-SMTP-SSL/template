@@ -7,8 +7,16 @@ hostmakedepends="perl"
 makedepends="${hostmakedepends} perl-IO-Socket-SSL"
 depends="${makedepends}"
 short_desc="Net::SMTP::SSL -- SSL support for Net::SMTP"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/Net-SMTP-SSL"
 distfiles="${CPAN_SITE}/Net/${pkgname/perl-/}-${version}.tar.gz"
 checksum=7b29c45add19d3d5084b751f7ba89a8e40479a446ce21cfd9cc741e558332a00
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/Net-SMTP-SSL/"
+license="Artistic, GPL-1"
+distfiles="${CPAN_SITE}/Net/${pkgname/perl-/}-$version.tar.gz"
+checksum=4e9f67f47da74de3dad36fb5b68e2154a81251c8e187218dedbf073395cf5ce9
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

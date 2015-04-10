@@ -7,9 +7,15 @@ hostmakedepends="pkg-config"
 makedepends="lv2"
 depends="lv2"
 short_desc="LV2 port of the MDA plugins by Paul Kellett"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-only"
 homepage="https://drobilla.net/software/mda-lv2.html"
 changelog="https://gitlab.com/drobilla/mda-lv2/-/raw/master/NEWS"
 distfiles="http://download.drobilla.net/${pkgname}-${version}.tar.xz"
 checksum=aeea5986a596dd953e2997421a25e45923928c6286c4c8c36e5ef63ca1c2a75a
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+checksum=0eb88587b6f7a960a9a7adc5f733e74388ba0ae90db084a7d39c6e9cfedd6fb5
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

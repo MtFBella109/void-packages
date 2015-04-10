@@ -13,7 +13,12 @@ revision=2
 makedepends="pkg-config imlib2-devel freetype-devel zlib-devel libX11-devel libXext-devel glibc-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Programming utility library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://linuxbrit.co.uk/giblib/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="http://freshmeat.sourceforge.net/projects/giblib"
 distfiles="${DEBIAN_SITE}/main/g/${pkgname}/${pkgname}_${version}.orig.tar.gz"

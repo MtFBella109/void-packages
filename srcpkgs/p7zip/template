@@ -2,6 +2,15 @@
 pkgname=p7zip
 version=9.20.1
 wrksrc=${pkgname}_${version}
+<<<<<<< HEAD
+=======
+revision=1
+hostmakedepends="yasm nasm"
+short_desc="Command-line version of the 7zip compressed file archive"
+homepage="http://p7zip.sourceforge.net/"
+license="LGPL-2.1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}_${version}_src_all.tar.bz2"
 revision=1
 makedepends="yasm nasm"

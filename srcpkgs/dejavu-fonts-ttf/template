@@ -6,6 +6,7 @@ revision=2
 depends="font-util"
 short_desc="DejaVu family of TrueType fonts"
 <<<<<<< HEAD
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT, custom:Public Domain"
 homepage="https://dejavu-fonts.github.io/"
@@ -13,6 +14,9 @@ distfiles="${SOURCEFORGE_SITE}/dejavu/${pkgname}-${version}.tar.bz2"
 checksum=fa9ca4d13871dd122f61258a80d01751d603b4d3ee14095d65453b4e846e17d7
 =======
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://dejavu-fonts.org/wiki/Main_Page"
 license="MIT, Public domain"
 distfiles="${SOURCEFORGE_SITE}/dejavu/$pkgname-$version.tar.bz2"

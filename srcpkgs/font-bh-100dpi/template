@@ -10,10 +10,16 @@ depends="font-util"
 short_desc="Standard 100dpi Bigelow and Holmes PCF fonts"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org/"
 distfiles="${XORG_SITE}/font/$pkgname-$version.tar.gz"
 checksum=cfd9b6bf6dae77eb7186afa296ad7233bb43d9c2f840d8010e197d55a2cc21dc
 font_dirs="/usr/share/fonts/X11/100dpi"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+checksum=23c07162708e4b79eb33095c8bfa62c783717a9431254bbf44863734ea239481
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense COPYING

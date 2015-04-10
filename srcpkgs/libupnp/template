@@ -3,6 +3,7 @@ pkgname=libupnp
 version=1.14.24
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-reuseaddr --disable-blocking-tcp-connections"
 hostmakedepends="automake libtool pkg-config"
 short_desc="Portable Open Source UPnP Development Kit"
@@ -18,6 +19,15 @@ CFLAGS="-D_FILE_OFFSET_BITS=64"
 post_install() {
 	vlicense COPYING
 }
+=======
+hostmakedepends="automake libtool"
+short_desc="A Portable Open Source UPnP Development Kit"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+homepage="http://pupnp.sourceforge.net/"
+distfiles="${SOURCEFORGE_SITE}/pupnp/$pkgname-$version.tar.bz2"
+checksum=b3142b39601243b50532eec90f4a27dba85eb86f58d4b849ac94edeb29d9b22a
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_configure() {
 	autoreconf -fi

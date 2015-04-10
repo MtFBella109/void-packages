@@ -13,6 +13,7 @@ makedepends="zlib-devel acl-devel popt-devel xxHash-devel liblz4-devel
 makedepends="perl>=0 acl-devel popt-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Remote fast incremental file transfer tool"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="GPL-3.0-only"
 homepage="https://rsync.samba.org/"
@@ -32,6 +33,13 @@ pre_check() {
 	# chgrp tests fail inside chroot
 	rm -f testsuite/chgrp.test
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://samba.anu.edu.au/rsync/"
+distfiles="http://www.samba.org/ftp/rsync/src/rsync-$version.tar.gz"
+checksum=7de4364fcf5fe42f3bdb514417f1c40d10bbca896abe7e7f2c581c6ea08a2621
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vconf ${FILESDIR}/rsyncd.conf

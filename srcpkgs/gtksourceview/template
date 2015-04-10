@@ -9,6 +9,7 @@ configure_args="--disable-static --enable-introspection"
 hostmakedepends="automake pkg-config intltool gtk+3-devel glib-devel vala"
 makedepends="gtk+3-devel libxml2-devel vala-devel"
 short_desc="Text widget that extends GTK+3 GtkTextView widget"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Projects/GtkSourceView"
@@ -19,6 +20,9 @@ configure_args="--disable-static"
 makedepends="pkg-config intltool gobject-introspection gtk+3-devel libxml2-devel"
 short_desc="Text widget that extends GTK+ GtkTextView widget"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnome.org"
 license="GPL-2"
 checksum=5a5712591b2b6487818ac4aadd965fc8397af23d8fd7c5bdd1460c6326a8f4ce

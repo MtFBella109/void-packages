@@ -8,8 +8,12 @@ build_style=gnu-configure
 configure_args="--enable-optimize --enable-debug --enable-ipv6"
 makedepends="zlib-devel"
 short_desc="NetScape Portable Runtime"
+<<<<<<< HEAD
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
 license="MPL-2.0"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.mozilla.org/projects/nspr/"
 distfiles="${MOZILLA_SITE}/nspr/releases/v${version}/src/${pkgname}-${version}.tar.gz"
 checksum=5f9344ed0e31855bd38f88b33c9d9ab94f70ce547ef3213e488d1520f61840fa

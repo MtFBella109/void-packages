@@ -15,6 +15,7 @@ makedepends="libdrm-devel MesaLib-devel xorg-server-devel"
 depends="virtual?xserver-abi-video-19_1 mesa-vmwgfx-dri"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Modular Xorg VMware virtual video driver"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=956443948d94f7459b0056d8cb8ff2cd9fba4621d8b61f0257cb84469ea7da07
 long_desc="
@@ -22,3 +23,10 @@ long_desc="
 pre_configure() {
 	autoreconf -fi
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://xorg.freedesktop.org"
+license="MIT"
+distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+checksum=3c1d244e4b1b77e92126957965cdc9fb82de4c215c0706a3a8aaff6939e4a0cc
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

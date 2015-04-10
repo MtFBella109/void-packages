@@ -4,11 +4,19 @@ version=1310.80.1
 revision=1
 hostmakedepends="flex byacc"
 short_desc="Implements the Bonjour/Zeroconf protocol"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Apache-2.0, BSD-3-Clause"
 homepage="https://opensource.apple.com/"
 distfiles="https://opensource.apple.com/tarballs/${pkgname}/${pkgname}-${version}.tar.gz"
 checksum=097662447e1535573484697861d9f50eceaf2c52ec2742e451ee6ffe9bbf3e75
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Apache-2.0, 3-clause-BSD"
+homepage="http://opensource.apple.com/"
+distfiles="http://opensource.apple.com/tarballs/${pkgname}/${pkgname}-${version}.tar.gz"
+checksum=3239d9bb1e1e017be1ae12cff90802194b6e0312de628a1f324530b00b833018
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 conf_files="/etc/nss_mdns.conf"
 conflicts="nss-mdns>=0"

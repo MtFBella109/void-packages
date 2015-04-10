@@ -7,6 +7,7 @@ build_style=gnu-configure
 configure_args="--disable-bootstrap --disable-shared"
 hostmakedepends="bison"
 makedepends="bison"
+<<<<<<< HEAD
 depends="bison libfl-devel-${version}_${revision} m4"
 short_desc="Fast Lexical Analyzer"
 maintainer="Enno Boland <gottox@voidlinux.org>"
@@ -14,6 +15,16 @@ license="custom:flex"
 homepage="https://github.com/westes/flex"
 distfiles="https://github.com/westes/${pkgname}/releases/download/v${version}/${pkgname}-${version}.tar.gz"
 checksum=e87aae032bf07c26f85ac0ed3250998c37621d95f8bd748b31f15b33c45ee995
+=======
+depends="bison libfl-devel-${version}_${revision}"
+replaces="libfl>=0"
+short_desc="The Fast Lexical Analyzer"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://flex.sourceforge.net"
+license="BSD"
+distfiles="${SOURCEFORGE_SITE}/flex/${pkgname}-${version}.tar.bz2"
+checksum=add2b55f3bc38cb512b48fad7d72f43b11ef244487ff25fc00aabec1e32b617f
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 # Required to enable the definition of reallocarray() in stdlib.h
 CFLAGS="-D_GNU_SOURCE"

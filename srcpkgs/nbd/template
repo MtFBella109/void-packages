@@ -16,6 +16,7 @@ checksum=a771022599525fd4f5c17c7b1c88696a91927c227e770425a55f67a7384441b6
 system_accounts="nbd"
 nbd_homedir="/var/chroot"
 conf_files="/etc/nbd-server/config"
+<<<<<<< HEAD
 
 CFLAGS+="-DPROG_NAME='\"nbd-client\"'"
 
@@ -23,6 +24,14 @@ post_configure() {
 	# skip systemd unit
 	vsed -e '/^SUBDIRS =/s/systemd//' -i Makefile
 }
+=======
+short_desc="Network Block Device utilities"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://nbd.sourceforge.net"
+distfiles="${SOURCEFORGE_SITE}/nbd/nbd-${version}.tar.gz"
+checksum=0417b77c2c88b89f4f8f4f4bdd17aac9c3c9bd50af2e0ae08683baf9c688145d
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vsv nbd

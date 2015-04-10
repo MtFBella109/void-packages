@@ -9,6 +9,7 @@ makedepends="libcanberra-devel mate-desktop-devel libmatemixer-devel libmate-pan
  gtk+3-devel libglib-devel libxml2-devel
  $(vopt_if wayland 'gtk-layer-shell-devel wayland-devel')"
 depends="sound-theme-freedesktop"
+<<<<<<< HEAD
 short_desc="MATE Media Tools"
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="GPL-2.0-or-later"
@@ -19,3 +20,11 @@ checksum=bcdc102e22f63f55e63166d5c708e91c113570e6a30a874345a88609e83a9912
 
 build_options="wayland"
 build_options_default="wayland"
+=======
+short_desc="MATE Media Tools (pulseaudio)"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-3"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=a264f9afcae7dff50aefb813616857db10ed62ac30c4071e690485ee9c6e5f61
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

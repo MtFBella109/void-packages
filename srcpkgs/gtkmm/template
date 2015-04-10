@@ -29,7 +29,7 @@ hostmakedepends="pkg-config"
 makedepends="gtk+3-devel glibmm-devel atkmm-devel pangomm-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="C++ bindings for The GTK+ toolkit (v2)"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://gtkmm.sourceforge.net/"
 license="LGPL-2.1"
 checksum=42ea4e9acdd37fc3fe7026f8249a5427927b51048adff827bc1312900d6b12e9

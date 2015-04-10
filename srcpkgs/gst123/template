@@ -21,6 +21,7 @@ pre_configure() {
 makedepends="pkg-config libstdc++-devel glib-devel libxml2-devel gstreamer-devel gst-plugins-base-devel"
 fulldepends="gst-plugins-good"
 short_desc="GStreamer based CLI player"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=0a70f2a411056bb90a75e97f8320fc190c0a5b16de88e26ec8300b9c4c121cc1
 long_desc="
@@ -32,3 +33,10 @@ long_desc="
  
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://space.twc.de/~stefan/gst123.php/"
+license="LGPL-2.1"
+distfiles="http://space.twc.de/~stefan/gst123/gst123-$version.tar.bz2"
+checksum=45359410c99a622790dd2b6efdc2d1a94748da3763242d95da79c633b5dfbce9
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

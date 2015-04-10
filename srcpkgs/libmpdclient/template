@@ -4,8 +4,13 @@ version=2.22
 revision=1
 build_style=meson
 short_desc="Asynchronous API library for interfacing MPD"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause, BSD-3-Clause"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="3-clause-BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.musicpd.org/libs/libmpdclient/"
 distfiles="http://www.musicpd.org/download/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=eac15b82b5ba5ed0648af580221eb74657394f7fe768e966d9e9ebb27435429f

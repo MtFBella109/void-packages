@@ -13,7 +13,7 @@ wrksrc=lsof_${version}
 =======
 hostmakedepends="which perl"
 short_desc="LiSt Open Files"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://people.freebsd.org/~abe/"
 license="lsof"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

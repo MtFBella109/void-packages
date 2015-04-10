@@ -17,6 +17,7 @@ makedepends="vala-devel telepathy-glib-devel
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils"
 short_desc="GNOME contacts manager"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Apps/Contacts"
@@ -30,6 +31,9 @@ depends="desktop-file-utils"
 makedepends="pkg-config intltool vala-devel telepathy-glib-devel gnome-desktop-devel folks-devel libnotify-devel"
 short_desc="GNOME contacts manager"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnome.org"
 license="GPL-2"
 checksum=673614fe6cd5f986132819eeb21d67c40af336ffd2c4ca4c3e99365114f13523

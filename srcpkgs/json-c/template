@@ -2,12 +2,19 @@
 pkgname=json-c
 version=0.18
 revision=1
+<<<<<<< HEAD
 build_style=cmake
 configure_args="-DENABLE_THREADING=ON -DBUILD_STATIC_LIBS=ON
  -DENABLE_RDRAND=$(vopt_if rdrand ON OFF)"
 hostmakedepends="doxygen"
 short_desc="JSON implementation in C"
 maintainer="skmpz <dem.procopiou@gmail.com>"
+=======
+build_style=gnu-configure
+hostmakedepends="automake libtool"
+short_desc="A JSON implementation in C"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://json-c.github.io/json-c"
 changelog="https://raw.githubusercontent.com/json-c/json-c/master/ChangeLog"

@@ -21,8 +21,12 @@ depends="iptables python"
 makedepends="python iptables"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Uncomplicated Firewall"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-only"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://launchpad.net/ufw"
 distfiles="https://launchpad.net/ufw/${_major_minor}/${version}/+download/ufw-${version}.tar.gz"
 checksum=2a57a99eecef6b44db3537ed2520b30bae3759f8465456e22e404cd643838bf5

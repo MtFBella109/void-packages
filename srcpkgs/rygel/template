@@ -19,6 +19,37 @@ makedepends="sqlite-devel gtk+3-devel
 depends="hicolor-icon-theme desktop-file-utils"
 makedepends="pkg-config intltool sqlite-devel vala-devel gtk+3-devel libsoup-devel libgee-devel gssdp-devel>=0.12.0 gupnp-av-devel gupnp-dlna-devel"
 short_desc="GNOME home media solution"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://gnome.pages.gitlab.gnome.org/rygel/"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
+checksum=a9056281b0e0d38f32ec34ad84b51b16228c7accfef601025e0ed3ddf3cc0904
+
+pre_configure() {
+	autoreconf -fi
+}
+
+rygel-devel_package() {
+	depends="libgee08-devel gupnp-av-devel libuuid-devel
+		libglib-devel librygel>=${version}_${revision}"
+	short_desc+=" - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.so"
+		vmove usr/share/vala
+		vmove usr/share/gtk-doc
+	}
+}
+librygel_package() {
+	short_desc+=" - runtime libraries"
+	pkg_install() {
+		vmove "usr/lib/*.so.*"
+	}
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

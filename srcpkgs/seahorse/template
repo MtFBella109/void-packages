@@ -24,6 +24,7 @@ makedepends="gtk+3-devel gcr-devel libsecret-devel
 depends="hicolor-icon-theme desktop-file-utils gcr>=3.14 openssh"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNOME application for managing encryption keys"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://gitlab.gnome.org/GNOME/seahorse"
@@ -59,3 +60,10 @@ gtk_iconcache_dirs="/usr/share/icons/hicolor"
 
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://projects.gnome.org/seahorse/"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=092a890982fa594da8a384f156b961392f69ce5d9518a9801035e6deb1f05e93
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

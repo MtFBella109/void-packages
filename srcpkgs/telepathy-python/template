@@ -1,7 +1,20 @@
 # Template file for 'telepathy-python'
 pkgname=telepathy-python
 version=0.15.19
+<<<<<<< HEAD
 revision=2
+=======
+revision=6
+build_style=gnu-configure
+hostmakedepends="python libxslt"
+depends="python python-dbus"
+noarch="yes"
+pycompile_module="telepathy"
+short_desc="Python libraries for use in Telepathy clients and connection managers"
+homepage="http://telepathy.freedesktop.org"
+license="LGPL-2.1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://telepathy.freedesktop.org/releases/$pkgname/$pkgname-$version.tar.gz"
 build_style=gnu-configure
 makedepends="libxslt"

@@ -2,9 +2,18 @@
 pkgname=youtube-dl
 version=2013.08.27
 revision=1
+<<<<<<< HEAD
 makedepends="python"
 short_desc="Tool to download youtube videos"
 maintainer="pancake <pancake@nopcode.org>"
+=======
+noarch=yes
+wrksrc="${pkgname}"
+depends="python"
+short_desc="Small CLI program to download videos from YouTube and other sites"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://rg3.github.com/youtube-dl/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="Public Domain"
 homepage="http://rg3.github.com/youtube-dl/"
 

@@ -31,6 +31,7 @@ version=1.22
 distfiles="http://ftp.gnu.org/gnu/tar/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 short_desc="The GNU tape archiver with remote magnetic tape support"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=3cefb67f197a3f8f5235999fe749ced0889466a71ddcbc96fddca84e5d53aa4d
 long_desc="
@@ -46,3 +47,10 @@ Add_dependency run glibc
 Add_dependency full gzip
 Add_dependency full bzip2
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnu.org/software/tar/"
+license="GPL-3"
+distfiles="http://ftp.gnu.org/gnu/tar/$pkgname-$version.tar.xz"
+checksum=64ee8d88ec1b47a0961033493f919d27218c41b580138fd6802327462aff22f2
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

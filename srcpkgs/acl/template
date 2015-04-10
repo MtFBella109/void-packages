@@ -10,11 +10,19 @@ configure_args="--libdir=/usr/lib${XBPS_TARGET_WORDSIZE}
  --libexecdir=/usr/lib${XBPS_TARGET_WORDSIZE}"
 makedepends="attr-devel"
 short_desc="Access Control List filesystem support"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://savannah.nongnu.org/projects/acl"
 distfiles="${NONGNU_SITE}/acl/acl-${version}.tar.gz"
 checksum=5f2bdbad629707aa7d85c623f994aa8a1d2dec55a73de5205bac0bf6058a2f7c
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://savannah.nongnu.org/projects/acl"
+license="LGPL-2.1"
+distfiles="${NONGNU_SITE}/acl/acl-${version}.src.tar.gz"
+checksum=179074bb0580c06c4b4137be4c5a92a701583277967acdb5546043c7874e0d23
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 if [ -z "$CHROOT_READY" ]; then
 	CFLAGS+=" -I${XBPS_MASTERDIR}/usr/include"

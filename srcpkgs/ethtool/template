@@ -6,9 +6,17 @@ build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="libmnl-devel"
 short_desc="Utility for controlling network drivers and hardware"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="https://www.kernel.org/pub/software/network/ethtool/"
 changelog="https://git.kernel.org/pub/scm/network/ethtool/ethtool.git/plain/NEWS"
 distfiles="https://www.kernel.org/pub/software/network/ethtool/ethtool-${version}.tar.xz"
 checksum=9477c365114d910120aaec5336a1d16196c833d8486f7c6da67bedef57880ade
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.kernel.org/pub/software/network/ethtool/"
+license="GPL-2"
+distfiles="http://www.kernel.org/pub/software/network/${pkgname}/${pkgname}-${version}.tar.xz"
+checksum=813ffe59fddd2db423c578448b10e33e2e2d4cc2ba780f1f0c603642b20342f6
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

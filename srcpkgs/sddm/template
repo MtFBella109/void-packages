@@ -15,6 +15,7 @@ makedepends="qt6-declarative-devel qt5-declarative-devel qt5-tools-devel
  pam-devel elogind-devel"
 depends="dbus"
 short_desc="QML based X11 display manager"
+<<<<<<< HEAD
 maintainer="Michael Aldridge <maldridge@voidlinux.org>"
 license="GPL-2.0-or-later, CC-BY-3.0"
 homepage="https://github.com/sddm/sddm"
@@ -25,6 +26,13 @@ checksum=f895de2683627e969e4849dbfbbb2b500787481ca5ba0de6d6dfdae5f1549abf
 if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" sddm qt5-host-tools qt5-qmake qt5-tools"
 fi
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://github.com/sddm/sddm"
+distfiles="https://github.com/${pkgname}/${pkgname}/archive/v${version}.tar.gz"
+checksum=80d53f075c275f744bd547523d6d640baccfacb4e463a71ec0facb8231b832ce
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 system_accounts="sddm"
 sddm_homedir="/var/lib/sddm"

@@ -13,8 +13,12 @@ revision=1
 build_pie=yes
 makedepends="ncurses-devel readline-devel"
 short_desc="Powerful, fast, lightweight, embeddable scripting language"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.lua.org"
 license="MIT"
 checksum=2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333

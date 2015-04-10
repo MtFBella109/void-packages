@@ -10,12 +10,29 @@ configure_args="--disable-qt3 --disable-qt4 --disable-qt5
  --with-xml=expat --with-avahi-user=avahi --with-avahi-group=avahi
  --with-avahi-priv-access-group=network --with-autoipd-user=avahi
  --with-autoipd-group=avahi --with-distro=none --disable-xmltoman
+<<<<<<< HEAD
  --disable-static ssp_cv_lib=no --enable-python --disable-pygobject
  --disable-glib --disable-python-dbus --disable-gobject --disable-gtk
  --disable-gtk3 --disable-dbm --disable-introspection --sbindir=/usr/bin
  --with-dbus-system-address=unix:path=/run/dbus/system_bus_socket
  --without-systemdsystemunitdir"
 =======
+=======
+ --disable-static ssp_cv_lib=no --disable-python --disable-pygtk
+ --disable-glib --disable-gobject --disable-gtk --disable-gtk3
+ --disable-dbm --disable-introspection"
+short_desc="Multicast DNS Service Discovery"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="http://www.avahi.org"
+#distfiles="$homepage/download/avahi-$version.tar.gz"
+distfiles="http://pkgs.fedoraproject.org/repo/pkgs/avahi/avahi-${version}.tar.gz/2f22745b8f7368ad5a0a3fddac343f2d/avahi-${version}.tar.gz"
+checksum=8372719b24e2dd75de6f59bb1315e600db4fd092805bd1201ed0cb651a2dab48
+
+build_options="systemd"
+hostmakedepends="pkg-config intltool"
+makedepends="dbus-devel libcap-devel libdaemon-devel gdbm-devel $(vopt_if systemd systemd-devel)"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 depends="dbus"
 makedepends="pkg-config intltool libssp-devel dbus-devel libcap-devel libdaemon-devel gdbm-devel expat-devel pygtk-devel dbus-python gtk+3-devel gobject-introspection"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

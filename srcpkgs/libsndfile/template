@@ -22,6 +22,7 @@ makedepends="alsa-lib-devel libvorbis-devel libflac-devel sqlite-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="C library for reading and writing files containing sampled sound"
 <<<<<<< HEAD
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://libsndfile.github.io/libsndfile/"
@@ -34,6 +35,9 @@ libsndfile-progs_package() {
 	short_desc+=" - bundled cmdline apps"
 =======
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.mega-nerd.com/libsndfile"
 license="LGPL-2.1"
 distfiles="http://www.mega-nerd.com/$pkgname/files/$pkgname-$version.tar.gz"

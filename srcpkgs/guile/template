@@ -3,6 +3,7 @@ pkgname=guile
 version=3.0.10
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-static --disable-error-on-warning
  --with-libgmp-prefix=${XBPS_CROSS_BASE}/usr
  --with-libunistring-prefix=${XBPS_CROSS_BASE}/usr
@@ -22,6 +23,18 @@ if [ "$CROSS_BUILD" ]; then
 	export GUILE_FOR_BUILD=/usr/bin/guile
 	hostmakedepends+=" guile"
 fi
+=======
+configure_args="--disable-static --disable-error-on-warning"
+hostmakedepends="pkg-config"
+makedepends="gmp-devel libltdl-devel libunistring-devel libffi-devel gc-devel ncurses-devel"
+short_desc="A portable, embeddable Scheme implementation written in C"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3, LGPL-3"
+homepage="http://www.gnu.org/software/${pkgname}"
+distfiles="${GNU_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
+checksum=e6786c934346fa2e38e46d8d81a622bb1c16d130153523f6129fcd79ef1fb040
+nocross=yes   # only works for same wordsize and endianess
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libguile_package() {
 	short_desc+=" - runtime library"

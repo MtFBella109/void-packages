@@ -3,15 +3,15 @@ pkgname=libqtxdg
 version=4.3.0
 revision=1
 build_style=cmake
-configure_args=" -DQTXDGX_ICONENGINEPLUGIN_INSTALL_PATH=/usr/lib/qt6/plugins"
-hostmakedepends="pkg-config lxqt-build-tools qt6-base"
-makedepends="qt6-base-private-devel qt6-svg-devel libglib-devel"
-short_desc="Qt implementation of freedesktop.org XDG specifications"
-maintainer="Helmut Pozimski <helmut@pozimski.eu>"
-license="LGPL-2.1-or-later"
-homepage="https://lxqt-project.org"
-distfiles="https://github.com/lxqt/libqtxdg/archive/${version}.tar.gz"
-checksum=2a19343cffaa869d5001ef8087781beedb25b3f2ebe29f202728a9dc86aaacc8
+configure_args="-DUSE_QT5=1"
+hostmakedepends="cmake pkg-config"
+makedepends="qt5-tools-devel"
+short_desc="Qt implementation of freedesktop.org xdg specifications"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://lxqt.org/"
+distfiles="https://github.com/lxde/libqtxdg/archive/${version}.tar.gz"
+checksum=b6acd6b8ea884e3a0d6d3fc9e32441a4183e7efedb7ad07bbf72174fdc454545
 
 libqtxdg-devel_package() {
 	short_desc+=" - development files"

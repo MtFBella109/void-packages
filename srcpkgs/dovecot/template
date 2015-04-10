@@ -13,12 +13,20 @@ configure_args="--with-moduledir=/usr/lib/dovecot/modules --with-sql=plugin
 depends="openssl>=0"
 makedepends="openssl-devel mit-krb5-devel libmysqlclient-devel postgresql-libs-devel sqlite-devel libldap-devel libcap-devel pam-devel libcurl-devel expat-devel"
 short_desc="IMAP and POP3 server written with security primarily in mind"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="LGPL-2.1-or-later"
 homepage="https://dovecot.org/"
 distfiles="https://dovecot.org/releases/2.4/dovecot-${version//r/-}.tar.gz"
 checksum=2cd62e4d22b9fc1c80bd38649739950f0dbda34fbc3e62624fb6842264e93c6e
 keep_libtool_archives=yes
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="http://dovecot.org"
+distfiles="${homepage}/releases/2.2/${pkgname}-${version}.tar.gz"
+checksum=56ce1287a17fa88a2083116db00200deff1a5390af5eac1c8ae3f59a2079cff0
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 if [ "$XBPS_TARGET_LIBC" = "glibc" ]; then

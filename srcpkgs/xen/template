@@ -3,6 +3,7 @@ pkgname=xen
 <<<<<<< HEAD
 version=4.19.1
 revision=2
+<<<<<<< HEAD
 # grep -R IPXE_GIT_TAG src/xen-*/tools/firmware/etherboot
 _git_tag_ipxe=1d1cf74a5e58811822bee4b3da3cff7282fcdfca
 # TODO: arm / aarch64
@@ -48,6 +49,10 @@ depends="iproute2 bridge-utils"
 makedepends="openssl-devel e2fsprogs-devel zlib-devel gnutls-devel libbluetooth-devel pciutils-devel libX11-devel libXext-devel SDL-devel MesaLib-devel ncurses-devel liblzma-devel python-devel dev86 acpica-utils wget git"
 short_desc="Xen Hypervisor and Utilities"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+short_desc="The Xen hypervisor utilities"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://xen.org"
 license="GPL-2"
 checksum=7d9c93057cf480d3f1efa792b19285a84fa3c06060ea5c5c453be00887389b0d

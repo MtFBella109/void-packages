@@ -9,6 +9,7 @@ makedepends="libX11-devel"
 short_desc="Device Color Characterization utility for X"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org"
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.xz"
 checksum=5ec4068e488187b05ea92ee1362c96b78a90f19ccc7a1844c5921d70626bbc38
@@ -20,6 +21,9 @@ post_install() {
 # Template build file for 'xcmsdb'.
 pkgname=xcmsdb
 version=1.0.2
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

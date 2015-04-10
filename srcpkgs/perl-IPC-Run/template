@@ -19,6 +19,7 @@ checksum=eb25bbdf5913d291797ef1bfe998f15130b455d3ed02aacde6856f0b25e4fe57
 =======
 fulldepends="perl"
 short_desc="system() and background procs w/ piping, redirs, ptys"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://search.cpan.org/dist/IPC-Run/lib/IPC/Run.pm"
 license="GPL-2"
@@ -31,3 +32,10 @@ long_desc="
 
 noarch=yes
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/IPC-Run"
+license="Artistic, GPL-1"
+distfiles="${CPAN_SITE}/IPC/IPC-Run-$version.tar.gz"
+checksum=2eb336c91a2b7ea61f98e5b2282d91020d39a484f16041e2365ffd30f8a5605b
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

@@ -11,8 +11,12 @@ hostmakedepends="automake libtool"
 makedepends="libmp4v2-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="AAC audio encoder library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.0-only"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.audiocoding.com/"
 distfiles="https://github.com/knik0/faac/archive/${version//./_}.tar.gz"
 checksum=adc387ce588cca16d98c03b6ec1e58f0ffd9fc6eadb00e254157d6b16203b2d2

@@ -9,6 +9,7 @@ makedepends="libX11-devel libxkbfile-devel"
 short_desc="XKBD Event Daemon"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org"
 distfiles="${XORG_SITE}/app/${pkgname}-${version}.tar.xz"
 checksum=d9b401f84cf8568342ff63b1ffc6aecd3877579256d89fe6408645e2741b073e
@@ -20,6 +21,9 @@ post_install() {
 # Template build file for 'xkbevd'.
 pkgname=xkbevd
 version=1.1.0
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

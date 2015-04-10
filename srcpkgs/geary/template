@@ -1,5 +1,6 @@
 # Template file for 'geary'
 pkgname=geary
+<<<<<<< HEAD
 version=46.0
 revision=2
 build_helper="gir"
@@ -33,3 +34,20 @@ post_patch() {
 			;;
 	esac
 }
+=======
+version=0.8.3
+revision=1
+build_style=cmake
+hostmakedepends="pkg-config intltool cmake desktop-file-utils gnome-doc-utils"
+makedepends="
+ vala-devel webkitgtk-devel libgee08-devel libcanberra-devel libsecret-devel
+ libgnome-keyring-devel gmime-devel libunique-devel sqlite-devel libnotify-devel
+ libgirepository-devel gcr-devel"
+depends="gir-freedesktop hicolor-icon-theme desktop-file-utils"
+short_desc="A lightweight email program for the GNOME desktop"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://yorba.org/geary/"
+distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/geary-${version}.tar.xz"
+checksum=87db09b1e4fb8e18c8341561a100003a3d05f954dc6fadc076b658c6699c784e
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

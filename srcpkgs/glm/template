@@ -4,8 +4,12 @@ version=1.0.1
 revision=1
 build_style=cmake
 hostmakedepends="unzip"
+<<<<<<< HEAD
 short_desc="C++ mathematics library for graphics programming"
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="http://glm.g-truc.net"
 distfiles="https://github.com/g-truc/glm/releases/download/${version}/glm-${version}-light.zip"

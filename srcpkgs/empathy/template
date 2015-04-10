@@ -26,7 +26,7 @@ makedepends="
 depends="gsettings-desktop-schemas>=3.12 geoclue2>=2.1 iso-codes"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNOME instant messaging client using the Telepathy framework"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://live.gnome.org/Empathy"
 license="GPL-2"
 checksum=e73a30259492860d5c93213b33f8850b8a45053222062fd6e2784ba447d9cce0

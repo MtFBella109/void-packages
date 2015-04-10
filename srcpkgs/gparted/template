@@ -15,12 +15,20 @@ depends="hicolor-icon-theme desktop-file-utils polkit"
 makedepends="pkg-config intltool libuuid-devel libparted-devel libsigc++-devel gnome-doc-utils glib-devel glibmm-devel atkmm-devel pangomm-devel gtk+-devel gtkmm2-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Gnome Partition Editor"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://gparted.sourceforge.io"
 distfiles="${SOURCEFORGE_SITE}/gparted/gparted/gparted-${version}/gparted-${version}.tar.gz"
 checksum=84ae3b9973e443a2175f07aa0dc2aceeadb1501e0f8953cec83b0ec3347b7d52
 disable_parallel_check=true
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://gparted.sourceforge.net"
+license="GPL-2"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.bz2"
+checksum=aa755e1a6e84c8eaac8b3c44416cbe9c202a4993ceaba22f293d20b83b2d6f27
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 # Some tests are known to fail in CI since 1.1.0
 # This disables these:

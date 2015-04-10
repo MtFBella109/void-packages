@@ -6,11 +6,19 @@ build_style=gnu-configure
 makedepends="libltdl-devel readline-devel"
 conf_files="/etc/odbcinst.ini /etc/odbc.ini"
 short_desc="Basic ODBC tools"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only, LGPL-2.1-or-later"
 homepage="https://www.unixodbc.org"
 distfiles="https://www.unixodbc.org/unixODBC-${version}.tar.gz"
 checksum=f210501445ce21bf607ba51ef8c125e10e22dffdffec377646462df5f01915ec
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2, LGPL-2.1"
+homepage="http://www.unixodbc.org"
+distfiles="http://www.unixodbc.org/unixODBC-${version}.tar.gz"
+checksum=9c3459742f25df5aa3c10a61429bde51a6d4f11552c03095f1d33d7eb02b5c9a
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libodbc_package() {
 	short_desc="ODBC library for Unix"

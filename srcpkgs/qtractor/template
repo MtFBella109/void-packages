@@ -3,6 +3,7 @@ pkgname=qtractor
 <<<<<<< HEAD
 version=1.5.7
 revision=1
+<<<<<<< HEAD
 _clap_tag=1.2.6
 _vst3sdk_tag=3.7.14_build_55
 create_wrksrc=yes
@@ -33,6 +34,19 @@ checksum="6c2f2790efcb788bee8f6293200e15d122f1d4dc246abe0c0393abb9aa5aa787
  499900711f2e910b1635a748034d543d4333231fdfa99071edaef7e75f1dabe9"
 =======
 version=0.5.4
+=======
+build_style=gnu-configure
+configure_args="--enable-debug"
+hostmakedepends="pkg-config"
+makedepends="jack-devel alsa-lib-devel libsndfile-devel
+ libvorbis-devel libmad-devel libsamplerate-devel qt-devel lv2
+ liblo-devel rubberband-devel vamp-plugin-sdk-devel ladspa-sdk dssi-devel
+ lilv-devel suil-devel serd-devel sord-devel sratom-devel"
+depends="jack dssi lv2 desktop-file-utils hicolor-icon-theme"
+short_desc="Audio/MIDI multi-track sequencer application written in C++/Qt4"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://qtractor.sourceforge.net"
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
 build_style=gnu-configure

@@ -7,6 +7,11 @@ short_desc="Firmware for the Intel PRO/Wireless 2200BG wifi cards"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="custom:IPW2200-EULA"
 homepage="http://ipw2200.sourceforge.net/"
+<<<<<<< HEAD
+=======
+license="Custom"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://firmware.openbsd.org/firmware-dist/${_distname}-${version}.tgz"
 checksum=c6818c11c18cc030d55ff83f64b2bad8feef485e7742f84f94a61d811a6258bd
 

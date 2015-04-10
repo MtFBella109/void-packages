@@ -9,6 +9,7 @@ makedepends="libX11-devel"
 short_desc="Refresh all or part of an X screen"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="https://gitlab.freedesktop.org/xorg/app/xrefresh"
 distfiles="${XORG_SITE}/app/xrefresh-${version}.tar.gz"
 checksum=cbf0d3ed80f03188841a96ceb20e615b40a006e3928be2e179d9d5a0ded639b2
@@ -20,6 +21,9 @@ post_install() {
 # Template build file for 'xrefresh'.
 pkgname=xrefresh
 version=1.0.3
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

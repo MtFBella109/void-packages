@@ -23,8 +23,12 @@ makedepends="pkg-config intltool gobject-introspection libXcomposite-devel libXd
 depends="gst-plugins-base1>=1:1.2.0"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Library for using 3D graphics hardware for rendering"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.clutter-project.org"
 distfiles="${GNOME_SITE}/cogl/${version%.*}/cogl-${version}.tar.xz"
 checksum=a805b2b019184710ff53d0496f9f0ce6dcca420c141a0f4f6fcc02131581d759

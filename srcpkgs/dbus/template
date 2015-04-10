@@ -3,12 +3,25 @@ pkgname=dbus
 <<<<<<< HEAD
 version=1.16.2
 revision=2
+<<<<<<< HEAD
 build_style=meson
 configure_args="-Dselinux=disabled -Dinotify=enabled -Ddbus_user=dbus
  -Dxml_docs=enabled -Ddoxygen_docs=disabled -Depoll=enabled
  -Dasserts=false -Dsystemd=disabled -Duser_session=false
  -Dsystem_socket=/run/dbus/system_bus_socket -Dsystem_pid_file=/run/dbus/pid"
 hostmakedepends="gettext pkg-config xmlto"
+=======
+short_desc="Message bus system"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://dbus.freedesktop.org/"
+distfiles="${homepage}/releases/dbus/dbus-${version}.tar.gz"
+checksum=7f795268efd343ff0498786acb35097564390d40b1b6158daf1b4f742b522b07
+
+build_pie=yes
+create_wrksrc=yes
+hostmakedepends="pkg-config intltool gperf xmlto"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 makedepends="expat-devel libX11-devel libcap-devel"
 short_desc="Message bus system"
 maintainer="Orphaned <orphan@voidlinux.org>"

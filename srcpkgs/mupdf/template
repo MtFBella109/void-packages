@@ -19,12 +19,20 @@ makedepends="zlib-devel libressl-devel libcurl-devel freetype-devel libjpeg-turb
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils"
 short_desc="Lightweight PDF and XPS viewer"
+<<<<<<< HEAD
 maintainer="cinerea0 <cinerea0@protonmail.com>"
 license="AGPL-3.0-only"
 homepage="https://mupdf.com"
 changelog="https://mupdf.com/releases/history.html"
 distfiles="https://mupdf.com/downloads/archive/mupdf-${version}-source.tar.lz"
 checksum=d87da097ae943ad0113003190ed370d39bde817383c59dc753dce23c7ba2b710
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://mupdf.com"
+distfiles="http://mupdf.com/downloads/mupdf-${version}-source.tar.gz"
+checksum=9813ee330950a641364181649ebd369c947adbcea9d41ed953ec5365640ea563
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_build() {
 	if [ "$CROSS_BUILD" ]; then

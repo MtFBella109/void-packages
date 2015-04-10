@@ -5,6 +5,7 @@ version=5.23.2
 revision=1
 bootstrap=yes
 short_desc="Run scripts or programs in a directory"
+<<<<<<< HEAD
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://tracker.debian.org/pkg/debianutils"
@@ -17,6 +18,13 @@ do_build() {
 	$CC $CFLAGS $LDFLAGS -o run-parts run-parts.c
 	$CC $CFLAGS $LDFLAGS -o ischroot ischroot.c
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://packages.qa.debian.org/d/debianutils.html"
+license="GPL-2"
+distfiles="${DEBIAN_SITE}/main/d/debianutils/debianutils_${version}.tar.gz"
+checksum=190850cdd6b5302e0a1ba1aaed1bc7074d67d3bd8d04c613f242f7145afa53a6
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_install() {
 	vbin run-parts

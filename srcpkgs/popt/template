@@ -6,7 +6,12 @@ revision=1
 build_style=gnu-configure
 hostmakedepends="autoconf tar automake libtool gettext-devel"
 short_desc="Command line option parsing library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://rpm5.org"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://github.com/rpm-software-management/popt"
 changelog="https://github.com/rpm-software-management/popt/releases"

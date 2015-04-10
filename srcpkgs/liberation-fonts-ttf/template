@@ -29,7 +29,7 @@ noarch="yes"
 font_dirs="/usr/share/fonts/TTF"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="TrueType fonts from RedHat"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-2, ${pkgname}"
 checksum=de646f7dc38ce0941247ba694a1a8372e0b7c2d79478e1ec83b67ac8d0e92d48
 long_desc="

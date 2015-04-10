@@ -6,11 +6,23 @@ revision=1
 build_style=gnu-configure
 configure_args="--disable-csharp --disable-java --disable-static"
 short_desc="Internationalized string handling library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later, LGPL-2.1-or-later"
 homepage="https://www.gnu.org/software/libidn/"
 distfiles="${GNU_SITE}/libidn/libidn-${version}.tar.gz"
 checksum=bdc662c12d041b2539d0e638f3a6e741130cdb33a644ef3496963a443482d164
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnu.org/software/libidn/"
+license="GPL-3, LGPL-2.1"
+distfiles="http://ftp.gnu.org/gnu/libidn/libidn-${version}.tar.gz"
+checksum=fb82747dbbf9b36f703ed27293317d818d7e851d4f5773dedf3efa4db32a7c7c
+
+pre_configure() {
+	autoreconf -fi
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libidn-devel_package() {
 	depends="libidn>=${version}_${revision}"

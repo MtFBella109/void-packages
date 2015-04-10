@@ -15,6 +15,7 @@ makedepends="libxfce4ui-devel startup-notification-devel
  libXrender-devel libXpresent-devel libwnck-devel"
 depends="hicolor-icon-theme desktop-file-utils"
 short_desc="Next generation window manager for Xfce"
+<<<<<<< HEAD
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://xfce.org/"
@@ -61,3 +62,10 @@ Add_dependency full desktop-file-utils
 
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://xfce.org"
+distfiles="http://archive.xfce.org/src/xfce/xfwm4/${version%.*}/xfwm4-$version.tar.bz2"
+checksum=5bb5f72b41060d10bd3823f8b69abcd462bbd8853fdf9c82041450ae68e7d75a
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

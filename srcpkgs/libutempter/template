@@ -8,8 +8,13 @@ version=1.1.6
 revision=2
 build_style=gnu-makefile
 short_desc="Library interface to record user sessions in utmp/wtmp files"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://freecode.com/projects/libutempter"
 distfiles="http://ftp.altlinux.org/pub/people/ldv/utempter/${pkgname}-${version}.tar.gz"
 checksum=967fef372f391de501843ad87570c6cf5dabd9651f00f1783090fbc12b2a34cb

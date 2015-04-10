@@ -1,5 +1,6 @@
 # Template file for 'smtube'
 pkgname=smtube
+<<<<<<< HEAD
 version=21.10.0
 revision=2
 build_wrksrc=src
@@ -27,3 +28,16 @@ do_install() {
 	cd "${wrksrc}"
 	make install PREFIX=/usr DESTDIR="${DESTDIR}"
 }
+=======
+version=15.1.26
+revision=1
+build_style=gnu-makefile
+makedepends="zlib-devel qt5-script-devel qt5-tools-devel"
+depends="hicolor-icon-theme desktop-file-utils"
+short_desc="A small youtube browser"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://smplayer.sourceforge.net/"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.bz2"
+checksum=925fc4afe4f16ae36bb6b414d357f49a8388e454cccf9b0da19be95f166bc371
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

@@ -12,6 +12,7 @@ build_style=gnu-configure
 makedepends="acl-devel popt-devel"
 conf_files="/etc/logrotate.conf"
 short_desc="Log file rotation and periodic maintenance"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/logrotate/logrotate"
@@ -43,6 +44,9 @@ checksum=21aa3dc830e8cc895ee4199d9325aa1e37cd3b525d0eaef400f66f6c7fc536dd
 =======
 short_desc="Log file rotation and periodic maintenance"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://fedorahosted.org/logrotate/"
 license="GPL-2"
 distfiles="https://fedorahosted.org/releases/l/o/$pkgname/${pkgname}-${version}.tar.gz"

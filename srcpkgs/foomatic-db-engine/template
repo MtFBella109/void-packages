@@ -8,8 +8,13 @@ hostmakedepends="wget perl foomatic-db cups-filters ghostscript cups libxml2-dev
 makedepends="libxml2-devel cups-devel"
 depends="${hostmakedepends/libxml2-devel/}"
 short_desc="OpenPrinting printer support - programs"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://www.openprinting.org/"
 distfiles="https://www.openprinting.org/download/foomatic/$pkgname-$version.tar.gz"
 <<<<<<< HEAD

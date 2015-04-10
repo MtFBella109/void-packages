@@ -34,7 +34,7 @@ makedepends="libglib-devel libpng-devel libjpeg-turbo-devel tiff-devel libX11-de
 triggers="gtk-pixbuf-loaders"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="An Image loading library for The GTK+ toolkit (v2)"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.gtk.org/"
 license="GPL-2"
 checksum=a60af12b58d9cc15ba4c680c6730ce5d38e8d664af1d575a379385b94b4ec7ba

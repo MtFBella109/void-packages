@@ -18,11 +18,19 @@ configure_args="--without-wrap --with-pam --enable-ftp --enable-ftpd
 makedepends="ncurses-devel pam-devel readline-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNU network utilities"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://www.gnu.org/software/inetutils/"
 distfiles="${GNU_SITE}/inetutils/inetutils-${version}.tar.xz"
 checksum=68bedbfeaf73f7d86be2a7d99bcfbd4093d829f52770893919ae174c0b2357ca
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://www.gnu.org/software/inetutils"
+distfiles="http://ftp.gnu.org/gnu/${pkgname}/${pkgname}-${version}.tar.gz"
+checksum=0423ea40a160cd4630f817e247df5c08ecc625378d2bb56a0509117a36a89913
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 subpackages="inetutils-dnsdomainname inetutils-ftp inetutils-hostname
  inetutils-ifconfig inetutils-inetd inetutils-ping inetutils-rexec

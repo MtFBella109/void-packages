@@ -6,8 +6,13 @@ build_style=cmake
 configure_args="-DENABLE_TESTING=1 -DUSE_SHARED_MBEDTLS_LIBRARY=1"
 hostmakedepends="python3 perl"
 short_desc="Portable cryptographic TLS library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Apache-2.0"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://tls.mbed.org/"
 changelog="https://raw.githubusercontent.com/ARMmbed/mbedtls/mbedtls-${version%.*}/ChangeLog"
 distfiles="https://github.com/ARMmbed/mbedtls/archive/refs/tags/v${version}.tar.gz"

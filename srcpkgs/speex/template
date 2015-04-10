@@ -6,10 +6,17 @@ build_style=gnu-configure
 <<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="fftw-devel libogg-devel speexdsp-devel"
+<<<<<<< HEAD
 short_desc="Free codec for free speech"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
 homepage="https://www.speex.org"
+=======
+short_desc="A free codec for free speech"
+homepage="http://www.speex.org"
+license="BSD"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://downloads.xiph.org/releases/speex/speex-$version.tar.gz"
 checksum=4b44d4f2b38a370a2d98a78329fefc56a0cf93d1c1be70029217baae6628feea
 =======

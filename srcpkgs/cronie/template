@@ -25,6 +25,15 @@ make_dirs="
 	/var/spool/anacron 0755 root root"
 conf_files="/etc/anacrontab /etc/pam.d/crond /etc/cron.deny /etc/default/anacron"
 provides="cron-daemon-0_1"
+<<<<<<< HEAD
+=======
+short_desc="Runs specified programs at scheduled times"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="https://fedorahosted.org/cronie/"
+license="BSD"
+distfiles="https://fedorahosted.org/releases/c/r/cronie/cronie-$version.tar.gz"
+checksum=0f5c9bf32f352599451c4ca0d6bc076d19e73ecfa5a90b34ecfe47c918c8bafd
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 alternatives="
  crond:crond:/etc/sv/cronie

@@ -22,8 +22,13 @@ hostmakedepends="pkg-config"
 makedepends="gst-plugins-base1-devel vala-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GUPnP DLNA"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://gupnp.org/"
 changelog="https://gitlab.gnome.org/GNOME/gupnp-dlna/-/raw/master/NEWS"
 distfiles="${GNOME_SITE}/gupnp-dlna/${version%.*}/gupnp-dlna-${version}.tar.xz"

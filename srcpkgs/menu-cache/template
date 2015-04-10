@@ -14,8 +14,15 @@ short_desc="LXDE freedesktop menu specification"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="http://lxde.org/"
+<<<<<<< HEAD
 distfiles="https://github.com/lxde/menu-cache/archive/refs/tags/${version}.tar.gz"
 checksum=e8af90467df271c3c8700c840ca470ca2915699c6f213c502a87d74608748f08
+=======
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${SOURCEFORGE_SITE}/lxde/$pkgname-$version.tar.xz"
+checksum=ff7df437bbfd3119c5f662c6d209b98f15de03a7203308c6b56a4c1e1d419aaf
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_configure() {
 	autoreconf -fi

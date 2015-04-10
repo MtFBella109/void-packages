@@ -14,7 +14,11 @@ makedepends="sdl12-compat-devel zlib-devel libopenal-devel libpng-devel
  libvorbis-devel"
 depends="vorbis-tools cdparanoia"
 short_desc="A SDL port of the 1996 DOS game Syndicate Wars"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-3"
 homepage="http://swars.vexillium.org/"
 distfiles="http://swars.vexillium.org/files/swars-${version}.tar.bz2"

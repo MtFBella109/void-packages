@@ -9,6 +9,7 @@ makedepends="libX11-devel libXmu-devel"
 short_desc="Print an X window dump"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org"
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.xz"
 checksum=8b9402f8331309f0a9d8143d4d6129c4a7479ff9449616849b9f1e2a5835cec3
@@ -20,6 +21,9 @@ post_install() {
 # Template build file for 'xpr'.
 pkgname=xpr
 version=1.0.3
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

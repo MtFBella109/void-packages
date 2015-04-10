@@ -3,6 +3,7 @@ pkgname=chroot-gawk
 version=5.3.2
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-nls --without-readline ac_cv_libsigsegv=/bin/false
  --disable-pma"
 short_desc="GNU awk utility -- for xbps-src use"
@@ -13,6 +14,15 @@ changelog="https://git.savannah.gnu.org/cgit/gawk.git/plain/NEWS"
 distfiles="${GNU_SITE}/gawk/gawk-${version}.tar.xz"
 checksum=f8c3486509de705192138b00ef2c00bbbdd0e84c30d5c07d23fc73a9dc4cc9cc
 repository=bootstrap
+=======
+configure_args="--disable-nls --without-readline ac_cv_libsigsegv=/bin/false"
+short_desc="The GNU awk utility -- for xbps-src use"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://www.gnu.org/directory/GNU/gawk.html"
+distfiles="http://ftp.gnu.org/gnu/gawk/gawk-$version.tar.gz"
+checksum=c3a7cf7d976e05c6a1d8a9b3f14fa55d4304707408ddafb1396212653ea00be5
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 bootstrap=yes
 provides="awk-0_1"

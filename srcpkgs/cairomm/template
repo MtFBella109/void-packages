@@ -8,8 +8,15 @@ configure_args="-Dbuild-examples=false"
 hostmakedepends="pkg-config"
 makedepends="libsigc++-devel fontconfig-devel libpng-devel libXrender-devel cairo-devel"
 depends="cairo>=1.12.14_6"
+<<<<<<< HEAD
 =======
 version=1.10.0
+=======
+short_desc="C++ bindings to Cairo vector graphics library"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.cairographics.org"
+license="GPL-2, MPL-1.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://cairographics.org/releases/$pkgname-$version.tar.gz"
 build_style=gnu-configure
 revision=3

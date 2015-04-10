@@ -39,7 +39,7 @@ hostmakedepends="pkg-config intltool"
 makedepends="gtk+-devel iso-codes"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="GUI login manager for LXDE"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-3"
 checksum=9e0d0a5672fcf31a18de8178ce73eab1723d6ae7097dfe41e9fe2c46e180cf08
 long_desc="

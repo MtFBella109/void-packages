@@ -17,6 +17,7 @@ makedepends="lzo-devel readline-devel libgpg-error-devel
  libgcrypt-devel ${_develdepends}"
 checkdepends="iproute2"
 short_desc="GNU Transport Layer Security library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-only, LGPL-2.1-or-later"
 homepage="https://gnutls.org"
@@ -25,6 +26,13 @@ distfiles="https://www.gnupg.org/ftp/gcrypt/gnutls/v${version%.*}/gnutls-${versi
 checksum=db7fab7cce791e7727ebbef2334301c821d79a550ec55c9ef096b610b03eb6b7
 # same as $PASS in tests/cert-tests/certtool.sh
 make_check_pre="env GNUTLS_PIN=1234"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnu.org/software/gnutls/"
+license="GPL-3, LGPL-2.1"
+distfiles="ftp://ftp.gnutls.org/gcrypt/gnutls/v3.3/gnutls-${version}.tar.xz"
+checksum=0dfa0030faad8909c1e904105198232d6bc0123cae8cf4933b2bac85ee7cec52
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 if [ "$XBPS_CHECK_PKGS" ]; then

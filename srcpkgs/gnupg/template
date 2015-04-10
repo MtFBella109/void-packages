@@ -73,7 +73,7 @@ configure_args="--enable-threads=posix --enable-noexecstack gnupg_cv_regex_broke
 makedepends="bzip2-devel zlib-devel libldap-devel libcurl-devel readline-devel libusb-compat-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="The GNU Privacy Guard"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-3"
 checksum=4f03ca6902aaee79d0eda00eea0fefde7db9eb005d8ffd54fac9806bc24050ec
 long_desc="

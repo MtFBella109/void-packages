@@ -3,9 +3,15 @@ pkgname=pam-base
 version=0.4
 revision=3
 short_desc="PAM base configuration files"
+<<<<<<< HEAD
 maintainer="Érico Nogueira <ericonr@disroot.org>"
 license="Public Domain"
 homepage="http://www.voidlinux.org"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="public domain"
+homepage="http://www.voidlinux.eu"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 conf_files="
  /etc/pam.d/other

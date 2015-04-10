@@ -12,10 +12,20 @@ makedepends="xorg-server-devel"
 depends="virtual?xserver-abi-input-21_1"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Xorg VMware virtual mouse input driver"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=381ac3b9dc47f7bb425b4748fc9945e9c70054e40d71aedcd5327b5834d68c0d
 long_desc="
  This is the VMware virtual mouse input driver for the Xorg X11 server."
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://xorg.freedesktop.org"
+license="MIT"
+distfiles="${XORG_SITE}/driver/${pkgname}-${version}.tar.bz2"
+checksum=04cfb60366008d4db815c550d8fb8d0a4270c75fa7a20fa3bddc9ecbd355612c
+
+only_for_archs="i686 i686-musl x86_64 x86_64-musl"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	# Remove HAL stuff, it's obsolete.

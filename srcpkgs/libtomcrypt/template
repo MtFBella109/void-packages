@@ -15,7 +15,11 @@ make_build_args="-f makefile.shared"
 make_install_args="-f makefile.shared NODOCS=1"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Fairly comprehensive, modular and portable cryptographic toolkit"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="Public domain"
 <<<<<<< HEAD
 homepage="http://www.libtom.net/?page=features&newsitems=5&whatfile=crypt"

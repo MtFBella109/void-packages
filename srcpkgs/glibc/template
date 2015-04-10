@@ -4,9 +4,14 @@ pkgname=glibc
 version=2.41
 revision=1
 bootstrap=yes
+<<<<<<< HEAD
 short_desc="GNU C library"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later, BSD-3-Clause"
+=======
+short_desc="The GNU C library"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnu.org/software/libc"
 distfiles="${GNU_SITE}/libc/glibc-${version}.tar.xz"
 checksum=a5a26b22f545d6b7d7b3dd828e11e428f24f4fac43c934fb071b6a7d0828e901

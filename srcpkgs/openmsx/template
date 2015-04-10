@@ -2,6 +2,7 @@
 pkgname=openmsx
 version=18.0
 revision=1
+<<<<<<< HEAD
 hostmakedepends="pkg-config python3"
 makedepends="SDL2-devel glew-devel libao-devel libtheora-devel libvorbis-devel
  libpng-devel libxml2-devel SDL2_ttf-devel tcl-devel"
@@ -14,6 +15,14 @@ distfiles="https://github.com/openMSX/openMSX/releases/download/RELEASE_${versio
 checksum=23db7756e6c6b5cfd157bb4720a0d96aa2bb75e88d1fdf5a0f76210eef4aff60
 nocross="can't use CXX prefixed with triplet"
 CXXFLAGS="-Wno-narrowing -O3"
+=======
+short_desc="The MSX emulator that aims for perfection"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://openmsx.sourceforge.net"
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
+checksum=93611a12b3860f31ef081d625e9e7f68a48c81c564d629801def868a87b75a77
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 case "$XBPS_TARGET_MACHINE" in

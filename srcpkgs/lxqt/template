@@ -27,9 +27,17 @@ depends="
 	breeze-icons
 	xdg-desktop-portal-lxqt
 	xdg-utils
+<<<<<<< HEAD
 	elogind
 	upower"
 short_desc="LXQt meta-package for Void Linux"
 maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="BSD-2-Clause" # Suppress xlint warning: vlicense
 homepage="https://lxqt-project.org"
+=======
+	$(vopt_if systemd 'upower' 'ConsoleKit2 upower0')"
+short_desc="The LXQT meta-package for Void Linux"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.lxqt.org"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

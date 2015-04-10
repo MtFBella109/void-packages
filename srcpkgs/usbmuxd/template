@@ -12,6 +12,7 @@ makedepends="libusb-devel libimobiledevice-devel"
 makedepends="libusb-devel libimobiledevice-devel $(vopt_if systemd systemd-devel)"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="USB Multiplex Daemon"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="http://github.com/libimobiledevice/usbmuxd/"
@@ -24,6 +25,13 @@ system_accounts="usbmux"
 pre_configure() {
 	autoreconf -fi
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2,GPL-3"
+homepage="https://marcan.st/blog/iphonelinux/usbmuxd/"
+distfiles="http://www.libimobiledevice.org/downloads/${pkgname}-${version}.tar.bz2"
+checksum=3e8948b4fe4250ee5c4bd41ccd1b83c09b8a6f5518a7d131a66fd38bd461b42d
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vsv usbmuxd

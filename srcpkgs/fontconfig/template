@@ -10,7 +10,12 @@ makedepends="expat-devel freetype-devel"
 checkdepends="curl unzip"
 conf_files="/etc/fonts/fonts.conf"
 short_desc="Library for configuring and customizing font access"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.fontconfig.org"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="http://www.fontconfig.org"
 distfiles="${FREEDESKTOP_SITE}/fontconfig/release/fontconfig-${version}.tar.xz"

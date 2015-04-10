@@ -20,6 +20,7 @@ makedepends="
  pulseaudio-devel faad2-devel libsamplerate-devel imlib2-devel gtk+3-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils hicolor-icon-theme"
+<<<<<<< HEAD
 short_desc="Ultimate Music Player for GNU/Linux"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Zlib, GPL-2.0-or-later, LGPL-2.1-or-later"
@@ -39,6 +40,14 @@ checksum="bb3f4446cf462a018b3ee4407ef7018c654b5366f59e5c82e60e6578eee4537d
 skip_extraction="libretro-${_libretro_commit}.tar.gz
  output_pw-${_output_pw_commit}.tar.gz
  mp4p-${_mp4p_commit}.tar.gz"
+=======
+short_desc="Ultimate Music Player For GNU/Linux"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2, LGPL-2.1"
+homepage="http://deadbeef.sourceforge.net"
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.bz2"
+checksum=3433b966683286c03ffbcc79b2201cd517f8dbf6b41da8600778dfa93cd64e1a
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 # The soundtouchup plugin was made default in 1.8.4 and fails to build on i686.
 # Fixing that might be a good maintainer task.

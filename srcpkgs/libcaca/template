@@ -10,7 +10,13 @@ makedepends="ncurses-devel imlib2-devel $(vopt_if opengl 'libfreeglut-devel')"
 =======
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Graphics library that outputs text instead of pixels"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+makedepends="ncurses-devel"
+homepage="http://caca.zoy.org/wiki/libcaca"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="WTFPL"
 homepage="http://caca.zoy.org/wiki/libcaca"
 distfiles="https://github.com/cacalabs/libcaca/archive/v${version}.tar.gz"

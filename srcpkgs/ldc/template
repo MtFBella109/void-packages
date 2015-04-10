@@ -3,6 +3,7 @@ pkgname=ldc
 version=1.39.0
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 configure_args="
  -DINCLUDE_INSTALL_DIR=/usr/include/dlang/ldc
  -DBUILD_SHARED_LIBS=ON
@@ -16,6 +17,15 @@ makedepends="libcurl-devel libffi-devel ncurses-devel zlib-devel
  llvm18-devel llvm-libunwind-devel"
 depends="ldc-runtime llvm-libunwind-devel"
 checkdepends="python3"
+=======
+configure_args="-DINCLUDE_INSTALL_DIR=/usr/include/dlang/ldc -DBUILD_SHARED_LIBS=ON"
+hostmakedepends="cmake llvm perl pkg-config"
+makedepends="zlib-devel libconfig-devel libffi-devel libcurl-devel"
+conf_files="/etc/ldc2.rebuild.conf /etc/ldc2.conf"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://wiki.dlang.org/LDC"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 short_desc="Portable D programming language compiler based on LLVM"
 maintainer="Auri <me@aurieh.me>"
 license="BSD-3-Clause, BSL-1.0"

@@ -9,6 +9,7 @@ makedepends="libXv-devel"
 short_desc="Query X-Video capabilities"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org"
 distfiles="${XORG_SITE}/app/${pkgname}-${version}.tar.xz"
 checksum=3ede71ecb26d9614ccbc6916720285e95a2c7e0c5e19b8570eaaf72ad7c5c404
@@ -20,6 +21,9 @@ post_install() {
 # Template build file for 'xvinfo'.
 pkgname=xvinfo
 version=1.1.0
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

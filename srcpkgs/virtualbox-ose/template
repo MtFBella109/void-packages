@@ -6,7 +6,14 @@ _vbox_distver=4.3.6
 version=${_vbox_distver}
 revision=2
 wrksrc="VirtualBox-${version}"
+<<<<<<< HEAD
 patch_args="-Np1"
+=======
+short_desc="General-purpose full virtualizer for x86 hardware"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://virtualbox.org"
+license="GPL-2, MPL-1.1, CDDL"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://download.virtualbox.org/virtualbox/$version/VirtualBox-$version.tar.bz2"
 depends="virtualbox-ose-dkms>=4.1.16 hicolor-icon-theme desktop-file-utils"
 makedepends="which openssl-devel libcurl-devel libpng-devel SDL-devel qt-devel libXext-devel libXcursor-devel libXinerama-devel libXrandr-devel libXcomposite-devel MesaLib-devel libIDL-devel glib-devel pam-devel pulseaudio-devel libxslt-devel libcap-devel xorg-server-devel docbook-xsl acpica-utils kernel-headers dev86 yasm"

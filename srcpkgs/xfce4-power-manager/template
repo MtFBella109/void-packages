@@ -31,7 +31,7 @@ makedepends="libxfce4ui-devel libnotify-devel upower0-devel
 depends="hicolor-icon-theme desktop-file-utils"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Xfce power manager"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-2"
 checksum=d7fb98a540284b62f4201527de17d4b24123f9d26c9f49131dd497c8387184e9
 long_desc="

@@ -14,7 +14,7 @@ distfiles="https://xcb.freedesktop.org/dist/$pkgname-$version.tar.xz"
 checksum=62c34e21d06264687faea7edbf63632c9f04d55e72114aa4a57bb95e4f888a0b
 =======
 short_desc="Utility libraries for XC Binding - client and window-manager helpers for ICCCM"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://xcb.freedesktop.org"
 license="GPL-2"
 distfiles="http://xcb.freedesktop.org/dist/$pkgname-$version.tar.bz2"

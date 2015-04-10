@@ -20,6 +20,7 @@ makedepends="boost-devel libsecret-devel libxslt-devel libuuid-devel gtkmm-devel
 depends="desktop-file-utils"
 checkdepends="glib-devel"
 short_desc="GNOME note taking application"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://wiki.gnome.org/Apps/Gnote"
@@ -27,3 +28,10 @@ changelog="https://gitlab.gnome.org/GNOME/gnote/-/raw/gnome-46/NEWS"
 distfiles="${GNOME_SITE}/gnote/${version%.*}/gnote-${version}.tar.xz"
 checksum=e4851ee6a5bc2f5c07d1c6ff4d69ba0471c24caa7d8204bd2a1098dc7187bedf
 lib32disabled=yes
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://live.gnome.org/Gnote"
+distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
+checksum=4d01745cab0a01c6b4a921c376c11f1dcb40bf3e635fb88739afb05994a89c22
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

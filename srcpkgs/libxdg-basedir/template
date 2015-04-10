@@ -12,7 +12,11 @@ build_style=gnu-configure
 homepage="http://n.ethz.ch/student/nevillm/download/libxdg-basedir"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Implementation of the XDG Base Directory Specifications"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 <<<<<<< HEAD
 homepage="https://github.com/devnev/libxdg-basedir"

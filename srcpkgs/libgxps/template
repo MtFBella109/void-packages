@@ -61,7 +61,7 @@ makedepends="cairo-devel libglib-devel libjpeg-turbo-devel libpng-devel
  tiff-devel lcms2-devel libarchive-devel freetype-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GObject base library for XPS documents"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="LGPL-2.1"
 homepage="http://live.gnome.org/libgxps"
 distfiles="${GNOME_SITE}/$pkgname/0.2/$pkgname-$version.tar.xz"

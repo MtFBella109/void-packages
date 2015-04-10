@@ -3,11 +3,20 @@ version=3.1.4
 distfiles="ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/$pkgname-$version.tar.gz"
 build_style=custom-install
 short_desc="PCI bus related utilities"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=676b941ddaf912387092c6925597b14cef4f35f495bdbb229c1e5947151a1b20
 long_desc="
  The $pkgname package contains various utilities for inspecting and
  setting devices connected to the PCI bus."
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://mj.ucw.cz/pciutils.html"
+distfiles="ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/${pkgname}-${version}.tar.gz"
+checksum=02beeb14503707c5a3293fe084c18e12e6937c0d4dd1e29e6bcb6b12f124df46
+build_pie=yes
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 Add_dependency full glibc
 Add_dependency build wget

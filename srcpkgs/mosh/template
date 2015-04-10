@@ -28,7 +28,7 @@ pre_configure() {
 makedepends="pkg-config ncurses-devel protobuf-devel libutempter-devel"
 fulldepends="perl-IO-Tty"
 short_desc="MObile SHell"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-3"
 checksum=8b2d346a2f0d560ceb2ca91ff396fa859f81bb321ebd8c26fc564db8b335433a
 long_desc="

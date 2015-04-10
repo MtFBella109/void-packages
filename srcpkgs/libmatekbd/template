@@ -10,12 +10,20 @@ hostmakedepends="pkg-config gettext itstool glib-devel libxml2
 makedepends="libICE-devel libglib-devel gtk+3-devel libxklavier-devel iso-codes"
 depends="dconf iso-codes"
 short_desc="MATE keyboard library"
+<<<<<<< HEAD
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://mate-desktop.org"
 changelog="https://raw.githubusercontent.com/mate-desktop/libmatekbd/master/NEWS"
 distfiles="https://pub.mate-desktop.org/releases/${version%.*}/libmatekbd-${version}.tar.xz"
 checksum=5d2e58483c2b23d33503d24c88f8b90a28cc0189d7e4001b3e273a604f6fe80e
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-3"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=dce9704c73b31fbf1ef77e977d2a0d31ade137a549ecf209e6cf3cfe10b51749
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 build_options="gir"
 build_options_default="gir"

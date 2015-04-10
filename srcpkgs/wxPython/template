@@ -1,6 +1,7 @@
 # Template file for 'wxPython'
 pkgname=wxPython
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=4.2.3
 revision=1
 build_style=python3-module
@@ -13,6 +14,20 @@ depends="python3-six"
 short_desc="Python bindings for wxWidgets"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="custom:wxWindows"
+=======
+version=3.0.2.0
+revision=2
+wrksrc="${pkgname}-src-${version}"
+hostmakedepends="pkg-config"
+makedepends="
+ zlib-devel libpng-devel libjpeg-turbo-devel tiff-devel expat-devel gtk+-devel
+ libSM-devel MesaLib-devel glu-devel webkitgtk2-devel gst-plugins-base-devel
+ libnotify-devel python-devel wxWidgets-devel"
+depends="python"
+pycompile_module="wx-3.0-gtk2 wxversion.py"
+short_desc="The wxWidgets GUI toolkit library (Python Bindings)"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.wxpython.org/"
 distfiles="${PYPI_SITE}/w/wxPython/wxPython-${version}.tar.gz"
 checksum=20d6e0c927e27ced85643719bd63e9f7fd501df6e9a8aab1489b039897fd7c01

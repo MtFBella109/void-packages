@@ -6,8 +6,12 @@ build_style=gnu-configure
 configure_args="--with-isl=system --with-gmp=system --with-gmp-exec-prefix=${XBPS_CROSS_BASE}"
 makedepends="isl-devel"
 short_desc="Library that generates loops for scanning polyhedra"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.bastoul.net/cloog/"
 distfiles="https://github.com/periscop/cloog/releases/download/cloog-${version}/cloog-${version}.tar.gz"
 checksum=d370cf9990d2be24bfb24750e355bac26110051248cabf2add61f9b3867fb1d7

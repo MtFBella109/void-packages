@@ -8,8 +8,12 @@ build_style=gnu-configure
 hostmakedepends="flex"
 makedepends="libfl-devel"
 short_desc="Secure Programming Lint"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.splint.org"
 distfiles="${DEBIAN_SITE}/main/s/splint/${pkgname}_${version}+dfsg.orig.tar.xz"
 checksum=51cd7ba978a366ae1ededac2b927058fd5f45d5455e5a9d640b75ab4e45b748a

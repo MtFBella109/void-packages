@@ -11,8 +11,13 @@ makedepends="libsndfile-devel libarchive-devel liblrdf-devel
  qt5-tools-devel ladspa-sdk liblo-devel libcppunit-devel"
 depends="desktop-file-utils"
 short_desc="Advanced drum machine"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.hydrogen-music.org/"
 <<<<<<< HEAD
 distfiles="https://github.com/hydrogen-music/hydrogen/archive/${version}.tar.gz"

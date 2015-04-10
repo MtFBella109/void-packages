@@ -5,8 +5,16 @@ version=2.99.3
 revision=3
 build_style=gnu-configure
 configure_args="--disable-static"
+<<<<<<< HEAD
 hostmakedepends="automake libtool mono pkg-config"
 makedepends="mono-devel gtk+3-devel"
+=======
+hostmakedepends="pkg-config"
+makedepends="mono gtk+3-devel libglade-devel"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.mono-project.com/GtkSharp"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 short_desc="Graphical User Interface Toolkit for mono and .Net (Gtk#)"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later"

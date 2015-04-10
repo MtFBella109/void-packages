@@ -9,8 +9,13 @@ configure_args="--enable-cxx"
 hostmakedepends="m4"
 makedepends="zlib-devel"
 short_desc="Library for arbitrary precision arithmetic"
+<<<<<<< HEAD
 maintainer="Gonzalo Tornaría <tornaria@cmat.edu.uy>"
 license="LGPL-3.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://gmplib.org/"
 changelog="https://gmplib.org/repo/gmp/raw-file/tip/NEWS"
 distfiles="${GNU_SITE}/gmp/gmp-${version}.tar.xz"

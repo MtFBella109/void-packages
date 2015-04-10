@@ -16,8 +16,12 @@ hostmakedepends="cmake"
 makedepends="libXv-devel glu-devel libjpeg-turbo-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Run remote OpenGL applications with full acceleration"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.virtualgl.org/"
 distfiles="${SOURCEFORGE_SITE}/virtualgl/${version}/${pkgname}-${version}.tar.gz"
 checksum=57bd20a9b1127de344313b6178b19610838a6af6309c059702788e41b6a875d0

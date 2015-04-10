@@ -15,11 +15,19 @@ makedepends="libjpeg-turbo-devel libpng-devel MesaLib-devel alsa-lib-devel
 makedepends="jpeg-devel libpng-devel MesaLib-devel alsa-lib-devel freetype-devel libXinerama-devel libXft-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Cross-platform C++ GUI toolkit"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="custom:LGPL-2.0-only WITH FLTK-exception"
 homepage="https://www.fltk.org/"
 distfiles="https://fltk.org/pub/fltk/${version}/fltk-${version}-source.tar.gz"
 checksum=d736b0445c50d607432c03d5ba5e82f3fba2660b10bc1618db8e077a42d9511b
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="http://www.fltk.org/"
+distfiles="http://fltk.org/pub/fltk/${version}/fltk-${version}-source.tar.gz"
+checksum=f8398d98d7221d40e77bc7b19e761adaf2f1ef8bb0c30eceb7beb4f2273d0d97
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 pre_build() {

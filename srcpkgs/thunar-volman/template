@@ -12,6 +12,7 @@ hostmakedepends="pkg-config intltool"
 makedepends="libgudev-devel libnotify-devel libxfce4ui-devel exo-devel"
 depends="hicolor-icon-theme desktop-file-utils"
 short_desc="Thunar Volume Manager"
+<<<<<<< HEAD
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://xfce.org/"
@@ -27,6 +28,10 @@ distfiles="http://goodies.xfce.org/releases/$pkgname/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 =======
 version=0.8.0
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://xfce.org"
 distfiles="http://archive.xfce.org/src/xfce/thunar-volman/0.8/$pkgname-$version.tar.bz2"
 build_style=gnu-configure

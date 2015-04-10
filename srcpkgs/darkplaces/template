@@ -8,7 +8,11 @@ makedepends="zlib-devel alsa-lib-devel libjpeg-turbo-devel libXpm-devel
  libXxf86vm-devel sdl12-compat-devel MesaLib-devel"
 depends="desktop-file-utils hicolor-icon-theme"
 short_desc="An advanced Quake 1 game engine"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-2"
 homepage="http://icculus.org/twilight/darkplaces/"
 distfiles="http://icculus.org/twilight/$pkgname/files/darkplacesengine${version}.zip"

@@ -6,6 +6,7 @@ build_style=gnu-configure
 hostmakedepends="pkg-config libxslt meson"
 makedepends="libglib-devel"
 short_desc="Xfce developer tools"
+<<<<<<< HEAD
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://xfce.org/"
@@ -21,3 +22,10 @@ post_patch() {
 		-e 's/\$.*xdt-csource --extern.*>/touch /' \
 		tests/Makefile.in
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://xfce.org"
+distfiles="http://archive.xfce.org/src/xfce/${pkgname}/${version%.*}/${pkgname}-${version}.tar.bz2"
+checksum=e2e3a654fe9110df81f8c2483c9cbfa6d656fed15d5e5e717d6ef10bd0f5b5cb
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

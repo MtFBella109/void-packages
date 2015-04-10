@@ -9,8 +9,13 @@ hostmakedepends="allegro4-devel"
 makedepends="allegro4-devel libpng-devel libvorbis-devel"
 depends="desktop-file-utils"
 short_desc="Open-source game based on the Sonic the Hedgehog universe"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://opensnc.sourceforge.net/"
 distfiles="${SOURCEFORGE_SITE}/opensnc/opensnc-src-${version}.tar.gz
  https://sources.voidlinux.org/opensonic-0.1.4/4.4.2.tar.gz"

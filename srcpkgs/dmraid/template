@@ -13,8 +13,13 @@ depends="device-mapper>=2.02.95_3"
 makedepends="device-mapper-devel>=2.02.95_1"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Device mapper RAID interface"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2, LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://people.redhat.com/~heinzm/sw/dmraid/"
 distfiles="${homepage}/src/dmraid-${_distver}.tar.bz2"
 checksum=93421bd169d71ff5e7d2db95b62b030bfa205a12010b6468dcdef80337d6fbd8

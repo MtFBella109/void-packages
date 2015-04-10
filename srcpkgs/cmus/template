@@ -1,9 +1,21 @@
 # Template file for 'cmus'
 pkgname=cmus
+<<<<<<< HEAD
 version=2.12.0
 revision=2
 build_style=configure
 configure_args="prefix=/usr LD=$CC"
+=======
+version=2.6.0
+revision=3
+short_desc="Small, fast and powerful console music player"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://cmus.github.io"
+distfiles="https://github.com/cmus/cmus/archive/v${version}.tar.gz"
+checksum=0c53c072432e026d682d1749bbe89777507b31107ca04afad21a9bf375208e8e
+
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 hostmakedepends="pkg-config"
 <<<<<<< HEAD
 makedepends="ncurses-devel faad2-devel libcdio-devel libcdio-paranoia-devel

@@ -17,8 +17,14 @@ hostmakedepends="perl"
 makedepends="$hostmakedepends"
 depends="$makedepends"
 short_desc="Parse::CPAN::Meta - Parse META.yml and META.json CPAN metadata files"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/Parse-CPAN-Meta"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/Parse-CPAN-Meta"
+license="GPL-1, Artistic"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${CPAN_SITE}/Parse/${pkgname#perl-}-${version}.tar.gz"
 checksum=d86c42d8b0a855f33f504609cee01b9f7ba4b8454a4645acd56ad66ad3f2ed33

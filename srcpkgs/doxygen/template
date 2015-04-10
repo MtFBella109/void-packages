@@ -12,8 +12,12 @@ distfiles="http://ftp.stack.nl/pub/users/dimitri/$pkgname-$version.src.tar.gz"
 makedepends="perl flex qt-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Source code documentation generator tool"
+<<<<<<< HEAD
 maintainer="Érico Nogueira <ericonr@disroot.org>"
 license="GPL-2.0-only"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.doxygen.org/"
 changelog="https://www.doxygen.nl/manual/changelog.html"
 distfiles="http://doxygen.nl/files/doxygen-${version}.src.tar.gz"

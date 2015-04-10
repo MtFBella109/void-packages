@@ -1,8 +1,17 @@
 # Template file for 'smali'
 pkgname=smali
+<<<<<<< HEAD
 version=2.5.2
 revision=1
 build_style=fetch
+=======
+version=2.0.3
+revision=2
+short_desc="An assembler/disassembler for Android's dex format"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Simplified BSD"
+homepage="https://code.google.com/p/smali/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 depends="virtual?java-runtime"
 short_desc="Assembler/disassembler for Android's dex format"
 maintainer="Orphaned <orphan@voidlinux.org>"

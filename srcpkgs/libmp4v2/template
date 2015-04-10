@@ -10,7 +10,11 @@ wrksrc="mp4v2-${version}"
 build_style=gnu-configure
 make_install_args="install-man"
 short_desc="MPEG-4 library from mpeg4ip"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://code.google.com/p/mp4v2/"
 license="MPL-1.1"
 distfiles="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/mp4v2/mp4v2-${version}.tar.bz2"

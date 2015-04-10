@@ -8,6 +8,7 @@ short_desc="Standard aliases for X11 PCF fonts"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
 homepage="http://xorg.freedesktop.org/"
+<<<<<<< HEAD
 distfiles="${XORG_SITE}/font/$pkgname-$version.tar.gz"
 checksum=f8e0ca6537003f11fcaf36c598f7de9c0428f8ed587388a8a37ff18ccc597730
 
@@ -18,6 +19,9 @@ post_install() {
 # Template build file for 'font-alias'.
 pkgname=font-alias
 version=1.0.2
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 short_desc="Standard aliases for X11 PCF fonts"

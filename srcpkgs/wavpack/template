@@ -4,6 +4,7 @@ version=5.7.0
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="--enable-static"
 short_desc="Hybrid lossless audio compression"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -12,6 +13,14 @@ homepage="https://www.wavpack.com/"
 changelog="https://raw.githubusercontent.com/dbry/WavPack/master/NEWS"
 distfiles="https://www.wavpack.com/wavpack-${version}.tar.bz2"
 checksum=8944b237968a1b3976a1eb47cd556916e041a2aa8917495db65f82c3fcc2a225
+=======
+short_desc="An audio codec (lossy and lossless)"
+homepage="http://www.wavpack.com/"
+license="BSD"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://www.wavpack.com/${pkgname}-${version}.tar.bz2"
+checksum=2cade379b0aba99fbc4e442ccc6dac6c609f6212e46516a083e24c8c364430a4
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 case "$XBPS_TARGET_MACHINE" in
 	armv5*) configure_args+=" --disable-asm";;

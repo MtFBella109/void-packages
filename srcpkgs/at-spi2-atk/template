@@ -11,11 +11,19 @@ makedepends="libglib-devel atk-devel at-spi2-core-devel"
 depends="at-spi2-core>=2.14"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="A GTK+ module that bridges ATK to D-Bus at-spi"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=28e9c21ec8a76cae4914bdbc011c4f6bf1beeaa27751a88534d87364e6a888bf
 long_desc="
  This package includes a gtk-module that bridges ATK to the new D-Bus based
  AT-SPI as well as C and Python client libraries.
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="LGPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=058f34ea60edf0a5f831c9f2bdd280fe95c1bcafb76e466e44aa0fb356d17bcb
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
  These libraries depend on the at-spi2-core code that contains the daemon for
  registering applications, D-Bus helper libraries and te AT-SPI D-Bus

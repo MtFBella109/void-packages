@@ -24,12 +24,18 @@ makedepends="ncurses-devel acl-devel libXt-devel gtk+-devel perl
 depends="vim-common>=$version"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Vim editor (vi clone)"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="Vim"
 homepage="https://www.vim.org"
 distfiles="https://github.com/vim/vim/archive/refs/tags/v${version}.tar.gz"
 checksum=2f60d34f90a0c7854e9484c9b2fda4194b9b7996b938996b9838db38b548c7db
 python_version=3
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.vim.org"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 build_options="x11 gtk3 huge"
 desc_option_huge="Enable support for many language interpreters"

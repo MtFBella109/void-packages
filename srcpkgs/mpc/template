@@ -8,12 +8,20 @@ configure_args="-Dtest=true -Ddocumentation=enabled"
 hostmakedepends="pkg-config python3-Sphinx"
 makedepends="libmpdclient-devel check-devel"
 short_desc="Minimalist command line interface to MPD"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://www.musicpd.org/clients/mpc/"
 #changelog="https://raw.githubusercontent.com/MusicPlayerDaemon/mpc/master/NEWS"
 distfiles="https://www.musicpd.org/download/mpc/${version%.*}/mpc-${version}.tar.xz"
 checksum=382959c3bfa2765b5346232438650491b822a16607ff5699178aa1386e3878d4
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://www.musicpd.org/clients/mpc/"
+distfiles="http://www.musicpd.org/download/mpc/${version%.*}/mpc-${version}.tar.xz"
+checksum=20735f7173cce56bec50c1d8b4633751052dc68365b29a6113206dc1cdc6e242
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vinstall contrib/mpc-completion.bash 644 usr/share/bash-completion/completions mpc

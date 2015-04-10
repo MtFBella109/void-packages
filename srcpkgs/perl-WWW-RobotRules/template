@@ -11,9 +11,15 @@ hostmakedepends="perl"
 makedepends="${hostmakedepends} perl-URI"
 depends="${makedepends}"
 short_desc="WWW::RobotRules - database of robots.txt-derived permissions"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/WWW-RobotRules"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/WWW-RobotRules"
+license="Artistic, GPL-1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${CPAN_SITE}/WWW/WWW-RobotRules-$version.tar.gz"
 checksum=46b502e7a288d559429891eeb5d979461dd3ecc6a5c491ead85d165b6e03a51e
 =======

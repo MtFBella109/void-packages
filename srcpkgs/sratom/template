@@ -14,7 +14,11 @@ hostmakedepends="pkg-config python lv2"
 makedepends="serd-devel sord-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Library for serialising LV2 atoms to/from RDF (Turtle syntax)"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="ISC"
 homepage="https://gitlab.com/lv2/sratom/"
 changelog="https://gitlab.com/lv2/sratom/-/raw/main/NEWS"

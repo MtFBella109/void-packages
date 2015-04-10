@@ -2,6 +2,7 @@
 pkgname=pinephone-kernel
 version=6.1.7
 revision=1
+<<<<<<< HEAD:srcpkgs/pinephone-kernel/template
 _tag=orange-pi-6.1-20230118-1327
 short_desc="Linux kernel and modules (${version%.*} series)"
 maintainer="John Sullivan <jsullivan@csumb.edu>"
@@ -10,6 +11,15 @@ homepage="https://www.kernel.org"
 distfiles="https://github.com/megous/linux/archive/${_tag}.tar.gz"
 checksum=2a7a8d73b5477fb1d191a1d2c7bfb927829781311d0492f1154f8609b9263faf
 python_version=3
+=======
+wrksrc="linux-${version}"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.kernel.org"
+license="GPL-2"
+short_desc="The Linux kernel and modules (${version%.*} series)"
+distfiles="http://www.kernel.org/pub/linux/kernel/v3.x/linux-${version}.tar.xz"
+checksum=ce101f71c4407cc646d063bb0b61878edd1c7777dbd39fa3f6c294e7520e3a5a
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu):srcpkgs/linux3.19/template
 
 archs="aarch64*"
 

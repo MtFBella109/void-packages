@@ -10,8 +10,13 @@ build_options="systemd"
 makedepends="zlib-devel lzo-devel libressl-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="VPN (Virtual Private Network) daemon"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.tinc-vpn.org"
 distfiles="${homepage}/packages/${pkgname}-${version}.tar.gz"
 checksum=40f73bb3facc480effe0e771442a706ff0488edea7a5f2505d4ccb2aa8163108

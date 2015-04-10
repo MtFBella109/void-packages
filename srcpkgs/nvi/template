@@ -13,7 +13,7 @@ homepage="https://repo.or.cz/nvi.git"
 =======
 makedepends="ncurses-devel db-devel"
 short_desc="The Berkeley Vi Editor"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="BSD"
 homepage="http://garage.linux.student.kuleuven.be/~skimo/nvi"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)

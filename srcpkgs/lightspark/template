@@ -46,7 +46,7 @@ depends="hicolor-icon-theme desktop-file-utils"
 conf_files="/etc/xdg/lightspark.conf"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Modern, free, open-source flash player implementation"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://lightspark.github.com/"
 license="LGPL-3"
 distfiles="http://launchpad.net/lightspark/trunk/$pkgname-$version/+download/$pkgname-$version.tar.gz"

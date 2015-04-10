@@ -19,9 +19,19 @@ version=2.0.1
 revision=2
 distfiles="http://prdownloads.sourceforge.net/$pkgname/$pkgname-$version.tar.gz"
 build_style=python-module
+<<<<<<< HEAD
 fulldepends="python"
 short_desc="SCons, a software construction tool"
 maintainer="davehome <davehome@redthumb.info.tm>"
+=======
+hostmakedepends="python"
+depends="python"
+noarch="yes"
+pycompile_module="SCons"
+make_install_args="--standard-lib --install-data=/usr/share"
+short_desc="A software construction tool"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.scons.org/"
 license="MIT"
 checksum=0a8151da41c4a26c776c84f44f747ce03e093d43be3e83b38c14a76ab3256762

@@ -14,8 +14,12 @@ revision=1
 wrksrc="${pkgname}-${pkgname}-${version}"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="USB CEC Adapter communication Library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://github.com/Pulse-Eight/libcec"
 distfiles="https://github.com/Pulse-Eight/libcec/archive/libcec-${version}.tar.gz"
 checksum=090696d7a4fb772d7acebbb06f91ab92e025531c7c91824046b9e4e71ecb3377

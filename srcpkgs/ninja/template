@@ -7,7 +7,11 @@ make_cmd=make
 hostmakedepends="asciidoc"
 checkdepends="gtest-devel"
 short_desc="Small build system with a focus on speed"
+<<<<<<< HEAD
 maintainer="Duncaen <duncaen@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="Apache-2.0"
 homepage="https://ninja-build.org/"
 changelog="https://github.com/ninja-build/ninja/releases"

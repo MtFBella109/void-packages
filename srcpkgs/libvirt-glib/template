@@ -33,7 +33,7 @@ hostmakedepends="pkg-config gobject-introspection"
 makedepends="libglib-devel libvirt-devel libxml2-devel python-devel vala-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="libvirt glib integration"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://libvirt.org"
 license="LGPL-2.1"
 checksum=d9bcf99f395ac78416601002bd1fd9122ae1dec2b5439348c6eac9d5c5fb8096

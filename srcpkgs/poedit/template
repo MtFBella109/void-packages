@@ -15,7 +15,11 @@ makedepends="icu-devel db-devel gtkspell-devel wxWidgets-devel boost-devel Lucen
 depends="hicolor-icon-theme desktop-file-utils"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Cross-platform gettext catalogs (.po files) editor"
+<<<<<<< HEAD
 maintainer="Eloi Torrents <eloitor@disroot.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://www.poedit.net/"
 changelog="https://raw.githubusercontent.com/vslavik/poedit/master/NEWS"

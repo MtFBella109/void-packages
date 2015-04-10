@@ -28,6 +28,7 @@ configure_args="--enable-udisks"
 makedepends="pkg-config intltool dbus-glib-devel gtk+-devel menu-cache-devel"
 fulldepends="desktop-file-utils udisks"
 short_desc="LXDE GLib/GIO based library"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 <<<<<<< HEAD
 checksum=1740681cff4cd4c5a2eaa9805d8898269cfb6a49a0bda0acb242def15bc7131b
@@ -37,6 +38,13 @@ long_desc="
  
 subpackages="libfm-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://pcmanfm.sourceforge.net/"
+license="GPL-2"
+distfiles="${SOURCEFORGE_SITE}/pcmanfm/$pkgname-$version.tar.xz"
+checksum=c692f1624a4cbc8d1dd55f3b3f3369fbf5d26f63a916e2c295230b2344e1fbf9
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_configure() {
 	autoreconf -fi

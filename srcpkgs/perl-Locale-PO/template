@@ -6,6 +6,12 @@ build_style="perl-module"
 hostmakedepends="perl perl-File-Slurp"
 makedepends="${hostmakedepends}"
 depends="${hostmakedepends}"
+<<<<<<< HEAD
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/~cosimo/"
+license="Artistic, GPL-1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 short_desc="Perl module for manipulating .po entries from GNU gettext"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"

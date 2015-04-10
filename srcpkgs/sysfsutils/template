@@ -7,7 +7,13 @@ short_desc="System Utilities Based on Sysfs"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only, LGPL-2.1-or-later"
 homepage="http://linux-diag.sourceforge.net/Sysfsutils.html"
+<<<<<<< HEAD
 distfiles="${SOURCEFORGE_SITE}/linux-diag/sysfsutils-${version}.tar.gz"
+=======
+license="GPL-2, LGPL-2.1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${SOURCEFORGE_SITE}/linux-diag/$pkgname-$version.tar.gz"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=e865de2c1f559fff0d3fc936e660c0efaf7afe662064f2fb97ccad1ec28d208a
 
 libsysfs_package() {

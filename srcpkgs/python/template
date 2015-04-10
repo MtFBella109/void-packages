@@ -23,6 +23,7 @@ makedepends="
 pycompile_dirs="usr/lib/python2.7"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Interpreted, interactive, object-oriented programming language"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=935d3316edfec5eb98c2f6930756b47b00dc27192541e62d6fd0077ffa008af8
 long_desc="
@@ -32,6 +33,13 @@ long_desc="
  Library Reference documents built-in and standard types, constants, functions
  and modules. Finally, the Python Reference Manual describes the syntax and
  and semantics of the core language in (perhaps too) much detail.
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.python.org"
+license="PSF"
+distfiles="http://www.python.org/ftp/python/$version/Python-$version.tar.xz"
+checksum=90d27e14ea7e03570026850e2e50ba71ad20b7eb31035aada1cf3def8f8d4916
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
  Python's basic power can be extended with your own modules written in C or
  C++. On most systems such modules may be dynamically loaded. Python is also

@@ -4,9 +4,14 @@ version=0.97
 revision=1
 build_style=gnu-configure
 makedepends="sg3_utils-devel"
+<<<<<<< HEAD
 short_desc="Variant of the standard Unix command dd which copies files"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
+=======
+short_desc="A variant of the standard Unix command dd which copies files"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://sg.danny.cz/sg/ddpt.html"
 distfiles="http://sg.danny.cz/sg/p/${pkgname}-${version}.tgz"
 checksum=e340a529aeef6a107b0c24c64873da590f5284557faffdf57a0f9dc48807233d

@@ -13,9 +13,15 @@ depends="${makedepends} perl-HTML-Parser"
 checkdepends="perl-Test-RequiresInternet perl-Test-Fatal perl-Test-Needs
  perl-Test-LeakTrace perl-HTML-Parser perl-HTTP-CookieJar"
 short_desc="LWP - The World-Wide Web library for Perl (libwww-perl)"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/libwww-perl"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/libwww-perl/lib/LWP.pm"
+license="Artistic, GPL-1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${CPAN_SITE}/LWP/libwww-perl-${version}.tar.gz"
 checksum=5ba3fc5a00836e61cb428bcd91bf69d8d74eaee6d78e44c3a414f78076af0a98
 =======

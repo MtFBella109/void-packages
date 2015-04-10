@@ -21,6 +21,7 @@ hostmakedepends="automake libtool flex pkg-config libltdl-devel"
 makedepends="libpng-devel gd-devel gtk+-devel librsvg-devel libltdl-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Graph Visualization Software"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="EPL-1.0"
 homepage="https://www.graphviz.org"
@@ -39,6 +40,18 @@ checksum=1c59acc6415b5baf5e39183e784397fd95a822d39516e1cfe261c846a87ddbe6
 make_check=no
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+configure_args="--disable-rpath --enable-ltdl --disable-ltdl-install
+ --disable-swig --disable-sharp --disable-guile --disable-io --disable-java
+ --disable-lua --disable-ocaml --disable-perl --disable-php --disable-python
+ --disable-r --disable-ruby --disable-tcl --without-included-ltdl --with-qt=no
+ --without-devil --without-glut --without-ghoscript --with-libgd"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.graphviz.org"
+license="EPL"
+distfiles="http://www.graphviz.org/pub/graphviz/stable/SOURCES/$pkgname-$version.tar.gz"
+checksum=81aa238d9d4a010afa73a9d2a704fc3221c731e1e06577c2ab3496bdef67859e
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_configure() {
 	./autogen.sh NOCONFIG

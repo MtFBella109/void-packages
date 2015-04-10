@@ -4,8 +4,13 @@ version=1.0.20
 revision=1
 build_style=gnu-configure
 configure_args="lt_cv_prog_compiler_static_works=yes"
+<<<<<<< HEAD
 short_desc="Modern and easy-to-use crypto library"
 maintainer="Duncaen <duncaen@voidlinux.org>"
+=======
+short_desc="A modern and easy-to-use crypto library"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="ISC"
 homepage="https://libsodium.org/"
 changelog="https://raw.githubusercontent.com/jedisct1/libsodium/master/ChangeLog"

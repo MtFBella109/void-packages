@@ -18,6 +18,7 @@ depends="openssh>=6.1p1"
 replaces="sshfs-fuse>=0"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="FUSE client based on the SSH File Transfer Protocol"
+<<<<<<< HEAD
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/libfuse/sshfs"
@@ -32,3 +33,10 @@ esac
 do_check() {
 	python3 -m pytest
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://fuse.sourceforge.net/sshfs.html"
+license="GPL-2"
+distfiles="${SOURCEFORGE_SITE}/fuse/sshfs-fuse-$version.tar.gz"
+checksum=e9171452e5d0150b9c6a2158fd2e2dcefb5d5d03ba4d208949e00a3a46c6e63e
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

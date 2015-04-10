@@ -29,7 +29,16 @@ distfiles="https://www.opensmtpd.org/archives/${pkgname}-${version}.tar.gz"
 checksum=4034de2e92c61fa83eedadb1d8d8bdfe65e57eb50ce9679e0140950e34ca4ab7
 provides="smtp-forwarder-0_1 smtp-server-0_1"
 replaces="smtp-forwarder>=0 smtp-server>=0"
+<<<<<<< HEAD
 system_accounts="_smtpd _smtpq"
+=======
+short_desc="Free implementation of the server-side SMTP protocol"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD, ISC, MIT"
+homepage="http://www.opensmtpd.org"
+distfiles="http://www.opensmtpd.org/archives/${pkgname}-${version}.tar.gz"
+checksum=1118330aa54e9a8a30914a1f2e129a83f2954a5956300eade522a1396f6d8ebd
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 CFLAGS=-D_DEFAULT_SOURCE
 

@@ -11,8 +11,12 @@ revision=2
 makedepends="cmake zlib-devel readline-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library to provide abstract access to various archives"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Zlib"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://icculus.org/physfs/"
 distfiles="http://icculus.org/physfs/downloads/physfs-${version}.tar.bz2"
 checksum=304df76206d633df5360e738b138c94e82ccf086e50ba84f456d3f8432f9f863

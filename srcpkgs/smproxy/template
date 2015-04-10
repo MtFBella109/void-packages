@@ -9,6 +9,7 @@ makedepends="libSM-devel libXt-devel libXmu-devel"
 short_desc="X11R6 session management application"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org"
 distfiles="${XORG_SITE}/app/smproxy-${version}.tar.xz"
 checksum=fee584eae2ec1ce2d178d72d3b484920271ba68a27935769cefbafbc3a2ff6c8
@@ -20,6 +21,9 @@ post_install() {
 # Template build file for 'smproxy'.
 pkgname=smproxy
 version=1.0.3
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

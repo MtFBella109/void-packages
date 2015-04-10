@@ -13,7 +13,7 @@ makedepends="gnutls-devel libcap-devel libedit-devel libseccomp-devel
 =======
 makedepends="libcap-devel readline-devel"
 short_desc="Sets your computer's clock from time servers on the Net"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-2"
 checksum=fb191ca4ba59e192c96d022618ca3eaee49f3c11f9af8dd7297020b27bf3e05b
 long_desc="

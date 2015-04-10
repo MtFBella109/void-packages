@@ -3,9 +3,14 @@ pkgname=phorward
 version=1.0.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 short_desc="Software package consisting of a powerful C functions library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
+=======
+short_desc="Software package consisting of a powerful C functions library."
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.phorward-software.com"
 distfiles="https://github.com/phorward/phorward/archive/v${version}.tar.gz"
 checksum=4257e137d158489503c3040be7e4979f70beedb0376f41fa83775071188f96af

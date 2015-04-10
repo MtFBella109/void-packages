@@ -6,6 +6,7 @@ build_style=gnu-configure
 configure_args="--enable-lib --enable-util"
 hostmakedepends="automake libtool gettext-devel"
 short_desc="Filesystem in Userspace"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://github.com/libfuse/libfuse"
@@ -15,6 +16,13 @@ checksum=d0e69d5d608cc22ff4843791ad097f554dd32540ddc9bed7638cc6fea7c1b4b5
 pre_configure() {
 	autoreconf -fi
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://fuse.sourceforge.net"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
+checksum=0beb83eaf2c5e50730fc553406ef124d77bc02c64854631bdfc86bfd6437391c
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	# remove obsolete rules file provided by udev.

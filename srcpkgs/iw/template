@@ -4,9 +4,15 @@ version=5.19
 revision=1
 hostmakedepends="pkg-config libnl3-devel"
 makedepends="libnl3-devel"
+<<<<<<< HEAD
 short_desc="Utility for nl80211 based CLI configuration of wireless devices"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="ISC"
+=======
+short_desc="nl80211 based CLI configuration utility for wireless devices"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://wireless.kernel.org/en/users/Documentation/iw"
 distfiles="http://www.kernel.org/pub/software/network/iw/iw-${version}.tar.xz"
 checksum=f167bbe947dd53bb9ebc0c1dcef5db6ad73ac1d6084f2c6f9376c5c360cc4d4e

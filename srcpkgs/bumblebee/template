@@ -18,8 +18,12 @@ hostmakedepends="automake autoconf-archive pkg-config help2man"
 makedepends="VirtualGL-devel glib-devel MesaLib-devel libkmod-devel"
 depends="VirtualGL"
 short_desc="NVIDIA Optimus support for Linux through VirtualGL"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.bumblebee-project.org/"
 distfiles="http://www.bumblebee-project.org/${pkgname}-${version}.tar.gz"
 checksum=1018703b07e2f607a4641249d69478ce076ae5a1e9dd6cff5694d394fa7ee30e

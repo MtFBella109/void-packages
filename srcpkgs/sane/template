@@ -109,8 +109,12 @@ conf_files="
 	/etc/sane.d/xerox_mfp.conf"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Scanner Access Now Easy"
+<<<<<<< HEAD
 maintainer="Piraty <mail@piraty.dev>"
 license="custom:GPL-2.0-or-later-with-SANE-exception"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.sane-project.org/"
 changelog="https://gitlab.com/sane-project/backends/-/raw/${version}/NEWS"
 distfiles="https://gitlab.com/sane-project/backends/uploads/${_gitlab_release_hash}/sane-backends-${version}.tar.gz"

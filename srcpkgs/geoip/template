@@ -10,8 +10,12 @@ hostmakedepends="automake libtool"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 makedepends="zlib-devel"
 short_desc="Non-DNS IP-to-country resolver C library and utilities"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.maxmind.com/app/c"
 distfiles="https://github.com/maxmind/geoip-api-c/releases/download/v$version/GeoIP-$version.tar.gz"
 checksum=1dfb748003c5e4b7fd56ba8c4cd786633d5d6f409547584f6910398389636f80

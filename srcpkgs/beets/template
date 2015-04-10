@@ -16,7 +16,12 @@ checkdepends="$depends python3-BeautifulSoup4 python3-Flask python3-mock
  python3-discogs_client python3-py7zr python3-typing_extensions
  python3-dateutil python3-gobject gstreamer1 ffmpeg"
 short_desc="Media library management system for obsessive-compulsive music geeks"
+<<<<<<< HEAD
 maintainer="Joel Beckmeyer <joel@beckmeyer.us>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://beets.radbox.org/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://beets.io"
 changelog="https://raw.githubusercontent.com/beetbox/beets/master/docs/changelog.rst"

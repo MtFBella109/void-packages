@@ -4,6 +4,7 @@ version=1.22.1
 revision=1
 build_style=gnu-configure
 configure_args="--enable-qv4l2 --with-udevdir=/usr/lib/udev"
+<<<<<<< HEAD
 hostmakedepends="perl pkg-config clang"
 makedepends="alsa-lib-devel libjpeg-turbo-devel libsysfs-devel qt5-devel"
 depends="desktop-file-utils hicolor-icon-theme"
@@ -27,6 +28,17 @@ case "$XBPS_TARGET_MACHINE" in
 		LDFLAGS+=" -largp"
 		;;
 esac
+=======
+hostmakedepends="pkg-config"
+makedepends="libjpeg-turbo-devel libsysfs-devel qt-devel"
+depends="hicolor-icon-theme desktop-file-utils"
+short_desc="QT v4l2 control panel application"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://freshmeat.net/projects/libv4l"
+license="GPL-2, LGPL-2.1"
+distfiles="http://linuxtv.org/downloads/v4l-utils/v4l-utils-${version}.tar.bz2"
+checksum=d3d6eb1f0204fb11f3d318bfca35d5f73cc077f88fac7665a47856a16496be7d
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_install() {
 	cd utils/qv4l2

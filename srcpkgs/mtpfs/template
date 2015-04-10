@@ -6,8 +6,13 @@ build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="fuse-devel libmtp-devel libmad-devel libglib-devel libid3tag-devel"
 short_desc="A FUSE filesystem that supports reading and writing from any MTP device"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.adebenham.com/mtpfs/"
 distfiles="http://www.adebenham.com/files/mtp/mtpfs-${version}.tar.gz"
 checksum=1baf357de16995a5f0b5bc1b6833517a77456481d861cdba70f1ce1316ce4c1d

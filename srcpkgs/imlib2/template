@@ -16,11 +16,19 @@ makedepends="freetype-devel libjpeg-turbo-devel libpng-devel
  tiff-devel libid3tag-devel giflib-devel libXext-devel libSM-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Image manipulation library"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="Imlib2"
 homepage="https://sourceforge.net/projects/enlightenment/"
 distfiles="${SOURCEFORGE_SITE}/enlightenment/imlib2-src/imlib2-${version}.tar.xz"
 checksum=fa2315f28379b430a6e6605b4284b07be06a3ef422d4f5e1c9bb24714c4cf6dd
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${SOURCEFORGE_SITE}/enlightenment/imlib2-$version.tar.gz"
+homepage="http://sourceforge.net/projects/enlightenment/"
+license="BSD"
+checksum=48e98337a560d8904f685447f41c43914fec1f8cd3745a9fd86cba9fd24a6563
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense COPYING

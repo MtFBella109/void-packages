@@ -5,6 +5,18 @@ version=2.4.5
 revision=1
 =======
 version=2.1.5
+<<<<<<< HEAD
+=======
+revision=4
+noarch=yes
+create_wrksrc=yes
+makedepends="tar gzip bzip2"
+depends="${makedepends}"
+short_desc="Make self-extractable archives on Unix"
+homepage="http://www.megastep.org/makeself/"
+license="GPL-2+"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://megastep.org/$pkgname/$pkgname-$version.run"
 fulldepends="tar gzip bzip2>=0"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

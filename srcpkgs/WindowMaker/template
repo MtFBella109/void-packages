@@ -16,6 +16,7 @@ makedepends="libXinerama-devel libXrandr-devel libXmu-devel libXpm-devel
  fontconfig-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="
+<<<<<<< HEAD
  /etc/WindowMaker/WindowMaker
  /etc/WindowMaker/WMRootMenu
  /etc/WindowMaker/WMWindowAttributes
@@ -30,6 +31,19 @@ distfiles="https://github.com/window-maker/wmaker/releases/download/wmaker-${ver
 checksum=4fe130ba23cf4aa21c156ec8f01f748df537d0604ec06c6bbcec896df1926f6d
 # tests various things against documentation, doesn't make sense to run
 make_check=no
+=======
+	/etc/WindowMaker/WindowMaker
+	/etc/WindowMaker/WMRootMenu
+	/etc/WindowMaker/WMWindowAttributes
+	/etc/WindowMaker/WMState
+	/etc/WindowMaker/WMGLOBA"
+short_desc="An X11 window manager with a NEXTSTEP look and feel"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://www.windowmaker.org/"
+distfiles="http://windowmaker.org/pub/source/release/${pkgname}-${version}.tar.gz"
+checksum=435b0b4a318a3a00e8267f02cdbd826ad547b1f54259d193ce43e9a77ce06dc4
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_configure() {
 	autoreconf -fi

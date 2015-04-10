@@ -6,10 +6,16 @@ revision=1
 build_style=meson
 configure_args="-Db_ndebug=false -Ddebug-gui=false"
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="libevdev-devel libwacom-devel mtdev-devel eudev-libudev-devel"
 checkdepends="valgrind check-devel python3-pytest"
 short_desc="Provides handling input devices in Wayland compositors and X"
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+makedepends="mtdev-devel libudev-devel libevdev-devel"
+short_desc="Provides handling input devices in Wayland compositors and X.Org"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://www.freedesktop.org/wiki/Software/libinput"
 changelog="https://gitlab.freedesktop.org/libinput/libinput/-/releases"

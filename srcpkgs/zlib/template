@@ -5,6 +5,7 @@ version=1.3.1
 revision=1
 bootstrap=yes
 build_style=configure
+<<<<<<< HEAD
 configure_args="--prefix=/usr --shared"
 short_desc="Compression/decompression Library"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
@@ -13,6 +14,18 @@ homepage="https://www.zlib.net"
 changelog="https://www.zlib.net/ChangeLog.txt"
 distfiles="https://www.zlib.net/fossils/zlib-$version.tar.gz"
 checksum=9a93b2b7dfdac77ceba5a558a580e74667dd6fede4585b91eefb60f03b72df23
+=======
+short_desc="A compression/decompression Library"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="zlib"
+homepage="http://www.zlib.net"
+distfiles="$homepage/$pkgname-$version.tar.gz"
+checksum=36658cb768a54c1d4dec43c3116c27ed893e88b02ecfcb44f2166f9c0b7f2a0d
+
+do_configure() {
+	LDFLAGS= LDSHAREDLIBC= ./configure --prefix=/usr --shared
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 zlib-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"

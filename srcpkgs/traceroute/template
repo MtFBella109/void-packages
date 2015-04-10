@@ -3,6 +3,7 @@ pkgname=traceroute
 version=2.1.6
 revision=1
 short_desc="Traces the route taken by packets over an IPv4/IPv6 network"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://traceroute.sourceforge.net"
@@ -13,6 +14,13 @@ alternatives="
  traceroute:traceroute:/usr/bin/linux-traceroute
  traceroute:traceroute.8:/usr/share/man/man8/linux-traceroute.8
 "
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://traceroute.sourceforge.net"
+distfiles="$SOURCEFORGE_SITE/$pkgname/$pkgname-$version.tar.gz"
+checksum=f7ac93ef30b13a587292b8d6a7e2538a65bc978a3a576eab238c392b884e96e0
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_build() {
 	if [ "$CROSS_BUILD" ]; then

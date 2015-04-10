@@ -19,11 +19,19 @@ makedepends="glibc-devel libcurl-devel libsigc++-devel libstdc++-devel libtorren
 makedepends="libcurl-devel libsigc++-devel libtorrent-devel ncurses-devel xmlrpc-c-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Ncurses BitTorrent client based on libTorrent"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/rakshasa/rtorrent"
 distfiles="https://github.com/rakshasa/${pkgname}/archive/v${version}.tar.gz"
 checksum=bc889ce1dde475ec56aa72ae996912ff58723226a4f4256fef4f1f8636d991d4
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://libtorrent.rakshasa.no"
+license="GPL-2"
+distfiles="http://libtorrent.rakshasa.no/downloads/$pkgname-$version.tar.gz"
+checksum=bc0a2c1ee613b68f37021beaf4e64a9252f91ed06f998c1e897897c354ce7e84
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 pre_configure() {

@@ -17,6 +17,7 @@ changelog="https://raw.githubusercontent.com/i3/i3status/master/CHANGELOG"
 distfiles="https://i3wm.org/i3status/i3status-${version}.tar.xz"
 checksum=6c67f52cae4f139df764ad1cc736562be0f97750791bc212b53f34c06eaf2205
 conf_files="/etc/i3status.conf"
+<<<<<<< HEAD
 
 # tests fail in a chroot
 make_check=no
@@ -26,6 +27,12 @@ build_options_default="pulseaudio"
 =======
 version=2.3
 homepage="http://i3wm.org/i3status"
+=======
+short_desc="Generates status bar to use with dzen2 or xmobar"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+homepage="http://www.i3wm.org/i3status/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${homepage}/${pkgname}-${version}.tar.bz2"
 depends="libcap-progs"
 makedepends="asciidoc confuse-devel wireless_tools-devel alsa-lib-devel"

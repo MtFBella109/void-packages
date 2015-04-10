@@ -5,7 +5,11 @@ revision=1
 _commit=d1afbf6fce2778c0751eddf19db9882e04f18bfd
 makedepends="libX11-devel MesaLib-devel"
 short_desc="Faster OpenGL offloading for Bumblebee"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="ISC"
 homepage="https://github.com/amonakov/primus"
 archs="i686 x86_64"

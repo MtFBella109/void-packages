@@ -5,6 +5,7 @@ revision=1
 bootstrap=yes
 build_style=gnu-configure
 configure_args="--disable-perl-regexp --disable-nls ac_cv_path_GREP=grep"
+<<<<<<< HEAD
 short_desc="GNU grep utility - for use with xbps-src"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-3.0-or-later"
@@ -19,6 +20,14 @@ if [ "$XBPS_TARGET_LIBC" = musl ]; then
 	export ac_cv_lib_error_at_line=no
 	export ac_cv_header_sys_cdefs_h=no
 fi
+=======
+homepage="http://www.gnu.org/software/grep/"
+distfiles="http://ftp.gnu.org/gnu/grep/grep-$version.tar.xz"
+short_desc="The GNU grep utility - for use with xbps-src"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+checksum=5244a11c00dee8e7e5e714b9aaa053ac6cbfa27e104abee20d3c778e4bb0e5de
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	rm -rf ${DESTDIR}/usr/share/info ${DESTDIR}/usr/share/man

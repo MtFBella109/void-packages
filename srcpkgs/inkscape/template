@@ -32,6 +32,7 @@ makedepends="
 depends="desktop-file-utils hicolor-icon-theme"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Vector-based drawing program"
+<<<<<<< HEAD
 maintainer="Alex Lohr <alexthkloss@web.de>"
 license="GPL-2.0-only, LGPL-2.1-or-later"
 homepage="https://inkscape.org/"
@@ -49,6 +50,9 @@ makedepends="pkg-config intltool gsl-devel gc-devel gtkmm2-devel libxml2-devel l
 fulldepends="desktop-file-utils hicolor-icon-theme"
 short_desc="vector-based drawing program"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://inkscape.org/"
 license="GPL-2"
 checksum=073bf585b6a708747485f2de1f5a1b77c3f45a79e6ee128bf946bae99476db88

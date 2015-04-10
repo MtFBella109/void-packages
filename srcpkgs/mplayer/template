@@ -1,7 +1,20 @@
 # Template file for 'mplayer'
 pkgname=mplayer
+<<<<<<< HEAD
 version=1.5
 revision=2
+=======
+version=1.1.1
+revision=11
+wrksrc="MPlayer-${version}"
+short_desc="A movie player"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://www.mplayerhq.hu/"
+distfiles="http://www2.mplayerhq.hu/MPlayer/releases/MPlayer-${version}.tar.xz"
+checksum=ce8fc7c3179e6a57eb3a58cb7d1604388756b8a61764cc93e095e7aff3798c76
+
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 build_style=configure
 hostmakedepends="pkg-config yasm"
 <<<<<<< HEAD

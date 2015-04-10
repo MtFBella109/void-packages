@@ -13,6 +13,7 @@ distfiles="http://plugin.org.uk/lv2/${pkgname}-${version}.tar.gz"
 makedepends="pkg-config fftw-devel libxslt"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Collection of GPL (free software) LV2 audio plugins"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="http://plugin.org.uk/"
@@ -23,6 +24,11 @@ checksum=bc24512de6e2fb7a493226e2e01a80ba8462a318b15c3b0fd0cd914b018c3548
 post_extract() {
 	vsed -i -e 's|$(INSTALL_DIR_REALLY)|$(DESTDIR)/$(INSTALL_DIR)|' Makefile
 =======
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+checksum=5809441a94571d2f492a5e015ad035ea747127e0322e531b79a960fd0c3d250d
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_build() {
 	sed -i -e "s|/usr/local|$DESTDIR/usr|" Makefile

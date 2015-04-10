@@ -2,6 +2,7 @@
 pkgname=ocaml
 version=5.3.0
 revision=1
+<<<<<<< HEAD
 build_style="gnu-configure"
 configure_args="--with-pic --libdir=/usr/lib/ocaml"
 makedepends="libzstd-devel"
@@ -12,6 +13,15 @@ license="QPL-1.0, LGPL-2.1-only"
 homepage="http://ocaml.org/"
 distfiles="https://github.com/ocaml/ocaml/archive/refs/tags/${version}.tar.gz"
 checksum=eb9eab2f21758d3cfb1e78c7f83f0b4dd6302824316aba4abee047a5a4f85029
+=======
+makedepends="ncurses-devel libX11-devel"
+short_desc="The main implementation of the Caml language"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://caml.inria.fr"
+license="QPL-1,LGPL-2"
+distfiles="${homepage}/pub/distrib/${pkgname}-${_majorver}/${pkgname}-${version}.tar.xz"
+checksum=68c4b01be54c23bc20fc0a8beaa5c7433b8483f8950490129cfe7662e0c6f4dc
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 nocross=yes
 
 export ASPP="cc -c"

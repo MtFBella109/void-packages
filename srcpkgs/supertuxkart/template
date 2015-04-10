@@ -12,12 +12,20 @@ makedepends="libjpeg-turbo-devel libpng-devel
  SDL2-devel shaderc sqlite-devel"
 depends="desktop-file-utils hicolor-icon-theme supertuxkart-data"
 short_desc="Kart racing game featuring Tux and his friends"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://supertuxkart.net"
 changelog="https://raw.githubusercontent.com/supertuxkart/stk-code/master/CHANGELOG.md"
 distfiles="https://github.com/supertuxkart/stk-code/releases/download/${version}/SuperTuxKart-${version}-src.tar.gz"
 checksum=33cf8841e4ff4082d80b9248014295bbbea61d14683e86dff100e3ab8f7b27cb
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://supertuxkart.sourceforge.net/"
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}-src.tar.bz2"
+checksum=335301ae61b0c177be68d5593c65e5b197dc807421f08a8a35740a254cacf8d6
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 supertuxkart-data_package() {
 	short_desc+=" - data files"

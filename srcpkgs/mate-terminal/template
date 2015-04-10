@@ -3,6 +3,7 @@ pkgname=mate-terminal
 version=1.28.1
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="glib-devel itstool gettext pkg-config libxml2"
 makedepends="libSM-devel vte3-devel dconf-devel libglib-devel gtk+3-devel
  libICE-devel"
@@ -14,3 +15,15 @@ homepage="https://mate-desktop.org"
 changelog="https://raw.githubusercontent.com/mate-desktop/mate-terminal/master/NEWS"
 distfiles="https://pub.mate-desktop.org/releases/${version%.*}/mate-terminal-${version}.tar.xz"
 checksum=f135eb1a9e2ae22798ecb2dc1914fdb4cfd774e6bb65c0152be37cc6c9469e92
+=======
+configure_args="--with-gtk=2.0"
+hostmakedepends="pkg-config intltool itstool glib-devel"
+makedepends="gtk+-devel dbus-devel vte-devel libSM-devel dconf-devel"
+depends="dbus dconf"
+short_desc="The MATE Terminal Emulator"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=d4ba3fd495feb4f8836ea9ca4c201c78fe9564c8190a2d3c84ca4e514a7aa39d
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

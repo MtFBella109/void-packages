@@ -17,8 +17,12 @@ makedepends="libpng-devel jpeg-devel libvorbis-devel SDL_ttf-devel physfs-devel 
 fulldepends="desktop-file-utils"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Puzzle/action game similar to Super Monkey Ball"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.neverball.org"
 distfiles="http://www.neverball.org/$pkgname-$version.tar.gz"
 checksum=73fe63cca4f96e2d355480d03bc0b2904e83a0abdf65fe8c52db5cc3cca88fa0

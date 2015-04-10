@@ -7,6 +7,7 @@ build_style=gnu-configure
 hostmakedepends="perl m4 help2man"
 depends="virtual?awk m4 perl"
 short_desc="Generates automatic source code configuration scripts"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later, GPL-3.0-or-later"
 homepage="http://www.gnu.org/software/autoconf"
@@ -25,6 +26,10 @@ distfiles="http://ftp.gnu.org/gnu/autoconf/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 =======
 version=2.69
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2, GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnu.org/software/autoconf"
 distfiles="http://ftp.gnu.org/gnu/autoconf/$pkgname-$version.tar.xz"
 build_style=gnu-configure

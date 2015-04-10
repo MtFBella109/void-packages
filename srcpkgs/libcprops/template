@@ -10,7 +10,11 @@ hostmakedepends="flex makedepend which"
 hostmakedepends="which flex makedepend"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="C prototyping tools"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://cprops.sourceforge.net/"
 license="LGPL-2.1"
 distfiles="${SOURCEFORGE_SITE}/cprops/${pkgname}-${version}.tar.bz2"

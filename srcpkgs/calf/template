@@ -15,6 +15,7 @@ makedepends="expat-devel dssi-devel jack-devel glib-devel gtk+-devel
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="ladspa-sdk lv2 desktop-file-utils hicolor-icon-theme"
 short_desc="LV2/DSSI/LADSPA plug-ins suite and standalone JACK host"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://calf-studio-gear.org"
@@ -35,3 +36,9 @@ pre_install() {
 		vsed -e "s|exec |exec /usr/bin/qemu-${XBPS_TARGET_QEMU_MACHINE}-static |" -i src/calfmakerdf
 	fi
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2"
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
+checksum=1106e7e27bcd18d47fc58c952a4dbf6c7a763272e13b2b94cee6f1b2fb922cec
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

@@ -1,0 +1,13 @@
+# Template file for 'afl'
+pkgname=afl
+version=1.58b
+revision=1
+build_style=gnu-makefile
+# x86 only currently
+only_for_archs="i686 x86_64"
+short_desc="American fuzzy lop - a brute-force fuzzer"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Apache-2.0"
+homepage="http://lcamtuf.coredump.cx/afl/"
+distfiles="http://lcamtuf.coredump.cx/afl/releases/afl-${version}.tgz"
+checksum=8d5ed2c5ade69e3eab4a8fa10fb73cf72966dfda45a7b458d62bc5d4497defeb

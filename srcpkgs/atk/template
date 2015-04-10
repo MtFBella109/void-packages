@@ -11,6 +11,7 @@ build_style=gnu-configure
 makedepends="pkg-config glib-devel gobject-introspection"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Set of interfaces for accessibility"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=e4da9fe580d2d55f4e77a138c553b4b32654dfb06bf0715592cc9dbd6355fe87
 long_desc="
@@ -18,6 +19,13 @@ long_desc="
  By supporting the ATK interfaces, an application or toolkit can
  be used with such tools as screen readers, magnifiers,
  and alternative input devices.
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gtk.org/"
+license="LGPL-2.1"
+distfiles="${GNOME_SITE}/atk/${version%.*}/atk-${version}.tar.xz"
+checksum=2875cc0b32bfb173c066c22a337f79793e0c99d2cc5e81c4dac0d5a523b8fbad
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
  Atk provides a core set of interfaces which are common to all
  widgets and \"additional\" interfaces that are appropriate to certain

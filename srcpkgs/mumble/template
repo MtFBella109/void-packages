@@ -36,8 +36,12 @@ makedepends="
  avahi-compat-libs-devel MesaLib-devel opus-devel libogg-devel boost-devel"
 depends="qt-plugin-sqlite desktop-file-utils hicolor-icon-theme"
 short_desc="Open source, low-latency, high quality voice chat for gaming"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://mumble.sourceforge.net/"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
 depends="qt-plugin-sqlite"

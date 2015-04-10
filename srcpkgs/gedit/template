@@ -45,7 +45,7 @@ makedepends="
 depends="zeitgeist hicolor-icon-theme desktop-file-utils iso-codes"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="A text editor for GNOME"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.gnome.org"
 license="GPL-2"
 checksum=9b1f0164d6c6bc08e391efde7e6a2aa9290a65bda543fe3a7adc6ef73b722a64

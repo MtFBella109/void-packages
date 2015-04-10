@@ -18,6 +18,7 @@ makedepends="pkg-config intltool gobject-introspection glib-devel libgcrypt-deve
 fulldepends="glib-networking"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="HTTP library implementation in C"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 <<<<<<< HEAD
 checksum=647217d395d560375551056e291d697543d424eb6363e101c334a01a0b8c6fb6
@@ -57,6 +58,9 @@ subpackages="$pkgname-gnome $pkgname-gnome-devel $pkgname-devel"
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 =======
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnome.org"
 license="LGPL-2.1"
 distfiles="${GNOME_SITE}/$pkgname/2.42/$pkgname-$version.tar.xz"

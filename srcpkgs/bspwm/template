@@ -3,10 +3,18 @@ pkgname=bspwm
 version=0.9.11
 revision=1
 build_style=gnu-makefile
+<<<<<<< HEAD
 makedepends="xcb-util-wm-devel xcb-util-keysyms-devel"
 short_desc="Tiling window manager based on binary space partitioning"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
+=======
+hostmakedepends="git"
+makedepends="libxcb-devel xcb-util-devel xcb-util-wm-devel"
+short_desc="A tiling window manager based on binary space partitioning"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://github.com/baskerville/bspwm"
 distfiles="https://github.com/baskerville/bspwm/archive/${version}.tar.gz"
 checksum=1de33634842d92421a92caabebb051c7a9281d0ec2f8f375871a043f0ea520ce

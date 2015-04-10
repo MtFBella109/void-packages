@@ -8,8 +8,13 @@ configure_args="$(vopt_enable gir introspection)"
 hostmakedepends="pkg-config intltool glib-devel"
 makedepends="libxml2-devel gtk+3-devel"
 short_desc="GNOME Docking Library"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later, LGPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://developer.gnome.org/gdl/"
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=3641d4fd669d1e1818aeff3cf9ffb7887fc5c367850b78c28c775eba4ab6a555

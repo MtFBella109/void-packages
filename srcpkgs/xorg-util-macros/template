@@ -8,6 +8,7 @@ hostmakedepends="pkg-config"
 short_desc="X.org autotool macros"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="https://gitlab.freedesktop.org/xorg/util/macros/"
 distfiles="${XORG_SITE}/util/util-macros-${version}.tar.xz"
 checksum=9ac269eba24f672d7d7b3574e4be5f333d13f04a7712303b1821b2a51ac82e8e
@@ -31,3 +32,8 @@ post_install()
 	mv ${DESTDIR}/usr/share/pkgconfig ${DESTDIR}/usr/lib/pkgconfig
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${XORG_SITE}/util/util-macros-$version.tar.bz2"
+checksum=2835b11829ee634e19fa56517b4cfc52ef39acea0cd82e15f68096e27cbed0ba
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

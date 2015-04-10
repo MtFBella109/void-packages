@@ -5,6 +5,7 @@ version=6.17
 revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="--enable-silent-rules $(vopt_with libunwind)"
 makedepends="$(vopt_if libunwind libunwind-devel)"
 short_desc="System Call Tracer"
@@ -73,3 +74,13 @@ Add_dependency full perl
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+configure_args="--enable-libunwind"
+makedepends="libunwind-devel"
+short_desc="A System Call Tracer"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://sourceforge.net/projects/strace"
+license="BSD"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.xz"
+checksum=e6180d866ef9e76586b96e2ece2bfeeb3aa23f5cc88153f76e9caedd65e40ee2
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

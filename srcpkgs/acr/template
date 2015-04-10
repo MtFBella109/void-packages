@@ -6,8 +6,16 @@ build_style=gnu-configure
 make_check_target=test
 checkdepends="pkg-config"
 short_desc="AutoConf Replacement"
+<<<<<<< HEAD
 maintainer="Felipe Nogueira <contato.fnog@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/radare/acr"
 distfiles="${homepage}/archive/${version}.tar.gz"
 checksum=adb089930299948752a481092e4cd88ed845ca567a083e9e009d902e340cede1
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://github.com/radare/${pkgname}"
+distfiles="https://github.com/radare/${pkgname}/archive/${version}.tar.gz"
+checksum=7785b97cabfcfde6d0b5c2eeb94be779cad23a11b046c10cff84a11a8c2dc1f5
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

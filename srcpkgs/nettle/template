@@ -4,6 +4,7 @@ version=3.9.1
 revision=1
 build_style=gnu-configure
 configure_args="--enable-shared"
+<<<<<<< HEAD
 hostmakedepends="m4 texinfo"
 makedepends="gmp-devel"
 short_desc="Low-level cryptographic library"
@@ -13,6 +14,14 @@ homepage="https://www.lysator.liu.se/~nisse/nettle/"
 changelog="https://git.lysator.liu.se/nettle/nettle/-/raw/master/NEWS"
 distfiles="${GNU_SITE}/nettle/nettle-${version}.tar.gz"
 checksum=ccfeff981b0ca71bbd6fbcb054f407c60ffb644389a5be80d6716d5b550c6ce3
+=======
+short_desc="A low-level cryptographic library"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.lysator.liu.se/~nisse/nettle/"
+license="GPL-2"
+distfiles="http://ftp.gnu.org/gnu/nettle/nettle-${version}.tar.gz"
+checksum=bc71ebd43435537d767799e414fce88e521b7278d48c860651216e1fc6555b40
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 nettle-devel_package() {
 	depends="gmp-devel ${sourcepkg}>=${version}_${revision}"

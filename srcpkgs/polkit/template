@@ -14,8 +14,13 @@ build_style=gnu-configure
 configure_args="--disable-static --enable-systemd=yes"
 makedepends="pkg-config intltool libxslt docbook-xsl glib-devel expat-devel pam-devel systemd-devel gobject-introspection"
 short_desc="Authorization Toolkit"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://www.freedesktop.org/wiki/Software/PolicyKit"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.freedesktop.org/wiki/Software/polkit"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-2"
 checksum=8fdc7cc8ba4750fcce1a4db9daa759c12afebc7901237e1c993c38f08985e1df
 long_desc="

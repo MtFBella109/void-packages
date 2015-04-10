@@ -16,11 +16,19 @@ build_style=gnu-configure
 makedepends="zlib-devel libjpeg-turbo-devel libpng-devel libressl-devel gnutls-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="C libraries to easily implement VNC server or client functionality"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://libvnc.github.io/"
 distfiles="https://github.com/LibVNC/libvncserver/archive/LibVNCServer-${version}.tar.gz"
 checksum=62352c7795e231dfce044beb96156065a05a05c974e5de9e023d688d8ff675d7
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://libvncserver.sourceforge.net/"
+license="GPL-2"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/LibVNCServer-${version}.tar.gz"
+checksum=cf060d3525c2fb92be2fa18bbc697fb355592b52484e60745f3bcac5c3f803f9
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libvncserver-devel_package() {
 	depends="${makedepends} ${sourcepkg}-${version}_${revision}"

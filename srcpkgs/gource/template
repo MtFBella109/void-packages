@@ -15,9 +15,15 @@ makedepends="tinyxml-devel SDL2_image-devel glew-devel
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="freefont-ttf"
 short_desc="Software version control visualization"
+<<<<<<< HEAD
 maintainer="icp <pangolin@vivaldi.net>"
 license="GPL-3.0-or-later"
 homepage="https://gource.io/"
 changelog="https://raw.githubusercontent.com/acaudwell/Gource/master/ChangeLog"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="https://code.google.com/p/gource/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="https://github.com/acaudwell/Gource/releases/download/gource-${version}/gource-${version}.tar.gz"
 checksum=c8239212d28b07508d9e477619976802681628fc25eb3e04f6671177013c0142

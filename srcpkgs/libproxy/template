@@ -4,6 +4,7 @@ pkgname=libproxy
 <<<<<<< HEAD
 version=0.5.11
 revision=1
+<<<<<<< HEAD
 build_style=meson
 build_helper=gir
 configure_args="-Drelease=true"
@@ -18,6 +19,19 @@ distfiles="https://github.com/libproxy/libproxy/releases/download/${version}/lib
 distfiles="https://github.com/libproxy/libproxy/archive/refs/tags/${version}.tar.gz"
 checksum=b364f4dbbffc5bdf196330cb76b48abcb489f38b1543e67595ca6cb7ec45d265
 replaces="libproxy-python3<=0.4.18_4"
+=======
+build_style=cmake
+configure_args="-DWITH_GNOME=0 -DWITH_KDE4=0 -DWITH_MOZJS=0 -DWITH_NM=0
+ -DWITH_PERL=0 -DWITH_PYTHON=1 -DWITH_WEBKIT=0"
+hostmakedepends="pkg-config python cmake"
+makedepends="zlib-devel"
+short_desc="A library handling all the details of proxy configuration"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://libproxy.googlecode.com"
+license="LGPL-2.1"
+distfiles="http://libproxy.googlecode.com/files/$pkgname-$version.tar.gz"
+checksum=dc3f33de54163718f82b3e7c496a7de97f8862578414b8ecaad3cbfe4821864b
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libproxy-devel_package() {
 	depends="libproxy>=${version}_${revision}"

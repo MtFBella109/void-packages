@@ -3,7 +3,11 @@ pkgname=libCello
 version=2.1.0
 revision=1
 short_desc="Higher level programming in C"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.libcello.org/"
 license="BSD"
 distfiles="http://$pkgname.org/static/$pkgname-$version.tar.gz"

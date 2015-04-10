@@ -5,6 +5,7 @@ version=20230719
 revision=2
 build_style=gnu-configure
 conf_files="/etc/metalog.conf"
+<<<<<<< HEAD
 hostmakedepends="autoconf autoconf-archive automake pkg-config"
 makedepends="pcre2-devel"
 short_desc="Modern replacement for syslogd and klogd"
@@ -18,6 +19,14 @@ checksum=563b41409ee9e396c3709f002b59ccd9aff901b7d7e3adee6344e4b599a02105
 pre_configure() {
 	./autogen.sh
 }
+=======
+short_desc="A modern replacement for syslogd and klogd"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://metalog.sourceforge.net/"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.xz"
+checksum=0c3a1e19008b3d525eab6e5548a4e8cbb0fb235f2804dc41aace82c67ceeebe0
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vsv metalog

@@ -5,6 +5,7 @@ distfiles="http://launchpad.net/bzr/2.0/$version/+download/bzr-$version.tar.gz"
 build_style=python-module
 makedepends="zlib-devel python-devel"
 short_desc="Distributed version control system that Just Works"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=3438bd7b5d07486d85a63cf47a26f3532ef7fb4019770ca48faddfa9875e06c9
 long_desc="
@@ -18,6 +19,13 @@ Add_dependency full python
 =======
 pycompile_module="bzrlib"
 
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://bazaar.canonical.com"
+distfiles="http://launchpad.net/bzr/2.6/$version/+download/bzr-$version.tar.gz"
+checksum=0994797182eb828867eee81cccc79480bd2946c99304266bc427b902cf91dab0
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_install() {
 	sed -i -e "s|man/man1|share/man/man1|" setup.py

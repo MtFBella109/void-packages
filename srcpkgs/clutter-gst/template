@@ -13,7 +13,7 @@ makedepends="clutter-devel gst-plugins-bad1-devel"
 depends="gst-plugins-base1>=1:1.2 gst-plugins-bad1>=1:1.2"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GStreamer bindings for the Clutter Toolkit"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.gtk.org/"
 license="GPL-2"
 checksum=a137313ad134cd3737c018cc8f725ed1a4d1cf7d276012d75467b55f1f9859d7

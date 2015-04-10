@@ -35,7 +35,7 @@ makedepends="libICE-devel freetype-devel libpng-devel glu-devel SDL_mixer-devel 
 depends="desktop-file-utils"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="An OpenGL billard game - fork of foobillard"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-2"
 checksum=e69218d4458c2c769396d7e8583e7309b719f8a15e9965940cf8aec2aaeca69a
 long_desc="

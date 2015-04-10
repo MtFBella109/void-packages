@@ -44,6 +44,7 @@ configure_args="--without-included-regex"
 makedepends="acl-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The GNU stream editor"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=8773541ce097fdc4c5b9e7da12a82dffbb30cd91f7bc169f52f05f93b7fc3060
 long_desc="
@@ -56,3 +57,10 @@ Add_dependency full acl
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://www.gnu.org/software/sed"
+distfiles="http://ftp.gnu.org/gnu/$pkgname/$pkgname-$version.tar.gz"
+checksum=fea0a94d4b605894f3e2d5572e3f96e4413bcad3a085aae7367c2cf07908b2ff
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

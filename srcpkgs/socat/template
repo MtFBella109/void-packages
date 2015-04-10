@@ -16,7 +16,7 @@ license="GPL-2.0-only"
  ac_cv_ispeed_offset=13"
 makedepends="readline-devel libressl-devel"
 short_desc="Relay for bidirectional data transfer between two independent data channels"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-3"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://www.dest-unreach.org/socat/"

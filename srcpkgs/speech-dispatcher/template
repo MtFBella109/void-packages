@@ -14,8 +14,13 @@ makedepends="libltdl-devel glib-devel dotconf-devel
  libsonic-devel pulseaudio-devel"
 depends="python3"
 short_desc="High-level device independent layer for speech synthesis interface"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later, GFDL-1.2-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL2/FDL"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://devel.freebsoft.org/speechd"
 distfiles="https://github.com/brailcom/speechd/archive/${version}.tar.gz"
 checksum=cc4b388fce40681eaff3545e9cc0642216c13c420d5676a4d28c957ddcb916de

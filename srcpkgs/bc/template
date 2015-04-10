@@ -38,8 +38,12 @@ maintainer="davehome <davehome@redthumb.info.tm>"
 hostmakedepends="flex"
 makedepends="readline-devel"
 short_desc="An arbitrary precision numeric processing language"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnu.org/software/${pkgname}/"
 license="GPL-3"
 checksum=7ee4abbcfac03d8a6e1a8a3440558a3d239d6b858585063e745c760957725ecc

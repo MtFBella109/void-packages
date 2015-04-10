@@ -4,7 +4,11 @@ version=2.14.1
 revision=1
 build_style=gnu-configure
 short_desc="Library for encoding, decoding and manipulating JSON data"
+<<<<<<< HEAD
 maintainer="Jose G Perez Taveras <josegpt27@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://www.digip.org/jansson/"
 changelog="https://github.com/akheron/jansson/raw/master/CHANGES"

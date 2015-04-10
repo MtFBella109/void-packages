@@ -45,8 +45,14 @@ makedepends="webkitgtk-devel gjs-devel
 short_desc="A quick previewer for Nautilus"
 homepage="http://www.gnome.org"
 license="GPL-2"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=7889e4309443dd7dfd5c9546af23565d15813c3f8f2af6c6776702ca8911a7bd
 long_desc="
  This package contains sushi, ${short_desc}."
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=78594a858371b671671205e7b2518e7eb82ed8c2540b62f45a657aaabdf1a9ff
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

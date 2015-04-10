@@ -15,6 +15,7 @@ make_install_args="sysconfdir=/etc"
 depends="busybox psmisc>=22.14_2"
 makedepends="libxslt docbook-xsl"
 short_desc="A new initramfs infrastructure"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=8766a0eecd51b4bc6647e7870ba269dffbbbe21954984b23c77f21ce1fd034d1
 long_desc="
@@ -26,6 +27,12 @@ long_desc="
  nodes for us and then when we have the rootfs's device node, we mount and
  carry on. Having the root on MD, LVM2, LUKS is supported as well as NFS,
  iSCSI, NBD and FCOE with dracut-network."
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+distfiles="${KERNEL_SITE}/utils/boot/$pkgname/$pkgname-$version.tar.xz"
+checksum=8ece6c2240bf0e9283e5f717b65dfcd6830b3ef7f8d1c01b60014052f1063251
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 noarch=yes
 subpackages="dracut-network"

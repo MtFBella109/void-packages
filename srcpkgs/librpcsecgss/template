@@ -10,7 +10,7 @@ hostmakedepends="pkg-config"
 makedepends="libgssglue-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Library for RPCSECGSS support"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="BSD"
 homepage="http://www.citi.umich.edu/projects/nfsv4/linux/"
 distfiles="$homepage/$pkgname/$pkgname-$version.tar.gz"

@@ -55,7 +55,7 @@ do_check() {
 =======
 makedepends="readline-devel libudev-devel>=183"
 short_desc="Logical Volume Manager 2 utilities"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://sourceware.org/lvm2/"
 license="GPL-2, LGPL-2.1"
 distfiles="ftp://sources.redhat.com/pub/lvm2/LVM2.${version}.tgz"

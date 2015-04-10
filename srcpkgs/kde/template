@@ -1,0 +1,33 @@
+# Template file for 'kde'
+pkgname=kde
+version=4.14.2
+revision=3
+build_style=meta
+build_options="systemd"
+depends="
+	kde-wallpapers>=${version}
+	kde-base-artwork>=${version}
+	kde-workspace>=4.11.13
+	oxygen-icons>=${version}
+	kdeartwork>=${version}
+	kde-baseapps>=${version}
+	kde-runtime>=${version}
+	kdepim>=${version}
+	kdeplasma-addons>=${version}
+	kwalletmanager>=${version}
+	kuser>=${version}
+	kcron>=${version}
+	ksystemlog>=${version}
+	kmix>=${version}
+	konsole>=${version}
+	kdegraphics-strigi-analyzer>=${version}
+	kdegraphics-thumbnailers>=${version}
+	okular>=${version}
+	virtual?phonon-backend
+	udisks2
+	polkit-kde
+	$(vopt_if systemd 'upower' 'ConsoleKit2 upower0')"
+short_desc="The KDE meta-package for Void Linux"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.kde.org"
+license="GPL, LGPL, FDL"

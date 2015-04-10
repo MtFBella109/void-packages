@@ -9,9 +9,14 @@ configure_args="--enable-threads --without-tzdata --enable-man-symlinks
  tcl_cv_strstr_unbroken=ok
  tcl_cv_strtoul_unbroken=ok"
 makedepends="zlib-devel"
+<<<<<<< HEAD
 short_desc="TCL scripting language"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="TCL"
+=======
+short_desc="The TCL scripting language"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.tcl.tk"
 distfiles="${SOURCEFORGE_SITE}/tcl/tcl${version}-src.tar.gz"
 checksum=5880225babf7954c58d4fb0f5cf6279104ce1cd6aa9b71e9a6322540e1c4de66

@@ -8,6 +8,7 @@ hostmakedepends="pkg-config qt6-tools qt6-base"
 makedepends="qt6-base-devel qt6-svg-devel fluidsynth-devel"
 depends="fluidsynth"
 short_desc="Qt GUI Interface for FluidSynth"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://qsynth.sourceforge.io"
@@ -19,6 +20,9 @@ makedepends="pkg-config qt-devel jack-devel fluidsynth-devel"
 fulldepends="desktop-file-utils hicolor-icon-theme"
 short_desc="Qt GUI Interface for FluidSynth"
 maintainer="davehome <davehome@redthumb.info.tm>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-2"
 checksum=b5968da98661bac5c9fcc93d3a15851594dfbf3bb7d01ace15fbe8779d53fb3c
 long_desc="

@@ -7,6 +7,7 @@ build_style=gnu-configure
 hostmakedepends="pkg-config flex byacc autoconf automake gettext-devel libtool"
 makedepends="zlib-devel bzip2-devel libuuid-devel fuse-devel"
 short_desc="Libewf and tooling to access the Expert Witness Compression Format"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-3.0-or-later"
 homepage="https://github.com/libyal/libewf"
@@ -14,6 +15,13 @@ distfiles="https://github.com/libyal/libewf/releases/download/${version}/libewf-
 checksum=247d8ee9572392a2404be514d1137f099970f41f240c1134ddc3f04322281c67
 #disable checks as no test files are provided by project: https://github.com/libyal/libewf/wiki/Testing
 make_check=no
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-3"
+homepage="http://code.google.com/p/libewf/"
+distfiles="https://googledrive.com/host/0B3fBvzttpiiSMTdoaVExWWNsRjg/libewf-${version}.tar.gz"
+checksum=d14030ce6122727935fbd676d0876808da1e112721f3cb108564a4d9bf73da71
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libewf-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"

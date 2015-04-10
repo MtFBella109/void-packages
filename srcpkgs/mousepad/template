@@ -28,6 +28,7 @@ depends="hicolor-icon-theme desktop-file-utils"
 makedepends="pkg-config intltool gtk+-devel libxfce4util-devel libxfcegui4-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Simple text editor for Xfce based on Leafpad"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=86e593fd4b1b87d27cda9ebd8901078e795031b5880645850d6ef0b410f4e73e
 long_desc="
@@ -53,3 +54,10 @@ Add_dependency full desktop-file-utils
 
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://xfce.org"
+distfiles="http://archive.xfce.org/src/apps/${pkgname}/${version%.*}/${pkgname}-${version}.tar.bz2"
+checksum=60114431eac8db6bb6ce18bd38f1630cccb684375b97a445a1b6fd619848d132
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

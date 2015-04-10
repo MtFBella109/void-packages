@@ -13,6 +13,7 @@ makedepends="pkg-config libX11-devel libXaw-devel libXt-devel"
 short_desc="XKBD Utilities"
 homepage="http://xorg.freedesktop.org"
 license="MIT"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 distfiles="${XORG_SITE}/app/${pkgname}-${version}.tar.xz"
 checksum=31a2bbee1e09ccba01de92897b8f540b545de812f318d31de07bd3a5a75ee25e
@@ -22,6 +23,9 @@ post_install() {
 }
 =======
 version=1.0.2
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 short_desc="XKBD Utilities"

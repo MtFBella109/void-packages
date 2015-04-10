@@ -15,8 +15,14 @@ hostmakedepends="perl"
 makedepends="${hostmakedepends}"
 depends="${makedepends}"
 short_desc="Perl Linux::DesktopFiles - Get and parse the Linux desktop files"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-2.0"
 homepage="https://metacpan.org/release/Linux-DesktopFiles"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="https://metacpan.org/pod/Linux::DesktopFiles"
+license="Artistic, GPL-1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="https://cpan.metacpan.org/authors/id/T/TR/TRIZEN/Linux-DesktopFiles-${version}.tar.gz"
 checksum=60377a74fba90fa465200ee1c7430dbdde69d454d85f9ee101c039803a07e5f5

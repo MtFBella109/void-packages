@@ -20,8 +20,14 @@ hostmakedepends="automake perl m4 libtool pkg-config glib-devel gobject-introspe
 makedepends="libglib-devel libsoup-gnome-devel libxml2-devel ca-certificates"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="ca-certificates"
+<<<<<<< HEAD
 =======
 version=0.7.12
+=======
+short_desc="RESTful library"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnome.org"
 distfiles="${GNOME_SITE}/$pkgname/0.7/$pkgname-$version.tar.xz"
 build_style=gnu-configure

@@ -14,6 +14,7 @@ depends="hicolor-icon-theme desktop-file-utils"
 makedepends="pkg-config intltool python>=0 gtk+-devel libxml2-devel dbus-glib-devel librsvg-devel libnotify-devel libsoup-devel webkit-gtk-devel sqlite-devel libXext-devel libXScrnSaver-devel libunique1-devel vala-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Lightweight web browser using WebKit GTK+"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=97c79d20807899bad4b241385c7cbf3a4f85d2673b1b6c12059878450e3e971a
 long_desc="
@@ -48,3 +49,10 @@ Add_dependency full sqlite
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.midori-browser.org/"
+license="GPL-2"
+distfiles="http://www.midori-browser.org/downloads/midori_${version}_all_.tar.bz2"
+checksum=b1a5309d926ea4e394f4a39552023b0427cf23053793d325e3daefceed282ec0
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

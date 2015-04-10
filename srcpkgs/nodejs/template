@@ -8,7 +8,11 @@ makedepends="libressl-devel zlib-devel python-devel libuv-devel"
 depends="python"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Evented I/O for V8 javascript"
+<<<<<<< HEAD
 maintainer="davehome <davehome@redthumb.info.tm>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="http://nodejs.org/"
 distfiles="${homepage}/dist/v${version}/node-v${version}.tar.gz"

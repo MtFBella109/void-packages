@@ -2,9 +2,25 @@
 # if there is a bump in .so version,
 # also update srcpkgs/libgssglue/files/gssapi_mech.conf
 pkgname=mit-krb5
+<<<<<<< HEAD
 version=1.21.3
 revision=1
 _distver=$(echo $version | cut -d. -f-2)
+=======
+version=1.13.1
+revision=3
+short_desc="MIT Kerberos 5 implementation"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="MIT"
+homepage="http://web.mit.edu/Kerberos"
+distfiles="$homepage/dist/krb5/${version%.*}/krb5-${version}-signed.tar"
+checksum=4df629fdf97f362cf81edbf38d613b32b492dd88c876cf3aa1c66562f296663e
+
+wrksrc="krb5-${version}"
+
+disable_parallel_build=yes
+
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 build_style=gnu-configure
 <<<<<<< HEAD
 configure_args="--sbindir=/usr/bin --disable-rpath --with-system-et

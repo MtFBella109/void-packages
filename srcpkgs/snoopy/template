@@ -6,8 +6,13 @@ build_style=gnu-configure
 hostmakedepends="socat"
 conf_files="/etc/snoopy.ini"
 short_desc="Log every executed command to syslog"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://github.com/a2o/snoopy"
 distfiles="https://github.com/a2o/snoopy/releases/download/snoopy-${version}/snoopy-${version}.tar.gz"
 checksum=6442e1145a5cad725f6aae0887030ee3db34bafc40bbe3bb84da836cbb5f1569

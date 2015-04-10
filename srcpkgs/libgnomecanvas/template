@@ -24,7 +24,13 @@ short_desc="GNOME Canvas library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.0-or-later"
 homepage="http://gnome.org/"
+<<<<<<< HEAD
 distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.bz2"
+=======
+license="LGPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${GNOME_SITE}/$pkgname/2.30/$pkgname-$version.tar.bz2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=859b78e08489fce4d5c15c676fec1cd79782f115f516e8ad8bed6abcb8dedd40
 
 <<<<<<< HEAD

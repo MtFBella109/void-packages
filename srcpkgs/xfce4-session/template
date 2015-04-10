@@ -18,6 +18,7 @@ makedepends="libxfce4ui-devel dbus-glib-devel upower0-devel
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="iceauth hicolor-icon-theme desktop-file-utils"
 conf_files="/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml"
+<<<<<<< HEAD
 short_desc="Session manager for the XFCE desktop environment"
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
 license="GPL-2.0-or-later"
@@ -61,6 +62,14 @@ make_dirs="/etc/polkit-1/localauthority 0700 root root"
 
 
 
+=======
+short_desc="The session manager for the XFCE desktop environment"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://xfce.org"
+distfiles="http://archive.xfce.org/src/xfce/$pkgname/${version%.*}/$pkgname-$version.tar.bz2"
+checksum=97d7f2a2d0af7f3623b68d1f04091e02913b28f9555dab8b0d26c8a1299d08fd
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	install -dm755 ${DESTDIR}/etc/polkit-1/localauthority/50-local.d

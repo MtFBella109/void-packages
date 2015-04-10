@@ -15,10 +15,16 @@ makedepends="giblib-devel libcurl-devel libexif-devel
  libpng-devel libjpeg-turbo-devel libXinerama-devel libXt-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Fast and light imlib2-based image viewer"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT-feh"
 homepage="https://feh.finalrewind.org"
 changelog="https://raw.githubusercontent.com/derf/feh/master/ChangeLog"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="MIT"
+homepage="http://feh.finalrewind.org/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${homepage}/feh-${version}.tar.bz2"
 checksum=43d8e6742ec273ef3084bde82c5ead5a074348d9bfce28f1b0f8504623ca9b74
 

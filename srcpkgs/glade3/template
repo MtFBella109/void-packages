@@ -15,6 +15,11 @@ short_desc="User Interface Designer for GTK+3"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="http://glade.gnome.org/"
+<<<<<<< HEAD
+=======
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${GNOME_SITE}/glade/${version%.*}/glade-${version}.tar.xz"
 checksum=31c9adaea849972ab9517b564e19ac19977ca97758b109edc3167008f53e3d9c
 lib32disabled=yes

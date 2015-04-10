@@ -1,0 +1,15 @@
+# Template file for 'python-dulwich'
+pkgname=python-dulwich
+version=0.10.1a
+revision=1
+wrksrc="dulwich-${version}"
+build_style=python-module
+hostmakedepends="python-setuptools"
+makedepends="python-devel"
+pycompile_module="dulwich"
+short_desc="Python implementation of the Git file formats and protocols"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://samba.org/~jelmer/dulwich/"
+license="GPL-2"
+distfiles="https://pypi.python.org/packages/source/d/dulwich/dulwich-${version}.tar.gz"
+checksum=666600ab5eb0b6d531879ee0f65dfefd71bce2e21ab3910c28f7789e15b6330b

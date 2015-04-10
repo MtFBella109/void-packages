@@ -12,6 +12,7 @@ makedepends="${hostmakedepends}"
 depends="${hostmakedepends}"
 checkdepends="perl-Test-Needs perl-Business-ISBN perl-Test-Warnings perl-Test-Fatal"
 short_desc="Perl Uniform Resource Identifiers class (URI, RFC 2396)"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/URI"
@@ -23,6 +24,11 @@ checksum=96265860cd61bde16e8415dcfbf108056de162caa0ac37f81eb695c9d2e0ab77
 pkgname=perl-URI
 version=1.40
 wrksrc="URI-$version"
+=======
+homepage="http://search.cpan.org/~gaas/URI-1.58/URI.pm"
+license="Artistic, GPL-1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${CPAN_SITE}/URI/GAAS/URI-$version.tar.gz"
 <<<<<<< HEAD
 build_style=perl_module

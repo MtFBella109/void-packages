@@ -19,9 +19,17 @@ depends="
 	mate-netbook>=1.26.0
 	caja>=${version}
 	marco>=${version}
+<<<<<<< HEAD
 	elogind
 	zenity"
 short_desc="MATE meta-package for Void Linux"
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
+=======
+	mate-accountsdialog>=${version}
+	mate-color-manager>=${version}
+	$(vopt_if systemd 'upower' 'ConsoleKit2 upower0')"
+short_desc="The MATE meta-package for Void Linux"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.mate-desktop.org"

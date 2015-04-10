@@ -14,8 +14,15 @@ short_desc="Intel ACPI CA Unix utilities"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only, BSD-3-Clause"
 homepage="https://www.acpica.org/"
+<<<<<<< HEAD
 distfiles="https://github.com/user-attachments/files/16769900/acpica-unix-${version}.tar.gz"
 checksum=373d4f08da7f1e838191311cb0fc2615ca9c76f47b1e103631e20292a38b4836
+=======
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://acpica.org/sites/acpica/files/acpica-unix-${version}.tar.gz"
+checksum=486534df2e493d3e0fde215a405275db656619b65101c61723d90c202825e6ad
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 post_extract() {

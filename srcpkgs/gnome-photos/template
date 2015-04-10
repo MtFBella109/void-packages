@@ -26,6 +26,7 @@ makedepends="
 depends="desktop-file-utils"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Access, organize, and share your photos on GNOME"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Apps/Photos"
@@ -36,3 +37,10 @@ make_check=no # https://gitlab.gnome.org/GNOME/gnome-photos/-/issues/214
 
 build_options="gir"
 build_options_default="gir"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=1bce84bd0467647decf26f81e03535940ab65a7774f44e1395a2b87d88c0be96
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

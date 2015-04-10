@@ -3,9 +3,14 @@ pkgname=c-ares
 version=1.34.5
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 checkdepends="iana-etc"
 short_desc="Library for asynchronous DNS requests"
 maintainer="Duncaen <duncaen@voidlinux.org>"
+=======
+short_desc="C library that performs DNS requests and name resolves asynchronously"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://c-ares.org/"
 changelog="https://c-ares.org/changelog.html"

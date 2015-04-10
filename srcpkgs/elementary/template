@@ -9,7 +9,7 @@ build_style=gnu-configure
 configure_args="--with-tests=none --disable-static --enable-quick-launch --disable-elementary-test"
 homepage="http://enlightenment.org"
 short_desc="Enlightenment's widget set"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="BSD"
 distfiles="http://download.enlightenment.org/rel/libs/${pkgname}/${pkgname}-${version}.tar.xz"
 checksum=11595b6c5f511150a26e970bf8e590f96a6ce9e33e5dd8419407013844b2b74f

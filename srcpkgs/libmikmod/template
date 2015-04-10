@@ -9,7 +9,11 @@ revision=2
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 build_style=gnu-configure
 short_desc="MikMod Sound Library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://mikmod.shlomifish.org/"
 license="GPL-2, LGPL-2.1"
 distfiles="${SOURCEFORGE_SITE}/mikmod/${pkgname}-${version}.tar.gz"

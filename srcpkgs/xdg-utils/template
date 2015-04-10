@@ -9,11 +9,16 @@ depends="xset"
 short_desc="Tools to assist applications with various desktop integration tasks"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="https://www.freedesktop.org/wiki/Software/xdg-utils/"
 changelog="https://gitlab.freedesktop.org/xdg/xdg-utils/-/raw/master/ChangeLog"
 distfiles="https://gitlab.freedesktop.org/xdg/xdg-utils/-/archive/v${version}/xdg-utils-v${version}.tar.bz2"
 checksum=93d510dccf328378f012fe195b4574c2fac1cd65a74d0852d6eaa72e5a2065a7
 make_check=no # tests are interactive and rely on system components
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+hostmakedepends="git xmlto lynx"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense LICENSE

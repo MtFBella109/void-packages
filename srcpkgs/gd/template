@@ -14,8 +14,12 @@ checkdepends="liberation-fonts-ttf"
 makedepends="libjpeg-turbo-devel libpng-devel fontconfig-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Graphics library for the dynamic creation of images"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="custom:BSD-like"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.libgd.org/"
 changelog="https://raw.githubusercontent.com/libgd/libgd/master/CHANGELOG.md"
 distfiles="https://github.com/libgd/libgd/releases/download/gd-${version}/libgd-${version}.tar.xz"

@@ -18,8 +18,12 @@ build_style=gnu-configure
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 makedepends="python-devel swig"
 short_desc="An alternate POSIX capabilities library"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://people.redhat.com/sgrubb/libcap-ng/"
 distfiles="http://people.redhat.com/sgrubb/$pkgname/$pkgname-$version.tar.gz"
 checksum=3ba5294d1cbdfa98afaacfbc00b6af9ed2b83e8a21817185dfd844cc8c7ac6ff

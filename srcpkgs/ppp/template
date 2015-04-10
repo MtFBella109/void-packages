@@ -19,6 +19,16 @@ build_style=configure
 configure_args="--prefix=/usr"
 make_install_target="DESTDIR=$XBPS_DESTDIR/$pkgname-$version/usr install"
 revision=2
+<<<<<<< HEAD
+=======
+short_desc="PPP (Point-to-Point Protocol) daemon"
+homepage="https://ppp.samba.org/"
+license="BSD, LGPLv2+, GPLv2+, Public Domain"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="https://ftp.samba.org/pub/ppp/ppp-$version.tar.gz"
+checksum=02e0a3dd3e4799e33103f70ec7df75348c8540966ee7c948e4ed8a42bbccfb30
+
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 makedepends="libpcap-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="PPP (Point-to-Point Protocol) daemon"

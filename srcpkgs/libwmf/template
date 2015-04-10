@@ -29,7 +29,11 @@ makedepends="zlib-devel freetype-devel libjpeg-turbo-devel libpng-devel
  expat-devel glib-devel gtk+-devel gd-devel gsfonts"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Library for reading and converting WMF (Windows Meta Files)"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://wvware.sourceforge.net/libwmf.html"
 license="LGPL-2.1"
 distfiles="${SOURCEFORGE_SITE}/wvware/${pkgname}-${version}.tar.gz"

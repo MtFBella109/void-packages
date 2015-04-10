@@ -10,10 +10,16 @@ depends="font-util"
 short_desc="72dpi PCF versions of the Chinese Song Ti fonts"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org/"
 distfiles="${XORG_SITE}/font/$pkgname-$version.tar.gz"
 checksum=711a648206f0d7f4a8c3fa61b4b4703e789f37603937b488a6edd7c71182f7d5
 font_dirs="/usr/share/fonts/X11/misc"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+checksum=5824ab4b485951107dd245b8f7717d2822f1a6dbf6cea98f1ac7f49905c0a867
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense COPYING

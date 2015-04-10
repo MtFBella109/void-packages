@@ -12,7 +12,11 @@ hostmakedepends="which python"
 makedepends="readline-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="V8 JavaScript Engine"
+<<<<<<< HEAD
 maintainer="davehome <davehome@redthumb.info.tm>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://code.google.com/p/v8/"
 license="BSD"
 checksum=cb52a10450d99e2005b9193bd2d6b4bb716ba1d1645cfc64fd98dc4bdac01787

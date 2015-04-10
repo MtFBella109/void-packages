@@ -3,9 +3,15 @@ pkgname=slock
 version=1.5
 revision=2
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="libXrandr-devel"
 short_desc="Simple screen locker for X"
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+makedepends="libX11-devel libXext-devel"
+short_desc="A simple screen locker for X"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="http://tools.suckless.org/slock"
 distfiles="http://dl.suckless.org/tools/slock-${version}.tar.gz"

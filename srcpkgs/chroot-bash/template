@@ -3,6 +3,7 @@ pkgname=chroot-bash
 version=5.3
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 # need 'bash_cv_termcap_lib=gnutermcap' in order to force bash to use the
 # bundled termcap library when bootstrapping from source on a foreign system
 configure_args="--without-bash-malloc --without-curses
@@ -14,6 +15,15 @@ homepage="https://www.gnu.org/software/bash/bash.html"
 distfiles="${GNU_SITE}/bash/bash-${version}.tar.gz"
 checksum=0d5cd86965f869a26cf64f4b71be7b96f90a3ba8b3d74e27e8e9d9d5550f31ba
 repository=bootstrap
+=======
+configure_args="--without-bash-malloc --without-curses --without-installed-readline --disable-nls"
+short_desc="The GNU Bourne Again Shell -- for xbps-src use"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnu.org/software/bash/bash.html"
+license="GPL-3"
+distfiles="http://ftp.gnu.org/gnu/bash/bash-${_bash_distver}.tar.gz"
+checksum=afc687a28e0e24dc21b988fa159ff9dbcf6b7caa92ade8645cc6d5605cd024d4
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 bootstrap=yes
 provides="bash-${version}_${revision}"

@@ -1,7 +1,14 @@
 # Template file for 'konsole'
 pkgname=konsole
-version=25.08.3
-revision=1
+version=4.14.2
+revision=2
+short_desc="KDE's Terminal Emulator"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL, LGPL, FDL"
+homepage="http://www.kde.org"
+distfiles="http://download.kde.org/stable/${version}/src/${pkgname}-${version}.tar.xz"
+checksum=e6afac385e4746438205e1b02e0001141c36aa0c032d1ef9647588ab51d386e2
+
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -23,19 +30,6 @@ distfiles="${KDE_SITE}/release-service/${version}/src/konsole-${version}.tar.xz"
 checksum=095a7ff10df3c70779b356fb3b5984062bbc698bbed966230e3dbccf6af36615
 replaces="konsole5>=0"
 
-<<<<<<< HEAD
-do_check() {
-	cd build
-	ctest -E "ScreenTest|Vt102EmulationTest|TerminalInterfaceTest"
-}
-
-konsole5_package() {
-	metapackage=yes
-	short_desc+=" (transitional dummy package)"
-	depends="konsole>=${version}_${revision}"
-}
-=======
 hostmakedepends="cmake automoc4 pkg-config"
 makedepends="glib-devel libressl-devel qt-devel phonon-devel strigi-devel
  kdelibs-devel kde-baseapps-devel"
->>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)

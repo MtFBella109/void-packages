@@ -15,7 +15,7 @@ depends="python python-gobject>=3.14 gsettings-desktop-schemas>=3.14 dconf hicol
 pycompile_module="gtweak"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNOME3 tool to customize advanced options"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-2"
 checksum=b060840fdf1e97c943e20e390acd25186fa3ce4ec5cddf044d1944e148d4ebd6
 long_desc="

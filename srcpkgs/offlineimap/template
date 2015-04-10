@@ -1,5 +1,6 @@
 # Template file for 'offlineimap'
 pkgname=offlineimap
+<<<<<<< HEAD
 version=8.0.0
 revision=5
 build_style=python3-module
@@ -12,6 +13,17 @@ checkdepends="${depends} python3-pytest-xdist"
 short_desc="Powerful IMAP/Maildir synchronization and reader support"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+version=6.5.6
+revision=1
+noarch=yes
+build_style=python-module
+hostmakedepends="python-setuptools python-docutils"
+depends="python"
+pycompile_module="offlineimap"
+short_desc="ISO 8601 date/time/duration parser and formatter (Python2)"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://offlineimap.org/"
 changelog="https://raw.githubusercontent.com/OfflineIMAP/offlineimap3/master/Changelog.md"
 distfiles="https://github.com/OfflineIMAP/offlineimap3/archive/refs/tags/v${version}.tar.gz"

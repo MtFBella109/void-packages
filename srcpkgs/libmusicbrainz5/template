@@ -15,7 +15,11 @@ hostmakedepends="cmake"
 makedepends="neon-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Library That Provides Access to the MusicBrainz Server (5.x)"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="LGPL-2.1"
 homepage="http://musicbrainz.org/"
 <<<<<<< HEAD

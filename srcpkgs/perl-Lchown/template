@@ -13,10 +13,17 @@ makedepends="${hostmakedepends}"
 depends="${makedepends}"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Perl module interface to the lchown() system call"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/Lchown"
 distfiles="${CPAN_SITE}/Devel/NCLEATON/Lchown-${version}.tar.gz"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/Lchown"
+license="Artistic, GPL-1"
+distfiles="http://search.cpan.org/CPAN/authors/id/N/NC/NCLEATON/Lchown-${version}.tar.gz"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=9c0a13e279ad92208fb8fac73001635b0689251dd41b597522e1b3501ba0f76f
 shlib_requires=libperl.so.5.40
 

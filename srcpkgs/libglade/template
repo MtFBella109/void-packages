@@ -15,7 +15,14 @@ hostmakedepends="pkg-config python"
 makedepends="libxml2-devel gtk+-devel xmlcatmgr"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Runtime interpreter for GLADE GUI files"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+homepage="http://www.jamesh.id.au/software/libglade/"
+license="LGPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${GNOME_SITE}/$pkgname/2.6/$pkgname-$version.tar.bz2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=64361e7647839d36ed8336d992fd210d3e8139882269bed47dc4674980165dec
 long_desc="
  Libglade is a library that performs a similar job to the C source

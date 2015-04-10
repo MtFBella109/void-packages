@@ -4,6 +4,7 @@ version=2025b
 revision=2
 bootstrap=yes
 short_desc="Time zone and daylight-saving time utilities"
+<<<<<<< HEAD
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
 license="Public Domain"
 homepage="https://www.iana.org/time-zones"
@@ -13,6 +14,12 @@ checksum=ec2f98c739009fd81a654efe2ee75069f54bcee5e0d80f510ee7e1f469ed293a
 if [ "$CROSS_BUILD" ]; then
 	hostmakedepends="tzutils"
 fi
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+distfiles="https://github.com/eggert/tz/archive/${version}.tar.gz"
+checksum=1ea0726e1aa540ccaa9930690fe47155e8b5b407c1b1acdd757c60bfecc30016
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_build() {
 	touch version

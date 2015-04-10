@@ -11,11 +11,18 @@ makedepends="openssl-devel"
 makedepends="libressl-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Manage submission of emails using SMTP protocol"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://ftp.osuosl.org/pub/blfs/conglomeration/libesmtp"
 #distfiles="http://brianstafford.info/libesmtp/libesmtp-${version}.tar.bz2"
 distfiles="https://ftp.osuosl.org/pub/blfs/conglomeration/libesmtp/libesmtp-${version}.tar.bz2"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://stafford.uklinux.net/libesmtp/"
+license="LGPL-2.1"
+distfiles="http://stafford.uklinux.net/libesmtp/${pkgname}-${version}.tar.bz2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=d0a61a5c52d99fa7ce7d00ed0a07e341dbda67101dbed1ab0cdae3f37db4eb0b
 
 libesmtp-devel_package() {

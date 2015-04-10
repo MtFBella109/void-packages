@@ -15,12 +15,20 @@ configure_args="--disable-static"
 makedepends="ghostscript-devel"
 short_desc="Small library for rendering Postscript documents"
 <<<<<<< HEAD
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://www.freedesktop.org/wiki/Software/libspectre/"
 changelog="https://gitlab.freedesktop.org/libspectre/libspectre/-/raw/master/NEWS"
 distfiles="http://libspectre.freedesktop.org/releases/libspectre-${version}.tar.gz"
 checksum=55a7517cd3572bd2565df0cf450944a04d5273b279ebb369a895391957f0f960
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://libspectre.freedesktop.org/wiki/"
+distfiles="http://libspectre.freedesktop.org/releases/${pkgname}-${version}.tar.gz"
+checksum=e81b822a106beed14cf0fec70f1b890c690c2ffa150fa2eee41dc26518a6c3ec
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 libspectre-devel_package() {

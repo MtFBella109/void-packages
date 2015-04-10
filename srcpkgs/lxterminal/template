@@ -25,11 +25,16 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://lxde.org/"
 <<<<<<< HEAD
+<<<<<<< HEAD
 distfiles="https://github.com/lxde/lxterminal/archive/refs/tags/${version}.tar.gz"
 checksum=d5da0646e20ad2be44ef69a9d620be5f1ec43b156dc585ebe203dd7b05c31d88
 =======
 license="GPL2"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${SOURCEFORGE_SITE}/lxde/$pkgname-$version.tar.gz"
 checksum=f495166b308a96e8c30c8892b33ab163f3865253a9bbd4bdac462f974fda7253
 long_desc="

@@ -12,12 +12,20 @@ hostmakedepends="glib-devel gettext pkg-config wget hwids perl
 makedepends="libxslt-devel libglib-devel libsoup3-devel"
 depends="osinfo-db hwids"
 short_desc="GObject based library API for managing info about operating systems"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://libosinfo.org/"
 changelog="https://gitlab.com/libosinfo/libosinfo/raw/main/NEWS"
 distfiles="https://gitlab.com/libosinfo/libosinfo/-/archive/v${version}/libosinfo-v${version}.tar.gz"
 checksum=3c52fb542d65d1ec5a10f87126d7513c2bd115eaa2f87fb91b15ba588708fc7b
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="https://fedorahosted.org/libosinfo/"
+license="GPL-2, LGPL-2.1"
+distfiles="https://fedorahosted.org/releases/l/i/${pkgname}/${pkgname}-${version}.tar.gz"
+checksum=bb6ba136756b26045ba3ed9b3c1b0920a639dd80b007769a1df356d8e2fe0921
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 build_options="gtk_doc gir vala"
 desc_option_gtk_doc="Build GTK API docs"

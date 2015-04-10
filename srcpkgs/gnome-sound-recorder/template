@@ -21,6 +21,7 @@ makedepends="gtk+3-devel gsettings-desktop-schemas-devel gjs-devel gst-plugins-b
 depends="desktop-file-utils gjs>=1.40 gsettings-desktop-schemas>=3.14 gst-plugins-base1"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNOME sound recorder application"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Apps/SoundRecorder"
@@ -28,3 +29,10 @@ changelog="https://gitlab.gnome.org/GNOME/gnome-sound-recorder/-/raw/master/NEWS
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=4c08c315282f3ebf7a2da6f20e0ff9f0c71daa5229fcd2fe0b5c0aaaaa06f0ad
 lib32disabled=yes
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=6104be4c3107f8e758e3ea293e8f15822d524197c2f6a5180415073b01474f14
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

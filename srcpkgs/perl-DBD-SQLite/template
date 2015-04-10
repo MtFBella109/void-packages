@@ -14,6 +14,7 @@ makedepends="${hostmakedepends}"
 depends="${makedepends}"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="DBD::SQLite - Self-contained RDBMS in a DBI driver"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/DBD-SQLite"
@@ -24,3 +25,10 @@ post_extract() {
 	# Unlock system sqlite support
 	vsed -e 's/^if ( 0 )/if ( 1 )/' -i Makefile.PL
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/DBD-SQLite"
+license="Artistic, GPL-1"
+distfiles="${CPAN_SITE}/DBD/DBD-SQLite-$version.tar.gz"
+checksum=b2b179136cd7c0df7b0e4840ff3f46330f161e5fc646279748afa7a3144f7cc0
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

@@ -5,12 +5,21 @@ revision=1
 build_style=gnu-makefile
 make_dirs="/var/lib/os-prober 0755 root root"
 short_desc="Utility to detect other OSes on a set of drives"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://packages.debian.org/sid/os-prober"
 changelog="https://metadata.ftp-master.debian.org/changelogs/main/o/os-prober/unstable_changelog"
 distfiles="${DEBIAN_SITE}/main/o/${pkgname}/${pkgname}_${version}.tar.xz"
 checksum=8c82d5084c2b6f8935f6633612f18d16d04a0deffd6b99c264985fb7204140a6
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://packages.debian.org/sid/os-prober"
+license="GPL-2"
+distfiles="${DEBIAN_SITE}/main/o/$pkgname/${pkgname}_$version.tar.xz"
+checksum=c4a7661a52edae722f7e6bacb3f107cf7086cbe768275fadf5398d04360bfc84
+wrksrc=$pkgname
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 case "$XBPS_TARGET_MACHINE" in
 	i686*|x86_64*) _ARCH="x86";;

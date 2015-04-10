@@ -17,6 +17,7 @@ hostmakedepends="pkg-config"
 makedepends="libSM-devel libXrender-devel libXft-devel libXpm-devel imlib2-devel
  libXext-devel libXinerama-devel libXrandr-devel fribidi-devel"
 short_desc="Highly configurable and low resource X11 Window manager"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 =======
 configure_args="--enable-nls"
@@ -24,6 +25,9 @@ revision=1
 makedepends="pkg-config libX11-devel libXft-devel libXrender-devel fontconfig-devel libXpm-devel imlib2-devel libXext-devel libXinerama-devel libXrandr-devel fribidi-devel"
 short_desc="Highly configurable and low resource X11 Window manager "
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.fluxbox.org"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 license="MIT"

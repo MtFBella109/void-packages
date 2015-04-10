@@ -5,6 +5,7 @@ version=8.2412.0
 revision=2
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="--sbindir=/usr/bin --enable-gnutls --enable-mysql
  --enable-pgsql --enable-imdiag --enable-imfile --enable-mail --enable-imptcp
  --enable-gssapi-krb5 --enable-mmsnmptrapd --enable-impstats --enable-omprog
@@ -12,6 +13,26 @@ configure_args="--sbindir=/usr/bin --enable-gnutls --enable-mysql
  --enable-pmaixforwardedfrom --enable-omuxsock --disable-generate-man-pages
  --enable-elasticsearch --enable-testbench --disable-libsystemd
  --enable-clickhouse"
+=======
+configure_args="--enable-gnutls --enable-mysql --enable-pgsql
+ --enable-imdiag --enable-imfile --enable-mail --enable-gssapi-krb5
+ --enable-imptcp --enable-mmsnmptrapd
+ --enable-impstats --enable-omprog --enable-omstdout
+ --enable-pmlastmsg --enable-pmcisconames --enable-pmaixforwardedfrom
+ --enable-pmsnare --enable-omuxsock --disable-generate-man-pages
+ $(vopt_enable systemd imjournal) $(vopt_enable systemd omjournal)
+ $(vopt_if systemd --with-systemdsystemunitdir=/usr/lib/systemd/system)"
+short_desc="An Enhanced multi-threaded syslog daemon"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://www.rsyslog.com"
+distfiles="${homepage}/files/download/rsyslog/$pkgname-$version.tar.gz"
+checksum=eab00e8e758cd9dd33b3e2cf6af80297d1951dc7db37bd723a6488a35d577adc
+
+build_pie=yes
+build_options="systemd"
+lib32disabled=yes
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 hostmakedepends="pkg-config postgresql-libs-devel"
 <<<<<<< HEAD
 makedepends="gnutls-devel libcurl-devel libestr-devel libfastjson-devel

@@ -1,6 +1,17 @@
 # Template build file for 'xsetmode'.
 pkgname=xsetmode
 version=1.0.0
+<<<<<<< HEAD
+=======
+revision=3
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="libX11-devel libXi-devel"
+short_desc="Switch mode of XInput devices"
+homepage="http://xorg.freedesktop.org"
+license="MIT"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

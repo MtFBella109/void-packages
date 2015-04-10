@@ -12,7 +12,11 @@ build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="xorgproto libXt-devel libxkbfile-devel"
 short_desc="xkbui library from X.org"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="${XORG_SITE}"
 license="MIT"
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"

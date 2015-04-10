@@ -28,8 +28,12 @@ makedepends="
  libXext-devel libXcursor-devel libXi-devel libXrender-devel libXv-devel
  libxkbfile-devel ffmpeg-devel libressl-devel zlib-devel"
 short_desc="A Free RDP (Remote Desktop Protocol) client"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="Apache-2.0"
 homepage="https://www.freerdp.com/"
 changelog="https://raw.githubusercontent.com/FreeRDP/FreeRDP/master/ChangeLog"

@@ -40,6 +40,7 @@ makedepends="geocode-glib-devel colord-devel libxklavier-devel
 depends="geoclue2>=2.1 pulseaudio hicolor-icon-theme $(vopt_if systemd upower)"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNOME settings daemon"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://gitlab.gnome.org/GNOME/gnome-settings-daemon"
@@ -47,6 +48,13 @@ changelog="https://gitlab.gnome.org/GNOME/gnome-settings-daemon/-/raw/master/NEW
 distfiles="${GNOME_SITE}/gnome-settings-daemon/${version%.*}/gnome-settings-daemon-${version}.tar.xz"
 checksum=3860a2ea214dcbcb6600ae7a1e3358a5389215087bc3e4a47cee3f87baee062e
 CFLAGS="-UG_DISABLE_ASSERT"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="GPL-3"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=066bc8ed751c5f6b5a9590911a0fb2b51b0c3436ae1caccfa42e0791c34fedee
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" polkit"

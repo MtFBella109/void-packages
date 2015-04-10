@@ -16,11 +16,19 @@ configure_args="CFLAGS=-fPIC"
 makedepends="pkg-config libsndfile-devel fftw-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Sample Rate Converter for audio"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
 homepage="https://libsndfile.github.io/libsamplerate/"
 distfiles="https://github.com/libsndfile/libsamplerate/releases/download/${version}/libsamplerate-${version}.tar.xz"
 checksum=3258da280511d24b49d6b08615bbe824d0cacc9842b0e4caf11c52cf2b043893
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.mega-nerd.com/SRC"
+license="GPL-2"
+distfiles="http://www.mega-nerd.com/SRC/$pkgname-$version.tar.gz"
+checksum=93b54bdf46d5e6d2354b7034395fe329c222a966790de34520702bb9642f1c06
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 CFLAGS="-fPIC"

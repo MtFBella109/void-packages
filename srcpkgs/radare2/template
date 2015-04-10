@@ -21,6 +21,7 @@ revision=3
 makedepends="file-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Advanced command line debugger and hexadecimal editor"
+<<<<<<< HEAD
 maintainer="yosh <yosh-git@riseup.net>"
 license="LGPL-3.0-only"
 homepage="https://www.radare.org"
@@ -45,3 +46,10 @@ radare2-devel_package() {
 broken_as_needed=yes
 subpackages="$pkgname-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-3"
+homepage="http://www.radare.org"
+distfiles="${homepage}/get/${pkgname}-${version}.tar.xz"
+checksum=8e72caaebdac10300fd7ec86a5d06b1cbecfc6914e5fea4007c6e06e667bfa5a
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

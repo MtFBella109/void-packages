@@ -17,6 +17,7 @@ makedepends="nautilus-devel json-glib-devel libnotify-devel libarchive-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils hicolor-icon-theme"
 short_desc="GNOME Front-end to archiving programs like tar and zip"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Apps/FileRoller"
@@ -33,6 +34,9 @@ depends="desktop-file-utils hicolor-icon-theme"
 makedepends="which pkg-config intltool gnome-doc-utils file-devel nautilus-devel"
 short_desc="GNOME Front-end to archiving programs like tar and zip"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnome.org"
 license="GPL-2"
 checksum=7085a351c55171718bbf5b9b614a7b9606efb8cbd2eb44cc6c538545444d0cdd

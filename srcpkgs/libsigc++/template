@@ -20,6 +20,7 @@ makedepends="libstdc++-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Type-safe callback system for C++ programs"
 <<<<<<< HEAD
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://libsigcplusplus.github.io/libsigcplusplus/"
@@ -36,6 +37,13 @@ pre_configure() {
 	# build static library as well as shared
 	vsed -i 's,library(,both_libraries(,' sigc++/meson.build
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://libsigc.sourceforge.net/"
+license="LGPL-2.1"
+distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
+checksum=540443492a68e77e30db8d425f3c0b1299c825bf974d9bfc31ae7efafedc19ec
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libsigc++-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"

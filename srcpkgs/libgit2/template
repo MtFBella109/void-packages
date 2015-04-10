@@ -17,7 +17,7 @@ checksum=de384e29d7efc9330c6cdb126ebf88342b5025d920dcb7c645defad85195ea7f
 hostmakedepends="cmake python git"
 makedepends="zlib-devel libressl-devel"
 short_desc="The Git linkable library"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://libgit2.github.com/"
 license="GPL-2 with Linking Exception"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)

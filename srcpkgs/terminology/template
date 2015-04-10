@@ -15,6 +15,7 @@ makedepends="elementary-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils xdg-utils"
 short_desc="Enlightenment's terminal emulator"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
 homepage="https://www.enlightenment.org"
@@ -24,3 +25,9 @@ checksum=16a37fecd7bbd63ec9de3ec6c0af331cee77d6dfda838a1b1573d6f298474da5
 post_install() {
 	vlicense COPYING
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="2-clause-BSD"
+distfiles="http://download.enlightenment.org/rel/apps/${pkgname}/${pkgname}-${version}.tar.xz"
+checksum=e21f1c03a13b7fa4425a078cf8f2d914499ea1311fc99a04e6155ddf6a33786a
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

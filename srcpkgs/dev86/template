@@ -11,6 +11,7 @@ revision=1
 fulldepends="bin86"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="8086 cross development compiler, assembler and linker"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-1.0-or-later, GPL-2.0-or-later, LGPL-2.0-or-later"
 homepage="https://github.com/lkundrak/dev86/"
@@ -22,6 +23,14 @@ nostrip=yes
 nopie=yes
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+license="GPL+, GPL-2+, LGPL-2+"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://v3.sk/~lkundrak/dev86/"
+distfiles="${homepage}/Dev86src-$version.tar.gz"
+checksum=234b110e6df9b7f6843e2ee53473127c2211243a16748f229fc0127845f68d94
+only_for_archs="i686 x86_64"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_build() {
 	for f in libc/bcc libc/misc libc/msdos libc/string libc/syscall \

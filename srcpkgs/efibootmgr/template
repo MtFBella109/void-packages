@@ -5,11 +5,19 @@ revision=1
 hostmakedepends="pkg-config"
 makedepends="libefivar-devel popt-devel"
 short_desc="Tool to modify UEFI Firmware Boot Manager Variables"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/rhboot/efibootmgr"
 distfiles="https://github.com/rhboot/efibootmgr/archive/${version}.tar.gz"
 checksum=442867d12f8525034a404fc8af3036dba8e1fc970998af2486c3b940dfad0874
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="https://github.com/vathpela/efibootmgr"
+distfiles="https://github.com/vathpela/efibootmgr/releases/download/efibootmgr-${version}/efibootmgr-${version}.tar.bz2"
+checksum=f27ce3d7588512017bceb2d2a29aef110499a662a21550afa1158f9950f976d1
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 conf_files="/etc/default/efibootmgr-kernel-hook"
 

@@ -16,8 +16,12 @@ create_wrksrc=yes
 revision=4
 makedepends="libbsd-devel libressl-devel"
 short_desc="mkfs and fsck for HFS and HFS+ file systems"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="APSL-2.0"
 homepage="https://www.opensource.apple.com/"
 distfiles="https://src.fedoraproject.org/repo/pkgs/hfsplus-tools/diskdev_cmds-${version}.tar.gz/${_md5sum}/diskdev_cmds-${version}.tar.gz"

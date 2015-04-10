@@ -5,6 +5,7 @@ version=3.0.18
 revision=2
 makedepends="pciutils-devel"
 short_desc="Library for building UEFI Applications using GNU toolchain"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://sourceforge.net/projects/gnu-efi/"
@@ -41,6 +42,13 @@ case "$XBPS_TARGET_MACHINE" in
 	riscv64*) TARGET_ARCH=riscv64 ;;
 	*) broken="${XBPS_TARGET_MACHINE} is untested, please add support if possible" ;;
 esac
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://sourceforge.net/projects/gnu-efi/"
+distfiles="${SOURCEFORGE_SITE}/gnu-efi/gnu-efi_${version}.orig.tar.gz"
+checksum=d5c5ca168d25bb54ea936a25175d7626778001f788bddc60dbed103874583621
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_build() {
 	# upstream provides LDFLAGS directly to ld: https://sourceforge.net/p/gnu-efi/bugs/33/

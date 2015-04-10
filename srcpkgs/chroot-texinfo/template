@@ -1,0 +1,41 @@
+# Template file for 'chroot-texinfo'
+pkgname=chroot-texinfo
+version=4.13a
+revision=6
+wrksrc="texinfo-4.13"
+bootstrap=yes
+hostmakedepends="ncurses-devel"
+makedepends="ncurses-devel"
+conflicts="texinfo>=0"
+provides="texinfo-${version}_${revision}"
+short_desc="The GNU Documentation System -- for xbps-src use"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://www.gnu.org/software/texinfo/"
+distfiles="http://ftp.gnu.org/gnu/texinfo/texinfo-$version.tar.gz"
+checksum=1303e91a1c752b69a32666a407e9fbdd6e936def4b09bc7de30f416301530d68
+
+do_configure() {
+	cp -f ${XBPS_CROSSPFDIR}/config.sub build-aux
+
+	if [ -z "$CHROOT_READY" ]; then
+		export LDFLAGS="-L${XBPS_MASTERDIR}/usr/lib"
+	fi
+	./configure ${configure_args} --disable-nls
+}
+
+do_build() {
+	if [ -d tools ]; then
+		make ${makejobs} -C tools/gnulib/lib
+		make ${makejobs} -C tools
+	fi
+	make ${makejobs}
+}
+
+do_install() {
+	make DESTDIR=${DESTDIR} install
+
+	rm -f ${DESTDIR}/usr/bin/info
+	rm -f ${DESTDIR}/usr/bin/infokey
+	rm -rf ${DESTDIR}/usr/share
+}

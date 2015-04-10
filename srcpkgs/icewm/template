@@ -2,6 +2,7 @@
 pkgname=icewm
 version=3.9.0
 revision=1
+<<<<<<< HEAD
 build_style=cmake
 make_cmd=make
 configure_args="-DENABLE_LTO=ON -DCONFIG_LIBRSVG=ON -DENABLE_ALSA=ON
@@ -35,3 +36,15 @@ post_install() {
 	# See https://github.com/ice-wm/icewm/commit/5d735df293e61fd94e114ef58e800d757f98d01c
 	rm -rf "${DESTDIR}/builddir/"
 }
+=======
+build_style=gnu-configure
+configure_args="--enable-shaped-decorations --enable-gradients"
+hostmakedepends="pkg-config"
+makedepends="libXrandr-devel libXft-devel libSM-devel libXinerama-devel gdk-pixbuf-devel"
+short_desc="A Window Manager designed for speed, usability, and consistency"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2"
+homepage="http://www.icewm.org/"
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
+checksum=17588d9e0bbbb23587bc04c83da9dd94fd4da6894ecfee6d7f3ed50d780dcd18
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

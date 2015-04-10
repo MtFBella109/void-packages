@@ -3,6 +3,7 @@ pkgname=mercurial
 <<<<<<< HEAD
 version=7.1.1
 revision=1
+<<<<<<< HEAD
 build_style=python3-module
 hostmakedepends="python3-devel python3-setuptools python3-setuptools_scm gettext"
 makedepends="python3-devel"
@@ -10,6 +11,17 @@ depends="python3 ca-certificates"
 checkdepends="diffutils gnupg iana-etc python3-docutils python3-pip subversion-python tar unzip which xz"
 =======
 version=2.1.2
+=======
+lib32disabled=yes
+build_style=python-module
+hostmakedepends="python-devel"
+makedepends="python-devel"
+depends="ca-certificates"
+pycompile_module="mercurial hgext"
+short_desc="Fast, lightweight source control management system"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://mercurial.selenic.com"
 distfiles="$homepage/release/$pkgname-$version.tar.gz"
 build_style=python-module

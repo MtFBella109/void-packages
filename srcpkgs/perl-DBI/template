@@ -12,8 +12,16 @@ makedepends="${hostmakedepends}"
 depends="${makedepends}"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Database independent interface for Perl"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/DBI"
 distfiles="${CPAN_SITE}/DBI/DBI-${version}.tar.gz"
 checksum=8a2b993db560a2c373c174ee976a51027dd780ec766ae17620c20393d2e836fa
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/DBI"
+license="Artistic, GPL-1"
+distfiles="${CPAN_SITE}/DBI/DBI-$version.tar.gz"
+checksum=e2c1badcc9f672bf31630b36ecd230f7eb04dbf055e6daf7edeed0e9ebcf5ee7
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

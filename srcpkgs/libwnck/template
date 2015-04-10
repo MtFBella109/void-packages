@@ -17,12 +17,20 @@ hostmakedepends="pkg-config intltool gobject-introspection"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 makedepends="startup-notification-devel gtk+3-devel libXres-devel"
 short_desc="Library for layout and rendering of text"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://gitlab.gnome.org/GNOME/libwnck/"
 changelog="https://gitlab.gnome.org/GNOME/libwnck/-/raw/master/NEWS"
 distfiles="${GNOME_SITE}/libwnck/${version%.*}/libwnck-${version}.tar.xz"
 checksum=55a7444ec1fbb95c086d40967388f231b5c0bbc8cffaa086bf9290ae449e51d5
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org/"
+license="LGPL-2.1"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=f5080076346609b4c36394b879f3a86b92ced3b90a37cb54c8e9a14f00e7921c
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 build_options="gir"
 build_options_default="gir"

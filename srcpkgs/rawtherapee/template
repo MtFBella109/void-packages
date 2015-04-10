@@ -20,6 +20,7 @@ depends="desktop-file-utils hicolor-icon-theme"
 makedepends="cmake pkg-config gtkmm2-devel lcms2-devel libiptcdata-devel libgomp-devel mercurial"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Free RAW converter and digital photo processing software"
+<<<<<<< HEAD
 maintainer="Daniel Martinez <danielmartinez@cock.li>"
 license="GPL-3.0-or-later"
 homepage="https://rawtherapee.com/"
@@ -37,3 +38,10 @@ CXXFLAGS+=" -O3"
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://rawtherapee.com/"
+license="GPL-3"
+distfiles="http://rawtherapee.com/shared/source/rawtherapee-${version}.tar.xz"
+checksum=fa4c13e8842df096b19d2dabaed5a61f5f9d4547f7b4f0dc6b77f80bdec16479
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

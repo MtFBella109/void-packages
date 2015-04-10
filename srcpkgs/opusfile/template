@@ -10,8 +10,12 @@ makedepends="libogg-devel opus-devel openssl-devel"
 makedepends="libogg-devel opus-devel libressl-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Library for opening, seeking, and decoding .opus files"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.opus-codec.org/"
 distfiles="http://downloads.xiph.org/releases/opus/${pkgname}-${version}.tar.gz"
 checksum=118d8601c12dd6a44f52423e68ca9083cc9f2bfe72da7a8c1acb22a80ae3550b

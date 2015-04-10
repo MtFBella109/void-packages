@@ -1,12 +1,20 @@
 # Template file for 'netbsd-rumpkernel'
 pkgname=netbsd-rumpkernel
 version=20140526
+<<<<<<< HEAD
 revision=4
 archs="x86_64* i686*"
 hostmakedepends="git tar"
 short_desc="NetBSD rump kernel"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
+=======
+revision=1
+wrksrc="buildrump-${version}"
+short_desc="The NetBSD rump kernel"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://github.com/anttikantee/buildrump.sh"
 distfiles="https://github.com/rumpkernel/buildrump.sh/archive/v${version}.tar.gz"
 checksum=c39e587868cd36ff5c6fa778aa47dd21dfcc9529409fad02a7fe33ade24a57a8

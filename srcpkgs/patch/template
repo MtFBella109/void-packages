@@ -7,8 +7,12 @@ bootstrap=yes
 build_style=gnu-configure
 makedepends="attr-devel"
 short_desc="Patch files using diff output"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-3.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnu.org/software/patch/patch.html"
 distfiles="${GNU_SITE}/${pkgname}/${pkgname}-${version}.tar.xz"
 checksum=ac610bda97abe0d9f6b7c963255a11dcb196c25e337c61f94e4778d632f1d8fd

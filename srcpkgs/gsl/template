@@ -3,9 +3,14 @@ pkgname=gsl
 version=2.8
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 short_desc="Numerical library for C and C++ programmers"
 maintainer="Gonzalo Tornaría <tornaria@cmat.edu.uy>"
 license="GPL-3.0-or-later"
+=======
+short_desc="The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnu.org/software/gsl/gsl.html"
 changelog="http://git.savannah.gnu.org/cgit/gsl.git/plain/NEWS"
 distfiles="${GNU_SITE}/gsl/${pkgname}-${version}.tar.gz"

@@ -16,6 +16,7 @@
 pkgname=rpi-kernel
 version=6.12.52
 revision=1
+<<<<<<< HEAD
 _githash=e2ada1fb48c197c3e2ab9ac58f0a1bf19b4abf85
 archs="aarch64* armv6l* armv7l*"
 hostmakedepends="perl kmod uboot-mkimage openssl-devel bc bison flex xz pahole
@@ -24,6 +25,10 @@ makedepends="ncurses-devel"
 short_desc="Linux kernel for Raspberry Pi (${version%.*} series)"
 maintainer="classabbyamp <void@placeviolette.net>"
 license="GPL-2.0-only"
+=======
+wrksrc="linux-${_githash}"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.kernel.org"
 distfiles="https://github.com/raspberrypi/linux/archive/${_githash}.tar.gz"
 checksum=16dfcd7ec02e55a86c348b609ce7a4cf8264ec3cd1033e4928b15fa558611c79

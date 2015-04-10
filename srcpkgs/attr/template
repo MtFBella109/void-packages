@@ -10,8 +10,12 @@ configure_args="--libdir=/usr/lib${XBPS_TARGET_WORDSIZE}
 make_check_args="-j1" # Tests broken when ran in parallel
 checkdepends="perl"
 short_desc="Extended attribute support library for ACL support"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://savannah.nongnu.org/projects/attr"
 distfiles="${NONGNU_SITE}/attr/attr-${version}.tar.gz"
 checksum=39bf67452fa41d0948c2197601053f48b3d78a029389734332a6309a680c6c87

@@ -5,21 +5,6 @@ revision=1
 _distver=${version%.*}
 _date=${version##*.}
 build_style=gnu-configure
-<<<<<<< HEAD
-configure_args="--with-ncursesw --disable-nls"
-makedepends="ncurses-devel"
-short_desc="Tool to display dialog boxes from shell scripts"
-maintainer="icp <pangolin@vivaldi.net>"
-license="LGPL-2.1-only"
-homepage="https://invisible-island.net/dialog/"
-changelog="https://invisible-island.net/dialog/CHANGES"
-distfiles="https://invisible-mirror.net/archives/dialog/dialog-${_distver}-${_date}.tgz"
-checksum=bee47347a983312facc4dbcccd7fcc86608d684e1f119d9049c4692213db96c3
-
-post_install() {
-	rm -r ${DESTDIR}/usr/lib
-}
-=======
 configure_args="--with-ncursesw --enable-nls"
 makedepends="ncurses-devel"
 short_desc="A tool to display dialog boxes from shell scripts"
@@ -33,4 +18,3 @@ long_desc="
  yes/no box, menu box, input box, message box, text box, info box,
  guage box, checklist box, and radiolist box."
 
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

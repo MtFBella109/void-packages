@@ -11,9 +11,15 @@ hostmakedepends="perl"
 makedepends="perl-HTTP-Message"
 depends="${makedepends}"
 short_desc="HTTP::Cookies - HTTP cookie jars"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl,  GPL-1.0-or-later"
 homepage="https://metacpan.org/release/HTTP-Cookies"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/HTTP-Cookies"
+license="Artistic, GPL-1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${CPAN_SITE}/HTTP/HTTP-Cookies-$version.tar.gz"
 checksum=e36f36633c5ce6b5e4b876ffcf74787cc5efe0736dd7f487bdd73c14f0bd7007
 =======

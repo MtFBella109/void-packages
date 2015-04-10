@@ -25,7 +25,7 @@ configure_args="--enable-static --with-pic=yes"
 build_style=gnu-configure
 makedepends="pkg-config glib-devel gobject-introspection"
 short_desc="A JSON parser for GLib-based libraries and applications"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://live.gnome.org/JsonGlib"
 license="LGPL-2"
 checksum=b816a5fa3e5664b08679a6972a6e5693d6cc1990ff4a6f94c07554db96be94a7

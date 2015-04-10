@@ -18,12 +18,20 @@ makedepends="pkg-config itstool intltool gtksourceview-devel vte3-devel evolutio
 fulldepends="git desktop-file-utils hicolor-icon-theme"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Git repository viewer"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Apps/giggle"
 distfiles="${GNOME_SITE}/${pkgname}/${version}/${pkgname}-${version}.tar.xz"
 checksum=ae2e2237fa0d0999d99d0a0ee9b7ec147e80bd2472d59a045b2b01eb02261f59
 lib32disabled=yes
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/0.6/$pkgname-$version.tar.xz"
+checksum=6d56c8a3b9ce12a87cd1aeb03f8cdabfc52a614d23a8db85878743b02426fee0
+nocross=yes
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 CFLAGS="-fcommon"
 

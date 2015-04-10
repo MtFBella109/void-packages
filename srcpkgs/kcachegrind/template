@@ -19,6 +19,7 @@ makedepends="boost-devel glib-devel libressl-devel qt-devel phonon-devel kdelibs
 depends="python hicolor-icon-theme"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Visualization of Performance Profiling Data"
+<<<<<<< HEAD
 maintainer="Piotr Wójcik <chocimier@tlen.pl>"
 license="GPL-2.0-only, GFDL-1.2-only"
 homepage="https://kde.org/applications/development/kcachegrind/"
@@ -26,3 +27,10 @@ changelog="https://kde.org/announcements/changelogs/gear/${version}/#kcachegrind
 distfiles="${KDE_SITE}/release-service/${version}/src/kcachegrind-${version}.tar.xz"
 checksum=aec838dfa806b438d198f5bb66a2a9925ecdb86d09da86c593a21302052b0bbe
 python_version=3
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL, LGPL, FDL"
+homepage="http://kde.org/applications/development/kcachegrind/"
+distfiles="http://download.kde.org/stable/${version}/src/${pkgname}-${version}.tar.xz"
+checksum=a67917ae2540101b0ab0be618ead7aa4619b1808ec1ebd74358739f8fffea424
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

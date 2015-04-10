@@ -6,6 +6,7 @@ build_style=gnu-configure
 hostmakedepends="pkg-config automake libtool"
 makedepends="tiff-devel"
 short_desc="Utilities for the DjVu image format"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://djvu.sourceforge.net/"
@@ -23,6 +24,9 @@ revision=3
 makedepends="pkg-config tiff-devel"
 short_desc="Utilities for the DjVu image format"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-2"
 checksum=c0734c81d22a0e458c3fb5efd4c3eab051bcb6ad8740f5a5784c1f5699482534
 long_desc="

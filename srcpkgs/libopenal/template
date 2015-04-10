@@ -25,7 +25,11 @@ build_style=cmake
 wrksrc="openal-soft-${version}"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="A cross-platform 3D audio library"
+<<<<<<< HEAD
 maintainer="davehome <davehome@redthumb.info.tm>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="LGPL-2.1"
 checksum=dc735b8b2ab21f6ec54b4262f150a7e0527ae42aa975a1965b9342df1520443c
 long_desc="

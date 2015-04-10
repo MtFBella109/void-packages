@@ -16,6 +16,7 @@ makedepends="gst-plugins-base-devel libxfce4ui-devel xfce4-panel-devel libunique
 short_desc="Sound mixer for the Xfce Desktop Environment"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils hicolor-icon-theme"
+<<<<<<< HEAD
 makedepends="pkg-config intltool gtk+-devel gstreamer-devel gst-plugins-base-devel libxfce4util-devel libxfce4ui-devel xfconf-devel xfce4-panel-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Sound mixer for the Xfce Desktop Environment"
@@ -38,3 +39,10 @@ Add_dependency full gst-plugins-base
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.xfce.org/"
+license="GPL-2"
+distfiles="http://archive.xfce.org/src/apps/$pkgname/${version%.*}/$pkgname-$version.tar.bz2"
+checksum=fb0c1df201ed1130f54f15b914cbe5a59286e994a137acda5609570c57112de2
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

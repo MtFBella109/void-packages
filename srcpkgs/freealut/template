@@ -6,7 +6,13 @@ build_style=gnu-configure
 <<<<<<< HEAD
 hostmakedepends="pkg-config libtool"
 makedepends="libopenal-devel"
+<<<<<<< HEAD
 =======
+=======
+short_desc="OpenAL Utility Toolkit (ALUT)"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.openal.org"
 distfiles="http://connect.creativelabs.com/openal/Downloads/ALUT/$pkgname-$version.tar.gz"
 revision=2

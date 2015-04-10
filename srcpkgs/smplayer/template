@@ -1,5 +1,6 @@
 # Template file for 'smplayer'
 pkgname=smplayer
+<<<<<<< HEAD
 version=25.6.0
 revision=1
 build_style=gnu-makefile
@@ -21,6 +22,18 @@ pre_build() {
 	vsed -i 's|PREFIX=/usr/local|PREFIX=/usr|' Makefile
 	vsed -i 's|DOC_PATH=$(PREFIX)/share/doc/packages/smplayer|DOC_PATH=$(PREFIX)/share/doc/smplayer|' Makefile
 }
+=======
+version=14.9.0
+revision=2
+makedepends="zlib-devel qt5-script-devel qt5-tools-devel"
+depends="mplayer hicolor-icon-theme desktop-file-utils"
+short_desc="A complete front-end for MPlayer"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://smplayer.sourceforge.net/"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.bz2"
+checksum=429ad4edd6df1fcedd5ea4fa2b024eb5a61c9412f52762e9d9a9c2245b7ddf13
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_build() {
 	make ${makejobs} CC="$CC" CXX="$CXX" LINK="$CXX" LD="$CXX" CFLAGS_EXTRA="$CFLAGS $LDFLAGS"

@@ -7,9 +7,14 @@ revision=1
 hostmakedepends="pkg-config perl netsurf-buildsystem"
 makedepends="expat-devel libparserutils-devel libwapcaplet-devel libhubbub-devel"
 short_desc="Implementation of the W3C DOM, written in C"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 =======
 version="$(date -u +%Y%m%d)"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="MIT"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.netsurf-browser.org"
 makedepends="pkg-config perl subversion libxml2-devel libparserutils-devel libwapcaplet-devel libhubbub-devel"
 =======

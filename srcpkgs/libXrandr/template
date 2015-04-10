@@ -12,7 +12,12 @@ makedepends="xorgproto libXext-devel libXrender-devel"
 makedepends="randrproto libXext-devel libXrender-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="X RandR Library from X.org"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="${XORG_SITE}"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://www.x.org/"
 distfiles="${XORG_SITE}/lib/libXrandr-${version}.tar.xz"

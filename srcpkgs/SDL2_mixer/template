@@ -13,11 +13,26 @@ makedepends="SDL2-devel libvorbis-devel libmikmod-devel libflac-devel smpeg-deve
 # The following deps are dlopen(3)ed at runtime.
 depends="libvorbis libmikmod libmpg123 libmodplug libflac smpeg2 opusfile"
 short_desc="Multi-channel audio mixer library (SDL 2.x)"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
 homepage="https://www.libsdl.org/projects/SDL_mixer/"
 distfiles="https://www.libsdl.org/projects/SDL_mixer/release/${pkgname}-${version}.tar.gz"
 checksum=cb760211b056bfe44f4a1e180cc7cb201137e4d1572f2002cc1be728efd22660
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+homepage="http://www.libsdl.org/projects/SDL_mixer/"
+distfiles="http://www.libsdl.org/projects/SDL_mixer/release/$pkgname-$version.tar.gz"
+checksum=a8ce0e161793791adeff258ca6214267fdd41b3c073d2581cd5265c8646f725b
+
+pre_configure() {
+	sed -e "/CONFIG_FILE_ETC/s|/etc/timidity.cfg|/etc/timidity++/timidity.cfg|" \
+		-e "/DEFAULT_PATH/s|/etc/timidity|/etc/timidity++|" \
+		-e "/DEFAULT_PATH2/s|/usr/local/lib/timidity|/usr/lib/timidity|" \
+		-i timidity/config.h
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense LICENSE.txt

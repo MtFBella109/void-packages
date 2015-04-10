@@ -26,7 +26,12 @@ configure_args="--enable-threadsafe --enable-readline --enable-dynamic-extension
 makedepends="readline-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="SQL Database Engine in a C Library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.sqlite.org"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="Public Domain"
 homepage="https://sqlite.org/"
 changelog="https://www.sqlite.org/changes.html"

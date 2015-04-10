@@ -2,6 +2,7 @@
 pkgname=spice-protocol
 version=0.14.5
 revision=1
+<<<<<<< HEAD
 build_style=meson
 short_desc="SPICE protocol headers"
 maintainer="Anachron <gith@cron.world>"
@@ -14,3 +15,14 @@ checksum=1be179b3dfbb23946432275f4b7a4b59bb5e9acc25c3128bc930b8264a9f0a20
 post_install() {
 	vlicense COPYING
 }
+=======
+noarch=yes
+build_style=gnu-configure
+configure_args="--datarootdir=/usr/lib"
+short_desc="Spice Protocol headers"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.spice-space.org/"
+license="BSD"
+distfiles="http://www.spice-space.org/download/releases/$pkgname-$version.tar.bz2"
+checksum=96c6cb73361816ed19bfd8536f65d4547da35709aa00af1380e650c1174916c2
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

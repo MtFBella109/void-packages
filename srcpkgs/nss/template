@@ -39,7 +39,7 @@ makedepends="zlib-devel nspr-devel sqlite-devel"
 depends="nspr>=4.10.7"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Mozilla Network Security Services"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.mozilla.org/projects/security/pki/nss/"
 license="GPL-2, MPL-1.1"
 checksum=a552f56b03c0c716ba950c7eef971d87f717c02a4d9a75ee2fe84bd036830de5

@@ -17,6 +17,7 @@ lib32disabled=yes
 build_options="pcrejit"
 
 conf_files="/etc/varnish/default.vcl"
+<<<<<<< HEAD
 make_dirs="/var/lib/varnish 0750 _varnish _varnish
  /var/log/varnish 0750 _varnish _varnish"
 
@@ -45,6 +46,15 @@ case "$XBPS_TARGET_MACHINE" in
 		makedepends+=" jemalloc-devel"
 		;;
 esac
+=======
+make_dirs="/var/varnish 750 nobody nogroup"
+short_desc="A fast caching HTTP reverse proxy"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Simplified BSD"
+homepage="https://www.varnish-cache.org/"
+distfiles="http://repo.varnish-cache.org/source/${pkgname}-${version}.tar.gz"
+checksum=840ded8f25e7343117f6e3e2015759118f1d2db357ae8d7e02ea964e6fb680b7
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vinstall etc/example.vcl 644 etc/varnish default.vcl

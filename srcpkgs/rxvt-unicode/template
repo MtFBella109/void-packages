@@ -32,8 +32,12 @@ configure_args="--with-terminfo=/usr/share/terminfo --enable-256-color
 makedepends="pkg-config renderproto freetype-devel fontconfig-devel libX11-devel libXrender-devel libXft-devel glib-devel gdk-pixbuf-devel startup-notification-devel"
 fulldepends="perl>=0"
 short_desc="rxvt clone supporting Xft fonts and Unicode"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://software.schmorp.de/pkg/rxvt-unicode.html"
 changelog="http://cvs.schmorp.de/rxvt-unicode/Changes"
 distfiles="http://dist.schmorp.de/${pkgname}/${pkgname}-${version}.tar.bz2"

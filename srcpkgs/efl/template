@@ -77,7 +77,7 @@ makedepends="libressl-devel glib-devel libjpeg-turbo-devel fontconfig-devel
  $(vopt_if systemd systemd-devel)"
 homepage="http://enlightenment.org"
 short_desc="Enlightenment Foundation Libraries"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="BSD"
 distfiles="http://download.enlightenment.org/rel/libs/efl/efl-${version}.tar.gz"
 checksum=7e47069f5d40a07b46f9d7c0068f487c35e978102a039ff6afa9c9f784155e72

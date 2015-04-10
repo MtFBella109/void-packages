@@ -12,7 +12,11 @@ makedepends="xorgproto libXfixes-devel libXext-devel"
 makedepends="inputproto libXfixes-devel libXext-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="X Input extension library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://gitlab.freedesktop.org/xorg/lib/libxi"
 distfiles="${XORG_SITE}/lib/${pkgname}-${version}.tar.xz"

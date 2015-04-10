@@ -3,9 +3,15 @@ pkgname=iat
 version=0.1.7
 revision=4
 build_style=gnu-configure
+<<<<<<< HEAD
 short_desc="Tool for detecting the structure of many types of CD/DVD image"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="custom:GPL-2.0-or-later-with-BSD-attribution-requirement"
+=======
+short_desc="A tool for detecting the structure of many types of CD/DVD image"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://sourceforge.net/projects/iat.berlios/"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}.berlios/${pkgname}-${version}.tar.gz"
 checksum=b25d57fde28a02b2d87cd49fd1478b039adbd836351879a654fea14c27764b21

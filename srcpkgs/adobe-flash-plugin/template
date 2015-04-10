@@ -22,7 +22,17 @@ noextract=yes
 build_style=custom-install
 =======
 skip_extraction="$(basename ${_eula})"
+<<<<<<< HEAD
 create_srcdir=yes
+=======
+short_desc="Adobe Flash Player plugin for Netscape compatible browsers"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.adobe.com"
+license="Adobe License (non free)"
+repository="nonfree"
+depends="curl hicolor-icon-theme desktop-file-utils"
+
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 create_wrksrc=yes
 depends="curl>=0 hicolor-icon-theme desktop-file-utils"
 makedepends="libXext-devel libXt-devel gtk+-devel nss-devel libcurl-devel"

@@ -13,7 +13,11 @@ build_style=gnu-makefile
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 makedepends="lua-devel"
 short_desc="File System Library for the Lua Programming Language"
+<<<<<<< HEAD
 maintainer="davehome <davehome@redthumb.info.tm>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="http://keplerproject.github.com/luafilesystem"
 distfiles="https://github.com/downloads/keplerproject/$pkgname/$pkgname-$version.tar.gz"

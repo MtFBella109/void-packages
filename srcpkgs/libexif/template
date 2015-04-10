@@ -12,6 +12,7 @@ build_style=gnu-configure
 configure_args="ac_cv_path_DOXYGEN=false"
 hostmakedepends="automake libtool glib-devel gettext gettext-devel"
 short_desc="EXIF file library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/libexif/libexif"
@@ -21,6 +22,13 @@ checksum=ee0795432c20d2fdb2a8a579dd6fc0e19d402e36f14f42c03ab60d2345950f09
 pre_configure() {
 	autoreconf -if
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://sourceforge.net/projects/libexif"
+license="LGPL-2.1"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.bz2"
+checksum=16cdaeb62eb3e6dfab2435f7d7bccd2f37438d21c5218ec4e58efa9157d4d41a
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libexif-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"

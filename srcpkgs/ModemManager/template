@@ -28,11 +28,19 @@ makedepends="glib-devel libgudev-devel polkit-devel libqmi-devel
 depends="hicolor-icon-theme ppp"
 checkdepends="dbus"
 short_desc="Mobile broadband modem management service"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://www.freedesktop.org/wiki/Software/ModemManager/"
 distfiles="https://gitlab.freedesktop.org/mobile-broadband/ModemManager/-/archive/${version}/ModemManager-${version}.tar.bz2"
 checksum=2d5acabacfc0ab4f621dde674a6ab54439c7aca18d80454d749a7651573c6b14
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.freedesktop.org/wiki/Software/ModemManager/"
+license="GPL-2"
+distfiles="http://www.freedesktop.org/software/$pkgname/$pkgname-$version.tar.xz"
+checksum=0cedabf46310f8c56630b116944f54ee64369c76c2f35f5f460ca19a8bb5a5cd
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 build_options="gir"
 build_options_default="gir"

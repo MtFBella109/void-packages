@@ -17,7 +17,7 @@ pre_configure() {
 }
 =======
 short_desc="C Configuration File Library"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://hyperrealm.com/libconfig/libconfig.html"
 license="LGPL-2.1"
 distfiles="http://www.hyperrealm.com/libconfig/${pkgname}-${version}.tar.gz"

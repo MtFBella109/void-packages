@@ -4,7 +4,11 @@ version=1.7
 revision=1
 build_style=gnu-makefile
 short_desc="Lightweight containers using Linux user namespaces"
+<<<<<<< HEAD
 maintainer="Duncaen <duncaen@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://github.com/arachsys/containers"
 distfiles="https://github.com/arachsys/containers/archive/containers-${version}.tar.gz"

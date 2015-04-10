@@ -8,6 +8,7 @@ make_install_args="${make_build_args} SBINDIR=/usr/bin MANDIR=/usr/share/man"
 hostmakedepends="flex perl which"
 depends="perl"
 short_desc="Utilities to read temperature/voltage/fan sensors"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://hwmon.wiki.kernel.org/lm_sensors"
@@ -23,6 +24,13 @@ post_patch() {
 post_install() {
 	vsv fancontrol
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2, LGPL-2.1"
+homepage="http://www.lm-sensors.org/"
+distfiles="http://dl.lm-sensors.org/lm-sensors/releases/$pkgname-$version.tar.bz2"
+checksum=5dae6a665e1150159a93743c4ff1943a7efe02cd9d3bb12c4805e7d7adcf4fcf
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libsensors_package() {
 	short_desc="Library to read temperature/voltage/fan sensors"

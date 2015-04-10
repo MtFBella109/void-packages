@@ -25,8 +25,13 @@ makedepends="python-devel gupnp-igd-devel libnice-devel
 depends="gst-python pygtk gst-plugins-good1 gst-plugins-bad1"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GStreamer modules and libraries for videoconferencing"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.freedesktop.org/wiki/Software/Farstream"
 changelog="https://gitlab.freedesktop.org/farstream/farstream/-/raw/master/NEWS"
 distfiles="${FREEDESKTOP_SITE}/farstream/releases/$pkgname/$pkgname-$version.tar.gz"

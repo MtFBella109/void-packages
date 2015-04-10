@@ -21,6 +21,7 @@ makedepends="glib-devel vala-devel gnome-desktop-devel
 depends="geoclue2>=2.1 desktop-file-utils hicolor-icon-theme"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Clock application for the GNOME Desktop"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Apps/Clocks"
@@ -29,3 +30,10 @@ changelog="https://gitlab.gnome.org/GNOME/gnome-clocks/-/raw/master/NEWS"
 changelog="https://gitlab.gnome.org/GNOME/gnome-clocks/-/raw/gnome-48/NEWS"
 distfiles="${GNOME_SITE}/gnome-clocks/${version%.*}/gnome-clocks-${version}.tar.xz"
 checksum=616ee1fb75300b1f26b9766219e954751360ca0fa0f491311bcf83bf38087c62
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="https://live.gnome.org/GnomeClocks"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/${pkgname}-${version}.tar.xz"
+checksum=9d6a6fe22e3e4569da44bb93e5e26eb3d3faf2b2edadfd45b088cea0e2c94b4b
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

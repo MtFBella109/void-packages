@@ -23,6 +23,7 @@ makedepends="libuuid-devel webkitgtk-devel gnome-desktop-devel
 depends="zeitgeist>=0.9.14 desktop-file-utils"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Intuitive note editor with strong GNOME desktop integration"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://wiki.gnome.org/Apps/Notes"
@@ -35,3 +36,10 @@ makedepends+=" gtk4" # Build first, pulled in by evolution-data-server
 pre_build() {
 	ninja -C build src/libbiji/biji-marshalers.h
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://live.gnome.org/Apps/Bijiben"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=7998632c83889071c23725ad95867618c72814676a3a3865881e9556714e0537
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

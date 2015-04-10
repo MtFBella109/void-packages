@@ -12,9 +12,15 @@ hostmakedepends="nasm pkg-config"
 makedepends="MesaLib-devel sdl12-compat-devel libpng-devel ncurses-devel"
 depends="desktop-file-utils hicolor-icon-theme"
 short_desc="Super Nintendo emulator"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="https://www.zsnes.com/"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL"
+homepage="http://www.zsnes.com/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${SOURCEFORGE_SITE}/zsnes/zsnes151src.tar.bz2"
 checksum=2856dedba272e9eed66cbf68dd4a9ae56797c373686c57371a65c7df35264623
 lib32mode="full"

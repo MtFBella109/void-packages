@@ -6,8 +6,13 @@ build_style=gnu-configure
 configure_args="ax_cv_zoneinfo_tzdir=/usr/share/zoneinfo"
 checkdepends="tzdata"
 short_desc="Nifty command line date and time utilities"
+<<<<<<< HEAD
 maintainer="Duncaen <duncaen@voidlinux.org>"
 license="BSD-3-Clause"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.fresse.org/dateutils/"
 changelog="http://www.fresse.org/dateutils/changelog.html"
 distfiles="https://bitbucket.org/hroptatyr/dateutils/downloads/dateutils-${version}.tar.xz"

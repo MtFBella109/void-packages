@@ -8,6 +8,7 @@ configure_args="--datadir=/usr/share/kbd --localedir=/usr/share/kbd/locale"
 hostmakedepends="automake libtool gettext-devel flex pkg-config"
 makedepends="pam-devel"
 short_desc="Linux keyboard utilities"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://www.kbd-project.org/"
@@ -15,6 +16,13 @@ changelog="https://github.com/legionus/kbd/releases"
 distfiles="${KERNEL_SITE}/utils/kbd/kbd-${version}.tar.xz"
 checksum=519f8d087aecca7e0a33cd084bef92c066eb19731666653dcc70c9d71aa40926
 replaces="kbd-data>=0"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://www.kbd-project.org/"
+distfiles="http://www.kbd-project.org/download/kbd-${version}.tar.xz"
+checksum=9dfddabf96012e329c4bebb96a21aeef7c3872f624e96e8156ba542b82aeb912
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_patch() {
 	# Rename keymap files with the same names

@@ -10,7 +10,15 @@ noarch="yes"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="xmlcatmgr docbook-xml"
 depends="${makedepends}"
+<<<<<<< HEAD
 =======
+=======
+sgml_entries="CATALOG /usr/share/sgml/docbook/dsssl/modular/catalog --"
+short_desc="DSSSL stylesheets for the DocBook DTD"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.docbook.org/"
+license="MIT"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${SOURCEFORGE_SITE}/docbook/$pkgname-$version.tar.bz2"
 fulldepends="xmlcatmgr docbook-xml>=4.2"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

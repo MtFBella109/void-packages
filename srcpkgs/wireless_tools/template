@@ -3,10 +3,17 @@ pkgname=wireless_tools
 version=29
 revision=10
 short_desc="Set of tools allowing to manipulate the Wireless Extensions"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="https://hewlettpackard.github.io/wireless-tools/Tools.html"
 distfiles="https://hewlettpackard.github.io/wireless-tools/wireless_tools.${version}.tar.gz"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html"
+license="GPL-2"
+distfiles="http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/$pkgname.$version.tar.gz"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=6fb80935fe208538131ce2c4178221bab1078a1656306bce8909c19887e2e5a1
 
 do_build() {

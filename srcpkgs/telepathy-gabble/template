@@ -18,7 +18,7 @@ makedepends="glib-devel dbus-glib-devel libxml2-devel
 depends="telepathy-glib>=0.21 ca-certificates"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="A Jabber/XMPP connection manager for Telepathy"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="LGPL-2.1"
 checksum=0e8a38d1c92b09ca3c39ab102436ca468aaacb3b4d71024be5e397838f2b663a
 long_desc="

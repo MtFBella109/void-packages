@@ -24,6 +24,7 @@ makedepends="
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils shared-mime-info"
 short_desc="Free, open source web browser written in C"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only, MIT"
 homepage="https://www.netsurf-browser.org"
@@ -31,6 +32,10 @@ distfiles="https://download.netsurf-browser.org/netsurf/releases/source/${pkgnam
 checksum=c28a626aefee428d053b13f88b5c440922245976522d12eaf137cfd32d201cb2
 =======
 version=2.9
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2, MIT"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.netsurf-browser.org"
 distfiles="${homepage}/downloads/releases/${pkgname}-${version}-full-src.tar.gz"
 depends="desktop-file-utils shared-mime-info"

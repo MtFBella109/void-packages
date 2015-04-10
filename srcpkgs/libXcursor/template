@@ -11,7 +11,12 @@ makedepends="xorgproto libXfixes-devel libXrender-devel"
 makedepends="fixesproto libXfixes-devel libXrender-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Client-side cursor loading library for X"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://xorg.freedesktop.org/wiki/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://gitlab.freedesktop.org/xorg/lib/libxcursor"
 distfiles="${XORG_SITE}/lib/libXcursor-${version}.tar.xz"

@@ -15,6 +15,7 @@ hostmakedepends="pkg-config vala-devel"
 makedepends="vala-devel glib-devel"
 depends="vala-devel>=0.26"
 short_desc="Tool to transform vala source files to swig, GIR or GEAR"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://radare.org/r/"
@@ -28,6 +29,9 @@ build_style=gnu-makefile
 makedepends="pkg-config vala-devel glib-devel"
 short_desc="Tool to transform vala source files to swig, GIR or GEAR"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="LGPL-3"
 checksum=161641fc4a6ed0e22fcc82c85c8f91e41f18ae02260151f19293ee36c7c4b751
 long_desc="

@@ -7,6 +7,7 @@ configure_args="--with-external-libmspack ac_cv_func_fnmatch_works=yes"
 hostmakedepends="pkg-config"
 makedepends="libmspack-devel"
 short_desc="Extract Microsoft Cabinet (.CAB) files"
+<<<<<<< HEAD
 maintainer="Duncaen <duncaen@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://www.cabextract.org.uk/"
@@ -20,3 +21,10 @@ post_extract() {
 		vsed -e 's/koi8-ru/koi8-r/' -i test/encoding.test
 	fi
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://www.cabextract.org.uk/"
+distfiles="http://www.cabextract.org.uk/${pkgname}-${version}.tar.gz"
+checksum=cee661b56555350d26943c5e127fc75dd290b7f75689d5ebc1f04957c4af55fb
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

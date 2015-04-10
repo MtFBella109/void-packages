@@ -41,12 +41,20 @@ makedepends="
  libobexftp-devel libimobiledevice-devel libarchive-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Userspace virtual filesystem"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://wiki.gnome.org/Projects/gvfs"
 changelog="https://gitlab.gnome.org/GNOME/gvfs/-/raw/master/NEWS"
 distfiles="${GNOME_SITE}/gvfs/${version%.*}/gvfs-${version}.tar.xz"
 checksum=86731ccec679648f8734e237b1de190ebdee6e4c8c0f56f454c31588e509aa10
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="LGPL-2.1"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=57e33faad35aba72be3822099856aca847f391626cf3ec734b42e64ba31f6484
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 # Manually declare shlibs used by the subpkgs.
 shlib_provides="libgvfscommon.so libgvfsdaemon.so"

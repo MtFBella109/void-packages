@@ -24,8 +24,12 @@ distfiles="http://ftp.gnu.org/pub/gnu/gcc/gcc-$version/gcc-$version.tar.bz2"
 depends="binutils libelf libgomp>=4.7 libitm>=4.7 libssp-devel>=4.7"
 makedepends="perl flex zlib-devel gmp-devel mpfr-devel mpc-devel cloog-ppl-devel libelf-devel"
 short_desc="The GNU C Compiler"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://gcc.gnu.org"
 license="GFDL-1.2-or-later, GPL-3.0-or-later, LGPL-2.1-or-later"
 case "${version}" in

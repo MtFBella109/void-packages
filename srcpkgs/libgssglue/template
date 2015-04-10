@@ -13,6 +13,7 @@ configure_args="--disable-static"
 conf_files="/etc/gssapi_mech.conf"
 hostmakedepends="automake libtool"
 short_desc="Mechanism-switch gssapi library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
 homepage="https://gitlab.com/gsasl/libgssglue"
@@ -24,6 +25,13 @@ pre_configure() {
 	touch ChangeLog
 	autoreconf -fi
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+homepage="http://www.citi.umich.edu/projects/nfsv4/linux/"
+distfiles="$homepage/$pkgname/$pkgname-$version.tar.gz"
+checksum=3f791a75502ba723e5e85e41e5e0c711bb89e2716b7c0ec6e74bd1df6739043a
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vconf ${FILESDIR}/gssapi_mech.conf

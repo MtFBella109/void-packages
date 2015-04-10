@@ -3,12 +3,36 @@ pkgname=evince
 <<<<<<< HEAD
 version=48.1
 revision=1
+<<<<<<< HEAD
 build_helper="gir"
 build_style=meson
 configure_args="$(vopt_bool gir introspection) $(vopt_bool gtk_doc gtk_doc)
  -Dcomics=enabled -Ddjvu=enabled -Dps=enabled -Dxps=enabled -Ddvi=disabled -Dpdf=enabled"
 hostmakedepends="adwaita-icon-theme gettext $(vopt_if gtk_doc gi-docgen)
  glib-devel itstool pkg-config perl-XML-Parser appstream-glib desktop-file-utils"
+=======
+short_desc="GNOME Document viewer for multiple document formats"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://projects.gnome.org/evince/"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=4c591d0b879092a5f6c9140b75f15bdea3665a332e9b384957c453fd67bf0070
+
+build_style=gnu-configure
+build_options="gir"
+
+if [ -z "$CROSS_BUILD" ]; then
+	build_options_default="gir"
+fi
+
+configure_args="$(vopt_enable gir introspection) --disable-schemas-compile
+ --enable-comics --disable-static --enable-xps --disable-t1lib
+ --disable-browser-plugin"
+
+hostmakedepends="pkg-config intltool itstool
+ gnome-doc-utils glib-devel $(vopt_if gir gobject-introspection)"
+
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 # XXX missing packages for DVI backend.
 <<<<<<< HEAD
 makedepends="adwaita-icon-theme djvulibre-devel gnome-desktop-devel libSM-devel

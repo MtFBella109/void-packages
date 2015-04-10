@@ -14,7 +14,7 @@ hostmakedepends="pkg-config intltool $(vopt_if gir 'vala-devel gobject-introspec
 makedepends="libglib-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GObject collection library (0.8.x API)"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="LGPL-2.1"
 homepage="http://live.gnome.org/Libgee"
 distfiles="${GNOME_SITE}/libgee/0.10/libgee-${version}.tar.xz"

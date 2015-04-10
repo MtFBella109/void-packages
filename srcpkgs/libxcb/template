@@ -14,12 +14,20 @@ hostmakedepends="automake libtool pkg-config xorg-util-macros xcb-proto"
 makedepends="xcb-proto libXdmcp-devel libXau-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="X protocol C-language Binding"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
 homepage="https://gitlab.freedesktop.org/xorg/lib/libxcb"
 changelog="https://gitlab.freedesktop.org/xorg/lib/libxcb/-/raw/master/NEWS"
 distfiles="https://xorg.freedesktop.org/archive/individual/lib/libxcb-${version}.tar.xz"
 checksum=599ebf9996710fea71622e6e184f3a8ad5b43d0e5fa8c4e407123c88a59a6d55
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://xcb.freedesktop.org"
+distfiles="$homepage/dist/$pkgname-$version.tar.bz2"
+checksum=03635d70045b9ede90778e67516135828a57de87ac508f987024f43c03620ff7
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 if [ "$CROSS_BUILD" ]; then
 	makedepends+=" xcb-proto"

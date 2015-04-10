@@ -20,6 +20,7 @@ depends="desktop-file-utils"
 conf_files="/etc/xdg/pcmanfm/default/pcmanfm.conf"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="LXDE file manager"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/lxde/pcmanfm"
@@ -35,6 +36,13 @@ conf_files="/etc/xdg/pcmanfm/default/pcmanfm.conf"
 pre_configure() {
 	autoreconf -fi
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://pcmanfm.sourceforge.net/"
+license="GPL-2"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.xz"
+checksum=cfa8d82fc63be147045174bef074807e1e32ce8c6bf4dbd8fad49e260bcf6380
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vmkdir usr/share/lxde/pcmanfm

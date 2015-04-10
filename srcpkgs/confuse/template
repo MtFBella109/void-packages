@@ -3,9 +3,16 @@ pkgname=confuse
 version=3.3
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-shared --enable-static"
 short_desc="Small configuration file parser library for C"
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+configure_args="--enable-shared --enable-static --disable-nls --with-pic"
+short_desc="C-library for parsing configuration files"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.nongnu.org/confuse/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="ISC"
 homepage="https://github.com/martinh/libconfuse"
 changelog="https://github.com/martinh/libconfuse/raw/master/ChangeLog.md"

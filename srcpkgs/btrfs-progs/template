@@ -4,6 +4,7 @@ version=6.11
 revision=1
 <<<<<<< HEAD
 build_style=gnu-configure
+<<<<<<< HEAD
 make_check_target=test
 configure_args="--disable-backtrace --disable-python"
 hostmakedepends="pkgconf python3-Sphinx python3-sphinx_rtd_theme"
@@ -11,6 +12,14 @@ makedepends="acl-devel libzstd-devel lzo-devel libblkid-devel libuuid-devel
  eudev-libudev-devel zlib-devel
  $(vopt_if e2fs 'e2fsprogs-devel') $(vopt_if reiserfs 'reiserfsprogs')"
 =======
+=======
+configure_args="--disable-backtrace"
+hostmakedepends="automake libtool pkg-config asciidoc xmlto git"
+makedepends="zlib-devel lzo-devel acl-devel libuuid-devel e2fsprogs-devel"
+short_desc="Btrfs filesystem utilities"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://btrfs.wiki.kernel.org/"
 distfiles="ftp://ftp.archlinux.org/other/$pkgname/$pkgname-${_distver}.${_snapver}.tar.xz"
 makedepends="acl-devel libuuid-devel e2fsprogs-devel"

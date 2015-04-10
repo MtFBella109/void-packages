@@ -3,11 +3,17 @@ pkgname=poppler-data
 version=0.4.12
 revision=1
 short_desc="Encoding data for the poppler PDF rendering library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT, GPL-2.0-or-later, BSD-3-Clause"
 homepage="https://poppler.freedesktop.org/"
 distfiles="https://poppler.freedesktop.org/poppler-data-${version}.tar.gz"
 checksum=c835b640a40ce357e1b83666aabd95edffa24ddddd49b8daff63adb851cdab74
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="MIT, GPL-2, Adobe (BSD alike)"
+checksum=e752b0d88a7aba54574152143e7bf76436a7ef51977c55d6bd9a48dccde3a7de
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_install() {
 	make prefix=/usr DESTDIR=${DESTDIR} install

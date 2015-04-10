@@ -10,6 +10,7 @@ makedepends="libcanberra-devel libmate-panel-devel gtk+3-devel libglib-devel
 depends="dconf upower"
 checkdepends="xvfb-run"
 short_desc="Power management tool for the MATE desktop"
+<<<<<<< HEAD
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://mate-desktop.org"
@@ -17,3 +18,10 @@ changelog="https://raw.githubusercontent.com/mate-desktop/mate-power-manager/mas
 distfiles="https://pub.mate-desktop.org/releases/${version%.*}/mate-power-manager-${version}.tar.xz"
 checksum=8ebdcb74b607e868336ba9a8146cdef8f97bce535c2b0cb3bf650c58f71eee21
 make_check_pre="xvfb-run"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=6fa72d4e6a018a44144d06b68c8f67e067e3847ad83b4b8a8aaa0e2a8c9b6147
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

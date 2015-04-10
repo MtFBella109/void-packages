@@ -67,6 +67,15 @@ make_dirs="
 	/nix/var/nix/userpool 0755 root root
 	/nix/var/nix/db 0755 root root
 	/nix/store 1775 root nixbld"
+<<<<<<< HEAD
+=======
+short_desc="A purely functional package manager"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="MIT"
+homepage="http://nixos.org/nix/"
+distfiles="http://nixos.org/releases/nix/nix-${version}/nix-${version}.tar.xz"
+checksum=a30a5e801bc1cb1019cbc3456d961a307c45c9c588b8692cf1293ea6588ef01c
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	mv "${DESTDIR}/usr/etc" "${DESTDIR}/"

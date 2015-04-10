@@ -9,8 +9,13 @@ makedepends="eudev-libudev-devel gtk+3-devel SDL2-devel ffmpeg6-devel libusb-dev
  pulseaudio-devel v4l-utils-devel portaudio-devel gsl-devel"
 depends="desktop-file-utils"
 short_desc="Simple GTK interface for capturing and viewing video from UVC devices"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://guvcview.sourceforge.net/"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-src-${version}.tar.bz2"
 checksum=3d93e4c9fab8d1a7a9bde1a6dbbf04d6cf9d347c134b5128b4586a1d90b63cfb

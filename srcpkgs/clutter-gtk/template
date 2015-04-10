@@ -16,8 +16,12 @@ license="LGPL-2.1-or-later"
 hostmakedepends="pkg-config intltool $(vopt_if gir gobject-introspection)"
 makedepends="gtk+3-devel clutter-devel"
 short_desc="GTK+3 bindings for the Clutter Tolkit"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://clutter-project.org/"
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=521493ec038973c77edcb8bc5eac23eed41645117894aaee7300b2487cb42b06

@@ -25,9 +25,15 @@ makedepends="
  libgee08-devel evolution-data-server-devel tracker-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="zeitgeist"
+<<<<<<< HEAD
 checkdepends="python3-dbusmock bluez"
 =======
 version=0.6.9
+=======
+short_desc="GObject Library to aggregate people into metacontacts"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://telepathy.freedesktop.org/wiki/Folks"
 distfiles="${GNOME_SITE}/$pkgname/0.6/$pkgname-$version.tar.xz"
 build_style=gnu-configure

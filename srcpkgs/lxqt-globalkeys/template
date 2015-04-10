@@ -3,6 +3,7 @@ pkgname=lxqt-globalkeys
 version=2.3.0
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 hostmakedepends="lxqt-build-tools qt6-base qt6-tools perl"
 makedepends="liblxqt-devel"
 short_desc="LXQt daemon and library for global keyboard shortcuts registration"
@@ -12,6 +13,17 @@ homepage="https://lxqt-project.org"
 distfiles="https://github.com/lxqt/lxqt-globalkeys/archive/${version}.tar.gz"
 checksum=5fa0fa718fda8ab6ab8411874516b8f2c757bb9d57c44bb286f2337f43b23247
 replaces="lxqt-common>=0"
+=======
+configure_args="-DUSE_QT5=1"
+hostmakedepends="cmake pkg-config"
+makedepends="liblxqt-devel libqtxdg-devel"
+short_desc="LXQt key shortcuts"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="http://lxqt.org/"
+distfiles="http://downloads.lxqt.org/lxqt/${version}/${pkgname}-${version}.tar.xz"
+checksum=45292e125e8cc2f18afa7d358366ade670c8d73871caf04f4536a4be985d9f12
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 lxqt-globalkeys-devel_package() {
 	short_desc+=" - development files"

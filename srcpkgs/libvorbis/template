@@ -11,11 +11,19 @@ makedepends="libogg-devel"
 makedepends="pkg-config libogg-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="The Vorbis General Audio Compression Codec"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
 homepage="https://www.xiph.org/vorbis/"
 distfiles="https://downloads.xiph.org/releases/vorbis/${pkgname}-${version}.tar.gz"
 checksum=0e982409a9c3fc82ee06e08205b1355e5c6aa4c36bca58146ef399621b0ce5ab
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+homepage="http://www.xiph.org/vorbis/"
+distfiles="http://downloads.xiph.org/releases/vorbis/${pkgname}-${version}.tar.gz"
+checksum=6efbcecdd3e5dfbf090341b485da9d176eb250d893e3eb378c428a2db38301ce
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 make_check=no # mv: cannot stat '.deps/write_read.Tpo': No such file or directory
 

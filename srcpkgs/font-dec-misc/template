@@ -10,10 +10,16 @@ depends="font-util"
 short_desc="DEC cursor and session PCF fonts"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org/"
 distfiles="${XORG_SITE}/font/$pkgname-$version.tar.gz"
 checksum=a2273c3a06df0b6a61b56a82a06cd86a5721ac26251dab2e3f4173a4ce954729
 font_dirs="/usr/share/fonts/X11/misc"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+checksum=e19ddf8b5f8de914d81675358fdfe37762e9ce524887cc983adef34f2850ff7b
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense COPYING

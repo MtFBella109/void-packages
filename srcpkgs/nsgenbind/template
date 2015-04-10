@@ -4,7 +4,11 @@ version=0.9
 revision=1
 hostmakedepends="pkg-config flex netsurf-buildsystem"
 short_desc="Tool to generate javascript to dom bindings from w3c webid files"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://www.netsurf-browser.org"
 distfiles="https://download.netsurf-browser.org/libs/releases/${pkgname}-${version}-src.tar.gz"

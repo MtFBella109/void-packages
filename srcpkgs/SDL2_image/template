@@ -12,6 +12,7 @@ makedepends="SDL2-devel libavif-devel libjpeg-turbo-devel libpng-devel libwebp-d
 makedepends="libpng-devel tiff-devel SDL2-devel libwebp-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Load images as SDL surfaces (SDL 2.x)"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Zlib"
 homepage="https://github.com/libsdl-org/SDL_image"
@@ -22,6 +23,13 @@ checksum=2213b56fdaff2220d0e38c8e420cbe1a83c87374190cba8c70af2156097ce30a
 post_install() {
 	vlicense LICENSE.txt LICENSE
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+homepage="http://www.libsdl.org/projects/SDL_image/"
+distfiles="http://www.libsdl.org/projects/SDL_image/release/$pkgname-$version.tar.gz"
+checksum=b29815c73b17633baca9f07113e8ac476ae66412dec0d29a5045825c27a47234
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 SDL2_image-devel_package() {
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"

@@ -12,7 +12,7 @@ homepage="https://github.com/endeav0r/rdis"
 =======
 makedepends="libressl-devel gtk+3-devel jansson-devel LuaJIT-devel udis86-devel"
 short_desc="A binary analysis tool for linux"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-3"
 homepage="http://rainbowsandpwnies.com/rdis/"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)

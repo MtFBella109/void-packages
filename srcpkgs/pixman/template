@@ -11,7 +11,12 @@ configure_args="-Dgnu-inline-asm=enabled -Dlibpng=enabled -Drvv=disabled
 hostmakedepends="pkg-config perl"
 makedepends="libpng-devel"
 short_desc="Library of low-level pixel manipulation routines"
+<<<<<<< HEAD
 maintainer="Érico Nogueira <ericonr@disroot.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://xorg.freedesktop.org"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="http://pixman.org/"
 distfiles="https://www.cairographics.org/releases/pixman-${version}.tar.gz"

@@ -9,6 +9,11 @@ short_desc="CDDA reading utility with extra data verification features"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://www.xiph.org/paranoia/"
+<<<<<<< HEAD
+=======
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://downloads.xiph.org/releases/$pkgname/$pkgname-III-$version.src.tgz"
 checksum=005db45ef4ee017f5c32ec124f913a0546e77014266c6a1c50df902a55fe64df
 

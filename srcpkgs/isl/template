@@ -5,12 +5,25 @@ revision=1
 build_style=gnu-configure
 makedepends="gmp-devel"
 short_desc="Integer Set Library"
+<<<<<<< HEAD
 maintainer="dkwo <npiazza@disroot.org>"
 license="MIT"
 homepage="https://libisl.sourceforge.io/"
 changelog="https://repo.or.cz/isl.git/blob_plain/HEAD:/ChangeLog"
 distfiles="${SOURCEFORGE_SITE}/libisl/isl-${version}.tar.bz2"
 checksum=5eac8664e9d67be6bd0bee5085d6840b8baf738c06814df47eaf4166d9776436
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://freecode.com/projects/isl"
+license="LGPL-2.1"
+distfiles="http://isl.gforge.inria.fr/isl-${version}.tar.bz2"
+checksum=f4b3dbee9712850006e44f0db2103441ab3d13b406f77996d1df19ee89d11fb4
+
+if [ -z "$CHROOT_READY" ]; then
+	CFLAGS="-I${XBPS_MASTERDIR}/usr/include"
+	LDFLAGS="-L${XBPS_MASTERDIR}/usr/lib"
+fi
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense LICENSE

@@ -8,8 +8,13 @@ configure_args="--enable-libxml2-backend --enable-cplusplus --disable-cgi-server
 hostmakedepends="pkg-config python3"
 makedepends="libcurl-devel libxml2-devel"
 short_desc="XML-RPC for C and C++"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://xmlrpc-c.sourceforge.net/"
 changelog="http://xmlrpc-c.sourceforge.net/change_super_stable.html"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tgz"

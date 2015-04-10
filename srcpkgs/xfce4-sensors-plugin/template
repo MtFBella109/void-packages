@@ -19,6 +19,7 @@ hostmakedepends="pkg-config intltool"
 makedepends="libsensors-devel libxfce4ui-devel xfce4-panel-devel libnotify-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme desktop-file-utils"
+<<<<<<< HEAD
 short_desc="Xfce hardware sensors plugin"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
@@ -44,3 +45,11 @@ long_desc="
 gtk_iconcache_dirs="/usr/share/icons/hicolor"
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+short_desc="XFCE hardware sensors plugin"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://goodies.xfce.org/projects/panel-plugins/xfce4-sensors-plugin"
+license="GPL-2"
+distfiles="http://archive.xfce.org/src/panel-plugins/${pkgname}/${version%.*}/${pkgname}-${version}.tar.bz2"
+checksum=235ef842bd45e701bceebb21a384ab09f21afceea8ed95f91bb4c6cf3abe1bc0
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

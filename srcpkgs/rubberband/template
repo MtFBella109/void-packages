@@ -8,9 +8,15 @@ configure_args="-Dfft=fftw"
 hostmakedepends="pkg-config"
 makedepends="ladspa-sdk vamp-plugin-sdk-devel lv2"
 depends="libvamp-plugin-sdk"
+<<<<<<< HEAD
 checkdepends="boost-devel-minimal"
 =======
 version=1.6.0
+=======
+short_desc="Time-stretching and pitch-shifting audio library"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.breakfastquay.com/rubberband/"
 distfiles="http://code.breakfastquay.com/attachments/download/16/${pkgname}-${version}.tar.bz2"
 build_style=gnu-configure

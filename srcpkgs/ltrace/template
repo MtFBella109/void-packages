@@ -12,8 +12,13 @@ build_style=gnu-configure
 hostmakedepends="automake libtool"
 makedepends="elfutils-devel"
 short_desc="Tracks runtime library calls in dynamically linked programs"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 homepage="http://ltrace.org"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://ltrace.alioth.debian.org/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-2"
 <<<<<<< HEAD
 distfiles="https://github.com/dkogan/ltrace/archive/${_githash}.tar.gz"

@@ -23,8 +23,12 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 revision=2
 makedepends="perl>=0 opensp-devel"
 short_desc="SGML/XML parser toolkit and DSSSL engine, successor to "jade""
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://openjade.sourceforge.net/"
 license="MIT"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-$version.tar.gz"

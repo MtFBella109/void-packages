@@ -22,7 +22,11 @@ build_style=waf
 homepage="http://lv2plug.in"
 makedepends="python libsndfile-devel gtk+-devel"
 short_desc="Plugin standard for audio systems"
+<<<<<<< HEAD
 maintainer="davehome <davehome@redthumb.info.tm>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="LGPL-2.1, BSD"
 distfiles="http://lv2plug.in/spec/${pkgname}-${version}.tar.bz2"
 checksum=857ec8c1b1f803409e57b84f75b0f8ae7477a9c6bccb4a66220d739e8e39d751

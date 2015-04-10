@@ -12,9 +12,15 @@ makedepends="${hostmakedepends} expat perl-XML-Parser perl-XML-SAX"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="${makedepends}"
 short_desc="Easy Perl API to read/write XML"
+<<<<<<< HEAD
 homepage="https://metacpan.org/release/XML-Simple"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+homepage="http://search.cpan.org/dist/XML-Simple/"
+license="Artistic, GPL-1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${CPAN_SITE}/XML/XML-Simple-$version.tar.gz"
 checksum=531fddaebea2416743eb5c4fdfab028f502123d9a220405a4100e68fc480dbf8
 =======

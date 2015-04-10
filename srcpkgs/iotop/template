@@ -15,8 +15,13 @@ depends="${makedepends}"
 pycompile_module="iotop"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="View I/O usage of processes"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://guichaz.free.fr/iotop"
 distfiles="http://guichaz.free.fr/iotop/files/iotop-${version}.tar.bz2"
 checksum=3adea2a24eda49bbbaeb4e6ed2042355b441dbd7161e883067a02bfc8dcef75b

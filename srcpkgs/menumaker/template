@@ -8,8 +8,13 @@ hostmakedepends="python3"
 makedepends="python3"
 depends="python3"
 short_desc="Menu generation utility"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://menumaker.sourceforge.net"
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
 checksum=11e95d0e76a3b850f57df81bc5560222bd60141c5751b6e9bd05c3cd5560d65a

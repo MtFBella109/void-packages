@@ -8,11 +8,19 @@ hostmakedepends="automake libtool"
 makedepends="libpng-devel"
 checkdepends="python3"
 short_desc="Decoder implementation of the JBIG2 image compression format"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="AGPL-3.0-or-later"
 homepage="https://www.jbig2dec.com"
 distfiles="https://github.com/ArtifexSoftware/jbig2dec/archive/${version}.tar.gz"
 checksum=a9705369a6633aba532693450ec802c562397e1b824662de809ede92f67aff21
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://jbig2dec.sourceforge.net/"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
+checksum=7e2d8330b36f2765da22043d174827bee0f30db8d78c330904f363275c7dd0b9
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_configure() {
 	sed -i '$ d' autogen.sh

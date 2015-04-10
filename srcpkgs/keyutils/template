@@ -3,6 +3,7 @@ pkgname=keyutils
 version=1.6.3
 revision=2
 short_desc="Linux Key Management Utilities"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://www.kernel.org"
@@ -15,6 +16,13 @@ pre_build() {
 	sed -e "/#include <stdlib.h>/a #include <limits.h>" \
 		-i key.dns_resolver.c
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.kernel.org"
+license="GPL-2, LGPL-2.1"
+distfiles="http://people.redhat.com/~dhowells/$pkgname/$pkgname-$version.tar.bz2"
+checksum=4da2c5552c688b65ab14d4fd40fbdf720c8b396d8ece643e040cf6e707e083ae
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_build() {
 	make CFLAGS="${CFLAGS} -fPIC" LDFLAGS="${LDFLAGS}" SBINDIR='/usr/bin' \

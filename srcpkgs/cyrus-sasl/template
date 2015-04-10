@@ -33,6 +33,7 @@ depends="e2fsprogs-libs cyrus-sasl-modules"
 makedepends="libsasl-devel libldap-devel mit-krb5-devel e2fsprogs-devel pam-devel openssl-devel postgresql-libs-devel libmysqlclient-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Cyrus SASL - auth daemon and administration tools"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause-Attribution"
 homepage="https://www.cyrusimap.org/sasl/"
@@ -42,6 +43,13 @@ checksum=7ccfc6abd01ed67c1a0924b353e526f1b766b21f42d4562ee635a8ebfc5bb38c
 if [ "$XBPS_TARGET_LIBC" = "glibc" ]; then
 	makedepends+=" libxcrypt-devel"
 fi
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://cyrusimap.web.cmu.edu/"
+license="BSD"
+distfiles="ftp://ftp.cyrusimap.org/cyrus-sasl/${pkgname}-${version}.tar.gz"
+checksum=8fbc5136512b59bb793657f36fadda6359cae3b08f01fd16b3d406f1345b7bc3
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_configure() {
 	autoreconf -fi

@@ -2,6 +2,7 @@
 pkgname=linux
 version=6.12
 revision=1
+<<<<<<< HEAD
 metapackage=yes
 depends="linux${version} linux-base"
 short_desc="Linux kernel meta package"
@@ -10,6 +11,14 @@ license="Public Domain"
 homepage="http://www.voidlinux.org/"
 
 subpackages="linux-headers"
+=======
+build_style=meta
+homepage="http://www.voidlinux.eu/"
+short_desc="The Linux kernel meta package"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Public domain"
+only_for_archs="i686 i686-musl x86_64 x86_64-musl"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 case "$XBPS_TARGET_MACHINE" in
 	aarch64*) subpackages+=" pinebookpro-kernel pinebookpro-kernel-headers";;

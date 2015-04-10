@@ -6,6 +6,7 @@ build_style=gnu-configure
 hostmakedepends="automake libtool pkg-config"
 makedepends="libusb-devel libplist-devel"
 short_desc="USB Multiplex Daemon library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-only"
 homepage="https://libimobiledevice.org"
@@ -16,6 +17,13 @@ checksum=8ae3e1d9340177f8f3a785be276435869363de79f491d05d8a84a59efc8a8fdc
 pre_configure() {
 	autoreconf -fi
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2,LGPL-2.1"
+homepage="https://marcan.st/blog/iphonelinux/usbmuxd/"
+distfiles="http://www.libimobiledevice.org/downloads/${pkgname}-${version}.tar.bz2"
+checksum=1aa21391265d2284ac3ccb7cf278126d10d354878589905b35e8102104fec9f2
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libusbmuxd-devel_package() {
 	short_desc+=" - development files"

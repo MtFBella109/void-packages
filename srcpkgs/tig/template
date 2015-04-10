@@ -9,6 +9,7 @@ makedepends="ncurses-devel pcre2-devel"
 depends="git"
 conf_files="/etc/tigrc"
 short_desc="Text-mode interface for Git"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="GPL-2.0-only"
 homepage="https://jonas.github.io/tig/"
@@ -19,6 +20,13 @@ checksum=e5c84bac827ba40e4ca9a311aeef4b93257b8cccd1b15e97ead44baea787786c
 pre_configure() {
 	NOCONFIGURE=1 ./autogen.sh
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://jonas.nitro.dk/tig/"
+distfiles="http://jonas.nitro.dk/tig/releases/tig-${version}.tar.gz"
+checksum=50c5179fd564b829b6b2cec087e66f10cf8799601de19350df0772ae77e4852f
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vcompletion contrib/tig-completion.bash bash

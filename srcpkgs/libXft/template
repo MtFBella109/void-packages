@@ -7,7 +7,11 @@ build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="xorgproto libXrender-devel freetype-devel fontconfig-devel"
 short_desc="Library for configuring and customizing font access"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://gitlab.freedesktop.org/xorg/lib/libxft"
 distfiles="${XORG_SITE}/lib/${pkgname}-${version}.tar.xz"

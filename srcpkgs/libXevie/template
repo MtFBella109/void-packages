@@ -18,10 +18,16 @@ hostmakedepends="pkg-config"
 makedepends="xproto xextproto evieext libX11-devel libXext-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="X Event Interceptor Library"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 <<<<<<< HEAD
 checksum=ff70b81ad145932db2d206735cefcb698dadad241001df7ba6b97e8081d174da
 =======
+=======
+homepage="http://xorg.freedesktop.org"
+license="MIT/X11"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
 checksum=c00b382123e58f595b3cecaa50471ebec534660e5f92ae46d94266345844fd73
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)

@@ -4,8 +4,16 @@ version=9999.32
 revision=1
 build_style=perl-module
 hostmakedepends="perl"
+<<<<<<< HEAD
 makedepends="$hostmakedepends"
 depends="$hostmakedepends"
+=======
+makedepends="${hostmakedepends}"
+depends="${hostmakedepends}"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/File-Slurp/"
+license="Artistic, GPL-1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 short_desc="Simple and Efficient Reading/Writing/Modifying of Complete Files"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"

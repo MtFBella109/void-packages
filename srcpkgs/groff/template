@@ -8,6 +8,7 @@ build_style=gnu-configure
 configure_args="--without-x --disable-rpath"
 hostmakedepends="perl bison ghostscript"
 makedepends="zlib-devel"
+<<<<<<< HEAD
 short_desc="GNU troff text-formatting system"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-3.0-or-later"
@@ -15,6 +16,14 @@ homepage="https://www.gnu.org/software/groff/groff.html"
 changelog="https://git.savannah.gnu.org/cgit/groff.git/plain/NEWS"
 distfiles="${GNU_SITE}/groff/groff-${version}.tar.gz"
 checksum=6b9757f592b7518b4902eb6af7e54570bdccba37a871fddb2d30ae3863511c13
+=======
+short_desc="The GNU troff text-formatting system"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://www.gnu.org/software/groff/groff.html"
+distfiles="http://ftp.gnu.org/gnu/groff/groff-${version}.tar.gz"
+checksum=3a48a9d6c97750bfbd535feeb5be0111db6406ddb7bb79fc680809cda6d828a5
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" groff"

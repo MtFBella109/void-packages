@@ -10,6 +10,7 @@ hostmakedepends="pkg-config iso-codes gettext itstool glib-devel
  desktop-file-utils gtk-update-icon-cache $(vopt_if gtk_doc gi-docgen)"
 makedepends="gtk4-devel libadwaita-devel"
 depends="hicolor-icon-theme desktop-file-utils iso-codes"
+<<<<<<< HEAD
 short_desc="Simple binary editor for GNOME"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only, GFDL-1.1-only"
@@ -27,6 +28,14 @@ pre_build() {
 		export XDG_DATA_DIRS=/usr/$XBPS_CROSS_TRIPLET/usr/share/
 	fi
 }
+=======
+short_desc="A simple binary editor for GNOME"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+distfiles="${GNOME_SITE}/ghex/${version%.*}/ghex-$version.tar.xz"
+checksum=34b66cb5c84410c420df72f229d25aee5979e58048a246ed719b046f0c241132
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libgtkhex_package() {
 	short_desc+=" - runtime library"

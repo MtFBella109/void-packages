@@ -6,12 +6,20 @@ build_style=gnu-makefile
 make_use_env=yes
 hostmakedepends="python3-setuptools python3-packaging-bootstrap"
 short_desc="Lightweight multi-platform, multi-architecture disassembly framework"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
 homepage="https://www.capstone-engine.org/"
 changelog="https://raw.githubusercontent.com/capstone-engine/capstone/next/ChangeLog"
 distfiles="https://github.com/aquynh/capstone/archive/${version}.tar.gz"
 checksum=240ebc834c51aae41ca9215d3190cc372fd132b9c5c8aa2d5f19ca0c325e28f9
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="2-clause-BSD"
+homepage="http://www.capstone-engine.org/"
+distfiles="http://www.capstone-engine.org/download/${version}/${pkgname}-${version}.tgz"
+checksum=b1b512d1117ee606e58cff793de17bccbd47b0d59d3b269f8c4c3f04a6d117f7
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	make -C bindings/python PREFIX=/usr DESTDIR=${DESTDIR} install3

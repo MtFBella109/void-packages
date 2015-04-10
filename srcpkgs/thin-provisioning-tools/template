@@ -2,6 +2,7 @@
 pkgname=thin-provisioning-tools
 version=1.0.4
 revision=1
+<<<<<<< HEAD
 build_style=cargo
 hostmakedepends="pkg-config"
 # Note: statically links to libzstd.
@@ -11,6 +12,15 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/jthornber/thin-provisioning-tools"
 changelog="https://raw.githubusercontent.com/jthornber/thin-provisioning-tools/main/CHANGES"
+=======
+build_style=gnu-configure
+hostmakedepends="automake libtool pkg-config"
+makedepends="boost-devel expat-devel libaio-devel"
+short_desc="A suite of tools for manipulating the metadata of the dm-thin device-mapper target"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="https://github.com/jthornber/${pkgname}"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${homepage}/archive/v${version}.tar.gz"
 checksum=a973786fb9cb49d30be6fb8178d6739bc23609d4114ab601f0983ecdbf349abf
 # Does a ton of disk IO.

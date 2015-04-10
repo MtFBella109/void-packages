@@ -13,9 +13,26 @@ makedepends="fuse-devel exfat-utils"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="exfat-utils>=${version}"
 short_desc="Free exFAT file system implementation"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/relan/exfat"
 changelog="https://github.com/relan/exfat/raw/master/ChangeLog"
 distfiles="https://github.com/relan/exfat/releases/download/v${version}/fuse-exfat-${version}.tar.gz"
 checksum=a1cfedc55e0e7a12c184605aa0f0bf44b24a3fb272449b20b2c8bbe6edb3001e
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://code.google.com/p/exfat"
+distfiles="https://docs.google.com/uc?export=download&id=0B7CLI-REKbE3VTdaa0EzTkhYdU0>${pkgname}-${version}.tar.gz"
+checksum=198c520e417e955dc5c08687c278e63eefa56719da4452aa4a605be0327f953e
+
+do_build() {
+	scons CCFLAGS="${CFLAGS} -std=c99" LINKFLAGS="${LDFLAGS} " DESTDIR="${DESTDIR}/usr/bin"
+}
+
+do_install() {
+	scons CCFLAGS="${CFLAGS} -std=c99" LINKFLAGS="${LDFLAGS} " DESTDIR="${DESTDIR}/usr/bin" install
+	install -Dm444 fuse/mount.exfat-fuse.8 ${DESTDIR}/usr/share/man/man8/mount.exfat-fuse.8
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

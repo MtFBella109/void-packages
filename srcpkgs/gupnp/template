@@ -18,10 +18,16 @@ configure_args="--disable-static"
 makedepends="pkg-config glib-devel libxml2-devel libuuid-devel gssdp-devel gobject-introspection"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GObject-based library for UPnP"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://wiki.gnome.org/Projects/GUPnP"
 changelog="https://gitlab.gnome.org/GNOME/gupnp/-/raw/master/NEWS"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="http://gupnp.org/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${GNOME_SITE}/gupnp/${version%.*}/gupnp-${version}.tar.xz"
 checksum=70a003cebd68577293fb3e6af49ff902203bf8768b2fc5d651ddc1f0fa1e11e9
 

@@ -13,8 +13,13 @@ configure_args="--with-libssl-prefix=${XBPS_CROSS_BASE}/usr"
 makedepends="zlib-devel libressl-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Library implementing the SSH2 protocol"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="3-clause-BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.libssh2.org/"
 <<<<<<< HEAD
 distfiles="http://www.libssh2.org/download/${pkgname}-${version}.tar.gz"

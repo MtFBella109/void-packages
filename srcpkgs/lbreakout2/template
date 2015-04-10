@@ -20,8 +20,12 @@ makedepends="zlib-devel libpng-devel SDL-devel SDL_mixer-devel SDL_net-devel"
 makedepends="zlib-devel libpng-devel SDL-devel SDL_mixer-devel SDL_net-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Breakout-style arcade game"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://lgames.sourceforge.net"
 distfiles="${SOURCEFORGE_SITE}/lgames/$pkgname-$version.tar.gz"
 checksum=9104d6175553da3442dc6a5fc407a669e2f5aff3eedc5d30409eb003b7a78d6f

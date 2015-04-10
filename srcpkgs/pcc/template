@@ -29,12 +29,20 @@ short_desc="Portable C Compiler"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause, BSD-3-Clause, MIT, BSD-4-Clause"
 homepage="http://pcc.ludd.ltu.se/"
+<<<<<<< HEAD
 distfiles="
  http://pcc.ludd.ltu.se/ftp/pub/pcc-beta/pcc-${_distver}.BETA-${_snapshot}.tgz
  http://pcc.ludd.ltu.se/ftp/pub/pcc-beta/pcc-libs-${_distver}.BETA-${_snapshot}.tgz"
 checksum="a114dfca04b8b0559ea5d67b87d2d0fcb2bae2b4d9b9ba16ebc27960b921c812
  e810aa4d6683e769f490f734b13a296b33c2511ddba646bc526eb85532f1a23a"
 nocross=yes
+=======
+license="BSD"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://pcc.ludd.ltu.se/ftp/pub/pcc-releases/pcc-$version.tgz"
+checksum=d9e3fed84c767dcddefb6b1f854d5da8921f3f65d8bd02997743412f41474d64
+only_for_archs="i686 x86_64"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 CFLAGS="-fcommon"
 case "$XBPS_TARGET_LIBC" in

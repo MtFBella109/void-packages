@@ -3,12 +3,21 @@ pkgname=lcms2
 <<<<<<< HEAD
 version=2.17
 revision=1
+<<<<<<< HEAD
 build_style=meson
 configure_args="-Dutils=true $(vopt_bool plugins fastfloat) $(vopt_bool plugins threaded)"
 hostmakedepends="pkg-config"
 makedepends="tiff-devel libjpeg-turbo-devel"
 =======
 version=2.2
+=======
+build_style=gnu-configure
+makedepends="tiff-devel"
+short_desc="Small-footprint color management engine, version 2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.littlecms.com"
+license="MIT"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${SOURCEFORGE_SITE}/lcms/lcms2-$version.tar.gz"
 build_style=gnu-configure
 revision=3

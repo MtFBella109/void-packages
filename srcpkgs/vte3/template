@@ -23,9 +23,15 @@ makedepends="pkg-config intltool gtk+3-devel ncurses-devel gobject-introspection
 fulldepends="vte>=0"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Terminal widget with improved accessibility and I18N support"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-3.0-or-later, LGPL-2.1-or-later, LGPL-3.0-or-later"
 homepage="https://gitlab.gnome.org/GNOME/vte/"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${GNOME_SITE}/vte/${version%.*}/vte-${version}.tar.xz"
 checksum=79376d70402d271e2d38424418e1aea72357934d272e321e3906b71706a78e3a
 

@@ -13,6 +13,7 @@ hostmakedepends="pkg-config intltool glib-devel"
 makedepends="webkitgtk-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="API documentation browser for GTK+ and GNOME"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Apps/Devhelp"
@@ -20,6 +21,13 @@ changelog="https://gitlab.gnome.org/GNOME/devhelp/-/raw/main/NEWS"
 distfiles="${GNOME_SITE}/devhelp/${version%.*}/devhelp-${version}.tar.xz"
 checksum=63ceeefd05392e02044881ef1ecd724293553da5735b7efc082b2d13fe85dd04
 replaces="devhelp-gedit-plugin<=40.0_1"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="https://wiki.gnome.org/devhelp"
+distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
+checksum=a78884cf81c1fb18fc8356c62271292591d5ca62c58b045dee30c6fc278e7083
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 devhelp-devel_package() {
 	short_desc+=" - development files"

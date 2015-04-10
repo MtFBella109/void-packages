@@ -7,9 +7,16 @@ build_style=gnu-configure
 configure_args="--with-manpages --with-manlinks"
 hostmakedepends="groff perl"
 depends="perl"
+<<<<<<< HEAD
 =======
 version=2.7
 revision=1
+=======
+short_desc="Simple, self-contained and portable build system"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://hypertriton.com/bsdbuild/"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://stable.hypertriton.com/bsdbuild/$pkgname-$version.tar.gz"
 build_style=configure
 configure_args="--prefix=/usr --with-manpages --with-manlinks"

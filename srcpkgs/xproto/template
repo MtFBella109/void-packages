@@ -1,6 +1,17 @@
 # Template build file for 'xproto'.
 pkgname=xproto
+<<<<<<< HEAD
 version=7.0.16
+=======
+version=7.0.27
+revision=2
+noarch=yes
+build_style=gnu-configure
+short_desc="X protocol and ancillary headers from Xorg"
+homepage="http://xorg.freedesktop.org"
+license="MIT"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/proto/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 short_desc="X protocol and ancillary headers from Xorg X11"

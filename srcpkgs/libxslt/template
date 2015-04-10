@@ -9,7 +9,12 @@ hostmakedepends="docbook-xml docbook-xsl libtool pkg-config python3"
 makedepends="libxml2-devel libgcrypt-devel python3-devel"
 checkdepends="libxml2-python3"
 short_desc="XSLT parser library from the GNOME project"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://xmlsoft.org/XSLT/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://gitlab.gnome.org/GNOME/libxslt"
 changelog="https://gitlab.gnome.org/GNOME/libxslt/-/raw/master/NEWS"

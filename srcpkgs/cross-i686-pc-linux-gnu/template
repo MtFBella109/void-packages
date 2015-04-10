@@ -6,10 +6,34 @@ _linux_version=6.14
 pkgname=cross-i686-pc-linux-gnu
 version=0.37
 revision=1
+<<<<<<< HEAD
 build_style=void-cross
 hostmakedepends="texinfo tar gcc-objc gcc-go flex perl python3 pkg-config"
 makedepends="isl-devel libmpc-devel gmp-devel mpfr-devel
  zlib-devel libzstd-devel"
+=======
+short_desc="GNU Cross toolchain for the ${_triplet} target (binutils/gcc/glibc)"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.voidlinux.eu"
+license="Public Domain"
+distfiles="
+ http://ftp.gnu.org/pub/gnu/binutils/binutils-${_binutils_version}.tar.bz2
+ http://ftp.gnu.org/pub/gnu/gcc/gcc-${_gcc_version}/gcc-${_gcc_version}.tar.bz2
+ http://ftp.gnu.org/gnu/glibc/glibc-${_glibc_version}.tar.xz
+ http://www.kernel.org/pub/linux/kernel/v3.x/linux-${_linux_version}.tar.xz"
+checksum="
+ e5e8c5be9664e7f7f96e0d09919110ab5ad597794f5b1809871177a0f0f14137
+ 2f7c37eb4fc14422ff2358a9ef59c974a75ab41204ef0e49fc34ab1d8981a9c3
+ 2d3997f588401ea095a0b27227b1d50cdfdd416236f6567b564549d3b46ea2a2
+ ed4dfd9f56b7c82e9c71331bbf8d2ea01ddfddc1b6209bd3f3c8640aa24065cf"
+
+lib32disabled=yes
+nocross=yes
+only_for_archs="x86_64"
+create_wrksrc=yes
+hostmakedepends="perl flex"
+makedepends="zlib-devel gmp-devel mpfr-devel libmpc-devel"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 depends="${pkgname}-libc-${version}_${revision}"
 short_desc="Void cross toolchain for ${pkgname/cross-}"
 maintainer="Orphaned <orphan@voidlinux.org>"

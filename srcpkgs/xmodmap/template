@@ -9,6 +9,7 @@ makedepends="libX11-devel"
 short_desc="X modmap program to modify keymaps and pointer button mappings"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org"
 distfiles="${XORG_SITE}/app/${pkgname}-${version}.tar.xz"
 checksum=9a2f8168f7b0bc382828847403902cb6bf175e17658b36189eac87edda877e81
@@ -20,6 +21,9 @@ post_install() {
 # Template build file for 'xmodmap'.
 pkgname=xmodmap
 version=1.0.4
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

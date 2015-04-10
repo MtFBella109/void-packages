@@ -10,6 +10,7 @@ hostmakedepends="gettext-devel pkg-config"
 makedepends="ncurses-devel"
 checkdepends="dejagnu"
 short_desc="Utilities for monitoring your system and its processes"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://gitlab.com/procps-ng/procps"
@@ -19,6 +20,13 @@ checksum=c2e6d193cc78f84cd6ddb72aaf6d5c6a9162f0470e5992092057f5ff518562fa
 # "pmap X with unreachable process" and "pmap XX with unreachable process" fail
 # in the CI.
 make_check=ci-skip
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2, LGPL-2.1"
+homepage="http://gitorious.org/procps"
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/Production/${pkgname}-${version}.tar.xz"
+checksum=a02e6f98974dfceab79884df902ca3df30b0e9bad6d76aee0fb5dce17f267f04
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 conf_files="/etc/sysctl.conf"
 

@@ -7,9 +7,23 @@ configure_args="-DCMAKE_BUILD_TYPE=Release"
 hostmakedepends="perl"
 makedepends="ucl zlib-devel"
 short_desc="Ultimate Packer for eXecutables"
+<<<<<<< HEAD
 maintainer="cinerea0 <cinerea0@protonmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://upx.github.io/"
 changelog="https://raw.githubusercontent.com/upx/upx/master/NEWS"
 distfiles="https://github.com/upx/upx/releases/download/v${version}/upx-${version}-src.tar.xz"
 checksum=2b11323a9f6c7f0247a4936deee35afb486a2fdf808a5bc4abf10a085ec884d9
+=======
+wrksrc="upx-${version}-src"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://upx.sourceforge.net/"
+license="GPL-2"
+distfiles="http://upx.sourceforge.net/download/upx-${version}-src.tar.bz2"
+checksum=527ce757429841f51675352b1f9f6fc8ad97b18002080d7bf8672c466d8c6a3c
+
+do_install() {
+	vinstall src/upx.out 755 usr/bin upx
+	vinstall doc/upx.1 644 usr/share/man/man1
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

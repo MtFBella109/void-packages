@@ -30,6 +30,7 @@ makedepends="libxml2"
 fulldepends="python"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="XML-XCB (X C Bindings) protocol descriptions"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=0cf35b258e8f32773bcbd397ef3aca3ee6cac152260c99d2bd851488884c4638
 long_desc="
@@ -60,3 +61,10 @@ Add_dependency build libxml2
 pycompile_module="xcbgen"
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://xcb.freedesktop.org"
+license="MIT"
+distfiles="http://xcb.freedesktop.org/dist/$pkgname-$version.tar.bz2"
+checksum=b4aceee6502a0ce45fc39b33c541a2df4715d00b72e660ebe8c5bb444771e32e
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

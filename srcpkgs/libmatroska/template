@@ -30,7 +30,7 @@ hostmakedepends="pkg-config"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="libebml-devel"
 short_desc="Extensible open standard Audio/Video container format"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://dl.matroska.org/downloads/libmatroska/"
 license="LGPL-2.1"
 distfiles="http://www.bunkus.org/videotools/mkvtoolnix/sources/$pkgname-$version.tar.bz2"

@@ -8,8 +8,13 @@ conf_files="
 	/etc/xdg/user-dirs.conf
 	/etc/xdg/user-dirs.defaults"
 short_desc="Tool to help manage user directories"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.freedesktop.org/wiki/Software/xdg-user-dirs"
 changelog="https://gitlab.freedesktop.org/xdg/xdg-user-dirs/-/raw/master/NEWS"
 distfiles="http://user-dirs.freedesktop.org/releases/$pkgname-$version.tar.gz"

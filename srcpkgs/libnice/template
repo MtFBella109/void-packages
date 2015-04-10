@@ -39,7 +39,7 @@ hostmakedepends="automake libtool gtk-doc gettext-devel pkg-config intltool"
 makedepends="gstreamer-devel gstreamer1-devel libsoup-devel gupnp-igd-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="An implementation of the IETF's draft ICE (for P2P UDP data streams)"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="LGPL-2.1"
 checksum=f2472b6392a27287ded21a6ba535b19c6204614fb191e1c4ff98295202c247f6
 long_desc="

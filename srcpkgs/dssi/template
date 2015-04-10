@@ -8,8 +8,13 @@ makedepends="
  liblo-devel libsndfile-devel libsamplerate-devel alsa-lib-devel jack-devel
  ladspa-sdk libSM-devel libX11-devel"
 short_desc="API for audio processing plugins"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://dssi.sourceforge.net"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
 <<<<<<< HEAD

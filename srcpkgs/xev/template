@@ -9,6 +9,7 @@ makedepends="libXrandr-devel"
 short_desc="Display X events"
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="MIT"
+<<<<<<< HEAD
 homepage="https://xorg.freedesktop.org"
 distfiles="${XORG_SITE}/app/xev-${version}.tar.xz"
 checksum=61e1c5e008ac9973aca7cdddf36e9df7410e77083b030eb04f4dc737c51807d7
@@ -20,6 +21,9 @@ post_install() {
 # Template build file for 'xev'.
 pkgname=xev
 version=1.0.4
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

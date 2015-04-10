@@ -12,12 +12,20 @@ configure_args="--enable-libacl --enable-xattr"
 makedepends="acl-devel zlib-devel"
 short_desc="Library to create ISO9660 images"
 <<<<<<< HEAD
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://dev.lovelyhq.com/libburnia/web/wiki/Libisofs"
 changelog="https://dev.lovelyhq.com/libburnia/libisofs/raw/branch/master/ChangeLog"
 distfiles="https://files.libburnia-project.org/releases/${pkgname}-${version}.tar.gz"
 checksum=ac1fd338d641744ca1fb1567917188b79bc8c2506832dd56885fec98656b9f25
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.libburnia-project.org"
+license="GPL-2"
+distfiles="http://files.libburnia-project.org/releases/$pkgname-$version.tar.gz"
+checksum=acd7bf42d5d1d5c277f4aad46e5b96229045a38a0fb7d43cfd7841ee3268fda5
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 libisofs-devel_package() {

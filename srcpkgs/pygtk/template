@@ -7,7 +7,14 @@ build_style=gnu-configure
 depends="python pygobject2 pycairo"
 makedepends="pkg-config python-devel gtk+-devel libxml2-devel pygobject2-devel pycairo-devel"
 short_desc="Python bindings for the GTK+ toolkit"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+homepage="http://www.pygtk.org"
+license="LGPL-2.1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.bz2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=cd1c1ea265bd63ff669e92a2d3c2a88eb26bcd9e5363e0f82c896e649f206912
 long_desc="
  Pygtk is a set of Python bindings for the GTK+ toolkit."

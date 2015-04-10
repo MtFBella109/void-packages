@@ -8,9 +8,15 @@ build_style=gnu-configure
 hostmakedepends="pkg-config tar automake autoconf gettext-devel-tools"
 makedepends="gtk+3-devel libSM-devel imlib2-devel openbox-devel startup-notification-devel"
 depends="desktop-file-utils shared-mime-info"
+<<<<<<< HEAD
 short_desc="GTK-based configuration tool for the Openbox windowmanager"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+short_desc="A GTK2 based configuration tool for the Openbox windowmanager"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://openbox.org/wiki/ObConf:About"
 distfiles="http://openbox.org/dist/obconf/obconf-${version}.tar.gz
  https://raw.githubusercontent.com/archlinux/svntogit-community/${_patch_commit}/trunk/stop-using-libglade.patch>stop-using-libglade-${_patch_commit}.patch

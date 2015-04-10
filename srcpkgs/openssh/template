@@ -41,6 +41,7 @@ short_desc="The OpenSSH implementation of SSH protocol"
 replaces="openssh-server>=0"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="/etc/ssh/moduli /etc/ssh/ssh_config /etc/ssh/sshd_config /etc/pam.d/sshd"
+<<<<<<< HEAD
 make_dirs="
  /var/chroot/ssh 0755 root root
  /etc/ssh/sshd_config.d 0755 root root"
@@ -48,6 +49,14 @@ make_dirs="
 if [ "$XBPS_TARGET_LIBC" = "glibc" ]; then
 	makedepends+=" libxcrypt-devel"
 fi
+=======
+make_dirs="/var/chroot/ssh 0755 root root"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.openssh.org"
+license="BSD"
+distfiles="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/$pkgname-$version.tar.gz"
+checksum=3ff64ce73ee124480b5bf767b9830d7d3c03bbcb6abe716b78f0192c37ce160e
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 # Package build options
 build_options="fido2 gssapi ldns ssl"

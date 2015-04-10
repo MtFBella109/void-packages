@@ -17,7 +17,7 @@ makedepends="apache-devel gdbm-devel serf-devel
  file-devel perl"
 =======
 short_desc="Enterprise-class centralized version control for the masses"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="Apache-2.0, BSD"
 homepage="http://subversion.apache.org/"
 distfiles="http://apache.rediris.es/subversion/subversion-${version}.tar.bz2"

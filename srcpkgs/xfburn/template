@@ -13,6 +13,7 @@ makedepends="libburn-devel libisofs-devel exo-devel libxfce4ui-devel gst-plugins
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils hicolor-icon-theme"
 short_desc="CD-burner application for the Xfce Desktop Environment"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="https://docs.xfce.org/apps/xfburn/start"
@@ -35,3 +36,10 @@ long_desc="
 gtk_iconcache_dirs="/usr/share/icons/hicolor"
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://goodies.xfce.org/projects/applications/xfburn"
+license="GPL-2"
+distfiles="http://archive.xfce.org/src/apps/xfburn/${version%.*}/xfburn-${version}.tar.bz2"
+checksum=63682aab3c30c77e464b2b3b84606d1e1dcefc98e7042072fa09b729d6f84412
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

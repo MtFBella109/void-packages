@@ -3,8 +3,13 @@ pkgname=libnsutils
 version=0.1.1
 revision=1
 hostmakedepends="pkg-config perl netsurf-buildsystem"
+<<<<<<< HEAD
 short_desc="NetSurf utility functions"
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+short_desc="CSS parser and selection engine, written in C"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://www.netsurf-browser.org"
 distfiles="https://download.netsurf-browser.org/libs/releases/${pkgname}-${version}-src.tar.gz"

@@ -1,6 +1,16 @@
 # Template build file for 'xf86bigfontproto'.
 pkgname=xf86bigfontproto
 version=1.2.0
+<<<<<<< HEAD
+=======
+revision=3
+noarch="yes"
+build_style=gnu-configure
+short_desc="XF86BigFont extension headers from X.org"
+homepage="http://xorg.freedesktop.org"
+license="MIT"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/proto/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 short_desc="XF86BigFont extension headers from X.org"

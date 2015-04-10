@@ -10,10 +10,16 @@ depends="font-util"
 short_desc="Standard Bigelow and Holmes TrueType fonts"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org/"
 distfiles="${XORG_SITE}/font/$pkgname-$version.tar.gz"
 checksum=bf662d20107d60a964ade831b8ad575a58510e0f2fb9f67e8f064bbbeaae45b4
 font_dirs="/usr/share/fonts/X11/TTF"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+checksum=1b4bea63271b4db0726b5b52c97994c3313b6023510349226908090501abd25f
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense COPYING

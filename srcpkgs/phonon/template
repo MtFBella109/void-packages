@@ -3,6 +3,7 @@ pkgname=phonon
 version=4.12.0
 revision=3
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DPHONON_BUILD_DESIGNER_PLUGIN=ON"
 hostmakedepends="extra-cmake-modules qt5-host-tools qt5-devel
  qt6-base qt6-tools"
@@ -15,6 +16,17 @@ license="LGPL-2.1-or-later"
 homepage="https://phonon.kde.org/"
 distfiles="${KDE_SITE}/${pkgname%-*}/${version}/${pkgname%-*}-${version}.tar.xz"
 checksum=3287ffe0fbcc2d4aa1363f9e15747302d0b080090fe76e5f211d809ecb43f39a
+=======
+configure_args="-DPHONON_INSTALL_QT_EXTENSIONS_INTO_SYSTEM_QT=ON"
+hostmakedepends="cmake automoc4"
+makedepends="glib-devel qt-devel pulseaudio-devel libqzeitgeist-devel"
+short_desc="The multimedia framework for KDE"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="http://phonon.kde.org/"
+distfiles="http://download.kde.org/stable/${pkgname}/${version}/src/${pkgname}-${version}.tar.xz"
+checksum=a1149c961ca1570968d070bbd23671e614aa506f847ca93748960e309f85da16
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vmkdir usr/lib/qt6/plugins/designer

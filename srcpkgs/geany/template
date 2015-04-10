@@ -9,6 +9,7 @@ makedepends="gtk+3-devel"
 depends="hicolor-icon-theme desktop-file-utils"
 checkdepends="xvfb-run python3"
 short_desc="Fast and lightweight IDE"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://www.geany.org"
@@ -17,6 +18,13 @@ distfiles="https://download.geany.org/geany-${version}.tar.bz2"
 checksum=6b96a8844463300c10b9692a0a5edad8236eec9e84342f575f83d4fc89331228
 make_check_pre="xvfb-run"
 python_version=3
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://www.geany.org"
+distfiles="http://download.${pkgname}.org/${pkgname}-${version}.tar.bz2"
+checksum=7fb505d9b01fe6874890525f837644a6a38c23a372bb068c65ef3673108a8c33
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_check() {
 	# Void sets HOME to /tmp by default

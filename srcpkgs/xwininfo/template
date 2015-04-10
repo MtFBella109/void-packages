@@ -9,6 +9,7 @@ makedepends="libX11-devel"
 short_desc="Query information about X windows"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org"
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.xz"
 checksum=3518897c17448df9ba99ad6d9bb1ca0f17bc0ed7c0fd61281b34ceed29a9253f
@@ -20,6 +21,9 @@ post_install() {
 # Template build file for 'xwininfo'.
 pkgname=xwininfo
 version=1.0.5
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

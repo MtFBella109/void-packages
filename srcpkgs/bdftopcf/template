@@ -10,7 +10,11 @@ makedepends="xorgproto"
 short_desc="BDF to PCF font converter for X11"
 homepage="http://xorg.freedesktop.org"
 license="MIT"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 checksum=4b4df05fc53f1e98993638d6f7e178d95b31745c4568cee407e167491fd311a2
 

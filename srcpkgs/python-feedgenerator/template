@@ -1,0 +1,29 @@
+# Template file for 'python-feedgenerator'
+pkgname=python-feedgenerator
+version=1.7
+revision=1
+noarch=yes
+wrksrc="feedgenerator-${version}"
+build_style=python-module
+python_versions="2.7 3.4"
+hostmakedepends="python-setuptools python3.4-setuptools"
+makedepends="python-devel python3.4-devel"
+depends="python python-pytz python-six"
+pycompile_module="feedgenerator"
+short_desc="Python2 standalone version of django.utils.feedgenerator"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="https://pypi.python.org/pypi/feedgenerator/"
+license="BSD"
+distfiles="https://pypi.python.org/packages/source/f/feedgenerator/feedgenerator-${version}.tar.gz"
+checksum=5d6b0b10134ac392be0c0c3a39c0e1d7e9c17cc7894590f75981e3f497a4a60f
+
+python3.4-feedgenerator_package() {
+	noarch=yes
+	depends="python3.4 python3.4-pytz python3.4-six"
+	pycompile_version="3.4"
+	pycompile_module="feedgenerator"
+	short_desc="${short_desc/Python2/Python3.4}"
+	pkg_install() {
+		vmove usr/lib/python3.4
+	}
+}

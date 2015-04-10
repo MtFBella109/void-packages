@@ -11,6 +11,7 @@ build_style=gnu-makefile
 make_build_args="BACKEND=x86emu"
 short_desc="Library for making real-mode x86 calls"
 homepage="http://www.codon.org.uk/~mjg59/libx86/"
+<<<<<<< HEAD
 license="MIT"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 distfiles="${DEBIAN_SITE}/main/libx/libx86/libx86_${version}+ds1.orig.tar.bz2"
@@ -18,6 +19,13 @@ checksum=88036ba62465491b35cffa00dc6d9d07b6ee9610a41ae626779d264b418c8211
 archs="i686* x86_64*"
 
 CFLAGS="-fPIC -fno-delete-null-pointer-checks"
+=======
+license="Custom"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://www.codon.org.uk/~mjg59/libx86/downloads/libx86-$version.tar.gz "
+checksum=5bf13104cb327472b5cb65643352a9138646becacc06763088d83001d832d048
+only_for_archs="i686 x86_64"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libx86-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"

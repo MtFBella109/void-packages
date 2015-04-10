@@ -2,6 +2,7 @@
 pkgname=wayland
 version=1.24.0
 revision=1
+<<<<<<< HEAD
 build_style=meson
 # "Tests must not be built with NDEBUG defined, they rely on assert()."
 configure_args="-Ddocumentation=false -Db_ndebug=false"
@@ -9,6 +10,15 @@ hostmakedepends="flex pkg-config"
 makedepends="expat-devel libffi-devel libfl-devel libxml2-devel"
 short_desc="Core Wayland window system code and protocol"
 maintainer="Érico Nogueira <ericonr@disroot.org>"
+=======
+build_style=gnu-configure
+configure_args="--disable-documentation --disable-static"
+hostmakedepends="automake libtool pkg-config flex"
+makedepends="libfl-devel libffi-devel expat-devel"
+short_desc="Wayland protocol compositor"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://wayland.freedesktop.org/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://wayland.freedesktop.org/"
 distfiles="https://gitlab.freedesktop.org/wayland/wayland/-/releases/${version}/downloads/wayland-${version}.tar.xz"

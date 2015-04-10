@@ -35,9 +35,15 @@ version=3.1.7
 distfiles="http://samba.org/ftp/$pkgname/$pkgname-$version.tar.bz2"
 build_style=gnu-configure
 makedepends="zlib-devel"
+<<<<<<< HEAD
 short_desc="compiler cache"
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://cache.samba.org"
+=======
+short_desc="A Fast C/C++ Compiler Cache"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://ccache.samba.org"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-2"
 checksum=4931aab14fb1f824b7d349a4366861a82ac19090097e9960f15a0ac8762b4941
 long_desc="

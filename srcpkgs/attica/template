@@ -3,6 +3,7 @@ pkgname=attica
 version=5.116.0
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 hostmakedepends="kcoreaddons extra-cmake-modules qt5-host-tools qt5-devel"
 makedepends="qt5-devel"
 short_desc="Qt library that implements the Open Collaboration Services API"
@@ -18,6 +19,16 @@ do_check() {
 	# (other URLs under api.kde-look.org seem to work fine)
 	ctest -E 'providertest'
 }
+=======
+hostmakedepends="cmake"
+makedepends="qt-devel"
+short_desc="A Qt library that implements the Open Collaboration Services API"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="https://projects.kde.org/projects/kdesupport/attica"
+distfiles="http://download.kde.org/stable/${pkgname}/${pkgname}-${version}.tar.bz2"
+checksum=3b9c53770862c0b21b7af7ea15951c35831126022bb8d052760d9cf8bd7ee4f8
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 attica-devel_package() {
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"

@@ -1,0 +1,15 @@
+# Template build file for 'minecraft'
+pkgname=minecraft
+version=0.5
+revision=1
+repository="nonfree"
+noarch="yes"
+depends="wmname wget"
+short_desc="Launcher for the famous Minecraft game"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.minecraft.net/"
+license="Propietary"
+
+do_install() {
+	vbin ${FILESDIR}/minecraft
+}

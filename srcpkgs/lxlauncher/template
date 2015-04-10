@@ -36,6 +36,7 @@ short_desc="LXDE launcher for netbooks"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://lxde.org/"
+<<<<<<< HEAD
 distfiles="https://github.com/lxde/lxlauncher/archive/refs/tags/${version}.tar.gz"
 checksum=f67d9dbf3a130819fd171b621b3683d7d20cd609554756481b965484ac591b49
 
@@ -58,3 +59,9 @@ lxlauncher_package() {
 	}
 }
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+=======
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${SOURCEFORGE_SITE}/lxde/$pkgname-$version.tar.xz"
+checksum=01b7408a6d6f42769e94a54028f56dc8e724c2271d6bc01712b728569c1b9103
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

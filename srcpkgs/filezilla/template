@@ -10,6 +10,7 @@ makedepends="gnutls-devel pugixml-devel dbus-devel libidn-devel sqlite-devel
  gtk+3-devel wxWidgets-gtk3-devel xdg-utils libfilezilla-devel boost-devel-minimal"
 depends="xdg-utils hicolor-icon-theme desktop-file-utils"
 short_desc="Fast and reliable FTP, FTPS and SFTP client"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://filezilla-project.org"
@@ -24,3 +25,10 @@ case "$XBPS_TARGET_MACHINE" in
 esac
 
 CXXFLAGS="-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://filezilla-project.org/"
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/FileZilla_${version}_src.tar.bz2"
+checksum=7968e2799437c0b89741bd7afbc077156525d930e9a18543fd087fbd8979de8d
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

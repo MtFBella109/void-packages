@@ -31,6 +31,7 @@ makedepends="libpng-devel glib-devel cairo-devel tiff-devel lcms2-devel
 depends="poppler-data"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="PDF rendering library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, GPL-3.0-or-later"
 homepage="https://poppler.freedesktop.org"
@@ -39,6 +40,13 @@ distfiles="https://poppler.freedesktop.org/poppler-${version}.tar.xz
  https://gitlab.freedesktop.org/poppler/test/-/archive/${_testVersion}/test-${_testVersion}.tar.gz"
 checksum="63f155142b77349e2bccaef148e754e7506ab1641e713b83af4f54a8f8b15369
  c4cbdbf44f1d5c1ccbd7de611e979d97b703851970819cbb021f97218a445ed2"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://poppler.freedesktop.org"
+distfiles="${homepage}/$pkgname-$version.tar.xz"
+checksum=4963e31ba5e17530a87b16588e22928bc044e8d28d02303dded981bff6725b98
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 skip_extraction="test-${_testVersion}.tar.gz"
 

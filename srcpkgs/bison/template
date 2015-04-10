@@ -36,6 +36,7 @@ revision=2
 depends="m4"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNU yacc(1) replacement"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=2354469782149e36c644ae7c3e5105895424ed21cda5c05b591cb3dc17068e6b
 long_desc="
@@ -53,3 +54,10 @@ pre_configure() {
 	echo '#define YYENABLE_NLS 1' >> lib/config.h
 }
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnu.org/software/bison/bison.html"
+license="GPL-3"
+distfiles="http://ftp.gnu.org/pub/gnu/bison/$pkgname-$version.tar.xz"
+checksum=43d8c5c466486031d5e7195a152ff49651ccac91599692e788b5ec5b693ca7fd
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

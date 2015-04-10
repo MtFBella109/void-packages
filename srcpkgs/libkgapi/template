@@ -3,6 +3,7 @@ pkgname=libkgapi
 version=25.08.3
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
  -DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -20,6 +21,16 @@ checksum=5a6590da04cf4a0c3b53f2a0c7d7c97cdf57f63854a0a4978c0859243bfbd15e
 do_check() {
 	:
 }
+=======
+hostmakedepends="cmake automoc4 pkg-config"
+makedepends="boost-devel qt-devel phonon-devel kdelibs-devel kdepimlibs-devel qjson-devel"
+short_desc="A KDE-based library for accessing various Google services via their public API"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL, LGPL, FDL"
+homepage="https://projects.kde.org/projects/extragear/libs/libkgapi"
+distfiles="http://download.kde.org/stable/${pkgname}/${version}/src/${pkgname}-${version}.tar.bz2"
+checksum=2d7dcaf5033acac381ea456b7320784898617cdc502587313bd8b653855d02cb
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libkgapi-devel_package() {
 	short_desc+=" - development files"

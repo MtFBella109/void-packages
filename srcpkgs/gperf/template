@@ -8,11 +8,16 @@ short_desc="Perfect hash function generator"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://www.gnu.org/software/gperf/"
+<<<<<<< HEAD
 distfiles="${GNU_SITE}/$pkgname/$pkgname-$version.tar.gz"
 checksum=fd87e0aba7e43ae054837afd6cd4db03a3f2693deb3619085e6ed9d8d9604ad8
 =======
 version=3.0.3
 revision=1
+=======
+license="GPL-3"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://ftp.gnu.org/gnu/$pkgname/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 short_desc="Perfect hash function generator"

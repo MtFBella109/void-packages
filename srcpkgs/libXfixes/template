@@ -7,7 +7,12 @@ build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="xorgproto libX11-devel"
 short_desc="Xfixes library and extension of X RandR from modular X.org"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="${XORG_SITE}"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://xorg.freedesktop.org"
 distfiles="${XORG_SITE}/lib/${pkgname}-${version}.tar.xz"

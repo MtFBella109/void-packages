@@ -8,6 +8,7 @@ configure_args="--enable-freetype-config"
 hostmakedepends="pkg-config"
 makedepends="bzip2-devel libpng-devel brotli-devel"
 short_desc="Font rendering engine and library API"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, FTL"
 homepage="https://www.freetype.org/"
@@ -24,6 +25,13 @@ post_install() {
 	vlicense LICENSE.TXT
 	vlicense docs/FTL.TXT
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.freetype.org/"
+license="GPL-2"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.bz2"
+checksum=387bcc4b780b12484aa2ec9f7db1a55d8286eb5639f45fbc0fbba7a4e5a1afb9
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 freetype-devel_package() {
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"

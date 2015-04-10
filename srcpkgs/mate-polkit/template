@@ -6,9 +6,35 @@ build_style=meson
 hostmakedepends="pkg-config gettext"
 makedepends="gtk+3-devel libglib-devel polkit-devel"
 short_desc="PolicyKit integration for the MATE desktop"
+<<<<<<< HEAD
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="LGPL-2.0-or-later"
 homepage="https://mate-desktop.org"
 changelog="https://raw.githubusercontent.com/mate-desktop/mate-polkit/master/NEWS"
 distfiles="https://pub.mate-desktop.org/releases/${version%.*}/mate-polkit-${version}.tar.xz"
 checksum=350a1dd0a8ed6a2c9c183cff2a21f394299e968fcc6ae2e8c93c565dae604ae8
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-3"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=bc01640c63f6248497ca78c3d8df8ff608d8bf1fbfce7c11416b014a109aeccd
+
+build_options="gir"
+if [ -z "$CROSS_BUILD" ]; then
+	build_options_default="gir"
+fi
+
+mate-polkit-devel_package() {
+	short_desc+=" - development files"
+	depends="polkit-devel mate-polkit>=${version}_${revision}"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/*.so
+		vmove usr/lib/pkgconfig
+		if [ "$build_option_gir" ]; then
+			vmove usr/share/gir-1.0
+		fi
+	}
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

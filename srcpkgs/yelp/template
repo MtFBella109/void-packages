@@ -46,7 +46,7 @@ depends="libsoup>=2.46 webkitgtk>=2.4 dconf>=0.20 hicolor-icon-theme
  desktop-file-utils yelp-xsl>=3.14"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Help browser for GNOME desktop"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.gnome.org"
 license="GPL-2"
 checksum=33f573da4d0b766aba7ebfab14470694e3245dffb2b63153f34bf8240b13c3a3

@@ -14,9 +14,15 @@ hostmakedepends="cmake flex"
 makedepends="ncurses-devel libressl-devel libcurl-devel libltdl-devel libnet-devel libpcap-devel pcre-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="/etc/${pkgname}/etter.conf"
+<<<<<<< HEAD
 short_desc="Network sniffer/interceptor/logger for ethernet LANs"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
+=======
+short_desc="A network sniffer/interceptor/logger for ethernet LANs"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://ettercap.github.com/ettercap/"
 distfiles="https://github.com/Ettercap/ettercap/archive/v${version}.tar.gz"
 checksum=d0c3ef88dfc284b61d3d5b64d946c1160fd04276b448519c1ae4438a9cdffaf3

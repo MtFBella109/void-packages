@@ -1,6 +1,20 @@
 # Template build file for 'font-bitstream-speedo'.
 pkgname=font-bitstream-speedo
+<<<<<<< HEAD
 version=1.0.0
+=======
+version=1.0.2
+revision=2
+noarch="yes"
+build_style=gnu-configure
+hostmakedepends="pkg-config bdftopcf mkfontdir"
+depends="font-util"
+font_dirs="/usr/share/fonts/X11/Speedo"
+short_desc="Standard Speedo Bitstream PCF fonts"
+homepage="http://xorg.freedesktop.org/"
+license="MIT"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

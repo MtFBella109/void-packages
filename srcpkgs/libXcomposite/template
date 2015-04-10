@@ -7,6 +7,7 @@ build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="xorgproto libXfixes-devel"
 short_desc="X Composite Library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="X11"
 homepage="https://wiki.freedesktop.org/xorg/"
@@ -16,6 +17,13 @@ checksum=fe40bcf0ae1a09070eba24088a5eb9810efe57453779ec1e20a55080c6dc2c87
 post_install() {
 	vlicense COPYING
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://xorg.freedesktop.org"
+license="MIT/X11"
+distfiles="${XORG_SITE}/lib/${pkgname}-${version}.tar.bz2"
+checksum=ede250cd207d8bee4a338265c3007d7a68d5aca791b6ac41af18e9a2aeb34178
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libXcomposite-devel_package() {
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"

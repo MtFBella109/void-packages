@@ -5,7 +5,11 @@ revision=2
 build_style=gnu-makefile
 make_use_env=yes
 short_desc="Session management in a clean and simple way"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="ISC"
 homepage="https://www.brain-dump.org/projects/abduco/"
 distfiles="https://www.brain-dump.org/projects/${pkgname}/${pkgname}-${version}.tar.gz"

@@ -14,9 +14,15 @@ depends="${makedepends}"
 fulldepends="perl"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="HTML::Tagset - data tables useful in parsing HTML"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/HTML-Tagset"
+=======
+homepage="http://search.cpan.org/~petdance/HTML-Tagset-3.20/Tagset.pm"
+license="Artistic, GPL-1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${CPAN_SITE}/HTML/HTML-Tagset-$version.tar.gz"
 checksum=adb17dac9e36cd011f5243881c9739417fd102fce760f8de4e9be4c7131108e2
 <<<<<<< HEAD

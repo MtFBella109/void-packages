@@ -6,6 +6,7 @@ build_style=meson
 hostmakedepends="libxslt"
 checkdepends="libxml2"
 short_desc="Database of mobile broadband service providers"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="custom:Creative Commons Public Domain"
 homepage="https://gitlab.gnome.org/GNOME/mobile-broadband-provider-info/"
@@ -15,3 +16,10 @@ checksum=7bf72daee64895c77c0f0d2f2b96c4117be3c063292a6d522392946b303cb841
 post_install() {
 	vlicense COPYING
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="CC-PD (Creative Commons Public Domain)"
+homepage="http://git.gnome.org/browse/mobile-broadband-provider-info/"
+distfiles="$GNOME_SITE/$pkgname/$version/$pkgname-$version.tar.xz"
+checksum=72507a732e0cd16cf27424bb094b1c7a03e2206c119ad124722a283e587755f1
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

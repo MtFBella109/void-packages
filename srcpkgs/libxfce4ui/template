@@ -28,7 +28,7 @@ makedepends="gtk+-devel libxfce4util-devel xfconf-devel dbus-glib-devel
 conf_files="/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Replacement of the old libxfcegui4 library"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-2, LGPL-2.1"
 homepage="http://xfce.org"
 distfiles="http://archive.xfce.org/xfce/4.10/src/$pkgname-$version.tar.bz2"

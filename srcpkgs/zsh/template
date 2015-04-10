@@ -31,6 +31,7 @@ configure_args="--enable-etcdir=/etc/zsh
 --enable-scriptdir=/usr/share/zsh/scripts
 --enable-pcre --enable-multibyte --enable-cap --with-tcsetpgrp"
 makedepends="gdbm-devel pcre-devel libcap-devel ncurses-devel"
+<<<<<<< HEAD
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Z SHell"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
@@ -39,6 +40,17 @@ homepage="https://www.zsh.org"
 distfiles="https://www.zsh.org/pub/zsh-${version}.tar.xz"
 checksum=9b8d1ecedd5b5e81fbf1918e876752a7dd948e05c1a0dba10ab863842d45acd5
 register_shell="/bin/zsh /usr/bin/zsh"
+=======
+register_shell="/bin/zsh"
+short_desc="The Z SHell"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.zsh.org"
+license="zsh"
+distfiles="http://www.zsh.org/pub/zsh-$version.tar.bz2"
+checksum=544e27de81740286b916d1d77c9f48ad7c26ad7943ed96d278abee67cf6704b3
+
+build_pie=yes
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 lib32disabled=yes
 conf_files="/etc/zsh/*"
 

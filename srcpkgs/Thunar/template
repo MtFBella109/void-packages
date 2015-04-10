@@ -16,6 +16,7 @@ makedepends="exo-devel libexif-devel libgudev-devel libnotify-devel
 depends="desktop-file-utils hicolor-icon-theme"
 short_desc="Thunar File Manager"
 <<<<<<< HEAD
+<<<<<<< HEAD
 maintainer="Saksham <voidisnull@duck.com>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://docs.xfce.org/xfce/thunar/Start"
@@ -24,6 +25,9 @@ distfiles="https://archive.xfce.org/src/xfce/thunar/${version%.*}/thunar-${versi
 checksum=e815e034c073d634d0e77566837e1d9417b65c886924e3678e3325d5466c784d
 =======
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://thunar.xfce.org"
 license="GPL-2, LGPL-2.1"
 distfiles="http://archive.xfce.org/src/xfce/thunar/${version%.*}/${pkgname}-${version}.tar.bz2"

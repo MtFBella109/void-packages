@@ -8,10 +8,16 @@ build_style=gnu-configure
 makedepends="geoip-devel libressl-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 configure_args="--with-docdir=/usr/share/doc/pen"
+<<<<<<< HEAD
 makedepends="geoip-devel openssl-devel"
 short_desc="Load balancer for simple TCP/UDP based protocols"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+short_desc="Load balancer for simple TCP based protocols"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://siag.nu/pen"
 distfiles="http://siag.nu/pub/pen/pen-${version}.tar.gz"
 checksum=2b640795029df9d1672e17202c109cc5d42538f6754a6070dc27da640881e864

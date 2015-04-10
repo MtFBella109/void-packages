@@ -20,8 +20,12 @@ hostmakedepends="automake libtool python"
 makedepends="libressl-devel pcre-devel python-devel libldap-devel pam-devel
  libmysqlclient-devel ffmpeg-devel geoip-devel"
 short_desc="Innovative, feature rich and easy to configure web server"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.cherokee-project.com/"
 license="GPL-2"
 checksum=ca465ab3772479fc843b38ffc45113bf24d8bfae9185cdd5176b099d5a17feb8

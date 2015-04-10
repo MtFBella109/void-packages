@@ -7,7 +7,11 @@ build_style=gnu-configure
 configure_args="--disable-static --disable-gui
  --disable-libodbc --includedir=/usr/include/libiodbc"
 short_desc="Independent Open DataBase Connectivity"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="LGPL-2.1"
 homepage="http://www.iodbc.org/dataspace/iodbc/wiki/iODBC/"
 distfiles="${SOURCEFORGE_SITE}/iodbc/${pkgname}-${version}.tar.gz"

@@ -11,7 +11,7 @@ hostmakedepends="pkg-config"
 makedepends="libarchive-devel zlib-devel openssl-devel"
 =======
 short_desc="The XBPS package system utilities - static binaries"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.voidlinux.eu/xbps"
 license="2-clause-BSD"
 

@@ -16,6 +16,7 @@ makedepends="zlib-devel libX11-devel libgdiplus-devel"
 depends="libgdiplus>=${version}"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Free implementation of the .NET platform including runtime and compiler"
+<<<<<<< HEAD
 maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="MIT, BSD-3-Clause, GPL-2.0-or-later, LGPL-2.0-or-later, MPL-1.1"
 homepage="https://gitlab.winehq.org/mono/mono"
@@ -45,3 +46,10 @@ mono-devel_package() {
 		vmove usr/lib/pkgconfig
 	}
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.go-mono.org"
+license="GPL-2, LGPL-2, MPL, MIT"
+distfiles="http://download.mono-project.com/sources/mono/$pkgname-$version.tar.bz2"
+checksum=8fdc69329c8d669d1c5e5bc922a5df8a3ed61a72344b92e5a073809bf1b36783
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

@@ -22,6 +22,7 @@ makedepends="
  libsamplerate-devel
  $(vopt_if gtk gtk+3-devel) $(vopt_if qt 'qt6-base-devel qt6-multimedia-devel')"
 short_desc="Plugins for the Audacious media player"
+<<<<<<< HEAD
 maintainer="classabbyamp <void@placeviolette.net>"
 license="BSD-2-Clause"
 homepage="https://audacious-media-player.org/"
@@ -34,3 +35,10 @@ build_options_default="gtk qt"
 post_install() {
 	vlicense COPYING
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+homepage="http://audacious-media-player.org/"
+distfiles="http://distfiles.audacious-media-player.org/${pkgname}-${version}.tar.bz2"
+checksum=0ae17d573dd094b3124e0bbec0c059c4ca668436830c922eb00f0b7eb9745195
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

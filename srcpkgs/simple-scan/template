@@ -25,9 +25,14 @@ hostmakedepends="pkg-config itstool intltool glib-devel vala"
 makedepends="colord-devel gtk+3-devel sqlite-devel dconf-devel sane-devel libgudev-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme sane"
+<<<<<<< HEAD
 makedepends="pkg-config itstool intltool colord-devel gtk+3-devel dconf-devel sane-devel libgudev-devel"
 short_desc="Simple scanning utility"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+short_desc="A GTK Simple scanning utility"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-3"
 checksum=e1ed8f90f95300c7b75249d0e6abbc06185db2afd4d44be4b8d98822d25d4ece
 long_desc="

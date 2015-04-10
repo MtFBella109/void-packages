@@ -32,6 +32,7 @@ configure_args="--disable-schemas-compile --disable-static
 makedepends="pkg-config intltool gnome-doc-utils gobject-introspection vala-devel libxklavier-devel libgee-devel pygobject-devel clutter-devel gtk+3-devel libXtst-devel"
 fulldepends="pyatspi dbus-python pygobject gir-freedesktop at-spi2-atk desktop-file-utils"
 short_desc="An alternative to the Gnome On-screen Keyboard"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=bcc64498b20c368747c3630d501a66ccf904db15d855f33fd4f963b5b19723ad
 long_desc="
@@ -64,6 +65,13 @@ libcaribou_package() {
 		vmove "usr/lib/gnome-settings-daemon*"
 	}
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="GPL-3"
+distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
+checksum=8d94977f3364926600b5f711406e765a9a61aa444609f87a1d435b301e147226
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 caribou-devel_package() {
 	lib32disabled=yes

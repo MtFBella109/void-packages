@@ -13,8 +13,13 @@ revision=2
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 makedepends="libXaw-devel"
 short_desc="Rasterizer library for Adobe Type 1 fonts"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.ibiblio.org/pub/Linux/libs/graphics/!INDEX.html"
 distfiles="http://www.ibiblio.org/pub/Linux/libs/graphics/${pkgname}-${version}.tar.gz"
 checksum=821328b5054f7890a0d0cd2f52825270705df3641dbd476d58d17e56ed957b59

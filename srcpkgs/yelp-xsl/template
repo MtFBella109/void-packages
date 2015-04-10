@@ -8,6 +8,7 @@ build_style=meson
 hostmakedepends="pkg-config gettext itstool libxslt"
 makedepends="libxslt-devel"
 short_desc="Help browser for GNOME desktop - XSL and misc files"
+<<<<<<< HEAD
 maintainer="Érico Nogueira <ericonr@disroot.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Apps/Yelp/Xsl"
@@ -23,6 +24,9 @@ build_style=gnu-configure
 makedepends="pkg-config intltool itstool libxslt-devel"
 short_desc="Help browser for GNOME desktop - XSL and misc files"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-2"
 checksum=421b622da421f310add15c9d0cf23f3d66c3e0847292f45341e2f6b2db326325
 long_desc="

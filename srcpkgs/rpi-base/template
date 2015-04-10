@@ -1,8 +1,19 @@
 # Template file for 'rpi-base'
 pkgname=rpi-base
+<<<<<<< HEAD
 version=3.0
 revision=3
 archs="armv6l* armv7l* aarch64*"
+=======
+version=2.1
+revision=1
+homepage="http://www.voidlinux.eu"
+short_desc="Void Linux RaspberryPi base files"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Public Domain"
+
+only_for_archs="armv6l armv7l"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 depends="virtual?ntp-daemon rpi-firmware rpi-kernel"
 short_desc="Void Linux Raspberry Pi base files"
 maintainer="Orphaned <orphan@voidlinux.org>"

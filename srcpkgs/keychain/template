@@ -6,6 +6,7 @@ revision=1
 build_style=gnu-makefile
 hostmakedepends="perl"
 short_desc="Keychain manager for ssh-agent and gpg-agent"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="http://www.funtoo.org/Keychain"
@@ -22,6 +23,9 @@ depends="dash"
 makedepends="perl"
 short_desc="keychain manager for ssh-agent and gpg-agent"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.funtoo.org/wiki/Keychain"
 license="GPL-2"
 checksum=1107fe3f78f6429d4861d64c5666f068f159326d22ab80a8ed0948cb25375191

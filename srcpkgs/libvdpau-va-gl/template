@@ -3,11 +3,19 @@ pkgname=libvdpau-va-gl
 version=0.4.2
 revision=2
 build_style=cmake
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="MesaLib-devel libva-devel libvdpau-devel"
 short_desc="VDPAU driver with VA-API/OpenGL backend"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+=======
+hostmakedepends="pkg-config cmake git"
+makedepends="glib-devel ffmpeg-devel glu-devel libva-devel libvdpau-devel"
+short_desc="A VDPAU driver with VA-API/OpenGL backend"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://github.com/i-rinat/libvdpau-va-gl"
 changelog="https://raw.githubusercontent.com/i-rinat/libvdpau-va-gl/master/ChangeLog"
 distfiles="${homepage}/releases/download/v${version}/libvdpau-va-gl-${version}.tar.gz"

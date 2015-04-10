@@ -23,7 +23,12 @@ hostmakedepends="libtool automake pkg-config"
 makedepends="libX11-devel libva-devel>=1:1.0.16 libdrm-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Video Acceleration (VA) API - Intel Graphics backend"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://freedesktop.org/wiki/Software/vaapi"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 <<<<<<< HEAD
 homepage="https://01.org/linuxmedia"

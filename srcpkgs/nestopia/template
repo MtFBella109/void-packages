@@ -2,6 +2,7 @@
 pkgname=nestopia
 version=1.53.2
 revision=1
+<<<<<<< HEAD
 build_style=gnu-configure
 hostmakedepends="autoconf-archive automake pkg-config"
 makedepends="SDL2-devel gtk+3-devel libao-devel libarchive-devel
@@ -14,6 +15,20 @@ homepage="http://0ldsk00l.ca/nestopia/"
 changelog="https://raw.githubusercontent.com/0ldsk00l/nestopia/master/ChangeLog"
 distfiles="https://github.com/0ldsk00l/nestopia/archive/${version}.tar.gz"
 checksum=7783d2673ad496109e7dd3d75756cfef30c5b400409131b83b45c2fa3ddd735b
+=======
+wrksrc="rdanbrook-nestopia-97eab76"
+build_style=gnu-makefile
+make_build_args="PREFIX=/usr"
+hostmakedepends="pkg-config"
+makedepends="SDL2-devel gtk+3-devel glu-devel libarchive-devel libao-devel"
+depends="desktop-file-utils"
+short_desc="NES/Famicom emulator designed to emulate the NES hardware accurately"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://nestopia.sourceforge.net/"
+distfiles="https://github.com/rdanbrook/nestopia/tarball/${version}>${pkgname}-${version}.tar.gz"
+checksum=512a2158311fc081bfc7e217f378b44a3843fe01f34a37b29d32c01507f465c1
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_configure() {
 	autoreconf -vif

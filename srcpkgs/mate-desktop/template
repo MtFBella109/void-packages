@@ -10,6 +10,7 @@ makedepends="gtk+3-devel dconf-devel libXrandr-devel startup-notification-devel
  iso-codes gdk-pixbuf-devel libglib-devel"
 depends="dconf hicolor-icon-theme dejavu-fonts-ttf"
 short_desc="Library with common API for various MATE modules"
+<<<<<<< HEAD
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://mate-desktop.org"
@@ -22,6 +23,13 @@ make_check=no # only abi check, failure
 # Package build options
 build_options="gir"
 build_options_default="gir"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-3"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=0ed978e40b12d12cee2b9eb2457a9c9d43a15224ba18271494b1fde5f5bcf3cb
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 mate-desktop-devel_package() {
 	short_desc+=" - development files"

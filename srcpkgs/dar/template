@@ -9,8 +9,13 @@ hostmakedepends="automake gettext-devel libtool pkg-config which"
 makedepends="acl-devel bzip2-devel e2fsprogs-devel libgcrypt-devel liblzma-devel
  lzo-devel librsync-devel libcurl-devel libargon2-devel gpgme-devel"
 short_desc="Shell command that backs up directory trees and files"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://dar.linux.free.fr/"
 distfiles="${SOURCEFORGE_SITE}/dar/dar-${version}.tar.gz"
 checksum=6131b7d6d79a093bfcb320abbb90df941df8e9bc73f89ae6410bccdeffa5eb46

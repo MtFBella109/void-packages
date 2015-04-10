@@ -17,6 +17,7 @@ hostmakedepends="libxslt docbook-xsl"
 depends="${hostmakedepends}"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Tool to help transform XML documents into other formats"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://pagure.io/xmlto/"
@@ -27,6 +28,13 @@ checksum=40504db68718385a4eaa9154a28f59e51e59d006d1aa14f5bc9d6fded1d6017a
 pre_configure() {
 	autoreconf -fi
 =======
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://cyberelk.net/tim/software/xmlto/"
+distfiles="https://fedorahosted.org/releases/x/m/xmlto/xmlto-$version.tar.bz2"
+checksum=efb49b2fb3bc27c1a1e24fe34abf19b6bf6cbb40844e6fd58034cdf21c54b5ec
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	# Requires bash!

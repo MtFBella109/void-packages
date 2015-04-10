@@ -3,6 +3,7 @@ pkgname=lxqt-policykit
 version=2.3.0
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 hostmakedepends="pkg-config lxqt-build-tools qt6-tools polkit-qt6-devel perl"
 makedepends="liblxqt-devel polkit-qt6-devel"
 short_desc="LXQt PolicyKit agent"
@@ -12,3 +13,13 @@ homepage="https://lxqt-project.org"
 distfiles="https://github.com/lxqt/lxqt-policykit/archive/${version}.tar.gz"
 checksum=b01be44c101b83adc01a8935f444e2b2f94c94d9ae6131e28483f38971ec12d3
 replaces="lxqt-common>=0"
+=======
+hostmakedepends="cmake pkg-config"
+makedepends="liblxqt-devel libqtxdg-devel polkit-qt5-devel"
+short_desc="LXQt policykit agent"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="http://lxqt.org/"
+distfiles="http://downloads.lxqt.org/lxqt/${version}/${pkgname}-${version}.tar.xz"
+checksum=6bed4b6859085f4330405f25b47beee9d183a37ae7c2ca6876c15b2a1c2cf549
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

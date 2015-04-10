@@ -22,7 +22,14 @@ configure_args="--without-included-gettext"
 revision=2
 makedepends="automake"
 short_desc="Character set conversion utility"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+homepage="http://recode.progiciels-bpi.ca/"
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${DEBIAN_SITE}/main/r/${pkgname}/${pkgname}_${version}.orig.tar.gz"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=e3e6a4f3f8e5c6052ab70155990c074d87aa0b614fc1be31d194750d1d962fcf
 long_desc="
  Free recode converts files between character sets and usages. When exact

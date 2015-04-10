@@ -15,9 +15,15 @@ makedepends="perl-LWP-MediaTypes perl-Encode-Locale perl-URI perl-HTTP-Date perl
 depends="${makedepends}"
 checkdepends="perl-Test-Needs"
 short_desc="HTTP::Message - HTTP style message (base class)"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/HTTP-Message"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/HTTP-Message"
+license="Artistic, GPL-1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${CPAN_SITE}/HTTP/HTTP-Message-$version.tar.gz"
 checksum=01cb8406612a3f738842d1e97313ae4d874870d1b8d6d66331f16000943d4cbe
 =======

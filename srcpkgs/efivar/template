@@ -10,11 +10,17 @@ make_install_args="libdir=/usr/lib"
 hostmakedepends="pkg-config mdocml"
 checkdepends="grub"
 short_desc="Tools to manipulate EFI variables"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/rhboot/efivar"
 distfiles="${homepage}/archive/${version}.tar.gz"
 checksum=c9edd15f2eeeea63232f3e669a48e992c7be9aff57ee22672ac31f5eca1609a6
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="https://github.com/vathpela/efivar"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 disable_parallel_check=yes
 

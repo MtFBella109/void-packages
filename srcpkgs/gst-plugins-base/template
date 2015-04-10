@@ -16,7 +16,11 @@ configure_args="--enable-experimental --disable-gnome_vfs
 --with-gudev --disable-static"
 makedepends="pkg-config gobject-introspection libgudev-devel gstreamer-devel glib-devel libxml2-devel pango-devel cairo-devel freetype-devel fontconfig-devel liboil-devel alsa-lib-devel libXv-devel libXext-devel libvisual-devel cdparanoia-devel libtheora-devel libvorbis-devel orc-devel"
 short_desc="GStreamer Base Plug-ins"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://gstreamer.freedesktop.org/"
 license="GPL-2, LGPL-2.1"
 checksum=1fe45c3894903001d4d008b0713dab089f53726dcb5842d5b40c2595a984e64a

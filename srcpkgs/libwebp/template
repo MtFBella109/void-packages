@@ -25,8 +25,13 @@ subpackages="$pkgname-devel"
 makedepends="libjpeg-turbo-devel libpng-devel tiff-devel giflib-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="WebP image format"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://code.google.com/speed/webp/"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="https://developers.google.com/speed/webp/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="BSD"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 distfiles="http://webp.googlecode.com/files/${pkgname}-${version}.tar.gz"

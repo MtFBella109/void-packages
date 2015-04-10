@@ -19,9 +19,17 @@ makedepends="
  gst-plugins-good1 iso-codes"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="CD ripping tool using GTK+ and GStreamer"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Apps/SoundJuicer"
+=======
+depends="hicolor-icon-theme desktop-file-utils gsettings-desktop-schemas
+ iso-codes gst-plugins-good1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://burtonini.com/blog/computers/sound-juicer"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
 checksum=ae375f357a1b8b81e4aff737c9d6c98bc2dadfe20e71754b1d52a79f036aa521
 =======

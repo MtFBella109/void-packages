@@ -40,7 +40,7 @@ hostmakedepends="unzip scons"
 makedepends="zlib-devel gdbm-devel libressl-devel apr-util-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="High-performance asynchronous HTTP client library"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="Apache-2.0"
 homepage="http://code.google.com/p/serf/"
 distfiles="http://serf.googlecode.com/files/serf-${version}.tar.bz2"

@@ -7,9 +7,17 @@ configure_args="THEME_ENGINE_CFLAGS=unused THEME_ENGINE_LIBS=unused"
 hostmakedepends="pkg-config gettext itstool icon-naming-utils"
 depends="librsvg mate-icon-theme"
 short_desc="Default themes for the MATE desktop"
+<<<<<<< HEAD
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://mate-desktop.org"
 changelog="https://raw.githubusercontent.com/mate-desktop/mate-themes/master/NEWS"
 distfiles="https://pub.mate-desktop.org/releases/themes/${version%.*}/mate-themes-${version}.tar.xz"
 checksum=224e89d364eb3b73f1cf756d05494a98421a93cbf54349a2c85fc607eb755ed7
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=e767c2c9e56b645a9e5fde827ae3a3a33b5d8767d3bfbe4c63c8b043dbac63d5
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

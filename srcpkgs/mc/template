@@ -42,6 +42,7 @@ configure_args="--without-ext2undel --with-screen=mcslang
 makedepends="pkg-config glib-devel e2fsprogs-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="User-friendly file manager and visual shell"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=086ab03daaac28a28c0ddb9a709040b59e1322f6bfa68e39d004d9c66b119e7e
 long_desc="
@@ -57,3 +58,11 @@ build_depends="glib-2.18.0"
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://www.ibiblio.org/mc/"
+#distfiles="http://www.midnight-commander.org/downloads/mc-${version}.tar.xz"
+distfiles="http://fossies.org/linux/misc/mc-${version}.tar.gz"
+checksum=e0518f7e41f1536a0737662187fe4f1c743e16d1419019541ad97ea34d9b103e
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

@@ -9,6 +9,7 @@ makedepends="$(vopt_if gtk3 gtk+3-devel)
  startup-notification-devel eudev-libudev-devel ffmpegthumbnailer-devel"
 depends="hicolor-icon-theme desktop-file-utils"
 short_desc="Multi-panel tabbed file manager"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="http://ignorantguru.github.io/spacefm/"
@@ -23,3 +24,10 @@ CFLAGS="-fcommon"
 post_patch() {
 	vsed -i -e '/DATADIRNAME=/s/=.*/=share/' configure
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://ignorantguru.github.com/spacefm/"
+distfiles="https://github.com/IgnorantGuru/spacefm/raw/pkg/${version}/spacefm-${version}.tar.xz"
+checksum=75886cc93e6586753f01242ba883856567c3fdc90d240f112662ca3080e25955
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

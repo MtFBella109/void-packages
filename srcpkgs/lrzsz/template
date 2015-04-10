@@ -5,10 +5,17 @@ revision=6
 build_style=gnu-configure
 configure_args="--program-transform-name=s/l//"
 short_desc="Unix communication package providing the XMODEM, YMODEM ZMODEM file transfer protocols"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://ohse.de/uwe/software/lrzsz.html"
 distfiles="https://ohse.de/uwe/releases/$pkgname-$version.tar.gz"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://ohse.de/uwe/software/lrzsz.html"
+distfiles="http://ohse.de/uwe/releases/$pkgname-$version.tar.gz"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=c28b36b14bddb014d9e9c97c52459852f97bd405f89113f30bee45ed92728ff1
 <<<<<<< HEAD
 conflicts="trx>=0 sx>=0"

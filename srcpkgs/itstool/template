@@ -17,7 +17,7 @@ checksum=6b9a7cd29a12bb95598f5750e8763cee78836a1a207f85b74d8b3275b27e87ca
 =======
 depends="python>=0 libxml2-python>=0"
 short_desc="ITS Tool"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-3"
 checksum=49235f63b536f95927e26d093bfe4513e2be042d0dd8be9c84a0d58c70262514
 long_desc="

@@ -19,6 +19,7 @@ makedepends="gtk+-devel libSM-devel zlib-devel libcanberra-devel libgtop-devel l
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils"
 short_desc="Common utilities for the MATE desktop"
+<<<<<<< HEAD
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://mate-desktop.org"
@@ -28,6 +29,13 @@ checksum=58449d7a0d1d900ff03b78ca9f7e98c21e97f47fc26bee7ff1c61834f22f88d3
 
 build_options="wayland"
 build_options_default="wayland"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=ce120efdd959198b3ed14c4d549c031e795b507cf609204757d34b68112dd328
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	rm -r ${DESTDIR}/usr/include

@@ -17,10 +17,16 @@ lib32disabled=yes
 =======
 depends="glibc"
 short_desc="Gives a fake chroot environment"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=da5d61f1c752e2e43400fc6c70cb8ad2f7177a3295534f8e0c6e3c208432d9f5
 long_desc="
  This package provides a library which overrides libc functions, so it is
  possible to use root-specific tools without root privileges."
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="https://github.com/dex4er/fakechroot"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

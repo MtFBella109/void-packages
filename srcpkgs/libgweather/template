@@ -30,6 +30,7 @@ hostmakedepends="pkg-config intltool glib-devel $(vopt_if gir 'gobject-introspec
 makedepends="libxml2-devel libsoup-gnome-devel gtk+3-devel geocode-glib-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNOME Weather information access library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://wiki.gnome.org/Projects/LibGWeather"
@@ -49,6 +50,9 @@ makedepends="pkg-config intltool libxml2-devel gtk+3-devel libsoup-devel libsoup
 fulldepends="gnome-icon-theme"
 short_desc="Weather information access library"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="LGPL-2.1"
 checksum=ee9c4d09f33ae2b066dd1e696aa3e483a689cba6d63bcd388cc2ef95df9b1b60
 long_desc="

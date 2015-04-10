@@ -3,8 +3,13 @@ pkgname=lmdb
 version=0.9.31
 revision=1
 short_desc="Lightning Memory-Mapped Database Manager"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="OLDAP-2.8"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="OpenLDAP 2.8 license"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://symas.com/mdb/"
 distfiles="https://github.com/LMDB/lmdb/archive/LMDB_${version}.tar.gz"
 checksum=dd70a8c67807b3b8532b3e987b0a4e998962ecc28643e1af5ec77696b081c9b0

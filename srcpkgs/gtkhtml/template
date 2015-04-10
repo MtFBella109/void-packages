@@ -14,7 +14,11 @@ makedepends="gtk+3-devel enchant-devel ORBit2-devel
 depends="gsettings-desktop-schemas>=3.12 iso-codes"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Layout engine written in C using the GTK+ widget toolkit"
+<<<<<<< HEAD
 maintainer="davehome <davehome@redthumb.info.tm>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnome.org"
 license="GPL-2"
 checksum=e72fb264bae45f2a340818c645248c29eaa2acf3d2bb3c2316ae296a0d438558

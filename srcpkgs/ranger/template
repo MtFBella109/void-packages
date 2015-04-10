@@ -8,9 +8,17 @@ makedepends="python3-devel"
 depends="python3"
 checkdepends="python3-pytest"
 short_desc="File manager with an ncurses frontend written in Python"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-only"
 homepage="https://ranger.github.io"
 changelog="https://raw.githubusercontent.com/ranger/ranger/master/CHANGELOG.md"
 distfiles="https://github.com/ranger/ranger/archive/refs/tags/v${version}.tar.gz"
 checksum=7ad75e0d1b29087335fbb1691b05a800f777f4ec9cba84faa19355075d7f0f89
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://ranger.nongnu.org"
+distfiles="http://ranger.nongnu.org/${pkgname}-${version}.tar.gz"
+checksum=ccb230a5d2d71ca11612b5af1ca515f9d490b51b1546678828e306252677db5e
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

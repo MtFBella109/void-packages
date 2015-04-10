@@ -29,6 +29,7 @@ makedepends="glib-devel libressl-devel qt-devel phonon-devel kdelibs-devel
 depends="hicolor-icon-theme"
 checkdepends="ebook-tools dbus"
 short_desc="KDE Document Viewer"
+<<<<<<< HEAD
 maintainer="John <me@johnnynator.dev>"
 license="GPL-2.0-only"
 homepage="https://kde.org/applications/en/graphics/org.kde.okular"
@@ -43,6 +44,13 @@ jsfunctionstest|formattest|keystroketest|signunsignedfieldtest|documenttest|sear
 editannotationcontentstest|addremoveannotationtest|translateannotationtest|modifyannotationpropertiestest| \
 editformstest|calculatetexttest|mainshelltest|annotationtoolbartest|signatureformtest|jsfunctionstest|editannotationcontentstest|editformstest"
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL, LGPL, FDL"
+homepage="http://kde.org/applications/graphics/okular/"
+distfiles="http://download.kde.org/stable/${version}/src/${pkgname}-${version}.tar.xz"
+checksum=01d8704a72ff6ece4d1cee73926f7c5ff7e77fa98733fe0b37e8a824ff965019
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libokular_package() {
 	short_desc+=" - runtime library"

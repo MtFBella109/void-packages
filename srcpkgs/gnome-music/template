@@ -23,6 +23,7 @@ makedepends="python3.4-devel python-gobject-devel python3.4-dbus
 depends="python3.4-gobject>=3.14 python3.4-dbus desktop-file-utils"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNOME music playing application"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Apps/Music"
@@ -31,3 +32,10 @@ changelog="https://gitlab.gnome.org/GNOME/gnome-music/-/raw/gnome-47/NEWS"
 distfiles="${GNOME_SITE}/gnome-music/${version%.*}/gnome-music-${version}.tar.xz"
 checksum=8cdaacd05262b63bb1608a25acad516e892c332232357cb9b7f68f2cfb86d66e
 lib32disabled=yes
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://live.gnome.org/Apps/Music"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/3.14/$pkgname-$version.tar.xz"
+checksum=9bf614cd790bc7abebe56c65f3acae56c90ea5488f97a41a8ef70bcbce42604a
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

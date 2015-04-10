@@ -7,6 +7,7 @@ build_style=meson
 hostmakedepends="pkg-config"
 makedepends="libglib-devel"
 short_desc="Utilities to manage desktop entries"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://www.freedesktop.org/wiki/Software/desktop-file-utils"
@@ -23,6 +24,10 @@ distfiles="http://freedesktop.org/software/$pkgname/releases/$pkgname-$version.t
 build_style=gnu_configure
 =======
 version=0.20
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.freedesktop.org/wiki/Software/desktop-file-utils"
 distfiles="http://www.freedesktop.org/software/$pkgname/releases/$pkgname-$version.tar.xz"
 build_style=gnu-configure

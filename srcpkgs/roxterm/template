@@ -7,6 +7,7 @@ hostmakedepends="ImageMagick glib-devel itstool librsvg-utils libtool
  pkg-config po4a xmlto"
 makedepends="dbus-glib-devel libSM-devel vte3-devel"
 depends="desktop-file-utils hicolor-icon-theme"
+<<<<<<< HEAD
 short_desc="Highly configurable terminal emulator"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-3.0-only"
@@ -14,3 +15,21 @@ homepage="https://github.com/realh/roxterm"
 changelog="https://raw.githubusercontent.com/realh/roxterm/master/debian/changelog"
 distfiles="https://github.com/realh/roxterm/archive/${version}.tar.gz"
 checksum=5d5c41ba3153e6c4b208219108b57dab6044169899ec06fef3d18b27fa6fb97c
+=======
+short_desc="Tabbed, VTE-based terminal emulator"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://roxterm.sourceforge.net"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.bz2"
+checksum=168e8cf8747820cdee1815c9b47ee188e2f7d6187f7f06d215f4728de5c7faf7
+
+do_configure() {
+	python2 mscript.py configure --prefix=/usr --cc="$CC" --cpp="$CPP" --cxx="$CXX" --ld="$LD"
+}
+do_build() {
+	python2 mscript.py build --cc="$CC" --cpp="$CPP" --cxx="$CXX" --ld="$LD" --cflags="$CFLAGS" --ldflags="$LDFLAGS"
+}
+do_install() {
+	python2 mscript.py install --destdir=${DESTDIR}
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

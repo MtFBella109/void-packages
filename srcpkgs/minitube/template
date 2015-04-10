@@ -2,6 +2,7 @@
 pkgname=minitube
 version=3.9.3
 revision=2
+<<<<<<< HEAD
 build_style=qmake
 hostmakedepends="qt5-tools qt5-host-tools qt5-qmake git"
 makedepends="qt5-devel phonon-qt5-devel qt5-script-devel qt5-declarative-devel
@@ -10,6 +11,14 @@ depends="virtual?phonon-qt5-backend desktop-file-utils hicolor-icon-theme"
 short_desc="Qt5-based YouTube client"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
+=======
+wrksrc=$pkgname
+makedepends="qt-devel phonon-devel"
+depends="virtual?phonon-backend desktop-file-utils hicolor-icon-theme"
+short_desc="A native YouTube client in Qt4"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://flavio.tordini.org/minitube"
 distfiles="https://github.com/flaviotordini/minitube/releases/download/${version}/minitube-${version}.tar.bz2"
 checksum=0e2e70ff366218353f145a48fb1cc65def540a47082485dc918f8dab904a648c

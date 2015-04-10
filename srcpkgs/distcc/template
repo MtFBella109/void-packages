@@ -11,6 +11,7 @@ hostmakedepends="automake libtool pkg-config which"
 makedepends="binutils-devel popt-devel avahi-libs-devel"
 checkdepends="procps-ng"
 short_desc="Distributed compilation for faster C/C++ builds"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://distcc.github.io"
@@ -32,6 +33,13 @@ fi
 pre_configure() {
 	./autogen.sh
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://code.google.com/p/distcc"
+license="GPL-2"
+distfiles="http://distcc.googlecode.com/files/${pkgname}-${version}.tar.bz2"
+checksum=311671e844625d7fdb18dd3d096cd855751cfe8de13827682bcb7beff9133b30
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	local f x

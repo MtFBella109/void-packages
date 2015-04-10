@@ -15,8 +15,16 @@ makedepends="libxfce4ui-devel xfce4-panel-devel libwnck2-devel libgksu-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme desktop-file-utils"
 short_desc="XFCE task manager plugin"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://docs.xfce.org/apps/xfce4-taskmanager/start"
 distfiles="https://archive.xfce.org/src/apps/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=29bdc7840ab8b9025f6c0e456a83a31090d1c9fd9e26b359baa4a4010cfb0b90
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://goodies.xfce.org/projects/panel-plugins/xfce4-taskmanager"
+license="GPL-2"
+distfiles="http://archive.xfce.org/src/apps/${pkgname}/${version%.*}/${pkgname}-${version}.tar.bz2"
+checksum=2e1eb161f966cbfbd68bd029fb59115bc5ab0c0704cb500d20e7d73967e59ecb
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

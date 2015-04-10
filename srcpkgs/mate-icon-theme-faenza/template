@@ -4,11 +4,19 @@ version=1.20.0
 revision=2
 depends="gtk-update-icon-cache hicolor-icon-theme"
 short_desc="Faenza icon theme for MATE"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://mate-desktop.org"
 distfiles="https://pub.mate-desktop.org/releases/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=ca7202b7c880399d3d1ccd409b79fd0de728350dcf3fe1b4a758d06559ca1b00
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=6d1044af459373178ce05305db66b7dc6afb03b5475eacd122c19156fea0307b
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_install() {
 	vmkdir usr/share/icons

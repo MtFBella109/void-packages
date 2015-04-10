@@ -16,7 +16,19 @@ checksum=40a47c7a164c7f981ce3787b4b37f7e411fb43231dcde543d70094075dacfef9
 
 conf_files="
 	/etc/X11/xinit/xinitrc
+<<<<<<< HEAD
 	/etc/X11/xinit/xserverrc"
+=======
+	/etc/X11/xinit/xserverrc
+	/etc/skel/.xinitrc
+	/etc/skel/.xsession"
+short_desc="X init program"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://xorg.freedesktop.org/"
+license="MIT"
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+checksum=75d88d7397a07e01db253163b7c7a00b249b3d30e99489f2734cac9a0c7902b3
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vinstall ${FILESDIR}/xserverrc 644 etc/X11/xinit

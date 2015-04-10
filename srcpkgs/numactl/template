@@ -5,6 +5,7 @@ revision=1
 build_style=gnu-configure
 hostmakedepends="automake libtool"
 short_desc="Simple NUMA policy support"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-only"
 homepage="https://github.com/numactl/numactl"
@@ -15,6 +16,14 @@ if [ "$XBPS_TARGET_MACHINE" = "i686" ]; then
 	# XXX
 	nopie=yes
 fi
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="http://oss.sgi.com/projects/libnuma/"
+distfiles="ftp://oss.sgi.com/www/projects/libnuma/download/${pkgname}-${version}.tar.gz"
+checksum=dbdac8fe74f13b2e2864bba352f1597ab1d3345c8c485d7805f58d66f414db61
+only_for_archs="i686 x86_64"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_configure() {
 	autoreconf -fi

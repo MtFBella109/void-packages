@@ -1,5 +1,6 @@
 # Template file for 'viewnior'
 pkgname=viewnior
+<<<<<<< HEAD
 version=1.8
 revision=2
 build_style=meson
@@ -8,6 +9,18 @@ makedepends="gtk+-devel exiv2-devel"
 short_desc="Elegant Image Viewer"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
+=======
+version=1.4
+revision=1
+wrksrc="Viewnior-${pkgname}-${version}"
+build_style=gnu-configure
+hostmakedepends="pkg-config intltool gnome-common glib-devel gettext-devel libtool"
+makedepends="gtk+-devel desktop-file-utils hicolor-icon-theme exiv2-devel"
+depends="desktop-file-utils hicolor-icon-theme"
+short_desc="The Elegant Image Viewer"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://siyanpanayotov.com/project/viewnior/"
 distfiles="https://github.com/hellosiyan/Viewnior/archive/${pkgname}-${version}.tar.gz"
 checksum=b9319171ebca23929e6ea8039c194b1595d92e764db5e3890836fb5c36e233b0

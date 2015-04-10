@@ -6,6 +6,7 @@ build_style="python3-pep517"
 hostmakedepends="python3-setuptools python3-wheel"
 depends="ansible-core"
 short_desc="Simple deployment, configuration management and execution framework"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://www.ansible.com/"
@@ -13,3 +14,19 @@ distfiles="${PYPI_SITE}/a/ansible/ansible-${version}.tar.gz"
 checksum=ba2045031a7d60c203b6e5fe1f8eaddd53ae076f7ada910e636494384135face
 # Relevant tests happen in ansible-core
 make_check=no
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://www.ansible.com"
+distfiles="http://releases.ansible.com/ansible/$pkgname-$version.tar.gz"
+checksum=b2193fd9a4061ab624fa67311796419a759de06b4f321d37169b22ba3831331c
+
+post_install() {
+	for f in examples/*; do
+		vsconf ${f}
+	done
+	for m in docs/man/man1/*.1; do
+		vman ${m}
+	done
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

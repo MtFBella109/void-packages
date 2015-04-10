@@ -1,11 +1,21 @@
 # Template file for 'libaio'
 pkgname=libaio
+<<<<<<< HEAD
 version=0.3.113
 revision=1
 short_desc="Linux-native asynchronous I/O facility (aio) library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://lse.sourceforge.net/io/aio.html"
+=======
+version=0.3.110
+revision=2
+build_style=gnu-makefile
+short_desc="The Linux-native asynchronous I/O facility (aio) library"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="http://lse.sourceforge.net/io/aio.html"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${DEBIAN_SITE}/main/liba/$pkgname/${pkgname}_${version}.orig.tar.gz"
 checksum=2c44d1c5fd0d43752287c9ae1eb9c023f04ef848ea8d4aafa46e9aedb678200b
 

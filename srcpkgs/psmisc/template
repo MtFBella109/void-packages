@@ -6,6 +6,7 @@ revision=1
 build_style=gnu-configure
 makedepends="ncurses-devel"
 short_desc="Small set of utilities that use the linux proc filesystem"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://gitlab.com/psmisc/psmisc"
@@ -14,6 +15,11 @@ distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.xz"
 checksum=58c55d9c1402474065adae669511c191de374b0871eec781239ab400b907c327
 =======
 version=22.8
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://psmisc.sourceforge.net/index.html"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 short_desc="Small set of utilities that use the linux proc fs"

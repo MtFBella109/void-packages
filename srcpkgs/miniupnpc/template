@@ -3,6 +3,7 @@ pkgname=miniupnpc
 version=2.2.7
 revision=1
 build_style=gnu-makefile
+<<<<<<< HEAD
 make_use_env=y
 hostmakedepends="which"
 checkdepends="inetutils-ifconfig"
@@ -13,6 +14,14 @@ license="BSD-3-Clause"
 homepage="https://miniupnp.tuxfamily.org"
 distfiles="https://miniupnp.tuxfamily.org/files/${pkgname}-${version}.tar.gz"
 checksum=b0c3a27056840fd0ec9328a5a9bac3dc5e0ec6d2e8733349cf577b0aa1e70ac1
+=======
+short_desc="A small UPnP client library/tool to access Internet Gateway Devices"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://miniupnp.free.fr"
+license="BSD"
+distfiles="http://miniupnp.free.fr/files/$pkgname-$version.tar.gz"
+checksum=2923e453e880bb949e3d4da9f83dd3cb6f08946d35de0b864d0339cf70934464
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense LICENSE

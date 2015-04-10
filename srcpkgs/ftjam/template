@@ -5,6 +5,7 @@ version=2.5.2
 revision=1
 build_style=gnu-configure
 hostmakedepends="bison"
+<<<<<<< HEAD
 short_desc="FreeType's version of the Jam build tool"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Jam"
@@ -13,6 +14,11 @@ homepage="http://freetype.org/jam/"
 distfiles="${SOURCEFORGE_SITE}/freetype/ftjam-${version}.tar.bz2"
 checksum=e89773500a92912de918e9febffabe4b6bce79d69af194435f4e032b8a6d66a3
 nocross=yes
+=======
+short_desc="An enhanced version of the Jam build tool"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="ftjam - /usr/share/licenses/ftjam/LICENSE"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 provides="jam-${version}_${revision}"
 replaces="jam>=0"
 

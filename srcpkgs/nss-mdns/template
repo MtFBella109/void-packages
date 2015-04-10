@@ -12,6 +12,7 @@ makedepends="avahi-libs-devel"
 fulldepends="avahi"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="NSS module for Multicast DNS name resolution"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/lathiat/nss-mdns"
@@ -33,3 +34,10 @@ pre_configure() {
 }
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://0pointer.de/lennart/projects/$pkgname"
+license="LGPL-2.1"
+distfiles="http://pkgs.fedoraproject.org/repo/pkgs/nss-mdns/${pkgname}-${version}.tar.gz/03938f17646efbb50aa70ba5f99f51d7/${pkgname}-${version}.tar.gz"
+checksum=1e683c2e7c3921814706d62fbbd3e9cbf493a75fa00255e0e715508d8134fa6d
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

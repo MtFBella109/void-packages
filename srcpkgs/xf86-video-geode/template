@@ -14,7 +14,7 @@ makedepends="pkg-config libXv-devel libXrandr-devel xorg-server-devel"
 depends="virtual?xserver-abi-video-19_1"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Xorg AMD Geode GX/LX video driver"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
 homepage="http://xorg.freedesktop.org/"
 license="MIT"

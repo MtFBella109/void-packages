@@ -6,8 +6,16 @@ revision=1
 build_style=meson
 hostmakedepends="pkg-config"
 makedepends="libsigc++-devel atk-devel glibmm-devel"
+<<<<<<< HEAD
 =======
 version=2.22.6
+=======
+replaces="gtkmm<2.22"
+short_desc="Set of interfaces for accessibility (C++ bindings)"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://gtkmm.sourceforge.net/"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${GNOME_SITE}/atkmm/2.22/$pkgname-$version.tar.xz"
 build_style=gnu-configure
 configure_args="--disable-documentation"

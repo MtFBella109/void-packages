@@ -8,7 +8,12 @@ configure_args="--enable-malloc0returnsnull"
 hostmakedepends="pkg-config"
 makedepends="xorgproto libXext-devel"
 short_desc="Library for the XFree86-DGA X extension"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="${XORG_SITE}"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="$XORG_SITE"
 distfiles="${XORG_SITE}/lib/${pkgname}-${version}.tar.xz"

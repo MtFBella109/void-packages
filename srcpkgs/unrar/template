@@ -3,12 +3,18 @@ pkgname=unrar
 version=7.1.10
 revision=1
 short_desc="Unarchiver for .rar files (non-free version)"
+<<<<<<< HEAD
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="custom:freeware"
 homepage="https://www.rarlab.com/rar_add.htm"
 distfiles="https://www.rarlab.com/rar/unrarsrc-${version}.tar.gz"
 checksum=72a9ccca146174f41876e8b21ab27e973f039c6d10b13aabcb320e7055b9bb98
 repository=nonfree
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="freeware"
+checksum=ef14757e943787b439fedf2c564c1f38d0db315528a928e0de170860717e2fac
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_build() {
 	vsed -i makefile \

@@ -18,6 +18,7 @@ version=0.6.1-unstable
 distfiles="$SOURCEFORGE_SITE/xstow/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 short_desc="Replacement of GNU Stow written in C++"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=f1872c10eccca3b3b4202e2e0f4c7f10833bc941e02f3f17776d5ddb192f68f5
 long_desc="
@@ -26,3 +27,10 @@ long_desc="
  /usr/local/stow/perl, for example) while making them appear to be
  installed in the same place (/usr/local)."
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://xstow.sourceforge.net"
+license="GPL-2"
+distfiles="$SOURCEFORGE_SITE/xstow/xstow-$version.tar.bz2"
+checksum=6f041f19a5d71667f6a9436d56f5a50646b6b8c055ef5ae0813dcecb35a3c6ef
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

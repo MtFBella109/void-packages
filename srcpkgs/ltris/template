@@ -28,7 +28,13 @@ hostmakedepends="bison"
 makedepends="SDL-devel SDL_mixer-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="An SDL tetris clone"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+homepage="http://lgames.sourceforge.net/index.php?project=LTris"
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${SOURCEFORGE_SITE}/lgames/$pkgname-$version.tar.gz"
 checksum=d6816aa70f55c73e0de2ccb81281a92aa063d3a90b362810002db010f4e3b3b2
 long_desc="

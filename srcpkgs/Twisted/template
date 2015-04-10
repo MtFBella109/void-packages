@@ -13,7 +13,7 @@ depends="${makedepends/python-devel/}"
 pycompile_module="twisted"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Event-driven networking engine written in Python"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://twistedmatrix.com/"
 license="MIT"
 checksum=e5561c9714583fd052ea9e0b10331609a719b3878f9d2593e4c57eab0ba0effd

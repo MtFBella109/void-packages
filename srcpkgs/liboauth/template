@@ -12,7 +12,12 @@ configure_args="--enable-nss"
 hostmakedepends="pkg-config"
 makedepends="libcurl-devel nss-devel"
 short_desc="C library implementing OAuth Core RFC 5849"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://liboauth.sourceforge.net"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="http://liboauth.sourceforge.net"
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"

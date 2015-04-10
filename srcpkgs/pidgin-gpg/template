@@ -5,9 +5,15 @@ revision=5
 build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="libpurple-devel gpgme-devel"
+<<<<<<< HEAD
 short_desc="GnuPG plug-in for the Pidgin IM"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
+=======
+short_desc="A GnuPG plug-in for the Pidgin IM"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://github.com/segler-alex/Pidgin-GPG"
 distfiles="https://sources.voidlinux.org/pidgin-gpg-${version}/pidgin-gpg-${version}.tar.gz"
 checksum=736681cb25da31eb8ced96055d4150d649fe6ef6e523b6f65846c3446ac09a96

@@ -5,9 +5,17 @@ revision=1
 build_style=gnu-configure
 hostmakedepends="pkg-config gettext"
 short_desc="Background images and data for MATE"
+<<<<<<< HEAD
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://mate-desktop.org"
 changelog="https://raw.githubusercontent.com/mate-desktop/mate-backgrounds/master/NEWS"
 distfiles="https://pub.mate-desktop.org/releases/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=50d1afd02486bd07ac22a5a6b6efa3031148f0d48a82e488d909ad57003a6943
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=c7e46f9c4456b5a4c602c11653912ca51b055f777934897f8baced8ce21d0b05
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

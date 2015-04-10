@@ -11,6 +11,7 @@ build_style=gnu-configure
 hostmakedepends="automake libtool"
 short_desc="DTS Coherent Acoustics decoder"
 <<<<<<< HEAD
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://www.videolan.org/developers/libdca.html"
@@ -20,6 +21,13 @@ checksum=3a0b13815f582c661d2388ffcabc2f1ea82f471783c400f765f2ec6c81065f6a
 pre_configure() {
 	autoreconf -fi
 }
+=======
+homepage="http://www.videolan.org/developers/libdca.html"
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://download.videolan.org/pub/videolan/$pkgname/$version/$pkgname-$version.tar.bz2"
+checksum=dba022e022109a5bacbe122d50917769ff27b64a7bba104bd38ced8de8510642
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	# useless and broken symlink

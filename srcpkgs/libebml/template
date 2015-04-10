@@ -6,12 +6,20 @@ revision=1
 build_style=cmake
 configure_args="-DBUILD_SHARED_LIBS=ON"
 short_desc="Extensible Binary Meta Language library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://matroska-org.github.io/libebml/"
 changelog="https://github.com/Matroska-Org/libebml/raw/master/NEWS.md"
 distfiles="https://dl.matroska.org/downloads/libebml/libebml-${version}.tar.xz"
 checksum=4971640b0592da29c2d426f303e137a9b0b3d07e1b81d069c1e56a2f49ab221b
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://dl.matroska.org/downloads/libebml/"
+license="LGPL-2.1"
+distfiles="http://dl.matroska.org/downloads/libebml/libebml-${version}.tar.bz2"
+checksum=195894b31aaca55657c9bc157d744f23b0c25597606b97cfa5a9039c4b684295
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libebml-devel_package() {
 	depends="libebml>=${version}_${revision}"

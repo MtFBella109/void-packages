@@ -22,6 +22,7 @@ depends="hicolor-icon-theme webkit-gtk3>=1.6.3"
 makedepends="pkg-config intltool libxslt docbook-xsl gobject-introspection webkit-gtk3-devel json-glib-devel libnotify-devel rest-devel libsoup-gnome-devel libgnome-keyring-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNOME service to access online accounts"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Projects/GnomeOnlineAccounts"
@@ -33,6 +34,13 @@ checksum=55739943e747dcb4885ea607a4c2767d8002f71295e1affea62ea36f6d1cf593
 <<<<<<< HEAD
 build_options="gir"
 build_options_default="gir"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=6fe2dc67ab2c50a1c127767f43f31513dac72453bd41d4b4265217a19667c2c6
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 gnome-online-accounts-devel_package() {
 	depends="libadwaita-devel ${sourcepkg}>=${version}_${revision}"

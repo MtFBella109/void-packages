@@ -1,10 +1,33 @@
 # Template file for 'dmd'
 pkgname=dmd
+<<<<<<< HEAD
 version=2.101.1
 revision=1
 create_wrksrc=yes
 hostmakedepends="dmd2.091 which"
 makedepends="git"
+=======
+version=2.066.0
+revision=2
+wrksrc="dmd2"
+short_desc="The Digital Mars D compiler"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.digitalmars.com/d/2.0/"
+license="GPL-2"
+distfiles="http://ftp.digitalmars.com/dmd.${version}.zip"
+checksum=f13db9ed3bdc8740deb5903991e9e499fac708c8a1759050f1bfae624528df20
+
+if [ "$XBPS_TARGET_MACHINE" = "x86_64" ]; then
+	_archbits=64
+elif [ "$XBPS_TARGET_MACHINE" = "i686" ]; then
+	_archbits=32
+fi
+
+only_for_archs="i686 x86_64"
+conf_files="/etc/dmd.conf"
+
+hostmakedepends="unzip"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 depends="libphobos>=${version} gcc"
 short_desc="Digital Mars D compiler"
 maintainer="streaks <assemblyislaw@gmail.com>"

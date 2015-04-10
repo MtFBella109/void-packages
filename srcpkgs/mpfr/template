@@ -9,8 +9,13 @@ configure_args="--enable-thread-safe"
 <<<<<<< HEAD
 makedepends="gmp-devel"
 short_desc="Library for multiple-precision floating-point computations"
+<<<<<<< HEAD
 maintainer="Gonzalo Tornaría <tornaria@cmat.edu.uy>"
 license="LGPL-3.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.mpfr.org"
 changelog="https://www.mpfr.org/mpfr-current/#changes"
 distfiles="http://www.mpfr.org/mpfr-${version}/mpfr-${version}.tar.xz"

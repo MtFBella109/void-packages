@@ -5,6 +5,7 @@ version=0.114
 revision=2
 metapackage=yes
 short_desc="Void Linux base system meta package"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="Public Domain"
 homepage="https://www.voidlinux.org"
@@ -15,6 +16,9 @@ homepage="http://code.google.com/p/xbps"
 depends="base-files ncurses coreutils findutils diffutils dash bash grep texinfo file sed gawk less which tar man-pages man-db shadow e2fsprogs btrfs-progs xfsprogs nilfs-utils eject kbd psmisc procps sudo tzdata iana-etc udev systemd logrotate cron-daemon syslog-daemon acpid openssh-client dhcpcd iproute2 iputils bridge-utils ifenslave wireless_tools wpa_supplicant xbps wifi-firmware kernel void-artwork"
 short_desc="Void GNU/Linux base system meta package"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="Public domain"
 long_desc="
  This package installs the base system packages for the

@@ -1,5 +1,6 @@
 # Template file for 'phoronix-test-suite'
 pkgname=phoronix-test-suite
+<<<<<<< HEAD
 version=10.8.4
 revision=3
 depends="virtual?php-runtime"
@@ -10,6 +11,20 @@ homepage="https://www.phoronix-test-suite.com/"
 changelog="https://raw.githubusercontent.com/phoronix-test-suite/phoronix-test-suite/master/ChangeLog"
 distfiles="https://phoronix-test-suite.com/releases/${pkgname}-${version}.tar.gz"
 checksum=1f2092d536c0a3193efc53e4a50f3cee65c0ef1a78d31e5404f1c663fff7b7f4
+=======
+version=5.4.1
+revision=1
+wrksrc="${pkgname}"
+noarch="yes"
+makedepends="php"
+depends="php"
+short_desc="The most comprehensive testing and benchmarking platform available for Linux"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://www.phoronix-test-suite.com/"
+distfiles="http://www.phoronix.net/downloads/phoronix-test-suite/releases/${pkgname}-${version}.tar.gz"
+checksum=51a78780a9219acd2f382c4b76529521b538de291778c0de283d52d4ebc9abd3
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_install() {
 	vsed -e "s/^\texport PTS_DIR=.*/\texport PTS_DIR=\/usr\/share\/webapps\/${pkgname}/g" -i phoronix-test-suite

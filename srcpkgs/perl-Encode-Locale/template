@@ -11,6 +11,7 @@ hostmakedepends="perl"
 makedepends="${hostmakedepends}"
 depends="${makedepends}"
 short_desc="Encode::Locale - Determine the locale encoding"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/Encode-Locale"
@@ -38,3 +39,10 @@ long_desc="
  $bytes) and converted back again with Encode::decode(locale => $string)."
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/Encode-Locale"
+license="Artistic, GPL-1"
+distfiles="${CPAN_SITE}/Encode/Encode-Locale-$version.tar.gz"
+checksum=33aca4aa35829bd5c8c5e64ebfde86d0a2e8cd59dac2c4de707ffe9dc10bfbd4
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

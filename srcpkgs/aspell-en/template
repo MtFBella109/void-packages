@@ -8,6 +8,11 @@ short_desc="English dictionary for aspell"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="LGPL-2.1-or-later"
 homepage="http://aspell.net/"
+<<<<<<< HEAD
+=======
+license="LGPL-2.1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${GNU_SITE}/aspell/dict/en/aspell6-en-${version}-0.tar.bz2"
 checksum=4c8f734a28a088b88bb6481fcf972d0b2c3dc8da944f7673283ce487eac49fb3
 

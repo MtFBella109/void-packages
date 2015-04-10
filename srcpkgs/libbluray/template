@@ -8,6 +8,7 @@ configure_args="--disable-static --disable-optimizations"
 hostmakedepends="pkg-config"
 makedepends="libxml2-devel fontconfig-devel"
 short_desc="Library to access Blu-Ray disks for video playback"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://www.videolan.org/developers/libbluray.html"
@@ -33,6 +34,13 @@ pre_check() {
 pre_install() {
 	. /etc/profile.d/jdk.sh
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.videolan.org/developers/libbluray.html"
+license="LGPL-2.1"
+distfiles="ftp://ftp.videolan.org/pub/videolan/$pkgname/$version/$pkgname-$version.tar.bz2"
+checksum=f79beb9fbb24117cbb1264c919e686ae9e6349c0ad08b48c4b6233b2887eb68d
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libbluray-devel_package() {
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"

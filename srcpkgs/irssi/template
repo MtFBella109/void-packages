@@ -18,12 +18,19 @@ makedepends="libglib-devel libressl-devel ncurses-devel"
 depends="ca-certificates"
 conf_files="/etc/irssi.conf"
 short_desc="Secure and modular IRC client with text mode user interface"
+<<<<<<< HEAD
 maintainer="Andrew Benson <abenson+void@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://www.irssi.org"
 changelog="https://raw.githubusercontent.com/irssi/irssi/master/NEWS"
 distfiles="https://github.com/irssi/irssi/releases/download/${version}/irssi-${version}.tar.gz"
 checksum=31653e8e0c5b1ef9b89905c330a0d77fe3f0592f88d163e504c1923dcd28ac47
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+distfiles="http://www.irssi.org/files/$pkgname-$version.tar.bz2"
+checksum=3c9600cad2edf58f1d012febc1a0ba844274df6e331c01a9e935467705166807
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 LDFLAGS="-lncursesw"
 

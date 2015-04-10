@@ -1,6 +1,7 @@
 # Template file for 'at-spi2-core'
 pkgname=at-spi2-core
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=2.56.5
 revision=1
 build_style=meson
@@ -12,6 +13,17 @@ makedepends="libglib-devel libXext-devel libSM-devel libXtst-devel dbus-devel
 checkdepends="${pkgname} dbus gsettings-desktop-schemas"
 =======
 version=2.4.2
+=======
+version=2.14.1
+revision=2
+build_style=gnu-configure
+configure_args="$(vopt_enable gir introspection)"
+hostmakedepends="pkg-config intltool dbus glib-devel $(vopt_if gir gobject-introspection)"
+makedepends="libglib-devel libXext-devel libSM-devel libXtst-devel libXevie-devel dbus-devel"
+conf_files="/etc/at-spi2/accessibility.conf"
+short_desc="Assistive Technology Service Provider Interface"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnome.org"
 license="GPL-2"
 distfiles="${GNOME_SITE}/$pkgname/2.4/$pkgname-$version.tar.xz"

@@ -2,6 +2,15 @@
 pkgname=stellarium
 version=25.3
 revision=1
+<<<<<<< HEAD
+=======
+short_desc="Open Source Planetarium"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://www.stellarium.org/"
+distfiles="${SOURCEFORGE_SITE}/stellarium/Stellarium-sources/${version}/stellarium-${version}.tar.gz"
+checksum=e5718e28d484b6f16e13f334fe91c3611557b46b7989f4bf68fdcb6d76c059ab
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 build_style=cmake
 configure_args="-DENABLE_SHOWMYSKY=Off -DUSE_PLUGIN_TELESCOPECONTROL=NO -DBUILD_MD2HTML_EXECUTABLE=OFF"
 hostmakedepends="perl qt5-qmake qt5-host-tools gettext"

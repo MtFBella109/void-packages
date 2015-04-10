@@ -12,9 +12,15 @@ makedepends="libdvdcss-devel"
 makedepends="automake"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="DVD access library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://www.videolan.org/developers/libdvdnav.html"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://dvdnav.mplayerhq.hu"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="https://get.videolan.org/libdvdread/${version}/libdvdread-${version}.tar.bz2"
 checksum=ce35454997a208cbe50e91232f0e73fb1ac3471965813a13b8730a8f18a15369
 

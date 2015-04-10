@@ -9,6 +9,7 @@ hostmakedepends="pkg-config"
 depends="glib"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Free Implementation of the Unicode Bidirectional Algorithm"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/fribidi/fribidi/"
@@ -25,6 +26,13 @@ pre_build() {
 			-e "s;^\(LDFLAGS =\) .*;\1 -s;"
 	fi
 }
+=======
+homepage="http://fribidi.org/"
+license="LGPL-2.1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://fribidi.org/download/$pkgname-$version.tar.bz2"
+checksum=cba8b7423c817e5adf50d28ec9079d14eafcec9127b9e8c8f1960c5ad585e17d
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 fribidi-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"

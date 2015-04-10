@@ -9,6 +9,7 @@ makedepends="libX11-devel libxkbfile-devel libXrandr-devel"
 short_desc="Set the keyboard map using the X Keyboard Extension"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="https://gitlab.freedesktop.org/xorg/app/setxkbmap"
 distfiles="${XORG_SITE}/app/setxkbmap-${version}.tar.xz"
 checksum=be8d8554d40e981d1b93b5ff82497c9ad2259f59f675b38f1b5e84624c07fade
@@ -20,6 +21,9 @@ post_install() {
 # Template build file for 'setxkbmap'.
 pkgname=setxkbmap
 version=1.1.0
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

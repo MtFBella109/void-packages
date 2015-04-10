@@ -8,6 +8,7 @@ hostmakedepends="pkg-config"
 short_desc="Network API translation layer to insulate X"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org"
 distfiles="${XORG_SITE}/lib/xtrans-${version}.tar.gz"
 checksum=936b74c60b19c317c3f3cb1b114575032528dbdaf428740483200ea874c2ca0a
@@ -19,6 +20,9 @@ post_install() {
 # Template build file for 'xtrans'.
 pkgname=xtrans
 version=1.2.5
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 short_desc="Network API translation layer to insulate X"

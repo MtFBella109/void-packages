@@ -21,8 +21,13 @@ makedepends="acl-devel boost-devel-minimal libboost_thread
  json-c-devel"
 depends="dbus"
 short_desc="Tool for Linux filesystem snapshot management"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://snapper.io"
 distfiles="https://github.com/openSUSE/snapper/archive/v${version}.tar.gz"
 checksum=0b902c9e6e4917ae035b60d20166b176e417718b9a853534fff057b14a2cbff8

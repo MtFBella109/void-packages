@@ -5,8 +5,12 @@ revision=1
 build_style=gnu-configure
 configure_args="--enable-static"
 short_desc="C library providing data structures and common functions"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://libhx.sourceforge.net/"
 <<<<<<< HEAD
 distfiles="https://inai.de/files/libhx/libHX-${version}.tar.xz"

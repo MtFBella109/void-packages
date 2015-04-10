@@ -39,7 +39,7 @@ distfiles="${homepage}/releases/ffmpeg-${version}.tar.bz2"
 depends="faad2 x264 xvidcore libvdpau"
 makedepends="pkg-config perl>=0 yasm zlib-devel alsa-lib-devel libXfixes-devel libXext-devel libXvMC-devel faad2-devel lame-devel libtheora-devel libvorbis-devel x264-devel xvidcore-devel jack-devel SDL-devel libvpx-devel libva-devel libvdpau-devel"
 short_desc="Decoding, encoding and streaming software"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-3"
 checksum=7d1ca0abc80e2f6161e2a48878b62a2e6d0301c231f91e7677b889ef048b931f
 long_desc="

@@ -8,10 +8,17 @@ hostmakedepends="python3 pkg-config flex freetype-devel font-unifont-bdf help2ma
 makedepends="libusb-compat-devel ncurses-devel freetype-devel liblzma-devel
  device-mapper-devel fuse-devel"
 depends="os-prober"
+<<<<<<< HEAD
 conf_files="/etc/default/grub /etc/grub.d/*"
 =======
 version="2.00~beta4"
 revision=1
+=======
+conf_files="/etc/default/grub /etc/grub.d/40_custom"
+short_desc="GRand Unified Bootloader 2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnu.org/software/grub/"
 distfiles="http://alpha.gnu.org/gnu/grub/grub-$version.tar.xz"
 build_style=gnu-configure

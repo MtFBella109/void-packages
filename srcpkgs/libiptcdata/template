@@ -10,8 +10,12 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 revision=2
 build_style=gnu-configure
 short_desc="Library for manipulating the IPTC metadata"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://libiptcdata.sourceforge.net/"
 license="LGPL-2.1"
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"

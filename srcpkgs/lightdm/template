@@ -49,7 +49,7 @@ subpackages="liblightdm-gobject liblightdm-qt lightdm-devel"
 =======
  --with-greeter-user=lightdm --disable-static --disable-tests"
 short_desc="Light Display Manager"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-3, LGPL-3"
 homepage="https://launchpad.net/lightdm"
 distfiles="https://launchpad.net/lightdm/1.4/$version/+download/$pkgname-$version.tar.gz"

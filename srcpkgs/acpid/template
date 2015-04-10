@@ -11,6 +11,15 @@ changelog="https://sourceforge.net/p/acpid2/code/ci/master/tree/Changelog?format
 distfiles="${SOURCEFORGE_SITE}/acpid2/acpid-${version}.tar.xz"
 checksum=2d095c8cfcbc847caec746d62cdc8d0bff1ec1bc72ef7c674c721e04da6ab333
 conf_files="/etc/acpi/events/anything /etc/acpi/handler.sh"
+<<<<<<< HEAD
+=======
+short_desc="The ACPI Daemon (acpid) With Netlink Support"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://sourceforge.net/projects/acpid2/"
+distfiles="${SOURCEFORGE_SITE}/acpid2/acpid-$version.tar.xz"
+checksum=4396aaec13510c3a1faa941a15a4b5335b6ae4fbec8438b9249b88c3b66187ee
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vinstall ${FILESDIR}/handler.sh 755 etc/acpi

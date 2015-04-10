@@ -15,7 +15,12 @@ makedepends="openssl-devel"
 makedepends="libressl-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Performance and usability-oriented extensions to C"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.atheme.org/project/mowgli"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 <<<<<<< HEAD
 homepage="https://github.com/atheme/libmowgli-2"

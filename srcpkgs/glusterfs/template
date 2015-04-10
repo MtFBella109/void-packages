@@ -23,6 +23,7 @@ makedepends="liblvm2app-devel fuse-devel libxml2-devel libfl-devel libressl-deve
 depends="python"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 pycompile_dirs="/usr/libexec/glusterfs/python/syncdaemon"
+<<<<<<< HEAD
 hostmakedepends="flex pkg-config python3-setuptools rpcsvc-proto"
 makedepends="acl-devel libaio-devel libtirpc-devel openssl-devel
  liburcu-devel liburing-devel libxml2-devel rdma-core-devel sqlite-devel"
@@ -34,6 +35,14 @@ license="GPL-2.0-or-later, LGPL-3.0-only"
 homepage="https://www.gluster.org/"
 distfiles="https://download.gluster.org/pub/gluster/glusterfs/${version%.*}/${version}/${pkgname}-${version}.tar.gz"
 checksum=55ebe404ca887e387b1b6ecf952400f795be275f475295014dfc7ad4c1ed1464
+=======
+short_desc="A distributed userland file system - client"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2, LGPL-3"
+homepage="http://www.gluster.org/"
+distfiles="http://download.gluster.org/pub/gluster/glusterfs/${version%.*}/${version}/${pkgname}-${version}.tar.gz"
+checksum=ef58b467a60fd6bd0685d4167a45f0860895414285b3908167b264aa63d276c3
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 case "$XBPS_TARGET_MACHINE" in
 	*-musl) broken="not yet supported";;

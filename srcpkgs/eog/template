@@ -31,6 +31,7 @@ makedepends="
 depends="hicolor-icon-theme desktop-file-utils shared-mime-info"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Eye of GNOME graphics viewer program"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Apps/EyeOfGnome"
@@ -39,6 +40,13 @@ distfiles="${GNOME_SITE}/eog/${version%.*}/eog-${version}.tar.xz"
 checksum=db5edbf5224d75126a7b7d8ee4e9272a2f30a953331d5baf6d3f3c0ce0cbde66
 shlib_provides="libeog.so"
 lib32disabled=yes
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+distfiles="${GNOME_SITE}/eog/${version%.*}/eog-$version.tar.xz"
+checksum=c05a3c0a75c3c5d42f41eadca9e23753d1fa59bc37fb5826909b468b9be1cf59
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 build_options="gir"
 build_options_default="gir"

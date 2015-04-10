@@ -3,16 +3,15 @@ pkgname=liblxqt
 version=2.3.0
 revision=1
 build_style=cmake
-hostmakedepends="pkg-config lxqt-build-tools
- polkit-qt6-devel qt6-tools"
-makedepends="kf6-kwindowsystem-devel libqtxdg-devel libXScrnSaver-devel
- polkit-qt6-devel" 
-short_desc="Core utility library for all LXQt components"
-maintainer="Helmut Pozimski <helmut@pozimski.eu>"
-license="LGPL-2.1-or-later"
-homepage="https://lxqt-project.org"
-distfiles="https://github.com/lxqt/liblxqt/archive/${version}.tar.gz"
-checksum=c59987b2c4388bf41226847261c168a6cb34637f881ed66a425440fea0769091
+configure_args="-DUSE_QT5=1"
+hostmakedepends="cmake pkg-config"
+makedepends="kwindowsystem-devel libqtxdg-devel"
+short_desc="LXQT Desktop library"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://lxqt.org/"
+distfiles="http://downloads.lxqt.org/lxqt/${version}/${pkgname}-${version}.tar.xz"
+checksum=b4f0941bcb8839163aed5c332a26d05650a8d75be241cb39c702f9bd15fe4d52
 
 liblxqt-devel_package() {
 	short_desc+=" - development files"

@@ -4,6 +4,7 @@ pkgname=nasm
 version=2.16.03
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 make_build_target="all"
 make_check_target="golden test"
 checkdepends="perl"
@@ -34,6 +35,15 @@ pre_configure() {
 		vsed -i doc/psfonts.ph -e "s;SourceSansPro;SourceSans3;g"
 	fi
 }
+=======
+hostmakedepends="groff perl"
+short_desc="An 80x86 assembler designed for portability and modularity"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.nasm.us"
+license="BSD"
+distfiles="http://www.nasm.us/pub/nasm/releasebuilds/${version}/nasm-${version}.tar.bz2"
+checksum=9da3a0291a0bdc06305b7ba194f1e2c2b55ae6f11210b4af43729868149d5445
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_build() {
 	if [ "$build_option_doc" ]; then

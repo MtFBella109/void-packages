@@ -27,6 +27,7 @@ makedepends="zlib-devel ncurses-devel readline-devel libressl-devel
 conf_files="/etc/lftp.conf"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Sophisticated FTP/HTTP client"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://lftp.yar.ru/"
@@ -60,6 +61,9 @@ Add_dependency full openssl
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 =======
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://lftp.yar.ru/"
 license="GPL-3"
 distfiles="http://ftp.yars.free.net/pub/source/lftp/lftp-$version.tar.xz"

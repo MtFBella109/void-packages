@@ -32,8 +32,12 @@ makedepends="lcms2-devel libpng-devel libqpdf-devel
 depends="lib${sourcepkg}-${version}_${revision} ghostscript poppler-utils"
 conf_files="/etc/cups/cups-browsed.conf"
 short_desc="The OpenPrinting CUPS Filters"
+<<<<<<< HEAD
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-2, LGPL-2.1, MIT"
 checksum=6926980653e7cb5f94b91921517678cca7f0e6781364823a05f7b4b0ec919106
 long_desc="

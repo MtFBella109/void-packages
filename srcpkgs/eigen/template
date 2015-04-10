@@ -8,6 +8,7 @@ build_style=cmake
 make_check_target=check
 configure_args="-DCMAKE_BUILD_TYPE=Release"
 short_desc="C++ template library for linear algebra (version 3.x)"
+<<<<<<< HEAD
 maintainer="Daniel Martinez <danielmartinez@cock.li>"
 license="MPL-2.0, GPL-3.0-or-later, LGPL-2.1-or-later, BSD-3-Clause"
 homepage="https://eigen.tuxfamily.org/"
@@ -18,3 +19,10 @@ make_check=extended #900+ binaries need to be build for the checks
 post_install() {
 	vlicense COPYING.BSD
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="MPL-2.0, GPL-3, LGPL-2.1, BSD, MINPACK"
+homepage="http://eigen.tuxfamily.org/"
+distfiles="http://bitbucket.org/eigen/eigen/get/${version}.tar.bz2"
+checksum=d64332c92e31803d2c59f6646ed893965c666acfc7c284e4f5e9ffbb4d148922
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

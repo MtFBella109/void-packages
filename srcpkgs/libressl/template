@@ -1,0 +1,74 @@
+# Template file for 'libressl'
+pkgname=libressl
+version=2.1.6
+revision=2
+bootstrap=yes
+build_style=gnu-configure
+short_desc="Version of the TLS/crypto stack forked from OpenSSL"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="OpenSSL-License, SSLeay-License, ISC"
+homepage="http://www.libressl.org/"
+distfiles="http://ftp.openbsd.org/pub/OpenBSD/LibreSSL/${pkgname}-${version}.tar.gz"
+checksum=4f826dd97b3b8001707073bde8401493f9cd4668465b481c042d28e3973653a8
+
+# Compat pkg that depends on the real pkgs.
+depends="libcrypto32-${version}_${revision} libssl32-${version}_${revision} libtls3-${version}_${revision}"
+
+if [ "$XBPS_TARGET_MACHINE" = "i686-musl" ]; then
+	# XXX disable SSP
+	configure_args+=" --disable-hardening"
+fi
+
+if [ "$CROSS_BUILD" ]; then
+	hostmakedepends="automake libtool"
+	pre_configure() {
+		autoreconf -fi
+	}
+fi
+
+post_install() {
+	vlicense COPYING
+	find ${DESTDIR}/usr/share/man/man1 -type f ! -name openssl.1 -delete
+}
+
+libcrypto32_package() {
+	short_desc+=" - crypto library"
+	pkg_install() {
+		vmove usr/lib/libcrypto.so.*
+	}
+}
+libssl32_package() {
+	short_desc+=" - SSL/TLS library"
+	pkg_install() {
+		vmove usr/lib/libssl.so.*
+	}
+}
+libtls3_package() {
+	short_desc+=" - new TLS library"
+	pkg_install() {
+		vmove usr/lib/libtls.so.*
+	}
+}
+libressl-devel_package() {
+	short_desc+=" - development files"
+	depends="libressl-${version}_${revision}"
+	conflicts="openssl-devel>=0"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/*.a
+		vmove usr/lib/*.so
+		vmove usr/lib/pkgconfig
+		vmove usr/share/man/man3
+	}
+}
+libressl-openssl_package() {
+	short_desc+=" - utilities"
+	provides="openssl-${version}_${revision}"
+	replaces="openssl>=0"
+	conf_files="/etc/ssl/openssl.cnf"
+	pkg_install() {
+		vinstall ${FILESDIR}/openssl.cnf 644 etc/ssl
+		vmove usr/bin
+		vmove usr/share/man/man1
+	}
+}

@@ -16,12 +16,20 @@ configure_args="--disable-mono --enable-smime"
 makedepends="pkg-config intltool glib-devel zlib-devel gpgme-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNOME Core mime parsing library"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/jstedfast/gmime"
 changelog="https://raw.githubusercontent.com/jstedfast/gmime/master/NEWS"
 distfiles="https://github.com/jstedfast/gmime/releases/download/${version}/${pkgname}-${version}.tar.xz"
 checksum=84cd2a481a27970ec39b5c95f72db026722904a2ccf3fdbd57b280cf2d02b5c4
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://www.gnome.org/"
+distfiles="${GNOME_SITE}/gmime/${version%.*}/gmime-${version}.tar.xz"
+checksum=e0a170fb264c2ae4cecd852f4e7aaddb8d58e8f3f0b569ce2d2a4704f55bdf65
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 build_options="gir vala"
 build_options_default="gir vala"

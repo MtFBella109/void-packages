@@ -7,6 +7,7 @@ make_use_env="yes"
 make_build_args="CRONTAB_GROUP=root CRONTABS=/var/spool/cron CRONSTAMPS=/var/spool/cronstamps"
 make_install_args="SBINDIR=/usr/bin"
 short_desc="Dillon's lightweight cron daemon"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/ptchinster/dcron"
@@ -23,6 +24,13 @@ alternatives="
  crond:crontab.1:/usr/share/man/man1/dcrontab.1
  crond:crond.8:/usr/share/man/man8/dcrond.8
 "
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.jimpryor.net/linux/dcron.html"
+license="GPL-2"
+distfiles="http://www.jimpryor.net/linux/releases/dcron-${version}.tar.gz"
+checksum=9e50edb6f5bd8153b16bad05087d985e5153ce45cc01ae77e7f842213fb4a824
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 make_dirs="
  /etc/cron.d 0755 root root

@@ -15,7 +15,7 @@ makedepends="gtk+3-devel libtaginfo-devel sqlite-devel
 depends="desktop-file-utils hicolor-icon-theme gst-plugins-good1"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Media player for GTK+ with a slick GUI"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-2"
 checksum=a532e691ff51735b50b0b5438d108c8d240175cbb9ee0b5d32fbdd6f04b5cb33
 long_desc="

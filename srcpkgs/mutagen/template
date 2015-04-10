@@ -1,7 +1,21 @@
 # Template file for 'mutagen'
 pkgname=mutagen
+<<<<<<< HEAD
 version=1.20
 homepage="http://code.google.com/p/${pkgname}/"
+=======
+version=1.28
+revision=1
+noarch=yes
+build_style=python-module
+hostmakedepends="python-devel"
+makedepends="${hostmakedepends}"
+depends="python"
+pycompile_module="mutagen"
+short_desc="Python multimedia tagging library"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="https://bitbucket.org/lazka/mutagen"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-2"
 distfiles="http://${pkgname}.googlecode.com/files/${pkgname}-${version}.tar.gz"
 build_style=python-module

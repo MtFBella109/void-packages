@@ -3,12 +3,21 @@ pkgname=gpa
 version=0.11.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config gettext glib-devel"
 makedepends="gpgme-devel gtk+3-devel libglib-devel libassuan-devel libgpg-error-devel"
 depends="desktop-file-utils gnupg>=2"
 short_desc="Graphical user interface for GnuPG"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
+=======
+hostmakedepends="pkg-config intltool"
+makedepends="gpgme-devel gtk+-devel"
+depends="desktop-file-utils gnupg2"
+short_desc="A graphical user interface for GnuPG"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://www.gnupg.org/related_software/gpa/"
 distfiles="https://gnupg.org/ftp/gcrypt/gpa/gpa-${version}.tar.bz2"
 checksum=26a8fa5bf70541cb741f0c71b7cfe291b1ea56eab68eeb07aa962cef5cdf33cc

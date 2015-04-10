@@ -5,10 +5,15 @@ revision=8
 build_style=gnu-configure
 configure_args="--enable-mcpplib"
 short_desc="Portable C preprocessor"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
 homepage="https://mcpp.sourceforge.net/"
 distfiles="${SOURCEFORGE_SITE}/mcpp/mcpp-${version}.tar.gz"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=3b9b4421888519876c4fc68ade324a3bbd81ceeb7092ecdbbc2055099fcb8864
 
 post_install() {

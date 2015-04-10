@@ -22,6 +22,7 @@ wrksrc="${pkgname}_${version//\./_}"
 makedepends="zlib-devel bzip2-devel icu-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Free peer-reviewed portable C++ source libraries"
+<<<<<<< HEAD
 maintainer="John <me@johnnynator.dev>"
 license="BSL-1.0"
 homepage="https://www.boost.org/"
@@ -29,6 +30,13 @@ distfiles="https://archives.boost.io/release/${version%.rc*}/source/boost_${vers
 checksum=85a33fa22621b4f314f8e85e1a5e2a9363d22e4f4992925d4bb3bc631b5a0c7a
 python_version=3
 noverifyrdeps=yes
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.boost.org/"
+license="Boost Software License 1.0"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/${pkgname}_${version//\./_}.tar.bz2"
+checksum=047e927de336af106a24bceba30069980c191529fd76b8dff8eb9a328b48ae1d
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 # please do NOT delete below lines,

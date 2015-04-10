@@ -21,11 +21,19 @@ makedepends="pkg-config openssl-devel libsigc++-devel libstdc++-devel glibc-deve
 makedepends="zlib-devel libressl-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="BitTorrent library written in C++"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/rakshasa/libtorrent"
 distfiles="https://github.com/rakshasa/libtorrent/archive/v${version}.tar.gz"
 checksum=0f6c2e7ffd3a1723ab47fdac785ec40f85c0a5b5a42c1d002272205b988be722
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://libtorrent.rakshasa.no"
+license="GPL-2"
+distfiles="http://libtorrent.rakshasa.no/downloads/$pkgname-$version.tar.gz"
+checksum=704e097119dc89e2ee4630396b25de1cd64b0549841347ea75b9ef9217084955
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 # https://github.com/rakshasa/rtorrent/issues/156
 case "$XBPS_TARGET_MACHINE" in

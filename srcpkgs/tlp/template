@@ -5,6 +5,7 @@ version=1.8.0
 revision=1
 depends="hdparm bash iw util-linux ethtool perl"
 short_desc="Advanced power management tool for Linux"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html"
@@ -15,6 +16,11 @@ checksum=65515f7652064a1be2940c031e045b762924bb1dbd94f5e58e3b765113cf5210
 conflicts="laptop-mode>=0 perl-Unicode-Tussle>=0"
 conf_files="/etc/tlp.conf /etc/tlp.d/*.conf"
 make_dirs="/var/lib/tlp 0755 root root"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_install() {
 	make DESTDIR=${DESTDIR} \

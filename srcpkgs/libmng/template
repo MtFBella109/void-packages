@@ -6,8 +6,12 @@ revision=2
 build_style=gnu-configure
 makedepends="libjpeg-turbo-devel zlib-devel lcms2-devel"
 short_desc="Multiple-image Network Graphics (MNG) reference library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="custom"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.libmng.com"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.xz"
 checksum=4a462fdd48d4bc82c1d7a21106c8a18b62f8cc0042454323058e6da0dbb57dd3

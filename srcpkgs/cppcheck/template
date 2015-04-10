@@ -3,6 +3,7 @@ pkgname=cppcheck
 <<<<<<< HEAD
 version=2.18.3
 revision=1
+<<<<<<< HEAD
 build_style=cmake
 configure_args="
  -DBUILD_GUI=ON
@@ -18,6 +19,12 @@ makedepends="pcre-devel tinyxml2-devel qt6-base-devel qt6-tools-devel qt6-plugin
 depends="python3"
 =======
 version=1.53
+=======
+hostmakedepends="libxslt docbook-xsl git"
+short_desc="Static analysis of C/C++ code"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://cppcheck.sourceforge.net"
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
 build_style=gnu-makefile

@@ -5,8 +5,13 @@ distfiles="http://buildbot.googlecode.com/files/$pkgname-$version.tar.gz"
 build_style=python-module
 fulldepends="python Twisted"
 short_desc="BuildBot Slave Daemon"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://trac.buildbot.net/"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://buildbot.net/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-2"
 checksum=d3d4646e846e3d74dd01c079913c613cdb9442dd88d2d32895201342806232fb
 long_desc="

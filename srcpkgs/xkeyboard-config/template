@@ -9,7 +9,12 @@ hostmakedepends="pkg-config libxslt python3 intltool perl"
 makedepends="libX11-devel xkbcomp"
 depends="xkbcomp"
 short_desc="X Keyboard Configuration Database"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.freedesktop.org/wiki/Software/XKeyboardConfig"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://www.freedesktop.org/wiki/Software/XKeyboardConfig"
 changelog="https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/raw/master/NEWS"

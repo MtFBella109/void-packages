@@ -3,6 +3,7 @@ pkgname=autofs
 version=5.1.9
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 make_build_args="DONTSTRIP=1"
 configure_args="--with-libtirpc --with-mapdir=/etc/autofs --sbindir=/usr/bin"
 conf_files="/etc/autofs/*"
@@ -12,6 +13,21 @@ short_desc="Kernel-based automounter for Linux"
 maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="GPL-2.0-or-later"
 homepage="https://www.kernel.org/pub/linux/daemons/autofs"
+=======
+conf_files="
+ /etc/autofs/auto.master
+ /etc/autofs/auto.misc
+ /etc/autofs/autofs.conf
+ /etc/autofs/autofs_ldap_auth.conf"
+configure_args="--with-libtirpc --with-mapdir=/etc/autofs"
+make_build_args="STRIP=:"
+hostmakedepends="flex kmod"
+makedepends="libtirpc-devel"
+short_desc="A kernel-based automounter for Linux"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="${KERNEL_SITE}/daemons/autofs"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${KERNEL_SITE}/daemons/autofs/v5/autofs-${version}.tar.xz"
 checksum=87e6af6a03794b9462ea519781e50e7d23b5f7c92cd59e1142c85d2493b3c24b
 

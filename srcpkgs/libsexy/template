@@ -14,7 +14,14 @@ hostmakedepends="pkg-config"
 makedepends="iso-codes gtk+-devel libxml2-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Collection of additional GTK+ widgets"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://releases.chipx86.com/$pkgname"
+license="LGPL-2.1"
+distfiles="http://releases.chipx86.com/$pkgname/$pkgname/$pkgname-$version.tar.gz"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=8c4101a8cda5fccbba85ba1a15f46f2cf75deaa8b3c525ce5b135b9e1a8fe49e
 long_desc="
  libsexy is a collection of GTK+ widgets that extend the functionality of

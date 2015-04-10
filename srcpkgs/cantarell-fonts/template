@@ -21,6 +21,7 @@ build_style=gnu-configure
 makedepends="pkg-config"
 fulldepends="fontconfig"
 short_desc="Cantarell family of TrueType fonts"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=e5468861cee84c034dfc53ed9836a360bea45767873dd7840fe403a06bcc61fb
 long_desc="
@@ -29,6 +30,13 @@ long_desc="
  interface and the Fedora project."
 
 noarch=yes
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://abattis.org/cantarell/"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/0.0/$pkgname-$version.tar.xz"
+checksum=15bf87555321556750bc68ace360f3df420359a8ab257e15c44fb69710152f1c
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vmkdir etc/fonts/conf.d

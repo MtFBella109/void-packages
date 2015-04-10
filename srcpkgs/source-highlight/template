@@ -8,8 +8,13 @@ configure_args="--with-boost=${XBPS_CROSS_BASE}/usr
  --with-bash-completion=/usr/share/bash-completion/completions"
 makedepends="boost-devel-minimal libboost_regex"
 short_desc="Convert source code to syntax highlighted document"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnu.org/software/src-highlite/"
 distfiles="${GNU_SITE}/src-highlite/source-highlight-${version}.tar.gz"
 checksum=3a7fd28378cb5416f8de2c9e77196ec915145d44e30ff4e0ee8beb3fe6211c91

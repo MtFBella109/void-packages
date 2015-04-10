@@ -5,10 +5,14 @@ revision=1
 build_style=cmake
 hostmakedepends="perl"
 makedepends="zlib-devel bzip2-devel popt-devel"
+<<<<<<< HEAD
 checkdepends="which perl"
 short_desc="Library that implements the rsync remote-delta algorithm (rdiff)"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://librsync.sourceforge.net/"
 changelog="https://librsync.github.io/md_NEWS.html"
 distfiles="https://github.com/${pkgname}/${pkgname}/archive/v${version}.tar.gz"

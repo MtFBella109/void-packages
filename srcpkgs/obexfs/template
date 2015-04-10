@@ -6,8 +6,13 @@ build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="fuse-devel libbluetooth-devel libobexftp-devel"
 short_desc="FUSE based filesystem using ObexFTP"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://openobex.triq.net/obexfs"
 distfiles="${SOURCEFORGE_SITE}/openobex/${pkgname}-${version}.tar.gz"
 checksum=72a62aeb4d4decff962f22239513651843857492e9d6b50f515c9bf9fccd73bc

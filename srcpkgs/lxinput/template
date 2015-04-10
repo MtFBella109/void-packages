@@ -21,6 +21,7 @@ short_desc="LXDE Keyboad/Mouse configurator"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://lxde.org/"
+<<<<<<< HEAD
 distfiles="https://github.com/lxde/lxinput/archive/refs/tags/${version}.tar.gz"
 checksum=2f15c2a17f970afb152cbd024503da26c1e15135e76e9f516e0ca97e909d6c37
 
@@ -46,3 +47,9 @@ lxinput_package() {
 	}
 }
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+=======
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${SOURCEFORGE_SITE}/lxde/$pkgname-$version.tar.xz"
+checksum=6e37074e406a05792f6eaac029638bd02fe88926f20736d73dcb5113da825c24
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

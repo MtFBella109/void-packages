@@ -29,7 +29,11 @@ makedepends="mcpp-devel db-devel expat-devel openssl-devel"
 makedepends="zlib-devel bzip2-devel mcpp-devel db-devel expat-devel libressl-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="The Internet Communications Engine (Ice)"
+<<<<<<< HEAD
 maintainer="davehome <davehome@redthumb.info.tm>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-2, ICE"
 checksum=dcf0484495b6df0849ec90a00e8204fe5fe1c0d3882bb438bf2c1d062f15c979
 long_desc="

@@ -7,8 +7,13 @@ configure_args="--sbindir=/usr/bin --without-tcpwrappers"
 hostmakedepends="automake"
 makedepends="readline-devel"
 short_desc="Official tftp client and server"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.kernel.org"
 distfiles="http://www.kernel.org/pub/software/network/tftp/${pkgname}/${pkgname}-${version}.tar.gz"
 checksum=acc04dde662491e3092565ecf9bde504c47dbb1bb0408366009b138fe7754cab

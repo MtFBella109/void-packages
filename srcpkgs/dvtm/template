@@ -7,7 +7,12 @@ make_use_env=yes
 hostmakedepends="ncurses"
 makedepends="ncurses-devel"
 short_desc="Tiling window manager for the console"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.brain-dump.org/projects/dvtm/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="http://www.brain-dump.org/projects/dvtm/"
 distfiles="http://www.brain-dump.org/projects/dvtm/$pkgname-$version.tar.gz"

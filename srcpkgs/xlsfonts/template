@@ -9,9 +9,15 @@ makedepends="libX11-devel"
 short_desc="Server font list displayer for X"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org"
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.xz"
 checksum=807f909eace684b866fc63b3e962729c120822a6c96e051ff51cf350b3ffb6cd
+=======
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+checksum=28179185ec2bf81dfe13652d65bdb2a4ae74e2775df591a62d66a70f80e90cd2
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense COPYING

@@ -12,6 +12,7 @@ hostmakedepends="automake gettext-devel glib-devel intltool libtool
  pkg-config gtk-doc"
 makedepends="libglib-devel"
 short_desc="LXDE GLib/GIO based library (extra library)"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/lxde/libfm"
@@ -21,6 +22,13 @@ checksum=7d7b616411992389a4b7f35796109d605f30bc2ceab84d4081d1665254ebbf82
 pre_configure() {
 	autoreconf -fi
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://pcmanfm.sourceforge.net/"
+license="GPL-2"
+distfiles="${SOURCEFORGE_SITE}/pcmanfm/libfm-${version}.tar.xz"
+checksum=c692f1624a4cbc8d1dd55f3b3f3369fbf5d26f63a916e2c295230b2344e1fbf9
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	# Remove conflicting symlink with libfm.

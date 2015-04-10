@@ -9,6 +9,7 @@ build_style=gnu-configure
 makedepends="xmlto"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="XExt extension headers from X.org"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=6d0abd31ddd57c2cb24cecf5fd90b4c29a276e20e3e03ca3c2c57d074f964d99
 long_desc="
@@ -19,3 +20,10 @@ long_desc="
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 noarch=yes
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://xorg.freedesktop.org"
+license="MIT"
+distfiles="${XORG_SITE}/proto/$pkgname-$version.tar.bz2"
+checksum=f3f4b23ac8db9c3a9e0d8edb591713f3d70ef9c3b175970dd8823dfc92aa5bb0
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

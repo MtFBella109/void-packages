@@ -8,12 +8,21 @@ hostmakedepends="pkg-config"
 makedepends="SDL2-devel libjpeg-turbo-devel libopenal-devel zlib-devel
  libcurl-devel"
 depends="desktop-file-utils hicolor-icon-theme"
+<<<<<<< HEAD
 short_desc="Enhanced client for id Software's Quake II (Yamagi Quake II)"
 maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="GPL-2.0-or-later"
 homepage="https://www.yamagi.org/quake2/"
 distfiles="https://deponie.yamagi.org/quake2/quake2-${version}.tar.xz"
 checksum=8f684737a52a75c0a0c465ec26e6a5d0fdc1d495392ea83015aed84563f93e0f
+=======
+short_desc="An enhanced client for id Software's Quake II (Yamagi Quake II)"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://www.yamagi.org/quake2/"
+distfiles="http://deponie.yamagi.org/quake2/quake2-${version}.tar.xz"
+checksum=8c468b4fdefa3ae0e6239d677571c38c89387ae52df61a60e0f50bbd26dfa78f
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 case "$XBPS_TARGET_MACHINE" in
 	armv*) makedepends+=" MesaLib-devel";;

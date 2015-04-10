@@ -44,7 +44,7 @@ wrksrc="${pkgname}-s${version}"
 =======
 makedepends="libressl-devel libcap-devel"
 short_desc="IP Configuration Utilities (and ping)"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="BSD"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://www.skbuff.net/iputils"

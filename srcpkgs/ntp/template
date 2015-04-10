@@ -19,8 +19,12 @@ hostmakedepends="pkg-config bison"
 makedepends="libedit-devel libressl-devel libcap-devel libevent-devel"
 short_desc="The Network Time Protocol daemon and utilities"
 license="BSD"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.ntp.org/"
 distfiles="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/ntp-${version}.tar.gz"
 checksum=cf84c5f3fb1a295284942624d823fffa634144e096cfc4f9969ac98ef5f468e5

@@ -8,12 +8,20 @@ configure_args="--with-included-popt --without-avahi --without-gnome
  --without-gtk --disable-Werror --disable-pump-mode --without-libiberty"
 make_install_target=install-programs
 short_desc="Distributed compilation for faster C/C++ builds -- for xbps-src use"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://distcc.github.io"
 distfiles="https://github.com/distcc/distcc/releases/download/v${version}/distcc-${version}.tar.gz"
 checksum=2b99edda9dad9dbf283933a02eace6de7423fe5650daa4a728c950e5cd37bd7d
 repository=bootstrap
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://code.google.com/p/distcc"
+license="GPL-2"
+distfiles="http://distcc.googlecode.com/files/distcc-${version}.tar.bz2"
+checksum=311671e844625d7fdb18dd3d096cd855751cfe8de13827682bcb7beff9133b30
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 conflicts="distcc>=0"
 

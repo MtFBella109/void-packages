@@ -15,7 +15,11 @@ makedepends="mit-krb5-devel"
 fulldepends="openssh-client"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Concurrent Versions System"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.nongnu.org/cvs/"
 license="GPL-1.0-or-later, LGPL-2.0-or-later"
 distfiles="http://ftp.gnu.org/non-gnu/cvs/source/feature/$version/cvs-$version.tar.bz2"

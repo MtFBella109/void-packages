@@ -7,8 +7,16 @@ hostmakedepends="perl"
 makedepends="${hostmakedepends}"
 depends="${makedepends}"
 short_desc="IO::stringy -- I/O on in-core objects like strings/arrays"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/IO-stringy"
 distfiles="https://github.com/genio/IO-Stringy/archive/v${version}.tar.gz"
 checksum=faf40bbd657835ebcc87e556b802fbecaecc13776a03a8137cf935846108d022
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/IO-stringy/"
+license="Artistic, GPL-1"
+distfiles="${CPAN_SITE}/IO/${pkgname/perl-/}-$version.tar.gz"
+checksum=7e3cf438b3938a2692cb502704c0bbfa2c5ec4a5071ab77906a2432126b004ee
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

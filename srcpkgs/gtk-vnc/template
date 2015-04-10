@@ -24,11 +24,19 @@ hostmakedepends="perl pkg-config intltool"
 makedepends="gobject-introspection gtk+-devel gtk+3-devel gnutls-devel libsasl-devel vala-devel python-devel pygtk-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="VNC viewer widget for GTK"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Projects/gtk-vnc"
 distfiles="${GNOME_SITE}/gtk-vnc/${version%.*}/gtk-vnc-${version}.tar.xz"
 checksum=512763ac4e0559d0158b6682ca5dd1a3bd633f082f5e4349d7158e6b5f80f1ce
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=d490a6c8f40e550d43aef0043ce3bec498ec220d5eb3dc5cdcff8fd561149caf
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 build_options="gir"
 build_options_default="gir"

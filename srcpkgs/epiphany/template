@@ -42,7 +42,7 @@ depends="webkit2gtk>=2.6 gsettings-desktop-schemas>=3.14 ca-certificates
  hicolor-icon-theme desktop-file-utils iso-codes"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Intuitive GNOME web browser"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.gnome.org/projects/epiphany/"
 license="GPL-2"
 checksum=fb5b0d48c4d8725031d023fd6a054c10cb9f166cd430db7fc2383d8d2af5d615

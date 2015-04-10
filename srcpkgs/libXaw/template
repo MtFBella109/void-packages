@@ -12,8 +12,12 @@ configure_args="--without-xmlto"
 hostmakedepends="pkg-config"
 makedepends="libXext-devel libXt-devel libXmu-devel libXpm-devel"
 short_desc="X Athena Widgets Library"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="MIT"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://xorg.freedesktop.org"
 distfiles="${XORG_SITE}/lib/${pkgname}-${version}.tar.xz"
 checksum=731d572b54c708f81e197a6afa8016918e2e06dfd3025e066ca642a5b8c39c8f

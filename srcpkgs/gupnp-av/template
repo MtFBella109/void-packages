@@ -22,8 +22,13 @@ hostmakedepends="pkg-config"
 makedepends="gupnp-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Library to ease handling and implementation of UPnP A/V profiles"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://gupnp.org/"
 changelog="https://gitlab.gnome.org/GNOME/gupnp-av/-/raw/master/NEWS"
 distfiles="${GNOME_SITE}/gupnp-av/${version%.*}/gupnp-av-${version}.tar.xz"

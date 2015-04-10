@@ -28,6 +28,7 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://lxde.org/"
 <<<<<<< HEAD
+<<<<<<< HEAD
 distfiles="https://github.com/lxde/lxpanel/archive/refs/tags/${version}.tar.gz"
 checksum=24334dde6ed37d32bb021f902dbd54a1e6cdd01f35a778d80fcd3acd23a0e93b
 
@@ -38,6 +39,12 @@ pre_configure() {
 	[ -d m4 ] || mkdir m4
 	autoreconf -fi
 }
+=======
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${SOURCEFORGE_SITE}/lxde/$pkgname-$version.tar.xz"
+checksum=94dd664ed6c7c001ca83959cdeadaa386ba0d2c91f113c2e6d318a5f33604415
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 lxpanel-devel_package() {
 	depends="menu-cache-devel ${sourcepkg}>=${version}_${revision}"

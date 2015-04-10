@@ -13,6 +13,7 @@ makedepends="${hostmakedepends}"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="${makedepends}"
 short_desc="Net::HTTP - Low-level HTTP connection (client)"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/Net-HTTP"
@@ -33,3 +34,10 @@ long_desc="
 noarch=yes
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/Net-HTTP"
+license="Artistic, GPL-1"
+distfiles="${CPAN_SITE}/Net/Net-HTTP-$version.tar.gz"
+checksum=9f31e0325a5a0930ad309fa019da9d208e57e236fb0598675ed883c820240364
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

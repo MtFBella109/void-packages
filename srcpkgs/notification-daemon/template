@@ -18,6 +18,7 @@ checksum=dd13768f35fd8bba9c4920b0f8269f39270e5a3cfed1a34c3b940a492286ece5
 depends="desktop-file-utils"
 makedepends="pkg-config intltool glib-devel gtk+3-devel libcanberra-devel"
 short_desc="Shows notification messages on the desktop"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=9591273ee2099215cfbe1ce7eb7c08e8cbc3743d0a119e331889ffe9004e6f2f
 long_desc="
@@ -30,3 +31,10 @@ conflicts="xfce4-notifyd>=0"
 
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.galago-project.org/specs/notification/"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=3cd9af77708fb1ab95ed6c8c66095c5c99a19e84eadc6ba607ef07973e262b80
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

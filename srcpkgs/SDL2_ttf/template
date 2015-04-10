@@ -6,7 +6,11 @@ build_style=cmake
 configure_args="-DSDL2TTF_HARFBUZZ=ON"
 makedepends="SDL2-devel freetype-devel harfbuzz-devel"
 short_desc="Use TrueType fonts in your SDL 2.x applications"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://github.com/libsdl-org/SDL_ttf"
 changelog="https://github.com/libsdl-org/SDL_ttf/raw/SDL2/CHANGES.txt"

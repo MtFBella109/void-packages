@@ -10,10 +10,16 @@ depends="font-util"
 short_desc="75dpi Bigelow and Holmes Lucida Typewriter PCF fonts"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org/"
 distfiles="${XORG_SITE}/font/$pkgname-$version.tar.gz"
 checksum=8e502a1a7e81c1b95f08725f40e7e137d4d06700794d006b327d54b7c8d07f88
 font_dirs="/usr/share/fonts/X11/75dpi"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+checksum=4ac16afbe205480cc5572e2977ea63488c543d05be0ea8e5a94c845a6eebcb31
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense COPYING

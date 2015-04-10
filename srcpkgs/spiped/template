@@ -14,7 +14,7 @@ checksum=424fb4d3769d912b04de43d21cc32748cdfd3121c4f1d26d549992a54678e06a
 =======
 makedepends="libressl-devel"
 short_desc="The spiped secure pipe daemon"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="2-clause-BSD"
 homepage="http://www.tarsnap.com/spiped.html"
 distfiles="http://www.tarsnap.com/spiped/spiped-${version}.tgz"

@@ -13,11 +13,18 @@ hostmakedepends="scons pkg-config"
 makedepends="SDL_image-devel SDL_mixer-devel boost-devel libpng-devel libXi-devel zlib-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Free Lemmings-like puzzle game"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://pingus.seul.org/"
 distfiles="https://gitlab.com/pingus/pingus/-/archive/v${version}/pingus-v${version}.tar.gz"
 distfiles="${DEBIAN_SITE}/main/p/pingus/pingus_${version}.orig.tar.bz2"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://pingus.seul.org/welcome.html"
+distfiles="http://pingus.googlecode.com/files/pingus-${version}.tar.bz2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=759c1253075d1e72691bc1e770b24cdd51917041fd1857c1daf85b65a6686460
 nocross=yes
 

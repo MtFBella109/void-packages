@@ -30,6 +30,7 @@ revision=2
 makedepends="pkg-config libXmu-devel libX11-devel libXext-devel libXxf86misc-devel libXfontcache-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X11 user preferences utility"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=72c859c6030890a25cf828d0b2743454e50eadab30f6be8c17172fe97a554643
 long_desc="
@@ -49,3 +50,10 @@ Add_dependency full libXfontcache
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://xorg.freedesktop.org/"
+license="MIT"
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+checksum=4382f4fb29b88647e13f3b4bc29263134270747fc159cfc5f7e3af23588c8063
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

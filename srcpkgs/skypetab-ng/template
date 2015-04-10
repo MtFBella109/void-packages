@@ -4,7 +4,11 @@ version="$(date -u +%Y%m%d)"
 depends="skype"
 makedepends="pkg-config qt-devel libX11-devel git"
 short_desc="A program that adds tabs to Skype for Linux"
+<<<<<<< HEAD
 maintainer="davehome <davehome@redthumb.info.tm>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://keks-n.net/skypetab"
 license="GPL"
 long_desc="

@@ -12,12 +12,20 @@ makedepends="zlib-devel openssl-devel sqlite-devel"
 makedepends="zlib-devel libressl-devel readline-devel sqlite-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Simple, high-reliability, distributed software configuration management"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
 homepage="https://www.fossil-scm.org"
 changelog="https://www.fossil-scm.org/home/doc/trunk/www/changes.wiki"
 distfiles="https://fossil-scm.org/home/tarball/version-${version}/fossil-${version}.tar.gz"
 checksum=bb34f788e181d4c4505d69ad40d6566b33988861f891db6dfca27ab9542b72aa
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="2-clause-BSD"
+homepage="http://www.fossil-scm.org"
+distfiles="http://www.fossil-scm.org/download/fossil-src-${version}.tar.gz"
+checksum=cd79c333eb9e86fbb8c17bf5cdf31c387e4ab768eede623aed21adfdbcad686e
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_extract() {
 	vsed -i 's/test_system_sqlite$/# &/' auto.def  # failing on cross

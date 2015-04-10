@@ -1,6 +1,17 @@
 # Template build file for 'videoproto'.
 pkgname=videoproto
+<<<<<<< HEAD
 version=2.3.0
+=======
+version=2.3.2
+revision=1
+noarch="yes"
+build_style=gnu-configure
+short_desc="Video extension headers from X.org"
+homepage="http://xorg.freedesktop.org"
+license="MIT"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/proto/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 short_desc="Video extension headers from modular X.org X11"

@@ -23,7 +23,7 @@ makedepends="
  libmediaart-devel libuuid-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Personal search tool and storage system"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-2"
 checksum=17ac4125d02c5f820eae9a785ac1c90b0e93682730a3950f82fd4a3dff238a43
 long_desc="

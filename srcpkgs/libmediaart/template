@@ -9,8 +9,13 @@ hostmakedepends="pkg-config intltool glib-devel $(vopt_if vala vala)
  $(vopt_if gtk_doc gtk-doc)"
 makedepends="libglib-devel gdk-pixbuf-devel $(vopt_if vala vala)"
 short_desc="Media art extraction and cache management library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnome.org/"
 changelog="https://gitlab.gnome.org/GNOME/libmediaart/-/raw/master/NEWS"
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"

@@ -50,6 +50,7 @@ conf_files="/etc/tor/torrc"
 system_accounts="tor"
 tor_homedir="/var/lib/tor"
 make_dirs="/var/lib/tor 0700 tor tor"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 pre_configure() {
@@ -64,6 +65,14 @@ pre_configure() {
 }
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+short_desc="Anonymity Online"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+homepage="http://www.torproject.org/"
+distfiles="http://www.torproject.org/dist/tor-$version.tar.gz"
+checksum=8c2be88a542ed1b22a8d3d595ec0acd0e28191de273dbcaefc64fdce92b89e6c
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	mv ${DESTDIR}/etc/tor/torrc.sample ${DESTDIR}/etc/tor/torrc

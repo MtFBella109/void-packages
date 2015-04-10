@@ -24,6 +24,7 @@ makedepends="glibc-devel"
 fulldepends="perl"
 short_desc="HTML::Parser - HTML parser class"
 homepage="http://search.cpan.org/~gaas/HTML-Parser-3.68/Parser.pm"
+<<<<<<< HEAD
 maintainer="davehome <davehome@redthumb.info.tm>"
 checksum=430e852cd4e6c5f178e7d60f05fc17419de7cf3192d5ed75df01c47d318e16c2
 long_desc="
@@ -31,3 +32,9 @@ long_desc="
  extract information from HTML documents."
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+license="Artistic, GPL-1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${CPAN_SITE}/HTML/HTML-Parser-$version.tar.gz"
+checksum=be918b3749d3ff93627f72ee4b825683332ecb4c81c67a3a8d72b0435ffbd802
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

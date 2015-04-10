@@ -3,12 +3,20 @@ pkgname=base-files
 <<<<<<< HEAD
 version=0.145
 revision=1
+<<<<<<< HEAD
 =======
 version=0.62
 fulldepends="base-directories xbps-triggers"
 short_desc="Void GNU/Linux base system files"
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://code.google.com/p/xbps"
+=======
+bootstrap=yes
+depends="base-directories xbps-triggers"
+short_desc="Void Linux base system files"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.voidlinux.eu"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="Public domain"
 long_desc="
  This package installs the base system files that aren't installed by any

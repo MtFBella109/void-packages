@@ -11,6 +11,7 @@ makedepends="openssl-devel libnl3-devel popt-devel libnfnetlink-devel"
 makedepends="libressl-devel libnl3-devel popt-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Failover and monitoring daemon for LVS clusters"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://www.keepalived.org/"
@@ -19,6 +20,13 @@ distfiles="https://www.keepalived.org/software/keepalived-${version}.tar.gz"
 checksum=c61940d874154a560a54627ecf7ef47adebdf832164368d10bf242a4d9b7d49d
 
 conf_files="/etc/keepalived/keepalived.conf"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://www.keepalived.org/"
+distfiles="http://www.keepalived.org/software/$pkgname-$version.tar.gz"
+checksum=5c4f444697374f2de14e7c74c56e28a212047050abbb3e66439534a5516b3665
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vsv $pkgname

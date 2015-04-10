@@ -18,6 +18,7 @@ makedepends="gtk+-devel libnotify-devel libgtop-devel libSM-devel
  startup-notification-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="zenity"
+<<<<<<< HEAD
 short_desc="Window manager for MATE"
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="GPL-2.0-or-later"
@@ -26,6 +27,18 @@ changelog="https://raw.githubusercontent.com/mate-desktop/marco/master/NEWS"
 distfiles="https://pub.mate-desktop.org/releases/${version%.*}/marco-${version}.tar.xz"
 checksum=2496e5e40ee980cd6849493ac3e0f8fd0dec8b81c674da8d9ba19a577f0ac2e1
 make_check=no # timeout
+=======
+short_desc="A window manager for MATE"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=772244276e0844c4fb32e52440bbd5be2d7c12e8fe508d90114cdf864caaf437
+
+pre_configure() {
+	libtoolize -f
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libmarco_package() {
 	short_desc+=" - runtime library"

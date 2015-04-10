@@ -9,12 +9,24 @@ makedepends="cinnamon-desktop-devel elogind-devel ibus-devel json-glib-devel
  libSM-devel libcanberra-devel libgnomekbd-devel libgudev-devel libnotify-devel
  nss-devel polkit-devel pulseaudio-devel upower-devel librsvg-devel"
 depends="desktop-file-utils hicolor-icon-theme"
+<<<<<<< HEAD
 short_desc="Cinnamon Settings Daemon"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.0-or-later"
 homepage="https://github.com/linuxmint/cinnamon-settings-daemon"
 distfiles="https://github.com/linuxmint/cinnamon-settings-daemon/archive/${version}.tar.gz"
 checksum=e7acab8453d084dbc97347145be287a65fc513b1a5629d16587be60367a97fdd
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://cinnamon.linuxmint.com/"
+distfiles="https://github.com/linuxmint/${pkgname}/archive/${version}.tar.gz"
+checksum=1d3c47aad65f9c5064686352012cf1783e51440fa45f4ee030bb33ac66304fd2
+
+pre_configure() {
+	NOCONFIGURE=1 ./autogen.sh
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 cinnamon-settings-daemon-devel_package() {
 	short_desc+=" - development files"

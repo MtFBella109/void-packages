@@ -16,8 +16,13 @@ revision=7
 homepage="http://www.quut.com/gsm/"
 distfiles="http://www.mangler.org/downloads/${pkgname}-${version}.tar.gz"
 short_desc="GSM 06.10 lossy speech compression"
+<<<<<<< HEAD
 maintainer="davehome <davehome@redthumb.info.tm>"
 license="BSD-style"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=52c518244d428c2e56c543b98c9135f4a76ff780c32455580b793f60a0a092ad
 long_desc="
  GSM (Global System for Mobile communications) is a cellular phone system

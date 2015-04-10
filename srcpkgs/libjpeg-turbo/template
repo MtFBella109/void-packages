@@ -3,11 +3,22 @@ pkgname=libjpeg-turbo
 <<<<<<< HEAD
 version=3.1.1
 revision=1
+<<<<<<< HEAD
 build_style=cmake
 configure_args="-DWITH_JPEG8=1"
 hostmakedepends="yasm"
 =======
 version=1.2.0
+=======
+build_style=gnu-configure
+hostmakedepends="nasm"
+configure_args="--disable-static --with-jpeg8"
+provides="jpeg-8_1"
+replaces="jpeg>=0"
+short_desc="Derivative of libjpeg which uses SIMD instructions"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://libjpeg-turbo.virtualgl.org/"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
 build_style=gnu-configure

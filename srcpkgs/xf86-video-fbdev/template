@@ -12,10 +12,18 @@ makedepends="xorg-server-devel"
 depends="virtual?xserver-abi-video-19_1"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Xorg framebuffer video driver"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=2bf857179523433a9cc6c6eea059298db4c865e649aa58dfc67c828f28b7288f
 long_desc="
  This is the video driver for framebuffer devices for the Xorg X11 server."
+=======
+homepage="http://xorg.freedesktop.org"
+license="MIT"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${XORG_SITE}/driver/${pkgname}-${version}.tar.bz2"
+checksum=9dd4b326498223abbfdf786089a46ea3db4fa6bbd341308eb48a9e00bc3fd51b
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 if [ "$CROSS_BUILD" ]; then
 	CFLAGS="-I$XBPS_CROSS_BASE/usr/include/xorg"

@@ -8,9 +8,15 @@ hostmakedepends="pkg-config automake libtool intltool glib-devel gettext-devel n
 makedepends="libXv-devel libXtst-devel libcdio-devel sdl12-compat-devel gtk+3-devel
  libXxf86vm-devel"
 depends="desktop-file-utils"
+<<<<<<< HEAD
 short_desc="Sony PlayStation (PSX) emulator based on the PCSX-df project"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+short_desc="A Sony PlayStation (PSX) emulator based on the PCSX-df project"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://pcsxr.codeplex.com/"
 distfiles="${DEBIAN_SITE}/main/p/pcsxr/pcsxr_${version}.orig.tar.xz"
 checksum=8a366b68a7c236443aa75b422bea84b5115f8d8c23e5a78fd6951e643e90f660

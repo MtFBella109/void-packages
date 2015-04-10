@@ -3,6 +3,7 @@ pkgname=agg
 version=2.7.0.r145
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-examples"
 hostmakedepends="sdl12-compat-devel automake gettext-devel libtool pkg-config"
 makedepends="sdl12-compat-devel freetype-devel"
@@ -14,6 +15,17 @@ distfiles="${DEBIAN_SITE}/main/a/agg/agg_${version}+dfsg.orig.tar.xz"
 checksum=b7181085d3c06166a972211cd17741cc5429adc7c1f58e4d528206f7208e6328
 disable_parallel_build=yes
 
+=======
+disable_parallel_build=1
+hostmakedepends="pkg-config automake libtool gettext-devel SDL-devel"
+makedepends="freetype-devel SDL-devel"
+short_desc="A High Quality Rendering Engine for C++"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.antigrain.com/"
+license="GPL-2"
+distfiles="http://www.antigrain.com/agg-${version}.tar.gz"
+checksum=ab1edc54cc32ba51a62ff120d501eecd55fceeedf869b9354e7e13812289911f
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_configure() {
 	autoreconf -fi

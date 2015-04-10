@@ -17,8 +17,13 @@ makedepends="gtksourceview-devel libxml2-devel vte3-devel gjs-devel
  neon-devel subversion-devel python3-devel gdl-devel libwebkit2gtk41-devel"
 depends="autogen"
 short_desc="GNOME Integrated Development Environment"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://projects.gnome.org/anjuta"
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=42a93130ed3ee02d064a7094e94e1ffae2032b3f35a87bf441e37fc3bb3a148f

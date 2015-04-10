@@ -10,6 +10,7 @@ makedepends="xbitmaps libXmu-devel libXrender-devel libXfixes-devel libXcursor-d
 short_desc="X root window parameter setting program"
 homepage="http://xorg.freedesktop.org"
 license="MIT"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 distfiles="${XORG_SITE}/app/${pkgname}-${version}.tar.xz"
 checksum=6081b45a9eb4426e045d259d1e144b32417fb635e5b96aa90647365ac96638d1
@@ -19,6 +20,9 @@ post_install() {
 }
 =======
 version=1.0.3
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 =======

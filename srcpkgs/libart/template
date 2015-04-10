@@ -10,6 +10,11 @@ short_desc="High-performance 2D graphics library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.0-or-later"
 homepage="http://www.levien.com/libart/"
+<<<<<<< HEAD
+=======
+license="LGPL-2.1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${GNOME_SITE}/libart_lgpl/2.3/libart_lgpl-$version.tar.bz2"
 checksum=fdc11e74c10fc9ffe4188537e2b370c0abacca7d89021d4d303afdf7fd7476fa
 

@@ -21,6 +21,7 @@ makedepends="tcl-devel aspell-devel libgcrypt-devel gnutls-devel
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="ca-certificates"
 short_desc="Fast, light and extensible IRC client"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="GPL-3.0-or-later"
 homepage="https://www.weechat.org"
@@ -32,6 +33,9 @@ lib32disabled=yes
 makedepends="cmake perl pkg-config tcl-devel aspell-devel libgcrypt-devel gnutls-devel python-devel ruby-devel lua-devel libcurl-devel"
 short_desc="Fast, light and extensible IRC client (curses UI)"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-3"
 checksum=8ef5e3daf49e75669e36093c1df852e65b51d512073c6e6b935a7fa90f6b7bca
 long_desc="

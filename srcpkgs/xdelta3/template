@@ -5,6 +5,7 @@ revision=1
 build_style=gnu-configure
 makedepends="liblzma-devel"
 short_desc="Delta/differential compression tools, VCDIFF/RFC 3284 delta compression"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://xdelta.org"
@@ -18,3 +19,10 @@ esac
 post_extract() {
 	sed -i 's|xdelta3regtest||' Makefile.in
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://code.google.com/p/xdelta/"
+distfiles="http://xdelta.googlecode.com/files/xdelta3-${version}.tar.xz"
+checksum=3a86f29c95664fb44b8a40ff22d9bcc3e87aa8c01f0ff75931a7fa78ed3d2e55
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

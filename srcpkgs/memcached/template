@@ -3,12 +3,19 @@ pkgname=memcached
 version=1.6.17
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-seccomp"
 hostmakedepends="autoconf automake pkg-config"
 makedepends="libevent-devel libseccomp-devel"
 short_desc="Distributed memory object caching system"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
+=======
+makedepends="libevent-devel"
+short_desc="A distributed memory object caching system"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.memcached.org"
 changelog="https://github.com/memcached/memcached/wiki/ReleaseNotes${version//./}"
 distfiles="https://memcached.org/files/${pkgname}-${version}.tar.gz"

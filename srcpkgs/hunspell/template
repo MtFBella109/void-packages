@@ -8,6 +8,7 @@ configure_args="--with-ui"
 <<<<<<< HEAD
 hostmakedepends="automake bison libtool pkg-config gettext-devel-tools"
 makedepends="ncurses-devel"
+<<<<<<< HEAD
 short_desc="Spell checker and morphological analyzer"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later, MPL-1.1"
@@ -15,6 +16,14 @@ homepage="https://hunspell.github.io/"
 changelog="https://github.com/hunspell/hunspell/releases"
 distfiles="https://github.com/hunspell/hunspell/archive/v${version}.tar.gz"
 checksum=69fa312d3586c988789266eaf7ffc9861d9f6396c31fc930a014d551b59bbd6e
+=======
+short_desc="An Improved spellchecker"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://hunspell.sourceforge.net"
+license="GPL-2, LGPL, MPL"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
+checksum=a7b2c0de0e2ce17426821dc1ac8eb115029959b3ada9d80a81739fa19373246c
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_configure() {
 	autoreconf -fi

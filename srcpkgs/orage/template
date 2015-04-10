@@ -18,6 +18,7 @@ makedepends="libical-devel libnotify-devel gtk+-devel dbus-glib-devel
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme desktop-file-utils"
 short_desc="Simple calendar application for Xfce"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://docs.xfce.org/apps/orage/start"
@@ -59,3 +60,10 @@ Add_dependency full desktop-file-utils
 
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.xfce.org/projects/orage/"
+license="GPL-2"
+distfiles="http://archive.xfce.org/src/apps/orage/${version%.*}/orage-$version.tar.bz2"
+checksum=6cb854f3437e31bab23abfce97bd10afa1636a9a1480d80e14e26c85d06be7c0
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

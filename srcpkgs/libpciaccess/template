@@ -5,7 +5,11 @@ version=0.18.1
 revision=1
 build_style=meson
 short_desc="X11 PCI Access library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="http://xorg.freedesktop.org/"
 distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.xz"

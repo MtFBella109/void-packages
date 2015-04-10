@@ -9,8 +9,12 @@ configure_args="--enable-release --with-xft=yes --with-opengl=yes --with-xim
 makedepends="glu-devel libXcursor-devel libXft-devel libXi-devel libXrandr-devel
  tiff-devel"
 short_desc="Free Objects for X: GUI Toolkit for C++"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later, MIT"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.fox-toolkit.org/"
 distfiles="http://fox-toolkit.org/ftp/fox-$version.tar.gz"
 checksum=48f33d2dd5371c2d48f6518297f0ef5bbf3fcd37719e99f815dc6fc6e0f928ae

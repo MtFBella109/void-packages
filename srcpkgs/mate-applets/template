@@ -24,6 +24,7 @@ depends="python-gobject mate-icon-theme upower0"
 pycompile_module="mate_invest"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Applets for MATE panel"
+<<<<<<< HEAD
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://mate-desktop.org"
@@ -38,3 +39,10 @@ case "$XBPS_TARGET_MACHINE" in
 		makedepends+=" libcpupower-devel"
 		;;
 esac
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-3"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=6f1a88453e526a7ee67e14fa4d6b3dc74fb954a1465c7cb3a76f205389a2df83
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

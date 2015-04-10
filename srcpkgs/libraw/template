@@ -20,12 +20,20 @@ hostmakedepends="pkg-config"
 makedepends="lcms2-devel jasper-devel libgomp-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Raw image decoder library"
+<<<<<<< HEAD
 maintainer="Daniel Martinez <danielmartinez@cock.li>"
 license="LGPL-2.1-only, CDDL-1.0"
 homepage="https://www.libraw.org"
 changelog="https://github.com/LibRaw/LibRaw/raw/${version%.*}-stable/Changelog.txt"
 distfiles="https://www.libraw.org/data/LibRaw-${version}.tar.gz"
 checksum=6be43f19397e43214ff56aab056bf3ff4925ca14012ce5a1538a172406a09e63
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2, CDDL, ${pkgname}"
+homepage="http://www.libraw.org"
+distfiles="http://www.libraw.org/data/LibRaw-${version}.tar.gz"
+checksum=71f43871ec2535345c5c9b748f07813e49915170f9510b721a2be6478426cf96
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 <<<<<<< HEAD

@@ -11,7 +11,7 @@ configure_args="--disable-expensive-checks --disable-debug-runtime
 --enable-shared --enable-libffi --enable-llvmc-dynamic"
 makedepends="groff perl python libffi-devel"
 short_desc="Low Level Virtual Machine"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.llvm.org"
 license="BSD"
 checksum="

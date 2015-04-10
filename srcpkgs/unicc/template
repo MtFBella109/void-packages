@@ -4,10 +4,16 @@ version=1.6.2
 revision=1
 build_style=gnu-configure
 configure_args="--with-trace"
+<<<<<<< HEAD
 makedepends="libphorward-devel"
 short_desc="Universal Compiler-Compiler"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
+=======
+makedepends="phorward-devel"
+short_desc="The Universal Compiler-Compiler"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.phorward-software.com"
 distfiles="https://github.com/phorward/unicc/archive/${version}.tar.gz"
 checksum=d19d84e19de8d1ea2e874467737681ad0794c6882664469c05fb88cbf0f3a81f

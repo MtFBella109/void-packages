@@ -12,7 +12,11 @@ hostmakedepends="perl"
 makedepends="lua-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="A POSIX library for Lua programming language"
+<<<<<<< HEAD
 maintainer="davehome <davehome@redthumb.info.tm>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-2, LGPL-2.1"
 homepage="http://luaforge.net/projects/luaposix/"
 distfiles="https://github.com/downloads/rrthomas/$pkgname/$pkgname-$version.tar.gz"

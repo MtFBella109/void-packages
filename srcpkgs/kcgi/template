@@ -2,6 +2,7 @@
 pkgname=kcgi
 version=0.13.4
 revision=1
+<<<<<<< HEAD
 build_style=configure
 configure_args="PREFIX=/usr MANDIR=/usr/share/man SBINDIR=/usr/bin"
 make_cmd="bmake"
@@ -11,6 +12,11 @@ makedepends="zlib-devel"
 checkdepends="libcurl-devel"
 short_desc="Minimal CGI library for web applications in C"
 maintainer="Duncaen <duncaen@voidlinux.org>"
+=======
+build_style=gnu-configure
+short_desc="A minimal CGI library for web applications in C"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="ISC"
 homepage="http://kristaps.bsd.lv/kcgi/"
 changelog="https://kristaps.bsd.lv/kcgi/archive.html"

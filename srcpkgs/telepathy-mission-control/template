@@ -27,7 +27,7 @@ configure_args="--disable-static --enable-gnome-keyring
 --disable-schemas-compile"
 makedepends="pkg-config intltool libxslt libgnome-keyring-devel telepathy-glib-devel NetworkManager-devel upower-devel"
 short_desc="Telepathy component providing abstraction for details of connection managers"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="LGPL-2.1"
 checksum=660aeb65543e1b029dfde6a895934cb20b766644bae2a68c0030052aa6645e77
 long_desc="

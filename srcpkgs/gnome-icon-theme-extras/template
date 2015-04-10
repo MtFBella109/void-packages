@@ -11,7 +11,13 @@ short_desc="GNOME Desktop icon theme (additional icons)"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="CC-BY-SA-3.0"
 homepage="http://gnome.org/"
+<<<<<<< HEAD
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
+=======
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=4eec6cea8a7b09c4ed6ebab1a3b42539b9c61a53bec4b8872e774611cc619608
 =======
 makedepends="pkg-config intltool icon-naming-utils"

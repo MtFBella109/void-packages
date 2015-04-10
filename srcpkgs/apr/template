@@ -13,7 +13,12 @@ configure_args="--with-devrandom=/dev/urandom
 makedepends="libuuid-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Apache Portable Runtime Library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://apr.apache.org/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="Apache-2.0"
 homepage="https://apr.apache.org/"
 distfiles="https://archive.apache.org/dist/apr/apr-${version}.tar.bz2"

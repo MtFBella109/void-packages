@@ -18,12 +18,20 @@ makedepends="alsa-lib-devel eudev-libudev-devel freetype-devel libusb-devel libx
  $(vopt_if x11 'libXext-devel libXinerama-devel libXxf86vm-devel')"
 depends="$(vopt_if vulkan vulkan-loader) $(vopt_if x11 xdg-utils)"
 short_desc="Official reference frontend for the libretro API"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://www.retroarch.com/"
 changelog="https://raw.githubusercontent.com/libretro/RetroArch/master/CHANGES.md"
 distfiles="https://github.com/libretro/RetroArch/archive/v$version.tar.gz"
 checksum=504a3a8a6e5861eb43a61be8339f61183e7ea940c1ff68ac2a2f57d35c67f8ff
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://www.libretro.com/"
+distfiles="http://ftp.netbsd.org/pub/NetBSD/misc/jmcneill/retroarch/retroarch-${version}.zip"
+checksum=55d6480eba8eadcf73c8e4e3eca3179baab35b4406431178d26348be6446833b
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 build_options="ffmpeg flac glcore gles2 jack neon pulseaudio qt5 sdl2 vulkan wayland x11"
 build_options_default="ffmpeg flac glcore pulseaudio sdl2 vulkan wayland x11"

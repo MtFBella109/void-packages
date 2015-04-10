@@ -11,11 +11,17 @@ makedepends="zlib-devel"
 depends="less"
 checkdepends="perl"
 conf_files="/etc/man.conf"
+<<<<<<< HEAD
 short_desc="UNIX manpage compiler toolset (mandoc)"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 =======
 version=1.12.0
 revision=2
+=======
+short_desc="The mandoc UNIX manpage compiler toolset"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="ISC"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://mdocml.bsd.lv"
 distfiles="${homepage}/snapshots/mdocml-$version.tar.gz"
 build_style=gnu-makefile

@@ -30,6 +30,7 @@ do_build() {
 =======
 makedepends="perl"
 short_desc="The Tiny C Compiler"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=1bed6cb0fb2ef4100df1b94435d22863679e84cf419ec48ef96d9c0e9063de35
 long_desc="
@@ -50,3 +51,10 @@ long_desc="
     * With libtcc, you can use TCC as a backend for dynamic code generation."
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://bellard.org/tcc/"
+license="LGPL-2.1"
+distfiles="${NONGNU_SITE}/tinycc/tcc-$version.tar.bz2"
+checksum=521e701ae436c302545c3f973a9c9b7e2694769c71d9be10f70a2460705b6d71
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

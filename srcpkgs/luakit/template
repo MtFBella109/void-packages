@@ -12,6 +12,7 @@ hostmakedepends="pkg-config LuaJIT lua51-luafilesystem"
 makedepends="libwebkit2gtk41-devel LuaJIT-devel"
 depends="lua51-luafilesystem"
 short_desc="Fast, small, webkit based browser framework extensible by Lua"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://luakit.github.io/"
@@ -19,3 +20,23 @@ changelog="https://github.com/luakit/luakit/blob/develop/CHANGELOG.md"
 distfiles="https://github.com/luakit/luakit/archive/${version}.tar.gz"
 checksum=65f73939db561de21bba735bdf92c2b32d28c6610e3d114d1420a8477d531802
 make_check=no # missing luassert
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://mason-larobina.github.com/luakit"
+
+do_fetch() {
+	git clone -b${_distver}-${_patchver} git://github.com/mason-larobina/luakit.git ${pkgname}-${version}
+}
+pre_build() {
+	# use luajit to run script needed at build
+	sed -i '1s,lua,luajit,' build-utils/gentokens.lua
+}
+do_build() {
+	make USE_LUAJIT=1 PREFIX=/usr all
+}
+do_install() {
+	make PREFIX=/usr DESTDIR=${DESTDIR} install 
+	chmod -x ${DESTDIR}/usr/share/pixmaps/luakit.png 
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

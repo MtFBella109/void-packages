@@ -39,7 +39,7 @@ build_style=gnu-configure
 depends="eog>=3.4.0"
 makedepends="pkg-config intltool eog-devel libgdata-devel libchamplain-devel libpeas-devel libexif-devel"
 short_desc="Eye of GNOME plugins"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.gnome.org"
 license="GPL-2"
 checksum=21a63f8f6e3a5b30f2f05133edc46becd4c83343c0f462a345204326071bc139

@@ -6,8 +6,13 @@ build_style=gnu-configure
 hostmakedepends="automake libtool pkg-config"
 makedepends="libevent-devel"
 short_desc="C implementation of the Frame Streams data transport protocol"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Apache-2.0"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://github.com/farsightsec/fstrm"
 changelog="https://raw.githubusercontent.com/farsightsec/fstrm/master/ChangeLog"
 distfiles="https://github.com/farsightsec/fstrm/archive/v${version}.tar.gz"

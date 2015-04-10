@@ -6,11 +6,19 @@ build_style=gnu-configure
 depends="xorg-server"
 makedepends="xorg-server-devel mtdev-devel"
 short_desc="Xorg event device input driver"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=6d57420cce9201a14f2fb5c5f6bc8999ffdcc9520020d54290eb22db27c366c8
 long_desc="
  This package provides the Xorg event device input driver for the
  Xorg X11 server."
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://xorg.freedesktop.org/"
+license="MIT"
+distfiles="${XORG_SITE}/driver/$pkgname-$version.tar.bz2"
+checksum=792329b531afc6928ccda94e4b51a5520d4ddf8ef9a00890a5d0d31898acefec
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 subpackages="$pkgname-devel"
 

@@ -16,7 +16,7 @@ hostmakedepends="python-devel"
 makedepends="libressl-devel"
 depends="python"
 short_desc="A remote-mail retrieval utility"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-2"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://fetchmail.sourceforge.net/"

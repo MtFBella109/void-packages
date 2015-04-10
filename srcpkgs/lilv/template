@@ -28,8 +28,12 @@ maintainer="davehome <davehome@redthumb.info.tm>"
 hostmakedepends="pkg-config python"
 makedepends="python-devel serd-devel sord-devel sratom-devel lv2"
 short_desc="A simple yet powerful C API for using LV2 plugins"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="ISC"
 <<<<<<< HEAD
 homepage="https://gitlab.com/lv2/lilv"

@@ -9,8 +9,12 @@ hostmakedepends="pkg-config"
 makedepends="pkg-config"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Generic SCSI utilities"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause, GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://sg.danny.cz/sg/sg3_utils.html"
 <<<<<<< HEAD
 distfiles="http://sg.danny.cz/sg/p/${pkgname}-${version}.tgz"

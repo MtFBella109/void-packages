@@ -3,6 +3,7 @@ pkgname=bullet
 version=3.25
 revision=1
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DBUILD_SHARED_LIBS=1 -DBUILD_BULLET2_DEMOS=1 -DBUILD_CPU_DEMOS=0
  -DBUILD_UNIT_TESTS=1 -DBUILD_OPENGL3_DEMOS=1 -DBUILD_EXTRAS=1 -DINSTALL_EXTRA_LIBS=1
  -DINSTALL_LIBS=1"
@@ -10,6 +11,14 @@ makedepends="glu-devel"
 short_desc="3D Collision Detection and Rigid Body Dynamics Library"
 maintainer="John <me@johnnynator.dev>"
 license="Zlib"
+=======
+configure_args="-DBUILD_SHARED_LIBS=1 -DBUILD_DEMOS=0 -DBUILD_MULTITHREADING=1
+ -DBUILD_EXTRAS=1 -DINSTLAL_LIBS=1 -DINSTALL_EXTRA_LIBS=1"
+hostmakedepends="cmake"
+short_desc="A 3D Collision Detection and Rigid Body Dynamics Library"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="zlib"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.bulletphysics.com/Bullet/"
 distfiles="https://github.com/bulletphysics/bullet3/archive/${version}.tar.gz"
 checksum=c45afb6399e3f68036ddb641c6bf6f552bf332d5ab6be62f7e6c54eda05ceb77

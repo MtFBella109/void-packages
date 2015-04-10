@@ -26,11 +26,19 @@ depends="coreutils shadow"
 makedepends="pkg-config zlib-devel ncurses-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Miscellaneous linux utilities"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://www.kernel.org/pub/linux/utils/util-linux/"
 distfiles="${KERNEL_SITE}/utils/${pkgname}/v${version%.${version#*.*.}}/${pkgname}-${version}.tar.xz"
 checksum=6062a1d89b571a61932e6fc0211f36060c4183568b81ee866cf363bce9f6583e
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://userweb.kernel.org/~kzak/util-linux-ng"
+license="GPL-2"
+distfiles="${KERNEL_SITE}/utils/${pkgname}/v${version%.*}/${pkgname}-${version}.tar.xz"
+checksum=22dc1c957262e2cbdfb4d524a63d5cd4f219d3ac9b5eab570fc771076799bb6e
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 if [ "$XBPS_TARGET_LIBC" = "glibc" ]; then
 	makedepends+=" libxcrypt-devel"

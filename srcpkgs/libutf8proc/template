@@ -5,7 +5,11 @@ revision=1
 build_style=cmake
 configure_args="-DBUILD_SHARED_LIBS=ON"
 short_desc="C library for processing UTF-8 encoded Unicode strings"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="http://juliastrings.github.io/utf8proc/"
 changelog="https://raw.githubusercontent.com/JuliaStrings/utf8proc/master/NEWS.md"

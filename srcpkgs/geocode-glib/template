@@ -19,12 +19,20 @@ hostmakedepends="pkg-config intltool glib-devel $(vopt_if gir gobject-introspect
 makedepends="json-glib-devel libsoup-gnome-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GLib library for geocoding and reverse geocoding"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://developer.gnome.org/geocode-glib"
 distfiles="${GNOME_SITE}/geocode-glib/${version%.*}/geocode-glib-${version}.tar.xz"
 checksum=2d9a6826d158470449a173871221596da0f83ebdcff98b90c7049089056a37aa
 make_check=no # expects installed locales
+=======
+homepage="http://www.gnome.org"
+license="LGPL-2.1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/${pkgname}-${version}.tar.xz"
+checksum=a19b21a92b8cbfa29a5ae6616c2fdca8567e97480f7bb5c955905f6ae1c72010
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 # Package build options
 build_options="gir"

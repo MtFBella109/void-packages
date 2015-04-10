@@ -6,7 +6,11 @@ build_style=meson
 hostmakedepends="pkg-config xorg-util-macros"
 makedepends="MesaLib-devel"
 short_desc="Library for handling OpenGL function pointer management for you"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://github.com/anholt/libepoxy"
 changelog="https://github.com/anholt/libepoxy/releases"

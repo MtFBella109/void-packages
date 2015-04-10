@@ -4,11 +4,18 @@ version=20250212
 revision=2
 build_style=gnu-makefile
 short_desc="Void Linux runit scripts"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="CC0-1.0"
 homepage="https://github.com/void-linux/void-runit"
 distfiles="https://github.com/void-linux/void-runit/archive/refs/tags/${version}.tar.gz"
 checksum=c0d3ecea4dae5bba8ca3e563706847ef3b6cbdfcc19b8bf69b3f7a9bc0451f50
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Public Domain"
+distfiles="https://github.com/voidlinux/void-runit/archive/${version}.tar.gz"
+checksum=369742c4a335fab9f4cbe81816a0ec8653db473d52480bce1b6fe3304c91a296
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 depends="virtual?awk procps-ng runit"
 conf_files="

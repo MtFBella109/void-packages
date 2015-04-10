@@ -1,10 +1,17 @@
 # Template file for 'tinyxml'
 pkgname=tinyxml
 version=2.6.2
+<<<<<<< HEAD
 revision=11
 short_desc="Simple, small, C++ XML parser"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Zlib"
+=======
+revision=5
+wrksrc="${pkgname}"
+short_desc="A simple, small, C++ XML parser that can be easily integrated into other programs"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.grinninglizard.com/tinyxml/"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}_2_6_2.tar.gz"
 checksum=15bdfdcec58a7da30adc87ac2b078e4417dbe5392f3afb719f9ba6d062645593

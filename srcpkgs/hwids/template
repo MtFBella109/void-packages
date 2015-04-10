@@ -4,11 +4,17 @@ reverts="20201207_1 20210613_1 20200813.1_1 20200813.1_2 20200306_1 20200204_1 2
 version=0.399
 revision=1
 short_desc="Hardware Identification Databases"
+<<<<<<< HEAD
 maintainer="John <me@johnnynator.dev>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/vcrhonek/hwdata"
 distfiles="https://github.com/vcrhonek/hwdata/archive/refs/tags/v${version}.tar.gz"
 checksum=74872355e14d5ddc48a0f63036227ffb5f7796a3012c6377ac1fc7432ffe2b41
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="https://github.com/gentoo/hwids"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_install() {
 	vmkdir usr/share/hwdata

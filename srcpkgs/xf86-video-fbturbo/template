@@ -6,8 +6,12 @@ build_style=gnu-configure
 short_desc="Xorg DDX driver for Allwinner A10/A13 and other ARM devices"
 homepage="http://github.com/ssvb/xf86-video-fbturbo"
 license="MIT, GPL"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 create_srcdir=yes
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="https://github.com/ssvb/xf86-video-fbturbo/archive/${version}.tar.gz"
 checksum=10411686de0a9d8b2cde300b0d68e9f1d22e3611470d357ef3afc337f123ca0f
 

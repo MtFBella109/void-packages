@@ -5,6 +5,7 @@ revision=1
 build_style=gnu-configure
 <<<<<<< HEAD
 configure_args="--with-boost=${XBPS_CROSS_BASE}/usr --disable-static --disable-unittest"
+<<<<<<< HEAD
 makedepends="zlib-devel expat-devel boost-devel-minimal"
 short_desc="Library for easy parsing of XMP metadata"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -16,6 +17,15 @@ checksum=900fb9957be2095c78e5111b99c49378adac58161a358f52f93c55126f34eb8f
 post_install() {
 	vlicense COPYING
 }
+=======
+makedepends="zlib-devel expat-devel boost-devel"
+short_desc="Library for applications dealing with netlink sockets"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+homepage="http://libopenraw.freedesktop.org/wiki/Exempi"
+distfiles="http://libopenraw.freedesktop.org/download/exempi-$version.tar.bz2"
+checksum=0e7ad0e5e61b6828e38d31a8cc59c26c9adeed7edf4b26708c400beb6a686c07
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 exempi-devel_package() {
 	depends="zlib-devel expat-devel ${sourcepkg}>=${version}_${revision}"

@@ -13,6 +13,7 @@ hostmakedepends="docbook-xsl gettext glib-devel libxslt pkg-config
 makedepends="acl-devel libatasmart-devel libgudev-devel libparted-devel
  polkit-devel sg3_utils-devel libblockdev-devel libbtrfs-devel elogind-devel"
 short_desc="Disk Management Service, version 2"
+<<<<<<< HEAD
 maintainer="Érico Nogueira <ericonr@disroot.org>"
 license="GPL-2.0-or-later"
 homepage="https://www.freedesktop.org/wiki/Software/udisks"
@@ -25,6 +26,9 @@ depends="udev"
 makedepends="pkg-config intltool libxslt docbook-xsl acl-devel device-mapper-devel liblvm2app-devel libparted-devel libatasmart-devel polkit-devel libgudev-devel sg3_utils-devel"
 short_desc="Disk Management Service"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.freedesktop.org/wiki/Software/udisks"
 license="GPL-2"
 checksum=132e569d1b565a74c481d37ba27977c9aa9f5254baf79b2763898c9fa35a4ceb

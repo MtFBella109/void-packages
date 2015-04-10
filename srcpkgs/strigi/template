@@ -14,8 +14,12 @@ makedepends="attr-devel zlib-devel bzip2-devel boost-devel exiv2-devel libxml2-d
 short_desc="Small fast desktop searching program"
 homepage="http://www.vandenoever.info/software/strigi/"
 license="LGPL-2"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://www.vandenoever.info/software/${pkgname}/${pkgname}-${version}.tar.bz2"
 build_style=cmake
 configure_args="-DENABLE_INOTIFY=ON"

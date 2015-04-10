@@ -11,8 +11,14 @@ makedepends="perl libressl-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="${hostmakedepends}"
 short_desc="Crypt::OpenSSL::Bignum - OpenSSL multiprecision integer arithmetic"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/Crypt-OpenSSL-Bignum"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/Crypt-OpenSSL-Bignum"
+license="Artistic, GPL-1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${CPAN_SITE}/Crypt/Crypt-OpenSSL-Bignum-${version}.tar.gz"
 checksum=234e72fb8396d45527e6fd45e43759c5c3f3a208cf8f29e6a22161a996fd42dc

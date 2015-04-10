@@ -5,9 +5,15 @@ revision=1
 build_style=gnu-makefile
 hostmakedepends="perl texinfo"
 makedepends="ncurses-devel"
+<<<<<<< HEAD
 short_desc="Nice Editor"
 maintainer="Saksham <voidisnull@duck.com>"
 license="GPL-3.0-only"
+=======
+short_desc="The Nice Editor"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://ne.di.unimi.it/"
 changelog="https://raw.githubusercontent.com/vigna/ne/master/NEWS"
 distfiles="https://github.com/vigna/ne/archive/refs/tags/${version}.tar.gz"

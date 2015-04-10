@@ -16,8 +16,13 @@ makedepends="ncurses-devel"
 makedepends="nasm ncurses-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Fast, high quality MP3 encoder"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://lame.sourceforge.net"
 distfiles="${SOURCEFORGE_SITE}/lame/lame-${version}.tar.gz"
 checksum=ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e

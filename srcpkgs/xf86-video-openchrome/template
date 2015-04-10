@@ -13,6 +13,12 @@ depends="xserver-abi-video-15_1"
 depends="virtual?xserver-abi-video-19_1"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Xorg VIA Unichromes video driver"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+homepage="http://xorg.freedesktop.org"
+license="MIT"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/driver/${pkgname}-${version}.tar.bz2"
 checksum=eb459a86e20fa090577315a0d9964bf3f94abc5241c5408453f326eaf8915ce7

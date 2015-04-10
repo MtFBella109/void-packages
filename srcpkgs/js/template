@@ -2,6 +2,16 @@
 pkgname=js
 version=1.8.5
 build_wrksrc="js/src"
+<<<<<<< HEAD
+=======
+build_style=gnu-configure
+hostmakedepends="zip python perl nspr-devel"
+makedepends="nspr-devel"
+short_desc="Spidermonkey JavaScript interpreter and library"
+homepage="https://developer.mozilla.org/en/docs/SpiderMonkey"
+license="MPL-1.1, GPL-2, LGPL-2.1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${MOZILLA_SITE}/js/js185-1.0.0.tar.gz"
 build_style=gnu-configure
 configure_args="--with-system-nspr --enable-threadsafe"

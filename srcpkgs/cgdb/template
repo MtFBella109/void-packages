@@ -14,8 +14,14 @@ hostmakedepends="flex help2man"
 makedepends="ncurses-devel readline-devel"
 depends="gdb"
 short_desc="Curses-based interface to the GNU Debugger"
+<<<<<<< HEAD
 maintainer="meator <meator.dev@gmail.com>"
 license="GPL-2.0-only"
 homepage="https://cgdb.github.io/"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://cgdb.sourceforge.net"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://cgdb.me/files/cgdb-${version}.tar.gz"
 checksum=0d38b524d377257b106bad6d856d8ae3304140e1ee24085343e6ddf1b65811f1

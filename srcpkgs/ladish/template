@@ -8,7 +8,11 @@ makedepends="perl intltool python-devel pkg-config alsa-lib-devel jack-devel
  dbus-devel dbus-glib-devel libuuid-devel expat-devel glib-devel gtk+-devel
  flowcanvas-devel boost-devel libgnomecanvasmm-devel gtkmm2-devel"
 short_desc="Session management system for JACK applications"
+<<<<<<< HEAD
 maintainer="davehome <davehome@redthumb.info.tm>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-2"
 homepage="http://ladish.org"
 distfiles="http://ladish.org/download/${pkgname}-${version}.tar.bz2"

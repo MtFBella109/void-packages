@@ -19,7 +19,11 @@ hostmakedepends="libtool automake pkg-config gobject-introspection"
 makedepends="gtk+-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Library for writing single instance applications (GTK+2)"
+<<<<<<< HEAD
 maintainer="xtraeme <xtraeme@gmail.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://live.gnome.org/LibUnique"
 license="LGPL-2.1"
 checksum=e5c8041cef8e33c55732f06a292381cb345db946cf792a4ae18aa5c66cdd4fbb

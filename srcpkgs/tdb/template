@@ -20,7 +20,7 @@ checksum=02338e33c16c21c9e29571cef523e76b2b708636254f6f30c6cf195d48c62daf
 =======
 makedepends="pkg-config python-devel libxslt docbook-xsl"
 short_desc="Hierarchical pool based memory allocator with destructors"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-3"
 checksum=886fbca71710b9fcf168ffcae47f05a6c3ff3392cf951f4cb1f949851c04f9ed
 long_desc="

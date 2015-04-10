@@ -4,6 +4,7 @@ version=1.5.4
 revision=1
 configure_args="--python3"
 pycompile_dirs="/usr/share/backintime"
+<<<<<<< HEAD
 hostmakedepends="gettext python3"
 depends="python3 rsync python3-dbus python3-keyring python3-packaging"
 short_desc="Simple backup tool for Linux"
@@ -52,3 +53,11 @@ backintime-qt_package() {
 		vmove usr/share/polkit-1
 	}
 }
+=======
+short_desc="A simple backup tool for Linux"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://$pkgname.le-web.org"
+distfiles="http://backintime.le-web.org/download/backintime/backintime-${version}.tar.gz"
+checksum=601418af0e68c327afa91e3ed9ef76c63016272728669021ca1e8b6f73d1d87b
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

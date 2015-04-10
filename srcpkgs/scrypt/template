@@ -9,10 +9,16 @@ revision=5
 makedepends="libressl-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 build_style=gnu-configure
+<<<<<<< HEAD
 makedepends="openssl-devel"
 short_desc="Scrypt key derivation function"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
+=======
+short_desc="The scrypt key derivation function"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="2-clause-BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://www.tarsnap.com/scrypt.html"
 distfiles="https://www.tarsnap.com/scrypt/scrypt-${version}.tgz"
 checksum=1c2710517e998eaac2e97db11f092e37139e69886b21a1b2661f64e130215ae9

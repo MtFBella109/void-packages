@@ -3,8 +3,12 @@ pkgname=zd1211-firmware
 version=1.5
 revision=3
 short_desc="Firmware for the Zydas 1211 wifi cards"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://zd1211.wiki.sourceforge.net/"
 distfiles="${SOURCEFORGE_SITE}/zd1211/zd1211-firmware-${version}.tar.bz2"
 checksum=f11d3810d7f72833997f634584a586dcced71a353f965abf81062ec431d02b12

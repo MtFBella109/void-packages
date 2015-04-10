@@ -4,11 +4,19 @@ version=2.0.4
 revision=1
 build_style=gnu-configure
 short_desc="Library that contains several hash-map implementations"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
 homepage="https://github.com/sparsehash/sparsehash"
 distfiles="https://github.com/sparsehash/sparsehash/archive/${pkgname}-${version}.tar.gz"
 checksum=8cd1a95827dfd8270927894eb77f62b4087735cbede953884647f16c521c7e58
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+homepage="http://code.google.com/p/sparsehash"
+distfiles="http://sparsehash.googlecode.com/files/$pkgname-$version.tar.gz"
+checksum=2ed639a7155607c097c2029af5f4287296595080b2e5dd2e2ebd9bbb7450b87c
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense COPYING

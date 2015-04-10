@@ -10,6 +10,7 @@ makedepends="gtk+-devel qt5-devel qt6-base-devel gtk+3-devel lv2"
 makedepends="python lv2-ui gtk+-devel qt-devel libstdc++-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Lightweight C library for loading and wrapping LV2 plugin UIs"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
 homepage="https://gitlab.com/lv2/suil"
@@ -37,6 +38,13 @@ post_install() {
 subpackages="$pkgname-devel"
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD-style"
+homepage="http://drobilla.net/software/suil/"
+distfiles="http://download.drobilla.net/${pkgname}-${version}.tar.bz2"
+checksum=787608c1e5b1f5051137dbf77c671266088583515af152b77b45e9c3a36f6ae8
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 suil-devel_package() {
 	depends="suil>=${version}_${revision}"

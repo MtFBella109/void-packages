@@ -19,8 +19,13 @@ revision=3
 makedepends="pkg-config glib-devel libxml2-devel libsoup-devel gssdp-devel gupnp-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library to handle UPnP IGD port mapping"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://gupnp.org"
 changelog="https://gitlab.gnome.org/GNOME/gupnp-igd/-/raw/master/NEWS"
 #distfiles="${GNOME_SITE}/gupnp-igd/${version%.*}/gupnp-igd-${version}.tar.xz"

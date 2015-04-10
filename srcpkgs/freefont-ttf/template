@@ -12,8 +12,12 @@ distfiles="http://ftp.gnu.org/gnu/freefont/${pkgname}-${version}.tar.gz"
 fulldepends="font-util"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Free family of scalable outline fonts"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.nongnu.org/freefont/"
 distfiles="${GNU_SITE}/freefont/freefont-ttf-${version}.zip"
 checksum=7c85baf1bf82a1a1845d1322112bc6ca982221b484e3b3925022e25b5cae89af

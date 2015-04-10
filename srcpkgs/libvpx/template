@@ -5,6 +5,7 @@ pkgname=libvpx
 <<<<<<< HEAD
 version=1.13.1
 revision=1
+<<<<<<< HEAD
 hostmakedepends="perl"
 short_desc="VP8 and VP9 video codec"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -13,6 +14,14 @@ license="BSD-3-Clause-Clear"
 version=1.0.0
 wrksrc="libvpx-v${version}"
 <<<<<<< HEAD
+=======
+wrksrc="${pkgname}-v${version}"
+hostmakedepends="which perl yasm"
+short_desc="The VP8 Codec"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.webmproject.org"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://webm.googlecode.com/files/${pkgname}-v${version}.tar.bz2"
 build_style=configure
 configure_args="--enable-vp8 --enable-runtime-cpu-detect --enable-shared

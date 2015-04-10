@@ -9,7 +9,12 @@ wrksrc="lua-${version}"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="ncurses-devel readline-devel"
 short_desc="Powerful, fast, lightweight, embeddable scripting language (5.1.x)"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.lua.org"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://www.lua.org"
 distfiles="https://www.lua.org/ftp/lua-$version.tar.gz"

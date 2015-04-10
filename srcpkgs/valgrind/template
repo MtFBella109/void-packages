@@ -10,8 +10,12 @@ hostmakedepends="automake perl pkg-config"
 makedepends="libgomp-devel"
 depends="perl"
 short_desc="Tool for finding memory management bugs in programs"
+<<<<<<< HEAD
 maintainer="Duncaen <duncaen@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://valgrind.org/"
 changelog="https://valgrind.org/docs/manual/dist.news.html"
 distfiles="https://sourceware.org/pub/valgrind/valgrind-${version}.tar.bz2"

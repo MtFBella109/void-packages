@@ -10,6 +10,7 @@ makedepends="${_devel_depends} libcurl-devel libarchive-devel sqlite-devel
  libmicrohttpd-devel json-c-devel"
 checkdepends="zstd bzip2 curl rpm cpio iproute2 procps-ng"
 short_desc="Utilities to handle ELF object files"
+<<<<<<< HEAD
 maintainer="Érico Nogueira <ericonr@disroot.org>"
 license="GPL-3.0-or-later"
 homepage="https://sourceware.org/elfutils/"
@@ -60,6 +61,13 @@ debuginfod_package() {
 		vmove usr/share/man/man8/debuginfod.8
 	}
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="https://fedorahosted.org/elfutils/"
+distfiles="https://fedorahosted.org/releases/e/l/${pkgname}/${version}/${pkgname}-${version}.tar.bz2"
+checksum=741b556863c069ceab2d81eb54aeda8c34f46728859704eaf9baef8503e9a9d1
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libelf_package() {
 	short_desc+=" - runtime library"

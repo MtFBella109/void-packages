@@ -68,6 +68,17 @@ make_dirs="
 # Create the 'gdm' system user/group.
 system_accounts="gdm"
 gdm_homedir="/var/lib/gdm"
+<<<<<<< HEAD
+=======
+depends="iso-codes xrdb xorg-server hicolor-icon-theme
+ dconf>=0.20 gnome-session>=3.14 gnome-settings-daemon>=3.14 gnome-shell>=3.14"
+short_desc="GNOME Display Manager"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=ed83498131bcea69ce60f882783c669c24b007d2b7e1219b4bdde18f6c94deb1
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 # Package build options

@@ -14,11 +14,19 @@ revision=3
 makedepends="pkg-config intltool gtk+-devel ncurses-devel pygtk-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Terminal widget with improved accessibility and I18N support"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=33bbf9d88004f19ec846c42c1a18f3625c8ffdfc264997803846bee96a80a0a9
 long_desc="
  Terminal widget with improved font, internationalization and
  accessibility support for the GNOME 2 desktop."
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="LGPL-2.1"
+distfiles="${GNOME_SITE}/vte/0.28/$pkgname-$version.tar.bz2"
+checksum=8d04e202b617373dfb47689e5e628febe2c58840b34cccc4af4feb88c48df903
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 subpackages="$pkgname-devel"

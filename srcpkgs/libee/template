@@ -28,7 +28,7 @@ makedepends="pkg-config libestr-devel"
 =======
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Event expression library inspired by CEE"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="LGPL-2.1"
 checksum=4e19bf297fb76f18fef773c651767152ebf65ecd4a1f4b06fe1c5f117fa4f81a
 long_desc="

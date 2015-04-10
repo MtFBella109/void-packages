@@ -29,8 +29,12 @@ hostmakedepends="pkg-config intltool itstool gnome-doc-utils glib-devel"
 makedepends="gtk+3-devel vala-devel gsettings-desktop-schemas-devel"
 depends="hicolor-icon-theme desktop-file-utils gsettings-desktop-schemas>=3.14"
 short_desc="A graphical directory tree analyzer for GNOME"
+<<<<<<< HEAD
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnome.org"
 license="GPL-2"
 checksum=0c9743caf8cdc6dd69d694453cd57816c1ca0514cf51111022846088021949f7

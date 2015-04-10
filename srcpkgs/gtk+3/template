@@ -29,7 +29,7 @@ configure_args="--enable-cups --disable-schemas-compile
 depends="gtk-update-icon-cache shared-mime-info"
 makedepends="libXcursor-devel libXdamage-devel libXext-devel libXinerama-devel libXi-devel libXrandr-devel libXcomposite-devel glib-devel>=2.30.0 atk-devel>=2.2.0 libpng-devel fontconfig-devel cairo-devel pango-devel>=1.29.3 gdk-pixbuf-devel>=2.25.2 gtk+-devel colord-devel gobject-introspection cups-devel"
 short_desc="The GTK+ toolkit (v3)"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.gtk.org/"
 license="LGPL-2.1"
 checksum=846010442a96590469cde16ed6a1fdfe09397e435165459f04d31cfa5713799f

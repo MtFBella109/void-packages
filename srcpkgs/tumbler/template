@@ -22,11 +22,24 @@ makedepends="libjpeg-turbo-devel libpng-devel
  gst-plugins-base1-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="D-Bus Thumbnailer service"
+<<<<<<< HEAD
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://docs.xfce.org/xfce/tumbler/start"
 distfiles="https://archive.xfce.org/src/xfce/${pkgname}/${version%.*}/${pkgname}-${version}.tar.bz2"
 checksum=87b90df8f30144a292d70889e710c8619d8b8803f0e1db3280a4293367a42eae
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://xfce.org"
+distfiles="http://archive.xfce.org/src/xfce/${pkgname}/${version%.*}/${pkgname}-${version}.tar.bz2"
+checksum=d0fd329273ff6ac98885eade4c3d8c87a4dd0816f713646130808bfa90b87173
+
+pre_configure() {
+	mkdir m4
+	NOCONFIGURE=1 xdt-autogen
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 tumbler-devel_package() {
 	depends="libglib-devel ${sourcepkg}>=${version}_${revision}"

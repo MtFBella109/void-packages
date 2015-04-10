@@ -15,11 +15,19 @@ makedepends="xorg-server-devel"
 depends="virtual?xserver-abi-video-19_1"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Xorg VESA video driver"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a3657971232e9c7db3e7517a8aedd86d3ef4d159f7099ec974cdd03aafa41080
 long_desc="
  This is the video driver for Generic VESA video cards for the
  Xorg X11 server."
+=======
+homepage="http://xorg.freedesktop.org"
+license="MIT"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${XORG_SITE}/driver/${pkgname}-${version#*:}.tar.bz2"
+checksum=ce8b75e5a40e9dae76f2ac9e2880f7f73a848653ca2eed5880f52dc2c0d3aef8
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 
 pre_configure() {

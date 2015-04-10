@@ -10,11 +10,19 @@ hostmakedepends="automake"
 makedepends="automake"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Layer2 ethernet bridging for Linux"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.linuxfoundation.org/networking/bridge"
 distfiles="${KERNEL_SITE}/utils/net/bridge-utils/bridge-utils-${version}.tar.xz"
 checksum=a61d8be4f1a1405c60c8ef38d544f0c18c05b33b9b07e5b4b31033536165e60e
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://www.linuxfoundation.org/collaborate/workgroups/networking/bridge"
+distfiles="${SOURCEFORGE_SITE}/bridge/$pkgname-$version.tar.gz"
+checksum=42f9e5fb8f6c52e63a98a43b81bd281c227c529f194913e1c51ec48a393b6688
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 pre_configure() {

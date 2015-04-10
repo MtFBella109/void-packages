@@ -7,8 +7,16 @@ hostmakedepends="pkg-config"
 makedepends="gtkmm2-devel alsa-lib-devel jack-devel fmt-devel ganv-devel"
 depends="jack desktop-file-utils hicolor-icon-theme"
 short_desc="Modular patch bay for audio and MIDI based on JACK and ALSA"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-only"
 homepage="https://drobilla.net/software/patchage"
 distfiles="https://download.drobilla.net/patchage-${version}.tar.xz"
 checksum=00612a9ecb4130d98e20e820be6a1241ba81e3d06dd76dfb29799ebd671687d4
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://drobilla.net/software/patchage/"
+distfiles="http://download.drobilla.net/${pkgname}-${version}.tar.bz2"
+checksum=6b21d74ef1b54fa62be8d6ba65ca8b61c7b6b5230cc85e093527081239bfeda9
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

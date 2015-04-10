@@ -7,7 +7,12 @@ build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="libX11-devel libXmu-devel"
 short_desc="Property displayer for X"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="${XORG_HOME}"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://gitlab.freedesktop.org/xorg/app/xprop"
 distfiles="${XORG_SITE}/app/xprop-${version}.tar.xz"

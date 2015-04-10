@@ -7,6 +7,7 @@ _commit=6ddae02ac89240c019f8b5026cfe70e30fd2b3db
 build_style=gnu-configure
 hostmakedepends="tar xmlstarlet automake"
 short_desc="OpenPrinting printer support - nonfree database"
+<<<<<<< HEAD
 maintainer="fosslinux <fosslinux@aussies.space>"
 license="custom:Various Nonfree"
 homepage="https://wiki.linuxfoundation.org/openprinting/database/foomatic"
@@ -30,3 +31,10 @@ post_install() {
 		fi
 	done
 }
+=======
+homepage="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/databasefoomatic"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="nonfree"
+distfiles="https://www.openprinting.org/download/foomatic/$pkgname-$version.tar.gz"
+checksum=cfa00d0b90f05cee2ebe6c99f8de1b8c17f575ed8f3066d5e435a35e6719f52c
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

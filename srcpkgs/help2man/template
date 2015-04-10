@@ -8,9 +8,17 @@ build_style=gnu-configure
 hostmakedepends="perl-Locale-gettext"
 depends="perl-Locale-gettext"
 short_desc="GNU conversion tool to create man files"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://www.gnu.org/software/help2man"
 distfiles="${GNU_SITE}/${pkgname}/${pkgname}-${version}.tar.xz"
 checksum=9e2e0e213a7e0a36244eed6204d902b6504602a578b6ecd15268b1454deadd36
 lib32disabled=yes
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://www.gnu.org/software/help2man"
+distfiles="http://ftp.gnu.org/gnu/$pkgname/$pkgname-$version.tar.xz"
+checksum=0ada23867183c5e779e06e6441801c5c74ff77af258e2f1bb5fce181fbc30ebf
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

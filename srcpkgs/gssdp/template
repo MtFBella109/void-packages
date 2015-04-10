@@ -18,6 +18,7 @@ configure_args="--disable-static"
 makedepends="pkg-config intltool gtk+-devel libsoup-devel gobject-introspection"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GObject-based library for SSDP"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://wiki.gnome.org/action/show/Projects/GUPnP"
@@ -25,6 +26,13 @@ distfiles="${GNOME_SITE}/gssdp/${version%.*}/gssdp-${version}.tar.xz"
 checksum=2fedb5afdb22cf14d5498a39a773ca89788a250fcf70118783df821e1f3f3446
 # test_client_creation: assertion failed (error == NULL): No default route? (gssdp-error, 1)
 make_check=ci-skip
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="http://gupnp.org"
+distfiles="${GNOME_SITE}/gssdp/${version%.*}/gssdp-$version.tar.xz"
+checksum=7bf5aeaf2119fe0bec5f3632ecf39dae15bc85276c72c2ad8dd4b0e345c6535a
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 build_options="gir man"
 build_options_default="gir"

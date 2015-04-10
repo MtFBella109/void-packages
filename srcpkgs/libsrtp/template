@@ -8,12 +8,23 @@ hostmakedepends="pkg-config"
 makedepends="openssl-devel"
 checkdepends="procps-ng libpcap-devel"
 short_desc="Library implementing SRTP, the Secure Real-time Transport Protocol"
+<<<<<<< HEAD
 maintainer="Duncaen <duncaen@voidlinux.org>"
 license="BSD-3-Clause"
 homepage="https://github.com/cisco/libsrtp"
 changelog="https://raw.githubusercontent.com/cisco/libsrtp/master/CHANGES"
 distfiles="https://github.com/cisco/libsrtp/archive/v${version}.tar.gz"
 checksum=54facb1727a557c2a76b91194dcb2d0a453aaf8e2d0cbbf1e3c2848c323e28ad
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+homepage="http://sourceforge.net/projects/srtp/"
+#Use fedora's cvs checkout for the good
+distfiles="http://pkgs.fedoraproject.org/repo/pkgs/libsrtp/srtp-1.4.4-20101004cvs.tar.bz2/160479555f5e95027ad318605c1c670c/srtp-1.4.4-20101004cvs.tar.bz2"
+checksum=ac91a00c4eed0c111a94dfa5295a32af82cdd26c1c7f58f317b1062f0beb923b
+
+CFLAGS="-fPIC"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense LICENSE

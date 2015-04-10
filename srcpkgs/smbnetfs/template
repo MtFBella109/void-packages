@@ -6,8 +6,13 @@ build_style=gnu-configure
 hostmakedepends="pkg-config autoconf"
 makedepends="fuse-devel libglib-devel samba-devel attr-devel"
 short_desc="Fuse filesystem to mount SMB shares"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://smbnetfs.sourceforge.net"
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.bz2"
 checksum=eac37b9769fbe9c3f4baf3eb64c61a6b59ad4f2aa05dfddcba5a1ac4adf4d560

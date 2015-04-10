@@ -16,6 +16,7 @@ makedepends="orc-devel gst-plugins-base1-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="orc>=0.4.18 gst-plugins-base1>=${version}"
 short_desc="GStreamer libav plugin (1.x)"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.0-or-later"
 homepage="https://gstreamer.freedesktop.org"
@@ -28,3 +29,10 @@ case "$XBPS_TARGET_MACHINE" in
 		CFLAGS="-D_XOPEN_SOURCE"
 		;;
 esac
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://gstreamer.freedesktop.org"
+distfiles="${homepage}/src/${pkgname}/${pkgname}-${version#*:}.tar.xz"
+checksum=605c62624604f3bb5c870844cc1f2711779cc533b004c2aa1d8c0d58557afbbc
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

@@ -15,6 +15,7 @@ makedepends="elementary-devel"
 depends="elementary>=1.11 desktop-file-utils"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Video and Audio player written with Enlightenment Foundation Libraries"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
 homepage="https://www.enlightenment.org/about-rage"
@@ -24,3 +25,10 @@ checksum=7ce58419aa5197aa6c33f2e3f9eb9d78ff379cae863d5fa114fd1428d5a1ca0f
 post_install() {
 	vlicense COPYING
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="https://www.enlightenment.org/p.php?p=about/rage"
+distfiles="http://download.enlightenment.org/rel/apps/rage/rage-${version}.tar.gz"
+checksum=77e5d7fb454a8e82f7ab1a6fdfeb33deece71c33827925e0b005357e6048d879
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

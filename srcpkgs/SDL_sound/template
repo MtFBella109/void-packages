@@ -11,9 +11,14 @@ makedepends="sdl12-compat-devel libmikmod-devel libvorbis-devel
 makedepends="SDL-devel libmikmod-devel libvorbis-devel
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
  libflac-devel speex-devel smpeg-devel"
+<<<<<<< HEAD
 short_desc="Library to decode several popular sound file formats"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+short_desc="A library to decode several popular sound file formats, such as .WAV and .MP3"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://icculus.org/SDL_sound/"
 distfiles="http://icculus.org/${pkgname}/downloads/${pkgname}-${version}.tar.gz"
 checksum=3999fd0bbb485289a52be14b2f68b571cb84e380cc43387eadf778f64c79e6df

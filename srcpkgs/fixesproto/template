@@ -1,6 +1,19 @@
 # Template build file for 'fixesproto'.
 pkgname=fixesproto
+<<<<<<< HEAD
 version=4.1.1
+=======
+version=5.0
+revision=3
+noarch="yes"
+build_style=gnu-configure
+makedepends="xextproto"
+depends="${makedepends}"
+short_desc="Fixes extension headers from X.org"
+homepage="http://xorg.freedesktop.org"
+license="MIT"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/proto/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

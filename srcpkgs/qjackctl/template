@@ -14,6 +14,7 @@ makedepends="pkg-config qt-devel jack-devel"
 fulldepends="desktop-file-utils hicolor-icon-theme"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="JACK Audio Connection Kit - Qt GUI Interface"
+<<<<<<< HEAD
 maintainer="Matthias von Faber <mvf@gmx.eu>"
 license="GPL-2.0-or-later"
 homepage="https://qjackctl.sourceforge.io"
@@ -39,3 +40,10 @@ gtk_iconcache_dirs="/usr/share/icons/hicolor"
 
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://qjackctl.sourceforge.net"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
+checksum=11e0041ff38ac46df466968bd5e0e33986f76b7f099bd75a66fbf2a07c1b1295
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

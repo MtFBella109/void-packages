@@ -2,9 +2,17 @@
 pkgname=warsow-data
 version=2.1.2
 revision=1
+<<<<<<< HEAD
 short_desc="Free online multiplayer competitive FPS (data files)"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="custom:Warsow Content License"
+=======
+noarch="yes"
+wrksrc="warsow_15"
+short_desc="Free online multiplayer competitive FPS based on the Qfusion engine (data files)"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Warsow Content License - /usr/share/licenses/warsow/license.txt"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.warsow.net/"
 distfiles="http://warsow.net/warsow-$version.tar.gz"
 checksum=2c6f05b3ca365557a53013e20a7ecc424869b551c3b0e056d0e3e1c27354c21f

@@ -17,6 +17,7 @@ makedepends="dbus-glib-devel gtkmm2-devel libgtop-devel librsvg-devel
  libwnck2-devel mate-icon-theme"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="dbus mate-icon-theme"
+<<<<<<< HEAD
 short_desc="MATE system monitor"
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="GPL-2.0-or-later"
@@ -24,3 +25,11 @@ homepage="https://mate-desktop.org"
 changelog="https://raw.githubusercontent.com/mate-desktop/mate-system-monitor/master/NEWS"
 distfiles="https://pub.mate-desktop.org/releases/${version%.*}/mate-system-monitor-${version}.tar.xz"
 checksum=42d663d6b90fb5361ebc13f6547983d6f1e2ac75dc2ae4f1cac6ea6329965a25
+=======
+short_desc="A system monitor for MATE"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=00ef3c595d4837e44f70c40e683a292836c9c8a84d1f9ab66f5b97a206f47712
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

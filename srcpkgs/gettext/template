@@ -18,12 +18,20 @@ configure_args="--disable-java --disable-native-java --disable-csharp
 # - Let gettext-devel depends on bzip2
 hostmakedepends="xz"
 short_desc="Internationalized Message Handling Library and tools"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://www.gnu.org/software/gettext/"
 changelog="https://git.savannah.gnu.org/cgit/gettext.git/plain/NEWS"
 distfiles="${GNU_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
 checksum=ec1705b1e969b83a9f073144ec806151db88127f5e40fe5a94cb6c8fa48996a0
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnu.org/software/gettext/"
+license="GPL-3"
+distfiles="http://ftp.gnu.org/pub/gnu/${pkgname}/${pkgname}-${version}.tar.gz"
+checksum=8ac9f1ed1a5f8c4e656a2f37f5ba6b9ee04c4df79a575e876b0b6946aa417f3f
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 subpackages="gettext-devel-examples gettext-devel gettext-devel-tools"
 unset _intl_lib

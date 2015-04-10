@@ -7,11 +7,19 @@ configure_args="--enable-openmp"
 hostmakedepends="libtool automake pkg-config"
 makedepends="libgomp-devel"
 short_desc="SoundTouch Audio Processing Library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-only"
 homepage="https://www.surina.net/soundtouch"
 distfiles="https://www.surina.net/soundtouch/soundtouch-${version}.tar.gz"
 checksum=3bde8ddbbc3661f04e151f72cf21ca9d8f8c88e265833b65935b8962d12d6b08
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.surina.net/soundtouch"
+license="LGPL-2.1"
+distfiles="http://www.surina.net/soundtouch/soundtouch-${version}.tar.gz"
+checksum=3d4161d74ca25c5a98c69dbb8ea10fd2be409ba1a3a0bf81db407c4c261f166b
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_configure() {
 	./bootstrap

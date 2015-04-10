@@ -5,6 +5,7 @@ revision=2
 build_style=gnu-configure
 <<<<<<< HEAD
 short_desc="Complete rewrite of the NASM assembler"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause, Artistic-1.0, GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="http://www.tortall.net/projects/yasm/"
@@ -15,6 +16,9 @@ checksum=3dce6601b495f5b3d45b59f7d2492a340ee7e84b5beca17e48f862502bd5603f
 makedepends="xmlto python>=0"
 short_desc="Complete rewrite of the NASM assembler with BSD license"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.tortall.net/projects/yasm/"
 license="BSD, Artistic, GPL-2, LGPL-2.1"
 checksum=768ffab457b90a20a6d895c39749adb547c1b7cb5c108e84b151a838a23ccf31

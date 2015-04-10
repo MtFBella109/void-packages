@@ -19,7 +19,7 @@ makedepends="
 depends="dbus-x11 lgi>=0.7.2 pango"
 conf_files="/etc/xdg/awesome/rc.lua"
 short_desc="Highly configurable, next gen framework window manager for X"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-2"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://awesome.naquadah.org"

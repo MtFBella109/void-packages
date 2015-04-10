@@ -8,6 +8,7 @@ depends="ipw2100-firmware ipw2200-firmware zd1211-firmware"
 short_desc="WiFi firmware meta-package"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="Public Domain"
+<<<<<<< HEAD
 homepage="http://www.voidlinux.org"
 =======
 version=1.2
@@ -21,3 +22,6 @@ long_desc="
 
 noarch=yes
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

@@ -3,12 +3,20 @@ pkgname=exiv2
 <<<<<<< HEAD
 version=0.28.5
 revision=1
+<<<<<<< HEAD
 build_style=cmake
 configure_args="-DEXIV2_BUILD_SAMPLES=OFF -DEXIV2_ENABLE_BMFF=ON"
 makedepends="zlib-devel brotli-devel expat-devel inih-devel"
 checkdepends="gtest-devel python3"
 =======
 version=0.22
+=======
+build_style=gnu-configure
+makedepends="zlib-devel expat-devel"
+short_desc="Image metadata manipulation"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.exiv2.org"
 distfiles="${homepage}/exiv2-$version.tar.gz"
 build_style=gnu-configure

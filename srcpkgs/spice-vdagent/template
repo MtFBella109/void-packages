@@ -23,11 +23,28 @@ makedepends="pkg-config dbus-devel libXfixes-devel libXrandr-devel spice-protoco
 fulldepends="desktop-file-utils"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Spice agent for Linux"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://spice-space.org/"
 distfiles="https://www.spice-space.org/download/releases/${pkgname}-${version}.tar.bz2"
 checksum=93b0d15aca4762cc7d379b179a7101149dbaed62b72112fffb2b3e90b11687a0
+=======
+homepage="http://spice-space.org/"
+license="GPL-3"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://www.spice-space.org/download/releases/${pkgname}-${version}.tar.bz2"
+checksum=5bae1747307c2f4195f6de97639391be7c6be6c5673fdcc9febed6faca22bd34
+
+# Package build options
+build_options="systemd"
+
+if [ "$build_option_systemd" ]; then
+	configure_args+=" --with-session-info=systemd --with-init-script=systemd"
+	makedepends+=" systemd-devel"
+	systemd_services="spice-vdagentd.service on"
+fi
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 do_install() {

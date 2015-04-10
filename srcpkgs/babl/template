@@ -9,12 +9,21 @@ configure_args="-Dwith-docs=false -Denable-gir=true"
 hostmakedepends="pkg-config vala-devel gobject-introspection"
 makedepends="lcms2-devel vala-devel"
 short_desc="Dynamic pixel format translation library"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-3.0-only"
 homepage="https://gegl.org/babl/"
 changelog="https://gitlab.gnome.org/GNOME/babl/-/raw/master/NEWS"
 distfiles="https://download.gimp.org/pub/babl/${version%.*}/babl-${version}.tar.xz"
 checksum=bcbb7786c1e447703db3bc7fa34d62d0d2d117b22f04d8834c7b2d5ded456487
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://gegl.org/babl/"
+license="LGPL-3"
+#distfiles="ftp://ftp.gimp.org/pub/babl/0.1/babl-$version.tar.bz2"
+distfiles="http://pkgs.fedoraproject.org/repo/pkgs/babl/babl-${version}.tar.bz2/9e1542ab5c0b12ea3af076a9a2f02d79/babl-${version}.tar.bz2"
+checksum=943fc36ceac7dd25bc928256bc7b535a42989c6b971578146869eee5fe5955f4
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 case "$XBPS_TARGET_MACHINE" in
 	arm*) configure_args+=" -Db_lto=false"

@@ -23,12 +23,28 @@ makedepends="cinnamon-desktop-devel libSM-devel libinput-devel fribidi-devel
  elogind-devel mutter-devel"
 depends="zenity"
 short_desc="Cinnamon window manager based on Mutter"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.0-or-later"
 homepage="https://github.com/linuxmint/muffin"
 changelog="https://raw.githubusercontent.com/linuxmint/muffin/master/debian/changelog"
 distfiles="https://github.com/linuxmint/muffin/archive/${version}.tar.gz"
 checksum=3c4ef0139d9bbaf7ac17f39dd06b6397c175614a2eb6c55d463024a457293808
+=======
+build_style=gnu-configure
+configure_args="--disable-static --disable-schemas-compile
+ --enable-compile-warnings=minimum ac_cv_path_ZENITY=/usr/bin/zenity"
+hostmakedepends="automake libtool gnome-common pkg-config gobject-introspection
+ gettext-devel intltool glib-devel gnome-doc-utils"
+makedepends="clutter-devel startup-notification-devel libcanberra-devel
+ cinnamon-desktop-devel libXinerama-devel libSM-devel"
+depends="dconf zenity"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://cinnamon.linuxmint.com/"
+distfiles="https://github.com/linuxmint/${pkgname}/archive/${version}.tar.gz"
+checksum=027641f3bc12a5770f063ffbf9ff0a4797768d256449941ae0be779700b90805
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vmkdir usr/share/gir-1.0

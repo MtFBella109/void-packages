@@ -6,6 +6,16 @@ revision=1
 build_style=gnu-configure
 hostmakedepends="pkg-config bdftopcf font-util"
 makedepends="font-util"
+<<<<<<< HEAD
+=======
+short_desc="78dpi PCF versions of the Japanese fixed fonts"
+homepage="http://xorg.freedesktop.org/"
+license="MIT"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+checksum=2b18ce10b367ebafe95a17de799b6db9a24e2337188d124adaf68af05b1fac65
+
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 depends="font-util"
 short_desc="78dpi PCF versions of the Japanese fixed fonts"
 maintainer="Orphaned <orphan@voidlinux.org>"

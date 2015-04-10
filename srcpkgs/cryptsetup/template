@@ -16,6 +16,7 @@ checkdepends="procps-ng which jq tar xz xxd"
 makedepends="popt-devel libuuid-devel device-mapper-devel libressl-devel $(vopt_if pwquality libpwquality-devel)"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Setup virtual encryption devices under Linux dm-crypt"
+<<<<<<< HEAD
 maintainer="Daniel Eyßer <daniel.eysser@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://gitlab.com/cryptsetup/cryptsetup"
@@ -26,6 +27,9 @@ checksum=cc9e2d37c25a871cea37520b28d532207b0c1670fb10fc54d68071f63f5243a2
 makedepends="pkg-config popt-devel libuuid-devel device-mapper-devel libgcrypt-devel"
 short_desc="Setup virtual encryption devices under dm-crypt Linux"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-3"
 checksum=82b143328c2b427ef2b89fb76c701d311c95b54093c21bbf22342f7b393bddcb
 long_desc="

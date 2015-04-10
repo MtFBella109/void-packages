@@ -28,12 +28,20 @@ hostmakedepends="pkg-config"
 makedepends="libressl-devel libSM-devel gtk+-devel libsensors-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GTK2 based system monitor"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=a102e681cbcc45f8cb225ca0a321b62772106d6f0bb372eaa026b5a2da840873
 long_desc="
  With a single process, GKrellM manages multiple stacked monitors and supports
  applying themes to match the monitors appearance to your window manager,
  Gtk, or any other theme.
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://members.dslextreme.com/users/billw/gkrellm/gkrellm.html"
+license="GPL-2"
+distfiles="http://members.dslextreme.com/users/billw/gkrellm/$pkgname-$version.tar.bz2"
+checksum=702b5b0e9c040eb3af8e157453f38dd6f53e1dcd8b1272d20266cda3d4372c8b
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
   * SMP CPU, Disk, Proc, and active net interface monitors with LEDs.
   * Internet monitor that displays current and charts historical port hits

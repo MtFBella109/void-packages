@@ -47,11 +47,19 @@ makedepends="
 depends="zenity>=3.14 desktop-file-utils"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Lightweight GTK+3 window manager"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=dbf08b014179980ab3d0cce645c5391c83b0ce070c73504feea8eec0ad000449
 long_desc="
  Mutter is a small window manager, using GTK+ and Clutter to do everything.
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=0b23a2d31980d9de8e92ef940e6f63e3ac0f6446e2afc69ecbc80163f6af3a23
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 # Upstream keeps pulling generated headers even though it can cause race
 # conditions in meson/ninja

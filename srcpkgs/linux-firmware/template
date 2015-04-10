@@ -11,6 +11,7 @@ depends="linux-firmware-network>=20120523"
 makedepends="wget git"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Binary firmware blobs for the Linux kernel"
+<<<<<<< HEAD
 maintainer="classabbyamp <void@placeviolette.net>"
 license="custom:see /usr/share/licenses/linux-firmware"
 homepage="https://www.kernel.org/"
@@ -37,6 +38,13 @@ ar9170-firmware>=0"
 subpackages="${pkgname}-network"
 
 
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.kernel.org/"
+license="See /usr/share/licenses/${pkgname}"
+hostmakedepends="git"
+depends="${pkgname}-amd-${version}_${revision} ${pkgname}-network-${version}_${revision}"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_fetch() {
 	url="git://git.kernel.org/pub/scm/linux/kernel/git/dwmw2/linux-firmware.git"

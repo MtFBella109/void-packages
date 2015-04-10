@@ -20,6 +20,7 @@ distfiles="ftp://pkg-isocodes.alioth.debian.org/pub/pkg-isocodes/$pkgname-$versi
 build_style=gnu_configure
 make_install_args="pkgconfigdir=/usr/lib/pkgconfig"
 short_desc="List of country, language and currency names"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=6ec67b145f714de4c6e85520401dfc50f9be88bcad331d2fa316e54b04da34cb
 long_desc="
@@ -33,3 +34,10 @@ long_desc="
 
 noarch=yes
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="http://pkg-isocodes.alioth.debian.org/"
+distfiles="${DEBIAN_SITE}/main/i/iso-codes/${pkgname}_${version}.orig.tar.xz"
+checksum=dd6acd92843b69530fce535d3d6fd947ddb3802f0d5fc1bd214d1cb7d2bf5c47
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

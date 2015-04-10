@@ -14,6 +14,7 @@ hostmakedepends="automake libtool pkg-config"
 makedepends="gpm-devel zlib-devel bzip2-devel libidn-devel tre-devel ncurses-devel libressl-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Full-Featured Text WWW Browser"
+<<<<<<< HEAD
 maintainer="Saksham <voidisnull@duck.com>"
 license="GPL-2.0-only"
 homepage="https://github.com/rkd77/elinks"
@@ -22,6 +23,13 @@ distfiles="https://github.com/rkd77/elinks/archive/v${version}.tar.gz"
 checksum=b4200c17dfe5574daddeceda69a42ef8f2459fc43e92cac73dcf30c3343c95a5
 # ld: no input files
 disable_parallel_build=yes
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://elinks.or.cz"
+license="GPL-3"
+distfiles="http://elinks.or.cz/download/$pkgname-$version.tar.bz2"
+checksum=383646375b8a325bef5a132c8300caab90eb0b842c5f8eff68febc00e29acada
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_configure() {
 	autoreconf -fi

@@ -9,6 +9,7 @@ makedepends="libX11-devel libXmu-devel"
 short_desc="Server access control program for X"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org"
 distfiles="${XORG_SITE}/app/${pkgname}-${version}.tar.gz"
 checksum=10a157a9c818e6ec17764ba22117e006089107a22aacf58be6de089a76a112f4
@@ -20,6 +21,9 @@ post_install() {
 # Template build file for 'xhost'.
 pkgname=xhost
 version=1.0.3
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

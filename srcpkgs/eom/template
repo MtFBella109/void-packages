@@ -3,6 +3,7 @@ pkgname=eom
 version=1.28.0
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 build_helper="gir"
 configure_args="--disable-schemas-compile --enable-introspection
  --enable-thumbnailer"
@@ -20,6 +21,20 @@ homepage="https://mate-desktop.org"
 changelog="https://raw.githubusercontent.com/mate-desktop/eom/master/NEWS"
 distfiles="https://pub.mate-desktop.org/releases/${version%.*}/eom-${version}.tar.xz"
 checksum=9a01cab2995a1a8c7258c865eae5f182ed4730c44672afdc3a07e423edd53abc
+=======
+configure_args="--with-gtk=2.0 --disable-python"
+hostmakedepends="pkg-config intltool itstool"
+makedepends="gtk+-devel dbus-glib-devel exempi-devel lcms2-devel libexif-devel
+ libjpeg-turbo-devel librsvg-devel mate-desktop-devel startup-notification-devel
+ mate-icon-theme"
+depends="dbus mate-icon-theme"
+short_desc="An image viewing and cataloging program for MATE"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=d8c97de2aab548dce910cdfd98a11b671c943e9b195d38b043e482e2323ac6d8
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 eom-devel_package() {
 	short_desc+=" - development files"

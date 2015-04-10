@@ -19,7 +19,7 @@ hostmakedepends="pkg-config python"
 makedepends="eigen opus-devel libsamplerate-devel readline-devel dbus-devel celt-devel"
 depends="python-dbus"
 short_desc="JACK Audio Connection Kit low-latency sound server (pro audio)"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-2, LGPL-2.1"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://jackaudio.org/"

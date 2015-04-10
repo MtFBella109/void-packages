@@ -7,11 +7,19 @@ configure_args="--enable-cpp-progs --disable-example-progs"
 hostmakedepends="automake libtool pkg-config"
 makedepends="libcdio-devel"
 short_desc="CD paranoia utility/libraries from libcdio"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://www.gnu.org/software/libcdio/"
 distfiles="${GNU_SITE}/libcdio/$pkgname-$version.tar.bz2"
 checksum=33b1cf305ccfbfd03b43936975615000ce538b119989c4bec469577570b60e8a
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://www.gnu.org/software/libcdio/"
+distfiles="http://ftp.gnu.org/gnu/libcdio/$pkgname-$version.tar.gz"
+checksum=4617792b4eb301de45b61732bdc0617447ad06b53068ae45db37695275c0dd4c
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_configure() {
 	autoreconf -fi

@@ -6,6 +6,7 @@ build_style=meson
 hostmakedepends="pkg-config"
 makedepends="abseil-cpp-devel"
 short_desc="AudioProcessing library based on Google's implementation of WebRTC"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
 homepage="https://freedesktop.org/software/pulseaudio/webrtc-audio-processing"
@@ -17,6 +18,13 @@ if [[ "$XBPS_TARGET_MACHINE" = "i686"* ]]; then
 	CXXFLAGS="-DPFFFT_SIMD_DISABLE=1"
 	CFLAGS="-DPFFFT_SIMD_DISABLE=1"
 fi
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+homepage="http://freedesktop.org/software/pulseaudio/webrtc-audio-processing"
+distfiles="$homepage/$pkgname-$version.tar.xz"
+checksum=ed4b52f9c2688b97628035a5565377d74704d7c04de4254a768df3342c7afedc
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense COPYING

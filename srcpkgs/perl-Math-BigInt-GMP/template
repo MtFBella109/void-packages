@@ -13,9 +13,15 @@ makedepends="${hostmakedepends}"
 depends="${hostmakedepends}"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Math::BigInt::GMP - Use the GMP library for Math::BigInt routines"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/Math-BigInt-GMP"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/Math-BigInt-GMP"
+license="Artistic, GPL-1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${CPAN_SITE}/Math/Math-BigInt-GMP-${version}.tar.gz"
 checksum=a165628b277d1e833f5b657ca836db81bc44e04c107cfe9f5b8bd94755642ed5
 

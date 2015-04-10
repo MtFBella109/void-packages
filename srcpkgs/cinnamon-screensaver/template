@@ -11,6 +11,7 @@ makedepends="cinnamon-desktop-devel dbus-glib-devel
 depends="cinnamon-translations hicolor-icon-theme python3-gobject
  python3-setproctitle python3-xapp xapps"
 conf_files="/etc/pam.d/${pkgname}"
+<<<<<<< HEAD
 short_desc="Cinnamon screensaver"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.0-or-later"
@@ -20,6 +21,13 @@ checksum=413e5a178d5a0a81dfa876f829b5f29531033b38c4b2ea6b8b11863c32f07c11
 
 python_version=3
 pycompile_dirs="/usr/share/cinnamon-screensaver"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://cinnamon.linuxmint.com/"
+distfiles="https://github.com/linuxmint/${pkgname}/archive/${version}.tar.gz"
+checksum=e73c5d483cd4faeb8d7a4fec9bb1ab73df5cef5d05a3ab268f7a29947d2a483e
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vinstall ${FILESDIR}/${pkgname}.pam 644 etc/pam.d ${pkgname}

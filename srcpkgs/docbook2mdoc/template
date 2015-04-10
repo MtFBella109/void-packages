@@ -3,10 +3,16 @@ pkgname=docbook2mdoc
 version=1.1.0
 revision=2
 build_style=gnu-makefile
+<<<<<<< HEAD
 hostmakedepends="pkg-config"
 makedepends="libbsd-devel libmd-devel"
 short_desc="Converter from DocBook V4.x and v5.x XML into mdoc"
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+makedepends="expat-devel"
+short_desc="A converter from DocBook V4.x and v5.x XML into mdoc"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="ISC"
 homepage="https://mandoc.bsd.lv/docbook2mdoc"
 distfiles="https://mandoc.bsd.lv/docbook2mdoc/snapshots/${pkgname}-${version}.tgz"

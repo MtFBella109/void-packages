@@ -12,8 +12,13 @@ makedepends="libressl-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="ca-certificates"
 short_desc="FREE, easy to use implementation of the Network Time Protocol"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="ISC"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://openntpd.org/"
 distfiles="https://ftp.openbsd.org/pub/OpenBSD/OpenNTPD/${pkgname}-${version}.tar.gz"
 checksum=8582db838a399153d4a17f2a76518b638cc3020f58028575bf54127518f55a46

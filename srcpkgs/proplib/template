@@ -15,11 +15,17 @@ build_style=gnu-configure
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 makedepends="zlib-devel"
 short_desc="Portable Property container object library"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="BSD-2-Clause"
 homepage="https://gitlab.com/xtraeme/portableproplib"
 distfiles="https://gitlab.com/xtraeme/portableproplib/-/archive/${version}/portableproplib-${version}.tar.gz"
 checksum=e8fa7dbec90815a83d14c326286ee55196a9fe5b3192478671e58e7185db33dc
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Simplified BSD"
+homepage="https://github.com/xtraeme/portableproplib"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense COPYING

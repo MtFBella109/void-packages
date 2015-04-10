@@ -23,6 +23,7 @@ configure_args="--with-curses --enable-multibyte"
 make_build_args="SHLIB_LIBS=-lncurses"
 makedepends="ncurses-devel"
 short_desc="The GNU Readline Library"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=1199d905c025735b34cf67d03078585e18f84707052413279fe68ce48c1cc1de
 long_desc="
@@ -33,6 +34,13 @@ long_desc="
  of previously-entered command lines, to recall and perhaps reedit
  those lines, and perform csh-like history expansion on previous
  commands."
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html"
+license="GPL-3"
+distfiles="http://ftp.gnu.org/gnu/readline/${pkgname}-${_dist_ver}.tar.gz"
+checksum=56ba6071b9462f980c5a72ab0023893b65ba6debb4eeb475d7a563dc65cafd43
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 subpackages="$pkgname-devel"
 <<<<<<< HEAD

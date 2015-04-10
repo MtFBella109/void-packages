@@ -18,8 +18,13 @@ hostmakedepends="pkg-config"
 makedepends="libpng-devel freetype-devel libjpeg-turbo-devel libXrandr-devel
  libXmu-devel libXft-devel pam-devel"
 short_desc="Desktop-independent graphical login manager for X11"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://sourceforge.net/projects/slim.berlios/"
 distfiles="${SOURCEFORGE_SITE}/slim.berlios/slim-${version}.tar.gz"
 checksum=21defeed175418c46d71af71fd493cd0cbffd693f9d43c2151529125859810df

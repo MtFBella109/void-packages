@@ -1,5 +1,6 @@
 # Template file for 'msgpack'
 pkgname=msgpack
+<<<<<<< HEAD
 version=6.1.0
 revision=1
 build_style=cmake
@@ -11,6 +12,24 @@ homepage="https://github.com/msgpack/msgpack-c/tree/c_master"
 changelog="https://github.com/msgpack/msgpack-c/raw/c_master/CHANGELOG.md"
 distfiles="https://github.com/msgpack/msgpack-c/releases/download/c-${version}/msgpack-c-${version}.tar.gz"
 checksum=674119f1a85b5f2ecc4c7d5c2859edf50c0b05e0c10aa0df85eefa2c8c14b796
+=======
+version=0.5.9
+revision=2
+wrksrc="msgpack-${version}"
+build_style=gnu-configure
+hostmakedepends="cmake"
+makedepends="zlib-devel"
+short_desc="An efficient binary serialization format"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Apache-2.0"
+homepage="http://msgpack.org/"
+distfiles="https://github.com/$pkgname/$pkgname-c/releases/download/cpp-$version/$pkgname-$version.tar.gz"
+checksum=6139614b4142df3773d74e9d9a4dbb6dd0430103cfa7b083e723cde0ec1e7fdd
+
+pre_configure() {
+	sed -i '/INSTALL/s,msgpack.pc,build/msgpack.pc,g' CMakeLists.txt
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 msgpack-devel_package() {
 	short_desc+=" - development files"

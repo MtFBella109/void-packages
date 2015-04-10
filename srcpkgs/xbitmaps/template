@@ -7,6 +7,7 @@ build_style=gnu-configure
 short_desc="Common X11 bitmaps"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="https://wiki.freedesktop.org/xorg/"
 distfiles="${XORG_SITE}/data/${pkgname}-${version}.tar.xz"
 checksum=ad6cad54887832a17d86c2ccfc5e52a1dfab090f8307b152c78b0e1529cd0f7a
@@ -18,6 +19,9 @@ post_install() {
 # Template build file for 'xbitmaps'.
 pkgname=xbitmaps
 version=1.0.1
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/data/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 short_desc="Common X11 bitmaps"

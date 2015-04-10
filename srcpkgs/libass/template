@@ -19,8 +19,13 @@ makedepends="enca-devel fontconfig-devel fribidi-devel harfbuzz-devel>=0.9.5"
 makedepends="enca-devel fontconfig-devel fribidi-devel harfbuzz-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="A portable library for SSA/ASS subtitles rendering"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://xorg.freedesktop.org/"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="https://code.google.com/p/libass/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 <<<<<<< HEAD
 checksum=4da592020f6d7db889ec7bb09a2c78afa17b18eb86b9ffc6237d5a575ebd7541

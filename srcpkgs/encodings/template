@@ -10,8 +10,15 @@ short_desc="Font encoding tables for libfontenc"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="custom:Public domain"
 homepage="http://xorg.freedesktop.org"
+<<<<<<< HEAD
 distfiles="${XORG_SITE}/font/encodings-${version}.tar.xz"
 checksum=9ff13c621756cfa12e95f32ba48a5b23839e8f577d0048beda66c67dab4de975
+=======
+license="Public domain"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+checksum=ced6312988a45d23812c2ac708b4595f63fd7a49c4dcd9f66bdcd50d1057d539
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_build() {
 	vsed -e 's|^\(encodings_DATA = $(DATA_FILES)\).*|\1|' -i Makefile

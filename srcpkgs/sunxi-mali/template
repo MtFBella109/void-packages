@@ -11,7 +11,11 @@ build_style=gnu-makefile
 hostmakedepends="pkg-config perl"
 makedepends="libXfixes-devel libump-git-devel libdri2-devel-git libdrm-devel"
 short_desc="Linux sunxi MALI userpace propietary libraries"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://github.com/linux-sunxi/sunxi-mali"
 distfiles="${homepage}/archive/${_commit}.tar.gz

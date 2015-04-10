@@ -11,6 +11,7 @@ short_desc="Qt system tray monitor for dhcpcd"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
 homepage="http://roy.marples.name/projects/dhcpcd-ui"
+<<<<<<< HEAD
 distfiles="http://roy.marples.name/downloads/dhcpcd/dhcpcd-ui-${version}.tar.xz"
 checksum=4170a07b8bbba65b30f8da8a15a4d776cbf17d030b666516821d450f594a9d6c
 
@@ -34,6 +35,12 @@ post_configure() {
 pre_install() {
 	head -n 25 src/dhcpcd-qt/dhcpcd-about.cpp > LICENSE
 }
+=======
+license="BSD"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://roy.marples.name/downloads/dhcpcd/dhcpcd-ui-$version.tar.bz2"
+checksum=2dae2108605867aba78d98cc9e56e22d7b751eedc3f7e6d689d42d08e706aaf3
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_install() {
 	make INSTALL_ROOT=${DESTDIR} install

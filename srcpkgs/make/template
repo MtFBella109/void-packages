@@ -23,6 +23,7 @@ version=3.81
 distfiles="http://ftp.gnu.org/pub/gnu/make/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 short_desc="The GNU make system"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=f3e69023771e23908f5d5592954d8271d3d6af09693cecfd29cee6fde8550dc8
 long_desc="
@@ -33,3 +34,10 @@ long_desc="
 base_chroot=yes
 Add_dependency run glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnu.org/software/make"
+license="GPL-3"
+distfiles="http://ftp.gnu.org/pub/gnu/make/$pkgname-$version.tar.bz2"
+checksum=0bc7613389650ee6a24554b52572a272f7356164fd2c4132b0bcf13123e4fca5
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

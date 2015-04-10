@@ -13,12 +13,20 @@ configure_args="--disable-rpath --disable-doxygen-docs --disable-xmms-plugin"
 makedepends="nasm libogg-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Free Lossless Audio Codec"
+<<<<<<< HEAD
 maintainer="Rutpiv <roger_freitas@live.com>"
 license="BSD-3-Clause, GPL-2.0-or-later"
 homepage="https://xiph.org/flac/"
 changelog="https://xiph.org/flac/changelog.html"
 distfiles="https://downloads.xiph.org/releases/flac/flac-${version}.tar.xz"
 checksum=f2c1c76592a82ffff8413ba3c4a1299b6c7ab06c734dee03fd88630485c2b920
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://flac.sourceforge.net/"
+license="BSD, GPL"
+distfiles="http://downloads.xiph.org/releases/flac/flac-${version}.tar.xz"
+checksum=4773c0099dba767d963fd92143263be338c48702172e8754b9bc5103efe1c56c
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense COPYING.Xiph

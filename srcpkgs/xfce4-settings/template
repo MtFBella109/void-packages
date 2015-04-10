@@ -22,6 +22,7 @@ makedepends="libxfce4ui-devel libXi-devel libXcursor-devel
 depends="desktop-file-utils gnome-icon-theme"
 conf_files="/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml"
 short_desc="Xfce settings manager"
+<<<<<<< HEAD
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
 license="GPL-2.0-only"
 homepage="https://xfce.org/"
@@ -66,3 +67,11 @@ Add_dependency full libXcursor
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.xfce.org/"
+license="GPL-2"
+homepage="http://xfce.org"
+distfiles="http://archive.xfce.org/src/xfce/$pkgname/${version%.*}/$pkgname-$version.tar.bz2"
+checksum=04becef105c19d0266cfe8dbf42619e7233c3b9fa99b43dbfc9c6a5959501f81
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

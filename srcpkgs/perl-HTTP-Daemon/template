@@ -21,6 +21,7 @@ checksum=b38d092725e6fa4e0c4dc2a47e157070491bafa0dbe16c78a358e806aa7e173d
 =======
 fulldepends="perl-HTTP-Message perl-LWP-MediaTypes perl"
 short_desc="HTTP::Daemon - a simple http server class"
+<<<<<<< HEAD
 maintainer="davehome <davehome@redthumb.info.tm>"
 homepage="http://search.cpan.org/~gaas/HTTP-Daemon-6.00/lib/HTTP/Daemon.pm"
 license="GPL-2"
@@ -33,3 +34,10 @@ long_desc="
 noarch=yes
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/HTTP-Message"
+license="Artistic, GPL-1"
+distfiles="${CPAN_SITE}/HTTP/HTTP-Daemon-$version.tar.gz"
+checksum=43fd867742701a3f9fcc7bd59838ab72c6490c0ebaf66901068ec6997514adc2
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

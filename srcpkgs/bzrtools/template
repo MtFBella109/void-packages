@@ -6,6 +6,7 @@ distfiles="http://launchpad.net/$pkgname/stable/$version/+download/$pkgname-$ver
 build_style=python-module
 fulldepends="python bzr"
 short_desc="Plugin providing a collection of utilities for bzr"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=0dffad46808490b0825c201719f61c77d91a360853abaf229c4ca5c05ab24d54
 long_desc="
@@ -18,3 +19,7 @@ Add_dependency full bzr
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+checksum=8b17fbba61dafc8dbefe1917a2ce084a8adc7650dee60add340615270dfb7f58
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

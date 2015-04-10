@@ -32,7 +32,7 @@ hostmakedepends="which pkg-config intltool itstool gnome-doc-utils"
 makedepends="libwnck-devel gtkmm-devel librsvg-devel libgtop-devel $(vopt_if systemd systemd-devel)"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Process viewer and system resource monitor for GNOME"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.gnome.org"
 license="GPL-2"
 checksum=60f53f1b37c717b2f12502bf6f3b4b43c8e8f3d2fb1198ba66bf933ec4c3130b

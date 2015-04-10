@@ -20,7 +20,23 @@ distfiles="${KERNEL_SITE}/utils/util-linux/v${version%.*}/util-linux-${version}.
 checksum=d78b37a66f5922d70edf3bdfb01a6b33d34ed3c3cafd6628203b2a2b67c8e8b3
 conflicts="util-linux>=0"
 provides="util-linux-${version}_${revision}"
+<<<<<<< HEAD
 repository=bootstrap
+=======
+makedepends="zlib-devel"
+build_style=gnu-configure
+configure_args="--without-ncurses --without-udev --disable-libuuid
+--disable-libblkid --disable-libmount --disable-mount --disable-losetup
+--disable-fsck --disable-partx --disable-uuidd --disable-mountpoint
+--disable-fallocate --disable-unshare --disable-nls --disable-wall
+ scanf_cv_alloc_modifier=as"
+short_desc="Miscellaneous linux utilities -- for xbps-src use"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://userweb.kernel.org/~kzak/util-linux-ng"
+license="GPL-2"
+distfiles="${KERNEL_SITE}/utils/util-linux/v${version%.*}/util-linux-${version}.tar.xz"
+checksum=835eb6232cfab0118ef2e4fd649de0ba9f5bd1b8cbf9a7d4d84594541dec8410
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 if [ -z "$CHROOT_READY" ]; then
 	CFLAGS+=" -I${XBPS_MASTERDIR}/usr/include"

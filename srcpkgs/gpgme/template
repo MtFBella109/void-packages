@@ -19,6 +19,7 @@ makedepends="libgpg-error-devel libassuan-devel"
 fulldepends="gnupg"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GnuPG Made Easy"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://www.gnupg.org/software/gpgme/index.html"
@@ -26,6 +27,13 @@ changelog="https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gpgme.git;a=blob_plain;f=N
 distfiles="https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-${version}.tar.bz2"
 checksum=ddf161d3c41ff6a3fcbaf4be6c6e305ca4ef1cc3f1ecdfce0c8c2a167c0cc36d
 CFLAGS="-D_LARGEFILE64_SOURCE"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://www.gnupg.org/related_software/gpgme/"
+distfiles="ftp://ftp.gnupg.org/gcrypt/gpgme/gpgme-$version.tar.bz2"
+checksum=0db040c5b07e69cfe9a0b4566c8e90151ebacfe122c97c452f11386654aefcc9
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 if [ "$XBPS_TARGET_LIBC" = "musl" ]; then

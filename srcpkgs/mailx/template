@@ -24,7 +24,13 @@ short_desc="Feature-rich BSD mail(1)"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-4-Clause"
 homepage="http://heirloom.sourceforge.net/mailx.html"
+<<<<<<< HEAD
 distfiles="https://pkgs.fedoraproject.org/repo/pkgs/mailx/mailx-${version}.tar.xz/836bf1da322d2d1f78b7056c2b3b2304/${pkgname}-${version}.tar.xz"
+=======
+license="BSD"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://pkgs.fedoraproject.org/repo/pkgs/mailx/mailx-${version}.tar.xz/836bf1da322d2d1f78b7056c2b3b2304/${pkgname}-${version}.tar.xz"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=1b8136fb2466adeaf71a5e3c65db9fa1a967f1f6469ff689c2cf06e21f638823
 provides="mail-${version}_${revision}"
 

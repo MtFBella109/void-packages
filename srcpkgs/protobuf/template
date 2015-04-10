@@ -1,6 +1,7 @@
 # Template file for 'protobuf'
 pkgname=protobuf
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=25.2
 revision=4
 build_style=cmake
@@ -13,6 +14,16 @@ makedepends="zlib-devel gtest-devel abseil-cpp-devel"
 short_desc="Protocol buffers compiler"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
+=======
+version=2.6.1
+revision=2
+build_style=gnu-configure
+hostmakedepends="automake libtool pkg-config"
+makedepends="zlib-devel"
+short_desc="Google's data interchange format"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="https://github.com/google/protobuf/releases/download/v${version}/protobuf-${version}.tar.bz2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://developers.google.com/protocol-buffers/"
 changelog="https://raw.githubusercontent.com/google/protobuf/master/CHANGES.txt"
 distfiles="https://github.com/protocolbuffers/protobuf/archive/v${version}.tar.gz"

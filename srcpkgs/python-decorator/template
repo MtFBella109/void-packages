@@ -1,0 +1,28 @@
+# Template file for 'python-decorator'
+pkgname=python-decorator
+version=3.4.2
+revision=1
+noarch=yes
+wrksrc="decorator-${version}"
+build_style=python-module
+python_versions="2.7 3.4"
+hostmakedepends="python-setuptools python3.4-setuptools"
+depends="python"
+pycompile_module="decorator.py"
+short_desc="Python2 decorator module"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="https://github.com/micheles/decorator"
+license="BSD"
+distfiles="${PYPI_SITE}/d/decorator/decorator-${version}.tar.gz"
+checksum=7320002ce61dea6aa24adc945d9d7831b3669553158905cdd12f5d0027b54b44
+
+python3.4-decorator_package() {
+	noarch=yes
+	depends="python3.4"
+	pycompile_version="3.4"
+	pycompile_module="decorator.py"
+	short_desc="${short_desc/Python2/Python3.4}"
+	pkg_install() {
+		vmove usr/lib/python3.4
+	}
+}

@@ -9,6 +9,7 @@ makedepends="xorgproto"
 short_desc="Dependency generator for makefiles"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="https://gitlab.freedesktop.org/xorg/util/makedepend"
 distfiles="${XORG_SITE}/util/makedepend-${version}.tar.xz"
 checksum=92d0deb659fff6d8ddbc1d27fc4ca8ceb2b6dbe15d73f0a04edc09f1c5782dd4
@@ -20,6 +21,9 @@ post_install() {
 # Template build for 'makedepend'.
 pkgname=makedepend
 version=1.0.1
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/util/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

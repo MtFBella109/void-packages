@@ -6,8 +6,16 @@ build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="fuse-devel libarchive-devel"
 short_desc="Mounts an archive for access as a file system"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.0-or-later"
 homepage="https://www.cybernoia.de/software/archivemount.html"
 distfiles="${homepage/.html/}/${pkgname/fuse-/}-${version}.tar.gz"
 checksum=c529b981cacb19541b48ddafdafb2ede47a40fcaf16c677c1e2cd198b159c5b3
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2"
+homepage="http://www.cybernoia.de/software/archivemount/"
+distfiles="${homepage}/${pkgname/fuse-/}-${version}.tar.gz"
+checksum=e8dae319a03993d8fb342e85603371c0b0a40752bc22368aceac46c113c3b0ea
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

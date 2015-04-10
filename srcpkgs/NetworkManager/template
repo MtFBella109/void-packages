@@ -44,8 +44,12 @@ makedepends="pkg-config intltool libuuid-devel nss-devel dbus-glib-devel libgude
 fulldepends="dbus>=0 iproute2 dhcpcd>=5.5.4_1 wpa_supplicant"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Network Management daemon"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://wiki.gnome.org/Projects/NetworkManager"
 <<<<<<< HEAD
 changelog="https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/raw/nm-1-50/NEWS"

@@ -13,8 +13,12 @@ depends="farstream gsound gst-libav gst-plugins-base1 gst-plugins-ugly1
  python3-setuptools"
 checkdepends="${depends} python3-packaging"
 short_desc="Full featured Jabber/XMPP client"
+<<<<<<< HEAD
 maintainer="Emil Tomczyk <emru@emru.xyz>"
 license="GPL-3.0-only"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://www.gajim.org"
 changelog="https://dev.gajim.org/gajim/gajim/-/raw/master/ChangeLog"
 distfiles="https://gajim.org/downloads/${version%.*}/gajim-${version}.tar.gz"

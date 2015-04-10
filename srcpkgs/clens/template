@@ -4,7 +4,11 @@ version=0.7.0
 revision=3
 makedepends="libbsd-devel"
 short_desc="Convenience library to aid in porting code from OpenBSD"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="ISC"
 homepage="https://sourceforge.net/projects/clens/"
 distfiles="$SOURCEFORGE_SITE/clens/clens-${version}.tar.gz"

@@ -2,6 +2,7 @@
 pkgname=rpi-firmware
 version=20251006
 revision=1
+<<<<<<< HEAD
 _rpi_fw=4110ba807ae84b343da239fc30db49ea426f9c5d
 _rpi_brcm=e90d6888e745eb9ee1aab098fff001edc31b95b7
 _rpi_bt=cdf61dc691a49ff01a124752bd04194907f0f9cd
@@ -10,6 +11,13 @@ archs="aarch64* armv6l* armv7l*"
 short_desc="Firmware files for the Raspberry Pi"
 maintainer="classabbyamp <void@placeviolette.net>"
 license="BSD-3-Clause, custom:Cypress"
+=======
+noarch=yes
+wrksrc="firmware-${_githash}"
+short_desc="Firmware files for the Raspberry Pi (git ${_gitshort})"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Propietary - see /usr/share/licences/${pkgname}/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://github.com/raspberrypi/firmware"
 distfiles="
  https://github.com/raspberrypi/firmware/archive/${_rpi_fw}.tar.gz

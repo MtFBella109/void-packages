@@ -27,12 +27,20 @@ makedepends="spice-protocol libjpeg-turbo-devel pixman-devel
  libXrandr-devel libsasl-devel libXinerama-devel libglib-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Implements the SPICE protocol"
+<<<<<<< HEAD
 maintainer="Anachron <gith@cron.world>"
 license="LGPL-2.1-or-later"
 homepage="https://www.spice-space.org/"
 changelog="https://gitlab.freedesktop.org/spice/spice/-/raw/master/CHANGELOG.md"
 distfiles="https://www.spice-space.org/download/releases/spice-server/spice-${version}.tar.bz2"
 checksum=0a6ec9528f05371261bbb2d46ff35e7b5c45ff89bb975a99af95a5f20ff4717d
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://www.spice-space.org"
+distfiles="http://www.spice-space.org/download/releases/spice-${version}.tar.bz2"
+checksum=4209a20d8f67cb99a8a6ac499cfe79a18d4ca226360457954a223d6795c2f581
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 if [ "$XBPS_TARGET_ENDIAN" != "le" ]; then
 	broken="SPICE server only works on little endian architectures"

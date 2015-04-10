@@ -13,6 +13,7 @@ makedepends="boost-devel-minimal libboost_filesystem libboost_locale
  fftw-devel icu-devel libcurl-devel libltdl-devel
  libmpdclient-devel readline-devel taglib-devel"
 short_desc="Ncurses mpd client inspired by ncmpc"
+<<<<<<< HEAD
 maintainer="cinerea0 <cinerea0@protonmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://rybczak.net/ncmpcpp"
@@ -21,6 +22,13 @@ checksum=ddc89da86595d272282ae8726cc7913867b9517eec6e765e66e6da860b58e2f9
 
 # Required by waddwstr() with ncurses on musl
 CXXFLAGS="-D_XOPEN_SOURCE=600"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://ncmpcpp.rybczak.net/"
+distfiles="http://ncmpcpp.rybczak.net/stable/ncmpcpp-${version}.tar.bz2"
+checksum=d7774f2db77f89aa70b7f4a57f4302e74f4dc5a7030fd7a9a85e8aa6ef712203
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_configure() {
 	autoreconf -fiv

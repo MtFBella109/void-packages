@@ -23,7 +23,7 @@ depends="${makedepends}"
 noarch="yes"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Perl Base class SAX Drivers and Filters"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://search.cpan.org/dist/XML-SAX-Base"
 license="GPL-2"
 checksum=666270318b15f88b8427e585198abbc19bc2e6ccb36dc4c0a4f2d9807330219e

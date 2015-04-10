@@ -23,8 +23,13 @@ makedepends="libjpeg-turbo-devel libpng-devel fribidi-devel libgsf-devel
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="hicolor-icon-theme desktop-file-utils"
 short_desc="Free word processing program similar to Microsoft(R) Word"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.abisource.com/"
 distfiles="${homepage}/downloads/${pkgname}/${version}/source/${pkgname}-${version}.tar.gz"
 <<<<<<< HEAD

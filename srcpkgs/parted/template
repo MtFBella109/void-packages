@@ -21,8 +21,15 @@ makedepends="pkg-config libuuid-devel libblkid-devel ncurses-devel readline-deve
 short_desc="The GNU Parted disk partition resizing program"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 homepage="http://www.gnu.org/software/parted/"
+<<<<<<< HEAD
 distfiles="${GNU_SITE}/${pkgname}/${pkgname}-${version}.tar.xz"
 checksum=3b43dbe33cca0f9a18601ebab56b7852b128ec1a3df3a9b30ccde5e73359e612
+=======
+license="GPL-3"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://ftp.gnu.org/gnu/parted/parted-$version.tar.xz"
+checksum=858b589c22297cacdf437f3baff6f04b333087521ab274f7ab677cb8c6bb78e4
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libparted_package() {
 	short_desc+=" - shared library"

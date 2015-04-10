@@ -3,6 +3,19 @@ pkgname=python-MarkupSafe
 version=0.11
 revision=1
 wrksrc="MarkupSafe-${version}"
+<<<<<<< HEAD
+=======
+build_style=python-module
+hostmakedepends="python-setuptools python3.4-setuptools"
+makedepends="python-devel python3.4-devel"
+depends="python>=2.7"
+python_versions="2.7 3.4"
+pycompile_module="markupsafe"
+short_desc="Implements a XML/HTML/XHTML Markup safe string for Python2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://pypi.python.org/pypi/MarkupSafe"
+license="MIT"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://pypi.python.org/packages/source/M/MarkupSafe/MarkupSafe-${version}.tar.gz"
 build_style=python-module
 depends="glibc"

@@ -13,12 +13,20 @@ revision=2
 makedepends="zlib-devel pkg-config cmake"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library for accessing ID tags in various media files"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later, MPL-1.1"
 homepage="https://taglib.github.io/"
 changelog="https://raw.githubusercontent.com/taglib/taglib/master/CHANGELOG.md"
 distfiles="https://github.com/taglib/taglib/archive/v${version}.tar.gz"
 checksum=bd57924496a272322d6f9252502da4e620b6ab9777992e8934779ebd64babd6e
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://developer.kde.org/~wheeler/taglib.html"
+license="LGPL-2.1, MPL-1.1"
+distfiles="http://${pkgname}.github.io/releases/${pkgname}-${version}.tar.gz"
+checksum=72d371cd1419a87ae200447a53bff2be219283071e80fd12337928cc967dc71a
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 taglib-devel_package() {

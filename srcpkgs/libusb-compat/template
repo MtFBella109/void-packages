@@ -7,9 +7,15 @@ revision=1
 build_style=gnu-configure
 hostmakedepends="automake libtool pkg-config"
 makedepends="libusb-devel"
+<<<<<<< HEAD
 short_desc="libusb-0.1 compatibility library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+short_desc="A libusb-0.1 compatibility library"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://libusb.sourceforge.net/"
 distfiles="${SOURCEFORGE_SITE}/libusb/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD

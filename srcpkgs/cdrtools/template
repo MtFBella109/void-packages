@@ -15,11 +15,19 @@ revision=1
 makedepends="acl-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Highly portable CD/DVD/BluRay command line recording software"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=b43c8f35973393772f21b052de66d7239ac3ea84ceb32b179fcca21792e4813d
 long_desc="
  $pkgname is a set of command line programs that allows to record
  CD/DVD/BluRay media. 
+=======
+homepage="http://cdrecord.org/"
+license="CDDL"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="ftp://ftp.gwdg.de/linux/cdrecord/cdrtools-3.00.tar.bz2"
+checksum=7f9cb64820055573b880f77b2f16662a512518336ba95ab49228a1617973423d
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
  The suite includes the following programs:
  

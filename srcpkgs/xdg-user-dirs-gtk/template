@@ -8,6 +8,7 @@ hostmakedepends="pkg-config xdg-user-dirs gettext"
 makedepends="gtk+3-devel"
 depends="xdg-user-dirs"
 short_desc="GTK+ tool to help manage user directories"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://www.gnome.org"
@@ -22,6 +23,9 @@ makedepends="pkg-config intltool gtk+3-devel"
 fulldepends="xdg-user-dirs"
 short_desc="GTK+ tool to help manage user directories"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-2"
 checksum=4b908252515eb95b27427ef7c6b0e096febde716c0c89e8f03a79d23882b79c8
 long_desc="

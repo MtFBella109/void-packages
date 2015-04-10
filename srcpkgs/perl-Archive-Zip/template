@@ -13,8 +13,14 @@ makedepends="${hostmakedepends}"
 depends="${makedepends}"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Provide a perl interface to ZIP archive files"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/Archive-Zip"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Artistic, GPL-1"
+homepage="http://search.cpan.org/dist/Archive-Zip/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${CPAN_SITE}/Archive/Archive-Zip-${version}.tar.gz"
 checksum=984e185d785baf6129c6e75f8eb44411745ac00bf6122fb1c8e822a3861ec650

@@ -11,10 +11,14 @@ short_desc="C library for executing name service queries asynchronously"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1"
 <<<<<<< HEAD
+<<<<<<< HEAD
 homepage="http://0pointer.de/lennart/projects/libasyncns/"
 distfiles="http://0pointer.de/lennart/projects/libasyncns/libasyncns-${version}.tar.gz"
 =======
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://0pointer.de/lennart/projects/$pkgname/$pkgname-$version.tar.gz"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 checksum=4f1a66e746cbe54ff3c2fbada5843df4fbbbe7481d80be003e8d11161935ab74

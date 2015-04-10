@@ -15,7 +15,7 @@ license="GPL-3.0-only"
 hostmakedepends="automake libtool pkg-config git"
 makedepends="expat-devel zlib-devel libressl-devel"
 short_desc="A minimal XMPP library written in C"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-3"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://strophe.im/libstrophe/"

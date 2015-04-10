@@ -13,9 +13,16 @@ short_desc="Plugin for LXAppearance to configure Openbox"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://lxde.org/"
+<<<<<<< HEAD
 distfiles="https://github.com/lxde/lxappearance-obconf/archive/refs/tags/${version}.tar.gz"
 checksum=202cede4e56d2f93b24dd945fcfa69d4cea62a8deae9bdd6e5d035edfe5c4df9
 
 pre_configure() {
 	autoreconf -fi
 }
+=======
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${SOURCEFORGE_SITE}/lxde/$pkgname-$version.tar.xz"
+checksum=596a04078529b8ef594253bc8628feae97629f2e04f10e3ded5b84ff5706380b
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

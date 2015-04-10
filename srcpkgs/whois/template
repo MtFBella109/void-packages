@@ -3,6 +3,7 @@ pkgname=whois
 version=5.6.5
 revision=1
 build_style=gnu-makefile
+<<<<<<< HEAD
 make_build_args="HAVE_ICONV=1 CONFIG_FILE=/etc/whois.conf"
 make_install_args="BASEDIR=\${DESTDIR}"
 make_install_target="install-whois"
@@ -15,6 +16,17 @@ homepage="https://www.linux.it/~md/software"
 changelog="https://raw.githubusercontent.com/rfc1036/whois/next/debian/changelog"
 distfiles="${DEBIAN_SITE}/main/w/whois/whois_${version}.tar.xz"
 checksum=3ec4168da3ff61e5e426964428202bc0573ad6ecc1f3baf6f43daea6c748aa7d
+=======
+make_build_args="prefix=/usr HAVE_LIBIDN=1"
+hostmakedepends="perl"
+makedepends="libidn-devel"
+short_desc="An improved whois client"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.linux.it/~md/software"
+license="GPL-2"
+distfiles="${DEBIAN_SITE}/main/w/${pkgname}/${pkgname}_${version}.tar.xz"
+checksum=c5536161a26c28ea0de03fafc065b5ce1b272a8ad2b44bf5784e7e802e61f239
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 if [ "$XBPS_TARGET_LIBC" = "glibc" ]; then
 	makedepends+=" libxcrypt-devel"

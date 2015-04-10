@@ -5,8 +5,13 @@ revision=2
 build_style=gnu-configure
 depends="automake"
 short_desc="Common development macros for MATE"
+<<<<<<< HEAD
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="GPL-3.0-or-later, LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://mate-desktop.org"
 changelog="https://raw.githubusercontent.com/mate-desktop/mate-common/master/NEWS"
 distfiles="http://pub.mate-desktop.org/releases/${version%.*}/${pkgname}-${version}.tar.xz"

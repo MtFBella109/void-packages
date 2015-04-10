@@ -32,6 +32,7 @@ noarch=yes
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 =======
 license="GPL2"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 distfiles="${SOURCEFORGE_SITE}/lxde/$pkgname-$version.tar.gz"
 checksum=34c285a0430404e815263a4bb33a79eb47b168c56469be0f7ffb19730a57a045
@@ -46,3 +47,8 @@ lxmenu-data_package() {
 	}
 }
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${SOURCEFORGE_SITE}/lxde/$pkgname-$version.tar.xz"
+checksum=8802fbc88e4cac80dbf0a2926deb30eeb127c54b93254d7bda591cbe174bfb1c
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

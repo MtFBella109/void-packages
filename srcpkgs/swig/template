@@ -15,8 +15,12 @@ makedepends="bison pcre-devel zlib-devel"
 makedepends="zlib-devel pcre-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Simplified Wrapper and Interface Generator"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.swig.org"
 <<<<<<< HEAD
 distfiles="${SOURCEFORGE_SITE}/swig/swig-${version}.tar.gz"

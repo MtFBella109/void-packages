@@ -15,8 +15,12 @@ revision=4
 hostmakedepends="automake pkg-config"
 makedepends="pcre-devel libpcap-devel libressl-devel"
 short_desc="grep-like utility for network interfaces"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://github.com/jpr5/ngrep"
 distfiles="https://github.com/jpr5/ngrep/archive/V${version/./_}.tar.gz"

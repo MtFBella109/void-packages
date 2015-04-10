@@ -26,6 +26,7 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://lxde.org/"
 <<<<<<< HEAD
+<<<<<<< HEAD
 distfiles="https://github.com/lxde/lxappearance/archive/refs/tags/${version}.tar.gz"
 checksum=9f067a8a126b9779ba12648c76136d9ba3e7ec7920c568df7819d128fdf39e03
 
@@ -55,3 +56,9 @@ lxappearance_package() {
 	}
 }
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+=======
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${SOURCEFORGE_SITE}/lxde/$pkgname-$version.tar.xz"
+checksum=09e38aff39708f089cd2f421d97f99c3b11f03f88979b922dd42362956d816de
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

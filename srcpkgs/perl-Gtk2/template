@@ -13,8 +13,12 @@ makedepends="perl-ExtUtils-Depends perl-ExtUtils-PkgConfig gtk+-devel perl-Pango
 depends="perl>=5.20 perl-Pango"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Perl bindings for Gtk2"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://gtk2-perl.sourceforge.net/"
 distfiles="${SOURCEFORGE_SITE}/gtk2-perl/Gtk2-$version.tar.gz"
 checksum=49c443743b2eefe11a768002724f7f6a4c48efc94ff3cd3a559fb7e7b693c967

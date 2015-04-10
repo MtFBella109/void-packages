@@ -43,6 +43,7 @@ depends="caribou>=0.4.12 pulseaudio glxinfo desktop-file-utils
  gir-freedesktop gnome-control-center>=3.14"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNOME core user interface"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Projects/GnomeShell"
@@ -62,3 +63,10 @@ gtk_iconcache_dirs="/usr/share/icons/hicolor"
 
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://live.gnome.org/GnomeShell"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=fb44484efb94af4d90189127136a82b2cc1afed93e24834165ae550b58b539d6
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

@@ -2,6 +2,7 @@
 pkgname=flashrom
 version=1.5.1
 revision=1
+<<<<<<< HEAD
 build_style=meson
 configure_args="-Duse_internal_dmi=false -Ddocumentation=enabled"
 hostmakedepends="pkg-config python3-Sphinx"
@@ -14,6 +15,16 @@ homepage="https://www.flashrom.org"
 distfiles=https://github.com/flashrom/flashrom/archive/refs/tags/v${version}.tar.gz
 checksum=3f4dc7878e962e165b7eba73104d4e61231f9d4e838eb47df6ca3d87060a2aa5
 make_check=no # can't run without special setup..?
+=======
+short_desc="utility for identifying, reading, writing, verifying and erasing flash chips"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+makedepends="pciutils-devel libusb-compat-devel"
+hostmakedepends="pkg-config"
+homepage="http://www.flashrom.org"
+license="MIT/X11"
+distfiles=http://download.flashrom.org/releases/$pkgname-$version.tar.bz2
+checksum=13dc7c895e583111ecca370363a3527d237d178a134a94b20db7df177c05f934
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 flashrom-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision} pciutils-devel

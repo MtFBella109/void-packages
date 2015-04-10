@@ -13,8 +13,13 @@ makedepends="libpng-devel tiff-devel SDL-devel libwebp-devel"
 # The following are dlopen(3)ed at runtime.
 depends="libpng>=1.6 tiff libjpeg-turbo libwebp>=0.4.0"
 short_desc="Load images as SDL surfaces"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.libsdl.org/projects/SDL_image/"
 distfiles="http://www.libsdl.org/projects/$pkgname/release/$pkgname-$version.tar.gz"
 <<<<<<< HEAD

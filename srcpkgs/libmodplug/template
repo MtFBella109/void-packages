@@ -10,7 +10,11 @@ revision=3
 build_style=gnu-configure
 configure_args="--enable-static"
 short_desc="A MOD playing library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://modplug-xmms.sourceforge.net/"
 license="Public domain"
 distfiles="${SOURCEFORGE_SITE}/modplug-xmms/$pkgname-$version.tar.gz"

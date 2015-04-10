@@ -23,7 +23,11 @@ post_extract() {
 revision=3
 makedepends="pkg-config libsndfile-devel"
 short_desc="The Vamp audio analysis plugin system"
+<<<<<<< HEAD
 maintainer="davehome <davehome@redthumb.info.tm>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="BSD"
 checksum=601d9d9f859b3232afda63ca099e51d81202556bbb0ee275a9aab14bf3d6c766
 long_desc="

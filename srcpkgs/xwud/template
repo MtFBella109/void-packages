@@ -9,6 +9,7 @@ makedepends="libX11-devel"
 short_desc="Image displayer for X"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org"
 distfiles="${XORG_SITE}/app/xwud-${version}.tar.gz"
 checksum=371df65cea6b0ca281f9944337b82bb3bcee624618548e7b7077c2e32574c3e0
@@ -20,6 +21,9 @@ post_install() {
 # Template build file for 'xwud'.
 pkgname=xwud
 version=1.0.2
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

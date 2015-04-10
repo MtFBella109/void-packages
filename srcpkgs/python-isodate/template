@@ -1,0 +1,28 @@
+# Template file for 'python-isodate'
+pkgname=python-isodate
+version=0.5.1
+revision=1
+noarch=yes
+wrksrc="isodate-${version}"
+build_style=python-module
+python_versions="2.7 3.4"
+hostmakedepends="python-setuptools python3.4-setuptools"
+depends="python"
+pycompile_module="isodate"
+short_desc="ISO 8601 date/time/duration parser and formatter (Python2)"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="https://pypi.python.org/pypi/isodate/"
+license="BSD"
+distfiles="${PYPI_SITE}/i/isodate/isodate-${version}.tar.gz"
+checksum=b12aed31c0e834543497e24d609a41531a800d8304c39e6665c45ca023b012fb
+
+python3.4-isodate_package() {
+	noarch=yes
+	depends="python3.4"
+	pycompile_version="3.4"
+	pycompile_module="isodate"
+	short_desc="${short_desc/Python2/Python3.4}"
+	pkg_install() {
+		vmove usr/lib/python3.4
+	}
+}

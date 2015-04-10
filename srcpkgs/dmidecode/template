@@ -27,6 +27,7 @@ revision=1
 fulldepends="glibc"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Desktop Management Interface table related utilities"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=4d74a3e93353320317a424816f9a045df06d9ed4b5b80881e16fdfcc74c9e2c0
 long_desc="
@@ -45,3 +46,10 @@ Add_dependency full glibc
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.nongnu.org/dmidecode"
+license="GPL-2"
+distfiles="${NONGNU_SITE}/$pkgname/$pkgname-$version.tar.bz2"
+checksum=913ff3055d563a62a420789b8ee33b038de9afa18ea61254760ddf8ab87a5088
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

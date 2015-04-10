@@ -11,9 +11,16 @@ short_desc="Adobe Utopia Type1 fonts"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
 homepage="http://xorg.freedesktop.org/"
+<<<<<<< HEAD
 distfiles="${XORG_SITE}/font/$pkgname-$version.tar.gz"
 checksum=cd0b5acf8413d5a28afca6432c03ad0c9910fa707a38709bc9f235e9d7545e4d
 font_dirs="/usr/share/fonts/X11/Type1"
+=======
+license="opensource"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+checksum=979435105f897a70f8993fa02c8362160b0513366c2ab896965416f96dbb8077
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	rm -f ${DESTDIR}/${font_dirs}/fonts.*

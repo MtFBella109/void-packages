@@ -8,11 +8,19 @@ configure_args="--prefix=/usr --enable-release-mode --enable-all-engines"
 hostmakedepends="pkg-config nasm"
 makedepends="zlib-devel libpng-devel SDL2-devel libmad-devel faad2-devel
  fluidsynth-devel libvorbis-devel libtheora-devel libflac-devel
+<<<<<<< HEAD
  freetype-devel libjpeg-turbo-devel libcurl-devel SDL2_net-devel
  libmpeg2-devel liba52-devel gtk+3-devel giflib-devel glew-devel"
 =======
 version=1.4.1
 revision=1
+=======
+ freetype-devel libjpeg-turbo-devel"
+short_desc="Free implementation of LucasArts' SCUMM interpreter"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.scummvm.org/"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.bz2"
 checksum=fa0a7f0d59524611be0c5b9be9ac7f8e7a72bab1826732e056f88332aa3139da
 makedepends="pkg-config nasm zlib-devel libpng-devel SDL-devel libmad-devel fluidsynth-devel libvorbis-devel libtheora-devel libflac-devel faad2-devel"

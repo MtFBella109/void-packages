@@ -14,6 +14,7 @@ makedepends="libcap-devel libseccomp-devel openssl-devel libapparmor-devel
 depends="xz wget"
 _desc="Linux Containers"
 short_desc="${_desc} - utilities"
+<<<<<<< HEAD
 maintainer="Cameron Nemo <cam@nohom.org>"
 license="LGPL-2.1-or-later"
 homepage="https://linuxcontainers.org"
@@ -37,6 +38,13 @@ long_desc="
  kernel. It provides the resource management through the control groups aka
  process containers and resource isolation through the namespaces.
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://linuxcontainers.org"
+license="LGPL-2.1"
+distfiles="http://linuxcontainers.org/downloads/lxc-${version}.tar.gz"
+checksum=302da0ddc16a3a3022f51bc69570f36964af4b9588906ed149078dc37ed33a97
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 conf_files="/etc/lxc/default.conf"

@@ -5,8 +5,13 @@ revision=1
 build_style=gnu-configure
 checkdepends="which strace"
 short_desc="Small LD_PRELOAD library designed to (transparently) disable fsync"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-only"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.flamingspork.com/projects/libeatmydata/"
 distfiles="http://www.flamingspork.com/projects/libeatmydata/${pkgname}-${version}.tar.gz"
 checksum=cf18a8c52138a38541be3478af446c06048108729d7e18476492d62d54baabc4

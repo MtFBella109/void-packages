@@ -28,7 +28,12 @@ hostmakedepends="pkg-config"
 makedepends="libXfixes-devel MesaLib-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Video Acceleration (VA) API"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://freedesktop.org/wiki/Software/vaapi"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://01.org/linuxmedia/vaapi"
 changelog="https://raw.githubusercontent.com/intel/libva/master/NEWS"

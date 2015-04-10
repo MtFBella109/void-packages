@@ -5,9 +5,18 @@ revision=2
 metapackage=yes
 depends="base-files>=0.126"
 short_desc="Dummy meta-pkg for cross building packages with xbps-src"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Public Domain"
 homepage="https://www.voidlinux.org/"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Public domain"
+homepage="http://www.voidlinux.eu"
+
+noarch=yes
+depends="base-directories xbps-triggers"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 provides="
 	kernel-libc-headers-9999_1
 	binutils-9999_1

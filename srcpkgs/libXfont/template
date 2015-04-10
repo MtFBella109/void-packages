@@ -10,6 +10,7 @@ configure_args="--disable-devel-docs"
 makedepends="pkg-config xproto xtrans fontcacheproto fontsproto zlib-devel freetype-devel libfontenc-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="X font Library"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=112bfc30820b98deec4c9914536c5aa2f8b5162bd2b0bdb342343168e06f7679
 long_desc="
@@ -34,6 +35,13 @@ Add_dependency full libfontenc
 hostmakedepends="pkg-config xtrans"
 makedepends="xproto xtrans fontcacheproto fontsproto freetype-devel libfontenc-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://xorg.freedesktop.org/"
+license="MIT"
+distfiles="${XORG_SITE}/lib/$pkgname-$version.tar.bz2"
+checksum=b70898527c73f9758f551bbab612af611b8a0962202829568d94f3edf4d86098
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vinstall COPYING 644 usr/share/licenses/${pkgname}

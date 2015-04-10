@@ -12,7 +12,11 @@ wrksrc="yaml-${version}"
 build_style=gnu-configure
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Fast YAML 1.1 parser and emitter library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 <<<<<<< HEAD
 homepage="https://pyyaml.org/wiki/LibYAML"

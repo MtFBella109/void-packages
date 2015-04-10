@@ -15,7 +15,11 @@ hostmakedepends="pkg-config"
 makedepends="libvdpau-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Command line utility for querying the capabilities of a VDPAU device"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 <<<<<<< HEAD
 homepage="https://freedesktop.org/wiki/Software/VDPAU/"

@@ -7,7 +7,11 @@ hostmakedepends="pkg-config"
 makedepends="libwebkit2gtk41-devel gcr-devel"
 depends="xprop dmenu"
 short_desc="Simple web browser based on WebKit/GTK+"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="http://surf.suckless.org"
 distfiles="http://dl.suckless.org/surf/$pkgname-$version.tar.gz"

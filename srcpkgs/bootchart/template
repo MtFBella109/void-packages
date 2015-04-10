@@ -4,8 +4,13 @@ version=1.20
 revision=4
 build_style=gnu-configure
 short_desc="Startup graphing tool"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://github.com/sofar/bootchart"
 distfiles="http://foo-projects.org/~sofar/bootchart/bootchart-${version}.tar.gz"
 checksum=abce2fe0483ee23a522200fd630d7f288a337117c078dfaa220e1c55cdc2e896

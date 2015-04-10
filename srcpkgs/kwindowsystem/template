@@ -8,11 +8,19 @@ configure_args="-DBUILD_TESTING=OFF"
 hostmakedepends="kcoreaddons pkg-config extra-cmake-modules qt5-host-tools qt5-tools-devel"
 makedepends="qt5-tools-devel qt5-x11extras-devel libXfixes-devel xcb-util-keysyms-devel"
 short_desc="KDE frameworks - Access to the windowing system"
+<<<<<<< HEAD
 maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
 homepage="https://invent.kde.org/frameworks/kwindowsystem"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname}-${version}.tar.xz"
 checksum=7ec97633752fbde2505b40d762d933b642cae42b6b86d6e801fbdfcd2eeb5334
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="https://projects.kde.org/projects/frameworks/kwindowsystem"
+distfiles="http://download.kde.org/stable/frameworks/${version%.*}/${pkgname}-${version}.tar.xz"
+checksum=bf52735dd6302e5a2ab2d322eb8cb644d599bf8ea2fe5b7517558a1549540f13
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 kwindowsystem-devel_package() {
 	short_desc+=" - development"

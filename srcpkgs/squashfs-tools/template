@@ -2,6 +2,7 @@
 pkgname=squashfs-tools
 version=4.0
 wrksrc="squashfs${version}/squashfs-tools"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 distfiles="${SOURCEFORGE_SITE}/squashfs/squashfs${version}.tar.gz"
 build_style=gnu_makefile
 make_install_args="INSTALL_DIR=$XBPS_DESTDIR/$pkgname-$version/usr/bin"

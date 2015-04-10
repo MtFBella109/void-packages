@@ -42,7 +42,7 @@ makedepends="
 depends="iso-codes NetworkManager>=${version} hicolor-icon-theme"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="NetworkManager panel applet for GNOME"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.gnome.org/projects/NetworkManager/"
 license="GPL-2"
 checksum=b6b6de75e28d1fbcdfdbb51c0e40fcd6bc0ec0385bfecd16c457260491cd2ff7

@@ -2,6 +2,7 @@
 pkgname=wpa_supplicant
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=2.11
 revision=3
 build_wrksrc="${pkgname}"
@@ -9,6 +10,19 @@ build_style=gnu-makefile
 make_build_args="V=1 BINDIR=/usr/bin"
 make_install_args="BINDIR=/usr/bin"
 make_use_env=true
+=======
+version=2.4
+revision=2
+build_wrksrc=$pkgname
+short_desc="WPA/WPA2/IEEE 802.1X Supplicant"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+homepage="http://w1.fi/wpa_supplicant/"
+distfiles="http://w1.fi/releases/$pkgname-$version.tar.gz"
+checksum=058dc832c096139a059e6df814080f50251a8d313c21b13364c54a1e70109122
+
+build_pie=yes
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 hostmakedepends="pkg-config"
 <<<<<<< HEAD
 makedepends="libnl3-devel openssl-devel $(vopt_if dbus dbus-devel)

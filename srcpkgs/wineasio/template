@@ -9,6 +9,7 @@ homepage="http://sourceforge.net/projects/wineasio"
 makedepends="wine wine-devel jack-devel"
 depends="jack"
 short_desc="JACK driver for WINE to provide Windows Apps with ASIO support"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/wineasio/wineasio"
@@ -22,6 +23,12 @@ case $XBPS_TARGET_MACHINE in
 esac
 
 lib32files="/usr/lib/wine/${winearch}-windows/wineasio${XBPS_TARGET_WORDSIZE}.dll"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL"
+distfiles="${SOURCEFORGE_SITE}/wineasio/${pkgname}-${version}.tar.gz"
+checksum=9fbc2d10a4cec307dc0558bed82b887c864424d16da40a80f1d80f907d92af0b
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_install() {
 	vinstall "build${XBPS_TARGET_WORDSIZE}/wineasio${XBPS_TARGET_WORDSIZE}.dll" 755 usr/lib/wine/${winearch}-windows

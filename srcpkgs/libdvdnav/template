@@ -11,12 +11,23 @@ makedepends="libdvdcss-devel libdvdread-devel"
 makedepends="automake libdvdread-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library to navigate DVDs"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://www.videolan.org/developers/libdvdnav.html"
 changelog="https://code.videolan.org/videolan/libdvdnav/blob/master/ChangeLog"
 distfiles="${VIDEOLAN_SITE}/libdvdnav/${version}/libdvdnav-${version}.tar.bz2"
 checksum=c191a7475947d323ff7680cf92c0fb1be8237701885f37656c64d04e98d18d48
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://dvdnav.mplayerhq.hu/"
+distfiles="http://download.videolan.org/pub/videolan/libdvdnav/${version}/libdvdnav-${version}.tar.bz2"
+checksum=72b1cb8266f163d4a1481b92c7b6c53e6dc9274d2a6befb08ffc351fe7a4a2a9
+
+CFLAGS+="-I${XBPS_CROSS_BASE}/usr/include"
+LDFLAGS+="-L${XBPS_CROSS_BASE}/usr/lib -ldvdread"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 libdvdnav-devel_package() {

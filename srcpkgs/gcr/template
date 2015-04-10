@@ -1,2 +1,51 @@
 # Template file for 'gcr'
 pkgname=gcr
+<<<<<<< HEAD
+=======
+version=3.14.0
+revision=1
+build_style=gnu-configure
+configure_args="$(vopt_enable gir introspection) --disable-update-mime
+ --disable-update-icon-cache --disable-schemas-compile"
+hostmakedepends="automake libtool  pkg-config intltool gnome-doc-utils
+ libtasn1-tools gettext-devel gnupg perl-XML-Parser glib-devel
+ libgcrypt-devel gobject-introspection vala-devel"
+makedepends="gtk+3-devel p11-kit-devel libgcrypt-devel vala-devel"
+depends="hicolor-icon-theme desktop-file-utils"
+short_desc="GNOME crypto package"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2, LGPL-2.1"
+homepage="http://www.gnome.org"
+distfiles="${GNOME_SITE}/gcr/${version%.*}/gcr-${version}.tar.xz"
+checksum=2a2231147a01e2061f57fa9ca77557ff97bc6ceab028cee5528079f4b2fca63d
+
+# Package build options
+build_options="gir"
+
+# Disable gir for cross builds.
+if [ -z "$CROSS_BUILD" ]; then
+	build_options_default="gir"
+fi
+
+pre_configure() {
+	autoreconf -fi
+}
+post_install() {
+	vinstall ${FILESDIR}/10-gcr-memlock.conf 644 etc/security/limits.d
+}
+
+gcr-devel_package() {
+	depends="libglib-devel p11-kit-devel gtk+3-devel gcr>=${version}_${revision}"
+	short_desc+=" - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.so"
+		vmove usr/share/gtk-doc
+		if [ "$build_option_gir" ]; then
+			vmove usr/share/gir-1.0
+			vmove usr/share/vala
+		fi
+	}
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

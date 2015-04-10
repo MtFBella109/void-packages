@@ -7,7 +7,12 @@ build_style=cmake
 configure_args="-DCMAKE_BUILD_TYPE=None"
 makedepends="libjpeg-turbo-devel"
 short_desc="Software-based reference implementation of the JPEG-2000 codec"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.ece.uvic.ca/~mdadams/jasper"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="JasPer-2.0"
 homepage="http://www.ece.uvic.ca/~mdadams/jasper"
 distfiles="https://github.com/mdadams/jasper/archive/version-${version}.tar.gz"

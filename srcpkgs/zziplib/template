@@ -6,6 +6,7 @@ build_style=cmake
 configure_args="-DZZIP_LIBLATEST=ON"
 hostmakedepends="pkg-config python3 tar zip"
 makedepends="zlib-devel"
+<<<<<<< HEAD
 short_desc="Lightweight library to extract data from zip files"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later, MPL-1.1"
@@ -13,6 +14,14 @@ homepage="https://github.com/gdraheim/zziplib"
 changelog="https://raw.githubusercontent.com/gdraheim/zziplib/master/ChangeLog"
 distfiles="https://github.com/gdraheim/zziplib/archive/v${version}.tar.gz"
 checksum=ed6f3017bb353b4a8f730c31a2fa065adb2d264c00d922aada48a5893eda26e4
+=======
+short_desc="A lightweight library to extract data from zip files"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://zziplib.sourceforge.net"
+license="LGPL-2.1, MPL-1.1"
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.bz2"
+checksum=a1b8033f1a1fd6385f4820b01ee32d8eca818409235d22caf5119e0078c7525b
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 if [ "$CROSS_BUILD" ]; then
 	configure_args+=" -DZZIPTEST=OFF"

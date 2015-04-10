@@ -6,8 +6,13 @@ build_style=gnu-configure
 conf_files="/etc/papersize"
 hostmakedepends="automake gettext libtool"
 short_desc="Library for handling paper characteristics"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://packages.debian.org/unstable/source/libpaper"
 distfiles="${DEBIAN_SITE}/main/libp/${pkgname}/${pkgname}_${version}.tar.gz"
 checksum=26330e21e9a3124658d515fd850b0cde546ff42d89b2596a5264c5f1677f0547

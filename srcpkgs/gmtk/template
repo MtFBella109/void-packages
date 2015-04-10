@@ -7,11 +7,19 @@ configure_args="--disable-static --enable-gtk3"
 hostmakedepends="pkg-config intltool glib"
 makedepends="gtk+3-devel dconf-devel alsa-lib-devel pulseaudio-devel"
 short_desc="Common functions for gnome-mplayer and gecko-mediaplayer"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://sites.google.com/site/kdekorte2/gmtk"
 distfiles="https://github.com/kdekorte/gmtk/archive/v${version}.tar.gz"
 checksum=fc23c853deb35ee35db06dd3da5069ce3dc64faf3a0053324616fadf81a415db
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://gmtk.googlecode.com/"
+license="GPL-2"
+distfiles="https://gmtk.googlecode.com/svn/packages/gmtk-${version}.tar.gz"
+checksum=d633832ab3b223f9a669934d168c74574ab47a6a21f76d942c05ad78c56bf87a
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 gmtk-devel_package() {
 	depends="gmtk-${version}_${revision}"

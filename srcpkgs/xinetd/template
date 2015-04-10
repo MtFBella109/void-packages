@@ -6,8 +6,13 @@ build_style=gnu-configure
 configure_args="--without-libwrap"
 makedepends="libtirpc-devel"
 short_desc="A secure replacement for inetd"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="xinetd"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.xinetd.org/"
 distfiles="http://ponce.cc/slackware/sources/repo/xinetd-${version}.tar.gz"
 checksum=bf4e060411c75605e4dcbdf2ac57c6bd9e1904470a2f91e01ba31b50a80a5be3

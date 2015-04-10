@@ -9,6 +9,7 @@ makedepends="libusb-devel libbluetooth-devel eudev-libudev-devel"
 short_desc="OBEX protocol implementation"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2"
+<<<<<<< HEAD
 homepage="http://dev.zuckschwerdt.org/openobex/"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}-Source.tar.gz"
 checksum=158860aaea52f0fce0c8e4b64550daaae06df2689e05834697b7e8c7d73dd4fc
@@ -28,6 +29,11 @@ long_desc="
  of objects like files, pictures, calendar entries (vCal) and business cards
  (vCard).
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/${pkgname}-${version}-Source.tar.gz"
+checksum=3b264665d90901ea4ff720332ffb9b6d1d8f67187463d3a3279caddc7205ea57
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 replaces="libopenobex>=0"
 

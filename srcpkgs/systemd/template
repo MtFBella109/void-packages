@@ -1,6 +1,7 @@
 # Template file for 'systemd'
 pkgname=systemd
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=44
 distfiles="http://www.freedesktop.org/software/$pkgname/$pkgname-$version.tar.xz"
 build_style=gnu-configure
@@ -27,6 +28,12 @@ version=201
 revision=1
 short_desc="A system and service manager for Linux"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+version=208
+revision=12
+short_desc="A system and service manager for Linux (${_gitbranch} ${_gitshort})"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.freedesktop.org/wiki/Software/systemd"
 license="LGPL-2.1, GPL-2, MIT"
 distfiles="http://www.freedesktop.org/software/$pkgname/$pkgname-$version.tar.xz"

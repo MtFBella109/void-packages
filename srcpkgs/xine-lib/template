@@ -12,10 +12,17 @@ makedepends="
  jack-devel samba-devel libflac-devel libmodplug-devel libmpcdec-devel
  speex-devel libtheora-devel libvorbis-devel libdca-devel faad2-devel
  libcdio-devel libbluray-devel aalib-devel libcaca-devel libXinerama-devel
+<<<<<<< HEAD
  libjpeg-turbo-devel libmng-devel libdvdnav-devel"
 short_desc="Multimedia playback engine"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.0-or-later"
+=======
+ libjpeg-turbo-devel libmng-devel"
+short_desc="A multimedia playback engine"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2, LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.xine-project.org"
 changelog="https://sourceforge.net/projects/xine/files/xine-lib/${version}/README.txt/view"
 distfiles="${SOURCEFORGE_SITE}/xine/${pkgname}-${version}.tar.xz"

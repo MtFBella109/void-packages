@@ -22,7 +22,12 @@ depends="
 	pluma>=${version}
 	caja-extensions>=${version}
 	yelp"
+<<<<<<< HEAD
 short_desc="MATE extras meta-package for Void Linux"
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
+=======
+short_desc="The MATE extras meta-package for Void Linux"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.mate-desktop.org"

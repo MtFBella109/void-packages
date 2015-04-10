@@ -20,7 +20,19 @@ post_install() {
 =======
 # Template build file for 'xfontsel'.
 pkgname=xfontsel
+<<<<<<< HEAD
 version=1.0.2
+=======
+version=1.0.5
+revision=2
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="libXaw-devel"
+short_desc="X font selector"
+homepage="http://xorg.freedesktop.org"
+license="MIT"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

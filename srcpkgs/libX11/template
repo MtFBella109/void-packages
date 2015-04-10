@@ -17,7 +17,12 @@ makedepends="xproto xextproto xtrans xcmiscproto kbproto bigreqsproto
  inputproto xf86bigfontproto libxcb-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Base X libraries from Xorg"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://xorg.freedesktop.org/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://gitlab.freedesktop.org/xorg/lib/libx11"
 distfiles="${XORG_SITE}/lib/libX11-${version}.tar.xz"

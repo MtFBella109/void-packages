@@ -8,7 +8,11 @@ configure_args="--enable-malloc0returnsnull"
 hostmakedepends="pkg-config"
 makedepends="xorgproto libX11-devel libXext-devel libXv-devel"
 short_desc="XVideo Motion Compensation Library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://gitlab.freedesktop.org/xorg/lib/libxvmc"
 distfiles="${XORG_SITE}/lib/${pkgname}-${version}.tar.xz"

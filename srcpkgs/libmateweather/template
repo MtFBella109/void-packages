@@ -10,6 +10,7 @@ hostmakedepends="pkg-config glib-devel gettext automake gtk-doc
 makedepends="gtk+3-devel libxml2-devel libglib-devel libsoup3-devel"
 depends="dconf"
 short_desc="Provides access to weather information from the Internet for MATE"
+<<<<<<< HEAD
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://mate-desktop.org"
@@ -21,6 +22,13 @@ checksum=dfd0de546afda06e2a4d6837748910fa2074ab6fd76361fa67f642f456e184c1
 pre_configure() {
 	autoreconf -fi
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=801ec5512e9099c39ce819a82e2dde62477a3783894a5e7fbfff3493d04607ba
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libmateweather-devel_package() {
 	short_desc+=" - development files"

@@ -10,11 +10,19 @@ configure_args="--with-libgpg-error-prefix=${XBPS_CROSS_BASE}/usr"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 makedepends="libgpg-error-devel"
 short_desc="IPC library used by some GnuPG related software"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://www.gnupg.org/related_software/libassuan"
 distfiles="https://www.gnupg.org/ftp/gcrypt/libassuan/libassuan-${version}.tar.bz2"
 checksum=0103081ffc27838a2e50479153ca105e873d3d65d8a9593282e9c94c7e6afb76
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://www.gnupg.org/related_software/libassuan"
+distfiles="ftp://ftp.gnupg.org/gcrypt/$pkgname/$pkgname-$version.tar.bz2"
+checksum=7df58ed70be4b694f77efd1f3b3f103c6311b6b71e04a370382f9fe8204f6ec6
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 libassuan-devel_package() {

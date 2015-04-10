@@ -13,9 +13,15 @@ makedepends="freetype-devel zlib-devel glu-devel"
 makedepends="pkg-config freetype-devel zlib-devel MesaLib-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="OpenGL library to use arbitrary fonts"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT-advertising"
 homepage="https://sourceforge.net/projects/ftgl/"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://ftgl.wiki.sourceforge.net/"
+license="MIT"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${SOURCEFORGE_SITE}/ftgl/ftgl-${_distver}-${_distrcver}.tar.bz2"
 checksum=521ff7bd62c459ff5372e269c223e2a6107a6a99a36afdc2ae634a973af70c59
 

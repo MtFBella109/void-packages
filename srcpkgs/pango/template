@@ -22,12 +22,20 @@ makedepends="libglib-devel cairo-devel libXft-devel harfbuzz-devel"
 triggers="pango-modules"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Library for layout and rendering of text"
+<<<<<<< HEAD
 maintainer="cinerea0 <cinerea0@protonmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://www.pango.org/"
 changelog="https://gitlab.gnome.org/GNOME/pango/-/raw/main/NEWS"
 distfiles="${GNOME_SITE}/pango/${version%.*}/pango-${version}.tar.xz"
 checksum=2606252bc25cd8d24e1b7f7e92c3a272b37acd6734347b73b47a482834ba2491
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.pango.org/"
+license="LGPL-2.1"
+distfiles="${GNOME_SITE}/pango/1.36/${pkgname}-${version}.tar.xz"
+checksum=18dbb51b8ae12bae0ab7a958e7cf3317c9acfc8a1e1103ec2f147164a0fc2d07
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 # Package build options
 build_options="gir"

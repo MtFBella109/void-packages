@@ -50,7 +50,14 @@ distfiles="http://ftp.gnu.org/gnu/$pkgname/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 configure_args="--localstatedir=/var/lib/locate"
 short_desc="The GNU Find Utilities"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://www.gnu.org/software/findutils"
+distfiles="http://ftp.gnu.org/gnu/$pkgname/$pkgname-$version.tar.gz"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=434f32d171cbc0a5e72cfc5372c6fc4cb0e681f8dce566a0de5b6fccd702b62a
 long_desc="
  The GNU Find Utilities are the basic directory searching utilitiesof the

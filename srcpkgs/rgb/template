@@ -9,6 +9,7 @@ makedepends="xorgproto"
 short_desc="Xorg color name database & tools"
 homepage="http://xorg.freedesktop.org"
 license="MIT"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 distfiles="${XORG_SITE}/app/rgb-${version}.tar.xz"
 checksum=fc03d7f56e5b2a617668167f8927948cce54f93097e7ccd9f056077f479ed37b
@@ -20,6 +21,9 @@ post_install() {
 # Template build file for 'rgb'.
 pkgname=rgb
 version=1.0.3
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

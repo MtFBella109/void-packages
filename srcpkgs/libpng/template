@@ -6,8 +6,12 @@ revision=1
 build_style=gnu-configure
 makedepends="zlib-devel"
 short_desc="Library for manipulating PNG images"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="Libpng"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.libpng.org/pub/png/libpng.html"
 changelog="https://github.com/pnggroup/libpng/blob/master/CHANGES"
 distfiles="${SOURCEFORGE_SITE}/libpng/libpng-${version}.tar.xz"

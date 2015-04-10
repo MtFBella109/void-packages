@@ -5,12 +5,22 @@ revision=1
 build_style=go
 go_import_path=github.com/xyproto/gendesk
 short_desc="Utility to generate .desktop files and download icons"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
 homepage="https://gendesk.roboticoverlords.org/"
 distfiles="https://github.com/xyproto/gendesk/archive/v${version}.tar.gz
  https://roboticoverlords.org/images/${pkgname}.png"
 checksum="a9e7a6d7be514f829ebf86d9764d37436539f29d0b8a03a31d8386f9be604fdb
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="MIT"
+homepage="http://roboticoverlords.org/gendesk/"
+distfiles="https://github.com/xyproto/${pkgname}/archive/${version}.tar.gz
+ http://roboticoverlords.org/images/default.png"
+skip_extraction="default.png"
+checksum="a01ecee04e2397f263b25b1ec94d642fe7f5b8b67eabc6123a923072dd130602
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
  4d96eded48e536d02e35727c36dc20844c2e44654e81baf78e10aee4eb48e837"
 skip_extraction="${pkgname}.png"
 

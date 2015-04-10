@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template file for 'cross-arm-linux-musleabi'
 _binutils_version=2.44
 _gcc_version=14.2.1+20250405
@@ -13,6 +14,46 @@ configure_args="--with-arch=armv5te --with-float=soft
 hostmakedepends="texinfo tar gcc-objc gcc-go flex perl python3 pkg-config"
 makedepends="isl-devel libmpc-devel gmp-devel mpfr-devel
  zlib-devel libzstd-devel"
+=======
+# Template build file for 'cross-arm-linux-musleabi'
+#
+_binutils_version=2.25
+_gcc_version=4.9.2
+_musl_version=1.1.6
+_linux_version=3.18.5
+
+_triplet=arm-linux-musleabi
+_fpuflags="--with-arch=armv6 --with-fpu=vfp --with-float=hard"
+_archflags="-march=armv6 -mfpu=vfp -mfloat-abi=hard"
+_sysroot="/usr/${_triplet}"
+
+pkgname=cross-${_triplet}
+version=0.17
+revision=1
+short_desc="Cross toolchain for ARMv6 LE Hard Float target (musl)"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.voidlinux.eu"
+license="Public Domain"
+distfiles="
+ http://ftp.gnu.org/pub/gnu/binutils/binutils-${_binutils_version}.tar.bz2
+ http://ftp.gnu.org/pub/gnu/gcc/gcc-${_gcc_version}/gcc-${_gcc_version}.tar.bz2
+ http://www.kernel.org/pub/linux/kernel/v3.x/linux-${_linux_version}.tar.xz
+ http://www.musl-libc.org/releases/musl-${_musl_version}.tar.gz"
+checksum="
+ 22defc65cfa3ef2a3395faaea75d6331c6e62ea5dfacfed3e2ec17b08c882923
+ 2020c98295856aa13fda0f2f3a4794490757fc24bcca918d52cc8b4917b972dd
+ e4442436e59c74169e98d38d2e2a434c7b73f8eda0aa8f20e454eaf52270fc90
+ 5a0160c55c540d5b90158617a57647f1b03209f58d9ee70dbce19d1115b4f1b4"
+
+lib32disabled=yes
+nocross=yes
+nodebug=yes
+create_wrksrc=yes
+
+hostmakedepends="perl flex"
+makedepends="zlib-devel gmp-devel mpfr-devel libmpc-devel"
+nostrip_files="libgcc.a libgcov.a libgcc_eh.a"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 depends="${pkgname}-libc-${version}_${revision}"
 short_desc="Void cross toolchain for ${pkgname/cross-}"
 maintainer="Orphaned <orphan@voidlinux.org>"

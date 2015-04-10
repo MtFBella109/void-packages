@@ -11,6 +11,7 @@ make_build_args="man"
 makedepends="wget"
 fulldepends="cvs python>=0"
 short_desc="CVS to Subversion, git and bazaar repository conversion tool"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=d9d835e0c7df48966fbadf51527c25ebf1343b25179e3802f4637d4b96ba363e
 long_desc="
@@ -18,6 +19,13 @@ long_desc="
  Bazaar. The main design goals are robustness and 100% data preservation.
  cvs2svn can convert just about any CVS repository we've ever seen, including
  gcc, Mozilla, FreeBSD, KDE, GNOME...
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://cvs2svn.tigris.org/"
+license="BSD"
+distfiles="http://cvs2svn.tigris.org/files/documents/1462/49237/cvs2svn-${version}.tar.gz"
+checksum=a6677fc3e7b4374020185c61c998209d691de0c1b01b53e59341057459f6f116
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
  cvs2svn infers what happened in the history of your CVS repository and
  replicates that history as accurately as possible in the target SCM. All

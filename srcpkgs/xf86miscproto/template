@@ -1,6 +1,17 @@
 # Template build file for 'xf86miscproto'.
 pkgname=xf86miscproto
+<<<<<<< HEAD
 version=0.9.2
+=======
+version=0.9.3
+revision=1
+noarch="yes"
+build_style=gnu-configure
+short_desc="XF86Misc extension headers from X.org"
+homepage="http://xorg.freedesktop.org"
+license="MIT"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/proto/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 short_desc="XF86Misc extension headers from modular X.org"

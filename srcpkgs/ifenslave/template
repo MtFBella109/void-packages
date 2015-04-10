@@ -6,6 +6,11 @@ short_desc="Attach and detach slave interfaces to a bonding device"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="http://www.kernel.org"
+<<<<<<< HEAD
+=======
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_build() {
 	${CC} ${CFLAGS} -fPIE ${LDFLAGS} -pie -Wall -Wstrict-prototypes \

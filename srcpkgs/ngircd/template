@@ -13,12 +13,19 @@ makedepends="zlib-devel libressl-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="/etc/ngircd.conf"
 short_desc="Free, portable and lightweight Internet Relay Chat server"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://ngircd.barton.de/"
 distfiles="https://ngircd.barton.de/pub/ngircd/ngircd-${version}.tar.xz"
 checksum=6897880319dd5e2e73c1c9019613509f88eb5b8daa5821a36fbca3d785c247b8
 make_check="ci-skip" # Stopping the integration test servers fails in CI
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+distfiles="http://ngircd.barton.de/pub/${pkgname}/${pkgname}-${version}.tar.xz"
+checksum=cbe76d63fa919b2eaa87c5942f587f9fa95291e6fa4d7490d71bc94fa69b4956
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_configure() {
 	echo "#define HAVE_WORKING_GETADDRINFO 1" >>src/config.h

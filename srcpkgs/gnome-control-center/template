@@ -24,6 +24,7 @@ version=3.4.2
 revision=2
 distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-cups --with-libsocialweb --without-cheese
 --disable-update-mimedb --disable-static --enable-systemd"
 depends="gsettings-desktop-schemas pulseaudio desktop-file-utils hicolor-icon-theme sound-theme-freedesktop apg"
@@ -39,6 +40,15 @@ changelog="https://gitlab.gnome.org/GNOME/gnome-control-center/-/raw/gnome-48/NE
 distfiles="${GNOME_SITE}/gnome-control-center/${version%%.*}/gnome-control-center-${version}.tar.xz"
 checksum=c0698245a6420badd077c16ffb218860e457cd7300612718eabf9aba47222bae
 make_check=no # needs X11 and requires altered filesystem
+=======
+configure_args="--disable-static --with-cheese"
+short_desc="The GNOME control center"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://www.gnome.org"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=7fd9a38dce30658a4f80e1fe18b732e362ca64d4b4f3cdcc4a83828cbd69b384
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 pre_build() {

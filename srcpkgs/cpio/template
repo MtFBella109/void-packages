@@ -18,12 +18,20 @@ revision=1
 distfiles="http://ftp.gnu.org/gnu/$pkgname/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 short_desc="GNU copy-in/out (cpio) with remote magnetic tape (rmt) support"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=2a2da2dbb741a75b9a374ceca46036ac3f3c3698e3756b9e3cd44edac8536ba5
 long_desc="
  GNU cpio is a full-featured cpio command that can access remote and
  local magnetic tapes, and both tar and cpio format archives in files or
  on tapes."
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnu.org/software/cpio/"
+license="GPL-3"
+distfiles="http://ftp.gnu.org/gnu/$pkgname/$pkgname-$version.tar.gz"
+checksum=601b1d774cd6e4cd39416203c91ec59dbd65dd27d79d75e1a9b89497ea643978
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 Add_dependency run glibc
 Add_dependency build gettext

@@ -30,8 +30,13 @@ makedepends="libltdl-devel libusb-compat-devel libjpeg-turbo-devel gd-devel libe
 depends="${pkgname}-udev-rules-${version}_${revision}"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Digital camera access library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gphoto.org"
 changelog="https://raw.githubusercontent.com/gphoto/libgphoto2/master/NEWS"
 distfiles="https://github.com/gphoto/libgphoto2/releases/download/v${version}/libgphoto2-${version}.tar.bz2"

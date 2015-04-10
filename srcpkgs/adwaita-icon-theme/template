@@ -6,6 +6,7 @@ build_style=meson
 hostmakedepends="pkg-config"
 depends="librsvg"
 short_desc="Theme consisting of a set of icons for GTK+"
+<<<<<<< HEAD
 maintainer="icp <pangolin@vivaldi.net>"
 license="LGPL-3.0-or-later, CC-BY-SA-3.0"
 homepage="https://gitlab.gnome.org/GNOME/adwaita-icon-theme"
@@ -16,3 +17,10 @@ checksum=65166461d1b278aa942f59aa8d0fccf1108d71c65f372c6266e172449791755c
 pre_configure() {
 	ln -s /bin/true "$XBPS_WRAPPERDIR/gtk-update-icon-cache"
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=b776a7ad58c97f4c1ede316e44d8d054105429cb4e3a8ec46616a14b11df48ee
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

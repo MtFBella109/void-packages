@@ -12,8 +12,12 @@ revision=8
 makedepends="zlib-devel libressl-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Toolkit for RTMP streams"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://rtmpdump.mplayerhq.hu/"
 distfiles="https://repo-default.voidlinux.org/distfiles/${pkgname}-${version%.*}_p${_patchlevel}.tar.gz"
 checksum=d6da3b683f1045f02d94a81b0c583318dba021f69bdab970c5d5d73e8c38860f

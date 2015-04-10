@@ -10,6 +10,7 @@ hostmakedepends="automake doxygen gettext gettext-devel help2man libtool pkg-con
 makedepends="libxml2-devel python3-devel"
 checkdepends="python3"
 short_desc="Library for SMBIOS access"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, OLS-2.1"
 homepage="https://github.com/dell/libsmbios"
@@ -18,6 +19,13 @@ checksum=36c36a0f6b59190d6b4fef11696886e4511091929a5eb7ae7cf5fea0c32d3f58
 # explicitly list the subpackages to make sure they are installed in the
 # right order:
 subpackages="libsmbios-devel python3-libsmbios libsmbios-utils"
+=======
+homepage="https://linux.dell.com/libsmbios/main/index.html"
+license="GPL-2+, OLS-2.1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://linux.dell.com/$pkgname/download/$pkgname/$pkgname-$version/$pkgname-$version.tar.bz2"
+checksum=dd247fd43296df3352435b090dd789a22a89c4b316e98b46b915323290a3e350
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 archs="i686* x86_64*"
 

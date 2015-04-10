@@ -11,6 +11,7 @@ configure_args="--with-ignore-dot --with-insults=disabled --with-all-insults --w
 hostmakedepends="groff"
 makedepends="zlib-devel pam-devel openssl-devel"
 short_desc="Allow others to run commands as root"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="ISC"
 homepage="https://www.sudo.ws/"
@@ -19,6 +20,13 @@ distfiles="https://www.sudo.ws/dist/sudo-${version}.tar.gz"
 checksum=ff607ea717072197738a78f778692cd6df9a7e3e404565f51de063ca27455d32
 conf_files="/etc/pam.d/sudo /etc/sudoers"
 lib32disabled=yes
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gratisoft.us/sudo/"
+license="ISC, BSD, zlib"
+distfiles="http://www.courtesan.com/sudo/dist/$pkgname-$version.tar.gz"
+checksum=e374e5edf2c11c00d6916a9f51cb0ad15e51c7b028370fa15169b07e61e05a25
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_configure() {
 	case "$XBPS_TARGET_MACHINE" in

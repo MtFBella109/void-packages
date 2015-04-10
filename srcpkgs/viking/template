@@ -3,6 +3,7 @@ pkgname=viking
 version=1.9
 revision=3
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--disable-mapnik"
 hostmakedepends="glib-devel pkg-config gettext intltool itstool libxslt docbook-xsl"
 makedepends="gtk+3-devel libcurl-devel geoclue2-devel sqlite-devel file-devel
@@ -22,3 +23,16 @@ post_patch() {
 		-e '/localedir=.*eval/s,=.*,=/usr/share/locale,' \
 		configure
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://viking.sourceforge.net/"
+license="GPL-2"
+short_desc="Open/source GPS data editor and analyzer."
+configure_args="--disable-realtime-gps-tracking --disable-bluemarble
+ --disable-bing --disable-terraserver --disable-spotmaps
+ --disable-expedia --disable-mapnik"
+hostmakedepends="pkg-config intltool gnome-doc-utils gdk-pixbuf-devel"
+makedepends="file-devel sqlite-devel gtk+-devel libcurl-devel libgexiv2-devel libexif-devel gnome-doc-utils"
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.bz2"
+checksum=21f1bd372c571b8d021e4509a69ec6448efefec623355a9db26cd81898b5920a
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

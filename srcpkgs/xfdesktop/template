@@ -37,6 +37,7 @@ depends="hicolor-icon-theme desktop-file-utils"
 makedepends="pkg-config intltool xfconf-devel libxfce4ui-devel exo-devel gtk+-devel libxfce4util-devel libnotify-devel libwnck2-devel garcon-devel Thunar-devel dbus-glib-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Desktop manager for the XFce Desktop Environment"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=22aa4a654798dcfa728a9c0056486f73ae87a51239950c8f85aedef488cd571a
 long_desc="
@@ -55,3 +56,10 @@ Add_dependency full Thunar
 =======
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://xfce.org"
+distfiles="http://archive.xfce.org/src/xfce/xfdesktop/${version%.*}/$pkgname-$version.tar.bz2"
+checksum=95beff25b20957ec7b7c617b2f3f77a90b8d334393cd7dc3c1c1efa30151a725
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

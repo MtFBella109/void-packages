@@ -17,8 +17,13 @@ makedepends="zlib-devel expat-devel libarchive-devel libcurl-devel
 makedepends="zlib-devel bzip2-devel expat-devel libcurl-devel jsoncpp-devel ncurses-devel libarchive-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Cross-platform, open-source build system"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 license="BSD"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1, 3-clause-BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.cmake.org"
 distfiles="http://www.cmake.org/files/v2.8/$pkgname-$version.tar.gz"
 checksum=a18b721c547c2ce2ea9378f2687caca4398fc348982ede799e96b26924cc9e04

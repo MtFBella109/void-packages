@@ -14,7 +14,7 @@ makedepends="libX11-devel libXtst-devel libevdev-devel
 depends="virtual?xserver-abi-input-21_1"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Xorg synaptics touchpad input driver"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.x.org/"
 license="MIT"
 distfiles="${XORG_SITE}/driver/${pkgname}-${version}.tar.bz2"

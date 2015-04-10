@@ -11,11 +11,19 @@ makedepends="libcurl-devel libxml2-devel libxslt-devel"
 makedepends="pkg-config libcurl-devel libxslt-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Raptor RDF Syntax Library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later, GPL-2.0-or-later, Apache-2.0"
 homepage="https://librdf.org/raptor"
 distfiles="https://librdf.org/dist/source/raptor2-${version}.tar.gz"
 checksum=089db78d7ac982354bdbf39d973baf09581e6904ac4c92a98c5caadb3de44680
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="http://librdf.org/raptor"
+distfiles="http://librdf.org/dist/source/raptor2-${version}.tar.gz"
+checksum=ada7f0ba54787b33485d090d3d2680533520cd4426d2f7fb4782dd4a6a1480ed
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 libraptor_package() {

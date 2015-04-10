@@ -13,9 +13,15 @@ configure_args="--disable-static --disable-schemas-compile"
 makedepends="pkg-config intltool libxslt gobject-introspection dbus-glib-devel libxml2-devel sqlite-devel telepathy-glib-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Telepathy framework logging daemon"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://telepathy.freedesktop.org/components/telepathy-logger/"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://telepathy.freedesktop.org/wiki/Logger"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://telepathy.freedesktop.org/releases/$pkgname/$pkgname-$version.tar.bz2"
 checksum=8fcad534d653b1b365132c5b158adae947810ffbae9843f72dd1797966415dae
 

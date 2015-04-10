@@ -10,8 +10,12 @@ conf_files="
 	/usr/share/sgml/catalog
 	/usr/share/xml/catalog"
 short_desc="XML and SGML catalog manager"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://xmlcatmgr.sourceforge.net"
 distfiles="$SOURCEFORGE_SITE/xmlcatmgr/$pkgname-$version.tar.gz"
 checksum=ea1142b6aef40fbd624fc3e2130cf10cf081b5fa88e5229c92b8f515779d6fdc

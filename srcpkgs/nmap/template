@@ -13,6 +13,7 @@ configure_args="--without-ndiff --with-openssl $(vopt_with lua liblua)"
 makedepends="libpcap-devel pcre-devel libressl-devel $(vopt_if lua lua-devel)"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Utility for network discovery and security auditing"
+<<<<<<< HEAD
 maintainer="Piraty <mail@piraty.dev>"
 license="custom:nmap"
 homepage="https://nmap.org"
@@ -21,6 +22,13 @@ distfiles="https://nmap.org/dist/nmap-${version}.tar.bz2"
 checksum=ce847313eaae9e5c9f21708e42d2ab7b56c7e0eb8803729a3092f58886d897e6
 repository=nonfree
 python_version=3
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://nmap.org"
+distfiles="http://nmap.org/dist/nmap-$version.tar.bz2"
+checksum=8fa11e9e203ce2d81a207db5ca4f110a525f6c01c1dd0018325a7112a51aa591
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 build_options="lua"
 build_options_default="lua"

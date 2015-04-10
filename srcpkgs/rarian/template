@@ -15,7 +15,13 @@ short_desc="Documentation metadata library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="http://rarian.freedesktop.org/"
+<<<<<<< HEAD
 distfiles="${GNOME_SITE}/${pkgname}/0.8/${pkgname}-${version}.tar.bz2"
+=======
+license="LGPL-2.1"
+distfiles="${GNOME_SITE}/$pkgname/0.8/$pkgname-$version.tar.bz2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=aafe886d46e467eb3414e91fa9e42955bd4b618c3e19c42c773026b205a84577
 make_dirs="/var/lib/rarian 0755 root root"
 

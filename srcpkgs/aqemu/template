@@ -15,8 +15,12 @@ revision=1
 makedepends="cmake qt-devel"
 fulldepends="qemu desktop-file-utils"
 short_desc="GUI to QEMU and KVM emulators, written in Qt4"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://aqemu.sourceforge.net"
 distfiles="https://github.com/TBK/aqemu/archive/v${version}.tar.gz"
 checksum=576ae78de936518a1de057355ffc192b59e42be934f0111122b2c5fcafe318a7

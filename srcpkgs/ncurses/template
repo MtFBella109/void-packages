@@ -1,8 +1,20 @@
 <<<<<<< HEAD
 # Template file for 'ncurses'
 pkgname=ncurses
+<<<<<<< HEAD
 version=6.5
 revision=2
+=======
+version=5.9
+revision=13
+short_desc="A System V Release 4.0 curses emulation library"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnu.org/software/ncurses/"
+license="MIT"
+distfiles="http://ftp.gnu.org/pub/gnu/ncurses/$pkgname-$version.tar.gz"
+checksum=9046298fb440324c9d4135ecea7879ffed8546dd1b58e59430ea07a4633f563b
+
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 bootstrap=yes
 configure_args="--enable-big-core"
 short_desc="System V Release 4.0 curses emulation library"

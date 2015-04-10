@@ -16,9 +16,17 @@ makedepends="libxfce4ui-devel xfce4-panel-devel exo-devel libsoup-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="desktop-file-utils hicolor-icon-theme"
 short_desc="Plugin that makes screenshots for the Xfce panel"
+<<<<<<< HEAD
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
 license="GPL-2.0-or-later"
 homepage="https://goodies.xfce.org/projects/applications/xfce4-screenshooter"
 changelog="https://gitlab.xfce.org/apps/xfce4-screenshooter/-/raw/master/NEWS"
 distfiles="https://archive.xfce.org/src/apps/xfce4-screenshooter/${version%.*}/xfce4-screenshooter-${version}.tar.xz"
 checksum=6ae5bc4823d43e770b3a11700d048d56bdcaafdef37de7deacb8970b55fc1565
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://goodies.xfce.org/projects/applications/xfce4-screenshooter"
+license="GPL-2"
+distfiles="http://archive.xfce.org/src/apps/$pkgname/${version%.*}/$pkgname-$version.tar.bz2"
+checksum=9dce2ddfaa87f703e870e29bae13f3fc82a1b3f06b44f8386640e45a135f5f69
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

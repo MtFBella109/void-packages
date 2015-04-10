@@ -4,10 +4,15 @@ version=0.651
 revision=1
 build_style="gnu-configure"
 hostmakedepends="perl automake libtool"
+<<<<<<< HEAD
 makedepends="zlib-devel bzip2-devel lzo-devel liblz4-devel"
 short_desc="Multi-threaded compression using rzip/lzma, lzo, and zpaq"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+makedepends="zlib-devel bzip2-devel lzo-devel"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://lrzip.kolivas.org/"
 distfiles="https://github.com/ckolivas/lrzip/archive/v${version}.tar.gz"
 checksum=f4c84de778a059123040681fd47c17565fcc4fec0ccc68fcf32d97fad16cd892

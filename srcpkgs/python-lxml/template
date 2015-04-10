@@ -1,0 +1,25 @@
+# Template file for 'python-lxml'
+pkgname=python-lxml
+version=3.4.2
+revision=1
+wrksrc="lxml-${version}"
+build_style=python-module
+python_versions="2.7 3.4"
+hostmakedepends="python-setuptools python3.4-setuptools libxslt-devel"
+makedepends="python-devel python3.4-devel libxslt-devel"
+pycompile_module="lxml"
+short_desc="Python2 binding for the libxml2 and libxslt libraries"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://lxml.de/"
+license="BSD, ElementTree, GPL-2, ZPL"
+distfiles="${PYPI_SITE}/l/lxml/lxml-${version}.tar.gz"
+checksum=c7d5990298af6ffb00312973a25f0cc917a6368126dd40eaab41d78d3e1ea25d
+
+python3.4-lxml_package() {
+	pycompile_version="3.4"
+	pycompile_module="lxml"
+	short_desc="${short_desc/Python2/Python3.4}"
+	pkg_install() {
+		vmove usr/lib/python3.4
+	}
+}

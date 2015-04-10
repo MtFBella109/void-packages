@@ -6,12 +6,20 @@ build_style=gnu-configure
 configure_args="--disable-static"
 makedepends="zlib-devel libuuid-devel"
 short_desc="Open source search engine"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://www.xapian.org/"
 changelog="https://xapian.org/docs/xapian-core-${version}/NEWS"
 distfiles="https://oligarchy.co.uk/xapian/${version}/xapian-core-${version}.tar.xz"
 checksum=eda5ae6dcf6b0553a8676af64b1fd304e998cd20f779031ccaaf7ab9a373531a
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.xapian.org/"
+license="GPL-2"
+distfiles="http://oligarchy.co.uk/xapian/${version}/${pkgname}-${version}.tar.xz"
+checksum=4a78260388ff1b042f0ab5d18afdd524a530ae609690d0339990ddc147a54785
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 # xapian-config needs the .la
 keep_libtool_archives=yes

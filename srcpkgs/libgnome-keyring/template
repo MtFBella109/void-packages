@@ -15,7 +15,7 @@ hostmakedepends="pkg-config intltool gobject-introspection"
 makedepends="dbus-devel libglib-devel libgcrypt-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="GNOME keyring client library"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.gnome.org"
 license="GPL-2, LGPL-2.1"
 checksum=e74a3e4521767fe5f05cc97cda8a355239567d9763ec628280ede8c2a4a379e8

@@ -9,7 +9,7 @@ makedepends="MesaLib-devel"
 <<<<<<< HEAD
 =======
 replaces="libGLU<9.0"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="LGPL-2.1"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Mesa OpenGL utility library (GLU)"

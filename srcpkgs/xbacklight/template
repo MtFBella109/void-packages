@@ -9,6 +9,7 @@ makedepends="libX11-devel libXrandr-devel xcb-util-devel"
 short_desc="Adjust backlight brightness using RandR extension"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org"
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.xz"
 checksum=d4c30b0e6f18c82f387585a737ee3b72d468c927892b08a898c41bc12248e8ee
@@ -20,6 +21,9 @@ post_install() {
 # Template build file for 'xbacklight'.
 pkgname=xbacklight
 version=1.1.1
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
 <<<<<<< HEAD
 build_style=gnu_configure

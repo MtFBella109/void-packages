@@ -7,12 +7,20 @@ build_style=gnu-configure
 configure_args="--enable-networkmanager=no --enable-conic=no"
 makedepends="automake gtk-doc pkg-config intltool dbus-glib-devel libxml2-devel GConf-devel libxslt gtk+-devel libsoup-gnome-devel"
 short_desc="The Geoinformation Service"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=0f533f177ae9aa35e807a01c754840f66df9579f5524552f14f2b5ba670a4696
 long_desc="
  Geoclue is a modular geoinformation service built on top of the D-Bus
  messaging system. The goal of the Geoclue project is to make creating
  location-aware applications as simple as possible."
+=======
+homepage="http://www.freedesktop.org/wiki/Software/GeoClue"
+license="LGPL-2.1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://freedesktop.org/~hadess/$pkgname-$version.tar.gz"
+checksum=fe396c91cb52de4219281f4d9223156338fc03670d34700281e86d1399b80a72
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 subpackages="$pkgname-devel"
 

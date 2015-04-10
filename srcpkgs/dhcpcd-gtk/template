@@ -12,6 +12,7 @@ short_desc="GTK+ monitor and configuration GUI for dhcpcd"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
 homepage="http://roy.marples.name/projects/dhcpcd-ui"
+<<<<<<< HEAD
 distfiles="http://roy.marples.name/downloads/dhcpcd/dhcpcd-ui-$version.tar.xz"
 checksum=4170a07b8bbba65b30f8da8a15a4d776cbf17d030b666516821d450f594a9d6c
 
@@ -26,6 +27,12 @@ pre_install() {
 post_install() {
 	vlicense LICENSE
 }
+=======
+license="BSD"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://roy.marples.name/downloads/dhcpcd/dhcpcd-ui-$version.tar.bz2"
+checksum=19f02d4428773d37fc6dcd28ddc685c83fa0b15ed693c26276f2e1d8d4fda883
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 dhcpcd-icons_package() {
 	short_desc+=" - icon set"

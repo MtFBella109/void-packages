@@ -16,7 +16,12 @@ hostmakedepends="automake libtool gettext-devel pkg-config python-devel"
 makedepends="zlib-devel ncurses-devel readline-devel liblzma-devel python-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Library providing XML and HTML support"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.xmlsoft.org/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://gitlab.gnome.org/GNOME/libxml2"
 changelog="https://gitlab.gnome.org/GNOME/libxml2/-/raw/master/NEWS"

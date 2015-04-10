@@ -1,5 +1,6 @@
 # Template file for 'hg-git'
 pkgname=hg-git
+<<<<<<< HEAD
 version=1.1.0
 revision=2
 build_style=python3-pep517
@@ -18,3 +19,20 @@ checksum=6ed11a9862ea082e4f4628311db7b8f7f6e724d5469ba0b37fce7625a01d077f
 do_check() {
 	python3 tests/run-tests.py --with-hg=/usr/bin/hg
 }
+=======
+version=0.7.0
+revision=1
+wrksrc="durin42-hg-git-fc63d0e2653d"
+noarch="yes"
+build_style=python-module
+hostmakedepends="python"
+makedepends="python python-dulwich"
+depends="${makedepends}"
+pycompile_module="hggit"
+short_desc="Hg-Git plugin for Mercurial, adding the ability to push and pull to/from Git" 
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="https://bitbucket.org/durin42/hg-git/"
+distfiles="https://bitbucket.org/durin42/hg-git/get/${version}.tar.bz2"
+checksum=1542f839bdf4f2850d669dc02665bf80f7fb55ea548b14d6c1bd485b942be602
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

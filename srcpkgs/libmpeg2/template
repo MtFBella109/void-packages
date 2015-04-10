@@ -26,7 +26,7 @@ homepage="http://libmpeg2.sourceforge.net/"
 distfiles="http://deb.debian.org/debian/pool/main/m/mpeg2dec/mpeg2dec_${version}.orig.tar.gz"
 =======
 license="GPL-2"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 distfiles="http://libmpeg2.sourceforge.net/files/$pkgname-$version.tar.gz"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 checksum=dee22e893cb5fc2b2b6ebd60b88478ab8556cb3b93f9a0d7ce8f3b61851871d4

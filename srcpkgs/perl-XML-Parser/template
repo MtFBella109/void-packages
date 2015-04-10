@@ -13,9 +13,15 @@ makedepends="${hostmakedepends}"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="perl>=5.20"
 short_desc="Perl extension interface to James Clark's XML parser, expat"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/XML-Parser"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Artistic, GPL-1"
+homepage="http://search.cpan.org/dist/${pkgname/perl-/}/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${CPAN_SITE}/XML/${pkgname/perl-/}-${version}.tar.gz"
 checksum=d331332491c51cccfb4cb94ffc44f9cd73378e618498d4a37df9e043661c515d
 

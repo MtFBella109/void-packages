@@ -17,7 +17,11 @@ hostmakedepends="pkg-config yasm"
 makedepends="db-devel protobuf-devel libressl-devel boost-devel miniupnpc-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Bitcoin is a peer-to-peer network based digital currency"
+<<<<<<< HEAD
 maintainer="Daniel A. Maierhofer <git@damadmai.at>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://bitcoincore.org/"
 distfiles="https://bitcoincore.org/bin/bitcoin-core-${version}/bitcoin-${version}.tar.gz

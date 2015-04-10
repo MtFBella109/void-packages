@@ -11,7 +11,7 @@ makedepends="libglib-devel libffi-devel lua-devel
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
  gobject-introspection gir-freedesktop"
 short_desc="Lua binadings for gnome/gobject using gobject-introspection library"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="MIT"
 homepage="https://github.com/pavouk/lgi"
 distfiles="https://github.com/downloads/pavouk/lgi/lgi-${version}.tar.gz"

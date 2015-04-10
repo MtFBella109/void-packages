@@ -22,8 +22,13 @@ makedepends="perl libjpeg-turbo-devel libpng-devel tiff-devel
   ghostscript-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="ghostscript"
+<<<<<<< HEAD
 short_desc="GraphicsMagick Image Processing System"
 maintainer="Gonzalo Tornaría <tornaria@cmat.edu.uy>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.graphicsmagick.org/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="http://www.graphicsmagick.org/"
 changelog="https://sourceforge.net/p/graphicsmagick/code/ci/default/tree/NEWS.txt?format=raw"

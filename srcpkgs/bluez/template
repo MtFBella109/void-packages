@@ -29,8 +29,12 @@ makedepends="libglib-devel libudev-devel dbus-devel
 conf_files="/etc/bluetooth/main.conf"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Bluetooth tools and daemons"
+<<<<<<< HEAD
 maintainer="Érico Nogueira <ericonr@disroot.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.bluez.org/"
 changelog="https://git.kernel.org/pub/scm/bluetooth/bluez.git/plain/ChangeLog"
 distfiles="${KERNEL_SITE}/bluetooth/bluez-${version}.tar.xz"

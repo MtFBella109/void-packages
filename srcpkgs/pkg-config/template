@@ -6,6 +6,7 @@ revision=3
 build_style=gnu-configure
 configure_args="--with-internal-glib --disable-host-tool"
 short_desc="System for managing library compile/link flags"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="http://pkgconfig.freedesktop.org/"
@@ -31,6 +32,11 @@ post_install() {
 # Template build file for 'pkg-config'
 pkgname=pkg-config
 version=0.23
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://pkgconfig.freedesktop.org/wiki/"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://pkgconfig.freedesktop.org/releases/$pkgname-$version.tar.gz"
 <<<<<<< HEAD
 build_style=gnu_configure

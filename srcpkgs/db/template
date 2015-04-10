@@ -8,9 +8,14 @@ build_style=gnu-configure
 configure_script="../dist/configure"
 configure_args="--enable-compat185 --enable-cxx --enable-static --enable-dbm"
 make_build_args="LIBSO_LIBS=-lpthread"
+<<<<<<< HEAD
 short_desc="Berkeley DB embedded database system"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-4-Clause"
+=======
+short_desc="The Berkeley DB embedded database system"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.oracle.com/technetwork/products/berkeleydb/overview/index.html"
 distfiles="http://download.oracle.com/berkeley-db/db-${version}.tar.gz"
 checksum=e0a992d740709892e81f9d93f06daf305cf73fb81b545afe72478043172c3628

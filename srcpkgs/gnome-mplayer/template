@@ -16,6 +16,7 @@ makedepends="dbus-glib-devel libnotify-devel gtk+3-devel gmtk-devel
  hicolor-icon-theme mplayer"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 depends="mplayer desktop-file-utils hicolor-icon-theme"
+<<<<<<< HEAD
 short_desc="Simple MPlayer GUI for GNOME"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
@@ -29,3 +30,11 @@ post_patch() {
 	vsed -i -e 's/DATADIRNAME=lib/DATADIRNAME=share/' configure
 	vsed -i '/^localedir =/s/libdir/datadir/' po/Makefile.in.in
 }
+=======
+short_desc="A simple MPlayer GUI for GNOME"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://gnome-mplayer.googlecode.com/"
+distfiles="https://gnome-mplayer.googlecode.com/svn/packages/gnome-mplayer-${version}.tar.gz"
+checksum=e43ca4929e7dc591256a16a793c7cce2678e07e948ee8ef11ed46cce2b3d81db
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

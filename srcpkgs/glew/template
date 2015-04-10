@@ -16,8 +16,12 @@ revision=3
 distfiles="${SOURCEFORGE_SITE}/glew/glew-${version}.tgz"
 makedepends="pkg-config libXmu-devel libXi-devel MesaLib-devel libXext-devel libX11-devel"
 short_desc="The OpenGL Extension Wrangler Library"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://glew.sourceforge.net"
 distfiles="${SOURCEFORGE_SITE}/glew/glew-${version}.tgz"
 checksum=d4fc82893cfb00109578d0a1a2337fb8ca335b3ceccf97b97e5cc7f08e4353e1

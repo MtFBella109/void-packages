@@ -40,6 +40,7 @@ depends="mysql-client"
 makedepends="libstdc++-devel zlib-devel tcp_wrappers-devel ncurses-devel openssl-devel readline-devel"
 fulldepends="perl>=0 procps"
 short_desc="The world's most popular open source database"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=84370fffc4fe277645fb3a5040d153ff567576b664f0663452be077826b7ab1f
 long_desc="
@@ -50,6 +51,13 @@ long_desc="
  companies and forward-thinking corporate IT Managers because it eliminates
  the major problems associated with downtime, maintenance and administration
  for modern, online applications."
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="https://www.mysql.com/products/community/"
+license="GPL-2"
+distfiles="https://downloads.skysql.com/archives/mysql-${version%.*}/mysql-${version}.tar.gz"
+checksum=37e27305b67d76883c5902dce59c89d596beee9dca7dbadd4a2e117f8101dfeb
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 # Fix build with gcc-4.4.
 CFLAGS="-fPIC -fno-strict-aliasing"

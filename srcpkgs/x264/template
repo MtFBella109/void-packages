@@ -11,6 +11,14 @@ _snap_date=20120126
 _snap_rev=2245
 version="${_snap_date}.${_snap_rev}"
 wrksrc="x264-snapshot-${_snap_date}-${_snap_rev}-stable"
+<<<<<<< HEAD
+=======
+hostmakedepends="yasm perl"
+short_desc="Free library for encoding H264/AVC video streams"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.videolan.org/developers/x264.html"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-${_snap_date}-${_snap_rev}-stable.tar.bz2"
 makedepends="yasm"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)

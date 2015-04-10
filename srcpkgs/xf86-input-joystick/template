@@ -12,10 +12,18 @@ makedepends="xorg-server-devel"
 depends="virtual?xserver-abi-input-21_1"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Joystick Input driver for Xorg"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=7224e93a8560362d454a104e8bb481213dcb559b41516c7b883c0881e25252bb
 long_desc="
  This is the Joystick Input driver for the Xorg X11 server."
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://xorg.freedesktop.org/"
+license="MIT"
+distfiles="${XORG_SITE}/driver/${pkgname}-${version}.tar.bz2"
+checksum=ee3b86ed72f3b5befdeed39909320f4b6970401cfbcc2cc0dfd8fb1c1576150d
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vinstall ${FILESDIR}/50-joystick.conf 644 etc/X11/xorg.conf.d

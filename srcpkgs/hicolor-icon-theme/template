@@ -18,6 +18,7 @@ version=0.11
 distfiles="http://icon-theme.freedesktop.org/releases/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 short_desc="Standard icon theme called hicolor"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=44eb1f158a9b2a92cd626541a24c44387162b3d792e4b238c84e6f3d8ed1dd9a
 long_desc="
@@ -27,3 +28,10 @@ noarch=yes
 gtk_iconcache_dirs="/usr/share/icons/hicolor"
 triggers="gtk-icon-cache"
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
+=======
+homepage="http://icon-theme.freedesktop.org/wiki/HicolorTheme"
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://icon-theme.freedesktop.org/releases/$pkgname-$version.tar.xz"
+checksum=9cc45ac3318c31212ea2d8cb99e64020732393ee7630fa6c1810af5f987033cc
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

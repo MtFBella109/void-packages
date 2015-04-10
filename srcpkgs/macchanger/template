@@ -8,8 +8,13 @@ build_style=gnu-configure
 configure_script="./autogen.sh"
 hostmakedepends="automake texinfo"
 short_desc="Small utility to change your NIC's MAC address"
+<<<<<<< HEAD
 maintainer="Duncaen <duncaen@voidlinux.org>"
 license="GPL-3.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnu.org/software/macchanger"
 distfiles="https://github.com/alobbs/macchanger/archive/${version}.tar.gz
  ${DEBIAN_SITE}/main/m/macchanger/macchanger_1.7.0-5.4.debian.tar.xz"

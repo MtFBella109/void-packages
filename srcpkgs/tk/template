@@ -9,9 +9,14 @@ configure_args="--enable-threads --without-tzdata --enable-man-symlinks
  tk_cv_strtod_unbroken=ok LIBS=-ltcl8.6"
 hostmakedepends="pkg-config"
 makedepends="zlib-devel tcl-devel libXext-devel libXScrnSaver-devel libXft-devel"
+<<<<<<< HEAD
 short_desc="TK graphical user interface toolkit for TCL"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="TCL"
+=======
+short_desc="The TK graphical user interface toolkit for TCL"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.tcl.tk"
 distfiles="${SOURCEFORGE_SITE}/tcl/tk${version}-src.tar.gz"
 checksum=8ffdb720f47a6ca6107eac2dd877e30b0ef7fac14f3a84ebbd0b3612cee41a94

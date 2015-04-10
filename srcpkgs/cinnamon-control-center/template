@@ -1,5 +1,6 @@
 # Template file for 'cinnamon-control-center'
 pkgname=cinnamon-control-center
+<<<<<<< HEAD
 version=6.4.2
 revision=1
 build_style=meson
@@ -17,6 +18,27 @@ short_desc="Cinnamon Control Center"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.0-or-later"
 homepage="https://github.com/linuxmint/cinnamon-control-center"
+=======
+version=2.4.2
+revision=2
+short_desc="The Cinnamon Control Center"
+build_options="systemd"
+build_style=gnu-configure
+configure_args=" --disable-static --disable-update-mimedb $(vopt_enable systemd)"
+hostmakedepends="automake libtool gnome-common pkg-config gobject-introspection
+ gettext-devel glib-devel intltool xmlto docbook-xsl"
+makedepends="dbus-glib-devel cinnamon-menus-devel libgnomekbd-devel
+ cinnamon-desktop-devel cinnamon-settings-daemon-devel libXxf86misc-devel
+ network-manager-applet-devel libSM-devel libnotify-devel upower0-devel
+ polkit-devel colord-devel ibus-devel pulseaudio-devel libwacom-devel tzdata
+ libcanberra-devel cups-devel ModemManager-devel network-manager-applet-devel
+ $(vopt_if systemd systemd-devel)"
+depends="lib${sourcepkg}>=${version}_${revision} cinnamon-settings-daemon>=2.4
+ cinnamon-translations>=2.4 desktop-file-utils hicolor-icon-theme"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://cinnamon.linuxmint.com/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="https://github.com/linuxmint/${pkgname}/archive/${version}.tar.gz"
 checksum=2dfeb547d22c5ce3663120830dd96cccd3673c208f62c498b12346a485a57c1e
 # requires X and wacom devices?

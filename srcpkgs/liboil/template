@@ -8,9 +8,15 @@ build_style=gnu-configure
 <<<<<<< HEAD
 hostmakedepends="pkg-config"
 short_desc="Library of Optimized Inner Loops, CPU optimized functions"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
 homepage="https://liboil.freedesktop.org/wiki/"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="${XORG_HOME}"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://liboil.freedesktop.org/download/$pkgname-$version.tar.gz"
 checksum=105f02079b0b50034c759db34b473ecb5704ffa20a5486b60a8b7698128bfc69
 

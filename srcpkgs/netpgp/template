@@ -13,7 +13,7 @@ license="BSD-3-Clause"
 =======
 makedepends="zlib-devel bzip2-devel libressl-devel"
 short_desc="PGP signing, verification, encryption and decryption program"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="3-clause-BSD"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://www.netbsd.org"

@@ -3,7 +3,11 @@ pkgname=libapp
 version=20110513
 revision=3
 short_desc="Utilities for repetitive tasks in app development"
+<<<<<<< HEAD
 maintainer="pancake <pancake@nopcode.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="LGPL-3"
 homepage="https://github.com/drotiro/libapp"
 distfiles="${homepage}/archive/${version}.tar.gz"

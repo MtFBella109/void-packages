@@ -27,12 +27,20 @@ makedepends="zlib-devel bzip2-devel liblzma-devel
  $(vopt_if lzo lzo-devel) $(vopt_if ssl libressl-devel)"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Library to read/write several different streaming archive formats"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
 homepage="https://www.libarchive.org/"
 changelog="https://github.com/libarchive/libarchive/releases"
 distfiles="https://github.com/libarchive/libarchive/releases/download/v${version}/libarchive-${version}.tar.xz"
 checksum=db0dee91561cbd957689036a3a71281efefd131d35d1d98ebbc32720e4da58e2
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.libarchive.org/"
+license="BSD"
+distfiles="http://www.libarchive.org/downloads/libarchive-${version}.tar.gz"
+checksum=eb87eacd8fe49e8d90c8fdc189813023ccc319c5e752b01fb6ad0cc7b2c53d5e
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 build_options="acl expat lzo lz4 ssl zstd"
 build_options_default="acl ssl lz4 zstd"

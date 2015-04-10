@@ -7,12 +7,20 @@ revision=3
 # at v1.79.2, docbook-xsl was renamed to docbook-xsl-nons
 depends="xmlcatmgr docbook-xml>=4.2"
 short_desc="Docbook XSL modular stylesheet"
+<<<<<<< HEAD
 maintainer="Cameron Nemo <cam@nohom.org>"
 license="DocBook-XML"
 homepage="https://docbook.org/"
 distfiles="https://github.com/docbook/xslt10-stylesheets/releases/download/release/${version}/docbook-xsl-nons-${version}.tar.bz2"
 checksum=ee8b9eca0b7a8f89075832a2da7534bce8c5478fc8fc2676f512d5d87d832102
 xml_entries="nextCatalog /usr/share/xsl/docbook/catalog.xml --"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://docbook.sourceforge.net/"
+license="MIT"
+distfiles="${SOURCEFORGE_SITE}/docbook/$pkgname-$version.tar.bz2"
+checksum=c98f7296ab5c8ccd2e0bc07634976a37f50847df2d8a59bdb1e157664700b467
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_install() {
 	local xslmods="assembly common eclipse epub epub3 fo highlighting html \

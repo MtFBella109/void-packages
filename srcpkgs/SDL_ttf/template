@@ -11,9 +11,15 @@ makedepends="freetype-devel sdl12-compat-devel libSM-devel"
 makedepends="pkg-config freetype-devel SDL-devel MesaLib-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Use TrueType fonts in your SDL applications"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Zlib"
 homepage="http://www.libsdl.org/projects/SDL_ttf"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="http://www.libsdl.org/projects/${pkgname}"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${homepage}/release/${pkgname}-${version}.tar.gz"
 checksum=724cd895ecf4da319a3ef164892b72078bd92632a5d812111261cde248ebcdb7
 

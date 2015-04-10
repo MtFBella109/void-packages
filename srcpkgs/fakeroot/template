@@ -58,10 +58,18 @@ version=1.14.3
 distfiles="${DEBIAN_SITE}/main/f/fakeroot/${pkgname}_${version}.tar.gz"
 build_style=gnu_configure
 short_desc="Gives a fake root environment"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=8aab001d327dc32f311763b65f275587a1456b64da3245998e527c7008ff7dab
 long_desc="
  This package is intended to enable something like:
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://packages.debian.org/fakeroot"
+license="GPL-3"
+distfiles="${DEBIAN_SITE}/main/f/fakeroot/${pkgname}_${version}.orig.tar.bz2"
+checksum=7c0a164d19db3efa9e802e0fc7cdfeff70ec6d26cdbdc4338c9c2823c5ea230c
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
   dpkg-buildpackage -rfakeroot
 

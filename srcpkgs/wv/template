@@ -19,7 +19,13 @@ short_desc="wv is a library which allows access to Microsoft Word files."
 short_desc="A library which allows access to Microsoft Word files"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 homepage="http://wvware.sourceforge.net/"
+<<<<<<< HEAD
 distfiles="http://www.abisource.com/downloads/wv/${version}/wv-${version}.tar.gz"
+=======
+license="GPL-3"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://www.abisource.com/downloads/${pkgname}/${version}/${pkgname}-${version}.tar.gz"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=4c730d3b325c0785450dd3a043eeb53e1518598c4f41f155558385dd2635c19d
 
 libwv_package() {

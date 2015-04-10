@@ -5,9 +5,17 @@ revision=1
 build_style=cmake
 hostmakedepends="python3"
 short_desc="Source Code Beautifier for multiple languages"
+<<<<<<< HEAD
 maintainer="Saksham <voidisnull@duck.com>"
 license="GPL-2.0-or-later"
 homepage="https://uncrustify.sourceforge.net/"
 changelog="https://raw.githubusercontent.com/uncrustify/uncrustify/master/ChangeLog"
 distfiles="https://github.com/uncrustify/uncrustify/archive/refs/tags/uncrustify-${version}.tar.gz"
 checksum=484623dc16b92206adc6ac0770077c6c67c6e441102148c2a121a19549330ff9
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://uncrustify.sourceforge.net/"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
+checksum=1df0e5a2716e256f0a4993db12f23d10195b3030326fdf2e07f8e6421e172df9
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

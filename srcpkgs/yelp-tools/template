@@ -7,8 +7,13 @@ hostmakedepends="pkg-config itstool libxslt python3-lxml"
 makedepends="yelp-xsl"
 depends="itstool libxslt yelp-xsl python3-lxml"
 short_desc="Tools for creating Yelp documentation"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnome.org"
 changelog="https://gitlab.gnome.org/GNOME/yelp-tools/-/raw/master/NEWS"
 distfiles="${GNOME_SITE}/yelp-tools/${version%.*}/yelp-tools-${version}.tar.xz"

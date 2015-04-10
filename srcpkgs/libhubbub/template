@@ -10,6 +10,7 @@ hostmakedepends="perl pkg-config netsurf-buildsystem"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 makedepends="libxslt-devel json-c-devel libparserutils-devel"
 short_desc="HTML5 compliant parsing library, written in C"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
 homepage="https://www.netsurf-browser.org"
@@ -30,6 +31,9 @@ makedepends="libxslt-devel json-c-devel libparserutils-devel"
 short_desc="HTML5 compliant parsing library, written in C"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 maintainer="davehome <davehome@redthumb.info.tm>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.netsurf-browser.org"
 license="MIT"
 distfiles="${homepage}/projects/releases/hubbub-${version}-src.tar.gz"

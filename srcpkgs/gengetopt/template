@@ -5,9 +5,15 @@ revision=1
 build_style=gnu-configure
 hostmakedepends="flex texinfo"
 makedepends="libfl-devel"
+<<<<<<< HEAD
 short_desc="Tool to write cli option parsing code for C programs"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
+=======
+short_desc="A tool to write cli option parsing code for C programs"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnu.org/software/${pkgname}"
 distfiles="${GNU_SITE}/${pkgname}/${pkgname}-${version}.tar.xz"
 checksum=b941aec9011864978dd7fdeb052b1943535824169d2aa2b0e7eae9ab807584ac

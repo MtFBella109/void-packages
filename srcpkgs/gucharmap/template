@@ -22,6 +22,7 @@ depends="hicolor-icon-theme desktop-file-utils"
 makedepends="which pkg-config intltool gnome-doc-utils gobject-introspection gtk+3-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="GNOME Unicode Charmap"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later, GFDL-1.3-only, Unicode-DFS-2015"
 homepage="https://wiki.gnome.org/Apps/Gucharmap"
@@ -40,6 +41,13 @@ checksum="d687d3a3d4990ea7aff4066e17768ec9fefe7b3129b98090c750b8d7074b4764
  ff58e5823bd095166564a006e47d111130813dcf8bf234ef79fa51a870edb48f
  b8f000df69de7828d21326a2ffea462b04bc7560022989f7cc704f10521ef3e0"
 skip_extraction="Blocks.txt DerivedAge.txt NamesList.txt Scripts.txt UnicodeData.txt Unihan.zip"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=fdc3e1889c48c0835d349e2910000f62946ee9f2735d7f64d6a3ad5869c87872
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 # Package build options
 build_options="gir gtk_doc"

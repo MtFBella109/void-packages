@@ -11,6 +11,7 @@ configure_args="
 hostmakedepends="ntp pkg-config"
 makedepends="eudev-libudev-devel"
 short_desc="RFC2131 compliant DHCP client"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
 homepage="https://roy.marples.name/projects/dhcpcd"
@@ -25,6 +26,13 @@ _dhcpcd_homedir="/var/db/dhcpcd"
 
 build_options="privsep"
 desc_option_privsep="Enable privilege separation mode for the daemon"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="2-clause-BSD"
+homepage="http://roy.marples.name/projects/dhcpcd"
+distfiles="http://roy.marples.name/downloads/dhcpcd/dhcpcd-$version.tar.bz2"
+checksum=27b60cbf726a8319e6f1e7691132082c9cdac473317ea47cb093d0dd3d32af82
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vsv dhcpcd

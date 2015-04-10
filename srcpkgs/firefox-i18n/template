@@ -4,9 +4,14 @@ version=145.0
 revision=1
 metapackage=yes
 short_desc="Firefox language packs"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MPL-2.0"
 homepage="https://www.mozilla.org/firefox/"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="MPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 create_wrksrc=yes
 

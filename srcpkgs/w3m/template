@@ -19,8 +19,12 @@ configure_args="
 hostmakedepends="pkg-config gc-devel perl"
 makedepends="zlib-devel ncurses-devel gc-devel libressl-devel imlib2-devel libX11-devel"
 short_desc="Text-based Web browser, as well as pager"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 # https://github.com/tats/w3m/issues/304
 homepage="https://sr.ht/~rkta/w3m/"

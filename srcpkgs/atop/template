@@ -3,6 +3,7 @@ pkgname=atop
 version=2.12.0
 revision=1
 build_style=gnu-makefile
+<<<<<<< HEAD
 make_install_target="sysvinstall"
 make_use_env=true
 hostmakedepends="pkg-config"
@@ -15,6 +16,16 @@ distfiles="https://www.atoptool.nl/download/atop-${version}.tar.gz"
 checksum=0d09ecc90c14e6ef41c22e3c57c142c3e4fb9cf3c94379077a33c961d5343086
 
 make_dirs="/var/log/atop 755 root root"
+=======
+build_options="systemd"
+makedepends="ncurses-devel zlib-devel"
+short_desc="A system and process level monitor"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://www.atoptool.nl/"
+distfiles="http://www.atoptool.nl/download/atop-${version}-1.tar.gz"
+checksum=39a2d4febc338dd4147904b1496d1aa9513da0d22ad0602b66023452bdc7989f
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_install() {
 	vsed -e 's,sbin,bin,g' \

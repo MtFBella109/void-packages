@@ -15,8 +15,12 @@ homepage="http://libcddb.sourceforge.net/"
 <<<<<<< HEAD
 =======
 license="LGPL-2.1"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
 checksum=68e9b53918b9bea727fb2db78936526671c039dcd7396cb82ecd6854e866048c
 

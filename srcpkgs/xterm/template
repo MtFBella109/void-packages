@@ -17,6 +17,7 @@ hostmakedepends="pkg-config"
 makedepends="libXaw-devel libXft-devel libutempter-devel libxkbfile-devel
  ncurses-devel"
 short_desc="X Terminal Emulator"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="MIT, X11"
 homepage="https://invisible-island.net/xterm/"
@@ -25,6 +26,13 @@ distfiles="https://invisible-mirror.net/archives/xterm/xterm-${version}.tgz"
 checksum=1331b0df5919cb243ffe326dc6ff10a291e683a262f70cdf964a664be733ad83
 
 CFLAGS="-D_DEFAULT_SOURCE -D_XOPEN_SOURCE=700"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://invisible-island.net/xterm/"
+license="MIT"
+distfiles="ftp://invisible-island.net/xterm/$pkgname-$version.tgz"
+checksum=d2e5b0dbe47568f9e76123a4f0aeaafd586a4ce0c1beb63a476b07cd718e356d
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	for f in {u,}xterm.desktop; do

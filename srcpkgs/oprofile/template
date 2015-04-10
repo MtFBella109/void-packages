@@ -12,7 +12,7 @@ system_accounts="_oprofile"
 configure_args="--with-kernel-support --with-x --enable-gui=qt4"
 makedepends="qt-devel zlib-devel popt-devel binutils-devel"
 short_desc="Transparent low-overhead system-wide profiler for Linux"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-2"
 checksum=cb5b507d5dea058d223fcad3cec8ff9638a4163106afd66d176798bbd973d527
 long_desc="

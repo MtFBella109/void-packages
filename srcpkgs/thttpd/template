@@ -4,8 +4,13 @@ version=2.29
 revision=3
 build_style=gnu-configure
 short_desc="Tiny/turbo/throttling HTTP server"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.acme.com/software/thttpd/"
 distfiles="http://www.acme.com/software/thttpd/thttpd-${version}.tar.gz"
 checksum=99c09f47da326b1e7b5295c45549d2b65534dce27c44812cf7eef1441681a397

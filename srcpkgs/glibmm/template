@@ -21,12 +21,24 @@ makedepends="libglib-devel libsigc++-devel"
 depends="glib>=2.42"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="C++ bindings for GLib"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://www.gtkmm.org"
 changelog="https://gitlab.gnome.org/GNOME/glibmm/-/raw/master/NEWS"
 distfiles="${GNOME_SITE}/glibmm/${version%.*}/glibmm-${version}.tar.xz"
 checksum=5358742598181e5351d7bf8da072bf93e6dd5f178d27640d4e462bc8f14e152f
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://gtkmm.sourceforge.net/"
+license="LGPL-2.1"
+distfiles="${GNOME_SITE}/glibmm/${version%.*}/glibmm-$version.tar.xz"
+checksum=985083d97378d234da27a7243587cc0d186897a4b2d3c1286f794089be1a3397
+
+pre_configure() {
+	libtoolize -f
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 glibmm-devel_package() {

@@ -14,8 +14,12 @@ configure_args="--disable-static"
 hostmakedepends="pkg-config automake"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Client library for accessing NFS shares"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://github.com/sahlberg/libnfs"
 distfiles="https://github.com/sahlberg/libnfs/archive/${pkgname}-${version}.tar.gz"
 checksum=d945cb4f4c8f82ee1f3640893a168810f794a28e1010bb007ec5add345e9df3e

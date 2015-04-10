@@ -2,11 +2,23 @@
 pkgname=terminus-font
 version=4.49.1
 revision=1
+<<<<<<< HEAD
 build_style=gnu-configure
 configure_args="--x11dir=/usr/share/fonts/X11/misc
  --psfdir=/usr/share/kbd/consolefonts"
 make_install_target="install install-pcf-8bit install-otb"
 hostmakedepends="python3 bdftopcf font-util"
+=======
+short_desc="A clean, fixed width bitmap font"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://terminus-font.sourceforge.net/"
+license="OFL-1.1, GPL-2"
+distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"
+checksum=3108383986b365a4b9cc08c31a4195196f6de974d2735d77f6c6efa9feb1f5bf
+
+hostmakedepends="perl bdftopcf font-util"
+makedepends="font-util"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 depends="font-util"
 short_desc="Clean, fixed width bitmap font"
 maintainer="Orphaned <orphan@voidlinux.org>"

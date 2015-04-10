@@ -3,10 +3,17 @@ pkgname=xbps-triggers
 version=0.129
 revision=1
 bootstrap=yes
+<<<<<<< HEAD
 short_desc="XBPS triggers for Void Linux"
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="Public Domain"
 homepage="https://voidlinux.org"
+=======
+short_desc="The XBPS triggers for Void Linux"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.voidlinux.eu"
+license="Simplified BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_install() {
 	_triggersdir=usr/libexec/${pkgname}

@@ -1,11 +1,20 @@
 # Template file for 'polipo'
 pkgname=polipo
 version=1.1.1
+<<<<<<< HEAD
 revision=6
 hostmakedepends="texinfo"
 short_desc="Small and fast caching web proxy"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+=======
+revision=3
+build_options="systemd"
+replaces="runit-void<20141013_2"
+short_desc="A small and fast caching web proxy"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.pps.jussieu.fr/~jch/software/polipo/"
 distfiles="http://www.pps.univ-paris-diderot.fr/~jch/software/files/polipo/polipo-${version}.tar.gz"
 checksum=a259750793ab79c491d05fcee5a917faf7d9030fb5d15e05b3704e9c9e4ee015

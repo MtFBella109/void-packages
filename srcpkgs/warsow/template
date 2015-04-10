@@ -20,8 +20,13 @@ makedepends="libcurl-devel libvorbis-devel libtheora-devel
 # libopenal is dlopen(3)ed at runtime.
 depends="desktop-file-utils warsow-data>=2.1 libopenal"
 short_desc="Free online multiplayer competitive FPS based on the Qfusion engine"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.warsow.net/"
 distfiles="http://warsow.net/warsow_${version/./}_sdk.tar.gz"
 checksum=99c88bc08f5e6055d28534de6e84fc204026dda51dc31e22caca1977f199453a

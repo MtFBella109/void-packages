@@ -6,12 +6,20 @@ revision=1
 build_style=gnu-configure
 hostmakedepends="perl"
 short_desc="ASN.1 structure parser library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-only, LGPL-2.1-only"
 homepage="https://www.gnu.org/software/libtasn1/"
 changelog="https://gitlab.com/gnutls/libtasn1/-/raw/master/NEWS"
 distfiles="${GNU_SITE}/$pkgname/$pkgname-$version.tar.gz"
 checksum=92e0e3bd4c02d4aeee76036b2ddd83f0c732ba4cda5cb71d583272b23587a76c
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnu.org/software/libtasn1/"
+license="GPL-3, LGPL-2.1"
+distfiles="http://ftp.gnu.org/gnu/$pkgname/$pkgname-$version.tar.gz"
+checksum=f8349db1b4fe634105c77e11d26b2173e587827e86e1a489b5e38ffa822e0c5d
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libtasn1-devel_package() {
 	depends="${sourcepkg}-${version}_${revision}"

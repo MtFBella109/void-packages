@@ -6,12 +6,20 @@ build_style=meson
 build_helper=gir
 hostmakedepends="glib-devel pkg-config"
 makedepends="libglib-devel"
+<<<<<<< HEAD
 short_desc="Cinnamon menu specifications"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.0-or-later"
 homepage="https://github.com/linuxmint/cinnamon-menus"
 distfiles="https://github.com/linuxmint/cinnamon-menus/archive/${version}.tar.gz"
 checksum=9cad5ac61900492f66c91810fd13bed9dc37b49ec0b9bbc0bbe9ebf48ee45452
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://cinnamon.linuxmint.com/"
+distfiles="https://github.com/linuxmint/${pkgname}/archive/${version}.tar.gz"
+checksum=7ab04bb668c80c3a1acccaa07f1b5d22023f397841735f4c4243c10cda717e5c
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 cinnamon-menus-devel_package() {
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"

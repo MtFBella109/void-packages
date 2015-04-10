@@ -17,8 +17,12 @@ build_style=perl-module
 makedepends="perl-Fuse perl-IPC-Run lftp"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Filesystem with caching based on FUSE and LFTP"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://lftpfs.sourceforge.net/"
 <<<<<<< HEAD
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}-${version}.tar.gz"

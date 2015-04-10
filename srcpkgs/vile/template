@@ -7,6 +7,7 @@ configure_args="--disable-stripping"
 hostmakedepends="flex"
 makedepends="ncurses-devel"
 short_desc="Text editor which is extremely compatible with vi like emacs"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="https://invisible-island.net/vile/vile.html"
@@ -25,3 +26,10 @@ post_extract() {
 post_configure() {
 	vsed -e '/^BUILD_/d' -i makefile
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://invisible-island.net/vile/vile.html"
+distfiles="ftp://invisible-island.net/vile/current/vile-${version}.tgz"
+checksum=e16fe2adbcf142212ffe8bfcd57a3b161886b1f2f7e6c8a3f7607fbfa24b82b7
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

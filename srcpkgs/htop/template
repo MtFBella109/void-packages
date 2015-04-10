@@ -17,7 +17,7 @@ checksum=904f7d4580fc11cffc7e0f06895a4789e0c1c054435752c151e812fead9f6220
 configure_args="--enable-unicode --enable-cgroup --enable-taskstats"
 makedepends="bison python>=0"
 short_desc="An interactive process viewer"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-2"
 checksum=242879b86db4b97e1090e7cd391247268ccbe90834ff34b6e8242926c9664852
 long_desc="

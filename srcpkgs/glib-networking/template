@@ -39,6 +39,7 @@ makedepends="libglib-devel libproxy-devel libgpg-error-devel
 depends="ca-certificates gsettings-desktop-schemas"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Network-related giomodules for glib"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=39fe23e86a57bb7a8a67c65668394ad0fbe2d43960c1f9d68311d5d13ef1e5cf
 long_desc="
@@ -46,3 +47,10 @@ long_desc="
 
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnome.org"
+license="LGPL-2.1"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=c06bf76da3353695fcc791b7b02e5d60c01c379e554f7841dc6cbca32f65f3a0
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

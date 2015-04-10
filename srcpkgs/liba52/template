@@ -10,11 +10,19 @@ hostmakedepends="automake libtool"
 makedepends="automake"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Free ATSC A/52 stream decoder"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://git.adelielinux.org/adelie/a52dec"
 distfiles="https://distfiles.adelielinux.org/source/a52dec/a52dec-${version}.tar.gz"
 checksum=03c181ce9c3fe0d2f5130de18dab9bd8bc63c354071515aa56983c74a9cffcc9
+=======
+homepage="http://liba52.sourceforge.net/"
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://liba52.sourceforge.net/files/a52dec-$version.tar.gz"
+checksum=a21d724ab3b3933330194353687df82c475b5dfb997513eef4c25de6c865ec33
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 pre_configure() {

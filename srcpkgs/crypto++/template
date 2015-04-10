@@ -1,5 +1,6 @@
 # Template file for 'crypto++'
 pkgname=crypto++
+<<<<<<< HEAD
 reverts="820_2"
 version=8.3.0
 revision=1
@@ -9,6 +10,14 @@ make_install_target="install-lib"
 short_desc="Free C++ class library of cryptographic schemes"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSL-1.0"
+=======
+version=562
+revision=5
+create_wrksrc=yes
+hostmakedepends="unzip"
+short_desc="A free C++ class library of cryptographic schemes"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.cryptopp.com/"
 distfiles="https://github.com/weidai11/cryptopp/archive/CRYPTOPP_${version//./_}.tar.gz"
 checksum=63304c6f943f435a4e385273e15abb69cff3b85a44663150bf5a6069b84abd43

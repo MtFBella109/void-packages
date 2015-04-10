@@ -29,6 +29,7 @@ build_style=gnu-configure
 fulldepends="python>=0 libxslt docbook-xsl"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Text based document generation"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=ccb02db04e6e6eff2149435516e88557ca30c85bc4467420f40c895e25f17a20
 long_desc="
@@ -68,3 +69,10 @@ Add_dependency full docbook-xsl
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.methods.co.nz/asciidoc/"
+license="GPL-2"
+distfiles="${SOURCEFORGE_SITE}/$pkgname/$pkgname-$version.tar.gz"
+checksum=78db9d0567c8ab6570a6eff7ffdf84eadd91f2dfc0a92a2d0105d323cab4e1f0
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

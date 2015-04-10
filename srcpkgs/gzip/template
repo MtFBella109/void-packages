@@ -26,6 +26,7 @@ version=1.3.13
 distfiles="http://ftp.gnu.org/gnu/gzip/$pkgname-$version.tar.gz"
 build_style=gnu_configure
 short_desc="GNU compression utility (replacement for compress)"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=1d06ff9f5c523651bed3dcde6e6aa8118eee48b22534a157a2588705fa517ca3
 long_desc="
@@ -33,6 +34,13 @@ long_desc="
  'compress'. Its main advantages over compress are much better compression
  and freedom from patented algorithms. The GNU Project uses it as the
  standard compression program for its system."
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnu.org/software/gzip/"
+license="GPL-3"
+distfiles="http://ftp.gnu.org/gnu/gzip/$pkgname-$version.tar.gz"
+checksum=97eb83b763d9e5ad35f351fe5517e6b71521d7aac7acf3e3cacdb6b1496d8f7e
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 base_chroot=yes
 Add_dependency run glibc

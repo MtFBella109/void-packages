@@ -38,6 +38,15 @@ makedirs="
 	/etc/security/namespace.d 0755 root root"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 lib32disabled=yes
+<<<<<<< HEAD
+=======
+short_desc="A flexible mechanism for authenticating users"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.kernel.org/pub/linux/libs/pam/"
+license="GPL-2"
+distfiles="https://fedorahosted.org/releases/l/i/linux-pam/Linux-PAM-${version}.tar.bz2"
+checksum=c4b1f23a236d169e2496fea20721578d864ba00f7242d2b41d81050ac87a1e55
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 if [ "$XBPS_TARGET_LIBC" = "glibc" ]; then
 	makedepends+=" libxcrypt-devel"

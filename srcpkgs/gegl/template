@@ -26,6 +26,7 @@ makedepends="libglib-devel libpng-devel babl-devel jasper-devel
  libjpeg-turbo-devel librsvg-devel gtk+-devel exiv2-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Graph based image processing framework"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-3.0-only, LGPL-3.0-only"
 homepage="https://gegl.org/"
@@ -36,6 +37,13 @@ checksum=5887576371ebf1d9e90797d10e4b9a7f1658228d4827583e79e1db3d94505c6c
 case "$XBPS_TARGET_MACHINE" in
 	arm*) configure_args+=" -Db_lto=false"
 esac
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3, LGPL-3"
+homepage="http://www.gimp.org"
+distfiles="http://pkgs.fedoraproject.org/repo/pkgs/gegl/gegl-${version}.tar.bz2/32b00002f1f1e316115c4ed922e1dec8/gegl-${version}.tar.bz2"
+checksum=df2e6a0d9499afcbc4f9029c18d9d1e0dd5e8710a75e17c9b1d9a6480dd8d426
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 gegl-devel_package() {
 	depends="json-glib-devel babl-devel ${sourcepkg}>=${version}_${revision}"

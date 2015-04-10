@@ -10,10 +10,16 @@ depends="font-util"
 short_desc="Standard Type1 Bitstream PCF fonts"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org/"
 distfiles="${XORG_SITE}/font/$pkgname-$version.tar.gz"
 checksum=3827eef5d8482e956c9cbe412aab03c067f844bff50470add52bdac298f0e4c7
 font_dirs="/usr/share/fonts/X11/Type1"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+checksum=c6ea0569adad2c577f140328dc3302e729cb1b1ea90cd0025caf380625f8a688
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense COPYING

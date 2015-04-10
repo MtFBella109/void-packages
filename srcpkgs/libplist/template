@@ -6,10 +6,18 @@ version=2.2.0
 revision=6
 build_style=gnu-configure
 configure_args="--disable-static"
+<<<<<<< HEAD
 hostmakedepends="automake libtool pkgconf python3 python3-Cython"
 makedepends="python3-devel libglib-devel libxml2-devel"
 =======
 version=1.4
+=======
+hostmakedepends="automake libtool pkg-config python-devel python-Cython"
+makedepends="python-devel libglib-devel libxml2-devel"
+short_desc="Apple Property List library"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2, LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://libimobiledevice.org/"
 distfiles="http://www.libimobiledevice.org/downloads/$pkgname-$version.tar.bz2"
 build_style=cmake

@@ -2,9 +2,15 @@
 pkgname=chicken
 version=5.4.0
 revision=1
+<<<<<<< HEAD
 short_desc="Practical and portable Scheme system"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
+=======
+short_desc="A practical and portable Scheme system"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.call-cc.org"
 changelog="https://code.call-cc.org/releases/$version/NEWS"
 distfiles="http://code.call-cc.org/releases/$version/$pkgname-$version.tar.gz"

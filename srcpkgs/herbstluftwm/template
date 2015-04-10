@@ -7,6 +7,7 @@ hostmakedepends="pkg-config asciidoc"
 makedepends="libXrandr-devel libXinerama-devel libglib-devel libXft-devel
  libXrender-devel freetype-devel libXfixes-devel"
 conf_files="/etc/xdg/${pkgname}/autostart"
+<<<<<<< HEAD
 short_desc="Manual tiling window manager for X"
 maintainer="Cullen Ross <cullenrss@gmail.com>"
 license="BSD-2-Clause"
@@ -14,6 +15,14 @@ homepage="https://herbstluftwm.org"
 changelog="https://raw.githubusercontent.com/herbstluftwm/herbstluftwm/master/NEWS"
 distfiles="https://herbstluftwm.org/tarballs/herbstluftwm-${version}.tar.gz"
 checksum=b2d4600909e5bece5ad63818dfb30bb19fd2ac9f52847b1a7a74ad4040718105
+=======
+short_desc="A manual tiling window manager for X"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Simplified BSD"
+homepage="http://herbstluftwm.org"
+distfiles="http://herbstluftwm.org/tarballs/${pkgname}-${version}.tar.gz"
+checksum=a89f5c397aee7f1aa3b39dd53bc67e282679f02f1c0bf3c33c41a608e217f0ac
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense LICENSE

@@ -14,7 +14,7 @@ homepage="http://dgen.sourceforge.net"
 hostmakedepends="pkg-config nasm"
 makedepends="SDL-devel libarchive-devel "
 short_desc="Multi‐platform Genesis/Mega Drive Emulator"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="BSD, GPL-2, LGPL-2.1"
 homepage="http://dgen.sourceforget.net"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)

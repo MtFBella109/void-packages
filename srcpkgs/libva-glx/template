@@ -14,7 +14,12 @@ configure_args="-Dwith_glx=yes -Dwith_wayland=yes"
 hostmakedepends="pkg-config wayland-devel"
 makedepends="libva-devel libXfixes-devel MesaLib-devel wayland-devel"
 short_desc="Video Acceleration (VA) API - GLX backend"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://freedesktop.org/wiki/Software/vaapi"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://01.org/linuxmedia/vaapi"
 changelog="https://raw.githubusercontent.com/intel/libva/master/NEWS"

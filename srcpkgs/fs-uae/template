@@ -15,11 +15,19 @@ makedepends="SDL-devel MesaLib-devel freetype-devel libglib-devel libpng-devel l
 depends="desktop-file-utils hicolor-icon-theme"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="FS-UAE Amiga Emulator"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="https://fs-uae.net"
 distfiles="https://fs-uae.net/files/FS-UAE/Stable/${version}/${pkgname}-${version}.tar.xz"
 checksum=606e1868b500413d69bd33bb469f8fd08d6c08988801f17b7dd022f3fbe23832
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://fengestad.no/fs-uae"
+distfiles="http://fengestad.no/fs-uae/stable/${version}/fs-uae-${version}.tar.gz"
+checksum=3cea095d1ab2bb3b96e5dc684d7f24d5b2d3c43e1e33e38267ea7a1a9a43759f
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 case "$XBPS_TARGET_MACHINE" in
 	x86_64*|i686*) nopie=yes ;;

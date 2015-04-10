@@ -7,7 +7,12 @@ build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="libxcb-devel"
 short_desc="X client listing utility"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://xorg.freedesktop.org/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="http://xorg.freedesktop.org/"
 distfiles="${XORG_SITE}/app/${pkgname}-${version}.tar.xz"

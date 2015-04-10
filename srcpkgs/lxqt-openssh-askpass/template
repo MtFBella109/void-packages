@@ -7,9 +7,17 @@ hostmakedepends="lxqt-build-tools qt6-base qt6-tools perl"
 makedepends="liblxqt-devel"
 depends="openssh"
 short_desc="LXQt ssh-agent helper"
+<<<<<<< HEAD
 maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="LGPL-2.1-or-later"
 homepage="https://lxqt-project.org"
 distfiles="https://github.com/lxqt/lxqt-openssh-askpass/archive/${version}.tar.gz"
 checksum=c17f7370b99569ec0867ee3c9a104c687721501e8feb09717fe4d7188bfdbf54
 alternatives="ssh-askpass:/usr/libexec/ssh-askpass:/usr/bin/lxqt-openssh-askpass"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="http://lxqt.org/"
+distfiles="http://downloads.lxqt.org/lxqt/${version}/${pkgname}-${version}.tar.xz"
+checksum=95c9646c8583add54e49b31c6c8dd04d9d09a8836fa8ea289e0adce403aaa72b
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

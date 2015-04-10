@@ -4,6 +4,7 @@ version=4.7v
 revision=1
 build_style=gnu-configure
 hostmakedepends="flex"
+<<<<<<< HEAD
 short_desc="Generates function prototypes and variable declarations from C code"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Public Domain"
@@ -11,3 +12,15 @@ homepage="https://invisible-island.net/cproto/cproto.html"
 changelog="https://invisible-island.net/cproto/CHANGES"
 distfiles="https://invisible-island.net/archives/cproto/cproto-${version}.tgz"
 checksum=f3dec3f6102770196976459c4b44ac27355f6120da76e5231ec1323e379d1511
+=======
+short_desc="A program that generates function prototypes and variable declarations from C source code"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Public domain"
+homepage="http://invisible-island.net/cproto/cproto.html"
+distfiles="ftp://invisible-island.net/cproto/cproto-${version}.tgz"
+checksum=823a1e0480bbb39958c6c322c665932dd74286a8eb6dfe652528b6b8c3d873a5
+
+do_install() {
+	make bindir=${DESTDIR}/usr/bin mandir=${DESTDIR}/usr/share/man install
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

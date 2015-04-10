@@ -18,6 +18,7 @@ checksum=67829f764ba672d7f99ff72ef6513b40cc931fb401bf7bd7db5f805e7bfa3db9
 depends="yelp"
 makedepends="pkg-config intltool itstool gnome-doc-utils"
 short_desc="User documentation for GNOME"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=dbbee5a13e0ef9b64366149fc68faeb7716c533a3b613306e9c077d92d38849a
 long_desc="
@@ -28,3 +29,9 @@ long_desc="
 noarch=yes
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=ee89e0891fcad30ceb9e93e57a40e59730e0fee7973be233e0c4992b1d5726f1
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

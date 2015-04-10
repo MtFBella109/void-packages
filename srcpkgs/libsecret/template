@@ -19,6 +19,7 @@ hostmakedepends="pkg-config intltool gnome-doc-utils glib-devel libxslt"
 makedepends="vala-devel libgcrypt-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GObject based library for accessing the Secret Service API"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://wiki.gnome.org/Projects/Libsecret"
@@ -26,6 +27,28 @@ changelog="https://gitlab.gnome.org/GNOME/libsecret/-/raw/master/NEWS"
 distfiles="${GNOME_SITE}/libsecret/${version%.*}/libsecret-${version}.tar.xz"
 checksum=6b452e4750590a2b5617adc40026f28d2f4903de15f1250e1d1c40bfd68ed55e
 make_check_pre="dbus-run-session"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2, LGPL-2.1"
+homepage="http://www.gnome.org"
+distfiles="${GNOME_SITE}/$pkgname/0.18/$pkgname-${version}.tar.xz"
+checksum=0c73aa762dbd1e38ba7b03de350e23ce818cb810b0784375e95ef61e004b02e3
+
+# Package build options
+build_options="gir"
+
+# Disable gir for cross builds.
+if [ -z "$CROSS_BUILD" ]; then
+	build_options_default="gir"
+fi
+
+if [ "$build_option_gir" ]; then
+	configure_args+=" --enable-introspection"
+	makedepends+=" gobject-introspection"
+else
+	configure_args+=" --disable-introspection"
+fi
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libsecret-devel_package() {
 	depends="${sourcepkg}-${version}_${revision}

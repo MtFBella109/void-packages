@@ -8,6 +8,7 @@ build_style=gnu-configure
 configure_args="ac_cv_path_NROFF=/bin/true"
 makedepends="ncurses-devel"
 short_desc="Port of the NetBSD Command Line Editor Library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
 homepage="https://www.thrysoee.dk/editline/"
@@ -17,6 +18,13 @@ checksum=23792701694550a53720630cd1cd6167101b5773adddcb4104f7345b73a568ac
 post_install() {
 	vlicense COPYING
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="2-clause-BSD"
+homepage="http://www.thrysoee.dk/editline/"
+distfiles="http://www.thrysoee.dk/editline/libedit-${_datever}-${_distver}.tar.gz"
+checksum=c88a5e4af83c5f40dda8455886ac98923a9c33125699742603a88a0253fcc8c5
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libedit-devel_package() {
 	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"

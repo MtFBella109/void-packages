@@ -20,6 +20,7 @@ makedepends="gjs-devel gnome-desktop-devel geocode-glib-devel"
 depends="gjs>=1.40 desktop-file-utils"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNOME maps application"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Apps/Maps"
@@ -27,3 +28,10 @@ homepage="https://wiki.gnome.org/Apps/Maps"
 changelog="https://gitlab.gnome.org/GNOME/gnome-maps/-/raw/gnome-47/NEWS"
 distfiles="${GNOME_SITE}/gnome-maps/${version%.*}/gnome-maps-${version}.tar.xz"
 checksum=ae8716b8b0b3febd3ed22c17e9062eb80f6d6d25c50501c04d4230b97cee45ca
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://live.gnome.org/Design/Apps/Maps"
+license="GPL-2"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=92a6488b2632da0d4f9b6c67b9462dfd2dc790617f8b472e46130b8909bc2ab5
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

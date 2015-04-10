@@ -18,7 +18,7 @@ configure_args="--disable-static"
 hostmakedepends="flex"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Netlink Protocol Library Suite"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="LGPL-2.1"
 checksum=69f4a360350ea61f2c988f947c251995c04093c74743eae9eeffba85846ef007
 long_desc="

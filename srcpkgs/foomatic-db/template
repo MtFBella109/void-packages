@@ -7,6 +7,7 @@ _commit=28466ef2f9f931f49816ed70c499001d1783f5cb
 build_style=gnu-configure
 hostmakedepends="xmlstarlet tar automake"
 short_desc="OpenPrinting printer support - database"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, MIT"
 homepage="https://wiki.linuxfoundation.org/openprinting/database/foomatic"
@@ -29,3 +30,10 @@ post_install() {
 		fi
 	done
 }
+=======
+homepage="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/databasefoomatic"
+license="GPL-2, MIT"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="https://www.openprinting.org/download/foomatic/$pkgname-4.0-$version.tar.gz"
+checksum=25931bb2080bce731282a3e97eb193a82b313d6ffe74a2299311973a57f0a348
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

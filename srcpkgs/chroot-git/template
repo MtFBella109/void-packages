@@ -5,9 +5,15 @@ revision=1
 bootstrap=yes
 makedepends="zlib-devel"
 short_desc="GIT Tree History Storage Tool -- for xbps-src use"
+<<<<<<< HEAD
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
 license="GPL-2.0-only"
 homepage="https://git-scm.com/"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://git-scm.com/"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="https://www.kernel.org/pub/software/scm/git/git-${version}.tar.xz"
 checksum=618190cf590b7e9f6c11f91f23b1d267cd98c3ab33b850416d8758f8b5a85628
 repository=bootstrap

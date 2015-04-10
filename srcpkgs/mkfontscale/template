@@ -31,6 +31,7 @@ build_style=gnu_configure
 configure_args="--with-bzip2"
 makedepends="xproto pkg-config zlib-devel freetype-devel libfontenc-devel"
 short_desc="X11 Scalable Font Index Generator"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=8306b229cca233216a6582cb1ff60af78e37c47d6412ac823d7d41c3d7de7127
 long_desc="
@@ -47,3 +48,10 @@ Add_dependency build xproto
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.x.org/wiki"
+license="GPL-2"
+distfiles="${XORG_SITE}/app/$pkgname-$version.tar.bz2"
+checksum=8c6d5228af885477b9aec60ca6f172578e7d2de42234357af62fb00439453f20
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

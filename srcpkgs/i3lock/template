@@ -7,8 +7,13 @@ hostmakedepends="pkg-config"
 makedepends="libev-devel cairo-devel pam-devel libxkbcommon-devel
  xcb-util-devel xcb-util-image-devel xcb-util-xrm-devel"
 conf_files="/etc/pam.d/i3lock"
+<<<<<<< HEAD
 short_desc="Improved screenlocker based upon XCB and PAM"
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+short_desc="An improved screenlocker based upon XCB and PAM"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://i3wm.org/i3lock/"
 changelog="https://raw.githubusercontent.com/i3/i3lock/main/CHANGELOG"

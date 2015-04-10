@@ -7,8 +7,13 @@ build_style=gnu-configure
 configure_args="--disable-static"
 makedepends="netbsd-rumpkernel-devel"
 short_desc="NetBSD File System Access Utilities in Userland"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause, BSD-3-Clause, BSD-4-Clause"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://github.com/rumpkernel/fs-utils"
 distfiles="$homepage/archive/v$version.tar.gz
  https://raw.githubusercontent.com/rumpkernel/fs-utils/master/LICENSE"

@@ -3,6 +3,7 @@ pkgname=libgdiplus
 version=6.2
 revision=2
 build_style=gnu-configure
+<<<<<<< HEAD
 hostmakedepends="pkg-config automake libtool"
 makedepends="tiff-devel cairo-devel giflib-devel glib-devel libexif-devel
  libpng-devel"
@@ -20,6 +21,17 @@ pre_configure() {
 post_install() {
 	vlicense LICENSE
 }
+=======
+configure_args="--with-cairo=system"
+hostmakedepends="pkg-config"
+makedepends="tiff-devel cairo-devel giflib-devel glib-devel libexif-devel libpng-devel"
+short_desc="An Open Source Implementation of the GDI+ API"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.go-mono.org"
+license="LGPL-2, MPL"
+distfiles="http://download.mono-project.com/sources/${pkgname}/$pkgname-$version.tar.gz"
+checksum=e61c4dc1bc2ba993e4f79029472efcf5760eb9e60eb20d9cd31f0ebe9113bfc9
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libgdiplus-devel_package() {
 	short_desc+=" - development files"

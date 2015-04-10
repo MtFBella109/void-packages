@@ -4,23 +4,22 @@ version=1.28.7
 revision=1
 build_style=gnu-configure
 build_helper="gir"
-configure_args="--disable-static --disable-schemas-compile
- --libexecdir=/usr/libexec/mate --enable-wayland --enable-introspection"
-hostmakedepends="glib-devel gettext itstool pkg-config
- wayland-devel gobject-introspection"
-makedepends="dbus-glib-devel libSM-devel libcaja-devel libcanberra-devel
- libmarco-devel libmateweather-devel librsvg-devel libwnck-devel
- mate-desktop-devel mate-menus-devel
- wayland-devel gtk-layer-shell-devel"
-depends="caja marco mate-session-manager dconf-editor"
-short_desc="MATE Panel"
-maintainer="skmpz <dem.procopiou@gmail.com>"
-license="GPL-2.0-or-later"
-homepage="https://mate-desktop.org"
-changelog="https://raw.githubusercontent.com/mate-desktop/mate-panel/master/NEWS"
-distfiles="https://pub.mate-desktop.org/releases/${version%.*}/mate-panel-${version}.tar.xz"
-distfiles="https://github.com/mate-desktop/mate-panel/releases/download/v${version}/mate-panel-${version}.tar.xz"
-checksum=b254791dc05219566cec9a1cec71a3dcc7674e87d94e9628b98157b764bc724c
+configure_args="--with-gtk=2.0 --disable-static --disable-schemas-compile
+ --enable-network-manager $(vopt_enable gir introspection)"
+hostmakedepends="pkg-config intltool itstool"
+makedepends="gtk+-devel libcaja-devel libwnck2-devel libcanberra-devel libSM-devel
+ libmateweather-devel librsvg-devel libXau-devel libmarco-devel mate-menus-devel
+ dbus-glib-devel mate-desktop-devel NetworkManager-devel"
+depends="caja dconf marco mate-session-manager"
+short_desc="The MATE Panel"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-3"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=d53d1546577db3e45ce6b46b4a40b2edc066781cc1e864eef47ad07b0fdb3f19
+
+build_options="gir wayland"
+build_options_default="gir wayland"
 
 libmate-panel_package() {
 	short_desc+=" - runtime library"

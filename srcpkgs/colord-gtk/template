@@ -18,12 +18,20 @@ hostmakedepends="pkg-config intltool glib-devel vala-devel $(vopt_if gir gobject
 makedepends="colord-devel gtk+3-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GTK support library for colord"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/hughsie/colord-gtk"
 changelog="https://raw.githubusercontent.com/hughsie/colord-gtk/main/NEWS"
 distfiles="${FREEDESKTOP_SITE}/colord/releases/${pkgname}-${version}.tar.xz"
 checksum=b9466656d66d9a6ffbc2dd04fa91c8f6af516bf9efaacb69744eec0f56f3c1d0
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.freedesktop.org/software/colord"
+license="LGPL-2"
+distfiles="http://www.freedesktop.org/software/colord/releases/${pkgname}-${version}.tar.xz"
+checksum=28d00b7f157ea3e2ea5315387b2660fde82faba16674861c50465e55d61a3e45
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 build_options="vala docs man"
 build_options_default="vala man docs"

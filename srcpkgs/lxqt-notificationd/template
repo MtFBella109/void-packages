@@ -6,9 +6,17 @@ build_style=cmake
 hostmakedepends="lxqt-build-tools qt6-base qt6-tools perl"
 makedepends="liblxqt-devel layer-shell-qt-devel"
 short_desc="LXQt notification daemon"
+<<<<<<< HEAD
 maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="LGPL-2.1-or-later"
 homepage="https://lxqt-project.org"
 distfiles="https://github.com/lxqt/lxqt-notificationd/archive/${version}.tar.gz"
 checksum=d573f308c2b98fd9e6cc59c7da4953e33366e53000d622f44aed320ec143a15f
 replaces="lxqt-common>=0"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="http://lxqt.org/"
+distfiles="http://downloads.lxqt.org/lxqt/${version}/${pkgname}-${version}.tar.xz"
+checksum=f33f8086319ed9d4cffddaed76925db5d79716e90d1112e5b124c95594a74b24
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

@@ -12,6 +12,7 @@ makedepends="perl-HTML-Parser perl-URI perl-HTTP-Message"
 depends="$makedepends"
 checkdepends="perl-Test-Warnings"
 short_desc="HTML::Form - Class that represents an HTML form element"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="Artistic-1.0-Perl, GPL-1.0-or-later"
 homepage="https://metacpan.org/release/HTML-Form"
@@ -34,3 +35,10 @@ long_desc="
 noarch=yes
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/~gaas/HTML-Form/lib/HTML/Form.pm"
+license="Artistic, GPL-1"
+distfiles="${CPAN_SITE}/HTML/HTML-Form-$version.tar.gz"
+checksum=68c01d94f005d5ca9c4d55ad2a1bf3a8d034a5fc6db187d91a4c42f3fdc9fc36
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

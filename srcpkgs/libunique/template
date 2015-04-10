@@ -20,7 +20,11 @@ checksum=d627a10f523af14e9ead655ebab3a26e7faeea006bdfa7739bc4c04058ddf4c6
 hostmakedepends="pkg-config gobject-introspection"
 makedepends="dbus-glib-devel gtk+3-devel"
 short_desc="Library for writing single instance applications"
+<<<<<<< HEAD
 maintainer="xtraeme <xtraeme@gmail.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://live.gnome.org/LibUnique"
 license="LGPL-2.1"
 distfiles="${GNOME_SITE}/$pkgname/3.0/$pkgname-$version.tar.bz2"

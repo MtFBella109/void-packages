@@ -2,6 +2,15 @@
 pkgname=pcc-libs
 version=1.0.0
 wrksrc=${pkgname}-${version}
+<<<<<<< HEAD
+=======
+build_style=gnu-configure
+hostmakedepends="flex"
+short_desc="Portable C Compiler - Support Libraries"
+homepage="http://pcc.ludd.ltu.se/"
+license="BSD"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="http://pcc.ludd.ltu.se/ftp/pub/pcc-releases/$pkgname-$version.tgz"
 depends="glibc"
 makedepends="flex"

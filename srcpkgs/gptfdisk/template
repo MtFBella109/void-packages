@@ -12,7 +12,7 @@ version=0.8.2
 =======
 makedepends="ncurses-devel popt-devel icu-devel libuuid-devel"
 short_desc="GPT fdisk text-mode partitioning tool"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.rodsbooks.com/gdisk/"
 license="GPL-2"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)

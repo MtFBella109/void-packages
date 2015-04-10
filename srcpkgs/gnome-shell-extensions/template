@@ -8,6 +8,7 @@ configure_args="-Dextension_set=all"
 hostmakedepends="pkg-config gettext glib-devel"
 depends="gnome-shell>=${version} nautilus unzip"
 short_desc="Extensions for GNOME shell, including classic mode"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.gnome.org/Projects/GnomeShell/Extensions"
@@ -17,6 +18,9 @@ distfiles="${GNOME_SITE}/gnome-shell-extensions/${version%.*}/gnome-shell-extens
 checksum=adde34c08f40b63411be6f1d17e235550a0090494871e6481c312989d7f4a2d4
 =======
 version=3.2.0
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://live.gnome.org/GnomeShell/Extensions"
 distfiles="${GNOME_SITE}/$pkgname/3.2/$pkgname-$version.tar.xz"
 depends="gnome-shell>=3.2.0"

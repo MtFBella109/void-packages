@@ -36,7 +36,7 @@ depends="gsettings-desktop-schemas>=3.14 dconf>=0.20 alsa-plugins-pulseaudio
  hicolor-icon-theme desktop-file-utils"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="GNOME session management utilities"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.gnome.org"
 license="GPL-2, LGPL-2.1"
 checksum=6c2cbc86b63bb4869f4f95e7771ec6eee0c02965b732d634de5c8122607c4356

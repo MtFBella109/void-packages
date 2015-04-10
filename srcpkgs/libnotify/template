@@ -11,6 +11,7 @@ configure_args="$(vopt_feature gir introspection) -Dgtk_doc=false
 hostmakedepends="pkg-config glib-devel libxslt docbook-xsl-ns"
 makedepends="libglib-devel libpng-devel gdk-pixbuf-devel gtk+3-devel"
 short_desc="Desktop notification library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://gitlab.gnome.org/GNOME/libnotify"
@@ -19,6 +20,13 @@ distfiles="https://gitlab.gnome.org/GNOME/libnotify/-/archive/${version}/libnoti
 checksum=532c40b900b83fa8b6a36f77989470e5ee4d49335fd06cdce10678c215e5f037
 # https://gitlab.gnome.org/GNOME/libnotify/-/issues/30
 make_check=no
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://library.gnome.org/devel/notification-spec/"
+license="LGPL-2.1"
+distfiles="${GNOME_SITE}/$pkgname/0.7/$pkgname-$version.tar.xz"
+checksum=0ef61ca400d30e28217979bfa0e73a7406b19c32dd76150654ec5b2bdf47d837
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 build_options="gir"
 build_options_default="gir"

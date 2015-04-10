@@ -24,6 +24,7 @@ revision=1
 build_style=meta-template
 fulldepends="xf86-video-ati>=6.12.4 xf86-video-intel>=2.9.1 xf86-video-openchrome>=0.2.906 xf86-video-sisusb>=0.9.3 xf86-video-vesa>=2.2.1 xf86-video-vmware>=10.16.8_2 xf86-video-qxl>=0.0.13 xf86-video-nouveau"
 short_desc="X.org video drivers meta-package"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 long_desc="
  This is the Xorg meta-package for installing the various
@@ -101,3 +102,8 @@ Add_dependency full xf86-video-voodoo		">=1.2.3"
 #Add_dependency full xf86-video-v4l		">=0.2.0"
 #Add_dependency full xf86-video-voodoo		">=1.2.3"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.voidlinux.eu"
+license="Public domain"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

@@ -5,6 +5,7 @@ version=1.1.6
 revision=1
 build_style=gnu-configure
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="xorgproto libXfixes-devel"
 short_desc="Xdamage extension Library"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -16,6 +17,15 @@ checksum=52733c1f5262fca35f64e7d5060c6fcd81a880ba8e1e65c9621cf0727afb5d11
 post_install() {
 	vlicense COPYING
 }
+=======
+makedepends="xproto damageproto libXfixes-devel"
+short_desc="The Xdamage extension Library"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${XORG_SITE}/lib/${pkgname}-${version}.tar.bz2"
+homepage="http://xorg.freedesktop.org/"
+license="MIT/X11"
+checksum=7c3fe7c657e83547f4822bfde30a90d84524efb56365448768409b77f05355ad
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libXdamage-devel_package() {
 	depends="xorgproto libX11-devel libXfixes-devel ${sourcepkg}>=${version}_${revision}"

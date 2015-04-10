@@ -14,6 +14,7 @@ makedepends="libressl-devel libidn-devel libuuid-devel pcre-devel"
 depends="ca-certificates"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="/etc/wgetrc"
+<<<<<<< HEAD
 hostmakedepends="perl pkg-config"
 makedepends="libidn2-devel zlib-devel libuuid-devel pcre2-devel
  $(vopt_if gnutls 'gnutls-devel') $(vopt_if ssl 'openssl-devel')"
@@ -30,6 +31,14 @@ checksum=766e48423e79359ea31e41db9e5c289675947a7fcf2efdcedb726ac9d0da3784
 build_options="gnutls ssl"
 build_options_default="ssl"
 vopt_conflict gnutls ssl
+=======
+short_desc="The GNU wget download utility"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.gnu.org/software/wget/wget.html"
+license="GPL-3"
+distfiles="http://ftp.gnu.org/gnu/$pkgname/$pkgname-$version.tar.gz"
+checksum=9f1c6d09d7148c1c2d9fd0ea655dcf4dcc407deb2db32d4126251ca0245cb670
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	echo "ca_certificate=/etc/ssl/certs/ca-certificates.crt" >> ${DESTDIR}/etc/wgetrc

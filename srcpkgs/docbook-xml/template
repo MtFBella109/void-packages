@@ -29,6 +29,23 @@ xml_entries="
  nextCatalog /usr/share/xml/docbook/4.4/catalog --
  nextCatalog /usr/share/xml/docbook/4.5/catalog --
  nextCatalog /usr/share/xml/docbook/4.2/catalog-4.1.2 --"
+<<<<<<< HEAD
+=======
+homepage="http://www.oasis-open.org/docbook/"
+license="MIT"
+short_desc="XML DTD designed for computer documentation"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="
+ http://www.oasis-open.org/docbook/xml/$version/$pkgname-$version.zip
+ http://www.oasis-open.org/docbook/xml/4.4/$pkgname-4.4.zip
+ http://www.oasis-open.org/docbook/xml/4.3/$pkgname-4.3.zip
+ http://www.oasis-open.org/docbook/xml/4.2/$pkgname-4.2.zip"
+checksum="
+ 4e4e037a2b83c98c6c94818390d4bdd3f6e10f6ec62dd79188594e26190dc7b4
+ 02f159eb88c4254d95e831c51c144b1863b216d909b5ff45743a1ce6f5273090
+ 23068a94ea6fd484b004c5a73ec36a66aa47ea8f0d6b62cc1695931f5c143464
+ acc4601e4f97a196076b7e64b368d9248b07c7abf26b34a02cca40eeebe60fa2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_extract() {
 	:

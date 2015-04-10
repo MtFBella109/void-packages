@@ -7,8 +7,13 @@ hostmakedepends="pkg-config"
 makedepends="squeak pango-devel shared-mime-info desktop-file-utils gtk-update-icon-cache"
 depends="${makedepends/pango-devel/}"
 short_desc="Create and share your own interactive stories, games, music and art"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only, MIT"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://scratch.mit.edu"
 distfiles="http://download.scratch.mit.edu/${pkgname}-${version}.src.tar.gz"
 checksum=b94d89278ecef2ba2d1147eec23936dd99697293ffa2c216c0a375ba98226a3e

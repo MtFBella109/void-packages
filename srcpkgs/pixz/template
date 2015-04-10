@@ -8,8 +8,13 @@ hostmakedepends="automake libtool pkg-config asciidoc"
 makedepends="liblzma-devel libarchive-devel"
 checkdepends="xz"
 short_desc="A parallel, indexing version of XZ"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="BSD-2-Clause"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="2-clause-BSD"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://github.com/vasi/pixz"
 distfiles="https://github.com/vasi/pixz/archive/v$version.tar.gz"
 checksum=e29fba74ae399e5d27c21a6009002705ebcc20947b283ed0aa721df6a409680a

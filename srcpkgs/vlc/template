@@ -5,6 +5,7 @@ revision=6
 build_style=gnu-configure
 <<<<<<< HEAD
 configure_args="--disable-gme --disable-libtar --enable-jack
+<<<<<<< HEAD
  --enable-live555 --disable-fluidsynth --enable-dvdread
  --enable-flac --enable-merge-ffmpeg --disable-libplacebo
  $(vopt_enable notify) $(vopt_enable qt) $(vopt_enable x265)
@@ -27,6 +28,14 @@ depends="pulseaudio freefont-ttf hicolor-icon-theme desktop-file-utils"
 makedepends="pkg-config videoproto libogg-devel libvorbis-devel SDL-devel SDL_image-devel x264-devel ffmpeg-devel xcb-util-devel libXxf86vm-devel libXinerama-devel libXpm-devel libXvMC-devel libXv-devel libmpeg2-devel libflac-devel fribidi-devel freetype-devel qt-devel avahi-libs-devel MesaLib-devel libmad-devel liba52-devel libdca-devel libdvbpsi-devel libgcrypt-devel gtk+-devel libnotify-devel dbus-glib-devel gnutls-devel taglib-devel libmatroska-devel libmpcdec-devel libproxy-devel libcdio-devel libdvdnav-devel libsysfs-devel libusb-compat-devel libmtp-devel sqlite-devel librsvg-devel libtheora-devel speex-devel pulseaudio-devel samba-devel libmodplug-devel libva-devel v4l-utils-devel libsamplerate-devel"
 short_desc="VideoLan Client"
 maintainer="Juan RP <xtraeme@gmail.com>"
+=======
+ --disable-lua --disable-live555 --disable-fluidsynth
+ --enable-dvdread --enable-flac --disable-gnomevfs
+ $(vopt_enable notify) $(vopt_enable opengl glx) $(vopt_enable qt)
+ $(vopt_enable svg) $(vopt_enable v4l v4l2)"
+short_desc="A cross-platform multimedia player"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.videolan.org/vlc/"
 license="GPL-2"
 checksum=7f485725c17487a77d70844cbd9acf528360d65cd6ff79d206657920f4fcbf4b

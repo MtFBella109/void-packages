@@ -15,11 +15,19 @@ makedepends="python3-devel libtirpc-devel libxslt gettext-devel"
 makedepends="pkg-config libxslt docbook-xsl"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Hierarchical pool based memory allocator with destructors"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
 homepage="https://talloc.samba.org/"
 distfiles="https://download.samba.org/pub/${pkgname}/${pkgname}-${version}.tar.gz"
 checksum=dc46c40b9f46bb34dd97fe41f548b0e8b247b77a918576733c528e83abd854dd
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://talloc.samba.org/"
+license="GPL-3"
+distfiles="http://samba.org/ftp/$pkgname/$pkgname-$version.tar.gz"
+checksum=230d78a3fca75a15ab0f5d76d7bbaeadd3c1e695adcbb085932d227f5c31838d
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 export PYTHON_CONFIG="${XBPS_CROSS_BASE}/usr/bin/python3-config"

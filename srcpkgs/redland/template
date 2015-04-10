@@ -10,7 +10,11 @@ configure_args="--disable-static --enable-release --with-raptor=system
 hostmakedepends="pkg-config perl postgresql-libs-devel"
 makedepends="libltdl-devel db-devel rasqal-devel libmariadbclient-devel
  postgresql-libs-devel sqlite-devel unixodbc-devel"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 short_desc="${_desc} - Utilities"
 license="GPL-2.0-or-later, LGPL-2.1-or-later, Apache-2.0"
 homepage="https://librdf.org"

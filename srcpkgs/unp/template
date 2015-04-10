@@ -5,9 +5,15 @@ revision=1
 hostmakedepends="gettext perl"
 makedepends="perl"
 depends="perl"
+<<<<<<< HEAD
 short_desc="Perl script for unpacking a wide variety of archive formats"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
+=======
+short_desc="A perl script for unpacking a wide variety of archive formats"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://packages.qa.debian.org/u/unp.html"
 distfiles="${DEBIAN_SITE}/main/u/unp/unp_${version}.tar.xz"
 checksum=417909d5f653663030ff3eff422726e71ac914c61eec6f835823e2d053dce5d2

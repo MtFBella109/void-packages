@@ -3,6 +3,7 @@ pkgname=lyx
 version=2.3.7r1
 revision=1
 build_style=gnu-configure
+<<<<<<< HEAD
 configure_args="--enable-qt5 --without-included-mythes --without-included-boost"
 hostmakedepends="pkg-config bc qt5-devel"
 makedepends="file-devel boost-devel-minimal mythes-devel enchant2-devel qt5-svg-devel"
@@ -18,3 +19,16 @@ python_version=3
 post_install() {
 	vdoc "${FILESDIR}/README.voidlinux"
 }
+=======
+configure_args="--without-included-boost"
+short_desc="The Document Processor WYSIWYM Editor & Latex frontend"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+hostmakedepends="pkg-config bc python"
+makedepends="file-devel boost-devel enchant-devel qt-devel"
+depends="virtual?texlive GraphicsMagick"
+conf_files="/etc/lyx/lyxrc.dist"
+homepage="http://www.lyx.org/Home"
+distfiles="ftp://ftp.lyx.org/pub/${pkgname}/stable/2.1.x/${pkgname}-${version}.tar.xz"
+checksum=2fd52e7e5ee372983eb6b0a7f04765cb0df6f8c1f3420081d9f7761acfc75682
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

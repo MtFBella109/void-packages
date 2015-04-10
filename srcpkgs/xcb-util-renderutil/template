@@ -19,7 +19,7 @@ post_install() {
 }
 =======
 short_desc="Utility libraries for XC Binding - Convenience functions for the Render extension"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://xcb.freedesktop.org"
 license="GPL-2"
 distfiles="http://xcb.freedesktop.org/dist/$pkgname-$version.tar.bz2"

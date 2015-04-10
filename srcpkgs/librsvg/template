@@ -10,12 +10,20 @@ hostmakedepends="cargo cargo-c pkg-config glib-devel gdk-pixbuf-devel
 makedepends="cairo-devel freetype-devel gdk-pixbuf-devel libcroco-devel
  libglib-devel libxml2-devel pango-devel vala-devel libdav1d-devel rust-std"
 short_desc="SVG library for GNOME"
+<<<<<<< HEAD
 maintainer="Érico Nogueira <ericonr@disroot.org>"
 license="LGPL-2.1-or-later"
 homepage="https://gitlab.gnome.org/GNOME/librsvg"
 changelog="https://gitlab.gnome.org/GNOME/librsvg/-/raw/main/NEWS"
 distfiles="${GNOME_SITE}/librsvg/${version%.*}/librsvg-${version}.tar.xz"
 checksum=ecd293fb0cc338c170171bbc7bcfbea6725d041c95f31385dc935409933e4597
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://librsvg.sourceforge.net/"
+license="LGPL-2.1"
+distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+checksum=13964c5d35357552b47d365c34215eee0a63bf0e6059b689f048648c6bf5f43a
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 # reference files are for specific pango and harfbuzz versions
 # the test suite isn't designed to be run by distros

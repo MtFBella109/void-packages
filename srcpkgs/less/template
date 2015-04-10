@@ -28,6 +28,7 @@ configure_args="--with-regex=pcre"
 makedepends="ncurses-devel pcre-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Pager program similar to more(1)"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=57a16ff07431a9af45cf1cd5b374e1066d019304219f0d156e22bb8c4d6734d2
 long_desc="
@@ -44,3 +45,10 @@ Add_dependency full ncurses
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+homepage="http://www.greenwoodsoftware.com/less"
+distfiles="${homepage}/less-${version}.tar.gz"
+checksum=37f613fa9a526378788d790a92217d59b523574cf7159f6538da8564b3fb27f8
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

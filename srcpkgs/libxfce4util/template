@@ -9,11 +9,19 @@ build_helper="gir"
 hostmakedepends="pkg-config gettext vala"
 makedepends="libglib-devel"
 short_desc="Utility library for the Xfce4 desktop environment"
+<<<<<<< HEAD
 maintainer="mobinmob <mobinmob@disroot.org>"
 license="LGPL-2.0-or-later"
 homepage="https://xfce.org/"
 distfiles="https://archive.xfce.org/src/xfce/$pkgname/${version%.*}/$pkgname-$version.tar.bz2"
 checksum=84bfc4daab9e466193540c3665eee42b2cf4d24e3f38fc3e8d1e0a2bebe3b8f1
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="http://xfce.org"
+distfiles="http://archive.xfce.org/src/xfce/$pkgname/${version%.*}/$pkgname-$version.tar.bz2"
+checksum=876bdefa2e13cbf68b626b2158892fb93e824e1ef59cf951123a96cefbc8881d
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 libxfce4util-devel_package() {
 	depends="libglib-devel ${sourcepkg}>=${version}_${revision}"

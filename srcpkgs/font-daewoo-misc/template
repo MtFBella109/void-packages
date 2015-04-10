@@ -10,10 +10,16 @@ depends="font-util"
 short_desc="Daewoo Gothic PCF format"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
+<<<<<<< HEAD
 homepage="http://xorg.freedesktop.org/"
 distfiles="${XORG_SITE}/font/$pkgname-$version.tar.gz"
 checksum=54d9c3778a676f1ad4e467d6cc6e4c596147a85ac2dd4cfee2ba0e893a6eaf59
 font_dirs="/usr/share/fonts/X11/misc"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${XORG_SITE}/font/$pkgname-$version.tar.bz2"
+checksum=bc65de70bee12698caa95b523d3b652c056347e17b68cc8b5d6bbdff235c4be8
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	vlicense COPYING

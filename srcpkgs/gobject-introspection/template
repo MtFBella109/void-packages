@@ -14,6 +14,7 @@ makedepends="libffi-devel libglib-devel python3-devel python3-Mako
  python3-Markdown"
 depends="libgirepository-devel python3-Mako python3-Markdown python3-setuptools"
 short_desc="Introspection system for GObject-based libraries"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://wiki.gnome.org/Projects/GObjectIntrospection"
@@ -73,6 +74,14 @@ post_install() {
 	mv ${DESTDIR}/usr/lib/gobject-introspection/giscanner/_giscanner*.so \
 	   ${DESTDIR}/usr/lib/gobject-introspection/giscanner/_giscanner.so
 }
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://live.gnome.org/GObjectInstrospection"
+license="GPL-2, LGPL-2.1"
+distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
+checksum=3ba2edfad4f71d4f0de16960b5d5f2511335fa646b2c49bbb93ce5942b3f95f7
+nocross=yes
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 gir-freedesktop_package() {
 	short_desc="Introspection data for some FreeDesktop components"

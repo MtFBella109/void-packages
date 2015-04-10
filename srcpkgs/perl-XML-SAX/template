@@ -34,6 +34,7 @@ depends="${makedepends}"
 noarch="yes"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Perl interface to the SAX2 XML Parser"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=9bbef613afa42c46df008d537decc5a61df7e92d65463f3c900769f39e5c8e08
 long_desc="
@@ -48,3 +49,10 @@ Add_dependency full perl-XML-NamespaceSupport
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://search.cpan.org/dist/XML-SAX"
+license="Artistic, GPL-1"
+distfiles="${CPAN_SITE}/XML/XML-SAX-$version.tar.gz"
+checksum=32b04b8e36b6cc4cfc486de2d859d87af5386dd930f2383c49347050d6f5ad84
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

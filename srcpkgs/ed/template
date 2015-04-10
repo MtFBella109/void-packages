@@ -5,8 +5,13 @@ revision=1
 build_style=gnu-configure
 hostmakedepends="lzip"
 short_desc="GNU Line-oriented text editor"
+<<<<<<< HEAD
 maintainer="Enno Boland <gottox@voidlinux.org>"
 license="GPL-3.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnu.org/software/ed/ed.html"
 distfiles="${GNU_SITE}/${pkgname}/${pkgname}-${version}.tar.lz"
 checksum=1af541116796d6b9e4b66ef9c45ddce0e15a19ed62bfca362ccd7d472cc1c8fb

@@ -7,9 +7,15 @@ configure_args="--disable-static"
 hostmakedepends="protobuf pkg-config vala"
 makedepends="libgee08-devel protobuf-devel vala-devel"
 depends="pkg-config glib-devel"
+<<<<<<< HEAD
 short_desc="Plugin for the Google protocol buffer compiler to generate Vala code"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-only"
+=======
+short_desc="A plugin for the Google protocol buffer compiler to generate Vala code"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://launchpad.net/protobuf-vala/"
 distfiles="${homepage}/trunk/${version}/+download/${pkgname}-${version}.tar.xz"
 checksum=c12547813fa22ee2b15967f17146b08e2a4d90800810fe63730332aea6777c48

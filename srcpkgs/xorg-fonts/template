@@ -16,6 +16,7 @@ depends="encodings>=1.0.4 font-adobe-100dpi>=1.0.3 font-adobe-75dpi>=1.0.3
 short_desc="Modular Xorg Fonts"
 homepage="http://xorg.freedesktop.org/"
 license="MIT"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 =======
 version=7.5
@@ -56,3 +57,6 @@ Add_dependency full dejavu-fonts-ttf
 >>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
 =======
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

@@ -8,8 +8,14 @@ build_style=meson
 configure_args="-Dintrospection=$(vopt_if gir true false)"
 hostmakedepends="gettext pkg-config glib-devel"
 makedepends="libglib-devel"
+<<<<<<< HEAD
 =======
 version=3.4.2
+=======
+short_desc="Collection of GSettings schemas"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnome.org"
 distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
 build_style=gnu-configure

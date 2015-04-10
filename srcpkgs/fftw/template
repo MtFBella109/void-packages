@@ -12,8 +12,13 @@ distfiles="${homepage}/${pkgname}-${version}.tar.gz"
 makedepends="gcc-fortran"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Library for computing the discrete Fourier transform (DFT)"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.fftw.org/"
 distfiles="${homepage}/fftw-${version}.tar.gz"
 checksum=56c932549852cddcfafdab3820b0200c7742675be92179e59e6215b340e26467

@@ -6,8 +6,13 @@ _gitrev=e64ef9d9f214e32341fb7cd9633260fbb44b2326
 hostmakedepends="pkg-config unzip"
 makedepends="MesaLib-devel zlib-devel"
 short_desc="Libretro port of Mupen64 Plus"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.libretro.com/"
 distfiles="https://github.com/libretro/mupen64plus-libretro/archive/${_gitrev}.tar.gz"
 checksum=947abfb1d5ff34d6b22fecfb2df02bd3759fde3f4a0e5d238f65ec7e97d964d4

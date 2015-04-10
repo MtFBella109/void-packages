@@ -5,8 +5,12 @@ revision=1
 build_style=gnu-configure
 makedepends="sg3_utils-devel"
 short_desc="Utility to access SCSI device parameters"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://sg.danny.cz/sg/sdparm.html"
 distfiles="http://sg.danny.cz/sg/p/${pkgname}-${version}.tgz"
 checksum=e7f84247069da9a0c293963948d8aba8e5897a13e35e5476c8258acb7ca3a124

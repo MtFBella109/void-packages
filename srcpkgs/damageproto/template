@@ -1,6 +1,17 @@
 # Template build file 'damageproto'.
 pkgname=damageproto
+<<<<<<< HEAD
 version=1.2.0
+=======
+version=1.2.1
+revision=2
+noarch="yes"
+build_style=gnu-configure
+short_desc="Damage extension headers from X.org"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="${XORG_HOME}"
+license="MIT"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 distfiles="${XORG_SITE}/proto/$pkgname-$version.tar.bz2"
 build_style=gnu_configure
 short_desc="Damage extension headers from modular X.org"

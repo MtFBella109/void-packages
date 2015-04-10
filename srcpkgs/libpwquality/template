@@ -19,12 +19,20 @@ configure_args="--disable-static --enable-pam --disable-python-bindings
 makedepends="pam-devel"
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
 short_desc="Library for password quality checking and generating random passwords"
+<<<<<<< HEAD
 maintainer="0x5c <dev@0x5c.io>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/libpwquality/libpwquality"
 changelog="https://raw.githubusercontent.com/libpwquality/libpwquality/master/NEWS"
 distfiles="https://github.com/libpwquality/libpwquality/releases/download/libpwquality-${version}/libpwquality-${version}.tar.bz2"
 checksum=6fcf18b75d305d99d04d2e42982ed5b787a081af2842220ed63287a2d6a10988
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="https://fedorahosted.org/libpwquality/"
+license="GPL-2"
+distfiles="https://fedorahosted.org/releases/l/i/$pkgname/$pkgname-$version.tar.bz2"
+checksum=9ad67be364a66dc8b334a473c77d9f531137ee0e9d85d81f567f410a375857c7
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 <<<<<<< HEAD
 pre_configure() {

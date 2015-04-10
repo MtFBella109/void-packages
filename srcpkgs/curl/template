@@ -39,7 +39,11 @@ depends="ca-certificates"
 # openssh isn't in checkdepends, because test 581 locks up
 checkdepends="python3 stunnel nghttp2 impacket"
 short_desc="Client that groks URLs"
+<<<<<<< HEAD
 maintainer="Érico Nogueira <ericonr@disroot.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://curl.se"
 changelog="https://curl.se/changes.html"

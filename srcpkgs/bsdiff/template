@@ -4,11 +4,17 @@ version=4.3
 revision=5
 makedepends="bzip2-devel"
 short_desc="Binary diff/patch utility"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
 homepage="http://www.daemonology.net/bsdiff"
 distfiles="${DEBIAN_SITE}/main/b/bsdiff/bsdiff_${version}.orig.tar.gz"
 #distfiles="${homepage}/${pkgname}-${version}.tar.gz"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="Simplified BSD"
+distfiles="$homepage/$pkgname-$version.tar.gz"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=18821588b2dc5bf159aa37d3bcb7b885d85ffd1e19f23a0c57a58723fea85f48
 
 do_build() {

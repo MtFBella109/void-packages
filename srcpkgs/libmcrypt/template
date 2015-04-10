@@ -5,8 +5,13 @@ revision=4
 build_style=gnu-configure
 hostmakedepends="automake libtool libltdl-devel"
 short_desc="A data encryption library"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://mcrypt.sourceforge.net/"
 distfiles="${SOURCEFORGE_SITE}/mcrypt/$pkgname-$version.tar.bz2"
 checksum=bf2f1671f44af88e66477db0982d5ecb5116a5c767b0a0d68acb34499d41b793

@@ -6,8 +6,14 @@ archs="*-musl"
 bootstrap=yes
 build_style=gnu-configure
 configure_args="--prefix=/usr --disable-gcc-wrapper"
+<<<<<<< HEAD
 short_desc="Musl C library"
 maintainer="Enno Boland <gottox@voidlinux.org>"
+=======
+conflicts="glibc>=0"
+short_desc="The musl C library"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://musl.libc.org/"
 distfiles="https://musl.libc.org/releases/musl-${version}.tar.gz"

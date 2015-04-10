@@ -5,6 +5,7 @@ revision=1
 build_style=gnu-configure
 hostmakedepends="libtool automake"
 makedepends="liblzma-devel"
+<<<<<<< HEAD
 short_desc="Library to determine the call-chain of a program"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="MIT"
@@ -32,6 +33,14 @@ esac
 if [ "$XBPS_TARGET_LIBC" = musl ]; then
 	checkdepends+=" libexecinfo-devel"
 fi
+=======
+short_desc="Portable and efficient C programming interface (API) to determine the call-chain of a program"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.nongnu.org/libunwind/"
+license="GPL-2"
+distfiles="http://download.savannah.gnu.org/releases/$pkgname/$pkgname-$version.tar.gz"
+checksum=9dfe0fcae2a866de9d3942c66995e4b460230446887dbdab302d41a8aee8d09a
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 pre_configure() {
 	# unw_getcontext is just getcontext on ppc*, separate lib for musl

@@ -5,7 +5,11 @@ version=2.7.3
 revision=1
 build_style=gnu-configure
 short_desc="XML parser library written in C"
+<<<<<<< HEAD
 maintainer="Leah Neukirchen <leah@vuxu.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="https://libexpat.github.io/"
 changelog="https://raw.githubusercontent.com/libexpat/libexpat/master/expat/Changes"

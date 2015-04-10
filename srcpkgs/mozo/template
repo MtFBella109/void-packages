@@ -7,9 +7,17 @@ hostmakedepends="pkg-config gettext"
 makedepends="glib-devel mate-menus-devel python3-gobject-devel"
 depends="desktop-file-utils gtk+3 mate-menus python3-gobject"
 short_desc="MATE menu editing tool"
+<<<<<<< HEAD
 maintainer="skmpz <dem.procopiou@gmail.com>"
 license="LGPL-2.1-or-later"
 homepage="https://mate-desktop.org"
 changelog="https://raw.githubusercontent.com/mate-desktop/mozo/master/NEWS"
 distfiles="https://pub.mate-desktop.org/releases/${version%.*}/mozo-${version}.tar.xz"
 checksum=fe98984ffd6aa8c36d0594bcefdba03de39b42d41e007251680384f3cef44924
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2"
+homepage="http://mate-desktop.org"
+distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
+checksum=326f0a6c30c07381b113b243ccdcc46269b2cab1e998ea6e1f9e79f520f015cb
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

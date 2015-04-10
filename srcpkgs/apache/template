@@ -63,7 +63,7 @@ conf_files="
 	/etc/httpd/mime.types"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="The Number One HTTP Server On The Internet"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://httpd.apache.org/"
 license="Apache-2.0"
 checksum=dcdc9f1dc722f84798caf69d69dca78daa5e09a4269060045aeca7e4f44cb231

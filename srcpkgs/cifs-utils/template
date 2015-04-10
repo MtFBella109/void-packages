@@ -19,6 +19,7 @@ hostmakedepends="pkg-config libcap-ng-devel"
 makedepends="mit-krb5-devel talloc-devel libcap-ng-devel samba-devel keyutils-devel pam-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="CIFS filesystem user-space tools"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://wiki.samba.org/index.php/LinuxCIFS_utils"
@@ -45,6 +46,13 @@ pre_configure() {
  systems."
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://wiki.samba.org/index.php/LinuxCIFS_utils"
+distfiles="https://ftp.samba.org/pub/linux-cifs/$pkgname/$pkgname-$version.tar.bz2"
+checksum=38fc63926af435dae4ebcf4406275580a692d9fb9ee3e32170317cf2ba68e6e3
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	chmod +s ${DESTDIR}/usr/bin/mount.cifs

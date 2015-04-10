@@ -6,9 +6,15 @@ build_style=gnu-configure
 configure_args="--with-libsodium --disable-Werror"
 hostmakedepends="asciidoc pkg-config xmlto"
 makedepends="libsodium-devel"
+<<<<<<< HEAD
 short_desc="Intelligent Transport Layer"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-3.0-or-later"
+=======
+short_desc="The Intelligent Transport Layer"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.zeromq.org"
 distfiles="https://github.com/zeromq/libzmq/releases/download/v${version}/zeromq-${version}.tar.gz"
 checksum=6653ef5910f17954861fe72332e68b03ca6e4d9c7160eb3a8de5a5a913bfab43

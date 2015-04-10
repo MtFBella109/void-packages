@@ -1,6 +1,7 @@
 # Template file for 'gsfonts'
 pkgname=gsfonts
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=20200910
 revision=1
 depends="font-util"
@@ -13,6 +14,21 @@ checksum=e0d9b7f11885fdfdc4987f06b2aa0565ad2a4af52b22e5ebf79e1a98abd0ae2f
 font_dirs="/usr/share/fonts/OTF/
  /usr/share/fonts/TTF
  /usr/share/fonts/Type1"
+=======
+version=8.11
+revision=4
+wrksrc=fonts
+noarch="yes"
+makedepends="font-util font-misc-misc"
+depends="${makedepends}"
+font_dirs="/usr/share/fonts/Type1"
+short_desc="Ghostscript standard Type1 fonts"
+homepage="http://sourceforge.net/projects/gs-fonts/"
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="${SOURCEFORGE_SITE}/ghostscript/ghostscript-fonts-std-$version.tar.gz"
+checksum=0eb6f356119f2e49b2563210852e17f57f9dcc5755f350a69a46a0d641a0c401
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_install() {
 	for f in ${wrksrc}/fonts/*.otf; do

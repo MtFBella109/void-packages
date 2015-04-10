@@ -7,8 +7,13 @@ hostmakedepends="python3"
 makedepends="elfutils-devel"
 depends="python3"
 short_desc="Infrastructure to simplify the gathering of information"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-3"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="https://sourceware.org/systemtap/"
 distfiles="https://sourceware.org/pub/systemtap/releases/systemtap-${version}.tar.gz"
 checksum=d01033baea9d0af52a65e70167816931f4b856427a53ff2ab30e4b45f6ad3a98

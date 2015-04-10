@@ -20,10 +20,17 @@ makedepends="
 replaces="telepathy-farsight>=0"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Telepathy library that uses Farstream to handle Call channels"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-or-later"
 homepage="https://telepathy.freedesktop.org"
 distfiles="https://telepathy.freedesktop.org/releases/telepathy-farstream/telepathy-farstream-$version.tar.gz"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="http://telepathy.freedesktop.org"
+distfiles="$homepage/releases/$pkgname/$pkgname-$version.tar.gz"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=6fa099f22d13a2a49240445a13e918928aef097675d76e5cc9f98ab496087e0a
 replaces="telepathy-farsight>=0"
 

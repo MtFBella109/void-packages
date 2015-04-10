@@ -22,6 +22,7 @@ makedepends="db-devel zlib-devel libpipeline-devel groff"
 depends="bzip2 gzip less groff grep coreutils"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 conf_files="/etc/man_db.conf"
+<<<<<<< HEAD
 short_desc="On-line manual database"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-3.0-or-later"
@@ -50,6 +51,14 @@ case "$XBPS_TARGET_MACHINE" in
 	*-musl) CFLAGS+=" -I${XBPS_CROSS_BASE}/usr/include/gettext"
 		LDFLAGS+=" -lintl";;
 esac
+=======
+short_desc="The on-line manual database"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2, LGPL-2.1"
+homepage="http://www.nongnu.org/man-db/"
+distfiles="${NONGNU_SITE}/$pkgname/$pkgname-$version.tar.xz"
+checksum=c4876204a3fafb4d8ccc1d172c0431ee581d95558cbd6c4e79caca7717049e0e
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	# Rename files for alternatives

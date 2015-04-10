@@ -1,0 +1,55 @@
+# Template file for 'python-Pygments'
+pkgname=python-Pygments
+version=2.0.2
+revision=1
+noarch=yes
+wrksrc="Pygments-${version}"
+python_versions="2.7 3.4"
+hostmakedepends="python-setuptools python3.4-setuptools"
+depends="python-setuptools"
+pycompile_module="pygments"
+short_desc="Python2 syntax highlighter"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://pygments.org/"
+license="BSD"
+distfiles="${PYPI_SITE}/P/Pygments/Pygments-${version}.tar.gz"
+checksum=7320919084e6dac8f4540638a46447a3bd730fca172afc17d2c03eed22cf4f51
+
+post_extract() {
+	cp -a ${wrksrc} /tmp/python2.7-build
+	cp -a ${wrksrc} /tmp/python3.4-build
+	mv /tmp/python{2.7,3.4}-build ${wrksrc}
+}
+
+pre_build() {
+	cd ${wrksrc}/python3.4-build
+	sed -i 's,pygmentize ,pygmentize3 ,' setup.py
+}
+
+do_build() {
+	cd ${wrksrc}/python2.7-build
+	python setup.py build
+
+	cd ${wrksrc}/python3.4-build
+	python3.4 setup.py build
+}
+
+do_install() {
+	cd ${wrksrc}/python2.7-build
+	python setup.py install --root=${DESTDIR}
+
+	cd ${wrksrc}/python3.4-build
+	python3.4 setup.py install --root=${DESTDIR}
+}
+
+python3.4-Pygments_package() {
+	noarch=yes
+	depends="python3.4-setuptools"
+	pycompile_version="3.4"
+	pycompile_module="pygments"
+	short_desc="${short_desc/Python2/Python3.4}"
+	pkg_install() {
+		vmove usr/bin/pygmentize3
+		vmove usr/lib/python3.4
+	}
+}

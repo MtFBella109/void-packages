@@ -15,6 +15,7 @@ short_desc="SDL MPEG Player Library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="LGPL-2.1-only"
 homepage="https://icculus.org/smpeg/"
+<<<<<<< HEAD
 distfiles="https://github.com/icculus/smpeg/archive/refs/tags/release_${version//./_}.tar.gz"
 checksum=e2e53bfd2e6401e2c29e5eb3929be0e8698bc9e4c9d731751f67e77b408f1f74
 
@@ -25,6 +26,12 @@ pre_configure() {
 =======
 subpackages="$pkgname-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+license="LGPL-2.1"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="ftp://slackware.oregonstate.edu/.1/vectorlinux/VL64-7.0/source/sourceVL/smpeg/${version}/src/smpeg-${version}.tar.gz"
+checksum=1839c12e88d5dbbc767a7b94eeab2aa3efe4f0eebb7eb7c7240270ba93689a2b
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	# Remove unused stuff

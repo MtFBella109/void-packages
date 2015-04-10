@@ -5,8 +5,13 @@ distfiles="http://buildbot.googlecode.com/files/$pkgname-$version.tar.gz"
 build_style=python-module
 fulldepends="python python-jinja Twisted"
 short_desc="A system to automate the compile/test cycle"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://trac.buildbot.net/"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://buildbot.net/"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="GPL-2"
 checksum=9e7673bd79e57ff105e0916b9751aafda59cc2a8765c929710ef8e75e1162893
 long_desc="

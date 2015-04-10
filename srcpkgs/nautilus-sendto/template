@@ -12,7 +12,7 @@ hostmakedepends="pkg-config intltool gobject-introspection"
 makedepends="evolution-data-server-devel nautilus-devel gupnp-devel"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Nautilus context menu for sending files"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://download.gnome.org/sources/nautilus-sendto/"
 license="GPL-2"
 checksum=bafbfbfe66c9817b099c8b57f41341e0be4e94ae846a9a1ae84d7bcbc339c2cf

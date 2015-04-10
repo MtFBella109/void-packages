@@ -4,6 +4,7 @@ version=4.1
 revision=1
 build_wrksrc=source
 build_style=cmake
+<<<<<<< HEAD
 configure_args="-DENABLE_PIC=1 -DEXTRA_LINK_FLAGS='-L.'
  -DEXTRA_LIB='x265_main10.a;x265_main12.a' -DLINKED_10BIT=TRUE -DLINKED_12BIT=TRUE"
 short_desc="Open Source H.265/HEVC video encoder"
@@ -96,6 +97,19 @@ pre_build() {
 	ln -sf ../build-10/libx265.a build/libx265_main10.a
 	ln -sf ../build-12/libx265.a build/libx265_main12.a
 }
+=======
+build_wrksrc="source"
+wrksrc="multicoreware-x265-cbeb7d8a4880"
+hostmakedepends="yasm cmake"
+short_desc="Open Source H265/HEVC video encoder"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="https://bitbucket.org/multicoreware/x265"
+license="GPL-2"
+distfiles="https://bitbucket.org/multicoreware/x265/get/${version}.tar.bz2"
+checksum=b6e5ba47fce63d10d3678803e8427755e7b9fb8c6aa619e1a3ff3f4fc62b3382
+nocross=yes
+only_for_archs="i686 x86_64"  # CMakeList is utterly broken.
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 x265-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"

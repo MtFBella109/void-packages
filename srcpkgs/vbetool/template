@@ -12,7 +12,13 @@ short_desc="Run real-mode video BIOS code to alter hardware state"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
 homepage="http://www.codon.org.uk/~mjg59/vbetool/"
+<<<<<<< HEAD
 distfiles="http://www.codon.org.uk/~mjg59/vbetool/download/vbetool-${version}.tar.gz"
+=======
+license="GPL-2"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+distfiles="http://www.codon.org.uk/~mjg59/vbetool/download/vbetool-$version.tar.gz"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 checksum=4d26ddc43144593742349e69481e3536ce3482faaa9ad4494fdc7c8b7662f954
 =======
 distfiles="http://www.codon.org.uk/~mjg59/vbetool/download/vbetool-$version.tar.gz"

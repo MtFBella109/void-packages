@@ -18,7 +18,7 @@ makedepends="libglib-devel libxfce4ui-devel"
 conf_files="/etc/xdg/menus/xfce-applications.menu"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 short_desc="Glib/GIO freedesktop.org compliant menu implementation"
-maintainer="Juan RP <xtraeme@gmail.com>"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://wiki.xfce.org/dev/garcon"
 license="LGPL-2.1"
 checksum=02dea3edb9c0039eca4748e964c61b0e1cc10f2d7f9ce0c837287ac5fa9ef76c

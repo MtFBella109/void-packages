@@ -17,6 +17,7 @@ makedepends="libuuid-devel fuse-devel
 makedepends="pkg-config libuuid-devel fuse-devel"
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Stable Read/Write NTFS Driver in userspace"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later, LGPL-2.0-or-later"
 homepage="https://github.com/tuxera/ntfs-3g"
@@ -37,6 +38,13 @@ subpackages="$pkgname-devel"
 build_requires=16
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+homepage="http://www.tuxera.com/community/ntfs-3g-download/"
+license="GPL-2"
+distfiles="http://www.tuxera.com/opensource/${pkgname}_ntfsprogs-${version}.tgz"
+checksum=97f996015d8316d4a272bd2629978e5e97072dd3cc148ce39802f8037c6538f2
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	mv ${DESTDIR}/sbin/* ${DESTDIR}/usr/bin

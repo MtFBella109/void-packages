@@ -7,7 +7,11 @@ build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="libXext-devel libXi-devel libXrandr-devel libXinerama-devel"
 short_desc="Utility to configure and test X input devices"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 license="MIT"
 homepage="http://www.x.org"
 distfiles="${XORG_SITE}/app/$pkgname-$version.tar.gz"

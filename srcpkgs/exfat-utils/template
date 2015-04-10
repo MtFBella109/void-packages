@@ -5,9 +5,27 @@ version=1.4.0
 revision=1
 build_style=gnu-configure
 short_desc="Utilities for exFAT file system"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/relan/exfat"
 changelog="https://github.com/relan/exfat/raw/master/ChangeLog"
 distfiles="https://github.com/relan/exfat/releases/download/v${version}/exfat-utils-${version}.tar.gz"
 checksum=241575fa93104406a47e79e53e4d907bae69886f11621f70a45276c62b75bf69
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="GPL-2"
+homepage="http://code.google.com/p/exfat"
+distfiles="https://docs.google.com/uc?export=download&id=0B7CLI-REKbE3UzNtSkRvdHBpdjQ>${pkgname}-${version}.tar.gz"
+checksum=c64454083961fbad164fa7daef03d7e9247aa978c11395d62a265d48a1d56232
+
+do_build() {
+	scons CCFLAGS="${CFLAGS} -std=c99" LINKFLAGS="${LDFLAGS} " DESTDIR="${DESTDIR}/usr/bin"
+}
+
+do_install() {
+	scons CCFLAGS="${CFLAGS} -std=c99" LINKFLAGS="${LDFLAGS} " DESTDIR="${DESTDIR}/usr/bin" install
+	vmkdir usr/share/man/man8
+	install -m444 {dump,fsck,mkfs,label}/*.8 ${DESTDIR}/usr/share/man/man8
+}
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

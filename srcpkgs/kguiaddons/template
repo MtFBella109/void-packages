@@ -10,6 +10,7 @@ hostmakedepends="kcoreaddons pkg-config extra-cmake-modules
 makedepends="qt5-tools-devel $(vopt_if x11 qt5-x11extras-devel)
  $(vopt_if wayland 'plasma-wayland-protocols xcb-util-devel qt5-wayland-devel wayland-devel')"
 short_desc="KDE frameworks - Addons to QtGui"
+<<<<<<< HEAD
 maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.0-only, LGPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://invent.kde.org/frameworks/kguiaddons"
@@ -18,6 +19,13 @@ checksum=5c10d56cb02cb60710c2412d4a3d02671cad74f25d1e9889c6c741f6e833fce6
 
 build_options="wayland x11"
 build_options_default="wayland x11"
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="LGPL-2.1"
+homepage="https://projects.kde.org/projects/frameworks/kguiaddons"
+distfiles="http://download.kde.org/stable/frameworks/${version%.*}/${pkgname}-${version}.tar.xz"
+checksum=7104ad239c4e8ae062ea252b3334391bef00838a86bcc0b84fad3100d90aad22
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 kguiaddons-devel_package() {
 	short_desc+=" - development"

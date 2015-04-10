@@ -26,6 +26,7 @@ depends="
 short_desc="The LXDE meta-package for Void Linux"
 homepage="http://lxde.org"
 license="GPL-2"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 =======
 revision=3
@@ -47,3 +48,6 @@ lxde_package() {
 	noarch="yes"
 }
 >>>>>>> 8d0a375d6d1 (Convert packages to the new template format (l).)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)

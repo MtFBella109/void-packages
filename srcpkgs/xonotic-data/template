@@ -15,6 +15,7 @@ license="GPL-2, GPL-3"
 distfiles="http://dl.xonotic.org/xonotic-${version}.zip"
 makedepends="unzip"
 short_desc="A free, fast-paced crossplatform first-person shooter (data files)"
+<<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=e8a7dbfdea1ba6250ddf363f01899411f22e518526fae4f0b4f90d622fab3819
 long_desc="
@@ -25,6 +26,10 @@ long_desc="
 replaces="xonotic-data>=0"
 
 >>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+checksum=0a87c808827a8b234f2324b468ecb643aa48a6fd43322a29e616610dca316370
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 do_install() {
 	vmkdir usr/share/xonotic

@@ -11,6 +11,7 @@ configure_args="-Dlibffi=enabled -Dsystemd=disabled -Dbash_completion=disabled
 hostmakedepends="pkg-config gettext gtk-doc libxslt libtasn1-tools"
 makedepends="libtasn1-devel libffi-devel"
 short_desc="Provides a way to load and enumerate PKCS#11 modules"
+<<<<<<< HEAD
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
 homepage="https://github.com/p11-glue/p11-kit"
@@ -30,6 +31,13 @@ build_options="gtk_doc"
 if [ -z "$CROSS_BUILD" ]; then
 	build_options_default+=" gtk_doc"
 fi
+=======
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+license="BSD"
+homepage="http://p11-glue.freedesktop.org"
+distfiles="$homepage/releases/$pkgname-$version.tar.gz"
+checksum=e57371669f3b157141b86c429bd9c29741994b2f5ff115fcb8a03e751b0f6ac4
+>>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
 post_install() {
 	mv ${DESTDIR}/etc/pkcs11/pkcs11.conf.example \
