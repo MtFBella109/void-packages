@@ -7054,3 +7054,17 @@ libkateinterfaces.so.4 kate-4.14.2_1
 libkdeinit4_kate.so kate-4.14.2_1
 libkatepartinterfaces.so.4 kate-4.14.2_1
 libkdeinit4_kwrite.so kate-4.14.2_1
+libokteta1core.so.1 okteta-4.14.2_1
+libkasten2gui.so.2 okteta-4.14.2_1
+libkasten2okteta1controllers.so.1 okteta-4.14.2_1
+libokteta1gui.so.1 okteta-4.14.2_1
+libkasten2core.so.2 okteta-4.14.2_1
+libkasten2controllers.so.2 okteta-4.14.2_1
+libkasten2okteta1gui.so.1 okteta-4.14.2_1
+libkasten2okteta1core.so.1 okteta-4.14.2_1
+libhttp_parser.so.2.5.0 http-parser-2.5.0_1
+libmaa.so.3 libmaa-1.3.2_1
+libcodeblocks.so.0 codeblocks-13.12_1
+liblept.so.4 leptonica-1.72_1
+libtesseract.so.3 tesseract-ocr-3.02.02_1
+libkomparediff2.so.4 libkomparediff2-4.14.2_1
