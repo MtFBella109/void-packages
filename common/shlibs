@@ -7068,3 +7068,5 @@ libcodeblocks.so.0 codeblocks-13.12_1
 liblept.so.4 leptonica-1.72_1
 libtesseract.so.3 tesseract-ocr-3.02.02_1
 libkomparediff2.so.4 libkomparediff2-4.14.2_1
+libkompareinterface.so.4 kompare-4.14.2_1
+libkomparedialogpages.so.4 kompare-4.14.2_1
