@@ -49,3 +49,4 @@ kate5_package() {
 	metapackage=yes
 	depends="kate-${version}_${revision}"
 }
+
