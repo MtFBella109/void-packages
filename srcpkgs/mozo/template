@@ -1,11 +1,23 @@
 # Template file for 'mozo'
 pkgname=mozo
+<<<<<<< HEAD
 version=1.28.0
 revision=2
 build_style=meson
 hostmakedepends="pkg-config gettext"
 makedepends="glib-devel mate-menus-devel python3-gobject-devel"
 depends="desktop-file-utils gtk+3 mate-menus python3-gobject"
+=======
+version=1.10.0
+revision=1
+noarch=yes
+build_style=gnu-configure
+configure_args="--with-gtk=2.0 "
+hostmakedepends="pkg-config intltool itstool"
+makedepends="glib-devel mate-menus-devel python-gobject2-devel"
+depends="mate-menus python-gobject2 pygtk desktop-file-utils"
+pycompile_module="Mozo"
+>>>>>>> a1c1c365cfb (mozo, mate-menus: update to 1.10.0)
 short_desc="MATE menu editing tool"
 <<<<<<< HEAD
 maintainer="skmpz <dem.procopiou@gmail.com>"
@@ -18,6 +30,11 @@ checksum=fe98984ffd6aa8c36d0594bcefdba03de39b42d41e007251680384f3cef44924
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="LGPL-2"
 homepage="http://mate-desktop.org"
+<<<<<<< HEAD
 distfiles="http://pub.mate-desktop.org/releases/1.8/${pkgname}-${version}.tar.xz"
 checksum=326f0a6c30c07381b113b243ccdcc46269b2cab1e998ea6e1f9e79f520f015cb
 >>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
+=======
+distfiles="http://pub.mate-desktop.org/releases/${version%.*}/${pkgname}-${version}.tar.xz"
+checksum=b84bd95da46bfda950a73eda1b47b4d7d1e4814aa2eba76a1d7e4fb07489118d
+>>>>>>> a1c1c365cfb (mozo, mate-menus: update to 1.10.0)
