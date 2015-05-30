@@ -7070,3 +7070,4 @@ libtesseract.so.3 tesseract-ocr-3.02.02_1
 libkomparediff2.so.4 libkomparediff2-4.14.2_1
 libkompareinterface.so.4 kompare-4.14.2_1
 libkomparedialogpages.so.4 kompare-4.14.2_1
+libffmpegthumbnailer.so.4 ffmpegthumbnailer-2.0.10_1
