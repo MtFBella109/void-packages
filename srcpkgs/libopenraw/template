@@ -1,5 +1,6 @@
 # Template file for 'libopenraw'
 pkgname=libopenraw
+<<<<<<< HEAD
 version=0.1.3
 revision=3
 build_style=gnu-configure
@@ -14,13 +15,41 @@ homepage="https://libopenraw.freedesktop.org/wiki/"
 distfiles="https://libopenraw.freedesktop.org/download/libopenraw-${version}.tar.bz2"
 checksum=6405634f555849eb01cb028e2a63936e7b841151ea2a1571ac5b5b10431cfab9
 
+=======
+version=0.0.9
+revision=1
+build_style=gnu-configure
+configure_args="--with-boost=${XBPS_CROSS_BASE}/usr"
+hostmakedepends="pkg-config curl"
+makedepends="glib-devel gdk-pixbuf-devel boost-devel libxml2-devel libjpeg-turbo-devel"
+triggers="gtk-pixbuf-loaders"
+short_desc="Library for camera RAW files decoding"
+maintainer="Jürgen Buchmüller <pullmoll@t-online.de>"
+license="GPL-3"
+homepage="http://${pkgname}.freedesktop.org/wiki/"
+distfiles="http://${pkgname}.freedesktop.org/download/${pkgname}-${version}.tar.bz2"
+checksum=49fd1adf0a0228c7a17a79bf98d8d03664195feae1e50f4ddd1b20162626e18f
+
+LDFLAGS="-L${XBPS_CROSS_BASE}/usr/lib"
+post_configure() {
+	# Fix local posix_{open,close} name clash with unistd.h
+	sed -e "s;posix_open;s_posix_open;g" \
+		-e "s;posix_close;s_posix_close;g" \
+		-i ${wrksrc}/lib/io/posix_io.c
+}
+>>>>>>> 194879746e5 (New package: libopenraw-0.0.9)
 post_install() {
 	# Remove gdk-pixbuf static lib
 	rm ${DESTDIR}/usr/lib/gdk-pixbuf-*/*/loaders/libopenraw_pixbuf.a
 }
+<<<<<<< HEAD
 
 libopenraw-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"
+=======
+libopenraw-devel_package() {
+	depends="${makedepends} ${sourcepkg}>=${version}_${revision}"
+>>>>>>> 194879746e5 (New package: libopenraw-0.0.9)
 	description=" - development files"
 	pkg_install() {
 		vmove "usr/lib/*.so"
@@ -29,6 +58,7 @@ libopenraw-devel_package() {
 		vmove usr/include
 	}
 }
+<<<<<<< HEAD
 
 libopenraw-pixbuf-loader_package() {
 	depends="${sourcepkg}>=${version}_${revision}"
@@ -37,3 +67,5 @@ libopenraw-pixbuf-loader_package() {
 		vmove "usr/lib/gdk-pixbuf-2.0"
 	}
 }
+=======
+>>>>>>> 194879746e5 (New package: libopenraw-0.0.9)
