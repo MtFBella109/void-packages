@@ -1,9 +1,17 @@
 # Template file for 'gflags'
 pkgname=gflags
+<<<<<<< HEAD
 version=2.2.2
 revision=1
 build_style=cmake
 configure_args=" -DBUILD_STATIC_LIBS=ON -DBUILD_SHARED_LIBS=ON -DBUILD_TESTING=ON"
+=======
+version=2.1.2
+revision=2
+build_style=cmake
+configure_args=" -DBUILD_STATIC_LIBS=ON -DBUILD_SHARED_LIBS=ON -DBUILD_TESTING=ON"
+hostmakedepends="cmake"
+>>>>>>> 175db0220a1 (llvm: update armhf triplets list to handle ours.)
 short_desc="A C++ library that implements commandline flags processing"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-3-Clause"
@@ -25,6 +33,17 @@ gflags-devel_package() {
 		vmove usr/include
 		vmove usr/lib/cmake
 		vmove usr/lib/pkgconfig
+		vmove usr/lib/*.a
+		vmove usr/lib/*.so
+	}
+}
+
+gflags-devel_package() {
+	short_desc+=" - development files"
+	depends="${sourcepkg}>=${version}_${revision}"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/cmake
 		vmove usr/lib/*.a
 		vmove usr/lib/*.so
 	}
