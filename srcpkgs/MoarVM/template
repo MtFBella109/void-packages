@@ -1,6 +1,11 @@
 # Template file for 'MoarVM'
 pkgname=MoarVM
+<<<<<<< HEAD
 version=2025.06
+=======
+only_for_archs="i686 i686-musl x86_64 x86_64-musl"
+version=2015.09
+>>>>>>> b3dabdeadf9 (rakudo-star: update to 2015.09)
 revision=1
 build_style=configure
 configure_script="perl Configure.pl"
