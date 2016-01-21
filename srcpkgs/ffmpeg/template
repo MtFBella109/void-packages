@@ -136,6 +136,7 @@ do_configure() {
 		--enable-libopus --enable-librtmp --enable-libjack \
 		$(vopt_if fdk_aac '--enable-nonfree --enable-libfdk-aac') \
 		--disable-libopencore_amrnb --disable-libopencore_amrwb \
+<<<<<<< HEAD
 		--disable-libopenjpeg --enable-libbluray --enable-libsvtav1 \
 		--enable-postproc --enable-opencl --disable-libvmaf ${_args} \
 		$(vopt_enable x265 libx265) \
@@ -152,6 +153,14 @@ do_configure() {
 		$(vopt_enable rist librist) \
 		$(vopt_if nvenc '--enable-nvenc') \
 		$(vopt_if nvdec '--enable-nvdec')
+=======
+		--disable-libschroedinger --disable-libopenjpeg \
+		--enable-postproc --enable-opencl ${_args} \
+		$(vopt_if x265 '--enable-libx265' '--disable-libx265') \
+		$(vopt_if v4l2 '--enable-libv4l2' '--disable-libv4l2') \
+		$(vopt_enable vaapi) $(vopt_enable vdpau) \
+		--enable-libbs2b --enable-avresample
+>>>>>>> 52cd37adf70 (New package: libavresample-2.8.5)
 }
 
 do_build() {
@@ -181,14 +190,20 @@ libavdevice_package() {
 		vmove "usr/lib/libavdevice.so.*"
 	}
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 52cd37adf70 (New package: libavresample-2.8.5)
 libavresample_package() {
 	short_desc="FFmpeg audio resampling library"
 	pkg_install() {
 		vmove "usr/lib/libavresample.so.*"
 	}
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 52cd37adf70 (New package: libavresample-2.8.5)
 libavformat_package() {
 	short_desc="FFmpeg file format library"
 	pkg_install() {
@@ -242,6 +257,7 @@ ffmpeg-devel_package() {
 		libswscale>=${version}_${revision}
 		libswresample>=${version}_${revision}
 		libavresample>=${version}_${revision}"
+<<<<<<< HEAD
 	short_desc="Decoding, encoding and streaming software - development files"
 	conflicts="ffmpeg6-devel"
 	replaces="ffmpeg6-devel>=0"
@@ -251,6 +267,9 @@ ffmpeg-devel_package() {
 		nostrip_files="/usr/lib/libavfilter.a";;
 	esac
 
+=======
+	short_desc+=" - development files"
+>>>>>>> 52cd37adf70 (New package: libavresample-2.8.5)
 	pkg_install() {
 		vmove usr/include
 		vmove usr/lib/pkgconfig
