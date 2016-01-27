@@ -1,5 +1,6 @@
 # Template file for 'virt-manager'
 pkgname=virt-manager
+<<<<<<< HEAD
 version=5.1.0
 revision=1
 build_style=meson
@@ -12,6 +13,19 @@ depends="virt-manager-tools>=${version}_${revision} libvirt-glib
 _coredeps="python3-gobject libvirt-python3 libosinfo
  libxml2-python3 python3-requests cdrtools"
 checkdepends="python3-pytest pylint python3-pycodestyle cpio xorriso ${_coredeps}"
+=======
+version=1.3.2
+revision=2
+noarch=yes
+nocross=yes
+build_style=python-module
+hostmakedepends="intltool python-devel glib-devel gtk-update-icon-cache"
+depends="libosinfo python-gobject gnome-icon-theme gnome-ssh-askpass
+ openbsd-netcat yajl python-gconf libvirt-glib-python libvirt-python
+ python-urlgrabber libxml2-python python-ipaddr gir-freedesktop
+ spice-gtk gtk-vnc vte3 python-requests"
+pycompile_dirs="/usr/share/$pkgname"
+>>>>>>> 3fa3f7e8338 (virt-manager: Add missed runtime dependency)
 short_desc="User interface for managing virtual machines"
 maintainer="Andrea Brancaleoni <abc@pompel.me>"
 license="GPL-2.0-or-later"
