@@ -144,12 +144,36 @@ calligra-words_package() {
 }
 
 calligra-handbook_package() {
+<<<<<<< HEAD
 	metapackage=yes
 	short_desc+=" - Documentation (removed temporarily)"
 	#pkg_install() {
 	#	DESTDIR=$PKGDESTDIR \
 	#	cmake -P ${wrksrc}/build/doc/calligra/cmake_install.cmake
 	#}
+=======
+	noarch=yes
+	short_desc+=" - Documentation"
+	pkg_install() {
+		cd ${wrksrc}/build/doc/calligra
+		make DESTDIR=$PKGDESTDIR install
+	}
+}
+calligra-braindump_package() {
+	short_desc+=" - Notes & idea gathering"
+	pkg_install() {
+		cd ${wrksrc}/build/braindump
+		make DESTDIR=$PKGDESTDIR install
+	}
+}
+calligra-flow_package() {
+	depends="calligra-plugins"
+	short_desc+=" - Flowchart & Diagram Editing"
+	pkg_install() {
+		cd ${wrksrc}/build/flow
+		make DESTDIR=$PKGDESTDIR install
+	}
+>>>>>>> a5d77fd5d34 (calligra: -flow depends on -plugins)
 }
 
 calligra-extras_package() {
