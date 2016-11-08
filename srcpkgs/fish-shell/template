@@ -14,6 +14,10 @@ checkdepends="git mdocml python3-pexpect procps-ng"
 build_style=gnu-configure
 hostmakedepends="automake"
 makedepends="ncurses-devel"
+<<<<<<< HEAD
+=======
+depends="bc groff"
+>>>>>>> 626ea800cb3 (fish: add groff runtime dependency)
 register_shell="/usr/bin/fish"
 conf_files="/etc/fish/config.fish"
 wrksrc="fish-${version}"
