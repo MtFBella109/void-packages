@@ -20,6 +20,7 @@ done
 
 setup_pkg "$PKGNAME" $XBPS_CROSS_BUILD
 
+<<<<<<< HEAD
 if [ -n "$disable_parallel_check" ]; then
     XBPS_MAKEJOBS=1
 else
@@ -27,6 +28,8 @@ else
 fi
 makejobs="-j$XBPS_MAKEJOBS"
 
+=======
+>>>>>>> b020eada1e9 (xbps-src: implement a 'check' stage)
 XBPS_CHECK_DONE="${XBPS_STATEDIR}/${sourcepkg}_${XBPS_CROSS_BUILD}_check_done"
 
 if [ -n "$XBPS_CROSS_BUILD" ]; then
@@ -34,11 +37,16 @@ if [ -n "$XBPS_CROSS_BUILD" ]; then
     exit 0
 fi
 
+<<<<<<< HEAD
 if [ -z "$XBPS_CHECK_PKGS" ]; then
+=======
+if [ -z "$XBPS_CHECK_PKGS" -o "$XBPS_CHECK_PKGS" = "0" -o "$XBPS_CHECK_PKGS" = "no" ]; then
+>>>>>>> b020eada1e9 (xbps-src: implement a 'check' stage)
     msg_normal "${pkgname}-${version}_${revision}: skipping check (XBPS_CHECK_PKGS is disabled) ...\n"
     exit 0
 fi
 
+<<<<<<< HEAD
 if [ "$make_check" = no ]; then
     msg_normal "${pkgname}-${version}_${revision}: skipping check (make_check=no) ...\n"
     exit 0
@@ -56,11 +64,28 @@ if [ "$make_check" = ci-skip ] && [ "$XBPS_BUILD_ENVIRONMENT" = void-packages-ci
     exit 0
 fi
 
+=======
+>>>>>>> b020eada1e9 (xbps-src: implement a 'check' stage)
 for f in $XBPS_COMMONDIR/environment/check/*.sh; do
     source_file "$f"
 done
 
+<<<<<<< HEAD
 run_step check optional
+=======
+cd "$wrksrc" || msg_error "$pkgver: cannot access wrksrc directory [$wrksrc]\n"
+if [ -n "$build_wrksrc" ]; then
+    cd $build_wrksrc || \
+        msg_error "$pkgver: cannot access build_wrksrc directory [$build_wrksrc]\n"
+fi
+
+# Run do_check() if the function is defined
+if declare -f do_check > /dev/null; then
+    run_func do_check
+else
+    msg_normal "${pkgname}-${version}_${revision}: template does not have do_check() ...\n"
+fi
+>>>>>>> b020eada1e9 (xbps-src: implement a 'check' stage)
 
 touch -f $XBPS_CHECK_DONE
 

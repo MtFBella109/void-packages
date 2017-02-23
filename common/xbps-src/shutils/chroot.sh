@@ -126,12 +126,29 @@ XBPS_SRC_VERSION="$XBPS_SRC_VERSION"
 <<<<<<< HEAD
 PATH=/void-packages:/usr/bin
 
+<<<<<<< HEAD
 exec env -i -- SHELL=/bin/sh PATH="\$PATH" DISTCC_HOSTS="\$XBPS_DISTCC_HOSTS" DISTCC_DIR="/host/distcc" \
     ${XBPS_ARCH+XBPS_ARCH=$XBPS_ARCH} ${XBPS_CHECK_PKGS+XBPS_CHECK_PKGS=$XBPS_CHECK_PKGS} \
     CCACHE_DIR="/host/ccache" IN_CHROOT=1 LC_COLLATE=C LANG=en_US.UTF-8 TERM=linux HOME="/tmp" \
     PS1="[\u@$XBPS_MASTERDIR \W]$ " /bin/bash +h "\$@"
 _EOF
 
+=======
+exec env -i SHELL=/bin/sh PATH="\$PATH" DISTCC_HOSTS="\$XBPS_DISTCC_HOSTS" DISTCC_DIR="/host/distcc" @@XARCH@@ \
+    @@CHECK@@ CCACHE_DIR="/host/ccache" IN_CHROOT=1 LC_COLLATE=C LANG=en_US.UTF-8 TERM=linux HOME="/tmp" \
+    PS1="[\u@$XBPS_MASTERDIR \W]$ " /bin/bash +h
+_EOF
+    if [ -n "$XBPS_ARCH" ]; then
+        sed -e "s,@@XARCH@@,XBPS_ARCH=${XBPS_ARCH},g" -i $XBPS_MASTERDIR/bin/xbps-shell
+    else
+        sed -e 's,@@XARCH@@,,g' -i $XBPS_MASTERDIR/bin/xbps-shell
+    fi
+    if [ -z "$XBPS_CHECK_PKGS" -o "$XBPS_CHECK_PKGS" = "0" -o "$XBPS_CHECK_PKGS" = "no" ]; then
+        sed -e 's,@@CHECK@@,,g' -i $XBPS_MASTERDIR/bin/xbps-shell
+    else
+        sed -e "s,@@CHECK@@,XBPS_CHECK_PKGS=$XBPS_CHECK_PKGS,g" -i $XBPS_MASTERDIR/bin/xbps-shell
+    fi
+>>>>>>> b020eada1e9 (xbps-src: implement a 'check' stage)
     chmod 755 $XBPS_MASTERDIR/bin/xbps-shell
     cp -f /etc/resolv.conf $XBPS_MASTERDIR/etc
     return 0
@@ -508,6 +525,7 @@ chroot_handler() {
 	fi
 	_chargs+=" -D ${XBPS_DISTDIR}"
 
+<<<<<<< HEAD
 	[ -z "$action" -a -z "$pkg" ] && return 1
 
 	case "$action" in
@@ -517,6 +535,34 @@ chroot_handler() {
 		chroot_sync_repos || return $?
 		;;
 	esac
+=======
+    case "$action" in
+        fetch|extract|build|check|configure|install|install-destdir|pkg|build-pkg|bootstrap-update|chroot)
+            chroot_prepare || return $?
+            chroot_init || return $?
+            chroot_sync_repos || return $?
+            ;;
+    esac
+
+    if [ "$action" = "chroot" ]; then
+        $XBPS_COMMONDIR/chroot-style/${XBPS_CHROOT_CMD:=uunshare}.sh \
+            $XBPS_MASTERDIR $XBPS_DISTDIR "$XBPS_HOSTDIR" "$XBPS_CHROOT_CMD_ARGS" /bin/xbps-shell
+        rv=$?
+    else
+        [ -n "$XBPS_CROSS_BUILD" ] && arg="$arg -a $XBPS_CROSS_BUILD"
+        [ -n "$XBPS_KEEP_ALL" ] && arg="$arg -C"
+        [ -n "$NOCOLORS" ] && arg="$arg -L"
+        [ -n "$XBPS_BUILD_FORCEMODE" ] && arg="$arg -f"
+        [ -n "$XBPS_MAKEJOBS" ] && arg="$arg -j$XBPS_MAKEJOBS"
+        [ -n "$XBPS_DEBUG_PKGS" ] && arg="$arg -g"
+        [ -z "$XBPS_CHECK_PKGS" -o "$XBPS_CHECK_PKGS" = "0" -o "$XBPS_CHECK_PKGS" = "no" ] && arg="$arg -q"
+        [ -n "$XBPS_SKIP_DEPS" ] && arg="$arg -I"
+        [ -n "$XBPS_ALT_REPOSITORY" ] && arg="$arg -r $XBPS_ALT_REPOSITORY"
+        [ -n "$XBPS_USE_GIT_REVS" ] && arg="$arg -G"
+        [ -n "$XBPS_PKG_OPTIONS" ] && arg="$arg -o $XBPS_PKG_OPTIONS"
+        [ -n "$XBPS_TEMP_MASTERDIR" ] && arg="$arg -t -C"
+        [ -n "$XBPS_BINPKG_EXISTS" ] && arg="$arg -E"
+>>>>>>> b020eada1e9 (xbps-src: implement a 'check' stage)
 
 	if [ "$action" = "chroot" ]; then
 		$CHROOT_CMD ${_chargs} $XBPS_MASTERDIR /bin/xbps-shell || rv=$?

@@ -73,6 +73,13 @@ setup_pkg_depends() {
         fi
         host_build_depends+=" ${_depname}-$(srcpkg_get_version ${_depname})"
     done
+    if ! [ -z "$XBPS_CHECK_PKGS" -o "$XBPS_CHECK_PKGS" = "0" -o "$XBPS_CHECK_PKGS" = "no" ]; then
+        for j in ${checkdepends}; do
+            _depname="${j%\?*}"
+            _depver=$(srcpkg_get_version ${_depname}) || exit $?
+            host_check_depends+=" ${_depname}-${_depver}"
+        done
+    fi
     for j in ${makedepends}; do
         _depname="${j%\?*}"
         if [ -s ${XBPS_DISTDIR}/etc/virtual ]; then
@@ -259,8 +266,13 @@ install_pkg_deps() {
     local rval _realpkg curpkgdepname pkgn iver
     local i j found rundep repo
 
+<<<<<<< HEAD
     local -a host_binpkg_deps binpkg_deps host_missing_deps missing_deps missing_rdeps
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+=======
+    local -a host_binpkg_deps check_binpkg_deps binpkg_deps
+    local -a host_missing_deps check_missing_deps missing_deps missing_rdeps
+>>>>>>> b020eada1e9 (xbps-src: implement a 'check' stage)
 
     [ -z "$pkgname" ] && return 2
     skip_check_step && unset checkdepends
@@ -269,6 +281,7 @@ install_pkg_deps() {
         style=" with"
     fi
 
+<<<<<<< HEAD
     [[ $build_style ]] && style+=" [$build_style]"
 
     for s in $build_helper; do
@@ -279,6 +292,10 @@ install_pkg_deps() {
         msg_normal "$pkgver: building${style} (dependency of $targetpkg) for $XBPS_TARGET_MACHINE...\n"
     else
         msg_normal "$pkgver: building${style} for $XBPS_TARGET_MACHINE...\n"
+=======
+    if [ -z "$build_depends" -a -z "$host_build_depends" -a -z "$host_check_depends" -a -z "$run_depends" ]; then
+        return 0
+>>>>>>> b020eada1e9 (xbps-src: implement a 'check' stage)
     fi
 
     #
@@ -406,6 +423,39 @@ install_pkg_deps() {
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
     #
+    # Host check dependencies.
+    #
+    for i in ${host_check_depends}; do
+        check_pkgdep_matched "$i" version
+        local rval=$?
+        if [ $rval -eq 0 ]; then
+            echo "   [check] ${i}: installed."
+            continue
+        elif [ $rval -eq 1 ]; then
+            _realpkg="$($XBPS_UHELPER_CMD getpkgname $i 2>/dev/null)"
+            iver=$($XBPS_UHELPER_CMD version ${_realpkg})
+            if [ $? -eq 0 -a -n "$iver" ]; then
+                echo "   [check] ${i}: installed $iver (virtualpkg)."
+                continue
+            else
+                echo "   [check] ${i}: unresolved check dependency!"
+                return 1
+            fi
+        else
+            repo=$($XBPS_QUERY_CMD -R -prepository ${i} 2>/dev/null)
+            if [ -n "${repo}" ]; then
+                echo "   [check] ${i}: found ($repo)"
+                check_binpkg_deps+=("${i}")
+                continue
+            else
+                echo "   [check] ${i}: not found."
+            fi
+        fi
+        check_missing_deps+=("${i}")
+    done
+
+
+    #
     # Target build dependencies.
     #
 <<<<<<< HEAD
@@ -527,6 +577,7 @@ install_pkg_deps() {
     done
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
 
+<<<<<<< HEAD
     #
     # Target run time dependencies
     #
@@ -589,6 +640,8 @@ install_pkg_deps() {
            done
     fi
 
+=======
+>>>>>>> b020eada1e9 (xbps-src: implement a 'check' stage)
     # Missing host dependencies, build from srcpkgs.
     for i in ${host_missing_deps[@]}; do
         # packages not found in repos, install from source.
@@ -607,6 +660,21 @@ install_pkg_deps() {
         host_binpkg_deps+=("$i")
     done
 
+<<<<<<< HEAD
+=======
+    # Missing check dependencies, build from srcpkgs.
+    for i in ${check_missing_deps[@]}; do
+        # packages not found in repos, install from source.
+        (
+        curpkgdepname=$($XBPS_UHELPER_CMD getpkgname "$i" 2>/dev/null)
+        setup_pkg $curpkgdepname
+        exec env XBPS_DEPENDENCY=1 XBPS_BINPKG_EXISTS=1 \
+            $XBPS_LIBEXECDIR/build.sh $sourcepkg $pkg $target || exit $?
+        ) || exit $?
+        check_binpkg_deps+=("$i")
+    done
+
+>>>>>>> b020eada1e9 (xbps-src: implement a 'check' stage)
     # Missing target dependencies, build from srcpkgs.
     for i in ${missing_deps[@]}; do
         # packages not found in repos, install from source.
@@ -666,6 +734,7 @@ install_pkg_deps() {
         install_pkg_from_repos "$cross" target "${binpkg_deps[@]}"
     fi
 
+<<<<<<< HEAD
     return 0
 =======
 install_pkg_from_repos() {
@@ -907,4 +976,15 @@ install_pkg_deps() {
 		TARGETPKG_PKGDEPS_DONE=1
 	fi
 >>>>>>> 9e804ed8d18 (Merge xbps-src code to make it usable in a standalone mode.)
+=======
+    for i in ${check_binpkg_deps[@]}; do
+        msg_normal "$pkgver: installing check dependency '$i' ...\n"
+        install_pkg_from_repos "${i}"
+    done
+
+    for i in ${binpkg_deps[@]}; do
+        msg_normal "$pkgver: installing target dependency '$i' ...\n"
+        install_pkg_from_repos "$i" $cross
+    done
+>>>>>>> b020eada1e9 (xbps-src: implement a 'check' stage)
 }

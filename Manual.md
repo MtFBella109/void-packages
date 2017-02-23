@@ -143,11 +143,15 @@ can be used to perform other operations before configuring the package.
 
 - `build` This phase compiles/prepares the `source files` via `make` or any other compatible method.
 
+<<<<<<< HEAD
 - `check` This optional phase checks the result of the `build` phase by running the testsuite provided by the package.
 If the default `do_check` function provided by the build style doesn't do anything, the template should set
 `make_check_target` and/or `make_check_args` appropriately or define its own `do_check` function. If tests take too long
 or can't run in all environments, `make_check` should be set to fitting value or
 `do_check` should be customized to limit testsuite unless `XBPS_CHECK_PKGS` is `full`.
+=======
+- `check` This optional phase checks the result of the `build` phase for example by running `make -k check`.
+>>>>>>> b020eada1e9 (xbps-src: implement a 'check' stage)
 
 - `install` This phase installs the `package files` into the package destdir `<masterdir>/destdir/<pkgname>-<version>`,
 via `make install` or any other compatible method.
@@ -495,6 +499,10 @@ Example: `checkdepends="gtest"`.
 =======
 Example `makedepends="foo blah"`.
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+
+- `checkdepends` The list of dependencies required to run the package checks, i.e.
+the script or make rule specified in the template's `do_check()` function.
+Example `checkdepends="gtest"`.
 
 - `depends` The list of dependencies required to run the package. These dependencies
 are not installed to the master directory, rather are only checked if a binary package

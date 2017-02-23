@@ -44,6 +44,7 @@ unset -v var
 unset -v pkgname version revision short_desc homepage license maintainer
 unset -v archs distfiles checksum build_style build_helper nocross broken
 unset -v configure_script configure_args wrksrc build_wrksrc create_wrksrc
+<<<<<<< HEAD
 unset -v make_build_args make_check_args make_install_args
 unset -v make_build_target make_check_target make_install_target
 unset -v make_cmd meson_cmd gem_cmd fetch_cmd make_check_pre
@@ -55,6 +56,10 @@ unset -v gemspec
 unset -v go_import_path go_package go_mod_mode
 unset -v patch_args disable_parallel_build disable_parallel_check
 unset -v keep_libtool_archives make_use_env
+=======
+unset -v make_cmd make_build_args make_install_args make_build_target make_install_target python_version stackage
+unset -v patch_args disable_parallel_build keep_libtool_archives
+>>>>>>> b020eada1e9 (xbps-src: implement a 'check' stage)
 unset -v reverts subpackages makedepends hostmakedepends checkdepends depends restricted
 unset -v nopie build_options build_options_default bootstrap repository reverts
 unset -v CFLAGS CXXFLAGS FFLAGS CPPFLAGS LDFLAGS LD_LIBRARY_PATH
