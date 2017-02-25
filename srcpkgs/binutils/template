@@ -14,6 +14,7 @@ license="GPL-3.0-or-later"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
 >>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://www.gnu.org/software/binutils/"
+<<<<<<< HEAD
 distfiles="${GNU_SITE}/binutils/binutils-${version}.tar.xz"
 checksum=ce2017e059d63e67ddb9240e9d4ec49c2893605035cd60e92ad53177f4377237
 
@@ -30,6 +31,18 @@ else
 	_makeinfo=MAKEINFO=/bin/true
 	# Set to space force no subpackages
 	subpackages=" "
+=======
+license="GPL-3"
+distfiles="${GNU_SITE}/$pkgname/$pkgname-$version.tar.bz2"
+checksum=369737ce51587f92466041a97ab7d2358c6d9e1b6490b3940eb09fb0a9a6ac88
+nopie=yes
+
+if [ "$CHROOT_READY" ]; then
+	hostmakedepends="flex perl"
+	checkdepends="bc"
+else
+	export XBPS_CHECK_PKGS=0
+>>>>>>> 59df1b96644 (binutils: add do_check() and checkdepends)
 fi
 
 _get_triplet() {
@@ -85,7 +98,30 @@ do_configure() {
 		conf+=" --enable-targets=all"
 	fi
 
+<<<<<<< HEAD
 	# enable multilib on x86_64 glibc
+=======
+	# Rebuild libiberty.a with -fPIC
+	cp -a libiberty libiberty-pic
+	make -C libiberty-pic clean
+	make CFLAGS="$CFLAGS -fPIC" -C libiberty-pic
+
+	# Rebuild libbfd.a with -fPIC
+	# hidden visability prevent 3rd party shared libraries exporting bfd non-stable API
+	cp -a bfd bfd-pic
+	make -C bfd-pic clean
+	make CFLAGS="$CFLAGS -fPIC -fvisibility=hidden" -C bfd-pic
+
+	# Rebuild libopcodes.a with -fPIC
+	cp -a opcodes opcodes-pic
+	make -C opcodes-pic clean
+	make CFLAGS="$CFLAGS -fPIC" -C opcodes-pic
+}
+do_check() {
+	make -k check
+}
+do_install() {
+>>>>>>> 59df1b96644 (binutils: add do_check() and checkdepends)
 	if [ "$XBPS_TARGET_MACHINE" = "x86_64" ]; then
 		conf+=" --enable-multilib"
 	else
