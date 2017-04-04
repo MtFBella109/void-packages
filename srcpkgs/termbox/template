@@ -1,5 +1,6 @@
 # Template file for 'termbox'
 pkgname=termbox
+<<<<<<< HEAD
 version=1.1.2
 revision=2
 build_style=waf3
@@ -20,6 +21,18 @@ post_extract() {
 	ln -s .waf3-* .waf3
 	rm waf.py
 }
+=======
+version=1.1.0
+revision=1
+build_style=waf
+hostmakedepends="python"
+short_desc="Library for writing text-based user interfaces"
+maintainer="Diogo Leal <diogo@diogoleal.com>"
+license="MIT"
+homepage="https://github.com/nsf/termbox/"
+distfiles="https://github.com/nsf/termbox/archive/v${version}.tar.gz"
+checksum=2743ee4aeb0ff39fadbaf945b76c43e6f6bba544156f2576282b775a3067d748
+>>>>>>> eef4aa707b5 (New package: termbox-1.1.0)
 
 post_install() {
 	vlicense COPYING
@@ -29,7 +42,11 @@ termbox-devel_package() {
 	short_desc+=" - development files"
 	depends="${sourcepkg}>=${version}_${revision}"
 	pkg_install() {
+<<<<<<< HEAD
 		vmove usr/include
+=======
+		vmove usr/include/
+>>>>>>> eef4aa707b5 (New package: termbox-1.1.0)
 		vmove usr/lib/*.a
 		vmove usr/lib/*.so
 	}
