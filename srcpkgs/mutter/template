@@ -1,7 +1,11 @@
 # Template file for 'mutter'
 pkgname=mutter
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=48.5
+=======
+version=3.24.1
+>>>>>>> e9d2a42afa6 (mutter: update to 3.24.1)
 revision=1
 build_helper="gir"
 build_style=meson
@@ -32,6 +36,7 @@ version=3.4.1
 distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
 build_style=gnu-configure
 <<<<<<< HEAD
+<<<<<<< HEAD
 configure_args="--disable-scrollkeeper --disable-schemas-compile --disable-static"
 makedepends="pkg-config intltool gnome-doc-utils gobject-introspection gtk+3-devel startup-notification-devel libcanberra-devel clutter-devel libgirepository-devel json-glib-devel libffi-devel"
 fulldepends="zenity desktop-file-utils gsettings-desktop-schemas>=3.3.92_1"
@@ -46,6 +51,14 @@ makedepends="
  zenity"
 depends="zenity>=3.14 desktop-file-utils"
 >>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+=======
+configure_args="--disable-schemas-compile --disable-static --enable-egl-device"
+hostmakedepends="pkg-config zenity glib-devel gobject-introspection"
+makedepends="json-glib-devel upower-devel gnome-desktop-devel libinput-devel
+ glib-devel libcanberra-devel startup-notification-devel libSM-devel libXtst-devel
+ elogind-devel libdrm-devel libinput-devel libgudev-devel"
+depends="zenity desktop-file-utils"
+>>>>>>> e9d2a42afa6 (mutter: update to 3.24.1)
 short_desc="Lightweight GTK+3 window manager"
 <<<<<<< HEAD
 maintainer="Juan RP <xtraeme@gmail.com>"
@@ -58,6 +71,7 @@ maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.gnome.org"
 license="GPL-2"
 distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+<<<<<<< HEAD
 checksum=0b23a2d31980d9de8e92ef940e6f63e3ac0f6446e2afc69ecbc80163f6af3a23
 >>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 
@@ -65,6 +79,28 @@ checksum=0b23a2d31980d9de8e92ef940e6f63e3ac0f6446e2afc69ecbc80163f6af3a23
 # conditions in meson/ninja
 pre_build() {
 	ninja ${makejobs} -C build src/meta-dbus-display-config.h
+=======
+checksum=acaa77f9705cc6ca4a3d41935524ff31ba7a4c677bdd3e1d4662bbf3ece86a24
+shlib_provides="libmutter-clutter-0.so libmutter-cogl-path-0.so libmutter-cogl-0.so libmutter-cogl-pango-0.so"
+nocross="https://build.voidlinux.eu/builders/armv7l_builder/builds/1295/steps/shell_3/logs/stdio"
+
+
+# Package build options
+build_options="gir"
+# Disable gir for cross builds.
+if [ -z "$CROSS_BUILD" ]; then
+	build_options_default="gir"
+fi
+
+pre_configure() {
+	local _arch=x86
+	for i in /usr/src/kernel-headers-*/include; do
+		CFLAGS+=" -I$i -I$i/uapi -I$i/../arch/$_arch/include"
+	done
+	#sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+	#sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' cogl/libtool
+	#sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' clutter/libtool
+>>>>>>> e9d2a42afa6 (mutter: update to 3.24.1)
 }
 
 post_install() {
