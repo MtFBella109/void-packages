@@ -1,7 +1,11 @@
 # Template file for 'gnome-settings-daemon'
 pkgname=gnome-settings-daemon
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=48.1
+=======
+version=3.24.0
+>>>>>>> 7b1ff78f9a7 (gnome-settings-daemon: update to 3.24.0)
 revision=1
 build_style=meson
 configure_args="-Dsystemd=false"
@@ -53,8 +57,12 @@ maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.gnome.org"
 license="GPL-3"
 distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
+<<<<<<< HEAD
 checksum=066bc8ed751c5f6b5a9590911a0fb2b51b0c3436ae1caccfa42e0791c34fedee
 >>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
+=======
+checksum=4f31a68aebdd4e0c37336306a4eea4cf219d46ed8fc59e3f3081b7a3088900c4
+>>>>>>> 7b1ff78f9a7 (gnome-settings-daemon: update to 3.24.0)
 
 if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" polkit"
