@@ -1,6 +1,11 @@
 # Template file for 'bochs'
+<<<<<<< HEAD
 pkgname=bochs
 version=2.7
+=======
+pkgname="bochs"
+version="2.6.9"
+>>>>>>> f9a525882ce (bochs: update to 2.6.9.)
 revision=1
 build_style=gnu-configure
 configure_args="--with-sdl2 --enable-all-optimizations --enable-e1000
@@ -8,6 +13,7 @@ configure_args="--with-sdl2 --enable-all-optimizations --enable-e1000
  --enable-x86-debugger --enable-usb --enable-usb-ohci --enable-usb-ehci
  --enable-usb-xhci --enable-debugger --enable-debugger-gui"
 hostmakedepends="pkg-config"
+<<<<<<< HEAD
 makedepends="libX11-devel libXrandr-devel SDL2-devel"
 short_desc="Highly portable open source x86(_64) PC emulator"
 maintainer="Orphaned <orphan@voidlinux.org>"
@@ -16,6 +22,13 @@ homepage="https://bochs.sourceforge.net/"
 changelog="https://raw.githubusercontent.com/bochs-emu/Bochs/master/bochs/CHANGES"
 distfiles="${SOURCEFORGE_SITE}/bochs/bochs-${version}.tar.gz"
 checksum=a010ab1bfdc72ac5a08d2e2412cd471c0febd66af1d9349bc0d796879de5b17a
+=======
+makedepends="libX11-devel libXrandr-devel gtk+-devel"
+configure_args="--enable-debugger --enable-disasm"
+disable_parallel_build=yes
+distfiles="$SOURCEFORGE_SITE/bochs/bochs-${version}.tar.gz"
+checksum=ee5b677fd9b1b9f484b5aeb4614f43df21993088c0c0571187f93acb0866e98c
+>>>>>>> f9a525882ce (bochs: update to 2.6.9.)
 
 pre_build() {
 	vsed -i 's/^LIBS = /LIBS = -lpthread/g' Makefile
