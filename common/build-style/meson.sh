@@ -1,4 +1,5 @@
 #
+<<<<<<< HEAD
 # This helper is for templates using meson.
 #
 
@@ -41,6 +42,15 @@ do_configure() {
 		-Db_staticpic=true \
 		-Dpkgconfig.relocatable=false \
 		${configure_args} . ${meson_builddir}
+=======
+# This helper is for templates using GNU configure scripts.
+#
+do_configure() {
+	: ${meson_cmd:=meson}
+	: ${meson_builddir:=build}
+
+	${meson_cmd} --prefix=/usr --buildtype=plain ${configure_args} . ${meson_builddir}
+>>>>>>> fb8e765889a (common/build-style: add meson build style)
 }
 
 do_build() {
@@ -51,6 +61,7 @@ do_build() {
 	${make_cmd} -C ${meson_builddir} ${makejobs} ${make_build_args} ${make_build_target}
 }
 
+<<<<<<< HEAD
 do_check() {
 	: ${make_cmd:=meson}
 	: ${make_check_target:=test}
@@ -59,6 +70,8 @@ do_check() {
 	${make_check_pre} ${make_cmd} ${make_check_target} -C ${meson_builddir} ${makejobs} ${make_check_args}
 }
 
+=======
+>>>>>>> fb8e765889a (common/build-style: add meson build style)
 do_install() {
 	: ${make_cmd:=ninja}
 	: ${make_install_target:=install}

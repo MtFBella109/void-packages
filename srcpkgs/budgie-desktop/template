@@ -2,6 +2,7 @@
 pkgname=budgie-desktop
 version=10.8.2
 revision=1
+<<<<<<< HEAD
 build_style=meson
 build_helper=gir
 configure_args="-Dwith-gtk-doc=false -Duse-old-zenity=true"
@@ -31,4 +32,24 @@ budgie-desktop-devel_package() {
 		vmove "usr/lib/*.so"
 		vmove usr/share/gir-1.0
 	}
+=======
+hostmakedepends="meson gtk-doc pkg-config intltool libtool gobject-introspection"
+makedepends="libglib-devel gtk+3-devel libpeas-devel pulseaudio-devel gnome-desktop-devel
+ mutter-devel gnome-menus-devel libwnck-devel libupower-glib1 vala
+ libuuid-devel polkit-devel gettext-devel ibus-devel accountsservice-devel
+ upower-devel gnome-bluetooth-devel"
+depends="gnome-session"
+build_style="meson"
+# Needs gobject-introspection and libgirepository-devel, vala, gjs ...
+nocross=yes
+short_desc="Budgie desktop"
+maintainer="Frankie Wilde <train_me_well@abv.bg>"
+license="GPL-2, LGPL-2.1"
+homepage="https://github.com/solus-project/budgie-desktop"
+distfiles="https://github.com/solus-project/${pkgname}/releases/download/v${version}/${pkgname}-${version}.tar.xz"
+checksum=bb37acbc6edddf64860352fac73fd968801e29ce0e66962ef2a3dd3a443d568f
+
+pre_install() {
+	export LD=$CC
+>>>>>>> fb8e765889a (common/build-style: add meson build style)
 }
