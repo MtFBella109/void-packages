@@ -2,10 +2,14 @@
 pkgname=gnome-settings-daemon
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=48.1
 =======
 version=3.24.0
 >>>>>>> 7b1ff78f9a7 (gnome-settings-daemon: update to 3.24.0)
+=======
+version=3.24.2
+>>>>>>> 2096e1c1d93 (gnome-settings-daemon: update to 3.24.2.)
 revision=1
 build_style=meson
 configure_args="-Dsystemd=false"
@@ -58,11 +62,15 @@ homepage="http://www.gnome.org"
 license="GPL-3"
 distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
 <<<<<<< HEAD
+<<<<<<< HEAD
 checksum=066bc8ed751c5f6b5a9590911a0fb2b51b0c3436ae1caccfa42e0791c34fedee
 >>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 =======
 checksum=4f31a68aebdd4e0c37336306a4eea4cf219d46ed8fc59e3f3081b7a3088900c4
 >>>>>>> 7b1ff78f9a7 (gnome-settings-daemon: update to 3.24.0)
+=======
+checksum=4aa9d72644e3ee8a30096a38986b0e9543fca92f586c561f6c8a11fb8148dcca
+>>>>>>> 2096e1c1d93 (gnome-settings-daemon: update to 3.24.2.)
 
 if [ "$CROSS_BUILD" ]; then
 	hostmakedepends+=" polkit"
