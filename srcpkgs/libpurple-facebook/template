@@ -1,14 +1,34 @@
 # Template file for 'libpurple-facebook'
+<<<<<<< HEAD
 pkgname=libpurple-facebook
 reverts="20160409.66ee77378d82_1 20160125.92885e0456ed_1"
 version=0.9.6
 revision=1
+=======
+
+pkgname="libpurple-facebook"
+_version="0.9.4"
+_rev="c9b74a765767"
+reverts="20160409.66ee77378d82_1 20160125.92885e0456ed_1"
+version=${_version}.${_rev}
+revision=2
+>>>>>>> c81664fd642 (libpurple-facebook: fix xbps-checkvers/builder build loop)
 build_style=gnu-configure
+wrksrc=purple-facebook-${_version}-${_rev}
 hostmakedepends="pkg-config"
 makedepends="libpurple-devel json-glib-devel"
+<<<<<<< HEAD
 short_desc="Facebook plugin for libpurple"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/dequis/purple-facebook"
 distfiles="https://github.com/dequis/purple-facebook/releases/download/v${version}/purple-facebook-${version}.tar.gz"
 checksum=1db6ed9e8f81cbd4ae10d75c04f5393e5cd4ca11ced74408ca6d07c7b888f3f7
+=======
+short_desc="A Facebook plugin for libpurple"
+maintainer="John Regan <john@jrjrtech.com>"
+license="GPL-2"
+homepage="https://github.com/dequis/purple-facebook"
+distfiles="https://github.com/dequis/purple-facebook/releases/download/v${_version}-${_rev}/purple-facebook-${_version}-${_rev}.tar.gz"
+checksum=cde5ef255668380abccf74b76844f95adf33e06421775ae302b93afbcb4eae8e
+>>>>>>> c81664fd642 (libpurple-facebook: fix xbps-checkvers/builder build loop)
