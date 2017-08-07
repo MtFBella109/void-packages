@@ -1,8 +1,13 @@
 # Template file for 'binutils'
 pkgname=binutils
 <<<<<<< HEAD
+<<<<<<< HEAD
 version=2.44
 revision=2
+=======
+version=2.29
+revision=1
+>>>>>>> 4c8d2be3f2a (binutils: update to 2.29)
 bootstrap=yes
 hostmakedepends="pkgconf tar"
 makedepends="zlib-devel libzstd-devel"
@@ -34,8 +39,7 @@ else
 =======
 license="GPL-3"
 distfiles="${GNU_SITE}/$pkgname/$pkgname-$version.tar.bz2"
-checksum=369737ce51587f92466041a97ab7d2358c6d9e1b6490b3940eb09fb0a9a6ac88
-nopie=yes
+checksum=29a29549869039aad75fdf507ac30366da5ad0b974fbff4a8e7148dbf4f40ebf
 
 if [ "$CHROOT_READY" ]; then
 	hostmakedepends="flex perl"
