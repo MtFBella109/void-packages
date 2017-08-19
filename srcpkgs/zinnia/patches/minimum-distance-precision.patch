@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 --- a/feature.cpp
 +++ b/feature.cpp
+=======
+--- feature.cpp
++++ feature.cpp
+>>>>>>> 4d0bd4319a4 (New package: zinnia-0.06)
 @@ -42,7 +42,8 @@ float minimum_distance(const Node *first, const Node *last,
  
    const float a = last->x - first->x;

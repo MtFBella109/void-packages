@@ -16,15 +16,25 @@ built even if C++11 is enabled.
 
 diff --git a/AUTHORS b/AUTHORS
 index a44e82c..fa52d6a 100644
+<<<<<<< HEAD
 --- a/AUTHORS
 +++ b/AUTHORS
+=======
+--- AUTHORS
++++ AUTHORS
+>>>>>>> 4d0bd4319a4 (New package: zinnia-0.06)
 @@ -1 +1,2 @@
  Taku Kudo <taku@chasen.org>
 +Google Inc. <*@google.com>
 diff --git a/trainer.cpp b/trainer.cpp
 index a889bc7..84230b0 100644
+<<<<<<< HEAD
 --- a/trainer.cpp
 +++ b/trainer.cpp
+=======
+--- trainer.cpp
++++ trainer.cpp
+>>>>>>> 4d0bd4319a4 (New package: zinnia-0.06)
 @@ -104,7 +104,7 @@ class TrainerImpl: public Trainer {
      if (!fn) {
        return false;
