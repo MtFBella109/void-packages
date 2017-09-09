@@ -1,24 +1,45 @@
 # Template file for 'libexecinfo'
 pkgname=libexecinfo
 version=1.1
+<<<<<<< HEAD
 revision=3
 archs="*-musl"
 build_style=gnu-makefile
 short_desc="BSD licensed clone of the GNU libc backtrace facility"
 maintainer="John <me@johnnynator.dev>"
 license="BSD-2-Clause"
+=======
+revision=1
+build_style=gnu-makefile
+short_desc="A quick-n-dirty BSD licensed clone of the GNU libc backtrace facility"
+maintainer="John <johnz@posteo.net>"
+license="BSD-2"
+>>>>>>> 752c1945e78 (New package: libexecinfo-1.1)
 homepage="http://www.freshports.org/devel/libexecinfo"
 distfiles="http://distcache.freebsd.org/local-distfiles/itetcu/libexecinfo-${version}.tar.bz2"
 checksum=c9a21913e7fdac8ef6b33250b167aa1fc0a7b8a175145e26913a4c19d8a59b1f
 
+<<<<<<< HEAD
 do_install() {
 	vsed -e "/Version:/s@version@${version}@" -i libexecinfo.pc
+=======
+case "$XBPS_TARGET_MACHINE" in
+	*-musl) ;;
+	*) broken="Only for musl libc" ;;
+esac
+
+do_install() {
+>>>>>>> 752c1945e78 (New package: libexecinfo-1.1)
 	vinstall execinfo.h 644 usr/include
 	vinstall stacktraverse.h 644 usr/include
 	vinstall libexecinfo.a 755 usr/lib
 	vinstall libexecinfo.so.1 755 usr/lib
+<<<<<<< HEAD
 	ln -s libexecinfo.so.1 ${DESTDIR}/usr/lib/libexecinfo.so
 	vinstall libexecinfo.pc 644 usr/lib/pkgconfig
+=======
+	ln -s /usr/lib/libexecinfo.so.1 ${DESTDIR}/usr/lib/libexecinfo.so
+>>>>>>> 752c1945e78 (New package: libexecinfo-1.1)
 	head -28 execinfo.c > LICENSE
 	vlicense LICENSE
 }
@@ -30,6 +51,9 @@ libexecinfo-devel_package() {
 		vmove usr/include
 		vmove usr/lib/*.so
 		vmove usr/lib/*.a
+<<<<<<< HEAD
 		vmove usr/lib/pkgconfig
+=======
+>>>>>>> 752c1945e78 (New package: libexecinfo-1.1)
 	}
 }

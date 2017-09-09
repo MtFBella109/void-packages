@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 --- a/execinfo.c
 +++ b/execinfo.c
+=======
+--- execinfo.c.orig
++++ execinfo.c
+>>>>>>> 752c1945e78 (New package: libexecinfo-1.1)
 @@ -69,7 +69,8 @@
  char **
  backtrace_symbols(void *const *buffer, int size)

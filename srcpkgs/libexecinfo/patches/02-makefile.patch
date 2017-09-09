@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 --- a/Makefile
 +++ b/Makefile
+=======
+--- Makefile.orig
++++ Makefile
+>>>>>>> 752c1945e78 (New package: libexecinfo-1.1)
 @@ -23,24 +23,25 @@
  # SUCH DAMAGE.
  #
