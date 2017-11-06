@@ -7105,6 +7105,10 @@ libkateinterfaces.so.4 kate-4.14.2_1
 libkdeinit4_kate.so kate-4.14.2_1
 libkatepartinterfaces.so.4 kate-4.14.2_1
 libkdeinit4_kwrite.so kate-4.14.2_1
+libkomparediff2.so.5 libkomparediff2-17.08.2_1
+libkompareinterface.so.5 kompare-17.08.2_1
+libkomparedialogpages.so.5 kompare-17.08.2_1
+libfdt.so.1 dtc-1.4.1_1
 libokteta1core.so.1 okteta-4.14.2_1
 libkasten2gui.so.2 okteta-4.14.2_1
 libkasten2okteta1controllers.so.1 okteta-4.14.2_1
