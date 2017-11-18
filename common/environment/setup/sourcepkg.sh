@@ -58,8 +58,12 @@ unset -v patch_args disable_parallel_build disable_parallel_check
 unset -v keep_libtool_archives make_use_env
 =======
 unset -v make_cmd make_build_args make_install_args make_build_target make_install_target python_version stackage
+<<<<<<< HEAD
 unset -v patch_args disable_parallel_build keep_libtool_archives
 >>>>>>> b020eada1e9 (xbps-src: implement a 'check' stage)
+=======
+unset -v patch_args disable_parallel_build keep_libtool_archives make_use_env
+>>>>>>> c2afb300711 (common/environment/setup/sourcepkg.sh: unset {pre,do,post}_check, checkdepends)
 unset -v reverts subpackages makedepends hostmakedepends checkdepends depends restricted
 unset -v nopie build_options build_options_default bootstrap repository reverts
 unset -v CFLAGS CXXFLAGS FFLAGS CPPFLAGS LDFLAGS LD_LIBRARY_PATH
