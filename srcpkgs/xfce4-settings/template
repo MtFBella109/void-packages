@@ -1,45 +1,21 @@
 # Template file for 'xfce4-settings'
 pkgname=xfce4-settings
-<<<<<<< HEAD
-version=4.20.2
-revision=1
+version=4.12.1
+revision=2
 build_style=gnu-configure
-<<<<<<< HEAD
-<<<<<<< HEAD
-build_helper=gir
-configure_args="--enable-sound-settings --enable-xrandr --enable-upower-glib"
-hostmakedepends="gettext pkg-config glib-devel libxml2 wayland-devel"
-makedepends="exo-devel garcon-devel libcanberra-devel libnotify-devel
- libglib-devel gtk-layer-shell-devel wayland-devel
- libxklavier-devel upower-devel libXrandr-devel xf86-input-libinput-devel"
-=======
 configure_args="--enable-sound-settings --enable-pluggable-dialogs"
 hostmakedepends="pkg-config intltool"
 makedepends="libxfce4ui-devel libXi-devel libXcursor-devel
  exo-devel libXrandr-devel libxklavier-devel libnotify-devel dbus-devel
- libcanberra-devel garcon-devel upower0-devel"
->>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+ libcanberra-devel garcon-devel upower-devel"
 depends="desktop-file-utils gnome-icon-theme"
-conf_files="/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml"
 short_desc="Xfce settings manager"
-<<<<<<< HEAD
 maintainer="Đoàn Trần Công Danh <congdanhqx@gmail.com>"
 license="GPL-2.0-only"
 homepage="https://xfce.org/"
 changelog="https://raw.githubusercontent.com/xfce-mirror/xfce4-settings/xfce-${version%.*}/NEWS"
 distfiles="https://archive.xfce.org/src/xfce/${pkgname}/${version%.*}/${pkgname}-${version}.tar.bz2"
 checksum=6e11776e640798a1ac4168d53877f105bb3e8cf93b443c160841e3acdab63939
-=======
-version=4.6.3
-distfiles="http://archive.xfce.org/src/xfce/$pkgname/4.6/$pkgname-$version.tar.bz2"
-build_style=gnu_configure
-configure_args="--localstatedir=/var --enable-libxklavier
- --enable-sound-settings --enable-pluggable-dialogs"
-=======
-configure_args="--enable-sound-settings --enable-pluggable-dialogs"
-depends="desktop-file-utils gnome-icon-theme"
-makedepends="pkg-config intltool libxfce4ui-devel gtk+-devel xfconf-devel libXi-devel libXcursor-devel exo-devel libXrandr-devel libxklavier-devel libnotify-devel dbus-devel libcanberra-devel garcon-devel"
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Xfce settings manager"
 maintainer="Juan RP <xtraeme@gmail.com>"
 checksum=f34b896960f7c30c3601b9946b145076a215778da6ab8399d268cd1f2b2b9d34
@@ -48,30 +24,3 @@ long_desc="
 
 conf_files="/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml"
 
-<<<<<<< HEAD
-Add_dependency build pkg-config
-Add_dependency build intltool
-Add_dependency full glibc
-Add_dependency full gtk+
-Add_dependency full dbus-glib
-Add_dependency full hicolor-icon-theme
-Add_dependency full desktop-file-utils
-Add_dependency full exo
-Add_dependency full libnotify
-Add_dependency full libxklavier
-Add_dependency full libwnck
-Add_dependency full libxfcegui4
-Add_dependency full libXrandr
-Add_dependency full libXcursor
->>>>>>> 381e75ce7c9 (Major infrastructure changes, part 2.)
-=======
-
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
-=======
-maintainer="Juan RP <xtraeme@voidlinux.eu>"
-homepage="http://www.xfce.org/"
-license="GPL-2"
-homepage="http://xfce.org"
-distfiles="http://archive.xfce.org/src/xfce/$pkgname/${version%.*}/$pkgname-$version.tar.bz2"
-checksum=04becef105c19d0266cfe8dbf42619e7233c3b9fa99b43dbfc9c6a5959501f81
->>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
