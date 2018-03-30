@@ -1,73 +1,19 @@
 # Template file for 'vala'
 pkgname=vala
-# Should be kept in sync with 'valadoc' (shared distfiles)
-version=0.56.18
-revision=2
+version=0.40.2
+revision=1
 build_style=gnu-configure
-<<<<<<< HEAD
-configure_args="--disable-valadoc GI_GIRDIR=/usr/share/gir-1.0"
 hostmakedepends="flex libxslt pkg-config automake libtool"
-makedepends="libfl-devel libglib-devel"
+makedepends="graphviz-devel libfl-devel libglib-devel"
 checkdepends="dbus libgirepository-devel"
-=======
-configure_args="--enable-vapigen"
-makedepends="pkg-config flex libxslt>=0 glib-devel"
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
 short_desc="Compiler for the GObject type system"
-<<<<<<< HEAD
-maintainer="Enno Boland <gottox@voidlinux.org>"
-license="LGPL-2.1-or-later"
-homepage="https://wiki.gnome.org/Projects/Vala"
-changelog="https://gitlab.gnome.org/GNOME/vala/raw/master/NEWS"
-=======
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://live.gnome.org/Vala"
-license="LGPL-2.1"
->>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
+license="LGPL-2.1-or-later"
 distfiles="${GNOME_SITE}/vala/${version%.*}/vala-${version}.tar.xz"
-checksum=f2affe7d40ab63db8e7b9ecc3f6bdc9c2fc7e3134c84ff2d795f482fe926a382
-shlib_provides="libvalaccodegen.so"
-make_check=extended # take a lot of time
+checksum=75a3dc2de36873d8ceab168b2fde1b2c378a1f7104a3b3391ba3acf579c674b3
 
 pre_configure() {
 	autoreconf -if
 }
 
-<<<<<<< HEAD
-post_install() {
-	# remove the /usr/bin prefix from the vapigen variable
-	# so the package that use it fall into our wrapper.
-	# keep the binary versioned, we don't know the potential
-	# fallout from using the unversioned one
-	vsed -e "s|^vapigen=.*|vapigen=vapigen-${version%.*}|g" \
-		 -i ${DESTDIR}/usr/lib/pkgconfig/vapigen-${version%.*}.pc
-}
-
-libvala_package() {
-	short_desc+=" - vala shared library"
-	pkg_install() {
-		vmove "usr/lib/libvala-*.so.*"
-	}
-}
-
-vala-devel_package() {
-	depends="libglib-devel vala-${version}_${revision}"
-	short_desc+=" - vala development files"
-	pkg_install() {
-		vmove "usr/lib/libvala-*.so"
-		vmove "usr/lib/pkgconfig/libvala*.pc"
-		vmove "usr/include/vala-*"
-		vmove "usr/share/vala/vapi/libvala-*.*"
-		vmove usr/share/aclocal
-	}
-}
-
-vala-doc_package() {
-	depends="vala-${version}_${revision}"
-	short_desc+=" - devhelp documentation"
-	pkg_install() {
-		vmove usr/share/devhelp
-	}
-}
-=======
->>>>>>> 9d4ca1a60d7 (Update all packages for xbps-src>=28. WARNING: xbps-src-28 (or from git) required!)
