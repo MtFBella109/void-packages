@@ -15,10 +15,9 @@ makedepends="MesaLib-devel gtkglext-devel libcurl-devel giflib-devel librsvg-dev
  $(vopt_if vnc libvncserver-devel)"
 depends="xrandr"
 short_desc="OpenSceneGraph: high performance real-time graphics toolkit"
-maintainer="Orphaned <orphan@voidlinux.org>"
-license="LGPL-2.1-or-later, WxWindows-exception-3.1, custom:OpenSceneGraph"
-homepage="https://www.openscenegraph.org"
-changelog="https://raw.githubusercontent.com/openscenegraph/OpenSceneGraph/master/NEWS.txt"
+maintainer="Jürgen Buchmüller <pullmoll@t-online.de>"
+license="OSGPL-2.0-or-later"
+homepage="http://www.openscenegraph.org"
 distfiles="https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-${version}.tar.gz"
 checksum=aea196550f02974d6d09291c5d83b51ca6a03b3767e234a8c0e21322927d1e12
 
