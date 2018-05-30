@@ -8,14 +8,15 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 =======
 # Template file for 'linux4.16'
 pkgname=linux4.16
-version=4.16.12
-revision=2
+version=4.16.14
+revision=1
 patch_args="-Np1"
 wrksrc="linux-${version}"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="https://www.kernel.org"
 >>>>>>> 6704eb9492a (linux4: Forgot to update revision to rebuild with new LSM enabled config :():srcpkgs/linux4.16/template
 license="GPL-2.0-only"
+<<<<<<< HEAD:srcpkgs/linux5.4/template
 homepage="https://www.kernel.org"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-${version%.*}.tar.xz
  https://cdn.kernel.org/pub/linux/kernel/v5.x/patch-${version}.xz"
@@ -23,6 +24,11 @@ checksum="bf338980b1670bca287f9994b7441c2361907635879169c64ae78364efc5f491
  591b81c21dae43b06967bb68a329f285c30c7ef23919b245b9314c56a0debdf7"
 python_version=3
 skip_extraction="patch-${version}.xz"
+=======
+short_desc="The Linux kernel and modules (${version%.*} series)"
+distfiles="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
+checksum=b708b6fd755df7d3f954ca9542e59d0070488b29653071ae4b13fb76b995dfc0
+>>>>>>> c85e2a68061 (linux4.16: update to 4.16.15.):srcpkgs/linux4.16/template
 
 nodebug=yes  # -dbg package is generated below manually
 nostrip=yes
