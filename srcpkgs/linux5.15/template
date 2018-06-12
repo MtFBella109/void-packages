@@ -1,3 +1,4 @@
+<<<<<<< HEAD:srcpkgs/linux5.15/template
 # Template file for 'linux5.15'
 pkgname=linux5.15
 version=5.15.193
@@ -5,6 +6,14 @@ revision=1
 short_desc="Linux kernel and modules (${version%.*} series)"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="GPL-2.0-only"
+=======
+# Template file for 'linux4.4'
+pkgname=linux4.4
+version=4.4.130
+revision=2
+wrksrc="linux-${version}"
+maintainer="Juan RP <xtraeme@voidlinux.eu>"
+>>>>>>> 6704eb9492a (linux4: Forgot to update revision to rebuild with new LSM enabled config :():srcpkgs/linux4.4/template
 homepage="https://www.kernel.org"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-${version%.*}.tar.xz
  https://cdn.kernel.org/pub/linux/kernel/v5.x/patch-${version}.xz"

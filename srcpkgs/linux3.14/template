@@ -1,8 +1,16 @@
+<<<<<<< HEAD:srcpkgs/linux3.14/template
 # Template file for 'linux3.14'
 #
 pkgname=linux3.14
 version=3.14.36
 revision=1
+=======
+# Template file for 'linux4.9'
+pkgname=linux4.9
+version=4.9.93
+revision=2
+patch_args="-Np1"
+>>>>>>> 6704eb9492a (linux4: Forgot to update revision to rebuild with new LSM enabled config :():srcpkgs/linux4.9/template
 wrksrc="linux-${version}"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.kernel.org"
