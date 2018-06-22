@@ -1,4 +1,5 @@
 <<<<<<< HEAD:srcpkgs/linux5.4/template
+<<<<<<< HEAD:srcpkgs/linux5.4/template
 # Template file for 'linux5.4'
 pkgname=linux5.4
 version=5.4.296
@@ -9,10 +10,16 @@ maintainer="Orphaned <orphan@voidlinux.org>"
 # Template file for 'linux4.16'
 pkgname=linux4.16
 version=4.16.14
+=======
+# Template file for 'linux4.14'
+pkgname=linux4.14
+version=4.14.52
+>>>>>>> 89da29260ad (linux4.14: update to 4.14.52.):srcpkgs/linux4.14/template
 revision=1
 patch_args="-Np1"
 wrksrc="linux-${version}"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
+<<<<<<< HEAD:srcpkgs/linux5.4/template
 homepage="https://www.kernel.org"
 >>>>>>> 6704eb9492a (linux4: Forgot to update revision to rebuild with new LSM enabled config :():srcpkgs/linux4.16/template
 license="GPL-2.0-only"
@@ -29,6 +36,13 @@ short_desc="The Linux kernel and modules (${version%.*} series)"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
 checksum=b708b6fd755df7d3f954ca9542e59d0070488b29653071ae4b13fb76b995dfc0
 >>>>>>> c85e2a68061 (linux4.16: update to 4.16.15.):srcpkgs/linux4.16/template
+=======
+homepage="http://www.kernel.org"
+license="GPL-2.0-only"
+short_desc="The Linux kernel and modules (${version%.*} series)"
+distfiles="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
+checksum=a5d226c7b2fd1eb0f01d56e4e2c6a0100784b68df907cc7317f32bde34f88810
+>>>>>>> 89da29260ad (linux4.14: update to 4.14.52.):srcpkgs/linux4.14/template
 
 nodebug=yes  # -dbg package is generated below manually
 nostrip=yes
