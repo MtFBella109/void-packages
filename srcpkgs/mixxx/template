@@ -1,36 +1,47 @@
 # Template file for 'mixxx'
 pkgname=mixxx
-<<<<<<< HEAD
-version=2.5.1
-revision=4
-build_style=cmake
-configure_args="-DCMAKE_BUILD_TYPE=Release -DENGINEPRIME=OFF"
-hostmakedepends="extra-cmake-modules pkg-config protobuf qt6-tools qt6-base
- qt6-declarative-host-tools qt6-shadertools"
-makedepends="benchmark-devel chromaprint-devel faad2-devel ffmpeg6-devel
- glib-devel glu-devel gperftools-devel gtest-devel lame-devel libid3tag-devel
- libsndfile-devel libmad-devel libmodplug-devel libusb-devel opusfile-devel
- libflac-devel libogg-devel libvorbis-devel lilv-devel lv2
- wavpack-devel portaudio-devel portmidi-devel protobuf-devel rubberband-devel
- taglib-devel upower-devel hidapi-devel speex-devel soundtouch-devel
- qt6-qt5compat-devel qt6-base-devel qt6-declarative-devel
- qt6-base-private-devel qt6-declarative-private-devel qt6-svg-devel
- qt6-tools-devel qtkeychain-qt6-devel qt6-shadertools-devel libebur128-devel
- gsl-devel guidelines-support-library openssl-devel libkeyfinder-devel"
-depends="qt6-plugin-sqlite"
-=======
-version=1.11.0
-revision=4
-hostmakedepends="scons pkg-config"
-makedepends="qt-devel portaudio-devel libusb-devel libmad-devel protobuf-devel
- libid3tag-devel libvorbis-devel libflac-devel glu-devel taglib-devel
- libsndfile-devel portmidi-devel vamp-plugin-sdk-devel faad2-devel
- libmp4v2-devel"
-depends="qt-plugin-sqlite"
->>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
+version=2.1.1
+revision=1
+wrksrc="mixxx-release-${version}"
+hostmakedepends="pkg-config scons"
+makedepends="chromaprint-devel faad2-devel ffmpeg-devel fftw-devel glu-devel
+ libid3tag-devel libmad-devel libmp4v2-devel libshout-devel libusb-devel
+ opus-devel portaudio-devel portmidi-devel protobuf-devel qt5-script-devel
+ qt5-svg-devel qt5-xmlpatterns-devel rubberband-devel taglib-devel upower-devel
+ vamp-plugin-sdk-devel"
+depends="qt5-plugin-sqlite"
 short_desc="Open source digital DJing software that allows mixing music"
 maintainer="prez <prez@national.shitposting.agency>"
 license="GPL-2.0-or-later"
 homepage="https://www.mixxx.org"
-distfiles="https://github.com/mixxxdj/mixxx/archive/${version}.tar.gz"
-checksum=626f7a64292c1ef77d8aace4a746140f455596d44a6984db9d1e4caf4c4ce09d
+distfiles="https://github.com/mixxxdj/mixxx/archive/release-${version}.tar.gz"
+checksum=f92f8d9fd34b2b2e7e71dd8c7fd2ce0911180bbbd28407906afeab4db9195236
+_scons_args="shoutcast=1 faad=1 tuned=0 prefix=/usr qt5=1 qtdir=/usr/include/qt5"
+
+nocross=https://build.voidlinux.eu/builders/armv7l_builder/builds/7882/steps/shell_3/logs/stdio
+
+do_build() {
+	case "$XBPS_TARGET_MACHINE" in
+		*-musl) find plugins -type f -exec sed -i "{}" \
+			-e "s;u_int8_t;uint8_t;g" -e "s;u_int32_t;uint32_t;g" \;
+			;;
+	esac
+	if [ "${XBPS_TARGET_MACHINE%-musl}" = "i686" ]; then
+		export CFLAGS+=" -msse"
+		export CXXFLAGS+=" -msse"
+	fi
+	sed -i \
+		-e 's/branch_name = .*/branch_name = "mixxx"/' \
+		-e 's/vcs_revision = .*/vcs_revision = "'$version'"/' \
+		src/SConscript
+
+	MAKEFLAGS="${makejobs}" scons ${makejobs} ${_scons_args}
+}
+
+do_install() {
+	if [ "$XBPS_TARGET_MACHINE" = "i686" ]; then
+		export CFLAGS+=" -msse"
+		export CXXFLAGS+=" -msse"
+	fi
+	scons ${_scons_args} install_root=${DESTDIR}/usr install
+}
