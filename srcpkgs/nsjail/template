@@ -1,7 +1,7 @@
 # Template file for 'nsjail'
 pkgname=nsjail
-version=2.6
-revision=2
+version=2.7
+revision=3
 build_style=gnu-makefile
 hostmakedepends="bison flex pkg-config protobuf which"
 makedepends="libnl3-devel protobuf-devel"
@@ -15,10 +15,6 @@ checksum="9c247d0cba565b4e3f91cc76e827ddf7f3ad499f54ba611edd25d4d7be4890c3
  e8c195a2a08daa70c7712adae3eaa01656b039dcc8cc1e5e8210006716761ad5"
 
 archs="aarch64* armv5tel* armv6l* armv7l* x86_64*"
-
-if [ "$XBPS_TARGET_LIBC" = "musl" ]; then
-	makedepends+=" musl-legacy-compat"
-fi
 
 post_extract() {
 	mv nsjail-$version/* .
