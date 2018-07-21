@@ -1,38 +1,8 @@
 # Template file for 'blender'
 pkgname=blender
-<<<<<<< HEAD
-version=4.4.3
-revision=1
-archs="x86_64* aarch64* ppc64*"
-build_style=cmake
-build_helper="qemu numpy"
-pycompile_dirs="usr/share/blender/${version%.*}/scripts"
-configure_args="-DWITH_INSTALL_PORTABLE=OFF -DWITH_PYTHON_INSTALL=OFF
- -DWITH_JACK=ON -DWITH_CODEC_FFMPEG=ON -DWITH_CODEC_SNDFILE=ON -DWITH_OPENMP=ON
- -DWITH_FFTW3=ON -DWITH_MOD_OCEANSIM=ON -DWITH_CYCLES_EMBREE=OFF -DWITH_OPENCOLORIO=ON
- -DWITH_IMAGE_OPENEXR=ON -DWITH_IMAGE_OPENJPEG=ON -DWITH_OPENSUBDIV=ON
- -DWITH_OPENCOLLADA=ON -DWITH_SYSTEM_GLEW=ON -DWITH_OPENVDB=ON -DWITH_ALEMBIC=ON
- -DWITH_GHOST_X11=ON -DWITH_GHOST_WAYLAND=ON -DWITH_GHOST_LIBDECOR=ON
- -DWITH_BUILDINFO=OFF -DPYTHON_VERSION=${py3_ver} -DPYTHON_LIBPATH=${XBPS_CROSS_BASE}/usr/lib
- -DPYTHON_LIBRARY=python${py3_ver}${py3_abiver} -DPYTHON_INCLUDE_DIRS=${XBPS_CROSS_BASE}/${py3_inc}
- -DWITH_SYSTEM_LZO=ON -DWITH_SYSTEM_EIGEN3=ON -DWITH_SYSTEM_FREETYPE=ON
- -DWITH_DRACO=OFF"
-hostmakedepends="pkg-config python3 wayland-devel"
-makedepends="libgomp-devel libpng-devel tiff-devel python3-devel glu-devel
- glew-devel freetype-devel jack-devel libopenal-devel libsndfile-devel
- libsamplerate-devel ffmpeg6-devel fftw-devel boost-devel-minimal pcre-devel llvm
- libopenexr-devel libopenjpeg2-devel libXi-devel openimageio-devel
- opencolorio-devel opencollada-devel python3-numpy libXrender-devel
- OpenSubdiv-devel tbb-devel libxml2-devel openvdb-devel alembic-devel
- pugixml-devel libXxf86vm-devel libepoxy-devel gmp-devel gmpxx-devel
- wayland-protocols wayland-devel libxkbcommon-devel libdecor-devel
- libspnav-devel libwebp-devel potrace-devel Haru-devel openxr-devel
- pipewire-devel pulseaudio-devel eigen lzo-devel vulkan-loader-devel shaderc"
-=======
-version=2.73a
-revision=2
-hostmakedepends="cmake"
-# XXX missing deps: openimageio, opencolorio
+version=2.79b
+revision=5
+build_style="cmake"
 makedepends="
  libgomp-devel libpng-devel tiff-devel python3.4-devel glu-devel
  glew-devel freetype-devel jack-devel libopenal-devel libsndfile-devel
