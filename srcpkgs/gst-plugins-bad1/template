@@ -1,6 +1,6 @@
 # Template file for 'gst-plugins-bad1'
 pkgname=gst-plugins-bad1
-version=1.14.1
+version=1.14.2
 revision=1
 wrksrc="${pkgname/1/}-${version}"
 lib32disabled=yes
@@ -21,7 +21,7 @@ maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://gstreamer.freedesktop.org"
 distfiles="${homepage}/src/${pkgname/1/}/${pkgname/1/}-${version}.tar.xz"
-checksum=2a77c6908032aafdf2cd2e5823fec948f16a25c2d1497a953828d762dc20d61a
+checksum=34fab7da70994465a64468330b2168a4a0ed90a7de7e4c499b6d127c6c1b1eaf
 
 build_options="gir gme libvpl wayland"
 build_options_default="gir wayland"
