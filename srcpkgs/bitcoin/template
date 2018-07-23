@@ -1,8 +1,9 @@
 # Template file for 'bitcoin'
 pkgname=bitcoin
-version=0.10.0
-revision=2
-create_wrksrc=yes
+version=0.16.1
+revision=3
+build_style=gnu-configure
+configure_args="--with-incompatible-bdb --disable-ccache --disable-static --enable-hardening --with-boost=${XBPS_CROSS_BASE}/usr"
 hostmakedepends="pkg-config yasm"
 makedepends="db-devel protobuf-devel libressl-devel boost-devel miniupnpc-devel"
 short_desc="Bitcoin is a peer-to-peer network based digital currency"
