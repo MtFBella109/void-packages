@@ -1,37 +1,45 @@
 # Template file for 'evolution-data-server'
 pkgname=evolution-data-server
-version=3.4.2
-homepage="http://www.gnome.org"
-distfiles="${GNOME_SITE}/$pkgname/3.4/$pkgname-$version.tar.xz"
-build_style=gnu-configure
-<<<<<<< HEAD
-configure_args="--with-openldap
---with-krb5=/usr --with-nspr-includes=/usr/include/nspr
---with-nss-includes=/usr/include/nss --enable-vala-bindings"
-makedepends="pkg-config intltool flex gperf gobject-introspection sqlite-devel dbus-glib-devel GConf-devel mit-krb5-devel nss-devel libical-devel libgweather-devel libldap-devel libgdata-devel gnome-online-accounts-devel vala-devel liboauth-devel libgnome-keyring-devel"
-short_desc="Evolution data server"
-=======
-configure_args="--with-openldap --disable-uoa
- --with-krb5=/usr --with-nspr-includes=/usr/include/nspr
- --with-nss-includes=/usr/include/nss --enable-vala-bindings"
-hostmakedepends="pkg-config intltool flex gperf gobject-introspection"
-makedepends="db-devel sqlite-devel mit-krb5-devel nss-devel libical-devel
- libsecret-devel libsoup-gnome-devel gcr-devel libldap-devel
- libgdata-devel vala-devel libgweather-devel icu-devel"
-depends="libsoup-gnome>=2.46 libgweather>=3.12"
+version=3.30.0
+revision=1
+build_style=cmake
+configure_args="-DENABLE_UOA=OFF
+ $(vopt_if gir '-DENABLE_INTROSPECTION=ON -DENABLE_VALA_BINDINGS=ON' '-DENABLE_WEATHER=OFF')"
+hostmakedepends="flex glib-devel gperf intltool pkg-config
+ $(vopt_if gir 'gobject-introspection')"
+makedepends="libcanberra-devel libgdata-devel $(vopt_if gir libgweather-devel)
+ libical-devel libsecret-devel mit-krb5-devel $(vopt_if gir 'vala-devel') webkit2gtk-devel"
+depends="$(vopt_if gir libgweather) libsoup-gnome"
 short_desc="Centralized access to appointments and contacts"
-<<<<<<< HEAD
->>>>>>> 55ebd1fd007 (xbps-src: always require current srcpkgs version in build dependencies.)
-maintainer="Juan RP <xtraeme@gmail.com>"
-=======
-maintainer="Juan RP <xtraeme@voidlinux.eu>"
->>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
-license="GPL-2"
-homepage="http://www.gnome.org"
-distfiles="${GNOME_SITE}/$pkgname/${version%.*}/$pkgname-$version.tar.xz"
-checksum=06fb4b9a1137b77a53e94eb69e4aeedd8f92d1bd1cfa0175f607660dd3b30818
-update_site="${GNOME_SITE}/$pkgname/cache.json"
-update_ignore="3.*[13579].*"
+maintainer="Enno Boland <gottox@voidlinux.eu>"
+license="LGPL-2.1-only"
+homepage="https://wiki.gnome.org/Apps/Evolution"
+changelog="https://raw.githubusercontent.com/GNOME/evolution-data-server/gnome-3-30/NEWS"
+distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
+checksum=d466c1fcc4cf17e9923b7166fbd1bd66c53f518a90323fbff6ff08f74cb50dee
+nocross="attempts to run non-native binaries during compilation"
+
+build_options="gir"
+build_options_default="gir"
+
+# cmake perfomrms 2 checks using binary runtime, about iconv and sfrtime.
+# musl (1.1.16) does not support "ISO-2022-JP" encoding (see its roadmap),
+# although evolution-data-server is fine with musl.
+# If crossbuild, cmake let disabling runtime checks via specific directives.
+# test iconv-detect.c also generates iconv-detect.h that is required for build.
+# So completly disable test from iconv-detect.c (cmake.patch file) and
+# use a cmake cache file on crossbuild to disable sfrtime running test.
+if [ "$CROSS_BUILD" ]; then
+	configure_args+=" -C disableRuntimeTests.cmake"
+fi
+
+pre_configure() {
+	mkdir -p build
+	cp ${FILESDIR}/iconv-detect.h ${wrksrc}/build/.
+	if [ "$CROSS_BUILD" ]; then
+		cp ${FILESDIR}/disableRuntimeTests.cmake ${wrksrc}/build/.
+	fi
+}
 
 post_install() {
 	# Fix broken pkg-config
@@ -39,6 +47,18 @@ post_install() {
 		$DESTDIR/usr/lib/pkgconfig/evolution-data-server-1.2.pc
 }
 
-build_options="gir"
-build_options_default="gir"
-
+evolution-data-server-devel_package() {
+	depends="sqlite-devel mit-krb5-devel nss-devel libical-devel
+		libldap-devel libgdata-devel>=0.15 libsecret-devel libglib-devel
+		${sourcepkg}>=${version}_${revision}"
+	short_desc+=" - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove "usr/lib/*.so"
+		if [ "$build_option_gir" ]; then
+			vmove usr/share/gir-1.0
+			vmove usr/share/vala
+		fi
+	}
+}
