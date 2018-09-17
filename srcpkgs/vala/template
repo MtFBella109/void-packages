@@ -1,13 +1,10 @@
 # Template file for 'vala'
 pkgname=vala
-<<<<<<< HEAD
-version=0.40.2
+version=0.42.1
 revision=1
-=======
-version=0.40.8
-revision=2
->>>>>>> a172d812178 (vala: drop valadoc, cyclic dep: vala -> graphviz -> librsvg -> vala)
+patch_args="-Np1"
 build_style=gnu-configure
+configure_args="--disable-graphviz"
 hostmakedepends="flex libxslt pkg-config automake libtool"
 makedepends="libfl-devel libglib-devel"
 checkdepends="dbus libgirepository-devel"
@@ -15,19 +12,19 @@ short_desc="Compiler for the GObject type system"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://live.gnome.org/Vala"
 license="LGPL-2.1-or-later"
+homepage="https://live.gnome.org/Vala"
+changelog="https://raw.githubusercontent.com/GNOME/vala/0.42/NEWS"
 distfiles="${GNOME_SITE}/vala/${version%.*}/vala-${version}.tar.xz"
-checksum=75a3dc2de36873d8ceab168b2fde1b2c378a1f7104a3b3391ba3acf579c674b3
+checksum=b4a52524207aadc77f4b39e29e4375387d2b6efe40738b33434e3298ebdabb11
+
+# for valadoc
+if [ "$CROSS_BUILD" ]; then
+	hostmakedepends+=" vala"
+else
+	make_build_args="VALAC="${XBPS_BUILDDIR}/${pkgname}-${version}/compiler/valac""
+fi
 
 pre_configure() {
-<<<<<<< HEAD
-	autoreconf -if
-=======
-	# https://gitlab.gnome.org/GNOME/vala/issues/596
-	# http://www.linuxfromscratch.org/blfs/view/svn/general/vala.html
-	sed -i '115d; 121,137d; 139,140d' configure.ac
-	sed -i '/libvaladoc/d; /valadoc/d' Makefile.am
-	sed -i '/valadoc.1/d' doc/Makefile.am
 	autoreconf -fi
->>>>>>> a172d812178 (vala: drop valadoc, cyclic dep: vala -> graphviz -> librsvg -> vala)
 }
 
