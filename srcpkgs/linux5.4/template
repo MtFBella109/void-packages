@@ -13,9 +13,14 @@ version=4.16.14
 =======
 # Template file for 'linux4.14'
 pkgname=linux4.14
+<<<<<<< HEAD:srcpkgs/linux5.4/template
 version=4.14.52
 >>>>>>> 89da29260ad (linux4.14: update to 4.14.52.):srcpkgs/linux4.14/template
 revision=1
+=======
+version=4.14.73
+revision=2
+>>>>>>> f7d02d8a30e (linux4.14: rebuild due to accidental removal on build.):srcpkgs/linux4.14/template
 patch_args="-Np1"
 wrksrc="linux-${version}"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
