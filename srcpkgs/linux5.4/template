@@ -14,6 +14,7 @@ version=4.16.14
 # Template file for 'linux4.14'
 pkgname=linux4.14
 <<<<<<< HEAD:srcpkgs/linux5.4/template
+<<<<<<< HEAD:srcpkgs/linux5.4/template
 version=4.14.52
 >>>>>>> 89da29260ad (linux4.14: update to 4.14.52.):srcpkgs/linux4.14/template
 revision=1
@@ -21,6 +22,10 @@ revision=1
 version=4.14.73
 revision=2
 >>>>>>> f7d02d8a30e (linux4.14: rebuild due to accidental removal on build.):srcpkgs/linux4.14/template
+=======
+version=4.14.75
+revision=1
+>>>>>>> 6b6b3b2060b (linux4.14: update to 4.14.75.):srcpkgs/linux4.14/template
 patch_args="-Np1"
 wrksrc="linux-${version}"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
@@ -46,8 +51,12 @@ homepage="http://www.kernel.org"
 license="GPL-2.0-only"
 short_desc="The Linux kernel and modules (${version%.*} series)"
 distfiles="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
+<<<<<<< HEAD:srcpkgs/linux5.4/template
 checksum=a5d226c7b2fd1eb0f01d56e4e2c6a0100784b68df907cc7317f32bde34f88810
 >>>>>>> 89da29260ad (linux4.14: update to 4.14.52.):srcpkgs/linux4.14/template
+=======
+checksum=5093d7230b8f1c553450ca6c1ccd20a46a055d9277a7e161039a8642b3398120
+>>>>>>> 6b6b3b2060b (linux4.14: update to 4.14.75.):srcpkgs/linux4.14/template
 
 nodebug=yes  # -dbg package is generated below manually
 nostrip=yes
