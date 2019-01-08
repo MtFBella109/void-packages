@@ -1,18 +1,17 @@
 # Template file for 'gnustep-base'
 pkgname=gnustep-base
-version=1.31.1
+version=1.26.0
 revision=1
 build_style=gnu-configure
-hostmakedepends="gnustep-make gcc-objc pkg-config which tar"
+hostmakedepends="gnustep-make gcc-objc pkg-config"
 makedepends="libobjc-devel libffi-devel libxml2-devel gnutls-devel
  libxslt-devel icu-devel"
 short_desc="Library of general-purpose Objective C objects for GNUstep"
 maintainer="Andrew Benson <abenson+void@gmail.com>"
 license="GPL-2.0-or-later, GPL-3.0-or-later"
-homepage="http://www.gnustep.org/"
-distfiles="https://github.com/gnustep/libs-base/releases/download/base-${version//./_}/gnustep-base-${version}.tar.gz"
-checksum=e7546f1c978a7c75b676953a360194a61e921cb45a4804497b4f346a460545cd
-make_check=extended
+homepage="https://www.gnustep.org/"
+distfiles="http://ftp.gnustep.org/pub/gnustep/core/gnustep-base-${version}.tar.gz"
+checksum=f68bc066c60c73cfc1582326866d0a59be791df56d752dfdc51b838e79364173
 
 nocross="objc doesn't get cross build at present within gcc"
 case "$XBPS_TARGET_MACHINE" in
