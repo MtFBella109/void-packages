@@ -750,6 +750,7 @@ libenchant.so.1 enchant-1.4.2_1
 libgconf-2.so.4 GConf-2.32.0_1
 libsoup-2.4.so.1 libsoup-2.34.0_1
 libsoup-gnome-2.4.so.1 libsoup-gnome-2.34.0_1
+libuninum.so.5 libuninum-2.7_1
 libunique-3.0.so.0 libunique-2.91.4_1
 libwebkitgtk-1.0.so.0 webkitgtk2-2.4.8_2
 libwebkitgtk-3.0.so.0 webkitgtk-2.0.0_1
