@@ -1,42 +1,30 @@
 # Template file for 'graphene'
 pkgname=graphene
-version=1.10.8
+version=1.8.2
 revision=1
 build_style=meson
 build_helper="gir"
-configure_args="-Dinstalled_tests=false
- $(vopt_feature gir introspection)"
+configure_args="-Dtests=false -Dbenchmarks=false
+ -Dintrospection=$(vopt_if gir true false)"
 hostmakedepends="pkg-config"
 makedepends="libglib-devel"
 short_desc="Thin layer of types for graphic libraries"
-maintainer="Enno Boland <gottox@voidlinux.org>"
+maintainer="Rasmus Thomsen <rasmus.thomsen@protonmail.com>>"
 license="MIT"
 homepage="https://github.com/ebassi/graphene"
-changelog="https://github.com/ebassi/graphene/releases"
 distfiles="${GNOME_SITE}/graphene/${version%.*}/graphene-${version}.tar.xz"
-checksum=a37bb0e78a419dcbeaa9c7027bcff52f5ec2367c25ec859da31dfde2928f279a
-
-case "$XBPS_TARGET_MACHINE" in
-	x86_64*) configure_args+=" -Dsse2=true" ;;
-	*) configure_args+=" -Dsse2=false" ;;
-esac
-
-case "$XBPS_TARGET_MACHINE" in
-	aarch64*) configure_args+=" -Darm_neon=true" ;;
-	*) configure_args+=" -Darm_neon=false" ;;
-esac
-
-if [ "$XBPS_TARGET_WORDSIZE" = "64" ]; then
-	configure_args+=" -Dgcc_vector=true"
-else
-	configure_args+=" -Dgcc_vector=false"
-fi
+checksum=b3fcf20996e57b1f4df3941caac10f143bb29890a42f7a65407cd19271fc89f7
 
 build_options="gir"
-build_options_default="gir"
+
+case "$XBPS_TARGET_MACHINE" in
+	i686-musl|x86_64-musl) build_options_default+=" gir" ;;
+	*-musl) ;;
+	*) build_options_default+=" gir" ;;
+esac
 
 post_install() {
-	vlicense LICENSE.txt LICENSE
+	vlicense LICENSE
 }
 
 graphene-devel_package() {
