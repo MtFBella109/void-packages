@@ -1,6 +1,6 @@
 # Template file for 'evolution-data-server'
 pkgname=evolution-data-server
-version=3.30.0
+version=3.32.0
 revision=1
 build_style=cmake
 configure_args="-DENABLE_UOA=OFF
@@ -16,8 +16,7 @@ license="LGPL-2.1-only"
 homepage="https://wiki.gnome.org/Apps/Evolution"
 changelog="https://raw.githubusercontent.com/GNOME/evolution-data-server/gnome-3-30/NEWS"
 distfiles="${GNOME_SITE}/${pkgname}/${version%.*}/${pkgname}-${version}.tar.xz"
-checksum=d466c1fcc4cf17e9923b7166fbd1bd66c53f518a90323fbff6ff08f74cb50dee
-nocross="attempts to run non-native binaries during compilation"
+checksum=8e10b84974e483322e07a97c57dff56ffb208aa0c33e39a13208d6c52470ddde
 
 build_options="gir"
 build_options_default="gir"
@@ -42,14 +41,13 @@ pre_configure() {
 }
 
 post_install() {
-	# Fix broken pkg-config
-	sed -i "s|^Requires: gio-2.0, , |Requires: gio-2.0, mozilla-nspr, mozilla-nss|" \
-		$DESTDIR/usr/lib/pkgconfig/evolution-data-server-1.2.pc
+	rm -rf ${DESTDIR}/usr/lib/systemd
 }
 
 evolution-data-server-devel_package() {
-	depends="sqlite-devel mit-krb5-devel nss-devel libical-devel
+	depends="sqlite-devel mit-krb5-devel nss-devel nspr-devel libical-devel
 		libldap-devel libgdata-devel>=0.15 libsecret-devel libglib-devel
+		libsoup-devel gtk+3-devel libxml2-devel gnome-desktop-devel
 		${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
 	pkg_install() {

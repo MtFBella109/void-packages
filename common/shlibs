@@ -831,6 +831,14 @@ libedata-book-1.2.so.27 evolution-data-server-3.46.0_1
 libedataserver-1.2.so.27 evolution-data-server-3.46.0_1
 libedataserverui-1.2.so.4 evolution-data-server-3.46.0_1
 libedataserverui4-1.0.so.0 evolution-data-server-3.46.0_1
+libcamel-1.2.so.62 evolution-data-server-3.30.0_1
+libedataserver-1.2.so.24 evolution-data-server-3.32.0_1
+libebackend-1.2.so.10 evolution-data-server-3.17.90_1
+libedataserverui-1.2.so.2 evolution-data-server-3.28.0_1
+libebook-contacts-1.2.so.2 evolution-data-server-3.17.90_1
+libedata-book-1.2.so.25 evolution-data-server-3.8.0_1
+libebook-1.2.so.19 evolution-data-server-3.24.0_1
+libecal-1.2.so.19 evolution-data-server-3.18.0_1
 libevolution-calendar.so evolution-3.28.0_1
 libevolution-util.so evolution-3.28.0_1
 libemail-engine.so evolution-3.28.0_1
