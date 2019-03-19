@@ -1,6 +1,6 @@
 # Template file for 'qalculate'
 pkgname=qalculate
-version=2.8.0
+version=3.0.0
 revision=1
 wrksrc="lib${pkgname}-${version}"
 build_style=gnu-configure
@@ -12,7 +12,7 @@ maintainer="Helmut Pozimski <helmut@pozimski.eu>"
 license="GPL-2.0-or-later"
 homepage="https://qalculate.github.io/"
 distfiles="https://github.com/Qalculate/libqalculate/releases/download/v${version}/libqalculate-${version}.tar.gz"
-checksum=b18f594894135e96121b1f81b341f05582ac73fc53680b6e35063623ceea6262
+checksum=2882edd45016a6bcbf33120dd0b83676221a1d58af73f7f4cd6bbec4e1a26b1e
 
 libqalculate-data_package() {
 	noarch=yes
