@@ -1,34 +1,18 @@
 # Template file for 'bochs'
-<<<<<<< HEAD
 pkgname=bochs
-version=2.7
-=======
-pkgname="bochs"
-version="2.6.9"
->>>>>>> f9a525882ce (bochs: update to 2.6.9.)
+version=2.6.10
 revision=1
 build_style=gnu-configure
-configure_args="--with-sdl2 --enable-all-optimizations --enable-e1000
- --disable-readline --enable-x86-64 --enable-smp --enable-avx --enable-evex
- --enable-x86-debugger --enable-usb --enable-usb-ohci --enable-usb-ehci
- --enable-usb-xhci --enable-debugger --enable-debugger-gui"
+configure_args="--enable-debugger --enable-disasm --disable-readline"
 hostmakedepends="pkg-config"
-<<<<<<< HEAD
-makedepends="libX11-devel libXrandr-devel SDL2-devel"
-short_desc="Highly portable open source x86(_64) PC emulator"
-maintainer="Orphaned <orphan@voidlinux.org>"
-license="LGPL-2.1-only"
-homepage="https://bochs.sourceforge.net/"
-changelog="https://raw.githubusercontent.com/bochs-emu/Bochs/master/bochs/CHANGES"
-distfiles="${SOURCEFORGE_SITE}/bochs/bochs-${version}.tar.gz"
-checksum=a010ab1bfdc72ac5a08d2e2412cd471c0febd66af1d9349bc0d796879de5b17a
-=======
 makedepends="libX11-devel libXrandr-devel gtk+-devel"
-configure_args="--enable-debugger --enable-disasm"
-disable_parallel_build=yes
+short_desc="Highly portable open source IA-32 (x86) PC emulator"
+maintainer="mid-kid <esteve.varela@gmail.com>"
+license="LGPL-2.1-only"
+homepage="http://bochs.sourceforge.net/"
 distfiles="$SOURCEFORGE_SITE/bochs/bochs-${version}.tar.gz"
-checksum=ee5b677fd9b1b9f484b5aeb4614f43df21993088c0c0571187f93acb0866e98c
->>>>>>> f9a525882ce (bochs: update to 2.6.9.)
+checksum=723f808b2c2ac6f886d90c4eb2000b8d075992661e6e47c8474e668e16e175b0
+disable_parallel_build=yes
 
 pre_build() {
 	vsed -i 's/^LIBS = /LIBS = -lpthread/g' Makefile
