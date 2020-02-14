@@ -1,6 +1,6 @@
 # Template file for 'weston'
 pkgname=weston
-version=6.0.0
+version=8.0.0
 revision=1
 build_style=meson
 configure_args="-Dtest-junit-xml=false -Dbackend-rdp=false -Dsystemd=false
@@ -18,7 +18,7 @@ maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="MIT"
 homepage="https://wayland.freedesktop.org/"
 distfiles="https://wayland.freedesktop.org/releases/${pkgname}-${version}.tar.xz"
-checksum=546323a90607b3bd7f48809ea9d76e64cd09718102f2deca6d95aa59a882e612
+checksum=7518b49b2eaa1c3091f24671bdcc124fd49fc8f1af51161927afa4329c027848
 system_groups="weston-launch"
 lib32disabled=yes
 
