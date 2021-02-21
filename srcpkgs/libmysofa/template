@@ -1,10 +1,6 @@
 # Template file for 'libmysofa'
 pkgname=libmysofa
-<<<<<<< HEAD
-version=1.3.2
-=======
-version=0.6
->>>>>>> 999c780c1dd (New package: libmysofa-0.6)
+version=1.2
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTS=OFF"
@@ -12,21 +8,10 @@ hostmakedepends="pkg-config"
 makedepends="zlib-devel"
 short_desc="Reader for AES SOFA files to get better HRTFs"
 maintainer="lemmi <lemmi@nerd2nerd.org>"
-<<<<<<< HEAD
-license="BSD-3-Clause"
-homepage="https://github.com/hoene/libmysofa"
-distfiles="https://github.com/hoene/libmysofa/archive/v${version}.tar.gz"
-checksum=6c5224562895977e87698a64cb7031361803d136057bba35ed4979b69ab4ba76
-
-post_install() {
-	vlicense LICENSE
-}
-=======
 license="BSD"
 homepage="https://github.com/hoene/libmysofa"
 distfiles="https://github.com/hoene/libmysofa/archive/v${version}.tar.gz"
 checksum=e39c34bd40d17aecdb962ba6ae533a3fa9d291da4db6972d0d6e023974a1c169
->>>>>>> 999c780c1dd (New package: libmysofa-0.6)
 
 libmysofa-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"
@@ -35,9 +20,5 @@ libmysofa-devel_package() {
 		vmove usr/include
 		vmove "usr/lib/*.a"
 		vmove "usr/lib/*.so"
-<<<<<<< HEAD
-		vmove usr/lib/pkgconfig
-=======
->>>>>>> 999c780c1dd (New package: libmysofa-0.6)
 	}
 }
