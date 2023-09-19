@@ -1,43 +1,17 @@
 # Template file for 'leptonica'
 pkgname=leptonica
-<<<<<<< HEAD
-version=1.85.0
-revision=3
-=======
-version=1.73
+version=1.84.0
 revision=1
->>>>>>> a04fc52df0c (leptonica: update to 1.73)
 build_style=gnu-configure
 hostmakedepends="pkg-config automake libtool"
-makedepends="libopenjpeg2-devel libwebp-devel libjpeg-turbo-devel tiff-devel
- libpng-devel zlib-devel giflib-devel"
+makedepends="libopenjpeg2-devel libwebp-devel"
 checkdepends="which gnuplot"
 short_desc="Image processing and analysis library"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSD-2-Clause"
 homepage="http://leptonica.org/"
-<<<<<<< HEAD
-changelog="http://leptonica.org/source/version-notes.html"
-distfiles="https://github.com/DanBloomberg/leptonica/archive/${version}.tar.gz"
-checksum=c01376bce0379d4ea4bc2ec5d5cbddaa49e2f06f88242619ab8c059e21adf233
-make_check=no # a good portion of tests fail
-
-pre_check() {
-	# disable failing tests
-	vsed -i prog/Makefile.am \
-		-e "s/boxa3_reg//" \
-		-e "s/projection_reg//" \
-		-e "s/rankhisto_reg//" \
-		-e "s/rankbin_reg//"
-}
-
-pre_configure() {
-	./autogen.sh
-}
-=======
 distfiles="http://leptonica.org/source/$pkgname-$version.tar.gz"
 checksum=19e4335c674e7b78af9338d5382cc5266f34a62d4ce533d860af48eaa859afc1
->>>>>>> a04fc52df0c (leptonica: update to 1.73)
 
 post_install() {
 	vdoc moller52.jpg
