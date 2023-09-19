@@ -2907,7 +2907,7 @@ libkomparediff2.so.4 libkomparediff2-4.14.2_1
 libkompareinterface.so.4 kompare-4.14.2_1
 libkomparedialogpages.so.4 kompare-4.14.2_1
 libleptonica.so.6 leptonica-1.84.0_1
-libtesseract.so.4 tesseract-ocr-4.0.0_1
+libtesseract.so.5 tesseract-ocr-5.3.3_1
 libffmpegthumbnailer.so.4 ffmpegthumbnailer-2.0.10_1
 libopenraw.so.7 libopenraw-0.1.0_1
 libopenrawgnome.so.7 libopenraw-0.1.0_1

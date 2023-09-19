@@ -7,13 +7,8 @@ hostmakedepends="pkg-config ImageMagick"
 makedepends="SDL2_image-devel SDL2_mixer-devel MesaLib-devel libpng-devel zlib-devel"
 depends="desktop-file-utils hicolor-icon-theme"
 short_desc="FPS game focused on instagib deathmatch and capture-the-flag gameplay"
-<<<<<<< HEAD
-maintainer="Orphaned <orphan@voidlinux.org>"
-license="Zlib"
-=======
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="zlib"
->>>>>>> cc8f39713fa (srcpkgs: xtraeme@gmail.com -> xtraeme@voidlinux.eu)
 homepage="http://tesseract.gg/"
 distfiles="http://download.tuxfamily.org/tesseract/tesseract_${_release}_first_edition_linux.tar.xz"
 checksum=8d6e07dd154a40a3f593e52289335c036f06cf90a0ebc400c4650adb3395a0f4
