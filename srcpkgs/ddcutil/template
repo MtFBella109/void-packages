@@ -1,6 +1,6 @@
 # Template file for 'ddcutil'
 pkgname=ddcutil
-version=1.0.1
+version=2.1.4
 revision=1
 build_style=gnu-configure
 configure_args="--libdir=/usr/lib"
@@ -14,7 +14,7 @@ license="GPL-2.0-or-later"
 homepage="https://www.ddcutil.com"
 changelog="https://www.ddcutil.com/release_notes_220/"
 distfiles="https://github.com/rockowitz/ddcutil/archive/v${version}.tar.gz"
-checksum=348495de551f3da390639459d42f33a59554b8648dde3294279ed6d11bf0e2ef
+checksum=cd8325d399399edba3df4ec58a4051c7c54fcf4fbc8f62937c6f19adb303f4ba
 
 case "$XBPS_TARGET_MACHINE" in
 	*-musl) makedepends+=" libexecinfo-devel musl-legacy-compat"
