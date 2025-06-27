@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 --- a/libraries/source/spidermonkey/build.sh	2025-07-20 09:04:51.166563011 +0200
 +++ b/libraries/source/spidermonkey/build.sh	2025-07-20 09:05:05.010183649 +0200
 @@ -48,8 +48,8 @@
+=======
+diff --git a/libraries/source/spidermonkey/build.sh b/libraries/source/spidermonkey/build.sh
+index 0dc66e01847..edbe032b525 100755
+--- a/libraries/source/spidermonkey/build.sh
++++ b/libraries/source/spidermonkey/build.sh
+@@ -46,8 +46,9 @@ if [ ! -e "${FOLDER}.tar.xz" ]; then
+>>>>>>> e5be5e0d274 (0ad: update to 0.27.0, allow cross)
  fi
  
  # unpack
@@ -47,6 +55,7 @@
 -"${TAR}" xf nvtt-${PV}.tar.xz
 +#rm -Rf nvtt-${PV}
 +#"${TAR}" xf nvtt-${PV}.tar.xz
+
  
  # patch
  patch -d nvtt-${PV} -p1 <patches/0001-Don-t-overspecify-flags.patch
