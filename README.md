@@ -40,5 +40,6 @@ Cosmic-greeter doesn't work. I couldn't figure out why, for me It seems like, th
 
 ## Start cosmic session
 1. Login as your user
-2. Type `start-cosmic`
+2. Type `start-cosmic`\
+\
 *Note: The user, that runs start-cosmic, is automatically the user which is sgined in, in cosmic desktop* 
