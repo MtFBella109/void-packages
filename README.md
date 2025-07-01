@@ -7,7 +7,7 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used his wo
 4. You can either install every component with or you use the Metapackage cosmic-desktop. Cosmic-desktop installs you all components and everything you need to run it.
 
 ## Components
-A list of packages:
+All packages:
 - cosmic-applets
 - cosmic-applibrary
 - cosmic-bg
