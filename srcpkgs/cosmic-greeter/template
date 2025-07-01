@@ -6,6 +6,7 @@ _tag=epoch-${version/.alpha/-alpha}
 hostmakedepends="pkg-config just llvm18-devel cargo cargo-auditable"
 makedepends="libxkbcommon-devel eudev-libudev-devel pam-devel libinput-devel"
 depends="glibc greetd libgcc libxkbcommon pam-libs"
+broke=yes
 short_desc="TODO: cosmic-greeter short_desc"
 maintainer="Daniel Martinez <danielmartinez@cock.li>"
 license="GPL-3.0-only"
