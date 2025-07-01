@@ -7,4 +7,4 @@
 -command = "cosmic-comp systemd-cat -t cosmic-greeter cosmic-greeter"
 -user = "cosmic-greeter"
 +command = "cosmic-comp cosmic-greeter"
-+user = "cosmicgreeter"
++user = "cosmic-greeter"
