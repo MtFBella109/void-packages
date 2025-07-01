@@ -1,0 +1,15 @@
+# Template file for 'cosmic-osd'
+pkgname=cosmic-osd
+version=1.0.0.alpha.7
+revision=1
+_tag=epoch-${version/.alpha/-alpha}
+build_style=cargo
+hostmakedepends="pkg-config"
+makedepends="libxkbcommon-devel pulseaudio-devel"
+depends="dbus-libs eudev-libudev glibc lame libpulseaudio libxkbcommon libgcc libpulseaudio libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus"
+short_desc="TODO: cosmic-osd short_desc"
+maintainer="Daniel Martinez <danielmartinez@cock.li>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-osd"
+distfiles="https://github.com/pop-os/cosmic-osd/archive/refs/tags/${_tag}.tar.gz"
+checksum=e6c4a8b7b66d945bda585a0414098f78af7533057b6a1534ee3e01ed70be5556

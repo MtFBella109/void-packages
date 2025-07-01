@@ -1,0 +1,77 @@
+--- a/justfile	2025-06-30 00:33:22.814267998 +0200
++++ b/justfile	2025-06-30 00:46:28.904970280 +0200
+@@ -12,25 +12,12 @@
+ bin-src := cargo-target-dir / 'release' / name
+ bin-dst := base-dir / 'bin' / name
+ 
+-# Systemd sysusers/tmpfiles components directories
+-lib-dir := base-dir / 'lib'
+-
+-# sysusers.d
+-sysusers-src := 'debian' / name + '.sysusers'
+-sysusers-dst := lib-dir / 'sysusers.d' / name + '.conf'
+-# tmpfiles.d
+-tmpfiles-src := 'debian' / name + '.tmpfiles'
+-tmpfiles-dst := lib-dir / 'tmpfiles.d' / name + '.conf'
+-
+ daemon-src := cargo-target-dir / 'release' / name + '-daemon'
+ daemon-dst := base-dir / 'bin' / name + '-daemon'
+ 
+ dbus-src := 'dbus' / APPID + '.conf'
+ dbus-dst := base-dir / 'share' / 'dbus-1' / 'system.d' / APPID + '.conf'
+ 
+-# Default recipe which runs `just build-release`
+-default: build-release
+-
+ # Runs `cargo clean`
+ clean:
+     cargo clean
+@@ -39,46 +26,16 @@
+ clean-dist: clean
+     rm -rf .cargo vendor vendor.tar
+ 
+-# Compiles with debug profile
+-build-debug *args:
+-    cargo build --all {{args}}
+-
+-# Compiles with release profile
+-build-release *args: (build-debug '--release' args)
+-
+-# Compiles release profile with vendored dependencies
+-build-vendored *args: vendor-extract (build-release '--frozen --offline' args)
+-
+-# Runs a clippy check
+-check *args:
+-    cargo clippy --all-features {{args}} -- -W clippy::pedantic
+-
+-# Runs a clippy check with JSON message format
+-check-json: (check '--message-format=json')
+-
+-mock:
+-    cargo build --release --example server
+-    cosmic-comp {{cargo-target-dir}}/release/examples/server
+-
+-# Run with debug logs
+-run *args:
+-    env RUST_LOG=debug RUST_BACKTRACE=full cargo run --release {{args}}
+-
+ # Install only debian package required files
+ # The sysusers and tmpfiles files are automatically added
+-install-debian:
++install:
+     install -Dm0755 {{bin-src}} {{bin-dst}}
+     install -Dm0755 {{daemon-src}} {{daemon-dst}}
+     install -Dm0755 {{dbus-src}} {{dbus-dst}}
+ 
+-# Installs files
+-install: install-debian
+-    install -Dm0644 {{sysusers-src}} {{sysusers-dst}}
+-    install -Dm0644 {{tmpfiles-src}} {{tmpfiles-dst}}
+-
+ # Uninstalls installed files
+ uninstall:
+-    rm {{bin-dst}} {{daemon-dst}} {{dbus-dst}} {{sysusers-dst}} {{tmpfiles-dst}}
++    rm {{bin-dst}} {{daemon-dst}} {{dbus-dst}} 
+ 
+ # Vendor dependencies locally
+ vendor:
