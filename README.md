@@ -5,6 +5,7 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
 2. `cd void-packages`
 3. `./xbps-src binary-bootstrap`
 4. You can either install every component with or you use the Metapackage cosmic-desktop. Cosmic-desktop installs you all components and everything you need to run it.
+5. If you want to use the all settings in Power&Battery, you need to enable power-profile daemon with this command: `sudo ln -s /etc/sv/power-profiles-daemon /var/service/`
 
 ## Components
 All packages:
