@@ -1,7 +1,7 @@
 # Cosmic on Void
-Big thanks to [Calandracas606](https://github.com/Calandracas606), I used his work as a base
+Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their work as a base
 ## Install Cosmic
-1. `git clone https://github.com/MtFBella109/void-packages.git`
+1. `git clone --depth 1 https://github.com/MtFBella109/void-packages.git`
 2. `cd void-packages`
 3. `./xbps-src binary-bootstrap`
 4. You can either install every component with or you use the Metapackage cosmic-desktop. Cosmic-desktop installs you all components and everything you need to run it.
