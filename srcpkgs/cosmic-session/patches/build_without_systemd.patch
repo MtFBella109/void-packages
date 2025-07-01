@@ -1,0 +1,14 @@
+--- a/src/main.rs	2025-06-27 00:00:41.964872744 +0200
++++ b/src/main.rs	2025-06-27 00:27:08.876114791 +0200
+@@ -451,6 +451,11 @@
+ 		.await;
+ 	}
+ 
++	#[cfg(not(feature = "systemd"))]
++	fn is_systemd_used() -> &'static bool {
++		&false
++	}
++
+ 	#[cfg(feature = "autostart")]
+ 	if !*is_systemd_used() {
+ 		info!("looking for autostart folders");

@@ -1,0 +1,22 @@
+# Template file for 'cosmic-settings'
+pkgname=cosmic-settings
+version=1.0.0.alpha.7
+revision=2
+_tag=epoch-${version/.alpha/-alpha}
+hostmakedepends="pkg-config just cargo"
+makedepends="libxkbcommon-devel eudev-libudev-devel libinput-devel pipewire-devel clang"
+depends="depends="dbus-libs eudev-libudev glibc lame libpulseaudio libxkbcommon libgcc libpulseaudio libpipewire libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus""
+short_desc="TODO: cosmic-settings short_desc"
+maintainer="Daniel Martinez <danielmartinez@cock.li>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-settings"
+distfiles="https://github.com/pop-os/cosmic-settings/archive/refs/tags/${_tag}.tar.gz"
+checksum=95e632d20cf802fe293014dd9707e65bd7d6ab9e7459957f40b01c928908e34a
+
+do_build() {
+	just
+}
+
+do_install() {
+	just --set rootdir ${DESTDIR} --set prefix /usr install
+}
