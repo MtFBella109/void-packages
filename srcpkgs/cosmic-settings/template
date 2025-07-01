@@ -5,9 +5,15 @@ revision=2
 _tag=epoch-${version/.alpha/-alpha}
 hostmakedepends="pkg-config just cargo"
 makedepends="libxkbcommon-devel eudev-libudev-devel libinput-devel pipewire-devel clang"
+<<<<<<< HEAD
 depends="dbus-libs eudev-libudev lame libpulseaudio libxkbcommon libpulseaudio libpipewire libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus power-profiles-daemon"
 short_desc="TODO: cosmic-settings short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
+=======
+depends="depends="dbus-libs eudev-libudev glibc lame libpulseaudio libxkbcommon libgcc libpulseaudio libpipewire libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus""
+short_desc="TODO: cosmic-settings short_desc"
+maintainer="Daniel Martinez <danielmartinez@cock.li>"
+>>>>>>> a0b64f98e1a (Added Cosmic Desktop)
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-settings"
 distfiles="https://github.com/pop-os/cosmic-settings/archive/refs/tags/${_tag}.tar.gz"
