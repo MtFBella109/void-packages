@@ -15,7 +15,7 @@ A list of packages:
 - cosmic-desktop (Metapackage)
 - cosmic-edit
 - cosmic-files
-- cosmic-greeter (Doesn't work)
+- cosmic-greeter❌ Does not work (see below)
 - cosmic-icons
 - cosmic-idle
 - cosmic-launcher
