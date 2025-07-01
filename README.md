@@ -7,12 +7,12 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used his wo
 4. You can either install every component with or you use the Metapackage cosmic-desktop. Cosmic-desktop installs you all components and everything you need to run it.
 
 ## Components
-A list of all components, that I packaged:
+A list of packages:
 - cosmic-applets
 - cosmic-applibrary
 - cosmic-bg
 - cosmic-comp
-- cosmic-desktop
+- cosmic-desktop (Metapackage)
 - cosmic-edit
 - cosmic-files
 - cosmic-greeter (Doesn't work)
@@ -37,6 +37,7 @@ A list of all components, that I packaged:
 
 ## Cosmic-greeter
 Cosmic-greeter doesn't work. I couldn't figure out why, for me It seems like, that it has something to with pam and/or elogind. Unfortunately I don't have enough knowledge on how to debug or fix this.
+The cosmic-greeter Package is becasue of that marked as broke and isn't on the cosmic-desktop metapackage for now
 
 ## Start cosmic session
 1. Login as your user
