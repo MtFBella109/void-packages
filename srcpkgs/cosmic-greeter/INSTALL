@@ -1,0 +1,17 @@
+case "$ACTION" in
+post)
+	if [ "$UPDATE" = "no" ]; then
+		useradd -U -d /var/lib/cosmic-greeter \
+            	-s /sbin/nologin \
+            	-G video \
+            	-c "Cosmic Greeter Account" \
+            	cosmicgreeter
+
+		#mkdir -p /var/lib/cosmic-greeter/.config/com.system76.CosmicComp/v1
+        	#echo '"Dark"' > /var/lib/cosmic-greeter/.config/com.system76.CosmicComp/v1/theme.ron
+		chown -R cosmicgreeter:cosmicgreeter /var/lib/cosmic-greeter
+		chmod -R 750 /var/lib/cosmic-greeter/
+	fi
+	;;
+esac
+

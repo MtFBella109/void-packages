@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sv check dbus | exit 1
+sv check elogind | exit 1
+
+/usr/bin/cosmic-greeter-daemon&
+sleep 1
+exec 2>&1 greetd --config /etc/greetd/greetd.toml

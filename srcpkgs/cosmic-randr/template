@@ -1,0 +1,14 @@
+# Template file for 'cosmic-randr'
+pkgname=cosmic-randr
+version=1.0.0.alpha.7
+revision=1
+_tag=epoch-${version/.alpha/-alpha}
+build_style=cargo
+make_install_args="--path cli"
+depends="glibc libgcc"
+short_desc="TODO: cosmic-randr short_desc"
+maintainer="Daniel Martinez <danielmartinez@cock.li>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-randr"
+distfiles="https://github.com/pop-os/cosmic-randr/archive/refs/tags/${_tag}.tar.gz"
+checksum=9512653d3f844c77c7f93894cf8614123272dfcaed853f56309a95d0aded7c03

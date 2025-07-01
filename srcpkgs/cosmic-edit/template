@@ -1,0 +1,22 @@
+# Template file for 'cosmic-edit'
+pkgname=cosmic-edit
+version=1.0.0.alpha.7
+revision=1
+_tag=epoch-${version/.alpha/-alpha}
+build_style=cargo
+hostmakedepends="pkg-config just"
+makedepends="libxkbcommon-devel oniguruma-devel libzstd-devel"
+depends="glibc libgcc libxkbcommon libzstd onigruma"
+short_desc="TODO: cosmic-edit short_desc"
+maintainer="Daniel Martinez <danielmartinez@cock.li>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-edit"
+distfiles="https://github.com/pop-os/cosmic-edit/archive/refs/tags/${_tag}.tar.gz"
+checksum=9ae952b068d70115e9ad6c50abcebe48a8a348c99f5eb30466355d136a55ea70
+
+export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
+export VERGEN_GIT_SHA="${version}_${revision}"
+
+do_install() {
+	just --set cargo-target-dir "target/${RUST_TARGET}" --set rootdir ${DESTDIR} --set prefix /usr install
+}

@@ -1,0 +1,19 @@
+# Template file for 'cosmic-player'
+pkgname=cosmic-player
+version=1.0.0.alpha.7
+revision=2
+_tag=epoch-${version/.alpha/-alpha}
+build_style=cargo
+hostmakedepends="pkg-config just"
+makedepends="libxkbcommon-devel clang gstreamer1-devel"
+depends="libxkbcommon libgcc glibc"
+short_desc="TODO: cosmic-player short_desc"
+maintainer="Daniel Martinez <danielmartinez@cock.li>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-player"
+distfiles="https://github.com/pop-os/cosmic-player/archive/refs/tags/${_tag}.tar.gz"
+checksum=69b9581c1e0b898dc700ec3fce09a0b69e7da78e1202b70e68794b2397fc6a6f
+
+do_install() {
+	just --set cargo-target-dir "target/${RUST_TARGET}" --set rootdir ${DESTDIR} --set prefix /usr install
+}

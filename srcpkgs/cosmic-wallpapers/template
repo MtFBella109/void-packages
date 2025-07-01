@@ -1,0 +1,35 @@
+# Template file for 'cosmic-wallpapers'
+pkgname=cosmic-wallpapers
+version=1.0.0.alpha.7
+revision=7
+wrksrc="${pkgname}-${version}"
+_tag=epoch-${version/.alpha/-alpha}
+hostmakedepends="git-lfs git"
+short_desc="TODO: cosmic-wallpapers short_desc"
+maintainer="Daniel Martinez <danielmartinez@cock.li>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-wallpapers"
+#distfiles="https://github.com/pop-os/cosmic-wallpapers/archive/refs/tags/${_tag}.tar.gz"
+#checksum=57234231585d4d5733284aba1110495cec1d0eaa55db16431f87ecad46810a47
+skip_extraction="yes"
+
+do_fetch() {
+	pwd
+	ls
+	if [ -d $wrksrc ]; then
+		rm -rf $wrksrc
+	fi	
+	git clone https://github.com/pop-os/cosmic-wallpapers.git $wrksrc
+	pwd
+	ls
+	cd $wrksrc
+	pwd
+	git lfs install --local
+	git lfs pull
+}
+
+do_install() {
+	pwd
+	echo "$(ls)"
+	make install DESTDIR=${DESTDIR}
+}
