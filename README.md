@@ -7,7 +7,7 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
 2. `sudo xbps-install -S`
 3. Install single components with `sudo xbps-install -S <package_name>` or install all components, with `sudo xbps-install -S cosmic-desktop` 
 
-
+## Install and build via xbps-src
 1. `git clone --depth 1 https://github.com/MtFBella109/void-packages.git`
 2. `cd void-packages`
 3. `./xbps-src binary-bootstrap`
