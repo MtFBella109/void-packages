@@ -9,7 +9,7 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
 - [Enable Services](#enable-services)
 - [List of all components](#components)
 - [Information about Cosmic Greeter](#cosmic-greeter)
-- [Start Cosmic Desktop](#start-cosmic-sesion)
+- [Start Cosmic Desktop](#start-cosmic-session)
 
 ## Install Cosmic
 ### Install via Repository
