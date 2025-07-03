@@ -1,11 +1,20 @@
 # Cosmic on Void
 Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their work as a base
 ## Install Cosmic
+### Install via Rpeository
+> There is only a Repo for x86_64 Systems
+1. `echo 'repository=https://mtfbella109.github.io/void-cosmic-repo/repo/x86_64' | sudo tee /etc/xbps.d/10-cosmic.conf`
+2. `sudo xbps-install -S`
+3. Install single components with `sudo xbps-install -S <package_name>` or install all components, with `sudo xbps-install -S cosmic-desktop` 
+
+
 1. `git clone --depth 1 https://github.com/MtFBella109/void-packages.git`
 2. `cd void-packages`
 3. `./xbps-src binary-bootstrap`
-4. You can either install every component with or you use the Metapackage cosmic-desktop. Cosmic-desktop installs you all components and everything you need to run it.
-5. If you want to use the all settings in Power&Battery, you need to enable power-profile daemon with this command: `sudo ln -s /etc/sv/power-profiles-daemon /var/service/`
+4. You can build single components with `./xbps-src pkg <package_name>` or build every component with `./xbps-src pkg cosmic-desktop`
+5. Install the package with `xi <package_name>` or with `xbps-install --repository hostdir/binpkgs <package_name>`
+   > Note: You get the xi command with the package xtools
+7. If you want to use the all settings in Power&Battery, you need to enable power-profile daemon with this command: `sudo ln -s /etc/sv/power-profiles-daemon /var/service/`
 
 ## Table of Contents
 
