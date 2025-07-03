@@ -3,9 +3,10 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
 ## Install Cosmic
 ### Install via Repository
 > There is only a Repo for x86_64 Systems
-1. `echo 'repository=https://mtfbella109.github.io/void-cosmic-repo/repo/x86_64' | sudo tee /etc/xbps.d/10-cosmic.conf` for glibc or `echo 'repository=https://mtfbella109.github.io/void-cosmic-repo/repo/x86_64-musl' | sudo tee /etc/xbps.d/10-cosmic.conf` for musl
-2. `sudo xbps-install -S`
-3. Install single components with `sudo xbps-install -S <package_name>` or install all components, with `sudo xbps-install -S cosmic-desktop` 
+1. If you haven't install graphic drivers on your system do `sudo xbps-install -S nvidia` for nvidia and `sudo xbps-install -S mesa-dri` for other GPU's
+2. `echo 'repository=https://mtfbella109.github.io/void-cosmic-repo/repo/x86_64' | sudo tee /etc/xbps.d/10-cosmic.conf` for glibc or `echo 'repository=https://mtfbella109.github.io/void-cosmic-repo/repo/x86_64-musl' | sudo tee /etc/xbps.d/10-cosmic.conf` for musl
+3. `sudo xbps-install -S`
+4. Install single components with `sudo xbps-install -S <package_name>` or install all components, with `sudo xbps-install -S cosmic-desktop` 
 
 ## Install and build via xbps-src
 1. `git clone --depth 1 https://github.com/MtFBella109/void-packages.git`
