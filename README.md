@@ -1,12 +1,25 @@
 # Cosmic on Void
 Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their work as a base
+
+## Table of Contents
+
+- [Install](#install-cosmic)
+  - [Install via Repository](#install-via-repository)
+  - [Install and build via xbps-src](#install-and-build-via-xbps-src)
+- [Enable Services](#enable-services)
+- [List of all components](#components)
+- [Information about Cosmic Greeter](#cosmic-greeter)
+- [Start Cosmic Desktop](#start-cosmic-session)
+
 ## Install Cosmic
 ### Install via Repository
 > There is only a Repo for x86_64 Systems
 1. If you haven't install graphic drivers on your system do `sudo xbps-install -S nvidia` for nvidia and `sudo xbps-install -S mesa-dri` for other GPU's
-2. `echo 'repository=https://mtfbella109.github.io/void-cosmic-repo/repo/x86_64' | sudo tee /etc/xbps.d/10-cosmic.conf` for glibc or `echo 'repository=https://mtfbella109.github.io/void-cosmic-repo/repo/x86_64-musl' | sudo tee /etc/xbps.d/10-cosmic.conf` for musl
-3. `sudo xbps-install -S`
-4. Install single components with `sudo xbps-install -S <package_name>` or install all components, with `sudo xbps-install -S cosmic-desktop` 
+2.  Add Reposiotry
+   - glibc: `echo 'repository=https://mtfbella109.github.io/void-cosmic-repo/repo/x86_64' | sudo tee /etc/xbps.d/10-cosmic.conf`
+   - musl: `echo 'repository=https://mtfbella109.github.io/void-cosmic-repo/repo/x86_64-musl' | sudo tee /etc/xbps.d/10-cosmic.conf`
+4. Update Package list: `sudo xbps-install -S`
+5. Install single components with `sudo xbps-install -S <package_name>` or install all components, with `sudo xbps-install -S cosmic-desktop` 
 
 ## Install and build via xbps-src
 1. `git clone --depth 1 https://github.com/MtFBella109/void-packages.git`
@@ -15,8 +28,11 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
 4. You can build single components with `./xbps-src pkg <package_name>` or build every component with `./xbps-src pkg cosmic-desktop`
 5. Install the package with `xi <package_name>` or with `xbps-install --repository hostdir/binpkgs <package_name>`
    > Note: You get the xi command with the package xtools
-7. If you want to use the all settings in Power&Battery, you need to enable power-profile daemon with this command: `sudo ln -s /etc/sv/power-profiles-daemon /var/service/`
 
+## Enable Services
+1. You need to enable dbus and elogind, if you enable then, you need to do restart, before you can start cosmic
+2. For all settings in Power&Battery you need to enable also the profile-power-daemon
+   
 ## Components
 All packages:
 - cosmic-applets
