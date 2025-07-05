@@ -1,0 +1,40 @@
+name: Sync Upstream
+
+permissions: write-all              # grant write permission
+
+on: 
+  schedule:
+    - cron: '0 0 * * 1'             # scheduled for 00:00 every Monday
+  workflow_dispatch:                # trigger manually
+
+jobs:
+  sync-upstream:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: upstream             # set the branch to merge to
+          fetch-depth: 0 
+      - name: Sync Upstream
+        uses: zhangnew/sync-upstream@v1
+        with:
+          upstream: void-linux/void-packages      # set the upstream repo
+          upstream-branch: master   # set the upstream branch to merge from
+          branch: upstream          # set the branch to merge to
+
+  # set up another job to merge another branch
+  sync-upstream-another-branch:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: master       # set the branch to merge to
+          fetch-depth: 0 
+      - name: Sync Upstream
+        uses: zhangnew/sync-upstream@v1
+        with:
+          upstream: void-linux/void-packages              # set the upstream repo
+          upstream-branch: master   # set the upstream branch to merge from
+          branch: master            # set the branch to merge to
