@@ -1,0 +1,20 @@
+# Template file for 'Zen Browser'
+pkgname=zen-browser
+version=1.14.2b
+revision=4
+_tag=epoch-${version/.alpha/-alpha}
+hostmakedepends="pkg-config"
+short_desc="TODO: cosmic-launcher short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/zen-browser/desktop"
+distfiles="https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-x86_64.tar.xz"
+checksum=3853803aca98045e191bc44b355fae348cd3986b8bbda27c3fad9ca7b8154520
+
+
+do_install() {
+    install -d ${DESTDIR}/usr/lib/zen-browser
+    cp -a * ${DESTDIR}/usr/lib/zen-browser/
+}
+
+
