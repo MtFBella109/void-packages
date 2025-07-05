@@ -14,7 +14,7 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
 ## Install Cosmic
 ### Install via Repository
 > There is only a Repo for x86_64 Systems
-1. If you haven't install graphic drivers on your system do `sudo xbps-install -S nvidia` for nvidia and `sudo xbps-install -S mesa-dri` for other GPU's
+1. If you haven't installed mesa-dri, please do it with: `sudo xbps-install -S mesa-dri`. *ATTENTION: If you have a NVIDIA Graphic card, you need mesa-dri too, cosmic doesn't start, without mesa-dri, you can of yourse install also the nvidia driver, that isn't a Problem*
 2.  Add Reposiotry
    - glibc: `echo 'repository=https://bellawagner.de/repo/x86_64' | sudo tee /etc/xbps.d/10-cosmic.conf`
    - musl: `echo 'repository=https://bellawagner.de/repo/x86_64-musl' | sudo tee /etc/xbps.d/10-cosmic.conf` 
