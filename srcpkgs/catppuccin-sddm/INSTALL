@@ -1,0 +1,14 @@
+case "$ACTION" in
+
+post)
+	if [ "$UPDATE" = "no" ]; then
+		mkdir /etc/sddm.conf.d/
+		echo "[GENERAL]" > /etc/sddm.conf.d/catppuccin.conf
+		echo "InputMethod=us" >> /etc/sddm.conf.d/catppuccin.conf
+		echo "" >> /etc/sddm.conf.d/catppuccin.conf
+		echo "[THEME]" >> /etc/sddm.conf.d/catppuccin.conf
+		echo "Current=catppuccin-mocha" >> /etc/sddm.conf.d/catppuccin.conf
+	fi
+	;;
+esac
+		

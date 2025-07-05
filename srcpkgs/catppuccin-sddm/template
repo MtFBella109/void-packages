@@ -1,0 +1,20 @@
+# Template file for 'catppuccin theme for sddm'
+pkgname=catppuccin-sddm
+version=1.1.0
+revision=3
+hostmakedepends="pkg-config"
+depends="sddm"
+short_desc="Catppuccin Theme for sddm"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/catppuccin/sddm"
+distfiles="https://github.com/catppuccin/sddm/releases/download/v${version}/catppuccin-mocha.zip"
+checksum=1de22cf9475375c9905da3f2e1af454fe27d7a2d181e9462c357930692ff6207
+
+
+do_install() {
+	vmkdir usr/share/sddm/themes/catppuccin-mocha
+	vcopy * usr/share/sddm/themes/catppuccin-mocha
+}
+
+
