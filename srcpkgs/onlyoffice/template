@@ -1,0 +1,16 @@
+pkgname="onlyoffice"
+version="v9.0.4.16"
+reviison=1
+hostmakedepends="python"
+maintainer="Bella Wagner <belladev109@proton.me>"
+distfiles="https://github.com/ONLYOFFICE/build_tools/archive/refs/tags/${version}.tar.gz"
+checksum=""
+
+do_build() {
+	cd ${BUILDDIR}/tools/linux
+	./automate.py desktop
+}
+
+do_install() {
+	
+}
