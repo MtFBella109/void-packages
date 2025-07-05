@@ -1,0 +1,28 @@
+#!/bin/bash
+case "$ACTION" in
+post)
+	if [ "$UPDATE" = "no" ]; then
+		if [ ! -d /etc/xdg/autostart ]; then
+			mkdir -p /etc/xdg/autostart
+			ln -s /usr/share/applications/pipewire.desktop /etc/xdg/autostart/
+			ln -s /usr/share/applications/pipewire-pulse.desktop /etc/xdg/autostart/
+			ln -s /usr/share/applications/wireplumber.desktop /etc/xdg/autostart/
+		else
+			if [ ! -h /etc/xdg/autostart/pipewire.desktop ]; then
+				ln -s /usr/share/applications/pipewire-pulse.desktop /etc/xdg/autostart/
+			fi
+			if [ ! -h /etc/xdg/autostart/pipewire-pulse.desktop /etc/xdg/autostart ]; then
+				ln -s /usr/share/applications/pipewire-pulse.desktop /etc/xdg/autostart/
+			fi
+			if [ ! -h /etc/xdg/autostart/wireplumber.desktop ]; then
+				ln -s /usr/share/applications/wireplumber.desktop /etc/xdg/autostart
+			fi
+		fi
+		if [ ! -d /etc/xdg-desktop-portal ]; then
+			mkdir /etc/xdg-desktop-portal
+		fi
+		echo "[preferred]" > /etc/xdg-desktop-portal7xdg-desktop-portal.conf
+		echo "default=cosmic" >> /etc/xdg-desktop-portal/xdg-desktop-portal.conf
+	fi
+	;;
+esac
