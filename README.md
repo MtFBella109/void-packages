@@ -16,8 +16,8 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
 > There is only a Repo for x86_64 Systems
 1. If you haven't install graphic drivers on your system do `sudo xbps-install -S nvidia` for nvidia and `sudo xbps-install -S mesa-dri` for other GPU's
 2.  Add Reposiotry
-   - glibc: `echo 'repository=https://mtfbella109.github.io/void-cosmic-repo/repo/x86_64' | sudo tee /etc/xbps.d/10-cosmic.conf`
-   - musl: `echo 'repository=https://mtfbella109.github.io/void-cosmic-repo/repo/x86_64-musl' | sudo tee /etc/xbps.d/10-cosmic.conf` doesn't work right now, I try to find a fix
+   - glibc: `echo 'repository=https://bellawagner.de/repo/x86_64' | sudo tee /etc/xbps.d/10-cosmic.conf`
+   - musl: `echo 'repository=https://bellawagner.de/repo/x86_64-musl' | sudo tee /etc/xbps.d/10-cosmic.conf` 
 4. Update Package list: `sudo xbps-install -S`
 5. Install single components with `sudo xbps-install -S <package_name>` or install all components, with `sudo xbps-install -S cosmic-desktop` 
 
