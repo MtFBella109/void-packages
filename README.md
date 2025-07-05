@@ -19,15 +19,18 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
    - glibc: `echo 'repository=https://bellawagner.de/repo/x86_64' | sudo tee /etc/xbps.d/10-cosmic.conf`
    - musl: `echo 'repository=https://bellawagner.de/repo/x86_64-musl' | sudo tee /etc/xbps.d/10-cosmic.conf` 
 4. Update Package list: `sudo xbps-install -S`
-5. Install single components with `sudo xbps-install -S <package_name>` or install all components, with `sudo xbps-install -S cosmic-desktop` 
+5. Install single components with `sudo xbps-install -S <package_name>` or install all components, with `sudo xbps-install -S cosmic-desktop`
+6. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
 
 ## Install and build via xbps-src
-1. `git clone --depth 1 https://github.com/MtFBella109/void-packages.git`
-2. `cd void-packages`
-3. `./xbps-src binary-bootstrap`
-4. You can build single components with `./xbps-src pkg <package_name>` or build every component with `./xbps-src pkg cosmic-desktop`
-5. Install the package with `xi <package_name>` or with `xbps-install --repository hostdir/binpkgs <package_name>`
+1. If you haven't install graphic drivers on your system do `sudo xbps-install -S nvidia` for nvidia and `sudo xbps-install -S mesa-dri` for other GPU's
+2. `git clone --depth 1 https://github.com/MtFBella109/void-packages.git`
+3. `cd void-packages`
+4. `./xbps-src binary-bootstrap`
+5. You can build single components with `./xbps-src pkg <package_name>` or build every component with `./xbps-src pkg cosmic-desktop`
+6. Install the package with `xi <package_name>` or with `xbps-install --repository hostdir/binpkgs <package_name>`
    > Note: You get the xi command with the package xtools
+7. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
 
 ## Table of Contents
 
