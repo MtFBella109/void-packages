@@ -20,6 +20,7 @@ changelog="https://docs.victoriametrics.com/victorialogs/changelog/"
 distfiles="https://github.com/VictoriaMetrics/VictoriaLogs/archive/v${version}.tar.gz"
 checksum=73fe43947ad7d4d361da356529c4e8d0ca4990e727bce7bc39e181b1c94348a0
 
+
 system_accounts="_vlogs"
 _vlogs_homedir="/var/lib/victoria-logs"
 make_dirs="/var/lib/victoria-logs 0750 _vlogs _vlogs"
