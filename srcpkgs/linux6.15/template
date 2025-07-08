@@ -1,6 +1,10 @@
 # Template file for 'linux6.15'
 pkgname=linux6.15
+<<<<<<< HEAD
 version=6.15.11
+=======
+version=6.15.5
+>>>>>>> a778dc8ac7e (linux6.15: update to 6.15.5.)
 revision=1
 short_desc="Linux kernel and modules (${version%.*} series)"
 maintainer="Duncaen <duncaen@voidlinux.org>"
@@ -18,7 +22,11 @@ rc*) distfiles="https://git.kernel.org/torvalds/t/linux-${version%.*}-${version#
 esac
 
 checksum="7586962547803be7ecc4056efc927fb25214548722bd28171172f3599abb9764
+<<<<<<< HEAD
  cd3ceb454b333ed77bdece0a48efdbd5ba1b40cb21031f18b0a413bdee757686"
+=======
+ d97665ba4930f3a7f0a6a50ce38bdb8a490a7c6bd7d0e41f5664130bbc91db2d"
+>>>>>>> a778dc8ac7e (linux6.15: update to 6.15.5.)
 
 python_version=3
 
