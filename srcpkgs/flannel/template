@@ -1,5 +1,6 @@
 # Template file for 'flannel'
 pkgname=flannel
+<<<<<<< HEAD
 version=0.27.2
 revision=1
 build_style=go
