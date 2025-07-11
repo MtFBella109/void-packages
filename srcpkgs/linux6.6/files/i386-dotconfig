@@ -505,7 +505,10 @@ CONFIG_RETHUNK=y
 CONFIG_MITIGATION_RFDS=y
 CONFIG_MITIGATION_SPECTRE_BHI=y
 CONFIG_MITIGATION_TSA=y
+<<<<<<< HEAD
 CONFIG_MITIGATION_VMSCAPE=y
+=======
+>>>>>>> 8e5f2ef9477 (linux6.6: update to 6.6.97.)
 
 #
 # Power management and ACPI options
