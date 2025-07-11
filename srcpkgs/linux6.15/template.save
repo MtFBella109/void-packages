@@ -18,7 +18,11 @@ rc*) distfiles="https://git.kernel.org/torvalds/t/linux-${version%.*}-${version#
 esac
 
 checksum="7586962547803be7ecc4056efc927fb25214548722bd28171172f3599abb9764
+<<<<<<< HEAD
+<<<<<<< HEAD
  cd3ceb454b333ed77bdece0a48efdbd5ba1b40cb21031f18b0a413bdee757686"
+af7f7b9e561428628bcc172a0384be9f087b1"
+>>>>>>> 40f32d1b211 (linux6.15: update to 6.15.6.)
 
 python_version=3
 
