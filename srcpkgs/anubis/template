@@ -27,6 +27,10 @@ do_check() {
 	go test -p "$XBPS_MAKEJOBS" ${make_check_args} ./...
 }
 
+do_check() {
+	go test -p "$XBPS_MAKEJOBS" ${make_check_args} ./...
+}
+
 post_install() {
 	vsv anubis
 	vlicense LICENSE
