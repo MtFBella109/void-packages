@@ -315,7 +315,6 @@ _add_lang sa-IN		"Sanskrit (India)" -hsa -Hsa
 # _add_lang sah		"Yakut"
 _add_lang sat		"Santali"
 _add_lang sat-Olck	"Santali (Ol Chiki)"
-_add_lang sd		"Sindhi"
 _add_lang si		"Sinhala" -h
 _add_lang sid		"Sidamo"
 _add_lang sk		"Slovak" -h -H -m
