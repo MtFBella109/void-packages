@@ -64,8 +64,12 @@ _baseurl="https://download.documentfoundation.org/libreoffice/src/${version%.*}"
 _baseurl="https://downloadarchive.documentfoundation.org/libreoffice/old/${version}/src/"
 # Please don't remove this mirror, it's faster for me
 # _baseurl="https://download.nus.edu.sg/mirror/tdf/libreoffice/src/${version%.*}"
+<<<<<<< HEAD
 # _baseurl="https://mirrors.nju.edu.cn/tdf/libreoffice/src/${version%.*}"
 # _baseurl="https://mirrors.tuna.tsinghua.edu.cn/libreoffice/src/${version%.*}"
+=======
+_baseurl="https://mirrors.nju.edu.cn/tdf/libreoffice/src/${version%.*}"
+>>>>>>> 7e35a0ad7e4 (Fixed mistake from a sync fork)
 _addurl="https://dev-www.libreoffice.org/src"
 _exturl="https://dev-www.libreoffice.org/extern"
 
