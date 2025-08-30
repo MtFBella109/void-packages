@@ -1,7 +1,7 @@
 # Template file for 'Install Flathub Apps on the cosmic-iso'
 pkgname=cosmic-iso-flatpaks
 version=1
-revision=2
+revision=3
 hostmakedepends="pkg-config"
 depends="flatpak"
 short_desc="Flatpak Apps needed on Cosmic Iso"
