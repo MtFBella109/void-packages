@@ -1,0 +1,16 @@
+# Template file for 'terragrunt'
+pkgname=terragrunt
+version=0.85.0
+revision=1
+build_style=go
+go_import_path="github.com/gruntwork-io/terragrunt"
+short_desc="Thin wrapper for Terraform that provides extra tools"
+maintainer="Andrea Brancaleoni <abc@pompel.me>"
+license="MIT"
+homepage="https://github.com/gruntwork-io/terragrunt"
+distfiles="$homepage/archive/v$version.tar.gz"
+checksum=4b0508803c01533f2820d96ae7df3b57928031848cd2fff4d1ae333cc6fec282
+
+post_install() {
+	vlicense LICENSE.txt
+}

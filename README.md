@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Cosmic on Void
 Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their work as a base
 
