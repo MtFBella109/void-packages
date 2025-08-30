@@ -12,7 +12,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-edit"
 distfiles="https://github.com/pop-os/cosmic-edit/archive/refs/tags/${_tag}.tar.gz"
-checksum=9ae952b068d70115e9ad6c50abcebe48a8a348c99f5eb30466355d136a55ea70
+checksum=e98b7a6bea4ace6f9d0ea24e96d190c45bca1cdf085086ebbea3fd665757086e
 
 export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
 export VERGEN_GIT_SHA="${version}_${revision}"

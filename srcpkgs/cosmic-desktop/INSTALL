@@ -2,17 +2,37 @@
 case "$ACTION" in
 post)
 	if [ "$UPDATE" = "no" ]; then
+		layout=$(grep 'KEYMAP=' /etc/rc.conf | cut -d= -f2)
+mkdir -p /usr/share/cosmic/com.system76.CosmicComp/v1/
+touch /usr/share/cosmic/com.system76.CosmicComp/v1/xkb_config
+cat >> /usr/share/cosmic/com.system76.CosmicComp/v1/xkb_config <<EOF
+(
+rules: "",
+model: "",
+layout: "us",
+variant: "",
+options: None,
+repeat_delay: 600,
+repeat_rate: 25,
+)
+EOF
+		sed -i 's/us/$layout/' /usr/share/cosmic/com.system76.CosmicComp/v1/xkb_config
+		if [ ! -h /usr/bin/firefox ]; then
+			sed -i 's/firefox//' /usr/share/cosmic/com.system76.CosmicAppList/v1/favorites
+		fi
 		if [ ! -d /etc/xdg/autostart ]; then
 			mkdir -p /etc/xdg/autostart
+			ln -s /usr/share/applications/wireplumber.desktop /etc/xdg/autostart/
+			ln -s /usr/share/applications/pipewire\-pulse.desktop /etc/xdg/autostart/
 			ln -s /usr/share/applications/pipewire.desktop /etc/xdg/autostart/
 			ln -s /usr/share/applications/pipewire-pulse.desktop /etc/xdg/autostart/
 			ln -s /usr/share/applications/wireplumber.desktop /etc/xdg/autostart/
 		else
 			if [ ! -h /etc/xdg/autostart/pipewire.desktop ]; then
-				ln -s /usr/share/applications/pipewire-pulse.desktop /etc/xdg/autostart/
+				ln -s /usr/share/applications/pipewire.desktop /etc/xdg/autostart/
 			fi
-			if [ ! -h /etc/xdg/autostart/pipewire-pulse.desktop /etc/xdg/autostart ]; then
-				ln -s /usr/share/applications/pipewire-pulse.desktop /etc/xdg/autostart/
+			if [ ! -h /etc/xdg/autostart/pipewire\-pulse.desktop ]; then
+				ln -s /usr/share/applications/pipewire\-pulse.desktop /etc/xdg/autostart/
 			fi
 			if [ ! -h /etc/xdg/autostart/wireplumber.desktop ]; then
 				ln -s /usr/share/applications/wireplumber.desktop /etc/xdg/autostart
