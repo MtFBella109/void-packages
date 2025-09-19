@@ -1,11 +1,11 @@
 # Template file for 'xdg-desktop-portal-cosmic'
 pkgname=xdg-desktop-portal-cosmic
 version=1.0.0.alpha.7
-revision=7
+revision=8
 _tag=epoch-${version/.alpha/-alpha}
 hostmakedepends="pkg-config cargo cargo-auditable"
 makedepends="libxkbcommon-devel libzstd-devel pipewire-devel clang libglib-devel libgbm-devel"
-depends="libgbm libpipewire glib libxkbcommon libdrm expat zlib libmount libffi libpcre2 libblkid"
+depends="libgbm libpipewire glib libxkbcommon libdrm expat zlib libmount libffi libpcre2 libblkid xdg-desktop-portal"
 short_desc="TODO: xdg-desktop-portal-cosmic short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
