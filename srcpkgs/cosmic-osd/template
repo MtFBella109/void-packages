@@ -1,7 +1,7 @@
 # Template file for 'cosmic-osd'
 pkgname=cosmic-osd
 version=1.0.0.beta.1.1
-revision=1
+revision=2
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
 hostmakedepends="pkg-config"
@@ -13,3 +13,11 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-osd"
 distfiles="https://github.com/pop-os/cosmic-osd/archive/refs/tags/${_tag}.tar.gz"
 checksum=108479a1c1bf30cc54aacd9daca041bc24b720e39aa66ed2a5d6a9d1919215c4
+
+do_build() {
+	make all prefix=/usr
+}
+
+do_install() {
+	DESTDIR=${DESTDIR} make install 
+}

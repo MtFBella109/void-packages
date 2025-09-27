@@ -1,7 +1,7 @@
 # Template file for 'cosmic-applets'
 pkgname=cosmic-initial-setup
 version=1.0.0.beta.1.1
-revision=1
+revision=3
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
 hostmakedepends="pkg-config just"
@@ -14,6 +14,10 @@ homepage="https://github.com/pop-os/cosmic-initial-setup"
 distfiles="https://github.com/pop-os/cosmic-initial-setup/archive/refs/tags/${_tag}.tar.gz"
 checksum=b7b3f3e9836929f715f74bd156481bf4334f261d6d448f8ac85894a5d6c2d9a5
 
+do_build() {
+	just build-release
+}
+
 do_install() {
-	just --set cargo-target-dir "target/${RUST_TARGET}" --set rootdir ${DESTDIR} install
+	just --set rootdir ${DESTDIR} install
 }

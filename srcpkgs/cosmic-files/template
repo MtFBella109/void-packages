@@ -1,7 +1,7 @@
 # Template file for 'cosmic-files'
 pkgname=cosmic-files
 version=1.0.0.beta.1.1
-revision=1
+revision=2
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
 hostmakedepends="pkg-config just"
@@ -14,13 +14,13 @@ homepage="https://github.com/pop-os/cosmic-files"
 distfiles="https://github.com/pop-os/cosmic-files/archive/refs/tags/${_tag}.tar.gz"
 checksum=96fdf51baa63824cfa2dd4b1d2410290385cb60f8338eab2d58654da5be7f2c3
 
-export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
-export VERGEN_GIT_SHA="${version}_${revision}"
+#export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
+#export VERGEN_GIT_SHA="${version}_${revision}"
 
 do_build() {
-	cargo build --release --workspace
+	just build-release
 }
 
 do_install() {
-	just --set rootdir ${DESTDIR} --set prefix /usr install
+	just --set rootdir ${DESTDIR} install
 }

@@ -1,7 +1,7 @@
 # Template file for 'cosmic-edit'
 pkgname=cosmic-edit
 version=1.0.0.beta.1.1
-revision=1
+revision=3
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
 hostmakedepends="pkg-config just"
@@ -14,9 +14,13 @@ homepage="https://github.com/pop-os/cosmic-edit"
 distfiles="https://github.com/pop-os/cosmic-edit/archive/refs/tags/${_tag}.tar.gz"
 checksum=0fb694b7241847a84677aa0c829599220835d465c6e322df0c3b63d44b4c04a8
 
-export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
-export VERGEN_GIT_SHA="${version}_${revision}"
+#export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
+#export VERGEN_GIT_SHA="${version}_${revision}"
+
+do_build() {
+	just build-release
+}
 
 do_install() {
-	just --set cargo-target-dir "target/${RUST_TARGET}" --set rootdir ${DESTDIR} --set prefix /usr install
+	just --set rootdir ${DESTDIR} install
 }

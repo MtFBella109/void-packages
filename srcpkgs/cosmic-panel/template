@@ -1,11 +1,11 @@
 # Template file for 'cosmic-panel'
 pkgname=cosmic-panel
 version=1.0.0.beta.1.1
-revision=1
+revision=2
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
 make_install_args="--path cosmic-panel-bin"
-hostmakedepends="pkg-config"
+hostmakedepends="pkg-config just"
 makedepends="libxkbcommon-devel"
 depends="libxkbcommon"
 short_desc="TODO: cosmic-panel short_desc"
@@ -15,7 +15,10 @@ homepage="https://github.com/pop-os/cosmic-panel"
 distfiles="https://github.com/pop-os/cosmic-panel/archive/refs/tags/${_tag}.tar.gz"
 checksum=7ca7fda8f45f0dd49f1b7afb76c7e62f0a414bbfac096ecc2de1b71650dea7b0
 
-post_install() {
-	vmkdir usr/share/cosmic
-	vcopy "data/default_schema/*" usr/share/cosmic
+do_build() {
+	just build-release
+}
+
+do_install() {
+	just rootdir=${DESTDIR} install 
 }

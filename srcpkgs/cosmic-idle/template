@@ -1,7 +1,7 @@
 # Template file for 'cosmic-idle'
 pkgname=cosmic-idle
 version=1.0.0.beta.1.1
-revision=1
+revision=2
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
 configure_args=" --all"
@@ -15,6 +15,10 @@ homepage="https://github.com/pop-os/cosmic-idle"
 distfiles="https://github.com/pop-os/cosmic-idle/archive/refs/tags/${_tag}.tar.gz"
 checksum=bb4d6653a1b582ca2fbcd442cbe4b66aee4e44932393c0589bb2e08a3b5fc9ac
 
+do_build() {
+	just build-release
+}
+
 do_install() {
-	just --set cargo-target-dir "target/${RUST_TARGET}" --set rootdir ${DESTDIR} --set prefix /usr install
+	just --set rootdir ${DESTDIR} install
 }

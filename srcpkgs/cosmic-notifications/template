@@ -1,7 +1,7 @@
 # Template file for 'cosmic-notifications'
 pkgname=cosmic-notifications
 version=1.0.0.beta.1.1
-revision=1
+revision=2
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
 hostmakedepends="pkg-config just"
@@ -14,6 +14,10 @@ homepage="https://github.com/pop-os/cosmic-notifications"
 distfiles="https://github.com/pop-os/cosmic-notifications/archive/refs/tags/${_tag}.tar.gz"
 checksum=010457c0ff82b074d508a28ab005969e4080f05087e28c05f30425bc79ca7060
 
+do_build() {
+	just build-release
+}
+
 do_install() {
-	just --set cargo-target-dir "target/${RUST_TARGET}" --set rootdir ${DESTDIR} --set prefix /usr install
+	just --set rootdir ${DESTDIR} install
 }

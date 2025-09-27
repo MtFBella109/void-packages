@@ -1,13 +1,21 @@
 # Template file for 'cosmic-randr'
 pkgname=cosmic-randr
 version=1.0.0.beta.1.1
-revision=1
+revision=2
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
-make_install_args="--path cli"
+hostmakedepends="just"
 short_desc="TODO: cosmic-randr short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-randr"
 distfiles="https://github.com/pop-os/cosmic-randr/archive/refs/tags/${_tag}.tar.gz"
 checksum=0b39233b16d9e9e427149f6d28bd4f80bdf41a19dfa6086c7afb17f7af9f94b8
+
+do_build() {
+	just
+}
+
+do_install() {
+	just rootdir=${DESTDIR} install
+}
