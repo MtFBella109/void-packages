@@ -1,8 +1,8 @@
 # Template file for 'cosmic-idle'
 pkgname=cosmic-idle
-version=1.0.0.alpha.7
+version=1.0.0.beta.1.1
 revision=1
-_tag=epoch-${version/.alpha/-alpha}
+_tag=epoch-${version/.beta/-beta}
 build_style=cargo
 configure_args=" --all"
 hostmakedepends="pkg-config just"
@@ -13,7 +13,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-idle"
 distfiles="https://github.com/pop-os/cosmic-idle/archive/refs/tags/${_tag}.tar.gz"
-checksum=713953ab0176164dff644da2c0e42a17f0e84e7984d7600a02ab81c8c24362ef
+checksum=bb4d6653a1b582ca2fbcd442cbe4b66aee4e44932393c0589bb2e08a3b5fc9ac
 
 do_install() {
 	just --set cargo-target-dir "target/${RUST_TARGET}" --set rootdir ${DESTDIR} --set prefix /usr install

@@ -1,8 +1,8 @@
 # Template file for 'cosmic-session'
 pkgname=cosmic-session
-version=1.0.0.alpha.7
-revision=6
-_tag=epoch-${version/.alpha/-alpha}
+version=1.0.0.beta.1.1
+revision=1
+_tag=epoch-${version/.beta/-beta}
 build_style=cargo
 make_build_args="--no-default-features --features autostart"
 hostmakedepends="just"
@@ -11,7 +11,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-session"
 distfiles="https://github.com/pop-os/cosmic-session/archive/refs/tags/${_tag}.tar.gz"
-checksum=7a4953520fc313dbf8b1292a88cf29153c32b953ffce2c33247355c20113b838
+checksum=74072f8c75548256582c7a615798569ff7095c6b6e026aa82bd5e141ecacbb0c
 
 do_install() {
     just --set cargo-target-dir "target/${RUST_TARGET}" --set rootdir ${DESTDIR} --set prefix /usr install

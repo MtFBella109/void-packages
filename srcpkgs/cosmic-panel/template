@@ -1,8 +1,8 @@
 # Template file for 'cosmic-panel'
 pkgname=cosmic-panel
-version=1.0.0.alpha.7
+version=1.0.0.beta.1.1
 revision=1
-_tag=epoch-${version/.alpha/-alpha}
+_tag=epoch-${version/.beta/-beta}
 build_style=cargo
 make_install_args="--path cosmic-panel-bin"
 hostmakedepends="pkg-config"
@@ -13,7 +13,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-panel"
 distfiles="https://github.com/pop-os/cosmic-panel/archive/refs/tags/${_tag}.tar.gz"
-checksum=67d1560840a2a34fabd4344a50f5ee7f998b0010afe144c21aaa0a4fde4c445d
+checksum=7ca7fda8f45f0dd49f1b7afb76c7e62f0a414bbfac096ecc2de1b71650dea7b0
 
 post_install() {
 	vmkdir usr/share/cosmic

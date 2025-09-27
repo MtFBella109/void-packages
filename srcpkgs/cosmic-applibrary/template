@@ -1,8 +1,8 @@
 # Template file for 'cosmic-applibrary'
 pkgname=cosmic-applibrary
-version=1.0.0.alpha.7
-revision=3
-_tag=epoch-${version/.alpha/-alpha}
+version=1.0.0.beta.1.1
+revision=1
+_tag=epoch-${version/.beta/-beta}
 hostmakedepends="pkg-config just cargo cargo-auditable"
 makedepends="libxkbcommon-devel"
 depends="libxkbcommon"
@@ -11,7 +11,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-applibrary"
 distfiles="https://github.com/pop-os/cosmic-applibrary/archive/refs/tags/${_tag}.tar.gz"
-checksum=69b9581c1e0b898dc700ec3fce09a0b69e7da78e1202b70e68794b2397fc6a6f
+checksum=70ac9f2fe3fca8ab7188a3c1cdca6b1c20d198d888bf6f50093d962e7cab4ad7
 
 do_build() {
 	just build-release
