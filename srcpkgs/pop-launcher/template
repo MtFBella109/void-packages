@@ -1,6 +1,6 @@
 # Template file for 'pop-launcher'
 pkgname=pop-launcher
-version1.2.6
+version=1.2.6
 revision=1
 hostmakedepends="pkg-config just cargo cargo-auditable"
 makedepends="libxkbcommon-devel"

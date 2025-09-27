@@ -1,7 +1,7 @@
 # Template file for 'cosmic-workspaces-epoch'
 pkgname=cosmic-workspaces-epoch
 version=1.0.0.beta.1.1
-revision=1
+revision=2
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
 hostmakedepends="pkg-config"
@@ -14,7 +14,10 @@ homepage="https://github.com/pop-os/cosmic-workspaces-epoch"
 distfiles="https://github.com/pop-os/cosmic-workspaces-epoch/archive/refs/tags/${_tag}.tar.gz"
 checksum=3588c8f4dad6211c41ab6c5cd8017a224042532128fcf9f9f9815a201952f1b4
 
-post_install() {
-	vinstall data/com.system76.CosmicWorkspaces.desktop 0644 usr/share/applications
-	vinstall data/com.system76.CosmicWorkspaces.svg 0644 usr/share/icons/hicolor/scalable/apps
+do_build() {
+	make all prefix=/usr
+}
+
+do_install() {
+	DESTDIR=${DESTDIR} make install prefix=/usr
 }

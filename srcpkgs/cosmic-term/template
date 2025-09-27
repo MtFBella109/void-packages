@@ -1,7 +1,7 @@
 # Template file for 'cosmic-term'
 pkgname=cosmic-term
 version=1.0.0.beta.1.1
-revision=1
+revision=2
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
 hostmakedepends="pkg-config just"
@@ -14,9 +14,10 @@ homepage="https://github.com/pop-os/cosmic-term"
 distfiles="https://github.com/pop-os/cosmic-term/archive/refs/tags/${_tag}.tar.gz"
 checksum=fdbb1ed2a02950c65e40c1fc3f9d1eee51ca8fbf70cb84848fe500fc3f2b3930
 
-export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
-export VERGEN_GIT_SHA="${version}_${revision}"
+do_build() {
+	just build-release
+}
 
 do_install() {
-	just --set cargo-target-dir "target/${RUST_TARGET}" --set rootdir ${DESTDIR} --set prefix /usr install
+	just --set rootdir ${DESTDIR} install
 }

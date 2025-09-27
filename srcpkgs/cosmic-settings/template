@@ -1,11 +1,11 @@
 # Template file for 'cosmic-settings'
 pkgname=cosmic-settings
 version=1.0.0.beta.1.1
-revision=1
+revision=2
 _tag=epoch-${version/.beta/-beta}
 hostmakedepends="pkg-config just cargo"
 makedepends="libxkbcommon-devel eudev-libudev-devel libinput-devel pipewire-devel clang"
-depends="dbus-libs eudev-libudev lame libpulseaudio libxkbcommon libpulseaudio libpipewire libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus power-profiles-daemon"
+depends="accountsservice dbus-libs eudev-libudev gettext NetworkManager-openvpn network-manager-applet xkeyboard-config lame libpulseaudio libxkbcommon libpulseaudio libpipewire libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus iso-codes power-profiles-daemon"
 short_desc="TODO: cosmic-settings short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
@@ -14,9 +14,9 @@ distfiles="https://github.com/pop-os/cosmic-settings/archive/refs/tags/${_tag}.t
 checksum=d66ab851496c48c1f3eacd35a57f561111ef86b073a9ddeb8f78408a83946d51
 
 do_build() {
-	just
+	just build-release
 }
 
 do_install() {
-	just --set rootdir ${DESTDIR} --set prefix /usr install
+	just --set rootdir ${DESTDIR} install
 }

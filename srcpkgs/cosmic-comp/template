@@ -1,10 +1,9 @@
 # Template file for 'cosmic-comp'
 pkgname=cosmic-comp
 version=1.0.0.beta.1.1
-revision=1
+revision=2
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
-build_style_args="--no-default-features --features profile-with-tray"
 hostmakedepends="pkg-config"
 makedepends="eudev-libudev-devel libseat-devel libxkbcommon-devel libinput-devel pixman-devel libgbm-devel libdisplay-info-devel"
 depends="eudev-libudev expat libxkbcommon libdisplay-info libgbm libseat libinput libgcc libdrm libelogind libevdev libwacom libcap libgudev libffi libpcre2 mtdev pixman"
@@ -15,6 +14,10 @@ homepage="https://github.com/pop-os/cosmic-comp"
 distfiles="https://github.com/pop-os/cosmic-comp/archive/refs/tags/${_tag}.tar.gz"
 checksum=3ba4f6d94f6c0717ebbefd6c888c0e0a43038cdc02414d6cc51f9a4d7014c1c2
 
+do_build() {
+	cargo build --release --no-default-features --features "profile-with-tracy debug"
+}
+
 do_install() {
-	CARGO_TARGET_DIR="target/${RUST_TARGET}" DESTDIR=${DESTDIR} make install
+	DESTDIR=${DESTDIR} make install
 }

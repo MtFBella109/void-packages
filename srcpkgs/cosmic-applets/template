@@ -1,10 +1,9 @@
 # Template file for 'cosmic-applets'
 pkgname=cosmic-applets
 version=1.0.0.beta.1.1
-revision=1
+revision=2
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
-build_style_args="--workspaces"
 hostmakedepends="pkg-config just"
 makedepends="libxkbcommon-devel eudev-libudev-devel dbus-devel pulseaudio-devel libinput-devel pipewire-devel clang19-devel"
 depends="dbus-libs eudev-libudev lame libpulseaudio libxkbcommon libpulseaudio libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus"
@@ -15,11 +14,10 @@ homepage="https://github.com/pop-os/cosmic-applets"
 distfiles="https://github.com/pop-os/cosmic-applets/archive/refs/tags/${_tag}.tar.gz"
 checksum=4319f84f30d4deb2866748bb1aa1eba396f9a31512dfd8f883cc2705e893802e
 
-if [ "$XBPS_WORDSIZE" = "32" ]; then
-	broken="rustc-LLVM ERROR: out of memory"
-fi
+do_build() {
+	just rootdir=${DESTDIR} build-release
+}
 
 do_install() {
-	just --set targetdir "target/${RUST_TARGET}" --set rootdir ${DESTDIR} \
-		--set prefix /usr --set cosmic-applets-bin cosmic-applets install
+	just rootdir=${DESTDIR} install 
 }

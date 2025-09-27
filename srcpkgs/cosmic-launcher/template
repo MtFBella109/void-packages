@@ -1,7 +1,7 @@
 # Template file for 'cosmic-launcher'
 pkgname=cosmic-launcher
 version=1.0.0.beta.1.1
-revision=1
+revision=2
 _tag=epoch-${version/.beta/-beta}
 hostmakedepends="pkg-config just cargo cargo-auditable"
 makedepends="libxkbcommon-devel which"
@@ -14,9 +14,9 @@ distfiles="https://github.com/pop-os/cosmic-launcher/archive/refs/tags/${_tag}.t
 checksum=9b11d3239238b666a560457b65de3fce0fba4d24b679b8f017ba117676ccf932
 
 do_build() {
-	just
+	just build-release
 }
 
 do_install() {
-	just --set rootdir ${DESTDIR} --set prefix /usr install
+	just --set rootdir ${DESTDIR} install
 }
