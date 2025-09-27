@@ -1,8 +1,8 @@
 # Template file for 'cosmic-screenshot'
 pkgname=cosmic-screenshot
-version=1.0.0.alpha.7
-revision=7
-_tag=epoch-${version/.alpha/-alpha}
+version=1.0.0.beta.1.1
+revision=1
+_tag=epoch-${version/.beta/-beta}
 build_style=cargo
 hostmakedepends="just"
 short_desc="TODO: cosmic-screenshot short_desc"
@@ -10,7 +10,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-screenshot"
 distfiles="https://github.com/pop-os/cosmic-screenshot/archive/refs/tags/${_tag}.tar.gz"
-checksum=0fd467bd94e0e3537e6833ec9068b84f4f1453510a2599cc69a61d014dc6e873
+checksum=78f75210adec8cfabd714eb9bb4954b7ae6191e08efc74fa522118c4bdaa110f
 
 do_install() {
 	just --set cargo-target-dir "target/${RUST_TARGET}" --set rootdir ${DESTDIR} --set prefix /usr install

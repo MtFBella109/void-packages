@@ -1,8 +1,8 @@
 # Template file for 'cosmic-player'
 pkgname=cosmic-player
-version=1.0.0.alpha.7
-revision=3
-_tag=epoch-${version/.alpha/-alpha}
+version=1.0.0.beta.1.1
+revision=1
+_tag=epoch-${version/.beta/-beta}
 wrksrc=${pkgname}-${version}
 #build_style=manual
 hostmakedepends="pkg-config just cargo cargo-auditable git"
