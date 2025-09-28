@@ -1,3 +1,6 @@
+# Attention
+I updated the templates and packages all to beta1.1, unfortunately there is a bug in the betas. A memory leak in cosmic-comp, if you use firefox it is worse. The experience is right now, not the best. I would recommend to wait till beta1.2. The desktop crashes after time and then automatically restarts
+
 # Cosmic on Void
 Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their work as a base
 
