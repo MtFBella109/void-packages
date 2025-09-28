@@ -1,0 +1,58 @@
+# Template file for 'org.freedesktop.locale1'
+pkgname=locale1
+version=1
+revision=1
+wrksrc="${pkgname}-${version}"
+short_desc="TODO: pop-fonts short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://www.freedesktop.org/software/systemd/man/latest/org.freedesktop.locale1.html"
+
+pre_install() {
+	if [ ! -d $wrksrc ]; then
+		mkdir $wrksrc
+	fi
+	cd $wrksrc
+	cat > locale1.py <<EOF
+#!/usr/bin/env python3
+import os
+import asyncio
+from dbus_fast.service import ServiceInterface, method, dbus_property, PropertyAccess
+from dbus_fast.aio import MessageBus
+from dbus_fast import BusType
+
+LOCALE_DIR = "/usr/share/i18n/locales"
+
+class Locale1(ServiceInterface):
+    def __init__(self):
+        super().__init__("org.freedesktop.locale1")
+        self._locale = ["LANG=en_US.UTF-8"]
+
+    @dbus_property(access=PropertyAccess.READ)
+    def Locale(self) -> "as":
+        return self._locale
+
+    @method()
+    def ListLocales(self) -> "as":
+        try:
+            return sorted(os.listdir(LOCALE_DIR))
+
+async def main():
+    bus = await MessageBus(bus_type=BusType.SYSTEM).connect()
+    locale1 = Locale1()
+    bus.export("/org/freedesktop/locale1", locale1)
+    await bus.request_name("org.freedesktop.locale1")
+    print("locale1 service running...")
+    await asyncio.get_event_loop().create_future()
+
+if __name__ == "__main__":
+    asyncio.run(main())
+
+EOF
+}
+
+do_install() {
+	vmkdir usr/bin
+	vinstall locale1.py 755 /usr/bin
+	vsv locale1
+}
