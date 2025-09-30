@@ -1,11 +1,11 @@
 # Template file for 'cosmic-settings'
 pkgname=cosmic-settings
 version=1.0.0.beta.1.1
-revision=6
+revision=7
 _tag=epoch-${version/.beta/-beta}
 hostmakedepends="pkg-config just cargo"
 makedepends="libxkbcommon-devel eudev-libudev-devel libinput-devel pipewire-devel clang"
-depends="accountsservice dbus-libs eudev-libudev gettext NetworkManager-openvpn network-manager-applet xkeyboard-config lame libpulseaudio libxkbcommon libpulseaudio libpipewire libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus iso-codes power-profiles-daemon"
+depends="accountsservice dbus-libs eudev-libudev gettext NetworkManager-openvpn xkeyboard-config lame libpulseaudio libxkbcommon libpulseaudio libpipewire libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus iso-codes power-profiles-daemon"
 short_desc="TODO: cosmic-settings short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"

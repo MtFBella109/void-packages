@@ -2,5 +2,4 @@
 exec 2>&1
 export DBUS_SYSTEM_BUS_ADDRESS=unix:path=/run/dbus/system_bus_socket
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
-exec /usr/bin/python3 /usr/bin/locale1.py >>/tmp/locale1-stub.log 2>&1
-
+exec /usr/bin/python3 /usr/bin/locale1
