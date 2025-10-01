@@ -26,8 +26,6 @@ EOF
 			ln -s /usr/share/applications/wireplumber.desktop /etc/xdg/autostart/
 			ln -s /usr/share/applications/pipewire\-pulse.desktop /etc/xdg/autostart/
 			ln -s /usr/share/applications/pipewire.desktop /etc/xdg/autostart/
-			ln -s /usr/share/applications/pipewire-pulse.desktop /etc/xdg/autostart/
-			ln -s /usr/share/applications/wireplumber.desktop /etc/xdg/autostart/
 		else
 			if [ ! -h /etc/xdg/autostart/pipewire.desktop ]; then
 				ln -s /usr/share/applications/pipewire.desktop /etc/xdg/autostart/
@@ -42,7 +40,7 @@ EOF
 		if [ ! -d /etc/xdg-desktop-portal ]; then
 			mkdir /etc/xdg-desktop-portal
 		fi
-		echo "[preferred]" > /etc/xdg-desktop-portal7xdg-desktop-portal.conf
+		echo "$XDG_CURRENT_DESKTOP" > /etc/xdg-desktop-portal/xdg-desktop-portal.conf
 		echo "default=cosmic" >> /etc/xdg-desktop-portal/xdg-desktop-portal.conf
 		if [ -h /etc/sv/sddm ]; then
 			if grep -q "InputMethod" /etc/sddm.conf; then

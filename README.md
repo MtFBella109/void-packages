@@ -1,3 +1,6 @@
+# Attention
+I updated the templates and packages all to beta1.1, unfortunately there is a bug in the betas. A memory leak in cosmic-comp, if you use firefox it is worse. The experience is right now, not the best. I would recommend to wait till beta1.2. The desktop crashes after time and then automatically restarts
+
 # Cosmic on Void
 Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their work as a base
 
@@ -32,6 +35,7 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
    > Note: You get the xi command with the package xtools
 7. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
 
+<<<<<<< HEAD
 ## Table of Contents
 
 - [Install](#install-cosmic)
@@ -63,6 +67,8 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
    > Note: You get the xi command with the package xtools
 7. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
 
+=======
+>>>>>>> 59ab6a4f6638800f0af741c1dfa8e7ee5462c191
 ## Enable Services
 1. You need to enable dbus and elogind, if you enable then, you need to do restart, before you can start cosmic
 2. For all settings in Power&Battery you need to enable also the profile-power-daemon
@@ -105,4 +111,8 @@ The cosmic-greeter Package is becasue of that marked as broke and isn't on the c
 You can use sddm or other graphical Login Manager or you can start it manually:
 1. Login as your user
 2. Type `start-cosmic`
+<<<<<<< HEAD
 *Note: The user, that runs start-cosmic, is automatically the user which is sgined in, in cosmic desktop*
+=======
+> Note: The user, that runs start-cosmic, is automatically the user which is sgined in, in cosmic desktop
+>>>>>>> 59ab6a4f6638800f0af741c1dfa8e7ee5462c191
