@@ -1,7 +1,7 @@
 # Template file for 'cosmic-settings'
 pkgname=cosmic-settings
 version=1.0.0.beta.1.1
-revision=7
+revision=8
 _tag=epoch-${version/.beta/-beta}
 hostmakedepends="pkg-config just cargo"
 makedepends="libxkbcommon-devel eudev-libudev-devel libinput-devel pipewire-devel clang"
@@ -19,6 +19,4 @@ do_build() {
 
 do_install() {
 	just --set rootdir ${DESTDIR} install
-	vmkdir usr/share/cosmic/locales
-	mv i18n/* ${DESTDIR}/usr/share/cosmic/locales
 }
