@@ -1,5 +1,5 @@
 # Attention
-I updated the templates and packages all to beta1.1, unfortunately there is a bug in the betas. A memory leak in cosmic-comp, if you use firefox it is worse. The experience is right now, not the best. I would recommend to wait till beta1.2. The desktop crashes after time and then automatically restarts
+Beta1.1 is having a big performance issue and a memore leak, if you encounter too mouch Problems, you can easy rollback to the alpha, with `sudo xbps-install -S cosmic-desktop-alpha`
 
 # Cosmic on Void
 Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their work as a base
@@ -35,7 +35,6 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
    > Note: You get the xi command with the package xtools
 7. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
 
-<<<<<<< HEAD
 ## Table of Contents
 
 - [Install](#install-cosmic)
@@ -67,10 +66,8 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
    > Note: You get the xi command with the package xtools
 7. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
 
-=======
->>>>>>> 59ab6a4f6638800f0af741c1dfa8e7ee5462c191
 ## Enable Services
-1. You need to enable dbus and elogind, if you enable then, you need to do restart, before you can start cosmic
+1. You need to enable dbus, if you enable it, you need to do restart, before you can start cosmic
 2. For all settings in Power&Battery you need to enable also the profile-power-daemon
    
 ## Components
@@ -82,7 +79,7 @@ All packages:
 - cosmic-desktop (Metapackage)
 - cosmic-edit
 - cosmic-files
-- cosmic-greeter❌ Does not work (see below)
+- cosmic-greeter
 - cosmic-icons
 - cosmic-idle
 - cosmic-initial-setup
@@ -104,15 +101,10 @@ All packages:
 - pop-launcher
 
 ## Cosmic-greeter
-Cosmic-greeter doesn't work. I couldn't figure out why, for me It seems like, that it has something to with pam and/or elogind. Unfortunately I don't have enough knowledge on how to debug or fix this.
-The cosmic-greeter Package is becasue of that marked as broke and isn't on the cosmic-desktop metapackage for now. I testet to start cosmic with sddm and it worked, I think other login manager, are working too.
+Cosmic-greeter does work now, right now it's only available as template, the beta version of it is also compatible with the alpha of cosmic-desktop. There is one Bug, you need to login two times. You need to enable the services cosmic-greeter and cosmic-greeter-daemon.
 
 ## Start cosmic session
 You can use sddm or other graphical Login Manager or you can start it manually:
 1. Login as your user
 2. Type `start-cosmic`
-<<<<<<< HEAD
-*Note: The user, that runs start-cosmic, is automatically the user which is sgined in, in cosmic desktop*
-=======
 > Note: The user, that runs start-cosmic, is automatically the user which is sgined in, in cosmic desktop
->>>>>>> 59ab6a4f6638800f0af741c1dfa8e7ee5462c191
