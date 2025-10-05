@@ -9,6 +9,9 @@ post)
 
 		chown -R cosmic-greeter:cosmic-greeter /var/lib/cosmic-greeter
 		chmod -R 750 /var/lib/cosmic-greeter/
+		mkdir /run/cosmic-greeter
+		chown -R cosmic-greeter:cosmic-greeter /run/cosmic-greeter
+		chmod -R 755 /run/cosmic-greeter
 	fi
 	;;
 esac

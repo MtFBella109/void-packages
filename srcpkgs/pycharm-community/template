@@ -1,6 +1,6 @@
 # Template file for 'pycharm-community'
 pkgname=pycharm-community
-version=2025.1.1.1
+version=2025.2.3
 revision=1
 archs="x86_64"
 depends="openjdk21 giflib libXtst hicolor-icon-theme"
@@ -9,7 +9,7 @@ maintainer="Felix Van der Jeugt <felix.vanderjeugt@gmail.com>"
 license="Apache-2.0"
 homepage="https://www.jetbrains.org/pycharm/"
 distfiles="https://download-cf.jetbrains.com/python/${pkgname}-${version}.tar.gz"
-checksum=f3cc87ebc2a963cb13a770c112bd9b634913a5a5fef1981941589366b7afb4f1
+checksum=c56b987c2ddec9fadfb77db7a920a86bf933cec0ed3acd72b0f34ead53f7b5a0
 repository=nonfree
 nopie=yes
 python_version=3

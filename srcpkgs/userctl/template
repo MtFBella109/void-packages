@@ -1,0 +1,44 @@
+# Template file for 'userctl'
+pkgname=userctl
+version=1
+revision=1
+short_desc="replacement for systemctl --user"
+maintainer="Bella Wagner <belladev109@protonmail.com>"
+homepage="https://voidlinux.org"
+license="GPL-3.0-or-later"
+
+do_build() {
+	cat > userctl <<'EOF'
+if [ $1 = "import-environment" ]; then
+	var ( COSMIC_PANEL_OUTPUT PATH DISPLAY XDG_DATA_DIRS WAYLAND_DISPLAY XDG_SESSION_ID XDG_SESSION_TYPE XDG_SEAT XDG_CURRENT_DESKTOP MOTD_SHOWN)
+	environment=()
+
+	for var in "${vars[@]}"; do
+		value="${!var}"
+		[ -n "$value" ] && environment+=("$var=$value")
+	done
+
+elif [ $1 = "set-environment" ]; then
+	XDG_RUNTIME_DIR=/run/user/{id -u}
+	dbus-daemon --session --nofork --nopidfile --syslog-only
+	for entry in "${environment[@]}"; do
+    		export "$entry"
+	done
+	unset environment
+	unset var
+	if [ -z $2 ]; then
+		exec $2
+	fi
+elif [ $1 = "run" ]; then
+	exec $2
+fi
+
+EOF
+}
+
+do_install() {
+	vinstall userctl 755 /usr/bin
+}
+
+
+

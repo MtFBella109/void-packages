@@ -1,0 +1,36 @@
+# Template file for 'targetctl'
+pkgname=targetctl
+version=1
+revision=1
+short_desc="allow targets in runit services" 
+maintainer="MtFBella109 <belladev109@protonmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://voidlinux.org"
+
+do_build() {
+cat > targetctl <<'EOF'
+#!/bin/bash
+if [ ! -d /tmp/services ]; then
+	mkdir /tmp/services
+fi
+if [ $1 = "set" ]; then
+	touch /tmp/services/${2}.target
+elif [ $1 = "get" ]; then
+	loop="y"
+	while [ $loop = "y" ]; do
+		if [ -f /tmp/services/${2}.target ]; then
+			loop="n"
+		else
+			sleep 0.5
+		fi
+	done
+else
+	echo "Unknown Paramter: Syntax is targetctl set/get NAME"
+fi	
+
+EOF
+}
+
+do_install() {
+	vinstall targetctl 755 /usr/bin
+}

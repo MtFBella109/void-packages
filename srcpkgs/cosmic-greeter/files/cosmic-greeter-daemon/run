@@ -1,0 +1,3 @@
+#!/bin/sh
+sv check elogind >/dev/null || exit 1
+exec /usr/bin/cosmic-greeter-daemon
