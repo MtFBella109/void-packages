@@ -1,110 +1,40 @@
-# Attention
-Beta1.1 is having a big performance issue and a memore leak, if you encounter too mouch Problems, you can easy rollback to the alpha, with `sudo xbps-install -S cosmic-desktop-alpha`
+Userctl
+Targetctl
 
-# Cosmic on Void
-Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their work as a base
+What is Userctl?
+Userctl tries to implement a few basic function, from systemctl --user 
+Right now it has 3 functions
+Import environemnt
+get environment 
+run
 
-## Table of Contents
+import-environment
+Import environment is simply a script that gatters user environment variables, it saves those and they can be invoked to a user with set-environemnt.
 
-- [Install](#install-cosmic)
-  - [Install via Repository](#install-via-repository)
-  - [Install and build via xbps-src](#install-and-build-via-xbps-src)
-- [Enable Services](#enable-services)
-- [List of all components](#components)
-- [Information about Cosmic Greeter](#cosmic-greeter)
-- [Start Cosmic Desktop](#start-cosmic-session)
+set-environment
+This get called, when the user got logged in, mostly via pam, it takes all variables from import environment and export those for the user, as optional argument you can pass a script or programm that should be run in the user context.
+The syntax is userctl set-environment optional_program
 
-## Install Cosmic
-### Install via Repository
-> There is only a Repo for x86_64 Systems
-1. If you haven't installed mesa-dri, please do it with: `sudo xbps-install -S mesa-dri`. *ATTENTION: If you have a NVIDIA Graphic card, you need mesa-dri too, cosmic doesn't start, without mesa-dri, you can of course install also the nvidia driver, that isn't a Problem*
-2.  Add Reposiotry
-   - glibc: `echo 'repository=https://bellawagner.de/repo/x86_64' | sudo tee /etc/xbps.d/59-cosmic.conf`
-   - musl: `echo 'repository=https://bellawagner.de/repo/x86_64-musl' | sudo tee /etc/xbps.d/59-cosmic.conf` 
-4. Update Package list: `sudo xbps-install -S`
-5. Install single components with `sudo xbps-install -S <package_name>` or install all components, with `sudo xbps-install -S cosmic-desktop`
-6. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
+run
+The third is the function run, it simply executes a script or program in the user context and mostly get execute from a pam configuration
 
-## Install and build via xbps-src
-1. If you haven't install graphic drivers on your system do `sudo xbps-install -S nvidia mesa-dri` for nvidia and `sudo xbps-install -S mesa-dri` for other GPU's
-2. `git clone --depth 1 https://github.com/MtFBella109/void-packages.git`
-3. `cd void-packages`
-4. `./xbps-src binary-bootstrap`
-5. You can build single components with `./xbps-src pkg <package_name>` or build every component with `./xbps-src pkg cosmic-desktop`
-6. Install the package with `xi <package_name>` or with `xbps-install --repository hostdir/binpkgs <package_name>`
-   > Note: You get the xi command with the package xtools
-7. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
+Add it to pam configuration
+If you want to exec get-environemnt or run, you simply put in the pam configuration add the end from the pam file, this line:
+```session optional pam_exec.so type=open_session /usr/bin/userctl set-environment optional_program```
+Both set-environment and user is more sutiable for greeters, where systemctl --user is more often used.
+Be aware, that set-environment and run, get's executed as the user, which runs the script, you can run the script with a other user with runuser -l USER -c COMMAND, but this makes only sense for set-environment and not for run
+If you need more functions from systemctl --user, feel free to contact me and I try to built it in this script
 
-## Table of Contents
+What is Targetctl?
+It tries to build in targets to runit..Right now it's very basic, you can set a target, so basically say, this target now get's triggered or wait if till a target get's triggered. It has two commands:
 
-- [Install](#install-cosmic)
-  - [Install via Repository](#install-via-repository)
-  - [Install and build via xbps-src](#install-and-build-via-xbps-src)
-- [Enable Services](#enable-services)
-- [List of all components](#components)
-- [Information about Cosmic Greeter](#cosmic-greeter)
-- [Start Cosmic Desktop](#start-cosmic-session)
+targetctl set TARGETNAME
+If you put this in your runit file, the script will trigger all this target. If you need, multiple runit services, to start in the middle of a runit service for example, you can put in the middle of your service file targetctl set environmentload and all services that waits for that target get executed in the next 0.5 seconds
 
-## Install Cosmic
-### Install via Repository
-> There is only a Repo for x86_64 Systems
-1. If you haven't installed mesa-dri, please do it with: `sudo xbps-install -S mesa-dri`. *ATTENTION: If you have a NVIDIA Graphic card, you need mesa-dri too, cosmic doesn't start, without mesa-dri, you can of yourse install also the nvidia driver, that isn't a Problem*
-2.  Add Reposiotry
-   - glibc: `echo 'repository=https://bellawagner.de/repo/x86_64' | sudo tee /etc/xbps.d/10-cosmic.conf`
-   - musl: `echo 'repository=https://bellawagner.de/repo/x86_64-musl' | sudo tee /etc/xbps.d/10-cosmic.conf` 
-4. Update Package list: `sudo xbps-install -S`
-5. Install single components with `sudo xbps-install -S <package_name>` or install all components, with `sudo xbps-install -S cosmic-desktop`
-6. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
+targetctl get TARGETNAME
+It's basically the counterpart of set, put this in a service file and the all lines under this line, will be executed after the target is set. If you have a runit service that should load environemnts you can put on top targetctl get environmentload and the service will be executed after the target was set
 
-## Install and build via xbps-src
-1. If you haven't install graphic drivers on your system do `sudo xbps-install -S nvidia` for nvidia and `sudo xbps-install -S mesa-dri` for other GPU's
-2. `git clone --depth 1 https://github.com/MtFBella109/void-packages.git`
-3. `cd void-packages`
-4. `./xbps-src binary-bootstrap`
-5. You can build single components with `./xbps-src pkg <package_name>` or build every component with `./xbps-src pkg cosmic-desktop`
-6. Install the package with `xi <package_name>` or with `xbps-install --repository hostdir/binpkgs <package_name>`
-   > Note: You get the xi command with the package xtools
-7. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
+ToDo, I will add in the future, that there is the possibility for multi targets, this means basically, that numerous runit services need to trigger a target and after all services startet, that trigger the same target, then the target would be set
 
-## Enable Services
-1. You need to enable dbus, if you enable it, you need to do restart, before you can start cosmic
-2. For all settings in Power&Battery you need to enable also the profile-power-daemon
-   
-## Components
-All packages:
-- cosmic-applets
-- cosmic-applibrary
-- cosmic-bg
-- cosmic-comp
-- cosmic-desktop (Metapackage)
-- cosmic-edit
-- cosmic-files
-- cosmic-greeter
-- cosmic-icons
-- cosmic-idle
-- cosmic-initial-setup
-- cosmic-launcher
-- cosmic-notifications
-- cosmic-osd
-- cosmic-panel
-- cosmic-player
-- cosmic-randr
-- cosmic-screenshot
-- cosmic-session
-- cosmic-settings
-- cosmic-settings-daemon
-- cosmic-term
-- cosmic-theme-editor
-- cosmic-wallpapers
-- cosmic-workspaces-epoch
-- xdg-desktop-portal-cosmic
-- pop-launcher
-
-## Cosmic-greeter
-Cosmic-greeter does work now, right now it's only available as template, the beta version of it is also compatible with the alpha of cosmic-desktop. There is one Bug, you need to login two times. You need to enable the services cosmic-greeter and cosmic-greeter-daemon.
-
-## Start cosmic session
-You can use sddm or other graphical Login Manager or you can start it manually:
-1. Login as your user
-2. Type `start-cosmic`
-> Note: The user, that runs start-cosmic, is automatically the user which is sgined in, in cosmic desktop
+Why Do I add these?
+It's pretty simple, the Linux Desktop got more complicated and systemd is more and more a part of it. It is sometimes a Pain in the Ass to find workarounds to simulate, the order of things to run, on other systems, systemd is doing that, with targets. targetctl is a basically an extension script for runit, to make it fit more in the modern world. systemctl --user is also more and more implemented and this userctl should help to make it easier to replace systemctl --user. Both Scripts are very simple, but I plan to built in a few more functions, but I will try to not bloat it. If you have a good Idea or something you wish, to make the work with runit easier and better, write the suggestion to me and I try to implement it
