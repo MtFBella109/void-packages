@@ -1,0 +1,47 @@
+pkgname=brave
+version=1.83.109
+revision=3
+short_desc='Web browser that blocks ads and trackers by default.'
+archs="x86_64"
+depends="libX11 libXext libxcb libgcc glib libstdc++ qt5-core qt5-gui qt5-widgets nspr nss dbus-libs atk at-spi2-atk libcups expat libxkbcommon at-spi2-core libXcomposite libXdamage libXfixes libXrandr libgbm cairo pango eudev-libudev alsa-lib qt6-core> qt6-gui qt6-widgets"
+homepage="https://brave.com"
+license="Mozilla Public License Version 2.0"
+distfiles="https://github.com/brave/brave-browser/releases/download/v${version}/brave-browser-${version}-linux-amd64.zip"
+checksum=726f14f04a0b58637c275edd511da2f56d7a0287759d6618085f1276e06ef73d
+maintainer="kveld9 <kveld9@disroot.org>"
+makedepends="unzip"
+
+do_install() {
+    install -dm755 "${DESTDIR}/opt/brave-bin" "${DESTDIR}/usr/bin" "${DESTDIR}/usr/share/applications" "${DESTDIR}/usr/share/icons/hicolor" "${DESTDIR}/usr/share/licenses/brave-bin"
+    unzip "${XBPS_SRCDISTDIR}/${pkgname}-${version}/brave-browser-${version}-linux-amd64.zip" -d "${DESTDIR}/opt/brave-bin"
+
+    # executable file
+    chmod +x "${DESTDIR}/opt/brave-bin/brave-browser"
+    ln -sf /opt/brave-bin/brave-browser ${DESTDIR}/usr/bin/brave-bin
+
+    cat > ${DESTDIR}/usr/share/applications/brave-browser.desktop <<EOF
+[Desktop Entry]
+Name=Brave
+Icon=/usr/share/icons/hicolor/1024x1024/apps/product_logo_1024.png
+Comment=Start Brave
+Exec=brave-bin
+Terminal=false
+Type=Application
+Category=Internet
+EOF
+
+    # icons
+    for size in 16 24 32 48 64 128 256 512 1024; do
+        install -d ${DESTDIR}/usr/share/icons/hicolor/${size}x${size}/apps
+        ln -sf /opt/brave-bin/product_logo_${size}.png ${DESTDIR}/usr/share/icons/hicolor/${size}x${size}/apps/product_logo_${size}.png
+    done
+
+    # license file
+    ln -sf "/opt/brave-bin/LICENSE" ${DESTDIR}/usr/share/licenses/brave-bin/LICENSE
+
+    # chrome sandbox
+    chmod 4755 "${DESTDIR}/opt/brave-bin/chrome-sandbox"
+
+    # removing unused cron
+    rm -rf "${DESTDIR}/opt/brave-bin/cron"
+}

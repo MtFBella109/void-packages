@@ -1,0 +1,31 @@
+# Template file for 'cosmic-greeter'
+pkgname=cosmic-greeter
+version=1.0.0.beta.1.1
+revision=5
+_tag=epoch-${version/.beta/-beta}
+hostmakedepends="pkg-config just llvm18-devel cargo cargo-auditable"
+makedepends="libxkbcommon-devel eudev-libudev-devel pam-devel libinput-devel"
+depends="greetd libxkbcommon pam-libs userctl"
+short_desc="TODO: cosmic-greeter short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-greeter"
+distfiles="https://github.com/pop-os/cosmic-greeter/archive/refs/tags/${_tag}.tar.gz"
+checksum=b9151e89c936ad09e0b78ffae7852886a600ee214054c8fa4e85812785e5d6a1
+
+export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
+export VERGEN_GIT_SHA="${version}_${revision}"
+
+do_build() {
+	cargo build --all --release --no-default-features --features networkmanager,upower,zbus
+}
+
+do_install() {
+	just --set rootdir ${DESTDIR} install
+	vinstall cosmic-greeter.toml 644 etc/greetd 
+	vinstall debian/cosmic-greeter.pam 644 /etc/pam.d/ cosmic-greeter
+	vsv cosmic-greeter
+	vsv cosmic-greeter-daemon
+	vinstall dbus/com.system76.CosmicGreeter.conf 644 /usr/share/dbus-1/system.d
+}
+

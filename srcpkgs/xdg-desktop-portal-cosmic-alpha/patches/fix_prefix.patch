@@ -1,0 +1,8 @@
+--- a/Makefile	2025-06-27 02:02:04.479243194 +0200
++++ b/Makefile	2025-06-27 02:02:33.401828409 +0200
+@@ -1,4 +1,4 @@
+-prefix ?= /usr/local
++prefix ?= /usr
+ bindir = $(prefix)/bin
+ libdir = $(prefix)/lib
+ libexecdir = $(prefix)/libexec

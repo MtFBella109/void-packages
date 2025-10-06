@@ -1,6 +1,11 @@
 --- a/libraries/source/spidermonkey/build.sh	2025-07-20 09:04:51.166563011 +0200
 +++ b/libraries/source/spidermonkey/build.sh	2025-07-20 09:05:05.010183649 +0200
 @@ -48,8 +48,8 @@
+diff --git a/libraries/source/spidermonkey/build.sh b/libraries/source/spidermonkey/build.sh
+index 0dc66e01847..edbe032b525 100755
+--- a/libraries/source/spidermonkey/build.sh
++++ b/libraries/source/spidermonkey/build.sh
+@@ -46,8 +46,9 @@ if [ ! -e "${FOLDER}.tar.xz" ]; then
  fi
  
  # unpack

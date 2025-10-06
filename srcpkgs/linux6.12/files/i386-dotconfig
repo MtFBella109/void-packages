@@ -530,7 +530,14 @@ CONFIG_MITIGATION_SPECTRE_V2=y
 CONFIG_MITIGATION_SRBDS=y
 CONFIG_MITIGATION_SSB=y
 CONFIG_MITIGATION_TSA=y
+<<<<<<< HEAD
 CONFIG_MITIGATION_VMSCAPE=y
+=======
+<<<<<<< HEAD
+CONFIG_MITIGATION_VMSCAPE=y
+=======
+>>>>>>> a8791ab998d (linux6.12: update to 6.12.37.)
+>>>>>>> a9e47fe0c84 (Updated cosmic-greeter)
 
 #
 # Power management and ACPI options
