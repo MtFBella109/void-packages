@@ -8,5 +8,5 @@ homepage="https://voidlinux.org"
 license="GPL-3.0-or-later"
 
 do_install() {
-	vinstall {FILESDIR}/userctl 755 /usr/bin
+	vinstall ${FILESDIR}/userctl 755 /usr/bin
 }
