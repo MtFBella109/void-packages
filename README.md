@@ -15,7 +15,7 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
 - [Start Cosmic Desktop](#start-cosmic-session)
 
 ## Install Cosmic
-### Install via Repository | The Repo is currently not available, I'm working on it to fix it
+### Install via Repository
 > There is only a Repo for x86_64 Systems
 1. If you haven't installed mesa-dri, please do it with: `sudo xbps-install -S mesa-dri`. *ATTENTION: If you have a NVIDIA Graphic card, you need mesa-dri too, cosmic doesn't start, without mesa-dri, you can of course install also the nvidia driver, that isn't a Problem*
 2.  Add Reposiotry
