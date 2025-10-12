@@ -1,0 +1,19 @@
+# Template file for 'double-commander'
+pkgname=double-commander
+version=1.2.28
+revision=1
+archs="x86_64"
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="dbus-devel libglib-devel libX11-devel gtk+2"
+depends=""
+short_desc="Replacement for total commander"
+maintainer="MtFBella109 <belladev109@protonmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/doublecmd/doublecmd"
+distfiles="https://github.com/doublecmd/doublecmd/archive/refs/tags/v${version}.tar.gz"
+checksum=badbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadbadb
+
+do_install() {
+./build.sh --release
+}
