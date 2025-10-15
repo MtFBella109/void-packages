@@ -1,0 +1,21 @@
+# Template file for 'pop-icons'
+pkgname=pop-icons
+version=3.5.0
+revision=1
+build_style=meson
+_tag=epoch-${version/.beta/-beta}
+hostmakedepends=""
+short_desc="TODO: pop-icons short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/icon-theme"
+distfiles="https://github.com/pop-os/icon-theme/archive/refs/tags/v${version}.tar.gz"
+checksum=917f5e300e927fe2557355717793f3284aee869a6ae0b81cd31507f20090d796
+
+do_build() {
+	meson build
+}
+
+#do_install() {
+#DESTDIR=${DESTDIR} ninja install
+#}
