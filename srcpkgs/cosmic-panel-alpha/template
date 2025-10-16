@@ -1,7 +1,8 @@
 # Template file for 'cosmic-panel'
 pkgname=cosmic-panel-alpha
 version=1.0.0.alpha.7
-revision=1
+revision=2
+replaces=cosmic-panel
 _tag=epoch-${version/.alpha/-alpha}
 build_style=cargo
 make_install_args="--path cosmic-panel-bin"

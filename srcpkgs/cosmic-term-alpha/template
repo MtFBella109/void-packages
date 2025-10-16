@@ -1,7 +1,8 @@
 # Template file for 'cosmic-term'
 pkgname=cosmic-term-alpha
 version=1.0.0.alpha.7
-revision=1
+revision=2
+replaces=cosmic-term
 _tag=epoch-${version/.alpha/-alpha}
 build_style=cargo
 hostmakedepends="pkg-config just"

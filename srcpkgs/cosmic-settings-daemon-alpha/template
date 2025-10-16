@@ -1,7 +1,8 @@
 # Template file for 'cosmic-settings-daemon'
 pkgname=cosmic-settings-daemon-alpha
 version=1.0.0.alpha.7
-revision=2
+revision=3
+replaces=cosmic-settings-daemon
 _tag=epoch-${version/.alpha/-alpha}
 hostmakedepends="pkg-config cargo"
 makedepends="eudev-libudev-devel libinput-devel geoclue2-devel libpulseaudio"

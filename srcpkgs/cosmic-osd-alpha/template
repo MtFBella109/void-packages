@@ -1,7 +1,8 @@
 # Template file for 'cosmic-osd'
 pkgname=cosmic-osd-alpha
 version=1.0.0.alpha.7
-revision=2
+revision=3
+replaces=cosmic-osd
 _tag=epoch-${version/.alpha/-alpha}
 build_style=cargo
 hostmakedepends="pkg-config"

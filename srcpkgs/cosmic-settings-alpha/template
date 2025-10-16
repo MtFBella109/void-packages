@@ -1,7 +1,8 @@
 # Template file for 'cosmic-settings'
 pkgname=cosmic-settings-alpha
 version=1.0.0.alpha.7
-revision=2
+revision=3
+replaces=cosmic-settings
 _tag=epoch-${version/.alpha/-alpha}
 hostmakedepends="pkg-config just cargo"
 makedepends="libxkbcommon-devel eudev-libudev-devel libinput-devel pipewire-devel clang"

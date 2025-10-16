@@ -1,7 +1,8 @@
 # Template file for 'cosmic-applibrary'
 pkgname=cosmic-applibrary-alpha
 version=1.0.0.alpha.7
-revision=3
+replaces=cosmic-applibrary
+revision=4
 _tag=epoch-${version/.alpha/-alpha}
 hostmakedepends="pkg-config just cargo cargo-auditable"
 makedepends="libxkbcommon-devel"

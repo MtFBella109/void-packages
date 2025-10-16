@@ -1,7 +1,8 @@
 # Template file for 'cosmic-launcher'
 pkgname=cosmic-launcher-alpha
 version=1.0.0.alpha.7
-revision=4
+revision=5
+replaces=cosmic-launcher
 _tag=epoch-${version/.alpha/-alpha}
 hostmakedepends="pkg-config just cargo cargo-auditable"
 makedepends="libxkbcommon-devel which"

@@ -1,7 +1,8 @@
 # Template file for 'cosmic-randr'
 pkgname=cosmic-randr-alpha
 version=1.0.0.alpha.7
-revision=1
+revision=2
+replaces=cosmic-randr
 _tag=epoch-${version/.alpha/-alpha}
 build_style=cargo
 make_install_args="--path cli"

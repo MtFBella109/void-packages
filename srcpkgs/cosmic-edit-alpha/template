@@ -1,7 +1,8 @@
 # Template file for 'cosmic-edit'
 pkgname=cosmic-edit-alpha
 version=1.0.0.alpha.7
-revision=2
+revision=3
+replaces=cosmic-edit
 _tag=epoch-${version/.alpha/-alpha}
 build_style=cargo
 hostmakedepends="pkg-config just"

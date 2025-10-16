@@ -1,7 +1,8 @@
 # Template file for 'cosmic-applets'
 pkgname=cosmic-applets-alpha
 version=1.0.0.alpha.7
-revision=4
+replaces=cosmic-applets
+revision=5
 _tag=epoch-${version/.alpha/-alpha}
 build_style=cargo
 build_style_args="--workspaces"

@@ -1,7 +1,8 @@
 # Template file for 'cosmic-idle'
 pkgname=cosmic-idle-alpha
 version=1.0.0.alpha.7
-revision=1
+revision=2
+replaces=cosmic-idle
 _tag=epoch-${version/.alpha/-alpha}
 build_style=cargo
 configure_args=" --all"

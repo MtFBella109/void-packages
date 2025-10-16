@@ -1,7 +1,8 @@
 # Template file for 'cosmic-bg'
 pkgname=cosmic-bg-alpha
 version=1.0.0.alpha.7
-revision=2
+replaces=cosmic-bg
+revision=3
 _tag=epoch-${version/.alpha/-alpha}
 build_style=cargo
 hostmakedepends="pkg-config just"

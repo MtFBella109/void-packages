@@ -1,7 +1,8 @@
 # Template file for 'xdg-desktop-portal-cosmic'
 pkgname=xdg-desktop-portal-cosmic-alpha
 version=1.0.0.alpha.7
-revision=8
+revision=11
+replaces=xdg-desktop-portal
 _tag=epoch-${version/.alpha/-alpha}
 hostmakedepends="pkg-config cargo cargo-auditable"
 makedepends="libxkbcommon-devel libzstd-devel pipewire-devel clang libglib-devel libgbm-devel"
@@ -21,5 +22,5 @@ do_build() {
 }
 
 do_install() {	
-	make install DESTDIR=${DESTDIR}
+	make install DESTDIR=${DESTDIR} prefix=/usr
 }

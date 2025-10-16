@@ -1,7 +1,8 @@
 # Template file for 'cosmic-notifications'
 pkgname=cosmic-notifications-alpha
 version=1.0.0.alpha.7
-revision=1
+revision=2
+replaces=cosmic-notifications
 _tag=epoch-${version/.alpha/-alpha}
 build_style=cargo
 hostmakedepends="pkg-config just"

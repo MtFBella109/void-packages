@@ -1,7 +1,8 @@
 # Template file for 'cosmic-screenshot'
 pkgname=cosmic-screenshot-alpha
 version=1.0.0.alpha.7
-revision=7
+revision=8
+replaces=cosmic-screenshot
 _tag=epoch-${version/.alpha/-alpha}
 build_style=cargo
 hostmakedepends="just"
