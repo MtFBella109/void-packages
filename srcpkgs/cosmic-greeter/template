@@ -1,7 +1,7 @@
 # Template file for 'cosmic-greeter'
 pkgname=cosmic-greeter
 version=1.0.0.beta.3
-revision=1
+revision=2
 _tag=epoch-${version/.beta/-beta}
 hostmakedepends="pkg-config just llvm18-devel cargo cargo-auditable"
 makedepends="libxkbcommon-devel eudev-libudev-devel pam-devel libinput-devel"
@@ -17,12 +17,12 @@ export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
 export VERGEN_GIT_SHA="${version}_${revision}"
 
 do_build() {
-	cargo build --all --release --no-default-features --features networkmanager,upower,zbus
+	cargo build --all --release --no-default-features --features networkmanager,upower
 }
 
 do_install() {
 	just --set rootdir ${DESTDIR} install
-	vinstall cosmic-greeter.toml 644 etc/greetd 
+	vinstall cosmic-greeter.toml 644 etc/greetd
 	vinstall debian/cosmic-greeter.pam 644 /etc/pam.d/ cosmic-greeter
 	vsv cosmic-greeter
 	vsv cosmic-greeter-daemon
