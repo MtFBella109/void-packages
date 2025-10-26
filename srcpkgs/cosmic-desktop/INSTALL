@@ -25,8 +25,7 @@ EOF
 			mkdir -p /etc/xdg/autostart
 			ln -s /usr/share/applications/pipewire.desktop /etc/xdg/autostart/
 		fi
-			
-		fi
+
 		mkdir -p /etc/pipewire/pipewire.conf.d
 		if [ ! -h /etc/pipewire/pipewire.conf.d/10-wireplumber.conf ]; then
 			ln -s /usr/share/examples/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/
