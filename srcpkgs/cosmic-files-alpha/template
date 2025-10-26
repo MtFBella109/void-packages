@@ -1,8 +1,7 @@
 # Template file for 'cosmic-files'
 pkgname=cosmic-files-alpha
 version=1.0.0.alpha.7
-revision=7
-replaces=cosmic-files
+revision=8
 _tag=epoch-${version/.alpha/-alpha}
 build_style=cargo
 hostmakedepends="pkg-config just"

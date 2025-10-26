@@ -1,11 +1,11 @@
 # Template file for 'cosmic-initial-setup'
 pkgname=cosmic-initial-setup
-version=1.0.0.beta.1.1
-revision=7
+version=1.0.0.beta.3
+revision=2
 wrksrc=${pkgname}-${version}
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
-hostmakedepends="pkg-config just git git-lfs"
+hostmakedepends="pkg-config just git git-lfs curl tar"
 makedepends="eudev-libudev-devel libxkbcommon-devel openssl-devel flatpak-devel libinput-devel"
 depends="locale1 localectl"
 short_desc="TODO: cosmic-initial-setup short_desc"
@@ -21,13 +21,14 @@ do_fetch() {
 	fi
 	git clone $homepage $wrksrc
 	cd $wrksrc
-	git checkout 7d5c21cf1bd725a4264f53c990e5cc1b9da20985
+	git checkout 0080330b6dacafccebc3aac74f3fccaf20f87f67
 	git lfs install --local
 	git lfs pull
 }
 
 do_build() {
-	just build-release
+	just vendor
+	just build-vendored
 }
 
 do_install() {

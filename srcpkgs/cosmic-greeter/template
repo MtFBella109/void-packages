@@ -1,7 +1,7 @@
 # Template file for 'cosmic-greeter'
 pkgname=cosmic-greeter
-version=1.0.0.beta.1.1
-revision=5
+version=1.0.0.beta.3
+revision=1
 _tag=epoch-${version/.beta/-beta}
 hostmakedepends="pkg-config just llvm18-devel cargo cargo-auditable"
 makedepends="libxkbcommon-devel eudev-libudev-devel pam-devel libinput-devel"
@@ -11,7 +11,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-greeter"
 distfiles="https://github.com/pop-os/cosmic-greeter/archive/refs/tags/${_tag}.tar.gz"
-checksum=b9151e89c936ad09e0b78ffae7852886a600ee214054c8fa4e85812785e5d6a1
+checksum=348a104a94f55909c41bc6d7c86ce90653076a2638735c1fb0a748b4f9fb43ba
 
 export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
 export VERGEN_GIT_SHA="${version}_${revision}"

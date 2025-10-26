@@ -1,6 +1,6 @@
 # Template file for 'pop-fonts'
 pkgname=pop-fonts
-version=1.0.0.beta.1.1
+version=1
 revision=1
 wrksrc="${pkgname}-${version}"
 hostmakedepends="git"

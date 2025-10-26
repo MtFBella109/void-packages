@@ -2,7 +2,7 @@
 pkgname=pop-launcher-alpha
 version=1.2.4
 revision=2
-replaces=pop-launcher
+replaces="pop-launcher>=0"
 hostmakedepends="pkg-config just cargo cargo-auditable"
 makedepends="libxkbcommon-devel"
 short_desc="TODO: pop-launcher short_desc"

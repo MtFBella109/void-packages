@@ -1,7 +1,7 @@
 # Template file for 'cosmic-wallpapers'
 pkgname=cosmic-wallpapers
-version=1.0.0.beta.1.1
-revision=1
+version=1.0.0.beta.3
+revision=2
 wrksrc="${pkgname}-${version}"
 _tag=epoch-${version/.beta/-beta}
 hostmakedepends="git-lfs git"
@@ -14,9 +14,10 @@ skip_extraction="yes"
 do_fetch() {
 	if [ -d $wrksrc ]; then
 		rm -rf $wrksrc
-	fi	
+	fi
 	git clone https://github.com/pop-os/cosmic-wallpapers.git $wrksrc
 	cd $wrksrc
+	git checkout 189c2c63d31da84ebb161acfd21a503f98a1b4c7
 	git lfs install --local
 	git lfs pull
 }

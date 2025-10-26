@@ -1,6 +1,6 @@
-# Template file for 'Zen Browser'
+# Template file for 'zen-browser'
 pkgname=zen-browser
-version=1.16.4b
+version=1.17.3b
 revision=1
 hostmakedepends="pkg-config"
 depends="gtk+3 libstdc++  pango atk cairo gdk-pixbuf glib libxcb libX11 libXext libXrandr libXcomposite libXcursor libXdamage libXfixes libXi libXrender alsa-lib freetype fontconfig dbus-libs"
@@ -9,7 +9,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/zen-browser/desktop"
 distfiles="https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-x86_64.tar.xz"
-checksum=1fe3081479c73327c70a4b74c44781b42c796be9214bf2a5831fad5e6792c41b
+checksum=af6769492f8179f30d681c17777de1da79a6b1a44c97a1cb6a0340d497b19eb7
 
 
 do_install() {
@@ -18,10 +18,8 @@ do_install() {
 	vmkdir usr/bin
 	ln -s /usr/lib/zen-browser/zen ${DESTDIR}/usr/bin/
 	vinstall ${FILESDIR}/zen-browser.desktop 644 usr/share/applications/
-    for size in 16 32 48 64 128; do
-	mv ${wrksrc}/browser/chrome/icons/default/default${size}.png ${wrksrc}/browser/chrome/icons/default/zen-browser.png
-        vinstall ${wrksrc}/browser/chrome/icons/default/zen-browser.png 644 usr/share/icons/hicolor/${size}x${size}/apps/ 
-    done
+	for size in 16 32 48 64 128; do
+		cp ${wrksrc}/browser/chrome/icons/default/default${size}.png ${wrksrc}/browser/chrome/icons/default/zen-browser.png
+		vinstall ${wrksrc}/browser/chrome/icons/default/zen-browser.png 644 usr/share/icons/hicolor/${size}x${size}/apps/
+	done
 }
-
-

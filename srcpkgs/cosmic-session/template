@@ -1,7 +1,7 @@
 # Template file for 'cosmic-session'
 pkgname=cosmic-session
-version=1.0.0.beta.1.1
-revision=2
+version=1.0.0.beta.3
+revision=1
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
 hostmakedepends="just glib"
@@ -11,7 +11,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-session"
 distfiles="https://github.com/pop-os/cosmic-session/archive/refs/tags/${_tag}.tar.gz"
-checksum=74072f8c75548256582c7a615798569ff7095c6b6e026aa82bd5e141ecacbb0c
+checksum=c5fddbd04b824db5e71aff59d0b896828a00ef2408f8ddb0f333e9fc2fd45b20
 
 do_build() {
 	cargo build --release --no-default-features --features autostart

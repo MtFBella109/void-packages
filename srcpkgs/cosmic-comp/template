@@ -1,7 +1,7 @@
 # Template file for 'cosmic-comp'
 pkgname=cosmic-comp
-version=1.0.0.beta.1.1
-revision=3
+version=1.0.0.beta.3
+revision=1
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
 hostmakedepends="pkg-config"
@@ -12,7 +12,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-comp"
 distfiles="https://github.com/pop-os/cosmic-comp/archive/refs/tags/${_tag}.tar.gz"
-checksum=3ba4f6d94f6c0717ebbefd6c888c0e0a43038cdc02414d6cc51f9a4d7014c1c2
+checksum=3a3f5b2854b56134f9b0b6620314ea4b2f3f95164dd8dfec2483b7c4a5acef28
 
 do_build() {
 	cargo build --release --no-default-features --features "profile-with-tracy"

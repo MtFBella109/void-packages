@@ -1,7 +1,7 @@
 # Template file for 'cosmic-files'
 pkgname=cosmic-files
-version=1.0.0.beta.1.1
-revision=2
+version=1.0.0.beta.3
+revision=1
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
 hostmakedepends="pkg-config just"
@@ -12,7 +12,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-files"
 distfiles="https://github.com/pop-os/cosmic-files/archive/refs/tags/${_tag}.tar.gz"
-checksum=96fdf51baa63824cfa2dd4b1d2410290385cb60f8338eab2d58654da5be7f2c3
+checksum=090b0b71e8c6aa01e377c245812fe14ff0ac4e83d349cf79d1079ceb80283220
 
 #export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
 #export VERGEN_GIT_SHA="${version}_${revision}"
