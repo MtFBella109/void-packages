@@ -1,6 +1,6 @@
 # Template file for 'cosmic-settings'
 pkgname=cosmic-settings
-version=1.0.0.beta.3
+version=1.0.0.beta.5
 revision=1
 _tag=epoch-${version/.beta/-beta}
 hostmakedepends="pkg-config just cargo"
@@ -11,7 +11,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-settings"
 distfiles="https://github.com/pop-os/cosmic-settings/archive/refs/tags/${_tag}.tar.gz"
-checksum=0dd056b7e99ddff188474a816aa9c321c26b8d9b28906662cf3d879f877e0b02
+checksum=5f7ee7c9c9332f9a1d4ec0cd53d52d47d5edea2502c103bd46c7dc31e1bd060b
 
 do_build() {
 	just build-release

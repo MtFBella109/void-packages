@@ -1,6 +1,6 @@
 # Template file for 'cosmic-idle'
 pkgname=cosmic-idle
-version=1.0.0.beta.3
+version=1.0.0.beta.5
 revision=1
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
@@ -13,7 +13,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-idle"
 distfiles="https://github.com/pop-os/cosmic-idle/archive/refs/tags/${_tag}.tar.gz"
-checksum=e533b8f028a196363a1bcc269f014695121f9173907079752bdfc1bf27f198bc
+checksum=78ecb72243d6450dca5ef21c32aa3dbf5ed5323527ecadab1580ccfcc17ca662
 
 do_build() {
 	just build-release

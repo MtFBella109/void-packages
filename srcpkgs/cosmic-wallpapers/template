@@ -1,7 +1,7 @@
 # Template file for 'cosmic-wallpapers'
 pkgname=cosmic-wallpapers
-version=1.0.0.beta.3
-revision=2
+version=1.0.0.beta.5
+revision=1
 wrksrc="${pkgname}-${version}"
 _tag=epoch-${version/.beta/-beta}
 hostmakedepends="git-lfs git"

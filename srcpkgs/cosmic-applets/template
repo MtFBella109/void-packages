@@ -1,6 +1,6 @@
 # Template file for 'cosmic-applets'
 pkgname=cosmic-applets
-version=1.0.0.beta.3
+version=1.0.0.beta.5
 revision=1
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
@@ -12,7 +12,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-applets"
 distfiles="https://github.com/pop-os/cosmic-applets/archive/refs/tags/${_tag}.tar.gz"
-checksum=5a13df468918285e18fbbc25cd69d1e51b279ccf6f7d07ba41ee8a4075bd4d52
+checksum=38a56594661d45f92e86108cd269f1362572f971f4834b89849e1b27ca8544c6
 
 do_build() {
 	just rootdir=${DESTDIR} build-release

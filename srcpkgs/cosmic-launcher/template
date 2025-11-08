@@ -1,6 +1,6 @@
 # Template file for 'cosmic-launcher'
 pkgname=cosmic-launcher
-version=1.0.0.beta.3
+version=1.0.0.beta.5
 revision=1
 _tag=epoch-${version/.beta/-beta}
 hostmakedepends="pkg-config just cargo cargo-auditable"
@@ -11,7 +11,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-launcher"
 distfiles="https://github.com/pop-os/cosmic-launcher/archive/refs/tags/${_tag}.tar.gz"
-checksum=4f4ec3f8ea165d9f450a78eb7b33c16626ab2014834a46731aca09378276a92c
+checksum=cdd3c47eb2f16d05915689216bbf7a3bcbd540cb3b4cdfa80d21b8aec0bb8459
 
 do_build() {
 	just build-release
