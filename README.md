@@ -1,5 +1,5 @@
 # Attention
-Beta1.1 is having a big performance issue and a memore leak, if you encounter too mouch Problems, you can easy rollback to the alpha, with `sudo xbps-install -S cosmic-desktop-alpha`
+Big Memory Leak Problem since Beta1.1. It seems like, that System76 doesn't work on this bug, it's there since multiple betas and didn't got adressed yet. Maybe it get's fixed in 1 or 2 Months, maybe in 1 year. I don't fucking now and yeah I'm frustated from this shit. I will reactivate the rollback packages again.
 
 # Cosmic on Void
 Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their work as a base
@@ -20,7 +20,7 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
 1. If you haven't installed mesa-dri, please do it with: `sudo xbps-install -S mesa-dri`. *ATTENTION: If you have a NVIDIA Graphic card, you need mesa-dri too, cosmic doesn't start, without mesa-dri, you can of course install also the nvidia driver, that isn't a Problem*
 2.  Add Reposiotry
    - glibc: `echo 'repository=https://bellawagner.de/repo/x86_64' | sudo tee /etc/xbps.d/59-cosmic.conf`
-   - musl: `echo 'repository=https://bellawagner.de/repo/x86_64-musl' | sudo tee /etc/xbps.d/59-cosmic.conf` 
+   - musl: `echo 'repository=https://bellawagner.de/repo/x86_64-musl' | sudo tee /etc/xbps.d/59-cosmic.conf`
 4. Update Package list: `sudo xbps-install -S`
 5. Install single components with `sudo xbps-install -S <package_name>` or install all components, with `sudo xbps-install -S cosmic-desktop`
 6. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
@@ -51,7 +51,7 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
 1. If you haven't installed mesa-dri, please do it with: `sudo xbps-install -S mesa-dri`. *ATTENTION: If you have a NVIDIA Graphic card, you need mesa-dri too, cosmic doesn't start, without mesa-dri, you can of yourse install also the nvidia driver, that isn't a Problem*
 2.  Add Reposiotry
    - glibc: `echo 'repository=https://bellawagner.de/repo/x86_64' | sudo tee /etc/xbps.d/10-cosmic.conf`
-   - musl: `echo 'repository=https://bellawagner.de/repo/x86_64-musl' | sudo tee /etc/xbps.d/10-cosmic.conf` 
+   - musl: `echo 'repository=https://bellawagner.de/repo/x86_64-musl' | sudo tee /etc/xbps.d/10-cosmic.conf`
 4. Update Package list: `sudo xbps-install -S`
 5. Install single components with `sudo xbps-install -S <package_name>` or install all components, with `sudo xbps-install -S cosmic-desktop`
 6. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
@@ -69,7 +69,7 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
 ## Enable Services
 1. You need to enable dbus, if you enable it, you need to do restart, before you can start cosmic
 2. For all settings in Power&Battery you need to enable also the profile-power-daemon
-   
+
 ## Components
 All packages:
 - cosmic-applets
