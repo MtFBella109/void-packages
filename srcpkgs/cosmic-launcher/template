@@ -1,0 +1,22 @@
+# Template file for 'cosmic-launcher'
+pkgname=cosmic-launcher
+version=1.0.0.beta.6
+revision=1
+_tag=epoch-${version/.beta/-beta}
+hostmakedepends="pkg-config just cargo cargo-auditable"
+makedepends="libxkbcommon-devel which"
+depends="libxkbcommon pop-launcher"
+short_desc="TODO: cosmic-launcher short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-launcher"
+distfiles="https://github.com/pop-os/cosmic-launcher/archive/refs/tags/${_tag}.tar.gz"
+checksum=a3aef5a81f071cf30ac2d872b0c557889d28e0a574fbe3da8cb427d799bce1a5
+
+do_build() {
+	just build-release
+}
+
+do_install() {
+	just --set rootdir ${DESTDIR} install
+}

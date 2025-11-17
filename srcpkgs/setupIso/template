@@ -1,0 +1,20 @@
+# Template file for 'catppuccin theme for sddm'
+pkgname=setupIso
+version=1.1.2
+revision=8
+hostmakedepends="pkg-config"
+depends="sddm qt6-base qt6-wayland qt5-wayland qt6-svg qt6-declarative qt5-quickcontrols2"
+short_desc="Catppuccin Theme for sddm"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/catppuccin/sddm"
+distfiles="https://github.com/catppuccin/sddm/releases/download/v${version}/catppuccin-mocha-blue-sddm.zip"
+checksum=a68fbed896d3066aec1fdaded561e8d20c855f0de4e193bdca4bc0d59ac1e333
+
+do_install() {
+	vmkdir usr/share/sddm/themes/catppuccin-mocha
+	vcopy * usr/share/sddm/themes/catppuccin-mocha
+	vsv setupIso
+}
+
+

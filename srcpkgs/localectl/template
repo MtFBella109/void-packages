@@ -1,0 +1,73 @@
+# Template file for 'localectl'
+pkgname=localectl
+version=1
+revision=2
+wrksrc="${pkgname}-${version}"
+depends="locale1"
+short_desc="TODO: pop-fonts short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://www.freedesktop.org/software/systemd/man/latest/org.freedesktop.locale1.html"
+
+pre_install() {
+	if [ ! -d $wrksrc ]; then
+		mkdir $wrksrc
+	fi
+	cd $wrksrc
+	cat > localectl <<'EOF'
+#!/bin/sh
+LC_SERVICE="org.freedesktop.locale1"
+LC_PATH="/org/freedesktop/locale1"
+
+list_via_dbus() {
+  out="$(gdbus call --system --dest "$LC_SERVICE" --object-path "$LC_PATH" \
+        --method ${LC_SERVICE}.ListLocales 2>/dev/null)" || return 1
+  printf "%s\n" "$out" | sed -n "s/.*\\[\\(.*\\)\\].*/\\1/p" | tr -d "'" | tr ',' '\n' | tr -d ' '
+}
+
+case "$1" in
+  list-locales)
+    if list_via_dbus; then
+      exit 0
+    elif command -v locale >/dev/null 2>&1; then
+      locale -a
+      exit 0
+    elif [ -f /usr/share/i18n/SUPPORTED ]; then
+      cut -d' ' -f1 /usr/share/i18n/SUPPORTED
+      exit 0
+    elif [ -d /usr/share/i18n/locales ]; then
+      find /usr/share/i18n/locales -maxdepth 1 -type f -printf '%f\n'
+      exit 0
+    else
+      echo "C.UTF-8"
+      exit 0
+    fi
+    ;;
+  set-locale)
+    shift
+    if [ $# -eq 0 ]; then
+      echo "Usage: localectl set-locale VAR=VALUE ..." >&2
+      exit 1
+    fi
+    arr=""
+    for kv in "$@"; do
+      [ -n "$arr" ] && arr="$arr, "
+      arr="$arr'$kv'"
+    done
+    gdbus call --system --dest "$LC_SERVICE" --object-path "$LC_PATH" \
+      --method ${LC_SERVICE}.SetLocale "[${arr}]" true >/dev/null
+    exit $?
+    ;;
+  *)
+    echo "localectl (stub): supported: list-locales | set-locale VAR=VALUE ..." >&2
+    exit 1
+    ;;
+esac
+
+EOF
+}
+
+do_install() {
+	vmkdir usr/bin
+	vinstall localectl 755 /usr/bin
+}

@@ -1,0 +1,33 @@
+# Template file for 'cosmic-initial-setup'
+pkgname=cosmic-initial-setup
+version=1.0.0.beta.6
+revision=1
+_tag=epoch-${version/.beta/-beta}
+build_style=cargo
+hostmakedepends="pkg-config just curl tar git-lfs "
+makedepends="eudev-libudev-devel libxkbcommon-devel openssl-devel flatpak-devel libinput-devel"
+depends="locale1 localectl"
+short_desc="TODO: cosmic-initial-setup short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-initial-setup"
+
+do_fetch() {
+	if [ -d $wrksrc ]; then
+		rm -rf $wrksrc
+	fi
+	git clone $homepage $wrksrc
+	cd $wrksrc
+	git checkout 0080330b6dacafccebc3aac74f3fccaf20f87f67
+	git lfs install --local
+	git lfs pull
+}
+
+do_build() {
+	just vendor
+	just build-vendored
+}
+
+do_install() {
+	just --set rootdir ${DESTDIR} install
+}

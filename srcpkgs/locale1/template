@@ -1,0 +1,93 @@
+# Template file for 'org.freedesktop.locale1'
+pkgname=locale1
+version=1
+revision=3
+wrksrc="${pkgname}-${version}"
+depends="python3-dbus-next"
+short_desc="TODO: pop-fonts short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://www.freedesktop.org/software/systemd/man/latest/org.freedesktop.locale1.html"
+
+pre_install() {
+	if [ ! -d $wrksrc ]; then
+		mkdir $wrksrc
+	fi
+	cd $wrksrc
+	cat > locale1 <<EOF
+#!/usr/bin/env python3
+import asyncio
+import os
+from dbus_fast.aio import MessageBus
+from dbus_fast.service import ServiceInterface, dbus_property, PropertyAccess, method
+from dbus_fast import BusType
+
+LOCALE_PATH = "/usr/share/i18n/locales"
+
+def get_all_locales():
+    result = []
+    if os.path.isdir(LOCALE_PATH):
+        for loc in sorted(os.listdir(LOCALE_PATH)):
+            if os.path.isfile(os.path.join(LOCALE_PATH, loc)):
+                result.append(f"{loc}.UTF-8")
+    return result
+
+class Locale1(ServiceInterface):
+    def __init__(self):
+        super().__init__("org.freedesktop.locale1")
+
+    @dbus_property(access=PropertyAccess.READ)
+    def Locale(self) -> "as":
+        return get_all_locales()
+
+    @method()
+    def SetLocale(self, new_locales: "as", apply: "b"):
+        print(f"SetLocale aufgerufen mit: {new_locales}, apply={apply}")
+        if new_locales:
+            self._current = new_locales
+            # Optional: Systemdatei überschreiben (/etc/locale.conf)
+            try:
+                with open("/etc/locale.conf", "w") as f:
+                    for entry in new_locales:
+                        f.write(entry + "\n")
+            except PermissionError:
+                print("Keine Berechtigung um /etc/locale.conf zu schreiben")
+        return
+
+async def main():
+    bus = await MessageBus(bus_type=BusType.SYSTEM).connect()
+    interface = Locale1()
+    bus.export("/org/freedesktop/locale1", interface)
+    await bus.request_name("org.freedesktop.locale1")
+    print("locale1 service läuft mit Liste aus /usr/share/i18n/locales")
+    await asyncio.get_event_loop().create_future()
+
+if __name__ == "__main__":
+    asyncio.run(main())
+
+EOF
+
+cat > locale1-stub.conf <<EOF
+<!DOCTYPE busconfig PUBLIC
+ "-//freedesktop//DTD D-BUS Bus Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
+
+<busconfig>
+  <policy user="root">
+    <allow own="org.freedesktop.locale1"/>
+  </policy>
+  <policy context="default">
+    <allow send_destination="org.freedesktop.locale1"/>
+    <allow receive_sender="org.freedesktop.locale1"/>
+  </policy>
+</busconfig>
+
+EOF
+}
+
+do_install() {
+	vmkdir usr/bin
+	vinstall locale1 755 /usr/bin
+	vinstall locale1-stub.conf 755 /etc/dbus-1/system.d
+	vsv locale1
+}

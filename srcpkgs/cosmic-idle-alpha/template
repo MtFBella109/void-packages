@@ -1,0 +1,21 @@
+# Template file for 'cosmic-idle'
+pkgname=cosmic-idle-alpha
+version=1.0.0.alpha.7
+revision=2
+replaces=cosmic-idle
+_tag=epoch-${version/.alpha/-alpha}
+build_style=cargo
+configure_args=" --all"
+hostmakedepends="pkg-config just"
+makedepends="libxkbcommon-devel wayland-devel"
+depends="libxkbcommon"
+short_desc="TODO: cosmic-idle short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-idle"
+distfiles="https://github.com/pop-os/cosmic-idle/archive/refs/tags/${_tag}.tar.gz"
+checksum=713953ab0176164dff644da2c0e42a17f0e84e7984d7600a02ab81c8c24362ef
+
+do_install() {
+	just --set cargo-target-dir "target/${RUST_TARGET}" --set rootdir ${DESTDIR} --set prefix /usr install
+}

@@ -1,0 +1,21 @@
+# Template file for 'pop-fonts'
+pkgname=pop-fonts
+version=1
+revision=1
+wrksrc="${pkgname}-${version}"
+hostmakedepends="git"
+short_desc="TODO: pop-fonts short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/fonts"
+
+do_fetch() {
+	if [ -d $wrksrc ]; then
+		rm -rf $wrksrc
+	fi
+	git clone $homepage $wrksrc
+}
+
+do_install() {
+	make install DESTDIR=${DESTDIR}
+}
