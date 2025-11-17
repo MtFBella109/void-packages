@@ -1,3 +1,7 @@
 #!/bin/sh
 sv check elogind >/dev/null || exit 1
+<<<<<<< HEAD
 exec 2>&1 /usr/bin/cosmic-greeter-daemon
+=======
+exec /usr/bin/cosmic-greeter-daemon
+>>>>>>> f6808b78bcf (Updated to cosmic beta6)
