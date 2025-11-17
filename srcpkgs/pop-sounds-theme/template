@@ -3,9 +3,15 @@ pkgname=pop-sounds-theme
 version=5.5.1
 revision=1
 hostmakedepends="pkg-config meson ninja sassc libglib-devel glib-devel"
+<<<<<<< HEAD
 short_desc="Pop sounds theme"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="CC-BY-SA-4.0"
+=======
+short_desc="TODO: pop-fonts short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+>>>>>>> f6808b78bcf (Updated to cosmic beta6)
 homepage="https://github.com/pop-os/gtk-theme"
 distfiles=${homepage}/archive/refs/tags/v${version}.tar.gz
 checksum=080aa631459c941fa18f0facd0265e7d94e3dcf1a0104e62777797e0b2cfe81c

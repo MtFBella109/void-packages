@@ -1,0 +1,7 @@
+case "$ACTION" in
+post)
+	if [ "$UPDATE" = "no" ]; then
+		rm /usr/bin/zen-browser
+	fi
+	;;
+esac

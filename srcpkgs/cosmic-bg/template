@@ -1,5 +1,6 @@
 # Template file for 'cosmic-bg'
 pkgname=cosmic-bg
+<<<<<<< HEAD
 version=1.0.0.beta.9
 revision=1
 build_options="sccache"
@@ -18,6 +19,23 @@ checksum=f245a71685955d3b31ff81891e8eca6aa8220e4e95e2bf7de481bac14982fe1d
 
 do_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
+=======
+version=1.0.0.beta.6
+revision=1
+_tag=epoch-${version/.beta/-beta}
+build_style=cargo
+hostmakedepends="pkg-config just"
+makedepends="libxkbcommon-devel"
+depends="libxkbcommon"
+short_desc="TODO: cosmic-bg short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-bg"
+distfiles="https://github.com/pop-os/cosmic-bg/archive/refs/tags/${_tag}.tar.gz"
+checksum=69b321aa270e836ab0b864a2a1e46e0f3a4771a7ee268e7f37e599d3ee29d61d
+
+do_build() {
+>>>>>>> f6808b78bcf (Updated to cosmic beta6)
 	just build-release
 }
 
