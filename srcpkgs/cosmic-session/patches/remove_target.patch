@@ -1,0 +1,20 @@
+--- a/Justfile	2025-06-29 23:37:51.698732703 +0200
++++ b/Justfile	2025-06-29 23:38:44.404166243 +0200
+@@ -14,7 +14,6 @@
+ cosmic_dconf_profile := prefix + '/share/dconf/profile/cosmic'
+ 
+ bindir := rootdir / prefix + '/bin'
+-systemddir := rootdir / prefix + '/lib/systemd/user'
+ sessiondir := rootdir / prefix + '/share/wayland-sessions'
+ applicationdir := rootdir / prefix + '/share/applications'
+ 
+@@ -33,9 +32,6 @@
+ 	install -Dm0755 data/start-cosmic {{bindir}}/start-cosmic
+ 	sed -i "s|DCONF_PROFILE=cosmic|DCONF_PROFILE={{cosmic_dconf_profile}}|" {{bindir}}/start-cosmic
+ 
+-	# systemd target
+-	install -Dm0644 data/cosmic-session.target {{systemddir}}/cosmic-session.target
+-
+ 	# session
+ 	install -Dm0644 data/cosmic.desktop {{sessiondir}}/cosmic.desktop
+ 

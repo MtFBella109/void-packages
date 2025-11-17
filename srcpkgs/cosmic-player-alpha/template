@@ -1,0 +1,29 @@
+# Template file for 'cosmic-player'
+pkgname=cosmic-player-alpha
+version=1.0.0.alpha.7
+revision=4
+replaces=cosmic-player
+_tag=epoch-${version/.alpha/-alpha}
+wrksrc=${pkgname}-${version}
+#build_style=manual
+hostmakedepends="pkg-config just cargo cargo-auditable git"
+makedepends="libxkbcommon-devel clang gstreamer1-devel gst-plugins-base1-devel"
+depends="libxkbcommon"
+short_desc="TODO: cosmic-player short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-player"
+#distfiles="https://github.com/pop-os/cosmic-player/archive/refs/tags/${_tag}.tar.gz"
+#checksum=69b9581c1e0b898dc700ec3fce09a0b69e7da78e1202b70e68794b2397fc6a6f
+
+do_fetch() {
+	git clone https://github.com/pop-os/cosmic-player $wrksrc
+}
+
+do_build() {
+	just
+}
+
+do_install() {
+	just  --set rootdir ${DESTDIR} --set prefix /usr install
+}

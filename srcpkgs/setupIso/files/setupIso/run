@@ -1,0 +1,4 @@
+#!/bin/bash
+sv check NetworkManager | exit 1
+
+exec /usr/bin/setup-iso
