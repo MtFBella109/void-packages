@@ -1,0 +1,8 @@
+case "$ACTION" in
+pre)
+	if [ "$UPDATE" = "no" ]; then
+		userdel cosmic-greeter
+		rm -rf /var/lib/cosmic-greeter
+	fi
+	;;
+esac
