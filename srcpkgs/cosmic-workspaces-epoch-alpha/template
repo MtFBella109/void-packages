@@ -1,0 +1,21 @@
+# Template file for 'cosmic-workspaces-epoch'
+pkgname=cosmic-workspaces-epoch-alpha
+version=1.0.0.alpha.7
+revision=2
+replaces=cosmic-workspaces-epoch
+_tag=epoch-${version/.alpha/-alpha}
+build_style=cargo
+hostmakedepends="pkg-config"
+makedepends="libxkbcommon-devel libgbm-devel eudev-libudev-devel libinput-devel"
+depends="expat libxkbcommon libgbm libdrm"
+short_desc="TODO: cosmic-workspaces-epoch short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-workspaces-epoch"
+distfiles="https://github.com/pop-os/cosmic-workspaces-epoch/archive/refs/tags/${_tag}.tar.gz"
+checksum=072a78befd3134bc5e9e51a74cc48979ad72a8b5b004dc0f7bd14027b9919aa8
+
+post_install() {
+	vinstall data/com.system76.CosmicWorkspaces.desktop 0644 usr/share/applications
+	vinstall data/com.system76.CosmicWorkspaces.svg 0644 usr/share/icons/hicolor/scalable/apps
+}

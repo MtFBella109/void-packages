@@ -1,0 +1,4 @@
+#!/bin/bash
+sv check cosmic-greeter-daemon >/dev/null || exit 1
+
+exec 2>&1 greetd --config /etc/greetd/cosmic-greeter.toml

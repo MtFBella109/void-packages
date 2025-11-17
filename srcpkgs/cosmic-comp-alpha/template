@@ -1,0 +1,20 @@
+# Template file for 'cosmic-comp'
+pkgname=cosmic-comp-alpha
+version=1.0.0.alpha.7
+revision=6
+_tag=epoch-${version/.alpha/-alpha}
+build_style=cargo
+build_style_args="--no-default-features --features profile-with-tray"
+hostmakedepends="pkg-config"
+makedepends="eudev-libudev-devel libseat-devel libxkbcommon-devel libinput-devel pixman-devel libgbm-devel libdisplay-info-devel"
+depends="eudev-libudev expat libxkbcommon libdisplay-info libgbm libseat libinput libgcc libdrm libelogind libevdev libwacom libcap libgudev libffi libpcre2 mtdev pixman"
+short_desc="TODO: cosmic-comp short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-comp"
+distfiles="https://github.com/pop-os/cosmic-comp/archive/refs/tags/${_tag}.tar.gz"
+checksum=7bd9f19a69fb9708448d0a551d2c8bf5abf809457694f17aefd8d4d03b70d16d
+
+do_install() {
+	CARGO_TARGET_DIR="target/${RUST_TARGET}" DESTDIR=${DESTDIR} make install
+}

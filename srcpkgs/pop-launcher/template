@@ -1,0 +1,20 @@
+# Template file for 'pop-launcher'
+pkgname=pop-launcher
+version=1.2.7
+revision=1
+hostmakedepends="pkg-config just cargo cargo-auditable"
+makedepends="libxkbcommon-devel"
+short_desc="TODO: pop-launcher short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/launcher"
+distfiles="https://github.com/pop-os/launcher/archive/refs/tags/${version}.tar.gz"
+checksum=e02ffd9876bb11c50118bf5e9c0bec57132f7010831da749dc6107e31ca198a6
+
+do_build() {
+	just build-release
+}
+
+do_install() {
+	just --set rootdir ${DESTDIR} install
+}

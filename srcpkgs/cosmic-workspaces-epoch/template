@@ -1,0 +1,23 @@
+# Template file for 'cosmic-workspaces-epoch'
+pkgname=cosmic-workspaces-epoch
+version=1.0.0.beta.6
+revision=1
+_tag=epoch-${version/.beta/-beta}
+build_style=cargo
+hostmakedepends="pkg-config"
+makedepends="libxkbcommon-devel libgbm-devel eudev-libudev-devel libinput-devel"
+depends="expat libxkbcommon libgbm libdrm"
+short_desc="TODO: cosmic-workspaces-epoch short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-workspaces-epoch"
+distfiles="https://github.com/pop-os/cosmic-workspaces-epoch/archive/refs/tags/${_tag}.tar.gz"
+checksum=f86f865f63ab3fab34915a929efa060bca0386175581cb9d21923ba49ce4ff5e
+
+do_build() {
+	make all prefix=/usr
+}
+
+do_install() {
+	DESTDIR=${DESTDIR} make install prefix=/usr
+}
