@@ -9,3 +9,4 @@ fi
 
 # Add your local overrides below
 #
+XBPS_ALLOW_RESTRICTED=yes

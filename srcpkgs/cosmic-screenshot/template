@@ -1,6 +1,6 @@
 # Template file for 'cosmic-screenshot'
 pkgname=cosmic-screenshot
-version=1.0.0.beta.5
+version=1.0.0.beta.6
 revision=1
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
@@ -10,7 +10,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-screenshot"
 distfiles="https://github.com/pop-os/cosmic-screenshot/archive/refs/tags/${_tag}.tar.gz"
-checksum=ec4f10568c136a9079664f47bf39b49ef61664e275dd4bbd516c18553ce98afa
+checksum=33cb3c1263a62fe8cd95bfe1984580d4983b596efc0f44bc9360d03ef7943990
 
 do_build() {
 	just build-release

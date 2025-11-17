@@ -1,6 +1,6 @@
 # Template file for 'cosmic-bg'
 pkgname=cosmic-bg
-version=1.0.0.beta.5
+version=1.0.0.beta.6
 revision=1
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
@@ -12,7 +12,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-bg"
 distfiles="https://github.com/pop-os/cosmic-bg/archive/refs/tags/${_tag}.tar.gz"
-checksum=84b4aa25f9bd8017da6b63eb6c985affda46ca6e39bb2d4df69ffd82e92cb236
+checksum=69b321aa270e836ab0b864a2a1e46e0f3a4771a7ee268e7f37e599d3ee29d61d
 
 do_build() {
 	just build-release
