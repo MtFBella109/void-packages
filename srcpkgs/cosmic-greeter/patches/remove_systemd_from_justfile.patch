@@ -1,0 +1,21 @@
+--- a/justfile	2025-10-02 13:40:46.601643204 +0200
++++ b/justfile	2025-10-02 13:42:25.442592253 +0200
+@@ -69,17 +69,12 @@
+ 
+ # Install only debian package required files
+ # The sysusers and tmpfiles files are automatically added
+-install-debian:
++install:
+     install -Dm0755 {{bin-src}} {{bin-dst}}
+     install -Dm0755 {{start-src}} {{start-dst}}
+     install -Dm0755 {{daemon-src}} {{daemon-dst}}
+     install -Dm0755 {{dbus-src}} {{dbus-dst}}
+ 
+-# Installs files
+-install: install-debian
+-    install -Dm0644 {{sysusers-src}} {{sysusers-dst}}
+-    install -Dm0644 {{tmpfiles-src}} {{tmpfiles-dst}}
+-
+ # Uninstalls installed files
+ uninstall:
+     rm {{start-dst}} {{bin-dst}} {{daemon-dst}} {{dbus-dst}} {{sysusers-dst}} {{tmpfiles-dst}}

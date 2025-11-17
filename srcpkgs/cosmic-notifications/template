@@ -1,0 +1,23 @@
+# Template file for 'cosmic-notifications'
+pkgname=cosmic-notifications
+version=1.0.0.beta.6
+revision=1
+_tag=epoch-${version/.beta/-beta}
+build_style=cargo
+hostmakedepends="pkg-config just"
+makedepends="libxkbcommon-devel"
+depends="libxkbcommon"
+short_desc="TODO: cosmic-notifications short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-notifications"
+distfiles="https://github.com/pop-os/cosmic-notifications/archive/refs/tags/${_tag}.tar.gz"
+checksum=30eb49b45ddf8b44f12e7f7c913cf00910d044c512fe1066e4c16bd57b3046ed
+
+do_build() {
+	just build-release
+}
+
+do_install() {
+	just --set rootdir ${DESTDIR} install
+}
