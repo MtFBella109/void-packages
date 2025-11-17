@@ -1,6 +1,14 @@
 case "$ACTION" in
+<<<<<<< HEAD
 post)
 	userdel cosmic-greeter
 	rm -rf /var/lib/cosmic-greeter
+=======
+pre)
+	if [ "$UPDATE" = "no" ]; then
+		userdel cosmic-greeter
+		rm -rf /var/lib/cosmic-greeter
+	fi
+>>>>>>> f6808b78bcf (Updated to cosmic beta6)
 	;;
 esac

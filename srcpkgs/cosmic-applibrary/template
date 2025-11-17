@@ -1,5 +1,6 @@
 # Template file for 'cosmic-applibrary'
 pkgname=cosmic-applibrary
+<<<<<<< HEAD
 version=1.0.0.beta.9
 revision=1
 build_options="sccache"
@@ -10,14 +11,29 @@ makedepends="libxkbcommon-devel "
 depends="libxkbcommon"
 short_desc="Cosmic App Library"
 long_desc="Cosmic App Library is an application launcher for the COSMIC desktop that lists all installed applications in a grid."
+=======
+version=1.0.0.beta.6
+revision=1
+_tag=epoch-${version/.beta/-beta}
+hostmakedepends="pkg-config just cargo cargo-auditable"
+makedepends="libxkbcommon-devel"
+depends="libxkbcommon"
+short_desc="TODO: cosmic-applibrary short_desc"
+>>>>>>> f6808b78bcf (Updated to cosmic beta6)
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-applibrary"
 distfiles="https://github.com/pop-os/cosmic-applibrary/archive/refs/tags/${_tag}.tar.gz"
+<<<<<<< HEAD
 checksum=8fc53de45fcbf6053e41a66b18ec1ff85180f6e4aa321e5a70cc36d8707feb25
 
 do_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
+=======
+checksum=5ec3fc52ff1460d05dbf3d7aba4eeb2c34b6a1b57b33a88693e833a3d12ca2fc
+
+do_build() {
+>>>>>>> f6808b78bcf (Updated to cosmic beta6)
 	just build-release
 }
 

@@ -1,5 +1,6 @@
 # Template file for 'cosmic-idle'
 pkgname=cosmic-idle
+<<<<<<< HEAD
 version=1.0.0.beta.9
 revision=1
 build_options="sccache"
@@ -11,14 +12,31 @@ hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
 makedepends="libxkbcommon-devel wayland-devel"
 depends="libxkbcommon"
 short_desc="COSMIC idle daemon"
+=======
+version=1.0.0.beta.6
+revision=1
+_tag=epoch-${version/.beta/-beta}
+build_style=cargo
+configure_args=" --all"
+hostmakedepends="pkg-config just"
+makedepends="libxkbcommon-devel wayland-devel"
+depends="libxkbcommon"
+short_desc="TODO: cosmic-idle short_desc"
+>>>>>>> f6808b78bcf (Updated to cosmic beta6)
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-idle"
 distfiles="https://github.com/pop-os/cosmic-idle/archive/refs/tags/${_tag}.tar.gz"
+<<<<<<< HEAD
 checksum=91fbb28fe7a6418f56a2c757ca7838af2f3d89077fdd645342e7455b3bc64ceb
 
 do_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
+=======
+checksum=a291a2befeb8b2f914244a5555eb123701dc19a09829b92a937552527333cc94
+
+do_build() {
+>>>>>>> f6808b78bcf (Updated to cosmic beta6)
 	just build-release
 }
 

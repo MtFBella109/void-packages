@@ -1,11 +1,23 @@
 # Template file for 'cosmic-desktop'
 pkgname=cosmic-desktop
+<<<<<<< HEAD
 version=1.0.0.beta.9
 revision=1
 short_desc="Migration Package to cosmic-desktop-full"
 metapackage="yes"
+=======
+version=1.0.0.beta.6
+revision=1
+replaces="cosmic-applets-alpha>=0 cosmic-applibrary-alpha>=0 cosmic-bg-alpha>=0 cosmic-comp-alpha>=0 cosmic-desktop>=0 cosmic-edit-alpha>=0 cosmic-files-alpha>=0 cosmic-icons-alpha>=0 cosmic-idle-alpha>=0 cosmic-launcher-alpha>=0 cosmic-notifications-alpha>=0 cosmic-osd-alpha>=0 cosmic-panel-alpha>=0 cosmic-player-alpha>=0 cosmic-randr-alpha>=0 cosmic-seesion>=0 cosmic-screenshot-alpha>=0 cosmic-settings-alpha>=0 cosmic-settings-daemon-alpha>=0 cosmic-term-alpha>=0 cosmic-wallpapers-alpha>=0 cosmic-workspaces-epoch-alpha>=0 pop-launcher-alpha>=0 xdg-desktop-portal-alpha>=0"
+metapackage="yes"
+short_desc="Meta package for the full Cosmic Desktop environment. Not recommended right now for active use."
+>>>>>>> 69af5fdbb1d (Updated to cosmic beta6)
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="metapackage"
 homepage="https://github.com/pop-os/cosmic-epoch"
 skip_extraction=yes
+<<<<<<< HEAD
 depends="cosmic-desktop-full"
+=======
+depends="cosmic-applets cosmic-applibrary cosmic-bg cosmic-comp cosmic-edit cosmic-files cosmic-icons cosmic-idle cosmic-initial-setup cosmic-launcher cosmic-notifications cosmic-osd cosmic-panel cosmic-player cosmic-randr cosmic-screenshot cosmic-session cosmic-settings cosmic-settings-daemon cosmic-term cosmic-wallpapers cosmic-workspaces-epoch dbus dejavu-fonts-ttf freetype fontconfig gsettings-desktop-schemas lld libgbm xdg-desktop-portal-cosmic xdg-user-dirs xorg-server-xwayland bluez elogind pipewire liberation-fonts-ttf libspa-bluetooth gstreamer1-pipewire libglvnd noto-fonts-ttf noto-fonts-emoji wayland wireplumber"
+>>>>>>> 69af5fdbb1d (Updated to cosmic beta6)
