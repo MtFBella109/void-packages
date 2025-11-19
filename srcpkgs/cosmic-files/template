@@ -2,10 +2,11 @@
 pkgname=cosmic-files
 version=1.0.0.beta.6
 revision=1
+build_options="sccache"
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
 hostmakedepends="pkg-config just"
-makedepends="libxkbcommon-devel libglib-devel"
+makedepends="libxkbcommon-devel libglib-devel $(vopt_if sccache "rust-sccache")"
 depends="bzip2 glib liblzma libzstd libxkbcommon libmount libffi libpcre2 libblkid zlib"
 short_desc="TODO: cosmic-files short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
@@ -18,7 +19,12 @@ checksum=f0450eee287ceaf44302bc3777cc228df9ea1e988384dbd24bb712893b31b1cd
 #export VERGEN_GIT_SHA="${version}_${revision}"
 
 do_build() {
+	if [ $(vopt_if sccache "true" "false") == "true" ]; then
+		export RUSTC_WRAPPER=/usr/bin/sccache
+		sccache --start-server
+	fi
 	just build-release
+	$(vopt_if sccache "sccache --stop-server")
 }
 
 do_install() {
