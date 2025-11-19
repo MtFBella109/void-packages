@@ -4,8 +4,9 @@ version=1.0.0.beta.6
 revision=1
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
+build_options="sccache"
 hostmakedepends="pkg-config just"
-makedepends="libxkbcommon-devel eudev-libudev-devel dbus-devel pulseaudio-devel libinput-devel pipewire-devel clang19-devel"
+makedepends="libxkbcommon-devel eudev-libudev-devel dbus-devel pulseaudio-devel libinput-devel pipewire-devel clang19-devel $(vopt_if sccache "rust-sccache")"
 depends="dbus-libs eudev-libudev lame libpulseaudio libxkbcommon libpulseaudio libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus"
 short_desc="TODO: cosmic-applets short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
@@ -15,9 +16,14 @@ distfiles="https://github.com/pop-os/cosmic-applets/archive/refs/tags/${_tag}.ta
 checksum=642eed759cface21f4c30a2e172787b33f14019428bbe484c31c1d0690f82d2b
 
 do_build() {
+	if [ $(vopt_if sccache "true" "false") == "true" ]; then
+        	export RUSTC_WRAPPER=/usr/bin/sccache
+                sccache --start-server
+	fi
 	just rootdir=${DESTDIR} build-release
+	$(vopt_if sccache "sccache --stop-server")
 }
 
 do_install() {
-	just rootdir=${DESTDIR} install 
+	just rootdir=${DESTDIR} install
 }

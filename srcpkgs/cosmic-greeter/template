@@ -2,9 +2,10 @@
 pkgname=cosmic-greeter
 version=1.0.0.beta.6
 revision=1
+build_options="sccache"
 _tag=epoch-${version/.beta/-beta}
 hostmakedepends="pkg-config just llvm18-devel cargo cargo-auditable"
-makedepends="libxkbcommon-devel eudev-libudev-devel pam-devel libinput-devel"
+makedepends="libxkbcommon-devel eudev-libudev-devel pam-devel libinput-devel $(vopt_if sccache "rust-sccache")"
 depends="greetd libxkbcommon pam-libs userctl"
 short_desc="TODO: cosmic-greeter short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
@@ -17,7 +18,12 @@ export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
 export VERGEN_GIT_SHA="${version}_${revision}"
 
 do_build() {
+	if [ $(vopt_if sccache "true" "false") == "true" ]; then
+		export RUSTC_WRAPPER=/usr/bin/sccache
+		sccache --start-server
+	fi
 	cargo build --all --release --no-default-features --features networkmanager,upower
+	$(vopt_if sccache "sccache --stop-server")
 }
 
 do_install() {

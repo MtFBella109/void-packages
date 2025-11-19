@@ -1,9 +1,8 @@
 # Template file for 'cosmic-theme-editor'
 pkgname=cosmic-theme-editor
-version=1.0.0.alpha.7
-revision=2
+version=1
+revision=1
 wkrsrc=${pkgname}-${version}
-_tag=epoch-${version/.alpha/-alpha}
 build_style="meson"
 hostmakedepends="pkg-config cargo cargo-auditable git"
 makedepends="glib-devel gtk4-devel gtk4-update-icon-cache cmake gettext desktop-file-utils"
