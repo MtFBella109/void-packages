@@ -2,10 +2,11 @@
 pkgname=cosmic-initial-setup
 version=1.0.0.beta.6
 revision=1
+build_options="sccache"
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
-hostmakedepends="pkg-config just curl tar git-lfs "
-makedepends="eudev-libudev-devel libxkbcommon-devel openssl-devel flatpak-devel libinput-devel"
+hostmakedepends="pkg-config just curl tar git-lfs git"
+makedepends="eudev-libudev-devel libxkbcommon-devel openssl-devel flatpak-devel libinput-devel $(vopt_if sccache "rust-sccache")"
 depends="locale1 localectl"
 short_desc="TODO: cosmic-initial-setup short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
@@ -18,14 +19,22 @@ do_fetch() {
 	fi
 	git clone $homepage $wrksrc
 	cd $wrksrc
-	git checkout 0080330b6dacafccebc3aac74f3fccaf20f87f67
+	git checkout f8cba7d2f658e2bf61b99e89ca7afc32c2fb75a3
 	git lfs install --local
 	git lfs pull
 }
 
-do_build() {
+pre_build() {
 	just vendor
+}
+
+do_build() {
+	if [ $(vopt_if sccache "true" "false") == "true" ]; then
+		export RUSTC_WRAPPER=/usr/bin/sccache
+		sccache --start-server
+	fi
 	just build-vendored
+	$(vopt_if sccache "sccache --stop-server")
 }
 
 do_install() {
