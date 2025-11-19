@@ -4,8 +4,9 @@ version=1.0.0.beta.6
 revision=1
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
+build_options="sccache"
 hostmakedepends="pkg-config just"
-makedepends="libxkbcommon-devel libzstd-devel"
+makedepends="libxkbcommon-devel libzstd-devel $(vopt_if sccache "rust-sccache")"
 depends="libxkbcommon libzstd"
 short_desc="TODO: cosmic-term short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
@@ -15,7 +16,12 @@ distfiles="https://github.com/pop-os/cosmic-term/archive/refs/tags/${_tag}.tar.g
 checksum=7e5585f71d4fb94f8898f65da749b997f5e0bf1bf5c5dadaeb4e476c80401081
 
 do_build() {
+	if [ $(vopt_if sccache "true" "false") == "true" ]; then
+		export RUSTC_WRAPPER=/usr/bin/sccache
+		sccache --start-server
+	fi
 	just build-release
+	$(vopt_if sccache "sccache --stop-server")
 }
 
 do_install() {

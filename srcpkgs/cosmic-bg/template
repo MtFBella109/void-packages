@@ -2,10 +2,11 @@
 pkgname=cosmic-bg
 version=1.0.0.beta.6
 revision=1
+build_options="sccache"
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
 hostmakedepends="pkg-config just"
-makedepends="libxkbcommon-devel"
+makedepends="libxkbcommon-devel $(vopt_if sccache "rust-sccache")"
 depends="libxkbcommon"
 short_desc="TODO: cosmic-bg short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
@@ -15,7 +16,12 @@ distfiles="https://github.com/pop-os/cosmic-bg/archive/refs/tags/${_tag}.tar.gz"
 checksum=69b321aa270e836ab0b864a2a1e46e0f3a4771a7ee268e7f37e599d3ee29d61d
 
 do_build() {
+	if [ $(vopt_if sccache "true" "false") == "true" ]; then
+		export RUSTC_WRAPPER=/usr/bin/sccache
+		sccache --start-server
+	fi
 	just build-release
+	$(vopt_if sccache "sccache --stop-server")
 }
 
 do_install() {
