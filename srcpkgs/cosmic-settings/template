@@ -15,12 +15,8 @@ distfiles="https://github.com/pop-os/cosmic-settings/archive/refs/tags/${_tag}.t
 checksum=5fbef2c316f2d6062b4fe5b48a14be27aee51f561cfd15452a7691a0d46fdc2c
 
 do_build() {
-	if [ $(vopt_if sccache "true" "false") == "true" ]; then
-		export RUSTC_WRAPPER=/usr/bin/sccache
-		sccache --start-server
-	fi
+	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
 	just build-release
-	$(vopt_if sccache "sccache --stop-server")
 }
 
 do_install() {

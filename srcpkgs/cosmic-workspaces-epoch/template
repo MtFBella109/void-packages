@@ -5,7 +5,7 @@ revision=1
 _tag=epoch-${version/.beta/-beta}
 build_style=gnu-makefile
 build_options="sccache"
-hostmakedepends="pkg-config"
+hostmakedepends="pkg-config cargo"
 makedepends="libxkbcommon-devel libgbm-devel eudev-libudev-devel libinput-devel $(vopt_if sccache "rust-sccache")"
 depends="expat libxkbcommon libgbm libdrm"
 short_desc="TODO: cosmic-workspaces-epoch short_desc"
@@ -18,11 +18,6 @@ checksum=f86f865f63ab3fab34915a929efa060bca0386175581cb9d21923ba49ce4ff5e
 if [ $(vopt_if sccache "true" "false") == "true" ]; then
 	pre_build() {
 		export RUSTC_WRAPPER=/usr/bin/sccache
-		sccache --start-server
-	}
-
-	post_build() {
-		sccache --stop-server
 	}
 fi
 
