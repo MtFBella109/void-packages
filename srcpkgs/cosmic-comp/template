@@ -16,12 +16,8 @@ distfiles="https://github.com/pop-os/cosmic-comp/archive/refs/tags/${_tag}.tar.g
 checksum=a871ba30702ffd31fa07fb11a30707393f75fef1b25b51da33d4ddd700f7faad
 
 do_build() {
-	if [ $(vopt_if sccache "true" "false") == "true" ]; then
-		export RUSTC_WRAPPER=/usr/bin/sccache
-		sccache --start-server
-	fi
+	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
 	cargo build --release --no-default-features --features "profile-with-tracy"
-	$(vopt_if sccache "sccache --stop-server")
 }
 
 do_install() {

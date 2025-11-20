@@ -21,10 +21,5 @@ export VERGEN_GIT_SHA="${version}_${revision}"
 if [ $(vopt_if sccache "true" "false") == "true" ]; then
 	pre_build() {
 		export RUSTC_WRAPPER=/usr/bin/sccache
-		sccache --start-server
-	}
-
-	post_build() {
-		sccache --stop-server
 	}
 fi

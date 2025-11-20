@@ -14,12 +14,8 @@ distfiles="https://github.com/pop-os/cosmic-randr/archive/refs/tags/${_tag}.tar.
 checksum=5732d720326c7a531b09a7c42367909b8e769f52292880fb596f64a5cb52b018
 
 do_build() {
-	if [ $(vopt_if sccache "true" "false") == "true" ]; then
-		export RUSTC_WRAPPER=/usr/bin/sccache
-		sccache --start-server
-	fi
+	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
 	just build-release
-	$(vopt_if sccache "sccache --stop-server")
 }
 
 do_install() {

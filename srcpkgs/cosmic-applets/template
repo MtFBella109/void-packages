@@ -16,12 +16,8 @@ distfiles="https://github.com/pop-os/cosmic-applets/archive/refs/tags/${_tag}.ta
 checksum=642eed759cface21f4c30a2e172787b33f14019428bbe484c31c1d0690f82d2b
 
 do_build() {
-	if [ $(vopt_if sccache "true" "false") == "true" ]; then
-        	export RUSTC_WRAPPER=/usr/bin/sccache
-                sccache --start-server
-	fi
+	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
 	just rootdir=${DESTDIR} build-release
-	$(vopt_if sccache "sccache --stop-server")
 }
 
 do_install() {

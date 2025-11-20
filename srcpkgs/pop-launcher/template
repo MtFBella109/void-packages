@@ -13,12 +13,8 @@ distfiles="https://github.com/pop-os/launcher/archive/refs/tags/${version}.tar.g
 checksum=e02ffd9876bb11c50118bf5e9c0bec57132f7010831da749dc6107e31ca198a6
 
 do_build() {
-		if [ $(vopt_if sccache "true" "false") == "true" ]; then
-		export RUSTC_WRAPPER=/usr/bin/sccache
-		sccache --start-server
-	fi
+	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
 	just build-release
-	$(vopt_if sccache "sccache --stop-server")
 }
 
 do_install() {

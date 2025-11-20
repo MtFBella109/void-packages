@@ -18,12 +18,8 @@ export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
 export VERGEN_GIT_SHA="${version}_${revision}"
 
 do_build() {
-	if [ $(vopt_if sccache "true" "false") == "true" ]; then
-		export RUSTC_WRAPPER=/usr/bin/sccache
-		sccache --start-server
-	fi
+	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
 	cargo build --all --release --no-default-features --features networkmanager,upower
-	$(vopt_if sccache "sccache --stop-server")
 }
 
 do_install() {
