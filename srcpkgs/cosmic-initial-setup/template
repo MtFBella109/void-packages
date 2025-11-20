@@ -29,12 +29,8 @@ pre_build() {
 }
 
 do_build() {
-	if [ $(vopt_if sccache "true" "false") == "true" ]; then
-		export RUSTC_WRAPPER=/usr/bin/sccache
-		sccache --start-server
-	fi
+	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
 	just build-vendored
-	$(vopt_if sccache "sccache --stop-server")
 }
 
 do_install() {
