@@ -15,13 +15,4 @@ homepage="https://github.com/pop-os/cosmic-osd"
 distfiles="https://github.com/pop-os/cosmic-osd/archive/refs/tags/${_tag}.tar.gz"
 checksum=f52fccf070241540039bd8800d8b79eac31e41c23ae4bc623fc3d35b4d79c91f
 
-if [ $(vopt_if sccache "true" "false") == "true" ]; then
-	pre_build() {
-		export RUSTC_WRAPPER=/usr/bin/sccache
-		sccache --start-server
-	}
-
-	post_build() {
-		sccache --stop-server
-	}
-fi
+$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
