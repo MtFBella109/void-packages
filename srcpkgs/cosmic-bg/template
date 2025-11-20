@@ -16,12 +16,8 @@ distfiles="https://github.com/pop-os/cosmic-bg/archive/refs/tags/${_tag}.tar.gz"
 checksum=69b321aa270e836ab0b864a2a1e46e0f3a4771a7ee268e7f37e599d3ee29d61d
 
 do_build() {
-	if [ $(vopt_if sccache "true" "false") == "true" ]; then
-		export RUSTC_WRAPPER=/usr/bin/sccache
-		sccache --start-server
-	fi
+	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
 	just build-release
-	$(vopt_if sccache "sccache --stop-server")
 }
 
 do_install() {

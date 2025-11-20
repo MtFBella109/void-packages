@@ -19,12 +19,8 @@ checksum=f0450eee287ceaf44302bc3777cc228df9ea1e988384dbd24bb712893b31b1cd
 #export VERGEN_GIT_SHA="${version}_${revision}"
 
 do_build() {
-	if [ $(vopt_if sccache "true" "false") == "true" ]; then
-		export RUSTC_WRAPPER=/usr/bin/sccache
-		sccache --start-server
-	fi
+	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
 	just build-release
-	$(vopt_if sccache "sccache --stop-server")
 }
 
 do_install() {
