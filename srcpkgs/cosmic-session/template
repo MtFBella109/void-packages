@@ -1,6 +1,5 @@
 # Template file for 'cosmic-session'
 pkgname=cosmic-session
-<<<<<<< HEAD
 version=1.0.0.beta.9
 revision=1
 archs="x86_64* i686"
@@ -11,29 +10,14 @@ hostmakedepends="just $(vopt_if sccache "rust-sccache")"
 makedepends="glib"
 depends="pop-fonts ttf-opensans	"
 short_desc="The session for the COSMIC desktop"
-=======
-version=1.0.0.beta.6
-revision=1
-_tag=epoch-${version/.beta/-beta}
-build_style=cargo
-hostmakedepends="just glib"
-depends="pop-fonts"
-short_desc="TODO: cosmic-session short_desc"
->>>>>>> f6808b78bcf (Updated to cosmic beta6)
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-session"
 distfiles="https://github.com/pop-os/cosmic-session/archive/refs/tags/${_tag}.tar.gz"
-<<<<<<< HEAD
 checksum=05ce772174999e6bdd42dac86c2dc41d3ec9967cecaf28d60c19ec3f7e95ce92
 
 do_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
-=======
-checksum=041a2e51d5cca9394d9133e619237d46c03b20f8d8022507fa02cbf3287c9d81
-
-do_build() {
->>>>>>> f6808b78bcf (Updated to cosmic beta6)
 	cargo build --release --no-default-features --features autostart
 }
 
@@ -49,10 +33,6 @@ cursor-theme = "Pop"
 font-name = "Open Sans 11"
 document-font-name = "Open Sans 11"
 monospace-font-name = "Noto Sans Mono 11"
-<<<<<<< HEAD
-=======
-titlebar-font='Open Sans Bold 11'
->>>>>>> f6808b78bcf (Updated to cosmic beta6)
 EOF
 }
 
