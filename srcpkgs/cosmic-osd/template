@@ -1,6 +1,6 @@
 # Template file for 'cosmic-osd'
 pkgname=cosmic-osd
-version=1.0.0.beta.6
+version=1.0.0.beta.7
 revision=1
 _tag=epoch-${version/.beta/-beta}
 build_style=gnu-makefile
@@ -13,6 +13,6 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-osd"
 distfiles="https://github.com/pop-os/cosmic-osd/archive/refs/tags/${_tag}.tar.gz"
-checksum=f52fccf070241540039bd8800d8b79eac31e41c23ae4bc623fc3d35b4d79c91f
+checksum=ec76590059a38079de52cc5f02852f4786122076609e7b324ef877ae3a69f20e
 
 $(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
