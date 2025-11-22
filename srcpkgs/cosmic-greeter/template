@@ -1,6 +1,6 @@
 # Template file for 'cosmic-greeter'
 pkgname=cosmic-greeter
-version=1.0.0.beta.6
+version=1.0.0.beta.7
 revision=1
 build_options="sccache"
 _tag=epoch-${version/.beta/-beta}
@@ -12,7 +12,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-greeter"
 distfiles="https://github.com/pop-os/cosmic-greeter/archive/refs/tags/${_tag}.tar.gz"
-checksum=648539e3336c11521f3573b8227ae09a0b470ea47648e5a14de2f04cec6b7d2a
+checksum=660d361e77a053250c7a5f6b5c5dcbdc9badc5b088bfee42d4852116ea171b9a
 
 export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
 export VERGEN_GIT_SHA="${version}_${revision}"
