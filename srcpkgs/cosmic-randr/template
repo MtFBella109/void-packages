@@ -1,6 +1,5 @@
 # Template file for 'cosmic-randr'
 pkgname=cosmic-randr
-<<<<<<< HEAD
 version=1.0.0.beta.9
 revision=1
 archs="x86_64* i686"
@@ -18,22 +17,6 @@ checksum=d893266c53c5dee22dd3227c3c62f36ef734299cf17771622d3ac376261d17db
 do_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
 	just build-release
-=======
-version=1.0.0.beta.6
-revision=1
-_tag=epoch-${version/.beta/-beta}
-build_style=cargo
-hostmakedepends="just"
-short_desc="TODO: cosmic-randr short_desc"
-maintainer="Bella Wagner <belladev109@proton.me>"
-license="GPL-3.0-only"
-homepage="https://github.com/pop-os/cosmic-randr"
-distfiles="https://github.com/pop-os/cosmic-randr/archive/refs/tags/${_tag}.tar.gz"
-checksum=5732d720326c7a531b09a7c42367909b8e769f52292880fb596f64a5cb52b018
-
-do_build() {
-	just
->>>>>>> f6808b78bcf (Updated to cosmic beta6)
 }
 
 do_install() {
