@@ -1,6 +1,6 @@
 # Template file for 'cosmic-initial-setup'
 pkgname=cosmic-initial-setup
-version=1.0.0.beta.6
+version=1.0.0.beta.7
 revision=1
 build_options="sccache"
 _tag=epoch-${version/.beta/-beta}
