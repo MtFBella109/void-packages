@@ -23,4 +23,5 @@
 +session	optional	pam_elogind.so
 +password	include 	system-login
 +session optional pam_exec.so type=open_session /usr/bin/userctl set-environment cosmic-comp
++session required /lib/security/pam_limits.so
 
