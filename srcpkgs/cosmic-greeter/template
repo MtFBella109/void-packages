@@ -1,7 +1,7 @@
 # Template file for 'cosmic-greeter'
 pkgname=cosmic-greeter
 version=1.0.0.beta.7
-revision=1
+revision=2
 build_options="sccache"
 _tag=epoch-${version/.beta/-beta}
 hostmakedepends="pkg-config just llvm18-devel cargo cargo-auditable"
