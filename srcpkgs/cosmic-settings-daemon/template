@@ -1,19 +1,19 @@
 # Template file for 'cosmic-settings-daemon'
 pkgname=cosmic-settings-daemon
-version=1.0.0.beta.7
+version=1.0.0.beta.8
 revision=1
 _tag=epoch-${version/.beta/-beta}
 build_style=gnu-makefile
 build_options="sccache"
-hostmakedepends="pkg-config cargo"
-makedepends="eudev-libudev-devel libinput-devel geoclue2-devel libpulseaudio $(vopt_if sccache "rust-sccache")"
+hostmakedepends="pkg-config cargo $(vopt_if sccache "rust-sccache")"
+makedepends="eudev-libudev-devel libinput-devel geoclue2-devel libpulseaudio"
 depends="acpid adw-gtk3 geoclue2 dbus-libs eudev-libudev lame libpulseaudio libxkbcommon libpulseaudio libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus pop-sounds-theme"
 short_desc="TODO: cosmic-settings-daemon short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/pop-os/cosmic-settings-daemon"
 distfiles="https://github.com/pop-os/cosmic-settings-daemon/archive/refs/tags/${_tag}.tar.gz"
-checksum=7e0eba59d14076538cb1fe2b1909e40038ac83064a90189d2cecda902e9a62e0
+checksum=531d21273290f16c7232c4d79324417d02cacba21dfa1de7f93dfcf79bd270eb
 
 export GEOCLUE_AGENT="/usr/libexec/geoclue-2.0/demos/agent"
 

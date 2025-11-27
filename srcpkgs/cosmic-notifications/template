@@ -1,19 +1,19 @@
 # Template file for 'cosmic-notifications'
 pkgname=cosmic-notifications
-version=1.0.0.beta.7
+version=1.0.0.beta.8
 revision=1
 build_options="sccache"
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
-hostmakedepends="pkg-config just"
-makedepends="libxkbcommon-devel $(vopt_if sccache "rust-sccache")"
+hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
+makedepends="libxkbcommon-devel"
 depends="libxkbcommon"
 short_desc="TODO: cosmic-notifications short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-notifications"
 distfiles="https://github.com/pop-os/cosmic-notifications/archive/refs/tags/${_tag}.tar.gz"
-checksum=30d246b3f311ed81e72fde8c8c6edd7c5a330af75dec172563456001878783da
+checksum=7e38116dcb68a5806e385f706fcbcf217291ff50592a783d84f8d158556cc9db
 
 do_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
