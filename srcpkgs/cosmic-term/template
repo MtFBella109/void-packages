@@ -1,19 +1,19 @@
 # Template file for 'cosmic-term'
 pkgname=cosmic-term
-version=1.0.0.beta.7
+version=1.0.0.beta.8
 revision=1
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
 build_options="sccache"
-hostmakedepends="pkg-config just"
-makedepends="libxkbcommon-devel libzstd-devel $(vopt_if sccache "rust-sccache")"
+hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
+makedepends="libxkbcommon-devel libzstd-devel"
 depends="libxkbcommon libzstd"
 short_desc="TODO: cosmic-term short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-term"
 distfiles="https://github.com/pop-os/cosmic-term/archive/refs/tags/${_tag}.tar.gz"
-checksum=3c41eefef599f1dd30a49fcbd6af481aa41fed1e58aa5c6acef2e17af3dc5e5a
+checksum=959e18370fba0eb62315bc9a42fd66ccac8b4a23a6e8ad07b357ee61ebccc546
 
 do_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
