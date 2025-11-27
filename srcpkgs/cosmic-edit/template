@@ -1,19 +1,19 @@
 # Template file for 'cosmic-edit'
 pkgname=cosmic-edit
-version=1.0.0.beta.7
+version=1.0.0.beta.8
 revision=1
 build_options="sccache"
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
-hostmakedepends="pkg-config just"
-makedepends="libxkbcommon-devel oniguruma-devel libzstd-devel libglib-devel $(vopt_if sccache "rust-sccache")"
+hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
+makedepends="libxkbcommon-devel oniguruma-devel libzstd-devel libglib-devel"
 depends="libxkbcommon libzstd oniguruma"
 short_desc="TODO: cosmic-edit short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-edit"
 distfiles="https://github.com/pop-os/cosmic-edit/archive/refs/tags/${_tag}.tar.gz"
-checksum=32ea4bfdd2610ebd9e234dd7be7dc3b33bcdfbc00b5484d4b0ec4484af4dd192
+checksum=4f7b8562fcc815f025df90b3b9cb5454992399a46e6c7f7a6bcf0ea5428a0152
 
 #export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
 #export VERGEN_GIT_SHA="${version}_${revision}"

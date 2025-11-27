@@ -1,19 +1,19 @@
 # Template file for 'cosmic-panel'
 pkgname=cosmic-panel
-version=1.0.0.beta.7
+version=1.0.0.beta.8
 revision=1
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
 build_options="sccache"
-hostmakedepends="pkg-config just"
-makedepends="libxkbcommon-devel $(vopt_if sccache "rust-sccache")"
+hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
+makedepends="libxkbcommon-devel "
 depends="libxkbcommon"
 short_desc="TODO: cosmic-panel short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-panel"
 distfiles="https://github.com/pop-os/cosmic-panel/archive/refs/tags/${_tag}.tar.gz"
-checksum=43bd4305cffcfad765b03b6bb9c819d73207384adb311c7d14e238a623c17a3f
+checksum=3a01918a27b999e8f0026a05e3ca98f7df69bd056c2d6f21fd0ddfad684bb0a3
 
 do_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
