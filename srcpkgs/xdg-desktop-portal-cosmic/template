@@ -1,19 +1,19 @@
 # Template file for 'xdg-desktop-portal-cosmic'
 pkgname=xdg-desktop-portal-cosmic
-version=1.0.0.beta.7
+version=1.0.0.beta.8
 revision=1
 _tag=epoch-${version/.beta/-beta}
 build_style=gnu-makefile
 build_options="sccache"
-hostmakedepends="pkg-config cargo cargo-auditable"
-makedepends="libxkbcommon-devel libzstd-devel pipewire-devel clang libglib-devel libgbm-devel $(vopt_if sccache "rust-sccache")"
+hostmakedepends="pkg-config cargo cargo-auditable $(vopt_if sccache "rust-sccache")"
+makedepends="libxkbcommon-devel libzstd-devel pipewire-devel clang libglib-devel libgbm-devel"
 depends="libgbm libpipewire glib libxkbcommon libdrm expat zlib libmount libffi libpcre2 libblkid xdg-desktop-portal"
 short_desc="TODO: xdg-desktop-portal-cosmic short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/xdg-desktop-portal-cosmic"
 distfiles="https://github.com/pop-os/xdg-desktop-portal-cosmic/archive/refs/tags/${_tag}.tar.gz"
-checksum=fbd8f1d2d5f4fd4c026ce701f4d4f75c14baad00fac2985c47453d5d995a5853
+checksum=6fbe7ebdb17998ee8b6a9731c5713493fa50f7730c9f5dfe678484b60aba96db
 
 export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
 export VERGEN_GIT_SHA="${version}_${revision}"

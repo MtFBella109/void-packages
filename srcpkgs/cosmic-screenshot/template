@@ -1,18 +1,17 @@
 # Template file for 'cosmic-screenshot'
 pkgname=cosmic-screenshot
-version=1.0.0.beta.7
+version=1.0.0.beta.8
 revision=1
 build_options="sccache"
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
-hostmakedepends="just"
-makedepends="$(vopt_if sccache "rust-sccache")"
+hostmakedepends="just $(vopt_if sccache "rust-sccache")"
 short_desc="TODO: cosmic-screenshot short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-screenshot"
 distfiles="https://github.com/pop-os/cosmic-screenshot/archive/refs/tags/${_tag}.tar.gz"
-checksum=cbdce12444e5f721506a4c0473349876bc4a7f2c86817c5f89c9fc4b3b89ac7e
+checksum=561ebd80c1993ef1031b116b50c11b21fd8b51682b250baf3ba21aca45ba0599
 
 do_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
