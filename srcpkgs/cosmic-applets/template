@@ -5,12 +5,15 @@ revision=1
 _tag=epoch-${version/.beta/-beta}
 build_style=cargo
 build_options="sccache"
-archs="x86_64* i686"
 hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
 makedepends="libxkbcommon-devel eudev-libudev-devel dbus-devel pulseaudio-devel libinput-devel pipewire-devel clang19-devel"
-depends="cosmic-icons dbus-libs eudev-libudev lame libpulseaudio libxkbcommon libpulseaudio libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus"
-short_desc="Applets for COSMIC"
-checksum=dcbb003da3c26531ededde42dc2e0db884bc5d5181a6ede64e4e58412831bb43
+depends="dbus-libs eudev-libudev lame libpulseaudio libxkbcommon libpulseaudio libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus"
+short_desc="TODO: cosmic-applets short_desc"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-applets"
+distfiles="https://github.com/pop-os/cosmic-applets/archive/refs/tags/${_tag}.tar.gz"
+checksum=76b9f221253061e757a4997aa5ee1f15244d826504d6be330d4ace8612a09d04
 
 do_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
