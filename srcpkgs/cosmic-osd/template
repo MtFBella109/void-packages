@@ -15,12 +15,12 @@ homepage="https://github.com/pop-os/cosmic-osd"
 distfiles="https://github.com/pop-os/cosmic-osd/archive/refs/tags/${_tag}.tar.gz"
 checksum=3467541317875e5a88f21886a19a098194570b6fbe0cc0a66d37edc7c06ed6f0
 
-$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
 
 do_build() {
+	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
 	just build-release
 }
 
 do_install() {
-	just install
+	just --set rootdir ${DESTDIR} install
 }
