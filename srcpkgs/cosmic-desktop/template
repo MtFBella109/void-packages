@@ -1,4 +1,4 @@
-# Template file for 'cosmic-desktop'
+# Template file for 'cosmic-desktop-full'
 pkgname=cosmic-desktop
 version=1.0.0.beta.8
 revision=1
@@ -9,4 +9,4 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="metapackage"
 homepage="https://github.com/pop-os/cosmic-epoch"
 skip_extraction=yes
-depends="cosmic-applets cosmic-applibrary cosmic-bg cosmic-comp cosmic-edit cosmic-files cosmic-icons cosmic-idle cosmic-initial-setup cosmic-launcher cosmic-notifications cosmic-osd cosmic-panel cosmic-player cosmic-randr cosmic-screenshot cosmic-session cosmic-settings cosmic-settings-daemon cosmic-term cosmic-wallpapers cosmic-workspaces-epoch dbus dejavu-fonts-ttf freetype fontconfig gsettings-desktop-schemas lld libgbm xdg-desktop-portal-cosmic xdg-user-dirs xorg-server-xwayland bluez elogind pipewire liberation-fonts-ttf libspa-bluetooth gstreamer1-pipewire libglvnd noto-fonts-ttf noto-fonts-emoji wayland wireplumber"
+depends="cosmic-applets cosmic-applibrary cosmic-bg cosmic-comp cosmic-edit cosmic-files cosmic-icons cosmic-idle cosmic-initial-setup cosmic-launcher cosmic-notifications cosmic-osd cosmic-panel cosmic-player cosmic-randr cosmic-screenshot cosmic-session cosmic-settings cosmic-settings-daemon cosmic-term cosmic-wallpapers cosmic-workspaces-epoch dbus dejavu-fonts-ttf freetype fontconfig gsettings-desktop-schemas xdg-desktop-portal-cosmic xdg-user-dirs xorg-server-xwayland bluez elogind pipewire liberation-fonts-ttf libspa-bluetooth gstreamer1-pipewire libglvnd noto-fonts-ttf noto-fonts-emoji wayland wireplumber"
