@@ -33,14 +33,6 @@ EOF
 		if [ ! -h /etc/pipewire/pipewire.conf.d/20-pipewire-pulse.conf ]; then
 			ln -s /usr/share/example/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
 		fi
-		if [ -h /etc/sv/sddm ]; then
-			if grep -q "InputMethod" /etc/sddm.conf; then
-				sed -i "s/us/$layout/" /etc/sddm.conf
-			else
-				echo "[General]" >> /etc/sddm.conf
-				echo "InputMethod=$layout" >> /etc/sddm.conf
-			fi
-		fi
 	fi
 	if [ "$UPDATE" = "yes" ]; then
 		if [ -h /etc/xdg/autostart/pipewire-pulse.desktop ]; then
