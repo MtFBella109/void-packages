@@ -3,10 +3,10 @@ pkgname=cosmic-osd
 version=1.0.0.beta.8
 revision=1
 _tag=epoch-${version/.beta/-beta}
-build_style=gnu-makefile
+build_style=cargo
 build_options="sccache"
-hostmakedepends="cargo cargo-auditable pkg-config $(vopt_if sccache "rust-sccache")"
-makedepends="libxkbcommon-devel pulseaudio-devel pipewire-devel clang17-devel eudev-libudev-devel libinput-devel "
+hostmakedepends="pkg-config $(vopt_if sccache "rust-sccache")"
+makedepends="libxkbcommon-devel pulseaudio-devel pipewire-devel clang17-devel eudev-libudev-devel libinput-devel just"
 depends="dbus-libs eudev-libudev lame libpulseaudio libxkbcommon libpulseaudio libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus"
 short_desc="TODO: cosmic-osd short_desc"
 maintainer="Bella Wagner <belladev109@proton.me>"
@@ -16,3 +16,11 @@ distfiles="https://github.com/pop-os/cosmic-osd/archive/refs/tags/${_tag}.tar.gz
 checksum=3467541317875e5a88f21886a19a098194570b6fbe0cc0a66d37edc7c06ed6f0
 
 $(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
+
+do_build() {
+	just build-release
+}
+
+do_install() {
+	just install
+}
