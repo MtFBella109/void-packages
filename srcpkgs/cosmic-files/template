@@ -15,9 +15,6 @@ homepage="https://github.com/pop-os/cosmic-files"
 distfiles="https://github.com/pop-os/cosmic-files/archive/refs/tags/${_tag}.tar.gz"
 checksum=15ef9078e08498b743ed7d13a5523277c27fc6042c8ebc0ffdb6c7e8461a1385
 
-#export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
-#export VERGEN_GIT_SHA="${version}_${revision}"
-
 do_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
 	just build-release
