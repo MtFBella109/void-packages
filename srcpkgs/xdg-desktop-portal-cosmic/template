@@ -2,13 +2,14 @@
 pkgname=xdg-desktop-portal-cosmic
 version=1.0.0.beta.8
 revision=1
+archs="x86_64*"
 _tag=epoch-${version/.beta/-beta}
 build_style=gnu-makefile
 build_options="sccache"
 hostmakedepends="pkg-config cargo cargo-auditable $(vopt_if sccache "rust-sccache")"
 makedepends="libxkbcommon-devel libzstd-devel pipewire-devel clang libglib-devel libgbm-devel"
 depends="libgbm libpipewire glib libxkbcommon libdrm expat zlib libmount libffi libpcre2 libblkid xdg-desktop-portal"
-short_desc="TODO: xdg-desktop-portal-cosmic short_desc"
+short_desc="Cosmic backend for xdg-desktop-portal"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/xdg-desktop-portal-cosmic"

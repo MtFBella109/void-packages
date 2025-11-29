@@ -2,6 +2,7 @@
 pkgname=cosmic-desktop
 version=1.0.0.beta.8
 revision=1
+archs="x86_64*"
 replaces="cosmic-applets-alpha>=0 cosmic-applibrary-alpha>=0 cosmic-bg-alpha>=0 cosmic-comp-alpha>=0 cosmic-desktop>=0 cosmic-edit-alpha>=0 cosmic-files-alpha>=0 cosmic-icons-alpha>=0 cosmic-idle-alpha>=0 cosmic-launcher-alpha>=0 cosmic-notifications-alpha>=0 cosmic-osd-alpha>=0 cosmic-panel-alpha>=0 cosmic-player-alpha>=0 cosmic-randr-alpha>=0 cosmic-seesion>=0 cosmic-screenshot-alpha>=0 cosmic-settings-alpha>=0 cosmic-settings-daemon-alpha>=0 cosmic-term-alpha>=0 cosmic-wallpapers-alpha>=0 cosmic-workspaces-epoch-alpha>=0 pop-launcher-alpha>=0 xdg-desktop-portal-alpha>=0"
 metapackage="yes"
 short_desc="Meta package for the full Cosmic Desktop environment. Not recommended right now for active use."
