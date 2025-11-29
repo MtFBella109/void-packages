@@ -1,0 +1,12 @@
+# Template file for 'cosmic-desktop'
+pkgname=cosmic-desktop
+version=1.0.0.beta.8
+revision=1
+archs="x86_64*"
+metapackage="yes"
+short_desc="Meta Package that install all components of COSMIC Desktop and the needed dependencies"
+maintainer="Bella Wagner <belladev109@proton.me>"
+license="metapackage"
+homepage="https://github.com/pop-os/cosmic-epoch"
+skip_extraction=yes
+depends="cosmic-applets cosmic-applibrary cosmic-bg cosmic-comp cosmic-edit cosmic-files cosmic-icons cosmic-idle cosmic-initial-setup cosmic-launcher cosmic-notifications cosmic-osd cosmic-panel cosmic-player cosmic-randr cosmic-screenshot cosmic-session cosmic-settings cosmic-settings-daemon cosmic-term cosmic-wallpapers cosmic-workspaces-epoch dbus freetype fontconfig gsettings-desktop-schemas xdg-desktop-portal-cosmic elogind wayland"
