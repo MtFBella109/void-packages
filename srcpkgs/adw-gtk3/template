@@ -4,11 +4,7 @@ filename=adw-gtk3
 version=6.4
 revision=1
 create_wrksrc=yes
-<<<<<<< HEAD
 short_desc="The theme from libadwaita ported to GTK-3"
-=======
-short_desc="An unofficial GTK3 port of libadwaita."
->>>>>>> f6808b78bcf (Updated to cosmic beta6)
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GNU Lesser General Public License v2.1"
 homepage="https://github.com/lassekongo83/adw-gtk3"
