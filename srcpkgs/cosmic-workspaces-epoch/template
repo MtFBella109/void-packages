@@ -2,13 +2,14 @@
 pkgname=cosmic-workspaces-epoch
 version=1.0.0.beta.8
 revision=1
+archs="x86_64* i686"
 _tag=epoch-${version/.beta/-beta}
 build_style=gnu-makefile
 build_options="sccache"
 hostmakedepends="pkg-config cargo $(vopt_if sccache "rust-sccache")"
 makedepends="libxkbcommon-devel libgbm-devel eudev-libudev-devel libinput-devel"
 depends="expat libxkbcommon libgbm libdrm"
-short_desc="TODO: cosmic-workspaces-epoch short_desc"
+short_desc="COSMIC workspaces"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-workspaces-epoch"
