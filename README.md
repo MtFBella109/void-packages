@@ -1,5 +1,7 @@
 # Attention
-Big Memory Leak Problem since Beta1.1. It seems like, that System76 doesn't work on this bug, it's there since multiple betas and didn't got adressed yet. Maybe it get's fixed in 1 or 2 Months, maybe in 1 year. I don't fucking now and yeah I'm frustated from this shit. You can now rollback with `sudo xbps-install cosmic-desktop-alpha`
+Since Beta1.1 there is a severe Memory Leak Problem. System76 didn't adressed this Bug yet. It is unclear, in which version it get fixed.
+If you encounter this Bug, you can easiely Rollback to alpha7 with this command: `sudo xbps-install cosmic-desktop-alpha`
+This installs you the last stable version of cosmic-desktop, which is alpha7, it automatically removes the packages with the newest Version
 
 # Cosmic on Void
 Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their work as a base
