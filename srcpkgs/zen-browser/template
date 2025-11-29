@@ -1,6 +1,6 @@
 # Template file for 'zen-browser'
 pkgname=zen-browser
-version=1.17.7b
+version=1.17.10b
 revision=1
 hostmakedepends="pkg-config"
 depends="gtk+3 libstdc++  pango atk cairo gdk-pixbuf glib libxcb libX11 libXext libXrandr libXcomposite libXcursor libXdamage libXfixes libXi libXrender alsa-lib freetype fontconfig dbus-libs"
@@ -9,7 +9,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/zen-browser/desktop"
 distfiles="https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-x86_64.tar.xz"
-checksum=2a61f0146b870485896ca255faef92aa60a51da3e54fae8a8c48d99dd99059f9
+checksum=b5eb0a384e7bc6096d98482708467978de8822e89aa7ecaca45b73f54d38f11f
 
 
 do_install() {
