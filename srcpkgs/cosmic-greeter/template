@@ -1,7 +1,7 @@
 # Template file for 'cosmic-greeter'
 pkgname=cosmic-greeter
 version=1.0.0.beta.8
-revision=1
+revision=2
 build_options="sccache"
 archs="x86_64* i686"
 _tag=epoch-${version/.beta/-beta}
@@ -14,6 +14,10 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-greeter"
 distfiles="https://github.com/pop-os/cosmic-greeter/archive/refs/tags/${_tag}.tar.gz"
 checksum=c0fbb148ce0fa0f83fe68c4a5f44bf17c0687444731d346d74c6dd3d82d302bf
+system_accounts="_cosmicgreeter"
+_cosmicgreeter_homedir="/var/lib/cosmic-greeter"
+_cosmicgreeter_descr="Cosmic Greeter Account"
+_cosmicgreeter_groups="video"
 
 export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
 export VERGEN_GIT_SHA="${version}_${revision}"
