@@ -1,7 +1,7 @@
 # Template file for 'cosmic-comp'
 pkgname=cosmic-comp
 version=1.0.0.beta.9
-revision=1
+revision=3
 build_options="sccache"
 archs="x86_64* i686"
 _tag=epoch-${version/.beta/-beta}
@@ -16,6 +16,10 @@ homepage="https://github.com/pop-os/cosmic-comp"
 distfiles="https://github.com/pop-os/cosmic-comp/archive/refs/tags/${_tag}.tar.gz"
 checksum=e672812fbc485b504974dd74604826f0cc97d9ce071a0269d467fd0d4089ee81
 
+pre_build() {
+	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
+}
+
 do_install() {
-	DESTDIR=${DESTDIR} make install
+	CARGO_TARGET_DIR="target/${RUST_TARGET}" DESTDIR=${DESTDIR} make install
 }
