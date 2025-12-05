@@ -1,7 +1,7 @@
 # Template file for 'nodejs'
 pkgname=nodejs
-version=22.15.0
-revision=2
+version=22.21.0
+revision=1
 build_style=configure
 configure_args="
  --prefix=/usr
@@ -33,7 +33,7 @@ license="MIT"
 homepage="https://nodejs.org/"
 changelog="https://raw.githubusercontent.com/nodejs/node/main/doc/changelogs/CHANGELOG_V${version%%.*}.md"
 distfiles="https://nodejs.org/dist/v${version}/node-v${version}.tar.xz"
-checksum=e7c4226d1d92f33ad854d6da4f7e519e77690b8e73f93496881f8c539174d9df
+checksum=791b18e969ea22cc952108ee8eaafbb12cddfd973bbbb0b7fc116395c0d9a81c
 python_version=3
 
 build_options="ssl libuv icu nghttp2 cares brotli"
