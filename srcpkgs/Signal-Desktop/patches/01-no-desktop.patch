@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 diff --git a/Signal-Desktop/package.json.orig b/Signal-Desktop/package.json
 index 832035e..e6ac14c 100644
+=======
+>>>>>>> 0b5c3dfec90 (Fixed Memory Leak)
 --- a/package.json
 +++ b/package.json
 @@ -519,11 +519,6 @@
