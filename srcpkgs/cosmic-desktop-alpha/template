@@ -1,12 +1,11 @@
 # Template file for 'cosmic-desktop'
 pkgname=cosmic-desktop-alpha
 version=1.0.0alpha7
-replaces="cosmic-applets>=0 cosmic-applibrary>=0 cosmic-bg>=0 cosmic-comp>=0 cosmic-desktop>=0 cosmic-edit>=0 cosmic-files>=0 cosmic-icons>=0 cosmic-idle>=0 cosmic-initial-setup>=0 cosmic-launcher>=0 pop-launcher>=0 cosmic-notifications>=0 cosmic-osd>=0 cosmic-panel>=0 cosmic-player>=0 cosmic-randr>=0 cosmic-screenshot>=0 cosmic-session>=0 cosmic-settings>=0 cosmic-settings-daemon>=0 cosmic-term>=0 cosmic-wallpapers>=0 cosmic-workspaces-epoch>=0 xdg-desktop-portal-cosmic>=0"
-revision=27
+revision=29
 metapackage="yes"
 short_desc="Meta package for the full Cosmic Desktop environment"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="metapackage"
 homepage="https://github.com/pop-os/cosmic-epoch"
-depends="cosmic-applets-alpha cosmic-applibrary-alpha cosmic-bg-alpha cosmic-comp-alpha cosmic-edit-alpha cosmic-files-alpha cosmic-icons-alpha cosmic-idle-alpha cosmic-launcher-alpha cosmic-notifications-alpha cosmic-osd-alpha cosmic-panel-alpha cosmic-player-alpha cosmic-randr-alpha cosmic-screenshot-alpha cosmic-session-alpha cosmic-settings-alpha cosmic-settings-daemon-alpha cosmic-term-alpha cosmic-wallpapers-alpha cosmic-workspaces-epoch-alpha dbus dejavu-fonts-ttf freetype fontconfig gsettings-desktop-schemas lld libgbm xdg-desktop-portal-cosmic-alpha xdg-user-dirs xorg-server-xwayland bluez elogind pipewire liberation-fonts-ttf libspa-bluetooth gstreamer1-pipewire libglvnd noto-fonts-ttf noto-fonts-emoji wayland wireplumber"
+depends="dbus dejavu-fonts-ttf freetype fontconfig gsettings-desktop-schemas lld libgbm xdg-user-dirs xorg-server-xwayland bluez elogind pipewire liberation-fonts-ttf libspa-bluetooth gstreamer1-pipewire libglvnd noto-fonts-ttf noto-fonts-emoji wayland wireplumber"
 skip_extraction=yes
