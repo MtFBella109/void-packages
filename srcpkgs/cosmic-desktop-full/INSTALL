@@ -38,7 +38,11 @@ EOF
 		if [ -h /etc/xdg/autostart/pipewire-pulse.desktop ]; then
 			rm /etc/xdg/autostart/pipewire-pulse.desktop
 			if [ ! -h /etc/pipewire/pipewire.conf.d/20-pipewire-pulse.conf ]; then
+<<<<<<< HEAD
 	                        ln -s /usr/share/example/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
+=======
+	                        ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
+>>>>>>> 6b1ecfb33ee (Repair local git repo)
  			fi
 		fi
                 if [ -h /etc/xdg/autostart/wireplumber.desktop ]; then
