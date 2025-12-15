@@ -1,25 +1,21 @@
 # Template file for 'cosmic-comp'
 pkgname=cosmic-comp
-version=1.0.0.beta.9
-revision=3
+version=1.0.0
+revision=1
 build_options="sccache"
 archs="x86_64* i686"
-_tag=epoch-${version/.beta/-beta}
-build_style=cargo
-hostmakedepends="pkg-config $(vopt_if sccache "rust-sccache")"
+build_style=gnu_makefile
+hostmakedepends="pkg-config cargo $(vopt_if sccache "rust-sccache")"
 makedepends="eudev-libudev-devel libseat-devel libxkbcommon-devel libinput-devel pixman-devel libgbm-devel libdisplay-info-devel"
 depends="eudev-libudev expat libxkbcommon libdisplay-info libgbm libseat libinput libgcc libdrm libelogind libevdev libwacom libcap libgudev libffi libpcre2 mtdev pixman"
 short_desc="Wayland compositor of pop-os cosmic shell"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-comp"
-distfiles="https://github.com/pop-os/cosmic-comp/archive/refs/tags/${_tag}.tar.gz"
-checksum=e672812fbc485b504974dd74604826f0cc97d9ce071a0269d467fd0d4089ee81
+distfiles="https://github.com/pop-os/cosmic-comp/archive/refs/tags/epoch-${version}.tar.gz"
+checksum=7b1ab157d28bf9663bcd84d20203f512cb1ee80650a363a7d9fbab97b7615b35
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
 }
 
-do_install() {
-	CARGO_TARGET_DIR="target/${RUST_TARGET}" DESTDIR=${DESTDIR} make install
-}

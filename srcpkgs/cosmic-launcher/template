@@ -1,10 +1,9 @@
 # Template file for 'cosmic-launcher'
 pkgname=cosmic-launcher
-version=1.0.0.beta.9
+version=1.0.0
 revision=1
 build_options="sccache"
 archs="x86_64* i686"
-_tag=epoch-${version/.beta/-beta}
 hostmakedepends="pkg-config just cargo cargo-auditable $(vopt_if sccache "rust-sccache")"
 makedepends="libxkbcommon-devel which"
 depends="libxkbcommon pop-launcher"
@@ -12,14 +11,13 @@ short_desc="COSMIC App Launcher"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-launcher"
-distfiles="https://github.com/pop-os/cosmic-launcher/archive/refs/tags/${_tag}.tar.gz"
-checksum=be2e8d5375e0cfd4c07bf6f7315b2130237cfe4fcb958572a8c7c2a2bc8e7140
+distfiles="https://github.com/pop-os/cosmic-launcher/archive/refs/tags/epoch-${version}.tar.gz"
+checksum=6414a80d0ec7ed38ea312d46d12c97e3986371413a13a4caab31cbc743a6ef30
 
-do_build() {
+pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
-	just build-release
 }
 
 do_install() {
-	just --set rootdir ${DESTDIR} install
+	just rootdir="${DESTDIR}" target="${RUST_TARGET}/release" install
 }

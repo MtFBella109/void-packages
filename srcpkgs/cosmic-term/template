@@ -1,9 +1,8 @@
 # Template file for 'cosmic-term'
 pkgname=cosmic-term
-version=1.0.0.beta.9
+version=1.0.0
 revision=1
 archs="x86_64*"
-_tag=epoch-${version/.beta/-beta}
 build_style=cargo
 build_options="sccache"
 hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
@@ -13,14 +12,13 @@ short_desc="COSMIC terminal emulator application"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-term"
-distfiles="https://github.com/pop-os/cosmic-term/archive/refs/tags/${_tag}.tar.gz"
-checksum=9f38e56efd6b129c9fd1798100663da1b8ffd1bc538bd56f1724f2ac303a4cbc
+distfiles="https://github.com/pop-os/cosmic-term/archive/refs/tags/epoch-${version}.tar.gz"
+checksum=3a992c249de95c4e28fba63184dbdeb3bbf17c73345b094a59f5f723c44a3608
 
-do_build() {
+pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
-	just build-release
 }
 
 do_install() {
-	just --set rootdir ${DESTDIR} install
+	just rootdir"${DESTDIR}" target="${RUST_TARGET}/release" install
 }

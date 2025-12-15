@@ -3,7 +3,6 @@ pkgname=cosmic-theme-editor
 version=1
 revision=1
 archs="x86_64* i686"
-wkrsrc=${pkgname}-${version}
 build_style="meson"
 hostmakedepends="pkg-config cargo cargo-auditable git"
 makedepends="glib-devel gtk4-devel gtk4-update-icon-cache cmake gettext desktop-file-utils"
