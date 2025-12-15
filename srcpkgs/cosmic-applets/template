@@ -1,8 +1,7 @@
 # Template file for 'cosmic-applets'
 pkgname=cosmic-applets
-version=1.0.0.beta.9
+version=1.0.0
 revision=1
-_tag=epoch-${version/.beta/-beta}
 build_style=cargo
 build_options="sccache"
 archs="x86_64* i686"
@@ -13,14 +12,13 @@ short_desc="Applets for COSMIC"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-applets"
-distfiles="https://github.com/pop-os/cosmic-applets/archive/refs/tags/${_tag}.tar.gz"
-checksum=76b9f221253061e757a4997aa5ee1f15244d826504d6be330d4ace8612a09d04
+distfiles="https://github.com/pop-os/cosmic-applets/archive/refs/tags/epoch-${version}.tar.gz"
+checksum=c834e415e1fc6bfcfb79ffed6bb049c7d024563894bbaf547718d44393b5ca38
 
-do_build() {
+pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
-	just rootdir=${DESTDIR} build-release
 }
 
 do_install() {
-	just rootdir=${DESTDIR} install
+	just rootdir=${DESTDIR} target="${RUST_TARGET}/release" install
 }

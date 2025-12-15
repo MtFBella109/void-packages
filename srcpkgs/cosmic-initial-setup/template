@@ -1,10 +1,9 @@
 # Template file for 'cosmic-initial-setup'
 pkgname=cosmic-initial-setup
-version=1.0.0.beta.9
+version=1.0.0
 revision=1
 build_options="sccache"
 archs="x86_64* i686"
-_tag=epoch-${version/.beta/-beta}
 build_style=cargo
 hostmakedepends="pkg-config just curl tar git-lfs git $(vopt_if sccache "rust-sccache")"
 makedepends="eudev-libudev-devel libxkbcommon-devel openssl-devel flatpak-devel libinput-devel"
@@ -20,16 +19,15 @@ do_fetch() {
 	fi
 	git clone $homepage $wrksrc
 	cd $wrksrc
-	git checkout f8cba7d2f658e2bf61b99e89ca7afc32c2fb75a3
+	git checkout 32a9cd9a223f814cb6960aa652845fa930d2d586
 	git lfs install --local
 	git lfs pull
 }
 
-do_build() {
+pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
-	just build-release
 }
 
 do_install() {
-	just --set rootdir ${DESTDIR} install
+	just rootdir="${DESTDIR}" target="${RUST_TARGET}/release" install
 }

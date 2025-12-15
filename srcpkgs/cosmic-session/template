@@ -1,9 +1,8 @@
 # Template file for 'cosmic-session'
 pkgname=cosmic-session
-version=1.0.0.beta.9
+version=1.0.0
 revision=1
 archs="x86_64* i686"
-_tag=epoch-${version/.beta/-beta}
 build_style=cargo
 build_options="sccache"
 hostmakedepends="just $(vopt_if sccache "rust-sccache")"
@@ -13,27 +12,27 @@ short_desc="The session for the COSMIC desktop"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-session"
-distfiles="https://github.com/pop-os/cosmic-session/archive/refs/tags/${_tag}.tar.gz"
-checksum=05ce772174999e6bdd42dac86c2dc41d3ec9967cecaf28d60c19ec3f7e95ce92
+distfiles="https://github.com/pop-os/cosmic-session/archive/refs/tags/epoch-${version}.tar.gz"
+checksum=3bf352a980bc316a04dc58aed11a3c1d348b535d8cf27ae17ff72e50fba1bbcd
 
-do_build() {
+pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
-	cargo build --release --no-default-features --features autostart
 }
 
 do_install() {
-	just --set rootdir ${DESTDIR} install
+	just rootdir="${DESTDIR}" target="${RUST_TARGET}/release" install
         vmkdir "usr/share/glib-2.0/schemas/"
-        cat > ${DESTDIR}/usr/share/glib-2.0/schemas/cosmic.session.gschema.override <<EOF
-[org.gnome.desktop.interface:COSMIC]
-color-scheme = "prefer-dark"
-gtk-theme = "Pop-dark"
-icon-theme = "Pop"
-cursor-theme = "Pop"
-font-name = "Open Sans 11"
-document-font-name = "Open Sans 11"
-monospace-font-name = "Noto Sans Mono 11"
-EOF
+	vinstall "${FILESDIR}/cosmic.session.gsettings.override" 644 "${DESTDIR}/usr/share/glib-2.0/schemas/"
+#        cat > ${DESTDIR}/usr/share/glib-2.0/schemas/cosmic.session.gschema.override <<EOF
+#[org.gnome.desktop.interface:COSMIC]
+#color-scheme = "prefer-dark"
+#gtk-theme = "Pop-dark"
+#icon-theme = "Pop"
+#cursor-theme = "Pop"
+#font-name = "Open Sans 11"
+#document-font-name = "Open Sans 11"
+#monospace-font-name = "Noto Sans Mono 11"
+#EOF
 }
 
 post_install() {
