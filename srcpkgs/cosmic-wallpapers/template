@@ -1,24 +1,11 @@
 # Template file for 'cosmic-wallpapers'
 pkgname=cosmic-wallpapers
-<<<<<<< HEAD
 version=1.0.0
 revision=1
-wrksrc="${pkgname}-${version}"
-_tag=epoch-${version/.beta/-beta}
 hostmakedepends="git git-lfs"
 short_desc="COSMIC wallpaper collection"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="CC-BY-SA-4.0"
-=======
-version=1.0.0.beta.6
-revision=1
-wrksrc="${pkgname}-${version}"
-_tag=epoch-${version/.beta/-beta}
-hostmakedepends="git-lfs"
-short_desc="TODO: cosmic-wallpapers short_desc"
-maintainer="Bella Wagner <belladev109@proton.me>"
-license="GPL-3.0-only"
->>>>>>> f6808b78bcf (Updated to cosmic beta6)
 homepage="https://github.com/pop-os/cosmic-wallpapers"
 skip_extraction="yes"
 

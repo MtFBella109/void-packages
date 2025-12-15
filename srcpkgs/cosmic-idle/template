@@ -1,12 +1,10 @@
 # Template file for 'cosmic-idle'
 pkgname=cosmic-idle
-version=1.0.0.beta.9
+version=1.0.0
 revision=1
 build_options="sccache"
 archs="x86_64* i686"
-_tag=epoch-${version/.beta/-beta}
 build_style=cargo
-configure_args=" --all"
 hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
 makedepends="libxkbcommon-devel wayland-devel"
 depends="libxkbcommon"
@@ -14,14 +12,13 @@ short_desc="COSMIC idle daemon"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-idle"
-distfiles="https://github.com/pop-os/cosmic-idle/archive/refs/tags/${_tag}.tar.gz"
-checksum=91fbb28fe7a6418f56a2c757ca7838af2f3d89077fdd645342e7455b3bc64ceb
+distfiles="https://github.com/pop-os/cosmic-idle/archive/refs/tags/epoch-${version}.tar.gz"
+checksum=f0dbc0cab03c96b7db69a80a35daa4936e217c701e6c0a703b659011806be94b
 
-do_build() {
+pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
-	just build-release
 }
 
 do_install() {
-	just --set rootdir ${DESTDIR} install
+	just rootdir="${DESTDIR}" target="${RUST_TARGET}/release" install
 }
