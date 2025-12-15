@@ -16,6 +16,3 @@ do_build() {
 	meson build
 }
 
-#do_install() {
-#DESTDIR=${DESTDIR} ninja install
-#}

@@ -13,11 +13,10 @@ homepage="https://github.com/pop-os/launcher"
 distfiles="https://github.com/pop-os/launcher/archive/refs/tags/${version}.tar.gz"
 checksum=e02ffd9876bb11c50118bf5e9c0bec57132f7010831da749dc6107e31ca198a6
 
-do_build() {
+pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
-	just build-release
 }
 
 do_install() {
-	just --set rootdir ${DESTDIR} install
+	CARGO_TARGET_DIR="target/${RUST_TARGET}" just --set rootdir ${DESTDIR} install
 }
