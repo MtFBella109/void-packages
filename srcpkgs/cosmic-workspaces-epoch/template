@@ -4,6 +4,7 @@ version=1.0.0
 revision=1
 archs="x86_64* i686"
 build_style=gnu-makefile
+build_helper="rust"
 build_options="sccache"
 hostmakedepends="pkg-config cargo $(vopt_if sccache "rust-sccache")"
 makedepends="libxkbcommon-devel libgbm-devel eudev-libudev-devel libinput-devel"

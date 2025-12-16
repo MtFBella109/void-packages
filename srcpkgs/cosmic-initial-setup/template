@@ -1,10 +1,11 @@
 # Template file for 'cosmic-initial-setup'
 pkgname=cosmic-initial-setup
 version=1.0.0
-revision=1
+revision=2
 build_options="sccache"
 archs="x86_64* i686"
 build_style=cargo
+configure_args="--all"
 hostmakedepends="pkg-config just curl tar git-lfs git $(vopt_if sccache "rust-sccache")"
 makedepends="eudev-libudev-devel libxkbcommon-devel openssl-devel flatpak-devel libinput-devel"
 depends="locale1 localectl pop-icons"
@@ -29,5 +30,5 @@ pre_build() {
 }
 
 do_install() {
-	just rootdir="${DESTDIR}" target="${RUST_TARGET}/release" install
+	just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install
 }

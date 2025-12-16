@@ -1,8 +1,9 @@
 # Template file for 'cosmic-applets'
 pkgname=cosmic-applets
 version=1.0.0
-revision=1
+revision=2
 build_style=cargo
+confiugre_args="--all"
 build_options="sccache"
 archs="x86_64* i686"
 hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
