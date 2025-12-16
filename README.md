@@ -1,11 +1,5 @@
 # Attention
-<<<<<<< HEAD
-Since Beta1.1 there is a severe Memory Leak Problem. System76 didn't adressed this Bug yet. It is unclear, in which version it get fixed.
-If you encounter this Bug, you can easiely Rollback to alpha7 with this command: `sudo xbps-install cosmic-desktop-alpha`
-This installs you the last stable version of cosmic-desktop, which is alpha7, it automatically removes the packages with the newest Version
-=======
-Big Memory Leak Problem since Beta1.1. It seems like, that System76 doesn't work on this bug, it's there since multiple betas and didn't got adressed yet. Maybe it get's fixed in 1 or 2 Months, maybe in 1 year. I don't fucking now and yeah I'm frustated from this shit. You can now rollback with `sudo xbps-install cosmic-desktop-alpha`
->>>>>>> f6808b78bcf (Updated to cosmic beta6)
+The first stable Release of Cosmic, was jsut released. I'm on it to compile it and make the packages available. It takes a bit longer because I've changed the strcture of the templates a bit. After I've updatet it, I will try to make it ready for a PR for the officiall void Reposiotry. If anything goes like, I planned, I will open the Pull Request in round about 3-4 weeks
 
 # Cosmic on Void
 Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their work as a base
@@ -82,7 +76,7 @@ All packages:
 - cosmic-applibrary
 - cosmic-bg
 - cosmic-comp
-- cosmic-desktop (Metapackage)
+- cosmic-desktop-full (Metapackage)
 - cosmic-edit
 - cosmic-files
 - cosmic-greeter
@@ -107,7 +101,7 @@ All packages:
 - pop-launcher
 
 ## Cosmic-greeter
-Cosmic-greeter does work now, right now it's only available as template, the beta version of it is also compatible with the alpha of cosmic-desktop. There is one Bug, you need to login two times. You need to enable the services cosmic-greeter and cosmic-greeter-daemon.
+Cosmic-greeter worked for some time, is broka again. It will take some tme till I will look into it.
 
 ## Start cosmic session
 You can use sddm or other graphical Login Manager or you can start it manually:
