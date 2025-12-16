@@ -4,6 +4,7 @@ version=1.0.0
 revision=1
 archs="x86_64* i686"
 build_style=cargo
+configure_args="--feature autostart"
 build_options="sccache"
 hostmakedepends="just $(vopt_if sccache "rust-sccache")"
 makedepends="glib"
@@ -20,9 +21,9 @@ pre_build() {
 }
 
 do_install() {
-	just rootdir="${DESTDIR}" target="${RUST_TARGET}/release" install
+	just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install
         vmkdir "usr/share/glib-2.0/schemas/"
-	vinstall "${FILESDIR}/cosmic.session.gsettings.override" 644 "${DESTDIR}/usr/share/glib-2.0/schemas/"
+	vinstall "${FILESDIR}/cosmic.session.gsettings.override" 644 "usr/share/glib-2.0/schemas/"
 #        cat > ${DESTDIR}/usr/share/glib-2.0/schemas/cosmic.session.gschema.override <<EOF
 #[org.gnome.desktop.interface:COSMIC]
 #color-scheme = "prefer-dark"

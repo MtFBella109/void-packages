@@ -23,5 +23,5 @@ pre_build() {
 }
 
 do_install() {
-	just rootdir="${DESTDIR}" target="${RUST_TARGET}/release" install
+	just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install
 }
