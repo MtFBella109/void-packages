@@ -1,9 +1,0 @@
---- a/cosmic-app-list/data/default_schema/com.system76.CosmicAppList/v1/favorites	2025-06-29 23:24:55.816003731 +0200
-+++ b/cosmic-app-list/data/default_schema/com.system76.CosmicAppList/v1/favorites	2025-06-29 23:26:40.945873293 +0200
-@@ -3,6 +3,5 @@
-     "com.system76.CosmicFiles",
-     "com.system76.CosmicEdit",
-     "com.system76.CosmicTerm",
--    "com.system76.CosmicStore",
-     "com.system76.CosmicSettings",
- ]
