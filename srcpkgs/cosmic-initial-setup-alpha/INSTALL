@@ -1,9 +1,0 @@
-case "$ACTION" in
-post)
-	if [ "$UPDATE" = "no" ]; then
-		if ! id _cosmic-initial-setup >/dev/null 2>&1; then
-			useradd -r -d /run/cosmic-initial-setup/ -s /bin/bash cosmic-initial-setup
-		fi
-	fi
-	;;
-esac
