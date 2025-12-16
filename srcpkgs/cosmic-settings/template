@@ -1,10 +1,12 @@
 # Template file for 'cosmic-settings'
 pkgname=cosmic-settings
 version=1.0.0
-revision=1
+revision=2
+build_style="cargo"
+configure_args="--all"
 archs="x86_64* i686"
 build_options="sccache"
-hostmakedepends="pkg-config just cargo $(vopt_if sccache "rust-sccache")"
+hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
 makedepends="libxkbcommon-devel eudev-libudev-devel libinput-devel mold pipewire-devel clang17-devel "
 depends="accountsservice cosmic-settings-daemon dbus-libs eudev-libudev gettext xkeyboard-config lame libpulseaudio libxkbcommon libpipewire libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus iso-codes power-profiles-daemon"
 short_desc="Settings App for COSMIC"
@@ -19,5 +21,5 @@ pre_build() {
 }
 
 do_install() {
-	just rootdir="${DESTDIR}" target="${RUST_TARGET}/release" install
+	just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install
 }

@@ -1,6 +1,6 @@
 # Template file for 'nodejs'
 pkgname=nodejs
-version=22.21.0
+version=22.11.0
 revision=1
 build_style=configure
 configure_args="

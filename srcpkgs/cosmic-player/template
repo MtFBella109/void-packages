@@ -1,10 +1,11 @@
 # Template file for 'cosmic-player'
 pkgname=cosmic-player
 version=1.0.0
-revision=1
+revision=2
 archs="x86_64* i686"
 wrksrc=${pkgname}-${version}
 build_style=cargo
+configure_args="--all-features"
 build_options="sccache"
 hostmakedepends="pkg-config just cargo cargo-auditable $(vopt_if sccache "rust-sccache")"
 makedepends="libxkbcommon-devel gstreamer1-devel gst-plugins-base1-devel "
@@ -24,5 +25,5 @@ pre_build() {
 }
 
 do_install() {
-	just rootdir="${DESTDIR}" target="${RUST_TARGET}/release" install
+	just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install
 }
