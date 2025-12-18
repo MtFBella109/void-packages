@@ -4,7 +4,6 @@ version=1.0.0
 revision=2
 build_options="sccache"
 build_style="cargo"
-configure_args="--all-features"
 archs="x86_64* i686"
 hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
 makedepends="libxkbcommon-devel which"

@@ -1,0 +1,14 @@
+# Template file for 'vkmark'
+pkgname=vkmark
+version=2025.01
+revision=1
+build_style=meson
+hostmakedepends="pkg-config ninja"
+makedepends="clang17-devel glm libassimp-devel vulkan-loader-devel wayland-devel wayland-protocols libxcb-devel xcb-util-wm-devel"
+depends="libassimp libstdc++ vulkan-loader"
+short_desc="GPU benchmark which is using vulkan"
+maintainer="Bella Viola Wagner <belladev109@proton.me>"
+license="LGPL-2.1"
+homepage="https://github.com/vkmark/vkmark"
+distfiles="${homepage}/archive/refs/tags/${version}.tar.gz"
+checksum=1ae362844344d0f9878b7a3f13005f77eae705108892a4e8abf237d452d37edc
