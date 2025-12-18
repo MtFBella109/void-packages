@@ -1,10 +1,10 @@
 # Template file for 'cosmic-session'
 pkgname=cosmic-session
 version=1.0.0
-revision=1
+revision=2
 archs="x86_64* i686"
 build_style=cargo
-configure_args="--feature autostart"
+configure_args="--features autostart"
 build_options="sccache"
 hostmakedepends="just $(vopt_if sccache "rust-sccache")"
 makedepends="glib"
