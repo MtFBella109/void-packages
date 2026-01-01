@@ -1,7 +1,7 @@
 # Template file for 'cosmic-launcher'
 pkgname=cosmic-launcher
-version=1.0.0
-revision=2
+version=1.0.1
+revision=1
 build_options="sccache"
 build_style="cargo"
 archs="x86_64* i686"
@@ -13,7 +13,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-launcher"
 distfiles="https://github.com/pop-os/cosmic-launcher/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=6414a80d0ec7ed38ea312d46d12c97e3986371413a13a4caab31cbc743a6ef30
+checksum=fdf5a3986f45cefd1b367e0914899b6f53fa6101869f5eb270fc246109ad2fb2
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")

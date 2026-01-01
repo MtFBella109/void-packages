@@ -1,6 +1,6 @@
 # Template file for 'cosmic-term'
 pkgname=cosmic-term
-version=1.0.0
+version=1.0.1
 revision=1
 archs="x86_64*"
 build_style=cargo
@@ -13,7 +13,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-term"
 distfiles="https://github.com/pop-os/cosmic-term/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=3a992c249de95c4e28fba63184dbdeb3bbf17c73345b094a59f5f723c44a3608
+checksum=49404c6f25a91c2cf47e0c4e8c1a8c035d4c6b1d05a2651f0110989579ef57f0
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")

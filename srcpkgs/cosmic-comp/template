@@ -1,7 +1,7 @@
 # Template file for 'cosmic-comp'
 pkgname=cosmic-comp
-version=1.0.0
-revision=2
+version=1.0.1
+revision=1
 build_options="sccache"
 archs="x86_64* i686"
 build_style=gnu-makefile
@@ -13,7 +13,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-comp"
 distfiles="https://github.com/pop-os/cosmic-comp/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=7b1ab157d28bf9663bcd84d20203f512cb1ee80650a363a7d9fbab97b7615b35
+checksum=67dfb2588de1cb346e5989e44f2126fbc56f153f370ce5214ed908081e1e0202
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")

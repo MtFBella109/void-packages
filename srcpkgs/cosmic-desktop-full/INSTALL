@@ -44,7 +44,7 @@ EOF
                 if [ -h /etc/xdg/autostart/wireplumber.desktop ]; then
                         rm /etc/xdg/autostart/wireplumber.desktop
                         if [ ! -h /etc/pipewire/pipewire.conf.d/10-wireplumber.conf ]; then
-                                ln -s /usr/share/example/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/
+                                ln -s /usr/share/examples/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/
                         fi
                 fi
 	fi
