@@ -1,7 +1,7 @@
 # Template file for 'cosmic-panel'
 pkgname=cosmic-panel
-version=1.0.0
-revision=2
+version=1.0.1
+revision=1
 archs="x86_64* i686"
 build_style=cargo
 confiugre_args="--all"
@@ -14,7 +14,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-panel"
 distfiles="https://github.com/pop-os/cosmic-panel/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=879796634a6b15d164bac932a514afa72b712af6b4c37820eff37dbba5e6d41a
+checksum=227b06074f2fe2369cee4a0ab733b092f24a32abed37959f0382bcc334c019aa
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")

@@ -1,18 +1,18 @@
 # Template file for 'cosmic-greeter'
 pkgname=cosmic-greeter
-version=1.0.0
+version=1.0.1
 revision=1
 build_options="sccache"
 archs="x86_64* i686"
-hostmakedepends="pkg-config just llvm18-devel cargo cargo-auditable $(vopt_if sccache "rust-sccache")"
-makedepends="libxkbcommon-devel eudev-libudev-devel pam-devel libinput-devel"
-depends="greetd libxkbcommon pam-libs userctl"
+build_style=cargo
+configure_args="--all -release"
+hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
+makedepends="libxkbcommon-devel eudev-libudev-devel git git-lfs pam-devel libinput-devel llvm18-devel"
+depends="greetd libxkbcommon pam-libs"
 short_desc="COSMIC Display Manager"
 maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-greeter"
-distfiles="https://github.com/pop-os/cosmic-greeter/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=edf27dc45fb600f80bbcb8bb343d857a4e54a8c913bfffb034d1b16eacc0f5dc
 system_accounts="_cosmicgreeter"
 _cosmicgreeter_homedir="/var/lib/cosmic-greeter"
 _cosmicgreeter_descr="Cosmic Greeter Account"
@@ -20,6 +20,19 @@ _cosmicgreeter_groups="video"
 
 export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"
 export VERGEN_GIT_SHA="${version}_${revision}"
+
+do_fetch() {
+	if [ -d $wrksrc ]; then
+		cd $wrksrc
+		git checkout 4d74121ac1fa48126f080d170be20abf551cdbaa
+	else
+		git clone $homepage
+		cd $wrksrc
+		git checkout 4d74121ac1fa48126f080d170be20abf551cdbaa
+	fi
+	git lfs install --local
+	git lfs pull
+}
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
@@ -29,8 +42,6 @@ do_install() {
 	just rootdir="${DESTDIR}" target="${RUST_TARGET}/release" install
 	vinstall cosmic-greeter.toml 644 etc/greetd
 	vinstall debian/cosmic-greeter.pam 644 /etc/pam.d/ cosmic-greeter
-	vsv cosmic-greeter
-	vsv cosmic-greeter-daemon
 	vinstall dbus/com.system76.CosmicGreeter.conf 644 /usr/share/dbus-1/system.d
 }
 

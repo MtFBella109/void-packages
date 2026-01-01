@@ -1,6 +1,6 @@
 # Template file for 'cosmic-osd'
 pkgname=cosmic-osd
-version=1.0.0
+version=1.0.1
 revision=1
 archs="x86_64* i686"
 build_style=cargo
@@ -13,7 +13,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-osd"
 distfiles="https://github.com/pop-os/cosmic-osd/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=c1b3e4523fd3f4ef966f3b622d8cfc5862adec9f283b46284337a3e87e7ed2ec
+checksum=df58d008507066a844b985c3d9fcef3c6de05b6b3d24b0a9d2647ac6fc09238b
 
 
 pre_build() {

@@ -1,14 +1,16 @@
 # Template file for 'wvkbd'
 pkgname=wvkbd
-version=0.15
-revision=1
+version=0.18
+revision=2
 build_style=gnu-makefile
+make_build_args="LAYOUT=deskintl"
+make_install_args="LAYOUT=deskintl"
 make_use_env=1
 hostmakedepends="wayland-devel pkg-config"
-makedepends="wayland-devel pango-devel libxkbcommon-devel"
+makedepends="wayland-devel pango-devel libxkbcommon-devel scdoc"
 short_desc="On-screen keyboard for wlroots"
 maintainer="Eloi Torrents <eloitor@duck.com>"
-license=GPL-3.0-only
-homepage=https://git.sr.ht/~proycon/wvkbd
-distfiles=https://git.sr.ht/~proycon/wvkbd/archive/v${version}.tar.gz
-checksum=be537e0f28fdd4c447b526e5c1363b4461c18200598d8c2c88d61e016dd73c76
+license="GPL-3.0-only"
+homepage="https://github.com/jjsullivan5196/wvkbd"
+distfiles="${homepage}/archive/refs/tags/v${version}.tar.gz"
+checksum=4cd4e32490fba7913a9053645ce2a8d453c596bb3dd780631b8656d746327de6
