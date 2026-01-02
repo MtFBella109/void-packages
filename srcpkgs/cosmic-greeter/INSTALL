@@ -1,5 +1,11 @@
 case "$ACTION" in
+pre)
+	if [ "$UPDATE" = "no" ]; then
+		mv /etc/greetd/conf.toml /etc/greetd/greetd-examlpe.toml
+	fi
+	;;
 post)
+	if [ "$UPDATE" = "no" ]; tehm
 		mkdir /run/cosmic-greeter
 		chown -R _cosmicgreeter:_cosmicgreeter /run/cosmic-greeter
 		chmod -R 755 /run/cosmic-greeter
