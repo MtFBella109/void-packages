@@ -1,7 +1,7 @@
 # Template file for 'cosmic-greeter'
 pkgname=cosmic-greeter
 version=1.0.1
-revision=2
+revision=4
 build_options="sccache"
 archs="x86_64* i686"
 build_style=cargo
@@ -24,13 +24,11 @@ export VERGEN_GIT_SHA="${version}_${revision}"
 
 do_fetch() {
 	if [ -d $wrksrc ]; then
-		cd $wrksrc
-		git checkout 4d74121ac1fa48126f080d170be20abf551cdbaa
-	else
-		git clone $homepage $wrksrc
-		cd $wrksrc
-		git checkout 4d74121ac1fa48126f080d170be20abf551cdbaa
+		rm -rf $wrksrc
 	fi
+	git clone $homepage $wrksrc
+	cd $wrksrc
+	git checkout 4d74121ac1fa48126f080d170be20abf551cdbaa
 	git lfs install --local
 	git lfs pull
 }
@@ -41,7 +39,8 @@ pre_build() {
 
 do_install() {
 	just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install
-	vinstall cosmic-greeter.toml 644 etc/greetd conf.toml
+	vinstall cosmic-greeter.toml 644 etc/greetd
+	vsv cosmic-greeter
 	vinstall debian/cosmic-greeter.pam 644 /etc/pam.d/ cosmic-greeter
 	vinstall dbus/com.system76.CosmicGreeter.conf 644 /usr/share/dbus-1/system.d
 }
