@@ -1,5 +1,5 @@
 --- a/justfile	2026-01-01 22:57:42.563588367 +0100
-+++ b/justfile	2026-01-01 23:00:26.697572920 +0100
++++ b/justfile	2026-01-02 03:21:53.029096690 +0100
 @@ -15,19 +15,9 @@
  # Systemd sysusers/tmpfiles components directories
  lib-dir := base-dir / 'lib'
@@ -20,7 +20,7 @@
  dbus-src := 'dbus' / APPID + '.conf'
  dbus-dst := base-dir / 'share' / 'dbus-1' / 'system.d' / APPID + '.conf'
  
-@@ -69,17 +59,11 @@
+@@ -69,21 +59,14 @@
  
  # Install only debian package required files
  # The sysusers and tmpfiles files are automatically added
@@ -38,4 +38,9 @@
 -
  # Uninstalls installed files
  uninstall:
-     rm {{start-dst}} {{bin-dst}} {{daemon-dst}} {{dbus-dst}} {{sysusers-dst}} {{tmpfiles-dst}}
+-    rm {{start-dst}} {{bin-dst}} {{daemon-dst}} {{dbus-dst}} {{sysusers-dst}} {{tmpfiles-dst}}
+-
++    rm {{bin-dst}} {{daemon-dst}} {{dbus-dst}}
+ # Vendor dependencies locally
+ vendor:
+     #!/usr/bin/env sh

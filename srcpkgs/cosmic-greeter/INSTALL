@@ -5,7 +5,7 @@ pre)
 	fi
 	;;
 post)
-	if [ "$UPDATE" = "no" ]; tehm
+	if [ "$UPDATE" = "no" ]; then
 		mkdir /run/cosmic-greeter
 		chown -R _cosmicgreeter:_cosmicgreeter /run/cosmic-greeter
 		chmod -R 755 /run/cosmic-greeter
