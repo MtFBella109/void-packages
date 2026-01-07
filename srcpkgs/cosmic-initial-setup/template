@@ -1,7 +1,7 @@
 # Template file for 'cosmic-initial-setup'
 pkgname=cosmic-initial-setup
 version=1.0.1
-revision=1
+revision=2
 build_options="sccache"
 archs="x86_64* i686"
 build_style=cargo
@@ -27,6 +27,7 @@ do_fetch() {
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
+	export DISABLE_IF_EXISTS="/usr/bin/void-installer"
 }
 
 do_install() {
