@@ -24,16 +24,6 @@ do_install() {
 	just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install
         vmkdir "usr/share/glib-2.0/schemas/"
 	vinstall "${FILESDIR}/cosmic.session.gsettings.override" 644 "usr/share/glib-2.0/schemas/"
-#        cat > ${DESTDIR}/usr/share/glib-2.0/schemas/cosmic.session.gschema.override <<EOF
-#[org.gnome.desktop.interface:COSMIC]
-#color-scheme = "prefer-dark"
-#gtk-theme = "Pop-dark"
-#icon-theme = "Pop"
-#cursor-theme = "Pop"
-#font-name = "Open Sans 11"
-#document-font-name = "Open Sans 11"
-#monospace-font-name = "Noto Sans Mono 11"
-#EOF
 }
 
 post_install() {
