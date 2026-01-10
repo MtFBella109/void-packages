@@ -1,4 +1,10 @@
 case "$ACTION" in
+pre)
+	if [ "$UPDATE" = "yes" ]; then
+		rm -rf /etc/sv/cosmic-greeter
+		rm -rf /etc/sv/cosmic-greeter-daemon
+	fi
+	;;
 post)
 	if [ "$UPDATE" = "no" ]; then
 		rm -rf /run/cosmic-greeter
