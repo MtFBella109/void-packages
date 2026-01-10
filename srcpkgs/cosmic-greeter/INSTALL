@@ -1,9 +1,4 @@
 case "$ACTION" in
-pre)
-	if [ "$UPDATE" = "no" ]; then
-		mv /etc/greetd/conf.toml /etc/greetd/greetd-examlpe.toml
-	fi
-	;;
 post)
 	if [ "$UPDATE" = "no" ]; then
 		mkdir /run/cosmic-greeter

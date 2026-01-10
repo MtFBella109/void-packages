@@ -1,7 +1,7 @@
 # Template file for 'cosmic-greeter'
 pkgname=cosmic-greeter
 version=1.0.1
-revision=4
+revision=5
 build_options="sccache"
 archs="x86_64* i686"
 build_style=cargo
