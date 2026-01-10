@@ -31,14 +31,14 @@ EOF
 			ln -s /usr/share/examples/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/
 		fi
 		if [ ! -h /etc/pipewire/pipewire.conf.d/20-pipewire-pulse.conf ]; then
-			ln -s /usr/share/example/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
+			ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
 		fi
 	fi
 	if [ "$UPDATE" = "yes" ]; then
 		if [ -h /etc/xdg/autostart/pipewire-pulse.desktop ]; then
 			rm /etc/xdg/autostart/pipewire-pulse.desktop
 			if [ ! -h /etc/pipewire/pipewire.conf.d/20-pipewire-pulse.conf ]; then
-	                        ln -s /usr/share/example/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
+	                        ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
  			fi
 		fi
                 if [ -h /etc/xdg/autostart/wireplumber.desktop ]; then
