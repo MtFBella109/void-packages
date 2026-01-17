@@ -1,6 +1,6 @@
 # Template file for 'cosmic-workspaces-epoch'
 pkgname=cosmic-workspaces-epoch
-version=1.0.1
+version=1.0.2
 revision=1
 archs="x86_64* i686"
 build_style=gnu-makefile
@@ -14,7 +14,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-workspaces-epoch"
 distfiles="https://github.com/pop-os/cosmic-workspaces-epoch/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=0728c5ee9ebbc5561cf6202eb83e1193ffcc31e15b5390b220406d1dbb9aa5a5
+checksum=9276af0de807c4560cfb68974adf2092c759efb533048e1d4e9138f64e75234b
 
 if [ $(vopt_if sccache "true" "false") == "true" ]; then
 	pre_build() {
