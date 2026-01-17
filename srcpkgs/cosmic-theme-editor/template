@@ -1,0 +1,20 @@
+# Template file for 'cosmic-theme-editor'
+pkgname=cosmic-theme-editor
+version=1
+revision=1
+archs="x86_64* i686"
+build_style="meson"
+hostmakedepends="pkg-config cargo cargo-auditable git"
+makedepends="glib-devel gtk4-devel gtk4-update-icon-cache cmake gettext desktop-file-utils"
+depends="glib gtk4 pango gdk-pixbuf cairo"
+short_desc="Write a GTK + Rust application"
+maintainer="Bella Viola Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-theme-editor"
+
+do_fetch() {
+	if [ -d $wrksrc ]; then
+		rm -rf $wrksrc
+	fi
+	git clone https://github.com/pop-os/cosmic-theme-editor.git $wrksrc
+}

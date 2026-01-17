@@ -1,0 +1,16 @@
+# Template file for 'pop-icons'
+pkgname=pop-icons
+version=3.5.1
+revision=1
+build_style=meson
+short_desc="Pop Icons"
+maintainer="Bella Viola Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/icon-theme"
+distfiles="https://github.com/pop-os/icon-theme/archive/refs/tags/v${version}.tar.gz"
+checksum=92e73f252e5e9c8a1124623a7d421410ef43c798a4a992955e6eb4f666f5c8a0
+
+do_build() {
+	meson build
+}
+

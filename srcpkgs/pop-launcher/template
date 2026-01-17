@@ -1,0 +1,19 @@
+# Template file for 'pop-launcher'
+pkgname=pop-launcher
+version=1.2.7
+revision=2
+archs="x86_64* i686"
+build_style="cargo"
+configure_args="--all"
+hostmakedepends="pkg-config just"
+makedepends="libxkbcommon-devel"
+short_desc="Modular IPC-based desktop launcher service"
+maintainer="Bella Viola Wagner <belladev109@proton.me>"
+license="MPL-2.0"
+homepage="https://github.com/pop-os/launcher"
+distfiles="https://github.com/pop-os/launcher/archive/refs/tags/${version}.tar.gz"
+checksum=e02ffd9876bb11c50118bf5e9c0bec57132f7010831da749dc6107e31ca198a6
+
+do_install() {
+	just target-dir="target/${RUST_TARGET}/release" rootdir=${DESTDIR} install
+}

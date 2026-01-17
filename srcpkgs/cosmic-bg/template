@@ -1,0 +1,20 @@
+# Template file for 'cosmic-bg'
+pkgname=cosmic-bg
+version=1.0.2
+revision=1
+archs="x86_64* i686"
+build_style=cargo
+configure_args="--all"
+hostmakedepends="pkg-config just"
+makedepends="libxkbcommon-devel mold"
+depends="libxkbcommon"
+short_desc="COSMIC session service which applies backgrounds to displays"
+maintainer="Bella Viola Wagner <belladev109@proton.me>"
+license="MPL_2.0"
+homepage="https://github.com/pop-os/cosmic-bg"
+distfiles="https://github.com/pop-os/cosmic-bg/archive/refs/tags/epoch-${version}.tar.gz"
+checksum=4a074b5e7d224d8ab8c1411d70bb7aca4b3003cc311dfb7cc7ec8586f9abd33c
+
+do_install() {
+	 just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install
+}

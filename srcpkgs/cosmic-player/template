@@ -1,0 +1,24 @@
+# Template file for 'cosmic-player'
+pkgname=cosmic-player
+version=1.0.2
+revision=1
+archs="x86_64* i686"
+wrksrc=${pkgname}-${version}
+build_style=cargo
+configure_args="--all-features"
+hostmakedepends="pkg-config just"
+makedepends="libxkbcommon-devel gstreamer1-devel gst-plugins-base1-devel "
+depends="libxkbcommon gst-plugins-base1 gst-plugins-good1"
+short_desc="Cosmic Media Player"
+maintainer="Bella Viola Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-player"
+distfiles="https://github.com/pop-os/cosmic-player/archive/refs/tags/epoch-${version}.tar.gz"
+checksum=6bc380d9cc19d623129b8fcb936ee3664f72d65346761877658fbebd00270442
+if [ "$XBPS_LIBC" = "glibc" ]; then
+	makedepends+=" libglib-devel"
+fi
+
+do_install() {
+	just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install
+}

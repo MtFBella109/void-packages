@@ -1,0 +1,26 @@
+# Template file for 'cosmic-session'
+pkgname=cosmic-session
+version=1.0.2
+revision=1
+archs="x86_64* i686"
+build_style=cargo
+configure_args="--features autostart"
+hostmakedepends="just"
+makedepends="glib"
+depends="pop-fonts ttf-opensans gnome-keyring libsecret"
+short_desc="The session for the COSMIC desktop"
+maintainer="Bella Viola Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-session"
+distfiles="https://github.com/pop-os/cosmic-session/archive/refs/tags/epoch-${version}.tar.gz"
+checksum=787b9b2e18487140a4026ea0e4247d55bf12552d4e626cb63c631340ecf99c25
+
+do_install() {
+	just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install
+        vmkdir "usr/share/glib-2.0/schemas/"
+	vinstall "${FILESDIR}/cosmic.session.gsettings.override" 644 "usr/share/glib-2.0/schemas/"
+}
+
+post_install() {
+	glib-compile-schemas ${DESTDIR}/usr/share/glib-2.0/schemas >/dev/null 2>&1
+}

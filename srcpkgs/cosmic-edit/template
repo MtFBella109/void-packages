@@ -1,0 +1,19 @@
+# Template file for 'cosmic-edit'
+pkgname=cosmic-edit
+version=1.0.2
+revision=1
+archs="x86_64*"
+build_style=cargo
+hostmakedepends="pkg-config just"
+makedepends="libxkbcommon-devel oniguruma-devel libzstd-devel libglib-devel"
+depends="libxkbcommon libzstd oniguruma"
+short_desc="COSMIC Text Editor"
+maintainer="Bella Viola Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-edit"
+distfiles="https://github.com/pop-os/cosmic-edit/archive/refs/tags/epoch-${version}.tar.gz"
+checksum=162a997c481d9718a1f322712be7887e2de47c9e0518ec6e1d15fa04ed29ebe4
+
+do_install() {
+	just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install
+}
