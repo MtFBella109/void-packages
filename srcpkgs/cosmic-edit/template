@@ -2,7 +2,7 @@
 pkgname=cosmic-edit
 version=1.0.2
 revision=1
-archs="x86_64*"
+archs="x86_64* aarch64"
 build_style=cargo
 hostmakedepends="pkg-config just"
 makedepends="libxkbcommon-devel oniguruma-devel libzstd-devel libglib-devel"

@@ -13,7 +13,7 @@ maintainer="dkwo <npiazza@disroot.org>"
 license="AGPL-3.0-only"
 homepage="https://github.com/signalapp/Signal-Desktop"
 distfiles="https://github.com/signalapp/Signal-Desktop/archive/v${version}.tar.gz"
-checksum=2a986e85d09b075a657f7829f8270cb1811d28c01000b37bacf6c8abd74e6809
+checksum=daef31f9abc9caaf207937f0d3b257245308c365fb9d613d50c49a1048327a8c
 nostrip_files="signal-desktop"
 nocross="gyp -> aarch64-linux-gnu-gcc: error: unrecognized command-line option '-m64'"
 
@@ -27,7 +27,6 @@ post_patch() {
 			;;
 	esac
 }
-
 
 do_build() {
 	# Install dependencies

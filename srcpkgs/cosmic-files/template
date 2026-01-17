@@ -2,7 +2,7 @@
 pkgname=cosmic-files
 version=1.0.2
 revision=1
-archs="x86_64*"
+archs="x86_64* aarch64"
 build_style=cargo
 configure_args="--all --no-default-features --features bzip2,dbus-config,desktop,gvfs,io-uring,lzma-rust2,notify,wayland,desktop-applet,jemalloc"
 hostmakedepends="pkg-config just"

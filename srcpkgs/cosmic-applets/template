@@ -8,6 +8,7 @@ archs="x86_64* i686"
 hostmakedepends="pkg-config just"
 makedepends="libxkbcommon-devel eudev-libudev-devel dbus-devel pulseaudio-devel libinput-devel pipewire-devel clang19-devel"
 depends="cosmic-icons dbus-libs eudev-libudev lame libpulseaudio libxkbcommon libpulseaudio libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus"
+nocross=yes
 short_desc="Applets for COSMIC"
 maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"

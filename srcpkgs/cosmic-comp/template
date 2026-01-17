@@ -7,6 +7,7 @@ build_style=gnu-makefile
 hostmakedepends="pkg-config cargo"
 makedepends="eudev-libudev-devel libseat-devel libxkbcommon-devel libinput-devel pixman-devel libgbm-devel libdisplay-info-devel"
 depends="eudev-libudev expat libxkbcommon libdisplay-info libgbm libseat libinput libgcc libdrm libelogind libevdev libwacom libcap libgudev libffi libpcre2 mtdev pixman"
+nocross=yes
 short_desc="Wayland compositor of cosmic shell"
 maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"

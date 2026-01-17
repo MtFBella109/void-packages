@@ -1,8 +1,9 @@
 # Template file for 'pop-fonts'
 pkgname=pop-fonts
 version=1
-revision=1
+revision=2
 hostmakedepends="git"
+build_style="gnu-makefile"
 short_desc="Pop Fonts"
 maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="OFL-1.1"
@@ -13,8 +14,4 @@ do_fetch() {
 		rm -rf $wrksrc
 	fi
 	git clone $homepage $wrksrc
-}
-
-do_install() {
-	make install DESTDIR=${DESTDIR}
 }
