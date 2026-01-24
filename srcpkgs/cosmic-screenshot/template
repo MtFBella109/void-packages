@@ -1,6 +1,6 @@
 # Template file for 'cosmic-screenshot'
 pkgname=cosmic-screenshot
-version=1.0.2
+version=1.0.3
 revision=1
 archs="x86_64* i686"
 build_options="sccache"
@@ -11,7 +11,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-screenshot"
 distfiles="https://github.com/pop-os/cosmic-screenshot/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=0e91c3fce14c4528732951dd89894482f9d11c8e41664f96fe6dd8fec19e97bb
+checksum=0f19fe51921b66d26322fd6987ecb7cd434cbe9c4a58702cc88c326119415267
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
