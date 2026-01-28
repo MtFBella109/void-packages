@@ -1,8 +1,8 @@
 # Template file for 'cosmic-initial-setup'
 pkgname=cosmic-initial-setup
-version=1.0.3
+version=1.0.4
 revision=1
-_versioncommit=41c22061a4ddac9d3181f92523b97d0a7979e4e9
+_versioncommit=9f2a68d2cc870f647ef5eeb818f1a21da4e2cb44
 build_options="sccache"
 archs="x86_64* i686"
 build_style=cargo
@@ -11,7 +11,7 @@ hostmakedepends="pkg-config just curl tar git-lfs git $(vopt_if sccache "rust-sc
 makedepends="eudev-libudev-devel libxkbcommon-devel openssl-devel flatpak-devel libinput-devel"
 depends="pop-icons"
 short_desc="COSMIC Initial Setup"
-maintainer="Bella Wagner <belladev109@proton.me>"
+maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-initial-setup"
 
