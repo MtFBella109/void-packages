@@ -3,6 +3,7 @@ case "$ACTION" in
 post)
 	if [ "$UPDATE" = "no" ]; then
 		xdg-user-dirs-update
+		gtk-update-icon-cache /usr/share/icons/*
 		layout=$(grep 'KEYMAP=' /etc/rc.conf | cut -d= -f2)
 mkdir -p /usr/share/cosmic/com.system76.CosmicComp/v1/
 touch /usr/share/cosmic/com.system76.CosmicComp/v1/xkb_config

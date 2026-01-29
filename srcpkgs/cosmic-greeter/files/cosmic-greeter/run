@@ -1,4 +1,8 @@
 #!/bin/sh
+sv check dbus || exit 1
 
 exec 2>&1
-exec greetd -c cosmic-greeter.toml
+mkdir -p /run/cosmic-greeter
+chown -R _cosmicgreeter:_cosmicgreeter /run/cosmic-greeter
+chmod -R 755 /run/cosmic-greeter
+exec greetd -c /etc/greetd/cosmic-greeter.toml
