@@ -1,8 +1,7 @@
 # Template file for 'cosmic-initial-setup'
 pkgname=cosmic-initial-setup
-version=1.0.4
+version=1.0.6
 revision=1
-_versioncommit=9f2a68d2cc870f647ef5eeb818f1a21da4e2cb44
 build_options="sccache"
 archs="x86_64* i686"
 build_style=cargo
@@ -21,7 +20,7 @@ do_fetch() {
 	fi
 	git clone $homepage $wrksrc
 	cd $wrksrc
-	git checkout $_versioncommit
+	git checkout $version
 	git lfs install --local
 	git lfs pull
 }

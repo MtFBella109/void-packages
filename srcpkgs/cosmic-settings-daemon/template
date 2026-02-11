@@ -1,6 +1,6 @@
 # Template file for 'cosmic-settings-daemon'
 pkgname=cosmic-settings-daemon
-version=1.0.4
+version=1.0.6
 revision=1
 archs="x86_64* i686"
 build_style=gnu-makefile
@@ -14,7 +14,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/pop-os/cosmic-settings-daemon"
 distfiles="https://github.com/pop-os/cosmic-settings-daemon/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=2be35e8c1e0263da2955a96c6682acbd2e74a1cd6d362746bd768d3ac29e92ec
+checksum=ea94eb6d5841840f00cb35c8dbc0a3a6e1fe5702f25e7df64936df1ebe49e2ab
 
 export GEOCLUE_AGENT="/usr/libexec/geoclue-2.0/demos/agent"
 

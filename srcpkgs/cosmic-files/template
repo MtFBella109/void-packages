@@ -1,6 +1,6 @@
 # Template file for 'cosmic-files'
 pkgname=cosmic-files
-version=1.0.4
+version=1.0.6
 revision=1
 build_options="sccache"
 archs="x86_64"
@@ -14,7 +14,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-files"
 distfiles="https://github.com/pop-os/cosmic-files/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=54e739c4b93204f19f88c58c60038d08386216973feeb5cb56ec2f81e4872cf5
+checksum=056db563c21c18fe556f2005b8d4d01993bf370255d491bba7ca6131f0749ac0
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
