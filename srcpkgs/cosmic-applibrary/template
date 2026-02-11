@@ -1,6 +1,6 @@
 # Template file for 'cosmic-applibrary'
 pkgname=cosmic-applibrary
-version=1.0.4
+version=1.0.6
 revision=1
 build_options="sccache"
 archs="x86_64* i686"
@@ -14,7 +14,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-applibrary"
 distfiles="https://github.com/pop-os/cosmic-applibrary/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=1e1348dd4feebe83ab343b24fd70f4ec8cc2de0a91787a8130eb6c10b9834c95
+checksum=e3b11ac0f37a3004566fbbe2800a1e2c415759fee91833c4a97cb66614e3dba0
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")

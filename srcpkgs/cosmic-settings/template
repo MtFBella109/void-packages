@@ -1,6 +1,6 @@
 # Template file for 'cosmic-settings'
 pkgname=cosmic-settings
-version=1.0.4
+version=1.0.6
 revision=1
 build_style="cargo"
 configure_args="--all"
@@ -14,7 +14,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-settings"
 distfiles="https://github.com/pop-os/cosmic-settings/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=9718693bb4d3ec4c345126c6488ab91bdd4b96be5cffa7d931cd8e51050c128f
+checksum=7636bd15f2c62cf094594eab3fa7b8f174f7bb8aba504389b88a86714da9e2b0
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
