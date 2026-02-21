@@ -1,6 +1,6 @@
 # Template file for 'cosmic-idle'
 pkgname=cosmic-idle
-version=1.0.6
+version=1.0.7
 revision=1
 build_options="sccache"
 archs="x86_64* i686"
@@ -14,7 +14,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-idle"
 distfiles="https://github.com/pop-os/cosmic-idle/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=06203acb3cfe951cfe2f5f3eac4eea7b9bcee9ad37468580c75a6a0e395da49a
+checksum=1589da2e937cee8e9bd2996c1726ce3b5628460434dacdcb77b37cdec2947117
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
