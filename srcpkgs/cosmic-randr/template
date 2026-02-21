@@ -1,6 +1,6 @@
 # Template file for 'cosmic-randr'
 pkgname=cosmic-randr
-version=1.0.6
+version=1.0.7
 revision=1
 archs="x86_64* i686"
 build_style=cargo
@@ -12,7 +12,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="MPL-2.0"
 homepage="https://github.com/pop-os/cosmic-randr"
 distfiles="https://github.com/pop-os/cosmic-randr/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=81e6ce04b4d060fe945a51a52aad47483431e8ef71ecec027c95c587fea0ddd2
+checksum=328a0a882acf1fcf979ce660b95b8d373218e9ac2fcecdb0d9839869dec4b44e
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")

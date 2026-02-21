@@ -1,6 +1,6 @@
 # Template file for 'cosmic-player'
 pkgname=cosmic-player
-version=1.0.6
+version=1.0.7
 revision=1
 archs="x86_64* i686"
 wrksrc=${pkgname}-${version}
@@ -15,7 +15,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-player"
 distfiles="https://github.com/pop-os/cosmic-player/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=c92859c96a0a1180fc2b1fb8944877a18774cb4dbc6365ffefd9d1b35eb78c06
+checksum=dc78b94dab1791f3ed812cc35eb45468834da805d9e13a11000c4e5e170ebbaa
 if [ "$XBPS_LIBC" = "glibc" ]; then
 	makedepends+=" libglib-devel"
 fi
