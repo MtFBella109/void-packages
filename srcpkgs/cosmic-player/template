@@ -3,15 +3,13 @@ pkgname=cosmic-player
 version=1.0.8
 revision=1
 archs="x86_64* i686"
-wrksrc=${pkgname}-${version}
 build_style=cargo
 configure_args="--all-features"
-build_options="sccache"
-hostmakedepends="pkg-config just cargo cargo-auditable $(vopt_if sccache "rust-sccache")"
-makedepends="libxkbcommon-devel gstreamer1-devel gst-plugins-base1-devel "
+hostmakedepends="pkg-config just"
+makedepends="libxkbcommon-devel gstreamer1-devel gst-plugins-base1-devel"
 depends="libxkbcommon gst-plugins-base1 gst-plugins-good1"
 short_desc="Cosmic Media Player"
-maintainer="Bella Wagner <belladev109@proton.me>"
+maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-player"
 distfiles="https://github.com/pop-os/cosmic-player/archive/refs/tags/epoch-${version}.tar.gz"
@@ -19,10 +17,6 @@ checksum=83896bcf1236adc11adaa40c442ed4fc591f71fc1778088298715d1c9c270641
 if [ "$XBPS_LIBC" = "glibc" ]; then
 	makedepends+=" libglib-devel"
 fi
-
-pre_build() {
-	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
-}
 
 do_install() {
 	just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install

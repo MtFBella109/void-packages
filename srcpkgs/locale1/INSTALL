@@ -1,7 +1,0 @@
-case "$ACTION" in
-post)
-	if [ "$UPDATE" = "no" ]; then
-		ln -s /etc/sv/locale1 /var/service/
-	fi
-	;;
-esac
