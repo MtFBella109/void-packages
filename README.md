@@ -48,7 +48,6 @@ All packages:
 - cosmic-greeter
 - cosmic-icons
 - cosmic-idle
-- cosmic-initial-setup
 - cosmic-launcher
 - cosmic-notifications
 - cosmic-osd
@@ -67,7 +66,7 @@ All packages:
 - pop-launcher
 
 ## Cosmic-greeter
-Cosmic-greeter worked for some time, is broka again. It will take some tme till I will look into it.
+Cosmic-greeter worked for some time, is broke again. It will take some tme till I will look into it.
 
 ## Start cosmic session
 You can use sddm or other graphical Login Manager or you can start it manually:
