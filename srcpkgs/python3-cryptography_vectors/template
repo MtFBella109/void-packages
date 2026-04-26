@@ -1,6 +1,6 @@
 # Template file for 'python3-cryptography_vectors'
 pkgname=python3-cryptography_vectors
-version=46.0.5
+version=46.0.7
 revision=1
 build_style=python3-pep517
 make_build_args="--skip-dependency-check"
@@ -11,7 +11,7 @@ maintainer="Andrew J. Hesford <ajh@sideband.org>"
 license="BSD-3-Clause, Apache-2.0"
 homepage="https://github.com/pyca/cryptography"
 distfiles="${PYPI_SITE}/c/cryptography_vectors/cryptography_vectors-${version}.tar.gz"
-checksum=ffbccee9455201c01b37c63d65d9f83b362d40c2bed9caac248ebbdfa4e4fc7c
+checksum=08f3d13846fdd86d4c1138a88c695cee203b3dd3825c784d64a3b06d000cdda1
 
 post_install() {
 	vlicense LICENSE
