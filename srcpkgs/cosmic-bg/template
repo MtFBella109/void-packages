@@ -1,6 +1,6 @@
 # Template file for 'cosmic-bg'
 pkgname=cosmic-bg
-version=1.0.2
+version=1.0.11
 revision=1
 build_options="sccache"
 archs="x86_64* i686"
@@ -14,7 +14,7 @@ maintainer="Bella Wagner <belladev109@proton.me>"
 license="MPL_2.0"
 homepage="https://github.com/pop-os/cosmic-bg"
 distfiles="https://github.com/pop-os/cosmic-bg/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=4a074b5e7d224d8ab8c1411d70bb7aca4b3003cc311dfb7cc7ec8586f9abd33c
+checksum=a47777270928fa871e1001bd6ab5bb5065aae722d88eaf7c7ee7cbd8af47234c
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
