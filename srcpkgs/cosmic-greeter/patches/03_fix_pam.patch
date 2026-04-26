@@ -1,0 +1,23 @@
+--- a/debian/cosmic-greeter.pam	2026-01-01 23:05:52.116542295 +0100
++++ b/debian/cosmic-greeter.pam	2026-01-01 23:09:51.693519749 +0100
+@@ -1,9 +1,9 @@
+ #%PAM-1.0
+ auth    requisite       pam_nologin.so
+ auth	required	pam_succeed_if.so user != root quiet_success
+-@include common-auth
++auth	include		system-login	
+ auth    optional        pam_gnome_keyring.so
+-@include common-account
++account	include		system-login
+ # SELinux needs to be the first session rule. This ensures that any 
+ # lingering context has been cleared. Without this it is possible 
+ # that a module could execute code in the wrong domain.
+@@ -20,6 +20,6 @@
+ session required        pam_limits.so
+ session required        pam_env.so readenv=1
+ session required        pam_env.so readenv=1 user_readenv=1 envfile=/etc/default/locale
+-@include common-session
++session include		system-login
+ session optional        pam_gnome_keyring.so auto_start
+-@include common-password
++password include	system-login
