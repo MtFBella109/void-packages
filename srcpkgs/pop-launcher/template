@@ -2,6 +2,8 @@
 pkgname=pop-launcher
 version=1.2.7
 revision=1
+build_style="cargo"
+configure_args=" --all"
 build_options="sccache"
 archs="x86_64* i686"
 hostmakedepends="pkg-config just cargo cargo-auditable $(vopt_if sccache "rust-sccache")"
@@ -18,5 +20,5 @@ pre_build() {
 }
 
 do_install() {
-	CARGO_TARGET_DIR="target/${RUST_TARGET}" just --set rootdir ${DESTDIR} install
+	just target-dir="target/${RUST_TARGET}/release" rootdir=${DESTDIR} install
 }
