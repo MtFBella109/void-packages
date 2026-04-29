@@ -1,0 +1,7 @@
+case "$ACTION" in
+post)
+	if [ "$UPDATE" = "no" ]; then
+		ln -s /usr/lib/zen-browser/zen /usr/bin/zen-browser
+	fi
+	;;
+esac
