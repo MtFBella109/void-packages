@@ -1,7 +1,7 @@
 # Template file for 'rustdesk'
 pkgname=rustdesk
-version=1.4.5
-revision=5
+version=1.4.6
+revision=1
 build_helper=rust
 hostmakedepends="pkg-config git cargo clang21 cmake ninja"
 makedepends="autoconf automake unzip nasm yasm gstreamer1-devel gst-plugins-base1-devel gtk+3-devel libtool gettext alsa-lib-devel pam-devel pipewire-devel wget curl tar libopusenc-devel libaom-devel libsodium-devel libxcb-devel libvpx-devel wayland-devel libXfixes-devel xdotool-devel zip"
@@ -14,6 +14,7 @@ homepage="https://github.com/rustdesk/rustdesk"
 pre_fetch() {
 	if [ -d $wrksrc ]; then
 		rm -rf $wrksrc
+		mkdir $wrksrc
 	fi
 }
 
@@ -25,14 +26,15 @@ do_fetch() {
 	echo a1682fbf55e004f1862d6ace31b5220121d20906bdbf308d0a9237b451e4db86 libsciter-gtk.so | sha256sum -c
 	git clone https://github.com/microsoft/vcpkg $wrksrc/vcpkg
 	cd $wrksrc/vcpkg
-	git checkout 2025.08.27
+	git checkout 2026.04.27
 	./bootstrap-vcpkg.sh
 }
-
 do_build() {
 	export VCPKG_ROOT=$wrksrc/vcpkg
-	vcpkg/vcpkg install --x-install-root=$VCPKG_ROOT/installed --disable-metrics
-	VCPKG_ROOT=$wrksrc/vcpkg cargo build --release
+	#vcpkg/vcpkg install --x-install-root=$VCPKG_ROOT/installed --disable-metrics
+	#VCPKG_ROOT=$wrksrc/vcpkg cargo build --release
+	cargo build  --lib --release
+	strip target/release/rustdesk
 }
 
 do_install() {
