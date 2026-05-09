@@ -1,11 +1,9 @@
 # Template file for 'cosmic-tweaks'
 pkgname=cosmic-tweaks
-version=0.2.0
+version=0.2.2
 revision=1
-build_style=cargo
-confiugre_args="--release"
 archs="x86_64"
-hostmakedepends="pkg-config just"
+hostmakedepends="pkg-config cargo just"
 makedepends="libxkbcommon-devel openssl-devel"
 depends="libssl3 libxkbcommon"
 short_desc="Tweaks for COSMIC"
@@ -13,13 +11,12 @@ maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/cosmic-utils/cosmic-tweaks"
 distfiles="https://github.com/cosmic-utils/cosmic-tweaks/archive/refs/tags/${version}.tar.gz"
-checksum=aeb5a883b1a10550df1455941c2180d8c6d9ca60f06a038f88efb4e29984e264
+checksum=e0786e6dc0d690e8315d5136920bf7ed40df48e5de2b7b9496d3fb3ac8bc8a96
 
 do_build() {
 	just build-release
 }
 
 do_install() {
-	#just rootdir=${DESTDIR} bin-src="target/${RUST_TARGET}/release/cosmic-ext-tweaks" install
 	just rootdir=${DESTDIR} install
 }
