@@ -1,0 +1,11 @@
+--- a/_scripts/build.mjs	2026-05-09 23:41:59.568315728 +0200
++++ b/_scripts/build.mjs	2026-05-09 23:42:38.370747203 +0200
+@@ -34,7 +34,7 @@
+     arch = Arch.armv7l
+   }
+ 
+-  targets = Platform.LINUX.createTarget(['deb', 'zip', '7z', 'rpm', 'AppImage', 'pacman'], arch)
++  targets = Platform.LINUX.createTarget(['7z'], arch)
+ }
+ 
+ const output = await build({ targets, config, publish: 'never' })
