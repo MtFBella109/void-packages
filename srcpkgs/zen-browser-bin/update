@@ -1,0 +1,2 @@
+site="https://github.com/zen-browser/desktop/tags"
+pattern="archive/refs/tags/\K[\w.-]+(?=\.tar\.gz)"

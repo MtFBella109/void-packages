@@ -1,0 +1,2 @@
+site="https://github.com/pop-os/cosmic-wallpapers/tags"
+pattern="archive/refs/tags/epoch-\K[\d.]+(?=\.tar\.gz)"

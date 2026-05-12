@@ -2,16 +2,17 @@
 pkgname=FreeTube
 version=0.24.0
 revision=1
-archs="x86_64*"
+archs="x86_64 aarch64"
 hostmakedepends="pkg-config pnpm"
 makedepends="git tar"
 depends="libX11 libXcomposite libXdamage libXext libXfixes libXrandr alsa-lib atk at-spi2-atk at-spi2-core cairo libcups dbus-libs electron35 expat libgbm libgcc glib gtk+3 nspr nss pango eudev-libudev libxcb libxkbcommon"
 short_desc="Client for watching YouTube Videos"
 maintainer="Bella Viola Wagner <belladev109@proton.me>"
-license="AGPL-3.0"
+license="AGPL-3.0-only"
 homepage="https://github.com/FreeTubeApp/FreeTube/tree/development"
 distfiles="https://github.com/FreeTubeApp/FreeTube/archive/refs/tags/v${version}-beta.tar.gz"
 checksum=d73d1beff0361586ed348a373142b8d9ad0b6b77e85953847759d3ba3e6abf4b
+nocross=yes
 
 pre_build() {
 	cp ${FILESDIR}/pnpm-workspace.yaml ${wrksrc}
@@ -29,4 +30,8 @@ do_install() {
 	vcopy build/linux-unpacked/libffmpeg.so usr/lib/FreeTube
 	vcopy build/linux-unpacked/freetube usr/lib/FreeTube
 	vbin ${FILESDIR}/FreeTube
+}
+
+post_install() {
+	vlicense LICENSE
 }
