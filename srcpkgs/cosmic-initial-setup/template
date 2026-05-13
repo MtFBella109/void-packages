@@ -20,7 +20,7 @@ do_fetch() {
 	fi
 	git clone $homepage $wrksrc
 	cd $wrksrc
-	git checkout cbc7b87a93de035205371eaeff39b19b9201c915
+	git checkout epoch-$version
 	git lfs install --local
 	git lfs pull
 }

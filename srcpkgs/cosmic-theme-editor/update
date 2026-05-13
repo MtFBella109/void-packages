@@ -1,2 +1,0 @@
-site="https://github.com/pop-os/cosmic-theme-editor/tags"
-pattern="archive/refs/tags/epoch-\K[\d.]+(?=\.tar\.gz)"
