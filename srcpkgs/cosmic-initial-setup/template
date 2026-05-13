@@ -1,6 +1,6 @@
 # Template file for 'cosmic-initial-setup'
 pkgname=cosmic-initial-setup
-version=1.0.12
+version=1.0.13
 revision=1
 build_options="sccache"
 archs="x86_64* i686"

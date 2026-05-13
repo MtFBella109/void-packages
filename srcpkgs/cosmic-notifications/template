@@ -1,6 +1,6 @@
 # Template file for 'cosmic-notifications'
 pkgname=cosmic-notifications
-version=1.0.12
+version=1.0.13
 revision=1
 build_options="sccache"
 archs="x86_64* i686"
@@ -14,7 +14,7 @@ maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-notifications"
 distfiles="https://github.com/pop-os/cosmic-notifications/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=ea2bef34f445ba11eaf5eaf674ea9fc0697c5fc3a1568312a0eedfe9a129de4d
+checksum=25d800502f8cc1fb69bccf007ef8c6839c238c19f02070c50d8f355547d31659
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")

@@ -1,6 +1,6 @@
 # Template file for 'cosmic-edit'
 pkgname=cosmic-edit
-version=1.0.12
+version=1.0.13
 revision=1
 build_options="sccache"
 archs="x86_64*"
@@ -13,7 +13,7 @@ maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-edit"
 distfiles="https://github.com/pop-os/cosmic-edit/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=5810f6f0f410c55eae2e3cf701fded92e9d3c2b2218dffa0016c7d00d8de6634
+checksum=326a315cf0d32fbefb87e9477c231eecb14634011c5db59d0ef0ec5b127f454f
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
