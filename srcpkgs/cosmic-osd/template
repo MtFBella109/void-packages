@@ -4,7 +4,6 @@ version=1.0.13
 revision=1
 archs="x86_64* i686"
 build_style=cargo
-build_options="sccache"
 hostmakedepends="pkg-config $(vopt_if sccache "rust-sccache")"
 makedepends="libxkbcommon-devel pulseaudio-devel pipewire-devel clang17-devel eudev-libudev-devel libinput-devel just"
 depends="dbus-libs eudev-libudev lame libpulseaudio libxkbcommon libpulseaudio libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus"
@@ -14,6 +13,7 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-osd"
 distfiles="https://github.com/pop-os/cosmic-osd/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=afca79bca762a84afee7758f539a4f0540e0d60cdad68695ad53b8182085678c
+build_options="sccache"
 
 
 pre_build() {

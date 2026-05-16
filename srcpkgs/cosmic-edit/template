@@ -2,7 +2,6 @@
 pkgname=cosmic-edit
 version=1.0.13
 revision=1
-build_options="sccache"
 archs="x86_64*"
 build_style=cargo
 hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
@@ -14,6 +13,7 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-edit"
 distfiles="https://github.com/pop-os/cosmic-edit/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=326a315cf0d32fbefb87e9477c231eecb14634011c5db59d0ef0ec5b127f454f
+build_options="sccache"
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")

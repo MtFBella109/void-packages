@@ -20,4 +20,3 @@ do_fetch() {
 	git lfs install --local
 	git lfs pull
 }
-

@@ -5,16 +5,16 @@ revision=1
 archs="x86_64* i686"
 build_style=cargo
 configure_args="--features autostart"
-build_options="sccache"
 hostmakedepends="just $(vopt_if sccache "rust-sccache")"
 makedepends="glib"
-depends="pop-fonts ttf-opensans	"
-short_desc="The session for the COSMIC desktop"
+depends="pop-fonts ttf-opensans"
+short_desc="Session for the COSMIC desktop"
 maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-session"
 distfiles="https://github.com/pop-os/cosmic-session/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=921be192e40a6a383b724ebbaf66b26cd05ced9e963dd9d186b99dac82b11973
+build_options="sccache"
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
@@ -22,7 +22,7 @@ pre_build() {
 
 do_install() {
 	just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install
-        vmkdir "usr/share/glib-2.0/schemas/"
+	vmkdir "usr/share/glib-2.0/schemas/"
 	vinstall "${FILESDIR}/cosmic.session.gsettings.override" 644 "usr/share/glib-2.0/schemas/"
 }
 

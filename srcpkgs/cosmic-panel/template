@@ -4,8 +4,7 @@ version=1.0.13
 revision=1
 archs="x86_64* i686"
 build_style=cargo
-confiugre_args="--all"
-build_options="sccache"
+configure_args="--all"
 hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
 makedepends="libxkbcommon-devel "
 depends="libxkbcommon"
@@ -15,6 +14,7 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-panel"
 distfiles="https://github.com/pop-os/cosmic-panel/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=154c67d915036247d41114baafc317f0af50a2d18221619d0a930ba8a0032c85
+build_options="sccache"
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")

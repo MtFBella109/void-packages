@@ -2,19 +2,18 @@
 pkgname=cosmic-applibrary
 version=1.0.13
 revision=1
-build_options="sccache"
 archs="x86_64* i686"
 build_style="cargo"
 hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
 makedepends="libxkbcommon-devel "
 depends="libxkbcommon"
 short_desc="Cosmic App Library"
-long_desc="Cosmic App Library is an application launcher for the COSMIC desktop that lists all installed applications in a grid."
 maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-applibrary"
 distfiles="https://github.com/pop-os/cosmic-applibrary/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=b4f6637f6d4c6df412879c507d8264fda5c13a9ce3fbb4f607a42ec6c3eb892e
+build_options="sccache"
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")

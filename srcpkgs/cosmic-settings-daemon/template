@@ -5,7 +5,6 @@ revision=1
 archs="x86_64* i686"
 build_style=gnu-makefile
 build_helper="rust"
-build_options="sccache"
 hostmakedepends="pkg-config cargo $(vopt_if sccache "rust-sccache")"
 makedepends="eudev-libudev-devel libinput-devel geoclue2-devel libpulseaudio openssl-devel"
 depends="geoclue2 dbus-libs eudev-libudev lame libpulseaudio libxkbcommon libpulseaudio libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus pop-sounds-theme"
@@ -15,6 +14,7 @@ license="GPL-3.0-or-later"
 homepage="https://github.com/pop-os/cosmic-settings-daemon"
 distfiles="https://github.com/pop-os/cosmic-settings-daemon/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=7b6658d1de8122b4e9887e5053a9bb8b4c1a432aae884808a20edd9fcbc88803
+build_options="sccache"
 
 export GEOCLUE_AGENT="/usr/libexec/geoclue-2.0/demos/agent"
 

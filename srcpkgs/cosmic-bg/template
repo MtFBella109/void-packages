@@ -2,7 +2,6 @@
 pkgname=cosmic-bg
 version=1.0.13
 revision=1
-build_options="sccache"
 archs="x86_64* i686"
 build_style=cargo
 configure_args="--all"
@@ -11,10 +10,11 @@ makedepends="libxkbcommon-devel mold"
 depends="libxkbcommon"
 short_desc="COSMIC session service which applies backgrounds to displays"
 maintainer="Bella Viola Wagner <belladev109@proton.me>"
-license="MPL_2.0"
+license="MPL-2.0"
 homepage="https://github.com/pop-os/cosmic-bg"
 distfiles="https://github.com/pop-os/cosmic-bg/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=24b4b04da400ba295c34ef589b8a4903fa6c0192c3a337d57bb41df8b3f4523b
+build_options="sccache"
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")

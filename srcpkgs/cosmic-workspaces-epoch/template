@@ -5,7 +5,6 @@ revision=1
 archs="x86_64* i686"
 build_style=gnu-makefile
 build_helper="rust"
-build_options="sccache"
 hostmakedepends="pkg-config cargo $(vopt_if sccache "rust-sccache")"
 makedepends="libxkbcommon-devel libgbm-devel eudev-libudev-devel libinput-devel"
 depends="expat libxkbcommon libgbm libdrm"
@@ -15,10 +14,10 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-workspaces-epoch"
 distfiles="https://github.com/pop-os/cosmic-workspaces-epoch/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=c60684f2053a8be48d1fc4559c52a0ed86c632756974381d700bf427dd77ec86
+build_options="sccache"
 
 if [ $(vopt_if sccache "true" "false") == "true" ]; then
 	pre_build() {
 		export RUSTC_WRAPPER=/usr/bin/sccache
 	}
 fi
-

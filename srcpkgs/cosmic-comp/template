@@ -2,7 +2,6 @@
 pkgname=cosmic-comp
 version=1.0.13
 revision=1
-build_options="sccache"
 archs="x86_64* i686"
 build_style=gnu-makefile
 hostmakedepends="pkg-config cargo $(vopt_if sccache "rust-sccache")"
@@ -14,8 +13,8 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-comp"
 distfiles="https://github.com/pop-os/cosmic-comp/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=f199c4f0604ba16df7352e22a5d797dfec3b9ed870183dbd277012ebbb11c753
+build_options="sccache"
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
 }
-

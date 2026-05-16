@@ -2,7 +2,6 @@
 pkgname=cosmic-files
 version=1.0.13
 revision=1
-build_options="sccache"
 archs="x86_64*"
 build_style=cargo
 configure_args="--all --no-default-features --features bzip2,dbus-config,desktop,gvfs,io-uring,lzma-rust2,notify,wayland,desktop-applet,jemalloc"
@@ -15,6 +14,7 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-files"
 distfiles="https://github.com/pop-os/cosmic-files/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=e211a3746e4ed2e2fea5ae1d82fcdb5f1352a87ed19fabb7eb8326647fb74369
+build_options="sccache"
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")

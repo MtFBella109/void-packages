@@ -4,7 +4,6 @@ version=1.0.13
 revision=1
 archs="x86_64*"
 build_style=cargo
-build_options="sccache"
 hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
 makedepends="libxkbcommon-devel libzstd-devel"
 depends="libxkbcommon libzstd"
@@ -14,6 +13,7 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-term"
 distfiles="https://github.com/pop-os/cosmic-term/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=68fcf6e0021895b79d1b3394b25e46ca44ba574689fb1b0357e4d8f36b7ffe0d
+build_options="sccache"
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
