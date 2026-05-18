@@ -2,7 +2,7 @@
 pkgname=FreeTube
 version=0.24.0
 revision=1
-archs="x86_64 aarch64"
+archs="x86_64"
 hostmakedepends="pkg-config pnpm"
 makedepends="git tar"
 depends="libX11 libXcomposite libXdamage libXext libXfixes libXrandr alsa-lib atk at-spi2-atk at-spi2-core cairo libcups dbus-libs electron35 expat libgbm libgcc glib gtk+3 nspr nss pango eudev-libudev libxcb libxkbcommon"
