@@ -5,7 +5,7 @@ Comment=Browse the World Wide Web
 GenericName=Web Browser
 Keywords=Internet;WWW;Browser;Web;Explorer
 Keywords[de]=Internet;WWW;Browser;Web;Explorer;Webseite;Site;surfen;online;browsen
-Exec=zen-browser
+Exec=zen-browser %u
 Terminal=false
 X-MultipleArgs=false
 Type=Application
@@ -53,7 +53,7 @@ Name[uk]=Відкрити нове вікно
 Name[vi]=Mở cửa sổ mới
 Name[zh_CN]=新建窗口
 Name[zh_TW]=開啟新視窗
-Exec=zen-browser -new-window
+Exec=zen-browser %u -new-window
 
 [Desktop Action NewPrivateWindow]
 Name=Open a New Private Window
@@ -72,4 +72,4 @@ Name[sl]=Odpri novo okno zasebnega brskanja
 Name[tr]=Yeni bir pencere aç
 Name[uk]=Відкрити нове вікно у потайливому режимі
 Name[zh_TW]=開啟新隱私瀏覽視窗
-Exec=zen-browser -private-window
+Exec=zen-browser %u -private-window
