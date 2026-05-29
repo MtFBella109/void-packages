@@ -1,6 +1,6 @@
 # Template file for 'cosmic-desktop-full'
 pkgname=cosmic-desktop-full
-version=1.0.13
+version=1.0.14
 revision=1
 archs="x86_64*"
 metapackage="yes"

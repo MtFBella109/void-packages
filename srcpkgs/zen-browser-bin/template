@@ -16,10 +16,9 @@ do_install() {
 	vmkdir usr/lib/zen-browser
 	vcopy * usr/lib/zen-browser
 	vmkdir usr/bin
-	ln -s /usr/lib/zen-browser/zen ${DESTDIR}/usr/bin/
+	ln -s /usr/lib/zen-browser/zen usr/bin/
 	vinstall ${FILESDIR}/zen-browser.desktop 644 usr/share/applications/
 	for size in 16 32 48 64 128; do
-		cp ${wrksrc}/browser/chrome/icons/default/default${size}.png ${wrksrc}/browser/chrome/icons/default/zen-browser.png
-		vinstall ${wrksrc}/browser/chrome/icons/default/zen-browser.png 644 usr/share/icons/hicolor/${size}x${size}/apps/
+		vinstall browser/chrome/icons/default/zen-browser.png 644 usr/share/icons/hicolor/${size}x${size}/apps/
 	done
 }

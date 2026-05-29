@@ -1,6 +1,6 @@
 # Template file for 'cosmic-launcher'
 pkgname=cosmic-launcher
-version=1.0.13
+version=1.0.14
 revision=1
 archs="x86_64* i686"
 build_style="cargo"
@@ -12,7 +12,7 @@ maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-launcher"
 distfiles="https://github.com/pop-os/cosmic-launcher/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=59057d5d436d1f6f6d6dfe21bb8813b0920efe284ddafed22842e2c74da676d7
+checksum=50996f7cdfd1dce5e321451c7564d21e3aecf1b18fb581792c81e9c048459acb
 build_options="sccache"
 
 pre_build() {
