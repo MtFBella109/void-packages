@@ -1,0 +1,23 @@
+# Template file for 'pinguintv-installer'
+pkgname=pinguintv-installer
+version=1.0
+revision=1
+archs="x86_64"
+build_style=gnu-makefile
+hostmakedepends="pkg-config"
+makedepends="base-devel gtk+3-devel"
+depends="gparted polkit"
+short_desc="New GUI Installer for void"
+maintainer="Bella Viola Wagner <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://pinguin-tv.de/Downloads/Pinguin-Installer.zip"
+distfiles="https://codeberg.org/pinguin-void/Pinguin-Installer/archive/main.tar.gz"
+checksum=36985b1ef70ddab10d204d2acff9249052406929f15b6c7025ec514c2320d673
+
+do_build() {
+	gcc src/core/main.c src/ui/ui.c src/ui/ui_callbacks.c src/ui/ui_partition.c src/core/partition_utils.c src/core/utils.c src/core/installer.c src/core/installer_steps.c -o pinguin-installer -Iinclude `pkg-config --cflags --libs gtk+-3.0` -lpthread
+}
+
+do_install() {
+	vinstall pinguin-installer 755 usr/bin
+}
