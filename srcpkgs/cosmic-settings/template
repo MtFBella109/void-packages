@@ -1,6 +1,6 @@
 # Template file for 'cosmic-settings'
 pkgname=cosmic-settings
-version=1.0.14
+version=1.0.15
 revision=1
 archs="x86_64* i686"
 build_style="cargo"
@@ -13,7 +13,7 @@ maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-settings"
 distfiles="https://github.com/pop-os/cosmic-settings/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=554c7a80565b5b7797f3cff85534e7d915ee30b0631698c05c7946416870d2d4
+checksum=4c158935aa652156dfa5ad8524666f4fb2ba2654ea9f6ec2d5fe94e0e6549e91
 build_options="sccache"
 
 pre_build() {

@@ -1,6 +1,6 @@
 # Template file for 'cosmic-screenshot'
 pkgname=cosmic-screenshot
-version=1.0.14
+version=1.0.15
 revision=1
 archs="x86_64* i686"
 build_style=cargo
@@ -10,7 +10,7 @@ maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-screenshot"
 distfiles="https://github.com/pop-os/cosmic-screenshot/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=592e833ab5e42d5ff8ebc6e14d60a55311f7e0d4699e0239a0aa4db5904f5740
+checksum=bcc1fc90e697b857bda0c88163f0a5c632c80ef7ef6faa5ba1ac4ccf26073a2a
 build_options="sccache"
 
 pre_build() {

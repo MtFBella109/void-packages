@@ -1,6 +1,6 @@
 # Template file for 'xdg-desktop-portal-cosmic'
 pkgname=xdg-desktop-portal-cosmic
-version=1.0.14
+version=1.0.15
 revision=1
 archs="x86_64*"
 build_style=gnu-makefile
@@ -13,7 +13,7 @@ maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/xdg-desktop-portal-cosmic"
 distfiles="https://github.com/pop-os/xdg-desktop-portal-cosmic/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=5265a30d00c29af3e43a649b18fe364d3f41f4312a57fa8d277c0bd8acceeefa
+checksum=99e744935f0327a99e32662f76e4c3917621bc1d9fb7658eaf4bc286a9d3265d
 build_options="sccache"
 
 export VERGEN_GIT_COMMIT_DATE="${version}_${revision}"

@@ -1,6 +1,6 @@
 # Template file for 'cosmic-applibrary'
 pkgname=cosmic-applibrary
-version=1.0.14
+version=1.0.15
 revision=1
 archs="x86_64* i686"
 build_style="cargo"
@@ -12,7 +12,7 @@ maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-applibrary"
 distfiles="https://github.com/pop-os/cosmic-applibrary/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=7c2e1d6469d3add67d12e60af1d7b1ecac6b38eee79523cc51b331e1edf73795
+checksum=01567f74dd7469b7c86dbfe6d98e5cac2c7fa56ff18b4ff3a590749992dfd86a
 build_options="sccache"
 
 pre_build() {

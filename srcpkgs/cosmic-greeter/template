@@ -1,6 +1,6 @@
 # Template file for 'cosmic-greeter'
 pkgname=cosmic-greeter
-version=1.0.13
+version=1.0.15
 revision=1
 archs="x86_64* i686"
 build_style=cargo
@@ -25,7 +25,7 @@ do_fetch() {
 	fi
 	git clone $homepage $wrksrc
 	cd $wrksrc
-	git checkout 4d74121ac1fa48126f080d170be20abf551cdbaa
+	git checkout $version
 	git lfs install --local
 	git lfs pull
 }
