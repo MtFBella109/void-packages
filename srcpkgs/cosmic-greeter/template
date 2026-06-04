@@ -6,29 +6,20 @@ archs="x86_64* i686"
 build_style=cargo
 configure_args="--all"
 hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
-makedepends="libxkbcommon-devel eudev-libudev-devel git git-lfs pam-devel libinput-devel llvm18-devel"
+makedepends="libxkbcommon-devel eudev-libudev-devel pam-devel libinput-devel llvm18-devel"
 depends="greetd libxkbcommon pam-libs"
 short_desc="COSMIC Display Manager"
 maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-greeter"
+distfiles="https://github.com/pop-os/cosmic-greeter/archive/refs/tags/epoch-${version}.tar.gz"
+checksum=fed098653ab9ab89db3609d8472843c1c19f23142f59134209c407dcd1e09d92
 build_options="sccache"
 skip_extraction=yes
 system_accounts="_cosmicgreeter"
 _cosmicgreeter_homedir="/var/lib/cosmic-greeter"
 _cosmicgreeter_descr="Cosmic Greeter Account"
 _cosmicgreeter_groups="video"
-
-do_fetch() {
-	if [ -d $wrksrc ]; then
-		rm -rf $wrksrc
-	fi
-	git clone $homepage $wrksrc
-	cd $wrksrc
-	git checkout $version
-	git lfs install --local
-	git lfs pull
-}
 
 pre_build() {
 	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
