@@ -1,4 +1,4 @@
 #!/bin/sh
 
 exec 2>&1
-exec greetd -c cosmic-greeter.toml
+exec greetd -c /etc/greetd/cosmic-greeter.toml
