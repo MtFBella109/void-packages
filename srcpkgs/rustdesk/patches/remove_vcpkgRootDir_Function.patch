@@ -1,0 +1,13 @@
+--- a/rustdesk-1.4.7/vcpkg/scripts/bootstrap.sh	2026-06-10 16:18:23.102465185 +0200
++++ b/rustdesk-1.4.7/vcpkg/scripts/bootstrap.sh	2026-06-10 16:18:55.420024968 +0200
+@@ -1,10 +1,5 @@
+ #!/bin/sh
+ 
+-# Find .vcpkg-root.
+-vcpkgRootDir=$(X= cd -- "$(dirname -- "$0")" && pwd -P)
+-while [ "$vcpkgRootDir" != "/" ] && ! [ -e "$vcpkgRootDir/.vcpkg-root" ]; do
+-    vcpkgRootDir="$(dirname "$vcpkgRootDir")"
+-done
+ 
+ # Parse arguments.
+ vcpkgDisableMetrics="OFF"
