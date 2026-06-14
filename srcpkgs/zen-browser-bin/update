@@ -1,3 +1,2 @@
 site="https://github.com/zen-browser/desktop/releases"
-pattern="releases/tag/\K[\w.-]+(?=\")"
-
+pattern='releases/tag/\K[\d.]+b(?=")'
