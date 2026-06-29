@@ -1,10 +1,10 @@
 # Template file for 'cosmic-player'
 pkgname=cosmic-player
 version=1.1.0
-revision=1
+revision=2
 archs="x86_64* i686"
 build_style=cargo
-configure_args="--all-features"
+configure_args="--all"
 hostmakedepends="pkg-config just cargo cargo-auditable $(vopt_if sccache "rust-sccache")"
 makedepends="libxkbcommon-devel gstreamer1-devel gst-plugins-base1-devel "
 depends="libxkbcommon gst-plugins-base1 gst-plugins-good1"

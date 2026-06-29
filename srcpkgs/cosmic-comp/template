@@ -3,8 +3,9 @@ pkgname=cosmic-comp
 version=1.1.0
 revision=1
 archs="x86_64* i686"
-build_style=gnu-makefile
-hostmakedepends="pkg-config cargo $(vopt_if sccache "rust-sccache")"
+build_style=cargo
+configure_args="--all --no-default-features --features logind"
+hostmakedepends="pkg-config cargo"
 makedepends="eudev-libudev-devel libseat-devel libxkbcommon-devel libinput-devel pixman-devel libgbm-devel libdisplay-info-devel"
 depends="eudev-libudev expat libxkbcommon libdisplay-info libgbm libseat libinput libgcc libdrm libelogind libevdev libwacom libcap libgudev libffi libpcre2 mtdev pixman"
 short_desc="Wayland compositor of pop-os cosmic shell"
@@ -13,8 +14,9 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-comp"
 distfiles="https://github.com/pop-os/cosmic-comp/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=56fdf357a44f5138cab6fe9599d74a2bba3f5995b7155dd88c13e4f4c9e2cafd
-build_options="sccache"
 
-pre_build() {
-	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
+do_install() {
+	CARGO_TARGET_DIR="target/${XBPS_RUST_TARGET}" make install
+	vbin target/${XBPS_RUST_TARGET}/release/cosmic-comp
+	vinstall data/cosmic.desktop 644 usr/share/wayland-session/cosmic.desktop
 }

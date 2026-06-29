@@ -1,11 +1,12 @@
 # Template file for 'cosmic-greeter'
 pkgname=cosmic-greeter
 version=1.1.0
-revision=1
+revision=3
 archs="x86_64* i686"
 build_style=cargo
 configure_args="--all"
-hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
+#configure_args="--all  --no-dfeault-features"
+hostmakedepends="pkg-config just"
 makedepends="libxkbcommon-devel eudev-libudev-devel git pam-devel libinput-devel llvm18-devel"
 depends="greetd libxkbcommon pam-libs"
 short_desc="COSMIC Display Manager"
@@ -14,19 +15,15 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-greeter"
 distfiles="https://github.com/pop-os/cosmic-greeter/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=0fe3273492fe638c179bb03e8558c8ea69a3ddcdbea8ab9cc77a9e6dc260e269
-build_options="sccache"
 skip_extraction=yes
 system_accounts="_cosmicgreeter"
 _cosmicgreeter_homedir="/var/lib/cosmic-greeter"
 _cosmicgreeter_descr="Cosmic Greeter Account"
-_cosmicgreeter_groups="video"
+_cosmicgreeter_groups="video input"
+make_dirs="/var/lib/cosmic-greeter/"
 
 export VERGEN_GIT_SHA="unknown"
 export VERGEN_GIT_COMMIT_DATE="unknown"
-
-pre_build() {
-	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
-}
 
 do_install() {
 	just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install
