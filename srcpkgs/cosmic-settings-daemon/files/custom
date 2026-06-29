@@ -1,0 +1,113 @@
+{
+    (
+        modifiers: [],
+        key: "XF86AudioPrev",
+    ): System(PlayPrev),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Left",
+    ): Move(Left),
+    (
+        modifiers: [],
+        key: "XF86AudioNext",
+    ): System(PlayNext),
+    (
+        modifiers: [],
+        key: "XF86AudioRaiseVolume",
+    ): System(VolumeRaise),
+    (
+        modifiers: [],
+        key: "XF86AudioPlay",
+    ): System(PlayPause),
+    (
+        modifiers: [
+            Ctrl,
+            Alt,
+        ],
+        key: "Right",
+    ): NextWorkspace,
+    (
+        modifiers: [
+            Super,
+        ],
+    ): System(Launcher),
+    (
+        modifiers: [],
+        key: "XF86AudioLowerVolume",
+    ): System(VolumeLower),
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "Down",
+    ): Focus(Down),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Down",
+    ): Move(Down),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Up",
+    ): Move(Up),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Right",
+    ): Move(Right),
+    (
+        modifiers: [
+            Ctrl,
+            Alt,
+            Shift,
+        ],
+        key: "Right",
+    ): MoveToNextWorkspace,
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "Right",
+    ): Focus(Right),
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "Left",
+    ): Focus(Left),
+    (
+        modifiers: [],
+        key: "XF86AudioMute",
+    ): System(Mute),
+    (
+        modifiers: [
+            Ctrl,
+            Alt,
+            Shift,
+        ],
+        key: "Left",
+    ): MoveToPreviousWorkspace,
+    (
+        modifiers: [
+            Ctrl,
+            Alt,
+        ],
+        key: "Left",
+    ): PreviousWorkspace,
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "Up",
+    ): Focus(Up),
+}
