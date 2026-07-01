@@ -1,6 +1,6 @@
 # Template file for 'cosmic-wallpapers'
 pkgname=cosmic-wallpapers
-version=1.1.0
+version=1.2.0
 revision=1
 build_style="gnu-makefile"
 short_desc="COSMIC wallpaper collection"
@@ -8,5 +8,5 @@ maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="CC-BY-SA-4.0"
 homepage="https://github.com/pop-os/cosmic-wallpapers"
 distfiles="https://github.com/pop-os/cosmic-wallpapers/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=16215b41de7bbe9cc80eee729eb1642a8eec2389fe30d50237f18996bc2a0449
+checksum=27fee695f515992a9ea82e19e1be12e84f53c32bc14fae44137424546794cf22
 skip_extraction="yes"

@@ -1,6 +1,6 @@
 # Template file for 'cosmic-session'
 pkgname=cosmic-session
-version=1.1.0
+version=1.2.0
 revision=1
 archs="x86_64* i686"
 build_style=cargo
@@ -13,7 +13,7 @@ maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-session"
 distfiles="https://github.com/pop-os/cosmic-session/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=f2b1bc36cbc0a4dff2e2647c7bbaf1e53ed4fc6a13360110a5ffa8fc2922ce1d
+checksum=94fc2244027809415515563e74526fe796c733750cdd97712f28d050d8c8f932
 build_options="sccache"
 
 pre_build() {

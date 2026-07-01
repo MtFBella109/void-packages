@@ -1,6 +1,6 @@
 # Template file for 'cosmic-notifications'
 pkgname=cosmic-notifications
-version=1.1.0
+version=1.2.0
 revision=1
 archs="x86_64* i686"
 build_style=cargo
@@ -13,7 +13,7 @@ maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-notifications"
 distfiles="https://github.com/pop-os/cosmic-notifications/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=7d7d55b6b84600429739398a8719b627692692a529b01232bf5325bf2dfd537b
+checksum=c46df717a827412596f9c9075390d5e142d603546603b03ad783149dc6f77c61
 build_options="sccache"
 
 pre_build() {

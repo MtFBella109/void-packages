@@ -1,6 +1,6 @@
 # Template file for 'cosmic-icons'
 pkgname=cosmic-icons
-version=1.1.0
+version=1.2.0
 revision=1
 hostmakedepends="just"
 depends="pop-icons"
@@ -9,7 +9,7 @@ maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="CC-BY-SA-4.0"
 homepage="https://github.com/pop-os/cosmic-icons"
 distfiles="https://github.com/pop-os/cosmic-icons/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=1de684477013b47c0f9757e575ed638bbdcd2ffc30829f8e707f5eeba581233b
+checksum=e86484a3d8bd2bf15db9924a92741ca31a557ee49f59822fb2c1686316287f7e
 
 do_install() {
 	just rootdir="${DESTDIR}" install
