@@ -1,20 +1,20 @@
 # Template file for 'cinny-desktop'
 pkgname=cinny-desktop
-version=4.12.2
+version=4.12.5
 revision=1
 #archs="i686 x86_64"
 create_wrksrc="yes"
 build_wrksrc="cinny-desktop-$version"
-hostmakedepends="pkg-config pnpm cargo"
+hostmakedepends="pkg-config nodejs cargo"
 makedepends="giflib-devel gtk+3-devel libglib-devel libwebkit2gtk41-devel xdg-utils"
 short_desc="Yet another Matrix Client"
 maintainer="Bella Viola Wagner <belladev109@proton.me>"
 license="AGPL-3.0-or-later"
 homepage="https://github.com/cinnyapp/cinny-desktop"
 distfiles="https://github.com/cinnyapp/cinny-desktop/archive/refs/tags/v${version}.tar.gz
-https://github.com/cinnyapp/cinny/archive/refs/tags/v${version}.tar.gz>cinny-${version}.tar.gz"
-checksum="6b13bbaf2e598f12a5ba83b190d171a93704f1dbb10eec455e36353785d1c19f
- 85e03e91acbb8e7658a8e4dd178690279343b7d9a45b534b56c0653a80c4e9e2"
+https://github.com/cinnyapp/cinny/archive/refs/tags/v4.12.3.tar.gz>cinny-${version}.tar.gz"
+checksum="4570ad322c1bf888c87b2560c562d938356aee4999f7dafd5a15d8eff02fd43e
+ ec3d61a8507966dbc95b25d1d66ed5069ac387e7af01548b01a6daed15223009"
 patch_args="-d cinny-desktop-${version} -Np1"
 
 post_extract() {
@@ -24,11 +24,11 @@ post_extract() {
 
 pre_build() {
 	cd cinny
-	pnpm install
+	npm install
 }
 
 do_build() {
-	pnpm run tauri build
+	npm run tauri build
 }
 
 do_install() {
