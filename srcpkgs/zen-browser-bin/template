@@ -1,6 +1,6 @@
 # Template file for 'zen-browser-bin'
 pkgname=zen-browser-bin
-version=1.21b
+version=1.21.3b
 revision=1
 #depends="libXt libXtst libxkbcommon libxkbcommon-x11 libpng"
 archs="x86_64 aarch64"
@@ -10,8 +10,8 @@ license="MPL-2.0"
 homepage="https://github.com/zen-browser/desktop"
 distfiles="https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-x86_64.tar.xz
  https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-aarch64.tar.xz"
-checksum="a1473c843465a0683f5f300edfd5c358c6e2d0588392b0e16c6f826ad9d678b9
- 25b33e6ac9c04efbfb2e5e3ca49c1b09f4ec0477e20e1f8aa077d51f5d4a4a43"
+checksum="a0ceeaf931c15d7c37de4faef4ea247eeb10e4b85a9e44b6304277bf3884ae4f
+ 8b36f8bba77a2685f1a2bbd1dbb457d28055b385f674c62b46b84ba45f60d141"
 replaces="zen-browser>=0 zen-browser-arm64-bin>=0"
 
 do_extract() {
