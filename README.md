@@ -16,8 +16,8 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
 > There is only a Repo for x86_64 Systems
 1. If you haven't installed mesa-dri, please do it with: `sudo xbps-install -S mesa-dri`. *ATTENTION: If you have a NVIDIA Graphic card, you need mesa-dri too, cosmic doesn't start, without mesa-dri, you can of course install also the nvidia driver, that isn't a Problem*
 2.  Add Reposiotry
-   - glibc: `echo 'repository=https://bellawagner.de/repo/x86_64' | sudo tee /etc/xbps.d/59-cosmic.conf`
-   - musl: `echo 'repository=https://bellawagner.de/repo/x86_64-musl' | sudo tee /etc/xbps.d/59-cosmic.conf`
+   - glibc: `echo 'repository=https://repo.sys109.de/repo/x86_64' | sudo tee /etc/xbps.d/59-cosmic.conf`
+   - musl: `echo 'repository=https://repo.sys109.de/repo/x86_64-musl' | sudo tee /etc/xbps.d/59-cosmic.conf`
 4. Update Package list: `sudo xbps-install -S`
 5. Install single components with `sudo xbps-install -S <package_name>` or install all components, with `sudo xbps-install -S cosmic-desktop-full`
 6. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
@@ -67,10 +67,10 @@ All packages:
 - pop-launcher
 
 ## Cosmic-greeter
-Cosmic-greeter worked for some time, is broka again. It will take some tme till I will look into it.
+I still didn't found a way, to get cosmic-greeter to working. it seems that elogind doesn't recognize it correctly. I don't know why it behaves that way and doesn't found a fix unfortunately. In the mean Time, I would recommend to use sddm or other Login manager
 
 ## Start cosmic session
 You can use sddm or other graphical Login Manager or you can start it manually:
 1. Login as your user
 2. Type `start-cosmic`
-> Note: The user, that runs start-cosmic, is automatically the user which is sgined in, in cosmic desktop
+> Note: This starts the whole cosmic-session for the user, as which you logged in
