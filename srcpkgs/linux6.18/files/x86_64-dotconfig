@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86_64 6.18.36 Kernel Configuration
+# Linux/x86_64 6.18.37 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="gcc (GCC) 14.2.1 20250405"
 CONFIG_CC_IS_GCC=y
@@ -8242,7 +8242,7 @@ CONFIG_HID_MCP2221=m
 #
 # HID-BPF support
 #
-# CONFIG_HID_BPF is not set
+CONFIG_HID_BPF=y
 # end of HID-BPF support
 
 CONFIG_I2C_HID=m
