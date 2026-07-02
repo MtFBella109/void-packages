@@ -10,7 +10,7 @@ configure_args="-DZIG_TARGET_MCPU=baseline -DZIG_PIE=ON"
 makedepends="clang21-devel llvm21-devel lld21-devel libxml2-devel
  libzstd-devel ncurses-devel zlib-devel"
 short_desc="Programming language designed for robustness, optimality, and clarity"
-maintainer="Bella Viola Wagner <belladev109@proton.me>"
+maintainer="Bella109 <belladev109@proton.me>"
 license="MIT"
 homepage="https://ziglang.org"
 distfiles="https://ziglang.org/download/${version}/zig-${version}.tar.xz"

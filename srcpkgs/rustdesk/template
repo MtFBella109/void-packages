@@ -13,7 +13,7 @@ if [ "$XBPS_LIBC" = "musl" ]; then
 fi
 depends=""
 short_desc="Alternative to AnyDesk"
-maintainer="Bella Viola Wagner <belladev109@proton.me>"
+maintainer="Bella109 <belladev109@proton.me>"
 license="AGPL-3.0"
 homepage="https://github.com/rustdesk/rustdesk"
 distfiles="https://github.com/rustdesk/rustdesk/archive/refs/tags/${version}.tar.gz
