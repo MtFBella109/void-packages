@@ -1,5 +1,8 @@
 # Cosmic on Void
-Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their work as a base
+
+## Attention
+If you are using the Repository, please note, that the Domain was changed to repo.sys109.de
+Please Update your config. the Repository will be available, for a few weeks with the old and the new Domain. After that, the Repository will only be available through the new Domain
 
 ## Table of Contents
 
@@ -14,23 +17,21 @@ Big thanks to [Calandracas606](https://github.com/Calandracas606), I used their 
 ## Install Cosmic
 ### Install via Repository
 > There is only a Repo for x86_64 Systems
-1. If you haven't installed mesa-dri, please do it with: `sudo xbps-install -S mesa-dri`. *ATTENTION: If you have a NVIDIA Graphic card, you need mesa-dri too, cosmic doesn't start, without mesa-dri, you can of course install also the nvidia driver, that isn't a Problem*
-2.  Add Reposiotry
+1.  Add Reposiotry
    - glibc: `echo 'repository=https://repo.sys109.de/repo/x86_64' | sudo tee /etc/xbps.d/59-cosmic.conf`
    - musl: `echo 'repository=https://repo.sys109.de/repo/x86_64-musl' | sudo tee /etc/xbps.d/59-cosmic.conf`
-4. Update Package list: `sudo xbps-install -S`
-5. Install single components with `sudo xbps-install -S <package_name>` or install all components, with `sudo xbps-install -S cosmic-desktop-full`
-6. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
+2. Update Package list: `sudo xbps-install -S`
+3. Install single components with `sudo xbps-install -S <package_name>` or install all components, with `sudo xbps-install -S cosmic-desktop-full`
+4. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
 
 ## Install and build via xbps-src
-1. If you haven't install graphic drivers on your system do `sudo xbps-install -S nvidia mesa-dri` for nvidia and `sudo xbps-install -S mesa-dri` for other GPU's
-2. `git clone --depth 1 https://github.com/MtFBella109/void-packages.git`
-3. `cd void-packages`
-4. `./xbps-src binary-bootstrap`
-5. You can build single components with `./xbps-src pkg <package_name>` or build every component with `./xbps-src pkg cosmic-desktop-full`
-6. Install the package with `xi <package_name>` or with `xbps-install --repository hostdir/binpkgs <package_name>`
-   > Note: You get the xi command with the package xtools
-7. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
+1. `git clone --depth 1 https://github.com/MtFBella109/void-packages.git`
+2. `cd void-packages`
+3. `./xbps-src binary-bootstrap`
+4. You can build single components with `./xbps-src pkg <package_name>` or build every component with `./xbps-src pkg cosmic-desktop-full`
+5. Install the package with `xi <package_name>` or with `xbps-install --repository hostdir/binpkgs <package_name>`
+   > Note: The xi command is part of xtools
+6. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
 
 ## Enable Services
 1. You need to enable dbus, if you enable it, you need to do a restart, before you can start cosmic
@@ -48,8 +49,8 @@ All packages:
 - cosmic-greeter
 - cosmic-icons
 - cosmic-idle
-- cosmic-initial-setup
 - cosmic-launcher
+- cosmic-monitor
 - cosmic-notifications
 - cosmic-osd
 - cosmic-panel
@@ -60,7 +61,6 @@ All packages:
 - cosmic-settings
 - cosmic-settings-daemon
 - cosmic-term
-- cosmic-theme-editor
 - cosmic-wallpapers
 - cosmic-workspaces-epoch
 - xdg-desktop-portal-cosmic
