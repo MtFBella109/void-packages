@@ -25,7 +25,7 @@ Please Update your config. the Repository will be available, for a few weeks wit
 4. Optional, but recomended install firefox and sddm with `sudo xbps-install -S firefox sddm`
 
 ## Install and build via xbps-src
-1. `git clone --depth 1 https://github.com/MtFBella109/void-packages.git`
+1. `git clone --depth 1 https://codeberg.org/Bella109/void-packages.git`
 2. `cd void-packages`
 3. `./xbps-src binary-bootstrap`
 4. You can build single components with `./xbps-src pkg <package_name>` or build every component with `./xbps-src pkg cosmic-desktop-full`
