@@ -1,19 +1,19 @@
 # Template file for 'cosmic-settings-daemon'
 pkgname=cosmic-settings-daemon
-version=1.2.0
+version=1.3.0
 revision=1
 archs="x86_64* i686"
 build_style=cargo
 configure_args="--all"
 hostmakedepends="pkg-config"
-makedepends="clang22-devel eudev-libudev-devel libinput-devel geoclue2-devel libpulseaudio pipewire-devel openssl-devel"
+makedepends="clang22-devel eudev-libudev-devel libinput-devel geoclue2-devel libpulseaudio pipewire-devel openssl-devel libxkbcommon-devel"
 depends="geoclue2 dbus-libs eudev-libudev lame libvarlink libxkbcommon libpulseaudio libsndfile libxcb libasyncns libflac libvorbis libogg libmpg123 libXau libXdmcp opus pop-sounds-theme"
 short_desc="COSMIC settings daemon"
 maintainer="Bella109 <belladev109@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/pop-os/cosmic-settings-daemon"
 distfiles="https://github.com/pop-os/cosmic-settings-daemon/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=ca84e881451ce90c387d475d650fe4916c3af572ec48cd622d0319b0b7d04320
+checksum=70bb2dbfc9d321f4bb446c047980933d8817bd5ab0f6ab856dd9f74caab59f36
 
 export GEOCLUE_AGENT="/usr/libexec/geoclue-2.0/demos/agent"
 
