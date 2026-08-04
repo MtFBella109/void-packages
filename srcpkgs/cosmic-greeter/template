@@ -14,7 +14,6 @@ license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-greeter"
 distfiles="https://github.com/pop-os/cosmic-greeter/archive/refs/tags/epoch-${version}.tar.gz"
 checksum=bbd49754abdef813b8bf86fa3e724c243d0baca27447b8f908c85cfe2a60a73e
-skip_extraction=yes
 system_accounts="_cosmicgreeter"
 _cosmicgreeter_homedir="/var/lib/cosmic-greeter"
 _cosmicgreeter_descr="Cosmic Greeter Account"
