@@ -1,2 +1,2 @@
-site=https://ziglang.org/download/index.json
-pattern='"\K\d+\.\d+\.\d+(?=")'
+site="https://ziglang.org/download/"
+pattern="\K[\d.]/zig-\K[\d.]+(?=\.tar\.xz)"

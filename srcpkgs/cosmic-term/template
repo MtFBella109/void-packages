@@ -1,0 +1,25 @@
+# Template file for 'cosmic-term'
+pkgname=cosmic-term
+version=1.3.0
+revision=1
+archs="x86_64*"
+build_style=cargo
+configure_args="--all"
+hostmakedepends="pkg-config just $(vopt_if sccache "rust-sccache")"
+makedepends="libxkbcommon-devel libzstd-devel"
+depends="libxkbcommon libzstd"
+short_desc="COSMIC terminal emulator application"
+maintainer="Bella109 <belladev109@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/pop-os/cosmic-term"
+distfiles="https://github.com/pop-os/cosmic-term/archive/refs/tags/epoch-${version}.tar.gz"
+checksum=46c9328367f1c8efd99f586ba17c56580cbb5a2e4e5e8563d55dc8d5d0d5b2a7
+build_options="sccache"
+
+pre_build() {
+	$(vopt_if sccache "export RUSTC_WRAPPER=/usr/bin/sccache")
+}
+
+do_install() {
+	just rootdir="${DESTDIR}" cargo-target-dir="target/${RUST_TARGET}" install
+}

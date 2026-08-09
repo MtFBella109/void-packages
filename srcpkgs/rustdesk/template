@@ -1,0 +1,69 @@
+# Template file for 'rustdesk'
+pkgname=rustdesk
+version=1.4.8
+revision=1
+archs="x86_64*"
+create_wrksrc=yes
+build_wrksrc="rustdesk-${version}"
+hostmakedepends="pkg-config cargo clang21 python3"
+makedepends="autoconf automake curl git glib-devel gst-plugins-base1-devel gstreamer1-devel gtk+3-devel libtool nasm pam-devel pulseaudio-devel tar unzip zip"
+if [ "$XBPS_LIBC" = "musl" ]; then
+	makedepends+=" cmake ninja"
+	noshlibcounts=yes
+fi
+depends=""
+short_desc="Alternative to AnyDesk"
+maintainer="Bella109 <belladev109@proton.me>"
+license="AGPL-3.0"
+homepage="https://github.com/rustdesk/rustdesk"
+distfiles="https://github.com/rustdesk/rustdesk/archive/refs/tags/${version}.tar.gz
+https://raw.githubusercontent.com/c-smile/sciter-sdk/master/bin.lnx/x64/libsciter-gtk.so
+https://github.com/rustdesk/hbb_common/archive/387603f47cbb15c0d3dc3d67ae3396d3eb707daf.tar.gz"
+checksum="ab424b48861cb74ca84e847564ca071a7c7a393a2ab3818a8d0a095e290caa85
+ a1682fbf55e004f1862d6ace31b5220121d20906bdbf308d0a9237b451e4db86
+ 8b2155e81c1fcdeaca6c02a0ed88af7701b2e07f513b8bba8a62ab1e0053672d"
+skip_extraction="libsciter-gtk.so"
+
+post_extract() {
+	git clone https://github.com/microsoft/vcpkg rustdesk-${version}/vcpkg
+	cd rustdesk-${version}/vcpkg
+	git checkout 2026.03.18
+	cd $wrksrc
+	mv hbb_common*/* rustdesk-${version}/libs/hbb_common/
+	mv ${XBPS_SRCDISTDIR}/rustdesk-${version}/libsciter-gtk.so rustdesk-${version}/
+}
+
+post_patch() {
+	vsed -i -e 's/\/share\/rustdesk/\/lib/g' src/ui.rs
+}
+
+pre_build() {
+	python3 res/inline-sciter.py
+	cd vcpkg
+	vcpkgRootDir=$wrksrc/rustdesk-${version}/vcpkg
+	if [ "$XBPS_LIBC" = "musl" ]; then
+		export VCPKG_FORCE_SYSTEM_BINARIES=1
+		./bootstrap-vcpkg.sh -musl
+	else
+		./bootstrap-vcpkg.sh
+	fi
+}
+
+do_build() {
+	export VCPKG_ROOT=$wrksrc/rustdesk-${version}/vcpkg
+	vcpkg/vcpkg install --x-install-root=$VCPKG_ROOT/installed --disable-metrics
+	#VCPKG_ROOT=$wrksrc/vcpkg
+	cargo build --release --features unix-file-copy-paste,hwcodec,inline
+}
+
+do_install() {
+	vinstall res/logo.svg 644 usr/share/icons/hicolor/scalable/apps rustdesk.svg
+	for i in 32 64 128; do
+		vinstall res/${i}x${i}.png 644 usr/share/icons/hicolor/${i}x${i}/apps
+	done
+	vinstall res/rustdesk.desktop 644 usr/share/applications
+	vcopy libsciter-gtk.so usr/lib
+	vbin target/release/rustdesk
+	vlicense LICENCE
+
+}

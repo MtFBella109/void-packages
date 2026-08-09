@@ -1,0 +1,35 @@
+# Template file for 'zen-browser-bin'
+pkgname=zen-browser-bin
+version=1.21.4b
+revision=1
+archs="x86_64 aarch64"
+short_desc="New Browser based on Firefox"
+maintainer="Bella109 <belladev109@proton.me>"
+license="MPL-2.0"
+homepage="https://github.com/zen-browser/desktop"
+distfiles="https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-x86_64.tar.xz
+ https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-aarch64.tar.xz"
+checksum="02b814ccd0e6659468d438fa3be91c0e9934b1f0d5c58078319ea7a6e26729eb
+ 9b1c9ee05f02d03b1d4e7982e3a8a1f48221868e163f6f438aece366dc98e71c"
+replaces="zen-browser>=0 zen-browser-arm64-bin>=0"
+
+do_extract() {
+	local archiv
+	case "$XBPS_TARGET_MACHINE" in
+		x86_64)      archiv="zen.linux-x86_64.tar.xz" ;;
+		aarch64)     archiv="zen.linux-aarch64.tar.xz" ;;
+	esac
+	vextract "${XBPS_SRCDISTDIR}/${pkgname}-${version}/${archiv}"
+}
+
+do_install() {
+	vmkdir usr/lib/zen-browser
+	vcopy * usr/lib/zen-browser
+
+	vinstall ${FILESDIR}/zen-browser.desktop 644 usr/share/applications
+	for size in 16 32 48 64 128; do
+		vinstall browser/chrome/icons/default/default${size}.png 644 usr/share/icons/hicolor/${size}x${size}/apps zen-browser.png
+	done
+
+	vbin ${FILESDIR}/zen-browser
+}

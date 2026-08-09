@@ -1,0 +1,37 @@
+# Template file for 'cinny-desktop'
+pkgname=cinny-desktop
+version=4.12.5
+revision=1
+#archs="i686 x86_64"
+create_wrksrc="yes"
+build_wrksrc="cinny-desktop-$version"
+hostmakedepends="pkg-config nodejs cargo"
+makedepends="giflib-devel gtk+3-devel libglib-devel libwebkit2gtk41-devel xdg-utils"
+short_desc="Yet another Matrix Client"
+maintainer="Bella109 <belladev109@proton.me>"
+license="AGPL-3.0-or-later"
+homepage="https://github.com/cinnyapp/cinny-desktop"
+distfiles="https://github.com/cinnyapp/cinny-desktop/archive/refs/tags/v${version}.tar.gz
+https://github.com/cinnyapp/cinny/archive/refs/tags/v4.12.3.tar.gz>cinny-${version}.tar.gz"
+checksum="4570ad322c1bf888c87b2560c562d938356aee4999f7dafd5a15d8eff02fd43e
+ ec3d61a8507966dbc95b25d1d66ed5069ac387e7af01548b01a6daed15223009"
+patch_args="-d cinny-desktop-${version} -Np1"
+
+post_extract() {
+	cp -r $wrksrc/cinny-$version/* $wrksrc/cinny-desktop-$version/cinny/
+	cp ${FILESDIR}/pnpm-workspace.yaml $wrksrc/cinny-desktop-$version/cinny
+}
+
+pre_build() {
+	cd cinny
+	npm install
+}
+
+do_build() {
+	npm run tauri build
+}
+
+do_install() {
+	vbin src-tauri/target/release/cinny
+	vlicense LICENSE
+}

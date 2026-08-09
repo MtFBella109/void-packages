@@ -30,7 +30,7 @@ do_build() {
 	# prefix used by the zig build system.
 	DESTDIR="zig-out" zig build \
 		-j"${XBPS_MAKEJOBS}" \
-		--sysroot "${XBPS_CROSS_BASE}" \
+		--sysroot "${XBPS_CROSS_BASE}/" \
 		--search-prefix "${XBPS_CROSS_BASE}/usr" \
 		--prefix /usr \
 		--global-cache-dir /host/zig \
