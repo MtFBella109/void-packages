@@ -1,6 +1,6 @@
 # Template file for 'cosmic-workspaces-epoch'
 pkgname=cosmic-workspaces-epoch
-version=1.3.0
+version=1.5.0
 revision=1
 archs="x86_64* i686"
 build_style=gnu-makefile
@@ -13,4 +13,4 @@ maintainer="Bella109 <belladev109@proton.me>"
 license="GPL-3.0-only"
 homepage="https://github.com/pop-os/cosmic-workspaces-epoch"
 distfiles="https://github.com/pop-os/cosmic-workspaces-epoch/archive/refs/tags/epoch-${version}.tar.gz"
-checksum=36a52fd319b5b0e4d473d71fb0f24384fe51b4a7376416b5a97a2eb838c95fc7
+checksum=d7b54ce8dd229c6b76c2132b38d0814df656439bd4c014d04bd052143dcf4249
