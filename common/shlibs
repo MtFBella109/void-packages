@@ -432,6 +432,7 @@ liba52.so.0 liba52-0.7.4_1
 libcddb.so.2 libcddb-1.3.2_1
 libiso9660.so.12 libcdio-2.2.0_1
 libudf.so.0 libcdio-0.83_1
+libwim.so.15 wimlib-1.14.5_2
 libcdio_cdda.so.2 libcdio-paranoia-10.2_1
 libcdio_paranoia.so.2 libcdio-paranoia-10.2_1
 libiso9660++.so.1 libcdio-2.2.0_1
@@ -1149,6 +1150,7 @@ librygel-db-2.8.so.0 librygel-0.42.0_1
 libharfbuzz.so.0 libharfbuzz-5.1.0_1
 libharfbuzz-icu.so.0 libharfbuzz-5.1.0_1
 libharfbuzz-raster.so.0 libharfbuzz-14.2.1_1
+libharfbuzz-vector.so.0 libharfbuzz-14.3.0_1
 libharfbuzz-subset.so.0 libharfbuzz-5.1.0_1
 libharfbuzz-gobject.so.0 libharfbuzz-5.1.0_1
 libharfbuzz-cairo.so.0 libharfbuzz-7.1.0_1
@@ -1675,7 +1677,7 @@ libtelepathy-farstream.so.3 telepathy-farstream-0.6.0_6
 libnetpbm.so.11 libnetpbm-10.66.03_2
 libid3.so id3lib-3.8.3_7
 libid3-3.8.so.3 id3lib-3.8.3_7
-libgirara-gtk3.so.4 girara-0.4.4_1
+libgirara.so.5 girara-2026.02.04_1
 libjq.so.1 jq-1.6_2
 libcrypto.so.3 libcrypto3-3.5.4_1
 libssl.so.3 libssl3-3.5.4_1
@@ -1876,7 +1878,7 @@ libQt5TextToSpeech.so.5 qt5-speech-5.15.2_3
 libQt5Bodymovin.so.5 qt5-lottie-5.15.2_3
 libQt5WebKit.so.5 qt5-webkit-5.6.0_1
 libQt5WebKitWidgets.so.5 qt5-webkit-5.6.0_1
-libx265.so.215 x265-4.1_1
+libx265.so.216 x265-4.2_1
 libQt5Xdg.so.3 libqt5xdg-3.2.0_1
 libQt5XdgIconLoader.so.3 libqt5xdg-3.2.0_1
 libQt6Xdg.so.4 libqtxdg-4.0.0_1
@@ -1886,6 +1888,7 @@ libqwt-qt5.so.6.3 qwt-6.3.0_1
 libqwt-qt6.so.6.3 qwt-qt6-6.3.0_1
 
 # KDE6 plasma-frameworks
+KDE_Frameworks.6.28.0 kf6-base-6.28.0_1
 libKF6BreezeIcons.so.6 libbreeze-icons-6.19.0_1
 libKF6Attica.so.6 kf6-attica-6.19.0_1
 libKF6Baloo.so.6 kf6-baloo-6.19.0_1
@@ -1985,6 +1988,7 @@ libKF6Syndication.so.6 kf6-syndication-6.19.0_1
 libKF6SyntaxHighlighting.so.6 kf6-syntax-highlighting-6.19.0_1
 libKF6ThreadWeaver.so.6 kf6-threadweaver-6.19.0_1
 # KDE Plasma
+KDE_Plasma.6.7.3 kde-plasma-base-6.7.3_1
 libKQuickImageEditor.so.1 kquickimageeditor-0.6.0_1
 libKNightTime.so.0 knighttime-6.5.1_1
 libklookandfeel.so.6 plasma-workspace-6.5.1_1
@@ -1997,7 +2001,7 @@ libKGlobalAccelD.so.0 kglobalacceld-6.5.1_1
 libKScreenLocker.so.6 kscreenlocker-6.5.1_1
 libKSysGuardFormatter.so.2 libksysguard-6.5.1_1
 libKSysGuardSensorFaces.so.2 libksysguard-6.5.1_1
-libprocesscore.so.10 libksysguard-6.5.1_1
+libprocesscore.so.11 libksysguard-6.7.3_1
 libKSysGuardSystemStats.so.2 libksysguard-6.5.1_1
 libKSysGuardSensors.so.2 libksysguard-6.5.1_1
 libkworkspace6.so.6 kworkspace-6.5.1_1
@@ -3156,9 +3160,11 @@ libm17n-flt.so.0 m17n-lib-1.7.0_1
 libm17n-gui.so.0 m17n-lib-1.7.0_1
 libm17n-core.so.0 m17n-lib-1.7.0_1
 libm17n.so.0 m17n-lib-1.7.0_1
-libprotobuf-lite.so.25.2.0 libprotobuf-lite-25.2_1
-libprotoc.so.25.2.0 libprotoc-25.2_1
-libprotobuf.so.25.2.0 libprotobuf-25.2_1
+libprotobuf-lite.so.35.1.0 libprotobuf-lite-35.1_1
+libprotoc.so.35.1.0 libprotoc-35.1_1
+libprotobuf.so.35.1.0 libprotobuf-35.1_1
+libutf8_range.so.35.1.0 libprotobuf-35.1_1
+libutf8_validity.so.35.1.0 libprotobuf-35.1_1
 libsombok.so.3 sombok-2.4.0_1
 libdeviceclient.so.0 pragha-1.3.3_1
 libykclient.so.3 ykclient-2.15_1
@@ -3274,8 +3280,8 @@ libarcan_shmif_server.so.0.18 arcan-0.7.1_1
 libarcan_tui.so.0.18 arcan-0.7.1_1
 libarcan_a12.so.0.1 arcan-0.6.1.1_1
 liblwipv6.so.2 lwipv6-1.5a_1
-libopentime.so.17 OpenTimelineIO-0.17.0_1
-libopentimelineio.so.17 OpenTimelineIO-0.17.0_1
+libopentime.so.18 OpenTimelineIO-0.18.1_1
+libopentimelineio.so.18 OpenTimelineIO-0.18.1_1
 libpipewire-0.3.so.0 libpipewire-0.3.6_1
 libvolk.so.3.2 volk-3.2.0_1
 libgnuradio-runtime.so.3.10.12 gnuradio-3.10.12.0_1
@@ -3548,7 +3554,7 @@ libhtmlcxx.so.3 htmlcxx-0.86_1
 libcss_parser_pp.so.0 htmlcxx-0.86_1
 libcss_parser.so.0 htmlcxx-0.86_1
 libaom.so.3 libaom-3.4.0_1
-libre.so.30 re-3.20.0_1
+libre.so.44 re-4.10.0_1
 libtpms.so.0 libtpms-0.9.0_1
 libswtpm_libtpms.so.0 libswtpm-0.6.1_1
 libspandsp.so.2 spandsp-0.0.6_1
@@ -3757,24 +3763,24 @@ liboblibs.so.0.3 oblibs-0.3.4.0_1
 libaal-1.0.so.7 libaal-1.0.7_1
 libaal-minimal.so.0 libaal-1.0.7_1
 libcli.so.1.10 libcli-1.10.7_1
-libaddress_sorting.so.38 libgrpc-1.61.1_1
-libgpr.so.38 libgrpc-1.61.1_1
-libgrpc++.so.1.61 libgrpc-1.61.1_1
-libgrpc++_alts.so.1.61 libgrpc-1.61.1_1
-libgrpc++_error_details.so.1.61 libgrpc-1.61.1_1
-libgrpc++_reflection.so.1.61 libgrpc-1.61.1_1
-libgrpc++_unsecure.so.1.61 libgrpc-1.61.1_1
-libgrpc.so.38 libgrpc-1.61.1_1
-libgrpc_authorization_provider.so.1.61 libgrpc-1.61.1_1
-libgrpc_plugin_support.so.1.61 libgrpc-1.61.1_1
-libgrpc_unsecure.so.38 libgrpc-1.61.1_1
-libgrpcpp_channelz.so.1.61 libgrpc-1.61.1_1
-libupb_base_lib.so.38 libgrpc-1.61.1_1
-libupb_json_lib.so.38 libgrpc-1.61.1_1
-libupb_mem_lib.so.38 libgrpc-1.61.1_1
-libupb_message_lib.so.38 libgrpc-1.61.1_1
-libupb_textformat_lib.so.38 libgrpc-1.61.1_1
-libutf8_range_lib.so.38 libgrpc-1.61.1_1
+libaddress_sorting.so.56 libgrpc-1.83.0_1
+libgpr.so.56 libgrpc-1.83.0_1
+libgrpc++.so.1.83 libgrpc-1.83.0_1
+libgrpc++_alts.so.1.83 libgrpc-1.83.0_1
+libgrpc++_error_details.so.1.83 libgrpc-1.83.0_1
+libgrpc++_reflection.so.1.83 libgrpc-1.83.0_1
+libgrpc++_unsecure.so.1.83 libgrpc-1.83.0_1
+libgrpc.so.56 libgrpc-1.83.0_1
+libgrpc_authorization_provider.so.1.83 libgrpc-1.83.0_1
+libgrpc_plugin_support.so.1.83 libgrpc-1.83.0_1
+libgrpc_unsecure.so.56 libgrpc-1.83.0_1
+libgrpcpp_channelz.so.1.83 libgrpc-1.83.0_1
+libupb_base_lib.so.56 libgrpc-1.83.0_1
+libupb_json_lib.so.56 libgrpc-1.83.0_1
+libupb_mem_lib.so.56 libgrpc-1.83.0_1
+libupb_message_lib.so.56 libgrpc-1.83.0_1
+libupb_textformat_lib.so.56 libgrpc-1.83.0_1
+libutf8_range_lib.so.56 libgrpc-1.83.0_1
 libircclient.so.1 libircclient-1.10_5
 libFAudio.so.0 FAudio-19.05_1
 libqaccessibilityclient-qt6.so.0 libqaccessibilityclient-0.6.0_1
@@ -4044,7 +4050,7 @@ libportal-qt6.so.1 libportal-qt6-0.9.1_3
 libvips.so.42 libvips-8.9.2_1
 libvips-cpp.so.42 libvips-8.9.2_1
 libselinux.so.1 libselinux-3.0_1
-libsepol.so.1 libsepol-3.0_1
+libsepol.so.2 libsepol-3.11_1
 libfrrcares.so.0 libfrr-7.3.1_1
 libhugetlbfs.so.0 libhugetlbfs-2.22_1
 libmonocypher.so.4 monocypher-4.0.1_1
@@ -4064,7 +4070,7 @@ libJudy.so.1 judy-1.0.5_1
 libsignal-protocol-c.so.2 libsignal-protocol-c-2.3.3_2
 libKSeExprUI.so.4 seexpr-krita-4.0.4.0_1
 libKSeExpr.so.4 seexpr-krita-4.0.4.0_1
-libkritaqmicinterface.so.19 krita-5.2.0_1
+libkritaqmicinterface.so.20 krita-6.0.3_1
 liburing.so.2 liburing-2.0_1
 libbson-1.0.so.0 libbson-1.17.4_2
 libsonic.so.0 libsonic-0.2.0_1
@@ -4595,7 +4601,7 @@ libMpvQt.so.3 mpvqt-1.2.0_1
 libtomlplusplus.so.3 tomlplusplus-3.4.0_1
 libglycin-2.so.0 glycin-2.0.7_1
 libglycin-gtk4-2.so.0 glycin-gtk4-2.0.7_1
-libresvg.so.0.46 libresvg0-0.46.0_1
+libresvg.so.0.48 libresvg0-0.48.1_1
 libgpiod.so.3 libgpiod-2.2_4
 libgpiodcxx.so.2 libgpiod-2.2_4
 libigloo.so.0 libigloo-0.9.5_1
