@@ -6,7 +6,7 @@ archs="x86_64*"
 build_style="cargo"
 hostmakedepends="pkg-config"
 makedepends="openjdk21 openjdk21-jmods"
-depends=""
+depends="openjdk21"
 short_desc="Alternative to AnyDesk"
 maintainer="Bella109 <belladev109@proton.me>"
 license="AGPL-3.0"
@@ -15,9 +15,12 @@ distfiles="https://github.com/blarns/NuvioForLinux/archive/refs/tags/v${version}
 checksum=7ee49309a9de7af35fc7d9c4d56eb1d02c9f5fa2e8b1f2a46aa76a735d52de15
 
 do_build() {
-	./gradlew :composeApp:createDistributable
+	./gradlew :composeApp:packageUberJarForCurrentOS
 }
 
 do_install() {
-	echo ToDo
+	vinstall composeApp/build/compose/jars/nuvio-linux-x64-${version}.jar 644 usr/share/NuvioDesktop NuvioDesktop.jar
+	vbin ${FILESDIR}/Nuvio
+	vinstall ${FILESDIR}/nuvio.desktop 644 usr/share/applications
+	vinstall ${FILESDIR}/nuvio.svg 644 /usr/share/icons/hicolor/scalable/apps
 }

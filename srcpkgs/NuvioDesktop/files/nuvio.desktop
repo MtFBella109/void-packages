@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Nuvio
+GenericName=Media Player
+Comment=Modern media hub with Stremio addon ecosystem support
+Exec=Nuvio
+Icon=nuvio
+Type=Application
+Categories=AudioVideo;Video;Player;TV;
+Keywords=video;media;streaming;stremio;
+StartupNotify=true
+Terminal=false
+MimeType=video/x-matroska;video/mp4;video/x-msvideo;video/webm;video/quicktime;video/x-flv;video/mpeg;x-scheme-handler/magnet;application/x-bittorrent;
+StartupWMClass=com-nuvio-app-MainKt
