@@ -1,0 +1,15 @@
+# Template file for 'lycan'
+pkgname=lycan
+version=0.1.2
+revision=1
+archs="x86_64*"
+build_style="cargo"
+hostmakedepends="pkg-config"
+makedepends="libglib-devel gtk+3-devel libwebkit2gtk41-devel"
+depends=""
+short_desc="Alternative to AnyDesk"
+maintainer="Bella109 <belladev109@proton.me>"
+license="AGPL-3.0"
+homepage="https://github.com/lycan/lycan"
+distfiles="https://github.com/tutkuofnight/lycan/archive/refs/tags/v${version}.tar.gz"
+checksum=0290697827b998ac10c9c7bed77d7080336bc1932a1488fe182d1c36ee9f7ecb
