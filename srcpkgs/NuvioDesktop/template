@@ -1,18 +1,18 @@
 # Template file for 'NuvioDesktop'
 pkgname=NuvioDesktop
-version=0.3.2
+version=0.3.3
 revision=1
 archs="x86_64*"
 build_style="cargo"
 hostmakedepends="pkg-config"
 makedepends="openjdk21 openjdk21-jmods"
-depends="openjdk21"
-short_desc="Alternative to AnyDesk"
+depends="openjdk21 libvlc"
+short_desc="Multi Media Hub. Combines multiple sources for watching Series, Movies and Anime"
 maintainer="Bella109 <belladev109@proton.me>"
-license="AGPL-3.0"
+license="GPL-3.0"
 homepage="https://github.com/blarns/NuvioForLinux"
 distfiles="https://github.com/blarns/NuvioForLinux/archive/refs/tags/v${version}.tar.gz"
-checksum=7ee49309a9de7af35fc7d9c4d56eb1d02c9f5fa2e8b1f2a46aa76a735d52de15
+checksum=f2ec13e8a78ab055b9ac712d543d2c080ffd2ed047631c1d1c0d85f51611df5b
 
 do_build() {
 	./gradlew :composeApp:packageUberJarForCurrentOS
