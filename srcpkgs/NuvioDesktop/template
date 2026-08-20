@@ -1,6 +1,6 @@
 # Template file for 'NuvioDesktop'
 pkgname=NuvioDesktop
-version=0.3.3
+version=0.3.5
 revision=1
 archs="x86_64*"
 build_style="cargo"
@@ -12,7 +12,7 @@ maintainer="Bella109 <belladev109@proton.me>"
 license="GPL-3.0"
 homepage="https://github.com/blarns/NuvioForLinux"
 distfiles="https://github.com/blarns/NuvioForLinux/archive/refs/tags/v${version}.tar.gz"
-checksum=f2ec13e8a78ab055b9ac712d543d2c080ffd2ed047631c1d1c0d85f51611df5b
+checksum=24e0ad1ea115d7672bc3264f4782776a86e0994f91cae8d5688c0a1f5efb1167
 
 do_build() {
 	./gradlew :composeApp:packageUberJarForCurrentOS

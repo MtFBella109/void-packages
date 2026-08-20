@@ -29,8 +29,8 @@ do_build() {
 	# We use zig-out to avoid path conflicts as it is the default install
 	# prefix used by the zig build system.
 	DESTDIR="zig-out" zig build \
-		-j"${XBPS_MAKEJOBS}" \
-		--sysroot "${XBPS_CROSS_BASE}/" \
+		${makejobs} \
+		--sysroot "${XBPS_CROSS_BASE}" \
 		--search-prefix "${XBPS_CROSS_BASE}/usr" \
 		--prefix /usr \
 		--global-cache-dir /host/zig \
