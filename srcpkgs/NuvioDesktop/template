@@ -2,7 +2,7 @@
 pkgname=NuvioDesktop
 version=0.3.5
 revision=1
-archs="x86_64*"
+archs="x86_64"
 build_style="cargo"
 hostmakedepends="pkg-config"
 makedepends="openjdk21 openjdk21-jmods"
